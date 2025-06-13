@@ -28,12 +28,12 @@ a:hover {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   INDEX PAGE (two-column grid for perfect alignment)                    */
+/*   INDEX PAGE ENTRY                                                      */
 .race-entry {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 160px 1fr;
     align-items: center;
-    padding: 0.6rem 0;
+    padding: 0.8rem 0;
     border-bottom: 1px solid #e1e4e8;
     gap: 0.5rem;
 }
@@ -42,27 +42,34 @@ a:hover {
     border-bottom: none;
 }
 
-/* left column: the link */
 .race-entry a {
     font-weight: 600;
-    font-size: 1.05em;
+    font-size: 1.1em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* right column: the forecast text */
 .forecast-inline {
     font-size: 0.95em;
     color: #555;
     line-height: 1.3;
 }
 
-/* on very narrow screens we’ll stack */
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   HIDE FORECAST ON VERY SMALL SCREENS                                   */
+@media (max-width: 480px) {
+    .forecast-inline {
+        display: none;
+    }
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   STACK INDEX ON SMALLER                                               */
 @media (max-width: 600px) {
     .race-entry {
         display: block;
-        padding: 0.5rem 0;
+        padding: 0.6rem 0;
     }
 
     .race-entry a {
@@ -74,7 +81,6 @@ a:hover {
         display: block;
     }
 }
-
 
 /*──────────────────────────────────────────────────────────────────────────*/
 /*   META BAR                                                              */
@@ -98,15 +104,16 @@ table {
 
 thead th {
     background: #f7f7f7;
-    padding: 0.5rem;
+    padding: 0.6rem;
     font-weight: 600;
     border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 td,
 th {
     border: 1px solid #ddd;
-    padding: 0.5rem;
+    padding: 0.6rem;
     vertical-align: middle;
     word-break: break-word;
     text-align: center;
@@ -119,7 +126,6 @@ td.col-number {
     width: 4em;
     white-space: nowrap;
     font-weight: 600;
-    text-align: center;
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
@@ -159,8 +165,8 @@ tr.extras-row td {
 .extras-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
 }
 
 .extras-container details {
@@ -171,7 +177,7 @@ tr.extras-row td {
 .extras-container summary {
     list-style: none;
     background: #e1e4e8;
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.9em;
@@ -210,7 +216,7 @@ tr.extras-row td {
 .inner-details {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
 }
 
 .inner-details th,
@@ -235,42 +241,36 @@ tr.extras-row td {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   RESPONSIVE                                                            */
+/*   MOBILE ADJUSTMENTS                                                     */
 @media (max-width: 700px) {
 
+    /* wrap forecast on detail */
+    .forecast-block {
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    /* add vertical padding for tap targets */
+    .runners tr.main-row td,
+    .runners tr.extras-row td,
+    .race-json-table td,
+    .race-json-table th {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    /* prevent small columns collapsing */
+    th.col-sp-score,
+    td.col-sp-score,
+    th.col-weight-days,
+    td.col-weight-days {
+        min-width: 4em;
+    }
+
+    /* slightly larger text for legibility */
+    table,
     td,
     th {
-        padding: 0.3rem;
-    }
-
-    td.col-silks img {
-        max-height: 32px;
-    }
-
-    .extras-container {
-        gap: 0.3rem;
-        padding: 0.3rem 0.5rem;
-    }
-
-    .extras-container summary {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.85em;
-    }
-
-    th.col-number,
-    td.col-number {
-        width: 3em;
-    }
-
-    /* ensure SP, Score, Wt, Days don't collapse */
-    th.col-sp,
-    td.col-sp,
-    th.col-score,
-    td.col-score,
-    th.col-weight,
-    td.col-weight,
-    th.col-days,
-    td.col-days {
-        min-width: 4em;
+        font-size: 0.9em;
     }
 }
