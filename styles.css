@@ -380,3 +380,53 @@ details[open] summary {
 .main-navbar .nav-links::-webkit-scrollbar {
     display: none;
 }
+
+#next6-races {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.6rem;
+    margin-top: 0.1rem;
+}
+
+.next6-title {
+    font-weight: 600;
+    color: var(--brand-dark);
+    margin-right: 0.5rem;
+    font-size: 1.08rem;
+}
+
+.next6-btn {
+    display: inline-block;
+    background: #eaf2fb;
+    color: var(--brand-dark);
+    border-radius: 6px;
+    padding: 0.24em 0.95em;
+    font-size: 1.01rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 0.17em;
+    transition: background 0.13s, color 0.13s;
+}
+
+.next6-btn.past {
+    text-decoration: line-through;
+    color: #a8b6bf;
+    background: #f5f7f8;
+}
+
+.next6-course {
+    margin-right: 0.38em;
+}
+
+@media (max-width: 600px) {
+    #next6-races {
+        gap: 0.3rem;
+    }
+
+    .next6-btn {
+        font-size: 0.91rem;
+        padding: 0.13em 0.49em;
+    }
+}
