@@ -11,28 +11,27 @@ function padTime(t) {
     if (!data) return;
     let races = JSON.parse(data.textContent).slice();
 
-    // Sort by datetime
+    // Sort by UTC datetime string
     races.sort((a, b) => a.race_datetime.localeCompare(b.race_datetime));
 
+    // Device time in UTC as ISO string
     const now = new Date();
-    // Use local time (UK time if in UK, else local)
-    const nowISO = now.toISOString().slice(0, 16); // e.g. '2025-06-13T18:35'
+    const nowUTC = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
+    const nowISO = nowUTC.toISOString().slice(0, 16); // 'YYYY-MM-DDTHH:MM'
 
-    // Mark races as past using datetime
+    // Mark races as past using UTC datetimes
     races.forEach(r => {
-        // If the race_datetime is < nowISO, it's in the past
         r.isPast = r.race_datetime < nowISO;
     });
 
     // Get next 6 races (not in the past)
     let nextRaces = races.filter(r => !r.isPast).slice(0, 6);
     if (nextRaces.length < 6) {
-        // Fill up with latest past races to always show 6
         const prev = races.filter(r => r.isPast).slice(-1 * (6 - nextRaces.length));
         nextRaces = nextRaces.concat(prev);
     }
 
-    // Render bar
+    // Render next 6 bar
     let bar = document.getElementById('next6-races');
     if (!bar) return;
     bar.innerHTML =
