@@ -224,6 +224,61 @@ a:hover {
     font-size: 0.93rem;
 }
 
+/* Non-runners table at bottom of racecard detail */
+.runners.nonrunners {
+    margin-top: 0.8em;
+    background: #fff7f6;
+    box-shadow: none;
+    border-radius: 7px;
+    font-size: 1.01rem;
+}
+
+.runners.nonrunners th,
+.runners.nonrunners td {
+    border-bottom: 1px solid #eebcbe;
+}
+
+.nr-row {
+    background: #fff7f6;
+    color: #b52a2a;
+    font-weight: 600;
+}
+
+.nr-row .col-number {
+    color: #b52a2a;
+    font-size: 1.12em;
+    letter-spacing: 0.04em;
+}
+
+/* Optional: make NR look a bit different */
+.nr-row .col-number::after {
+    content: " (NR)";
+    font-size: 0.8em;
+    color: #b89a9a;
+    margin-left: 2px;
+    letter-spacing: 0.01em;
+}
+
+/* Ensure images don't dominate row height */
+.runners.nonrunners img {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 6px;
+    background: #f2f4f7;
+    border: 1px solid #eebcbe;
+    margin-right: 0.13rem;
+}
+
+/* Make the Non-Runners heading stand out a little */
+h3 {
+    margin-top: 2em;
+    color: #b52a2a;
+    font-weight: 700;
+    font-size: 1.13em;
+    letter-spacing: 0.03em;
+}
+
+
 /* Silks and table alignment */
 img {
     max-width: 36px;
