@@ -4,6 +4,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -28,12 +30,12 @@ a:hover {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   INDEX PAGE ENTRY                                                      */
+/*   INDEX PAGE                                                            */
 .race-entry {
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 180px 1fr;
     align-items: center;
-    padding: 0.8rem 0;
+    padding: 0.6rem 0;
     border-bottom: 1px solid #e1e4e8;
     gap: 0.5rem;
 }
@@ -44,7 +46,7 @@ a:hover {
 
 .race-entry a {
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.05em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -57,33 +59,7 @@ a:hover {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   HIDE FORECAST ON VERY SMALL SCREENS                                   */
-@media (max-width: 480px) {
-    .forecast-inline {
-        display: none;
-    }
-}
-
-/*──────────────────────────────────────────────────────────────────────────*/
-/*   STACK INDEX ON SMALLER                                               */
-@media (max-width: 600px) {
-    .race-entry {
-        display: block;
-        padding: 0.6rem 0;
-    }
-
-    .race-entry a {
-        display: block;
-        margin-bottom: 0.4rem;
-    }
-
-    .forecast-inline {
-        display: block;
-    }
-}
-
-/*──────────────────────────────────────────────────────────────────────────*/
-/*   META BAR                                                              */
+/*   DETAIL PAGE META BAR                                                   */
 .meta {
     font-size: 0.95em;
     color: #555;
@@ -91,7 +67,7 @@ a:hover {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   TABLE RESET                                                           */
+/*   TABLE RESET                                                            */
 .table-wrapper {
     overflow-x: auto;
 }
@@ -104,23 +80,22 @@ table {
 
 thead th {
     background: #f7f7f7;
-    padding: 0.6rem;
+    padding: 0.5rem;
     font-weight: 600;
     border-bottom: 1px solid #ddd;
-    text-align: center;
 }
 
 td,
 th {
     border: 1px solid #ddd;
-    padding: 0.6rem;
+    padding: 0.5rem;
     vertical-align: middle;
     word-break: break-word;
     text-align: center;
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   NUMBER/DRAW COLUMN                                                    */
+/*   COLUMN SIZING                                                           */
 th.col-number,
 td.col-number {
     width: 4em;
@@ -128,8 +103,6 @@ td.col-number {
     font-weight: 600;
 }
 
-/*──────────────────────────────────────────────────────────────────────────*/
-/*   SILKS & HORSE NAME                                                    */
 td.col-silks img {
     max-height: 40px;
     display: block;
@@ -148,8 +121,23 @@ td.col-horse .form {
     margin-top: 0.2rem;
 }
 
+/* SP/Score & Wt/Days */
+th.col-sp-score,
+td.col-sp-score,
+th.col-weight-days,
+td.col-weight-days {
+    min-width: 5em;
+}
+
+/* Jockey/Trainer */
+td.col-person {
+    font-size: 0.95em;
+    line-height: 1.2;
+    text-align: left;
+}
+
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   RUNNER ROWS                                                           */
+/*   RUNNER ROWS                                                            */
 tr.main-row {
     background: #fff;
 }
@@ -161,12 +149,12 @@ tr.extras-row td {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   EXTRAS BAR (buttons)                                                   */
+/*   EXTRAS PANEL                                                           */
 .extras-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0.6rem 1rem;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
 }
 
 .extras-container details {
@@ -177,7 +165,7 @@ tr.extras-row td {
 .extras-container summary {
     list-style: none;
     background: #e1e4e8;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.9em;
@@ -192,8 +180,6 @@ tr.extras-row td {
     display: none;
 }
 
-/*──────────────────────────────────────────────────────────────────────────*/
-/*   DETAILS PANEL                                                         */
 .extras-container details>*:not(summary) {
     display: none;
 }
@@ -212,11 +198,11 @@ tr.extras-row td {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   INNER FULL DETAILS TABLE                                               */
+/*   INNER FULL DETAILS TABLE                                                */
 .inner-details {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 0.5rem;
+    margin-top: 0.5em;
 }
 
 .inner-details th,
@@ -233,7 +219,7 @@ tr.extras-row td {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   FORECAST BLOCK                                                         */
+/*   FORECAST BLOCK                                                          */
 .forecast-block {
     margin-bottom: 1rem;
     font-size: 1em;
@@ -241,36 +227,64 @@ tr.extras-row td {
 }
 
 /*──────────────────────────────────────────────────────────────────────────*/
-/*   MOBILE ADJUSTMENTS                                                     */
-@media (max-width: 700px) {
+/*   RESPONSIVE: MOBILE                                                      */
+@media (max-width: 600px) {
 
-    /* wrap forecast on detail */
-    .forecast-block {
-        white-space: normal;
-        word-break: break-word;
+    /* INDEX: stack & enlarge tap target */
+    .race-entry {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
     }
 
-    /* add vertical padding for tap targets */
-    .runners tr.main-row td,
-    .runners tr.extras-row td,
-    .race-json-table td,
-    .race-json-table th {
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
+    .race-entry a {
+        font-size: 1.4em;
+        font-weight: 700;
+        padding: 0.5rem 0;
+        background: #f0f4f8;
+        border-radius: 4px;
+        text-align: center;
+        display: block;
     }
 
-    /* prevent small columns collapsing */
+    .forecast-inline {
+        font-size: 1em;
+        margin-top: 0.5rem;
+    }
+
+    /* DETAIL: headings & table */
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    table,
+    td,
+    th {
+        font-size: 1em;
+        padding: 0.8rem 0.6rem;
+    }
+
+    /* slightly smaller silks icon */
+    td.col-silks img {
+        max-height: 32px;
+    }
+
+    /* smaller jockey/trainer text */
+    td.col-person {
+        font-size: 0.85em;
+    }
+
+    /* ensure key columns don’t collapse further */
+    th.col-number,
+    td.col-number,
     th.col-sp-score,
     td.col-sp-score,
     th.col-weight-days,
     td.col-weight-days {
-        min-width: 4em;
-    }
-
-    /* slightly larger text for legibility */
-    table,
-    td,
-    th {
-        font-size: 0.9em;
+        min-width: 5em;
     }
 }
