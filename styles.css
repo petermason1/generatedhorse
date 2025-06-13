@@ -1,0 +1,276 @@
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   GLOBAL RESET & TYPOGRAPHY                                              */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.4;
+}
+
+h1,
+h2 {
+    margin: 1rem 0 0.5rem;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   INDEX PAGE (two-column grid for perfect alignment)                    */
+.race-entry {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #e1e4e8;
+    gap: 0.5rem;
+}
+
+.race-entry:last-child {
+    border-bottom: none;
+}
+
+/* left column: the link */
+.race-entry a {
+    font-weight: 600;
+    font-size: 1.05em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* right column: the forecast text */
+.forecast-inline {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.3;
+}
+
+/* on very narrow screens we’ll stack */
+@media (max-width: 600px) {
+    .race-entry {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .race-entry a {
+        display: block;
+        margin-bottom: 0.4rem;
+    }
+
+    .forecast-inline {
+        display: block;
+    }
+}
+
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   META BAR                                                              */
+.meta {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   TABLE RESET                                                           */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+thead th {
+    background: #f7f7f7;
+    padding: 0.5rem;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    vertical-align: middle;
+    word-break: break-word;
+    text-align: center;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   NUMBER/DRAW COLUMN                                                    */
+th.col-number,
+td.col-number {
+    width: 4em;
+    white-space: nowrap;
+    font-weight: 600;
+    text-align: center;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   SILKS & HORSE NAME                                                    */
+td.col-silks img {
+    max-height: 40px;
+    display: block;
+    margin: auto;
+}
+
+td.col-horse {
+    text-align: left;
+    font-weight: 600;
+}
+
+td.col-horse .form {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 0.2rem;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   RUNNER ROWS                                                           */
+tr.main-row {
+    background: #fff;
+}
+
+tr.extras-row td {
+    border-top: none;
+    padding: 0;
+    background: #fafbfc;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   EXTRAS BAR (buttons)                                                   */
+.extras-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+}
+
+.extras-container details {
+    position: relative;
+    flex: none;
+}
+
+.extras-container summary {
+    list-style: none;
+    background: #e1e4e8;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.extras-container summary:hover {
+    background: #d1d5da;
+}
+
+.extras-container summary::-webkit-details-marker {
+    display: none;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   DETAILS PANEL                                                         */
+.extras-container details>*:not(summary) {
+    display: none;
+}
+
+.extras-container details[open]>*:not(summary) {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow: auto;
+    font-size: 0.9em;
+    line-height: 1.3;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   INNER FULL DETAILS TABLE                                               */
+.inner-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5em;
+}
+
+.inner-details th,
+.inner-details td {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.inner-details th {
+    min-width: 150px;
+    background: #f0f0f0;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   FORECAST BLOCK                                                         */
+.forecast-block {
+    margin-bottom: 1rem;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/*──────────────────────────────────────────────────────────────────────────*/
+/*   RESPONSIVE                                                            */
+@media (max-width: 700px) {
+
+    td,
+    th {
+        padding: 0.3rem;
+    }
+
+    td.col-silks img {
+        max-height: 32px;
+    }
+
+    .extras-container {
+        gap: 0.3rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .extras-container summary {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85em;
+    }
+
+    th.col-number,
+    td.col-number {
+        width: 3em;
+    }
+
+    /* ensure SP, Score, Wt, Days don't collapse */
+    th.col-sp,
+    td.col-sp,
+    th.col-score,
+    td.col-score,
+    th.col-weight,
+    td.col-weight,
+    th.col-days,
+    td.col-days {
+        min-width: 4em;
+    }
+}
