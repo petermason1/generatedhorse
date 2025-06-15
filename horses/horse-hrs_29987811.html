@@ -7,10 +7,41 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <nav class="main-navbar">
-        <a href="../index.html" class="brand">🏇 Racecards</a>
-    </nav>
-    <div class="main-container">
+<nav class="main-navbar">
+  <a href="index.html" class="brand">🏇 Racecards</a>
+  <button id="hamburger" aria-label="Menu">&#9776;</button>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="results/today.html">Results</a>
+    <a href="results/yesterday.html">Yesterday</a>
+  </div>
+</nav>
+
+
+   <!-- Global site navbar (use an include for this) -->
+<nav class="main-navbar">
+  <a href="index.html" class="brand">🏇 Racecards</a>
+  <button id="hamburger" aria-label="Menu">&#9776;</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="results/today.html">Results</a>
+    <a href="results/yesterday.html">Yesterday</a>
+  </div>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  });
+</script>    <div class="main-container">
         <h1>
                 <img src="https://www.rp-assets.com/svg/7/9/8/302897.svg" alt="silks" style="height:2.3em; vertical-align:middle; margin-right:0.45em;">
             Hale End
@@ -40,6 +71,84 @@
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td>2025-06-15</td>
+                    <td>Doncaster</td>
+                    <td>Little Princess Parties Handicap</td>
+                    <td>2</td>
+                    <td>4/1</td>
+                    <td>2</td>
+                    <td>Connor Beasley</td>
+                    <td>Michael Dods</td>
+                    <td>
+                        <a href="../races/race-rac_11637795.html" class="race-time-btn" title="View full racecard">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2025-06-15</td>
+                    <td>Doncaster</td>
+                    <td>Little Princess Parties Handicap</td>
+                    <td>2</td>
+                    <td>4/1</td>
+                    <td>2</td>
+                    <td>Connor Beasley</td>
+                    <td>Michael Dods</td>
+                    <td>
+                        <a href="../races/race-rac_11637795.html" class="race-time-btn" title="View full racecard">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2025-06-15</td>
+                    <td>Doncaster</td>
+                    <td>Little Princess Parties Handicap</td>
+                    <td>2</td>
+                    <td>4/1</td>
+                    <td>2</td>
+                    <td>Connor Beasley</td>
+                    <td>Michael Dods</td>
+                    <td>
+                        <a href="../races/race-rac_11637795.html" class="race-time-btn" title="View full racecard">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2025-06-15</td>
+                    <td>Doncaster</td>
+                    <td>Little Princess Parties Handicap</td>
+                    <td>2</td>
+                    <td>4/1</td>
+                    <td>2</td>
+                    <td>Connor Beasley</td>
+                    <td>Michael Dods</td>
+                    <td>
+                        <a href="../races/race-rac_11637795.html" class="race-time-btn" title="View full racecard">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2025-06-15</td>
+                    <td>Doncaster</td>
+                    <td>Little Princess Parties Handicap</td>
+                    <td>2</td>
+                    <td>4/1</td>
+                    <td>2</td>
+                    <td>Connor Beasley</td>
+                    <td>Michael Dods</td>
+                    <td>
+                        <a href="../races/race-rac_11637795.html" class="race-time-btn" title="View full racecard">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2025-06-15</td>
+                    <td>Doncaster</td>
+                    <td>Little Princess Parties Handicap</td>
+                    <td>2</td>
+                    <td>4/1</td>
+                    <td>2</td>
+                    <td>Connor Beasley</td>
+                    <td>Michael Dods</td>
+                    <td>
+                        <a href="../races/race-rac_11637795.html" class="race-time-btn" title="View full racecard">View</a>
+                    </td>
+                </tr>
                 <tr>
                     <td>2025-06-05</td>
                     <td>Hamilton</td>
