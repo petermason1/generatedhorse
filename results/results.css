@@ -82,15 +82,12 @@ td.silk {
   color: #aaa;
 }
 
-/* ----- Navbar ----- */
 .main-navbar {
   display: flex;
   align-items: center;
-  gap: 1em;
   background: #fff;
   box-shadow: 0 1px 8px rgba(32,63,92,0.07);
   padding: 0.3em 1.5em 0.3em 1em;
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -119,8 +116,6 @@ td.silk {
   background: #f4f7fb;
   color: #1769aa;
 }
-
-/* Hamburger for mobile */
 #hamburger {
   display: none;
   background: none;
@@ -142,7 +137,7 @@ td.silk {
     background: #fff;
     position: absolute;
     left: 0;
-    top: 3.1em;
+    top: 3em;
     box-shadow: 0 8px 24px rgba(44,71,116,0.10);
     z-index: 500;
     padding-bottom: 1em;
@@ -154,6 +149,7 @@ td.silk {
     display: block;
   }
 }
+
 
 /* Optionally make h2 in .no-results a bit bigger */
 .no-results h2 {
