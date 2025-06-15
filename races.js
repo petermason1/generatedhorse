@@ -1,11 +1,11 @@
 (function () {
     function localISODateTimeString(date) {
-      function pad(n) { return String(n).padStart(2, '0'); }
-      return date.getFullYear() + '-' +
-             pad(date.getMonth()+1) + '-' +
-             pad(date.getDate()) + 'T' +
-             pad(date.getHours()) + ':' +
-             pad(date.getMinutes());
+        function pad(n) { return String(n).padStart(2, '0'); }
+        return date.getFullYear() + '-' +
+            pad(date.getMonth() + 1) + '-' +
+            pad(date.getDate()) + 'T' +
+            pad(date.getHours()) + ':' +
+            pad(date.getMinutes());
     }
 
     const data = document.getElementById('races-data');
@@ -23,16 +23,22 @@
         r.isPast = r.race_datetime < nowISO;
     });
 
-    // Next 6 races (future), fill with most recent past races if fewer than 6 left
+    // Next 6 races (future)
     let nextRaces = races.filter(r => !r.isPast).slice(0, 6);
-    if (nextRaces.length < 6) {
-        const prev = races.filter(r => r.isPast).slice(-1 * (6 - nextRaces.length));
-        nextRaces = nextRaces.concat(prev);
+
+    // Get the bar element
+    let bar = document.getElementById('next6-races');
+    if (!bar) return;
+
+    if (nextRaces.length === 0) {
+        // No upcoming races left today, hide the bar
+        bar.innerHTML = '';
+        // Or show a message:
+        // bar.innerHTML = '<span class="next6-title">No more races today</span>';
+        return;
     }
 
     // Render the next 6 bar
-    let bar = document.getElementById('next6-races');
-    if (!bar) return;
     bar.innerHTML =
         `<span class="next6-title">Next 6 Races</span>
         <div class="next6-pill-group">` +
