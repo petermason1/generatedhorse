@@ -1,26 +1,24 @@
-// Converts "13:05" => "1:05", "00:55" => "12:55"
-function to12hr(t) {
-    if (!t) return '';
-    let [h, m] = t.split(':').map(Number);
-    h = h % 12;
-    if (h === 0) h = 12;
-    return `${h}:${String(m).padStart(2, '0')}`;
-}
-
 (function () {
+    function localISODateTimeString(date) {
+      function pad(n) { return String(n).padStart(2, '0'); }
+      return date.getFullYear() + '-' +
+             pad(date.getMonth()+1) + '-' +
+             pad(date.getDate()) + 'T' +
+             pad(date.getHours()) + ':' +
+             pad(date.getMinutes());
+    }
+
     const data = document.getElementById('races-data');
     if (!data) return;
     let races = JSON.parse(data.textContent).slice();
 
-    // Sort by UTC datetime string for accuracy
+    // Sort by local datetime string for accuracy
     races.sort((a, b) => a.race_datetime.localeCompare(b.race_datetime));
 
-    // Device time in UTC as ISO string (YYYY-MM-DDTHH:MM)
-    const now = new Date();
-    const nowUTC = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
-    const nowISO = nowUTC.toISOString().slice(0, 16);
+    // Device time in LOCAL ISO string (YYYY-MM-DDTHH:MM)
+    const nowISO = localISODateTimeString(new Date());
 
-    // Mark races as past
+    // Mark races as past (compare local to local)
     races.forEach(r => {
         r.isPast = r.race_datetime < nowISO;
     });
@@ -32,7 +30,7 @@ function to12hr(t) {
         nextRaces = nextRaces.concat(prev);
     }
 
-    // Render the next 6 bar: course name above, time as 12-hour no am/pm
+    // Render the next 6 bar
     let bar = document.getElementById('next6-races');
     if (!bar) return;
     bar.innerHTML =
@@ -41,15 +39,20 @@ function to12hr(t) {
         nextRaces.map(r =>
             `<div class="next6-pill">
                 <div class="next6-course" title="${r.course}">${r.course}</div>
-                <a href="race-${r._id}.html" class="next6-time-btn${r.isPast ? ' past' : ''}">${to12hr(r.off_time)}</a>
+                <a href="race-${r._id}.html" class="next6-time-btn${r.isPast ? ' past' : ''}">${r.off_time}</a>
             </div>`
         ).join('') +
         `</div>`;
 
-    // (Optional) Strike-through all past races in the main index list
+    // Mark past races in main card if present
+    const lookup = {};
+    races.forEach(r => lookup[r._id] = r);
+
     document.querySelectorAll('.race-time-btn').forEach(el => {
-        let raceId = el.getAttribute('href').replace(/^race-|\.html$/g, '');
-        let found = races.find(r => r._id == raceId);
-        if (found && found.isPast) el.classList.add('past');
+        let raceId = el.getAttribute('data-race-id');
+        let r = lookup[raceId];
+        if (r && r.isPast) {
+            el.classList.add('past');
+        }
     });
 })();

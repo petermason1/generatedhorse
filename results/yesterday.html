@@ -7,30 +7,32 @@
   <link rel="stylesheet" href="results.css">
 </head>
 <body>
-  <!-- templates/_navbar.html -->
-<nav class="main-navbar">
+  <nav class="main-navbar">
   <a href="index.html" class="brand">🏇 Racecards</a>
   <button id="hamburger" aria-label="Menu">&#9776;</button>
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="results/today.html">Results</a>
     <a href="results/yesterday.html">Yesterday</a>
   </div>
 </nav>
-
 <script>
-  // Simple hamburger toggle for mobile
   document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.main-navbar .nav-links');
+    const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', function () {
       navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
     });
   });
 </script>
   <div class="main-container">
     <h1>Results – Yesterday</h1>
-    <div class="timestamp">Last updated: 2025-06-15 13:54</div>
+    <div class="timestamp">Last updated: 2025-06-15 15:33</div>
 
     
 

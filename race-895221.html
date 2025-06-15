@@ -7,50 +7,76 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top: Global Navbar -->
+  <!-- Global Navbar -->
   <nav class="main-navbar">
     <a href="index.html" class="brand">🏇 Racecards</a>
-    <a href="results/today.html" class="nav-link">Results</a>
-    <a href="results/yesterday.html" class="nav-link">Yesterday</a>
+    <button id="hamburger" aria-label="Menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="results/today.html">Results</a>
+      <a href="results/yesterday.html">Yesterday</a>
+    </div>
   </nav>
 
   <!-- Next 6 Races Bar -->
-  <div class="next6-bar" style="margin: 1em 0; display: flex; gap: .5em; flex-wrap: wrap;">
-      <a href="race-895216.html"
-         class="next6-link">
-         Doncaster 1:50
-      </a>
-      <a href="race-897804.html"
-         class="next6-link">
-         Gowran Park 1:55
-      </a>
-      <a href="race-897797.html"
-         class="next6-link">
-         Downpatrick 2:05
-      </a>
-      <a href="race-895235.html"
-         class="next6-link">
-         Salisbury 2:15
-      </a>
-      <a href="race-897930.html"
-         class="next6-link">
-         Doncaster 2:25
-      </a>
-      <a href="race-897805.html"
-         class="next6-link">
-         Gowran Park 2:30
-      </a>
+<div id="next6-races">
+  <span class="next6-title">Next 6 Races</span>
+  <div class="next6-pill-group">
+      <div class="next6-pill">
+        <div class="next6-course" title="Gowran Park">Gowran Park</div>
+        <a href="race-897807.html"
+           class="next6-time-btn">
+          3:35
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Hamilton">Hamilton</div>
+        <a href="race-895228.html"
+           class="next6-time-btn">
+          3:45
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Downpatrick">Downpatrick</div>
+        <a href="race-897800.html"
+           class="next6-time-btn">
+          3:50
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Salisbury">Salisbury</div>
+        <a href="race-895230.html"
+           class="next6-time-btn">
+          4:00
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Doncaster">Doncaster</div>
+        <a href="race-895215.html"
+           class="next6-time-btn">
+          4:05
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Gowran Park">Gowran Park</div>
+        <a href="race-897808.html"
+           class="next6-time-btn">
+          4:10
+        </a>
+      </div>
   </div>
+</div>
+
 
   <div class="main-container">
 
     <!-- Course navigation (races at this course) -->
-    <div class="course-races-nav" style="margin-bottom: 1.5em;">
-      <h3 style="margin-bottom:0.5em;">
+    <div class="course-races-nav">
+      <h3>
           <a href="course-crs_390.html">Doncaster</a>
-        <span style="font-weight:normal;font-size:14px;">Races:</span>
+        <span class="races-label">Races:</span>
       </h3>
-      <div class="race-links" style="display:flex; flex-wrap:wrap; gap:0.4em;">
+      <div class="race-links">
           <a href="race-895216.html"
              class="course-race-link">
             1:50
@@ -100,8 +126,8 @@
       <span><strong>Type:</strong> Flat</span>
     </div>
 
-    <h2>Forecast</h2>
-    <p class="forecast-block">9/4 Artanis, 3/1 Homestrait, 7/2 Alfa Patisserie, 7/1 Amora Queen,  Hazy Cosmic Jane, 10/1 Just Call Me Angel</p>
+      <h2>Forecast</h2>
+      <p class="forecast-block">6/4 Artanis, 3/1 Homestrait, 5/1 Alfa Patisserie, 7/1 Hazy Cosmic Jane, 10/1 Amora Queen,  Just Call Me Angel</p>
 
     <details class="race-json-detail">
       <summary>Race Data</summary>
@@ -110,7 +136,7 @@
         <tbody>
           <tr>
             <th>Field Size</th>
-            <td>6</td>
+            <td>5</td>
           </tr>
           <tr>
             <th>Pattern</th>
@@ -159,126 +185,15 @@
       <tbody>
         <tr class="main-row">
           <td class="col-number">
-            5<br />(5)          </td>
-          <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/8/4/4/355448.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>222</strong></small>
-          </td>
-          <td class="col-horse">
-            <a href="horses/horse-hrs_50435826.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
-              Homestrait
-            </a>
-              <br>
-              <small style="font-size:10px; display:inline-flex; gap:0.6em;">
-<strong>OFR:</strong> -<span><strong>RPR:</strong> 83</span>              </small>
-          </td>
-          <td class="col-sp-score">
-            7/2<br />
-            <small>51.00</small>
-          </td>
-          <td class="col-weight-days">
-            128 <span class="units">lbs</span><br />
-            <small>
-              16 days           </small>
-          </td>
-          <td class="col-person">Ben Robinson<br />Brian Ellison</td>
-        </tr>
-        <tr class="extras-row">
-          <td colspan="6">
-            <div class="extras-container">
-              <details>
-                <summary>Info</summary>
-<p><strong>Comment:</strong> Runner-up over 5f on all three starts; big player if this new trip suits</p><p><strong>Spotlight:</strong> Runner-up over 5f on all three starts; might have bumped into a useful newcomer at Catterick 16 days ago and has a big role to play here if suited by the longer trip.</p>              </details>
-              <details>
-                <summary>Full Details</summary>
-                <table class="inner-details">
-                  <thead>
-                    <tr><th>Field</th><th>Value</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>Number</th>
-                      <td>5</td>
-                    </tr>
-                    <tr>
-                      <th>Draw</th>
-                      <td>5</td>
-                    </tr>
-                    <tr>
-                      <th>Horse</th>
-                      <td>Homestrait</td>
-                    </tr>
-                    <tr>
-                      <th>Form</th>
-                      <td>222</td>
-                    </tr>
-                    <tr>
-                      <th>Form6</th>
-                      <td>2-2-2</td>
-                    </tr>
-                    <tr>
-                      <th>Score</th>
-                      <td>51</td>
-                    </tr>
-                    <tr>
-                      <th>Sp Frac</th>
-                      <td>7/2</td>
-                    </tr>
-                    <tr>
-                      <th>Sp Dec</th>
-                      <td>4.5</td>
-                    </tr>
-                    <tr>
-                      <th>Weight</th>
-                      <td>128</td>
-                    </tr>
-                    <tr>
-                      <th>Days</th>
-                      <td>16</td>
-                    </tr>
-                    <tr>
-                      <th>Jockey</th>
-                      <td>Ben Robinson</td>
-                    </tr>
-                    <tr>
-                      <th>Trainer</th>
-                      <td>Brian Ellison</td>
-                    </tr>
-                    <tr>
-                      <th>Ofr</th>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <th>Rpr</th>
-                      <td>83</td>
-                    </tr>
-                    <tr>
-                      <th>Comment</th>
-                      <td>Runner-up over 5f on all three starts; big player if this new trip suits</td>
-                    </tr>
-                    <tr>
-                      <th>Spotlight</th>
-                      <td>Runner-up over 5f on all three starts; might have bumped into a useful newcomer at Catterick 16 days ago and has a big role to play here if suited by the longer trip.</td>
-                    </tr>
-                    <tr>
-                      <th>Quote</th>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </details>
-            </div>
-          </td>
-        </tr>
-        <tr class="main-row">
-          <td class="col-number">
             4<br />(6)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/c/9/5/118559c.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>63</strong></small>
+              <img src="https://www.rp-assets.com/svg/c/9/5/118559c.svg" alt="silk" width="32"><br />
+            <small><strong>63</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_52709629.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_52709629.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Hazy Cosmic Jane
             </a>
               <br>
@@ -286,7 +201,7 @@
 <strong>OFR:</strong> -<span><strong>RPR:</strong> 78</span>              </small>
           </td>
           <td class="col-sp-score">
-            12/1<br />
+            10/1<br />
             <small>45.00</small>
           </td>
           <td class="col-weight-days">
@@ -335,11 +250,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>12/1</td>
+                      <td>10/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>13</td>
+                      <td>11</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -387,11 +302,13 @@
           <td class="col-number">
             1<br />(1)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/2/4/4/343442.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>5</strong></small>
+              <img src="https://www.rp-assets.com/svg/2/4/4/343442.svg" alt="silk" width="32"><br />
+            <small><strong>5</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_50435791.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_50435791.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Alfa Patisserie
             </a>
               <br>
@@ -399,7 +316,7 @@
 <strong>OFR:</strong> -<span><strong>RPR:</strong> 72</span>              </small>
           </td>
           <td class="col-sp-score">
-            9/1<br />
+            7/1<br />
             <small>41.00</small>
           </td>
           <td class="col-weight-days">
@@ -448,11 +365,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>9/1</td>
+                      <td>7/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>10</td>
+                      <td>8</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -500,11 +417,13 @@
           <td class="col-number">
             2<br />(3)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/1/9/7/2791.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>–</strong></small>
+              <img src="https://www.rp-assets.com/svg/1/9/7/2791.svg" alt="silk" width="32"><br />
+            <small><strong>–</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_53602045.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_53602045.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Amora Queen
             </a>
               <br>
@@ -512,7 +431,7 @@
 <strong>OFR:</strong> -<span><strong>RPR:</strong> -</span>              </small>
           </td>
           <td class="col-sp-score">
-            7/1<br />
+            4/1<br />
             <small>39.00</small>
           </td>
           <td class="col-weight-days">
@@ -561,11 +480,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>7/1</td>
+                      <td>4/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>8</td>
+                      <td>5</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -613,11 +532,13 @@
           <td class="col-number">
             3<br />(2)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/6/3/3/55336.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>–</strong></small>
+              <img src="https://www.rp-assets.com/svg/6/3/3/55336.svg" alt="silk" width="32"><br />
+            <small><strong>–</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_53743473.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_53743473.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Artanis
             </a>
               <br>
@@ -625,7 +546,7 @@
 <strong>OFR:</strong> -<span><strong>RPR:</strong> -</span>              </small>
           </td>
           <td class="col-sp-score">
-            evn<br />
+            8/11<br />
             <small>39.00</small>
           </td>
           <td class="col-weight-days">
@@ -674,11 +595,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>evn</td>
+                      <td>8/11</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>2</td>
+                      <td>1.73</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -726,11 +647,13 @@
           <td class="col-number">
             6<br />(4)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/6/1/0/307016.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>–</strong></small>
+              <img src="https://www.rp-assets.com/svg/6/1/0/307016.svg" alt="silk" width="32"><br />
+            <small><strong>–</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_53743466.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_53743466.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Just Call Me Angel
             </a>
               <br>
@@ -738,7 +661,7 @@
 <strong>OFR:</strong> -<span><strong>RPR:</strong> -</span>              </small>
           </td>
           <td class="col-sp-score">
-            12/1<br />
+            10/1<br />
             <small>39.00</small>
           </td>
           <td class="col-weight-days">
@@ -787,11 +710,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>12/1</td>
+                      <td>10/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>13</td>
+                      <td>11</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -835,9 +758,137 @@
             </div>
           </td>
         </tr>
+        <tr class="main-row">
+          <td class="col-number">
+            NR<br />(5)          </td>
+          <td class="col-silks">
+              <img src="https://www.rp-assets.com/svg/8/4/4/355448.svg" alt="silk" width="32"><br />
+            <small><strong>222</strong></small>
+          </td>
+          <td class="col-horse">
+            <a href="horses/horse-hrs_50435826.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
+              Homestrait
+            </a>
+              <br>
+              <small style="font-size:10px; display:inline-flex; gap:0.6em;">
+<strong>OFR:</strong> -<span><strong>RPR:</strong> 83</span>              </small>
+          </td>
+          <td class="col-sp-score">
+            -<br />
+            <small>51.00</small>
+          </td>
+          <td class="col-weight-days">
+            128 <span class="units">lbs</span><br />
+            <small>
+              16 days           </small>
+          </td>
+          <td class="col-person"><br />Brian Ellison</td>
+        </tr>
+        <tr class="extras-row">
+          <td colspan="6">
+            <div class="extras-container">
+              <details>
+                <summary>Info</summary>
+<p><strong>Comment:</strong> Runner-up over 5f on all three starts; big player if this new trip suits</p><p><strong>Spotlight:</strong> Runner-up over 5f on all three starts; might have bumped into a useful newcomer at Catterick 16 days ago and has a big role to play here if suited by the longer trip.</p>              </details>
+              <details>
+                <summary>Full Details</summary>
+                <table class="inner-details">
+                  <thead>
+                    <tr><th>Field</th><th>Value</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Number</th>
+                      <td>NR</td>
+                    </tr>
+                    <tr>
+                      <th>Draw</th>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <th>Horse</th>
+                      <td>Homestrait</td>
+                    </tr>
+                    <tr>
+                      <th>Form</th>
+                      <td>222</td>
+                    </tr>
+                    <tr>
+                      <th>Form6</th>
+                      <td>2-2-2</td>
+                    </tr>
+                    <tr>
+                      <th>Score</th>
+                      <td>51</td>
+                    </tr>
+                    <tr>
+                      <th>Sp Frac</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th>Sp Dec</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th>Weight</th>
+                      <td>128</td>
+                    </tr>
+                    <tr>
+                      <th>Days</th>
+                      <td>16</td>
+                    </tr>
+                    <tr>
+                      <th>Jockey</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Trainer</th>
+                      <td>Brian Ellison</td>
+                    </tr>
+                    <tr>
+                      <th>Ofr</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th>Rpr</th>
+                      <td>83</td>
+                    </tr>
+                    <tr>
+                      <th>Comment</th>
+                      <td>Runner-up over 5f on all three starts; big player if this new trip suits</td>
+                    </tr>
+                    <tr>
+                      <th>Spotlight</th>
+                      <td>Runner-up over 5f on all three starts; might have bumped into a useful newcomer at Catterick 16 days ago and has a big role to play here if suited by the longer trip.</td>
+                    </tr>
+                    <tr>
+                      <th>Quote</th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
 
   </div>
+
+  <script>
+    // Hamburger nav for mobile
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.querySelector('.main-navbar .nav-links');
+      if (hamburger) {
+        hamburger.addEventListener('click', function () {
+          navLinks.classList.toggle('show');
+        });
+      }
+    });
+  </script>
 </body>
 </html>

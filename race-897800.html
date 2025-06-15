@@ -7,50 +7,76 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top: Global Navbar -->
+  <!-- Global Navbar -->
   <nav class="main-navbar">
     <a href="index.html" class="brand">🏇 Racecards</a>
-    <a href="results/today.html" class="nav-link">Results</a>
-    <a href="results/yesterday.html" class="nav-link">Yesterday</a>
+    <button id="hamburger" aria-label="Menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="results/today.html">Results</a>
+      <a href="results/yesterday.html">Yesterday</a>
+    </div>
   </nav>
 
   <!-- Next 6 Races Bar -->
-  <div class="next6-bar" style="margin: 1em 0; display: flex; gap: .5em; flex-wrap: wrap;">
-      <a href="race-895216.html"
-         class="next6-link">
-         Doncaster 1:50
-      </a>
-      <a href="race-897804.html"
-         class="next6-link">
-         Gowran Park 1:55
-      </a>
-      <a href="race-897797.html"
-         class="next6-link">
-         Downpatrick 2:05
-      </a>
-      <a href="race-895235.html"
-         class="next6-link">
-         Salisbury 2:15
-      </a>
-      <a href="race-897930.html"
-         class="next6-link">
-         Doncaster 2:25
-      </a>
-      <a href="race-897805.html"
-         class="next6-link">
-         Gowran Park 2:30
-      </a>
+<div id="next6-races">
+  <span class="next6-title">Next 6 Races</span>
+  <div class="next6-pill-group">
+      <div class="next6-pill">
+        <div class="next6-course" title="Gowran Park">Gowran Park</div>
+        <a href="race-897807.html"
+           class="next6-time-btn">
+          3:35
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Hamilton">Hamilton</div>
+        <a href="race-895228.html"
+           class="next6-time-btn">
+          3:45
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Downpatrick">Downpatrick</div>
+        <a href="race-897800.html"
+           class="next6-time-btn active">
+          3:50
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Salisbury">Salisbury</div>
+        <a href="race-895230.html"
+           class="next6-time-btn">
+          4:00
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Doncaster">Doncaster</div>
+        <a href="race-895215.html"
+           class="next6-time-btn">
+          4:05
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Gowran Park">Gowran Park</div>
+        <a href="race-897808.html"
+           class="next6-time-btn">
+          4:10
+        </a>
+      </div>
   </div>
+</div>
+
 
   <div class="main-container">
 
     <!-- Course navigation (races at this course) -->
-    <div class="course-races-nav" style="margin-bottom: 1.5em;">
-      <h3 style="margin-bottom:0.5em;">
+    <div class="course-races-nav">
+      <h3>
           <a href="course-crs_4654.html">Downpatrick</a>
-        <span style="font-weight:normal;font-size:14px;">Races:</span>
+        <span class="races-label">Races:</span>
       </h3>
-      <div class="race-links" style="display:flex; flex-wrap:wrap; gap:0.4em;">
+      <div class="race-links">
           <a href="race-897797.html"
              class="course-race-link">
             2:05
@@ -87,7 +113,7 @@
 
     <div class="meta">
       <span><strong>Course:</strong> Downpatrick</span>
-      <span><strong>Going:</strong> Good To Yielding</span>
+      <span><strong>Going:</strong> Yielding To Soft</span>
       <span><strong>Off:</strong> 3:50</span>
       <span><strong>Class:</strong> —</span>
       <span><strong>Distance:</strong> 2m2f</span>
@@ -96,8 +122,8 @@
       <span><strong>Type:</strong> Hurdle</span>
     </div>
 
-    <h2>Forecast</h2>
-    <p class="forecast-block">3/1 Bowensonfire, 100/30 Malbay Madness, 9/2 Extrapolation, 6/1 Tonaghneave Well, 7/1 Portnacoo,  Hasten Slowly, 12/1 Ceanndana, 20/1 Dollar Value, 25/1 Newtown Rambler, 66/1 Run For Harry,  The Dasher Conway</p>
+      <h2>Forecast</h2>
+      <p class="forecast-block">3/1 Bowensonfire, 100/30 Malbay Madness, 9/2 Extrapolation, 6/1 Tonaghneave Well, 7/1 Portnacoo,  Hasten Slowly, 12/1 Ceanndana, 20/1 Dollar Value, 25/1 Newtown Rambler, 66/1 Run For Harry,  The Dasher Conway</p>
 
     <details class="race-json-detail">
       <summary>Race Data</summary>
@@ -157,11 +183,13 @@
           <td class="col-number">
             3          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/2/3/9/273932.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>3312-1</strong></small>
+              <img src="https://www.rp-assets.com/svg/2/3/9/273932.svg" alt="silk" width="32"><br />
+            <small><strong>3312-1</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_40553436.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_40553436.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Bowensonfire
             </a>
               <br>
@@ -270,11 +298,13 @@
           <td class="col-number">
             5          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/7/5/5/44557.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>1341P-</strong></small>
+              <img src="https://www.rp-assets.com/svg/7/5/5/44557.svg" alt="silk" width="32"><br />
+            <small><strong>1341P-</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_33903975.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_33903975.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Portnacoo
             </a>
               <br>
@@ -282,7 +312,7 @@
 <strong>OFR:</strong> 120<span><strong>RPR:</strong> 126</span>              </small>
           </td>
           <td class="col-sp-score">
-            11/2<br />
+            6/1<br />
             <small>84.00</small>
           </td>
           <td class="col-weight-days">
@@ -331,11 +361,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>11/2</td>
+                      <td>6/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>6.5</td>
+                      <td>7</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -383,11 +413,13 @@
           <td class="col-number">
             10          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/3/4/4/88443.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>0861-1</strong></small>
+              <img src="https://www.rp-assets.com/svg/3/4/4/88443.svg" alt="silk" width="32"><br />
+            <small><strong>0861-1</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_30096689.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_30096689.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Malbay Madness
             </a>
               <br>
@@ -395,7 +427,7 @@
 <strong>OFR:</strong> 111<span><strong>RPR:</strong> 131</span>              </small>
           </td>
           <td class="col-sp-score">
-            9/2<br />
+            4/1<br />
             <small>81.00</small>
           </td>
           <td class="col-weight-days">
@@ -444,11 +476,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>9/2</td>
+                      <td>4/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>5.5</td>
+                      <td>5</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -496,11 +528,13 @@
           <td class="col-number">
             2          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/7/7/9/345977.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>12230-</strong></small>
+              <img src="https://www.rp-assets.com/svg/7/7/9/345977.svg" alt="silk" width="32"><br />
+            <small><strong>12230-</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_41191346.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_41191346.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Tonaghneave Well
             </a>
               <br>
@@ -609,11 +643,13 @@
           <td class="col-number">
             11          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/8/1/8/348818.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>P210P-</strong></small>
+              <img src="https://www.rp-assets.com/svg/8/1/8/348818.svg" alt="silk" width="32"><br />
+            <small><strong>P210P-</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_41052543.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_41052543.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Newtown Rambler
             </a>
               <br>
@@ -621,7 +657,7 @@
 <strong>OFR:</strong> 111<span><strong>RPR:</strong> 126</span>              </small>
           </td>
           <td class="col-sp-score">
-            9/1<br />
+            15/2<br />
             <small>60.00</small>
           </td>
           <td class="col-weight-days">
@@ -670,11 +706,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>9/1</td>
+                      <td>15/2</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>10</td>
+                      <td>8.5</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -722,11 +758,13 @@
           <td class="col-number">
             4          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/4/2/9/117924.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>124F0-</strong></small>
+              <img src="https://www.rp-assets.com/svg/4/2/9/117924.svg" alt="silk" width="32"><br />
+            <small><strong>124F0-</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_9601494.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_9601494.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Dollar Value
             </a>
               <br>
@@ -835,11 +873,13 @@
           <td class="col-number">
             1          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/5/9/1/302195.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>/3172-</strong></small>
+              <img src="https://www.rp-assets.com/svg/5/9/1/302195.svg" alt="silk" width="32"><br />
+            <small><strong>/3172-</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_27697278.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_27697278.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Extrapolation
             </a>
               <br>
@@ -847,7 +887,7 @@
 <strong>OFR:</strong> 125<span><strong>RPR:</strong> 130</span>              </small>
           </td>
           <td class="col-sp-score">
-            12/1<br />
+            11/1<br />
             <small>53.00</small>
           </td>
           <td class="col-weight-days">
@@ -896,11 +936,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>12/1</td>
+                      <td>11/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>13</td>
+                      <td>12</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -948,11 +988,13 @@
           <td class="col-number">
             7          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/3/4/5/190543.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>7P00-P</strong></small>
+              <img src="https://www.rp-assets.com/svg/3/4/5/190543.svg" alt="silk" width="32"><br />
+            <small><strong>7P00-P</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_32061708.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_32061708.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Run For Harry
             </a>
               <br>
@@ -960,7 +1002,7 @@
 <strong>OFR:</strong> 119<span><strong>RPR:</strong> 130</span>              </small>
           </td>
           <td class="col-sp-score">
-            25/1<br />
+            28/1<br />
             <small>53.00</small>
           </td>
           <td class="col-weight-days">
@@ -1009,11 +1051,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>25/1</td>
+                      <td>28/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>26</td>
+                      <td>29</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -1061,11 +1103,13 @@
           <td class="col-number">
             8          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/6/5/4/311456.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>6050-9</strong></small>
+              <img src="https://www.rp-assets.com/svg/6/5/4/311456.svg" alt="silk" width="32"><br />
+            <small><strong>6050-9</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_23787883.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_23787883.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               The Dasher Conway
             </a>
               <br>
@@ -1174,11 +1218,13 @@
           <td class="col-number">
             NR          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/2/3/6/309632.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>11216-</strong></small>
+              <img src="https://www.rp-assets.com/svg/2/3/6/309632.svg" alt="silk" width="32"><br />
+            <small><strong>11216-</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_27251609.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_27251609.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Ceanndana
             </a>
               <br>
@@ -1287,11 +1333,13 @@
           <td class="col-number">
             NR          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/1/1/0/292011.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>184-U2</strong></small>
+              <img src="https://www.rp-assets.com/svg/1/1/0/292011.svg" alt="silk" width="32"><br />
+            <small><strong>184-U2</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_30643130.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_30643130.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Hasten Slowly
             </a>
               <br>
@@ -1400,5 +1448,18 @@
     </table>
 
   </div>
+
+  <script>
+    // Hamburger nav for mobile
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.querySelector('.main-navbar .nav-links');
+      if (hamburger) {
+        hamburger.addEventListener('click', function () {
+          navLinks.classList.toggle('show');
+        });
+      }
+    });
+  </script>
 </body>
 </html>

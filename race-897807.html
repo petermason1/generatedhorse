@@ -7,50 +7,76 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top: Global Navbar -->
+  <!-- Global Navbar -->
   <nav class="main-navbar">
     <a href="index.html" class="brand">🏇 Racecards</a>
-    <a href="results/today.html" class="nav-link">Results</a>
-    <a href="results/yesterday.html" class="nav-link">Yesterday</a>
+    <button id="hamburger" aria-label="Menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="results/today.html">Results</a>
+      <a href="results/yesterday.html">Yesterday</a>
+    </div>
   </nav>
 
   <!-- Next 6 Races Bar -->
-  <div class="next6-bar" style="margin: 1em 0; display: flex; gap: .5em; flex-wrap: wrap;">
-      <a href="race-895216.html"
-         class="next6-link">
-         Doncaster 1:50
-      </a>
-      <a href="race-897804.html"
-         class="next6-link">
-         Gowran Park 1:55
-      </a>
-      <a href="race-897797.html"
-         class="next6-link">
-         Downpatrick 2:05
-      </a>
-      <a href="race-895235.html"
-         class="next6-link">
-         Salisbury 2:15
-      </a>
-      <a href="race-897930.html"
-         class="next6-link">
-         Doncaster 2:25
-      </a>
-      <a href="race-897805.html"
-         class="next6-link">
-         Gowran Park 2:30
-      </a>
+<div id="next6-races">
+  <span class="next6-title">Next 6 Races</span>
+  <div class="next6-pill-group">
+      <div class="next6-pill">
+        <div class="next6-course" title="Gowran Park">Gowran Park</div>
+        <a href="race-897807.html"
+           class="next6-time-btn active">
+          3:35
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Hamilton">Hamilton</div>
+        <a href="race-895228.html"
+           class="next6-time-btn">
+          3:45
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Downpatrick">Downpatrick</div>
+        <a href="race-897800.html"
+           class="next6-time-btn">
+          3:50
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Salisbury">Salisbury</div>
+        <a href="race-895230.html"
+           class="next6-time-btn">
+          4:00
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Doncaster">Doncaster</div>
+        <a href="race-895215.html"
+           class="next6-time-btn">
+          4:05
+        </a>
+      </div>
+      <div class="next6-pill">
+        <div class="next6-course" title="Gowran Park">Gowran Park</div>
+        <a href="race-897808.html"
+           class="next6-time-btn">
+          4:10
+        </a>
+      </div>
   </div>
+</div>
+
 
   <div class="main-container">
 
     <!-- Course navigation (races at this course) -->
-    <div class="course-races-nav" style="margin-bottom: 1.5em;">
-      <h3 style="margin-bottom:0.5em;">
+    <div class="course-races-nav">
+      <h3>
           <a href="course-crs_4784.html">Gowran Park</a>
-        <span style="font-weight:normal;font-size:14px;">Races:</span>
+        <span class="races-label">Races:</span>
       </h3>
-      <div class="race-links" style="display:flex; flex-wrap:wrap; gap:0.4em;">
+      <div class="race-links">
           <a href="race-897804.html"
              class="course-race-link">
             1:55
@@ -96,8 +122,8 @@
       <span><strong>Type:</strong> Flat</span>
     </div>
 
-    <h2>Forecast</h2>
-    <p class="forecast-block">7/2 Roderick, 6/1 Carvalhal, 13/2 Dazzling Spirit, 7/1 Miss Abby Jools, 8/1 Eagles Whistle, 10/1 Golden Goose, 12/1 Saith Seren,  Suityourselfboss,  Poppadom, 14/1 Run The Jewels,  So Messi, 16/1 May Night, 20/1 Superior Force,  Pegasus Of Harry,  Sneddy Eddie, 25/1 Madam Alkaterina</p>
+      <h2>Forecast</h2>
+      <p class="forecast-block">7/2 Roderick, 6/1 Carvalhal, 13/2 Dazzling Spirit, 7/1 Miss Abby Jools, 8/1 Eagles Whistle, 10/1 Golden Goose, 12/1 Saith Seren,  Suityourselfboss,  Poppadom, 14/1 Run The Jewels,  So Messi, 16/1 May Night, 20/1 Superior Force,  Pegasus Of Harry,  Sneddy Eddie, 25/1 Madam Alkaterina</p>
 
     <details class="race-json-detail">
       <summary>Race Data</summary>
@@ -157,11 +183,13 @@
           <td class="col-number">
             1<br />(9)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/1/3/5/322531.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>900-16</strong></small>
+              <img src="https://www.rp-assets.com/svg/1/3/5/322531.svg" alt="silk" width="32"><br />
+            <small><strong>900-16</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_30123100.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_30123100.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Golden Goose
             </a>
               <br>
@@ -169,7 +197,7 @@
 <strong>OFR:</strong> 60<span><strong>RPR:</strong> 65</span>              </small>
           </td>
           <td class="col-sp-score">
-            33/1<br />
+            50/1<br />
             <small>61.00</small>
           </td>
           <td class="col-weight-days">
@@ -218,11 +246,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>33/1</td>
+                      <td>50/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>34</td>
+                      <td>51</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -270,11 +298,13 @@
           <td class="col-number">
             3<br />(18)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/3/9/6/358693.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>6-6733</strong></small>
+              <img src="https://www.rp-assets.com/svg/3/9/6/358693.svg" alt="silk" width="32"><br />
+            <small><strong>6-6733</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_35149513.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_35149513.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Carvalhal
             </a>
               <br>
@@ -383,11 +413,13 @@
           <td class="col-number">
             13<br />(7)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/6/8/9/205986.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>280022</strong></small>
+              <img src="https://www.rp-assets.com/svg/6/8/9/205986.svg" alt="silk" width="32"><br />
+            <small><strong>280022</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_14220710.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_14220710.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Roderick
             </a>
               <br>
@@ -395,7 +427,7 @@
 <strong>OFR:</strong> 45<span><strong>RPR:</strong> 66</span>              </small>
           </td>
           <td class="col-sp-score">
-            5/2<br />
+            2/1<br />
             <small>57.00</small>
           </td>
           <td class="col-weight-days">
@@ -444,11 +476,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>5/2</td>
+                      <td>2/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>3.5</td>
+                      <td>3</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -496,11 +528,13 @@
           <td class="col-number">
             12<br />(4)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/4/8/5/331584.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>037-68</strong></small>
+              <img src="https://www.rp-assets.com/svg/4/8/5/331584.svg" alt="silk" width="32"><br />
+            <small><strong>037-68</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_35700070.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_35700070.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Poppadom
             </a>
               <br>
@@ -609,11 +643,13 @@
           <td class="col-number">
             15<br />(15)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/9/2/2/358229.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>060-39</strong></small>
+              <img src="https://www.rp-assets.com/svg/9/2/2/358229.svg" alt="silk" width="32"><br />
+            <small><strong>060-39</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_21878297.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_21878297.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Dazzling Spirit
             </a>
               <br>
@@ -621,7 +657,7 @@
 <strong>OFR:</strong> 40<span><strong>RPR:</strong> 64</span>              </small>
           </td>
           <td class="col-sp-score">
-            12/1<br />
+            16/1<br />
             <small>53.00</small>
           </td>
           <td class="col-weight-days">
@@ -670,11 +706,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>12/1</td>
+                      <td>16/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>13</td>
+                      <td>17</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -722,11 +758,13 @@
           <td class="col-number">
             7<br />(10)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/9/5/0/239059.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>5620-8</strong></small>
+              <img src="https://www.rp-assets.com/svg/9/5/0/239059.svg" alt="silk" width="32"><br />
+            <small><strong>5620-8</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_37821581.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_37821581.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Saith Seren
             </a>
               <br>
@@ -734,7 +772,7 @@
 <strong>OFR:</strong> 52<span><strong>RPR:</strong> 66</span>              </small>
           </td>
           <td class="col-sp-score">
-            7/1<br />
+            8/1<br />
             <small>53.00</small>
           </td>
           <td class="col-weight-days">
@@ -783,11 +821,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>7/1</td>
+                      <td>8/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>8</td>
+                      <td>9</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -835,11 +873,13 @@
           <td class="col-number">
             9<br />(11)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/9/6/8/320869.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>0350-0</strong></small>
+              <img src="https://www.rp-assets.com/svg/9/6/8/320869.svg" alt="silk" width="32"><br />
+            <small><strong>0350-0</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_31660972.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_31660972.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Sneddy Eddie
             </a>
               <br>
@@ -847,7 +887,7 @@
 <strong>OFR:</strong> 50<span><strong>RPR:</strong> 64</span>              </small>
           </td>
           <td class="col-sp-score">
-            5/1<br />
+            4/1<br />
             <small>53.00</small>
           </td>
           <td class="col-weight-days">
@@ -896,11 +936,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>5/1</td>
+                      <td>4/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>6</td>
+                      <td>5</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -948,11 +988,13 @@
           <td class="col-number">
             10<br />(6)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/3/3/0/324033.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>09-928</strong></small>
+              <img src="https://www.rp-assets.com/svg/3/3/0/324033.svg" alt="silk" width="32"><br />
+            <small><strong>09-928</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_31287697.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_31287697.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Suityourselfboss
             </a>
               <br>
@@ -960,7 +1002,7 @@
 <strong>OFR:</strong> 49<span><strong>RPR:</strong> 64</span>              </small>
           </td>
           <td class="col-sp-score">
-            16/1<br />
+            14/1<br />
             <small>53.00</small>
           </td>
           <td class="col-weight-days">
@@ -1009,11 +1051,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>16/1</td>
+                      <td>14/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>17</td>
+                      <td>15</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -1061,11 +1103,13 @@
           <td class="col-number">
             6<br />(12)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/9/1/7/342719.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>0-0750</strong></small>
+              <img src="https://www.rp-assets.com/svg/9/1/7/342719.svg" alt="silk" width="32"><br />
+            <small><strong>0-0750</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_20977754.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_20977754.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               May Night
             </a>
               <br>
@@ -1073,7 +1117,7 @@
 <strong>OFR:</strong> 54<span><strong>RPR:</strong> 66</span>              </small>
           </td>
           <td class="col-sp-score">
-            9/1<br />
+            11/1<br />
             <small>51.00</small>
           </td>
           <td class="col-weight-days">
@@ -1122,11 +1166,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>9/1</td>
+                      <td>11/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>10</td>
+                      <td>12</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -1174,11 +1218,13 @@
           <td class="col-number">
             2<br />(13)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/7/8/7/277787.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>26-355</strong></small>
+              <img src="https://www.rp-assets.com/svg/7/8/7/277787.svg" alt="silk" width="32"><br />
+            <small><strong>26-355</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_30765084.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_30765084.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Miss Abby Jools
             </a>
               <br>
@@ -1287,11 +1333,13 @@
           <td class="col-number">
             8<br />(1)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/0/8/6/345680.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>68-085</strong></small>
+              <img src="https://www.rp-assets.com/svg/0/8/6/345680.svg" alt="silk" width="32"><br />
+            <small><strong>68-085</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_37368058.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_37368058.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Pegasus Of Harry
             </a>
               <br>
@@ -1400,11 +1448,13 @@
           <td class="col-number">
             4<br />(16)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/5/9/1/308195.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>50800-</strong></small>
+              <img src="https://www.rp-assets.com/svg/5/9/1/308195.svg" alt="silk" width="32"><br />
+            <small><strong>50800-</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_24770550.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_24770550.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Run The Jewels
             </a>
               <br>
@@ -1412,7 +1462,7 @@
 <strong>OFR:</strong> 56<span><strong>RPR:</strong> 62</span>              </small>
           </td>
           <td class="col-sp-score">
-            25/1<br />
+            33/1<br />
             <small>51.00</small>
           </td>
           <td class="col-weight-days">
@@ -1461,11 +1511,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>25/1</td>
+                      <td>33/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>26</td>
+                      <td>34</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -1513,11 +1563,13 @@
           <td class="col-number">
             14<br />(17)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/c/8/9/18698c.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>060-67</strong></small>
+              <img src="https://www.rp-assets.com/svg/c/8/9/18698c.svg" alt="silk" width="32"><br />
+            <small><strong>060-67</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_34542690.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_34542690.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               So Messi
             </a>
               <br>
@@ -1525,7 +1577,7 @@
 <strong>OFR:</strong> 41<span><strong>RPR:</strong> 64</span>              </small>
           </td>
           <td class="col-sp-score">
-            9/1<br />
+            12/1<br />
             <small>51.00</small>
           </td>
           <td class="col-weight-days">
@@ -1574,11 +1626,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>9/1</td>
+                      <td>12/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>10</td>
+                      <td>13</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -1626,11 +1678,13 @@
           <td class="col-number">
             R17<br />(8)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/0/2/4/356420.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>00-80</strong></small>
+              <img src="https://www.rp-assets.com/svg/0/2/4/356420.svg" alt="silk" width="32"><br />
+            <small><strong>00-80</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_42261842.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_42261842.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Pare Of Brown Eyes
             </a>
               <br>
@@ -1638,7 +1692,7 @@
 <strong>OFR:</strong> 45<span><strong>RPR:</strong> 65</span>              </small>
           </td>
           <td class="col-sp-score">
-            200/1<br />
+            80/1<br />
             <small>49.00</small>
           </td>
           <td class="col-weight-days">
@@ -1687,11 +1741,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>200/1</td>
+                      <td>80/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>201</td>
+                      <td>81</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -1739,11 +1793,13 @@
           <td class="col-number">
             11<br />(5)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/5/4/8/180845.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>000-</strong></small>
+              <img src="https://www.rp-assets.com/svg/5/4/8/180845.svg" alt="silk" width="32"><br />
+            <small><strong>000-</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_42521745.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_42521745.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Madam Alkaterina
             </a>
               <br>
@@ -1751,7 +1807,7 @@
 <strong>OFR:</strong> 48<span><strong>RPR:</strong> 59</span>              </small>
           </td>
           <td class="col-sp-score">
-            28/1<br />
+            33/1<br />
             <small>47.00</small>
           </td>
           <td class="col-weight-days">
@@ -1800,11 +1856,11 @@
                     </tr>
                     <tr>
                       <th>Sp Frac</th>
-                      <td>28/1</td>
+                      <td>33/1</td>
                     </tr>
                     <tr>
                       <th>Sp Dec</th>
-                      <td>29</td>
+                      <td>34</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
@@ -1852,11 +1908,13 @@
           <td class="col-number">
             NR<br />(2)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/1/6/7/185761.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>0-8400</strong></small>
+              <img src="https://www.rp-assets.com/svg/1/6/7/185761.svg" alt="silk" width="32"><br />
+            <small><strong>0-8400</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_37123597.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_37123597.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Star Mind
             </a>
               <br>
@@ -1965,11 +2023,13 @@
           <td class="col-number">
             NR<br />(14)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/4/1/7/343714.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>859</strong></small>
+              <img src="https://www.rp-assets.com/svg/4/1/7/343714.svg" alt="silk" width="32"><br />
+            <small><strong>859</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_48052438.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_48052438.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Super Fly
             </a>
               <br>
@@ -2078,11 +2138,13 @@
           <td class="col-number">
             NR<br />(3)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/6/7/5/224576.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>080055</strong></small>
+              <img src="https://www.rp-assets.com/svg/6/7/5/224576.svg" alt="silk" width="32"><br />
+            <small><strong>080055</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_46265443.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_46265443.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Eagles Whistle
             </a>
               <br>
@@ -2191,11 +2253,13 @@
           <td class="col-number">
             NR<br />(19)          </td>
           <td class="col-silks">
-              <img src="https://www.rp-assets.com/svg/7/4/6/306647.svg" alt="silk" width="32" height="32"><br />
-            <small style="font-size:12px"><strong>387500</strong></small>
+              <img src="https://www.rp-assets.com/svg/7/4/6/306647.svg" alt="silk" width="32"><br />
+            <small><strong>387500</strong></small>
           </td>
           <td class="col-horse">
-            <a href="horses/horse-hrs_24819550.html" class="horse-history-link" style="font-weight:bold; font-size:15px; text-decoration:none;">
+            <a href="horses/horse-hrs_24819550.html"
+               class="horse-history-link"
+               style="font-weight:bold; font-size:15px; text-decoration:none;">
               Superior Force
             </a>
               <br>
@@ -2304,5 +2368,18 @@
     </table>
 
   </div>
+
+  <script>
+    // Hamburger nav for mobile
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.querySelector('.main-navbar .nav-links');
+      if (hamburger) {
+        hamburger.addEventListener('click', function () {
+          navLinks.classList.toggle('show');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
