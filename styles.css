@@ -468,3 +468,76 @@ details[open] summary {
     clip: rect(1px,1px,1px,1px);
     white-space: nowrap;
 }
+
+.main-navbar {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(32,63,92,0.07);
+  padding: 0.3em 1.5em 0.3em 1em;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.main-navbar .brand {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #1b3558;
+  text-decoration: none;
+  margin-right: 1.5em;
+  white-space: nowrap;
+}
+.main-navbar .nav-links {
+  display: flex;
+  gap: 1em;
+  margin-left: auto;
+}
+.main-navbar a {
+  text-decoration: none;
+  color: #234087;
+  padding: 0.25em 0.8em;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.main-navbar a:hover, .main-navbar a.active {
+  background: #f4f7fb;
+  color: #1769aa;
+}
+
+/* HAMBURGER for mobile */
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  .main-navbar {
+    flex-wrap: wrap;
+    padding: 0.3em 0.7em;
+  }
+  .main-navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 3.1em;
+    box-shadow: 0 8px 24px rgba(44,71,116,0.10);
+    z-index: 500;
+    padding-bottom: 1em;
+  }
+  .main-navbar .nav-links.show {
+    display: flex;
+  }
+  #hamburger {
+    display: block;
+  }
+}
+

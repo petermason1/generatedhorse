@@ -1,16 +1,163 @@
-body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f9fb; margin:0; }
-.main-container { max-width: 820px; margin: 0 auto; padding: 2em 1em; background: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.12);}
-h1 { text-align:center; margin-bottom:0.2em; }
-.race-block { margin-bottom:2.5em; border-bottom:1px solid #e0e4ee; padding-bottom:1em; }
-.meta { color:#7a8894; font-size:0.98em; margin-bottom:0.2em; }
-table { width:100%; border-collapse: collapse; background:#f7f9fb; border-radius:7px; overflow:hidden; }
-th, td { padding:0.35em 0.55em; text-align:left; }
-th { background:#eceff5; font-weight:600; }
-tr.placed { background:#b8edb6; }
-tr.winner { background:#ffe27a; }
-tr:not(.winner):not(.placed):hover { background:#eef3fa; }
-td.sp, th.sp { text-align:right; }
-td.pos, th.pos { text-align:center; }
-td.silk { width: 38px; }
-.non-runner { color: #d44; font-weight: 600; }
-.timestamp {text-align:right; font-size:0.9em; color:#aaa;}
+/* ----- Core layout ----- */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f9fb;
+  margin: 0;
+}
+.main-container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+/* ----- Results blocks ----- */
+.race-block {
+  margin-bottom: 2.5em;
+  border-bottom: 1px solid #e0e4ee;
+  padding-bottom: 1em;
+}
+.meta {
+  color: #7a8894;
+  font-size: 0.98em;
+  margin-bottom: 0.2em;
+}
+
+/* ----- Results tables ----- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f7f9fb;
+  border-radius: 7px;
+  overflow: hidden;
+}
+th, td {
+  padding: 0.35em 0.55em;
+  text-align: left;
+}
+th {
+  background: #eceff5;
+  font-weight: 600;
+}
+tr.placed {
+  background: #b8edb6;
+}
+tr.winner {
+  background: #ffe27a;
+}
+tr:not(.winner):not(.placed):hover {
+  background: #eef3fa;
+}
+td.sp, th.sp {
+  text-align: right;
+}
+td.pos, th.pos {
+  text-align: center;
+}
+td.silk {
+  width: 38px;
+}
+.non-runner {
+  color: #d44;
+  font-weight: 600;
+  margin-top: 0.5em;
+  font-size: 1.01em;
+}
+.no-results {
+  text-align: center;
+  color: #7a8894;
+  margin-top: 3em;
+}
+
+/* ----- Misc ----- */
+.timestamp {
+  text-align: right;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* ----- Navbar ----- */
+.main-navbar {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(32,63,92,0.07);
+  padding: 0.3em 1.5em 0.3em 1em;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.main-navbar .brand {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #1b3558;
+  text-decoration: none;
+  margin-right: 1.5em;
+  white-space: nowrap;
+}
+.main-navbar .nav-links {
+  display: flex;
+  gap: 1em;
+  margin-left: auto;
+}
+.main-navbar a {
+  text-decoration: none;
+  color: #234087;
+  padding: 0.25em 0.8em;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.main-navbar a:hover, .main-navbar a.active {
+  background: #f4f7fb;
+  color: #1769aa;
+}
+
+/* Hamburger for mobile */
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  .main-navbar {
+    flex-wrap: wrap;
+    padding: 0.3em 0.7em;
+  }
+  .main-navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 3.1em;
+    box-shadow: 0 8px 24px rgba(44,71,116,0.10);
+    z-index: 500;
+    padding-bottom: 1em;
+  }
+  .main-navbar .nav-links.show {
+    display: flex;
+  }
+  #hamburger {
+    display: block;
+  }
+}
+
+/* Optionally make h2 in .no-results a bit bigger */
+.no-results h2 {
+  font-size: 1.5em;
+  color: #1b3558;
+  margin-bottom: 0.5em;
+}
