@@ -1,93 +1,151 @@
 <!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Racecards 2025-06-15</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <nav class="main-navbar">
-        <a href="index.html" class="brand">🏇 Racecards</a>
-    </nav>
-
-    <div class="main-container">
-        <h1>Racecards 2025-06-15</h1>
-
-        <!-- Next 6 Races bar will be filled by JS -->
-        <div id="next6-races"></div>
-        <script id="races-data" type="application/json">
-      [{"_id": "895216", "course": "Doncaster", "off_time": "1:50", "race_datetime": "2025-06-15T11:50:00Z"}, {"_id": "897930", "course": "Doncaster", "off_time": "2:25", "race_datetime": "2025-06-15T12:25:00Z"}, {"_id": "895221", "course": "Doncaster", "off_time": "3:00", "race_datetime": "2025-06-15T13:00:00Z"}, {"_id": "895217", "course": "Doncaster", "off_time": "3:30", "race_datetime": "2025-06-15T13:30:00Z"}, {"_id": "895215", "course": "Doncaster", "off_time": "4:05", "race_datetime": "2025-06-15T14:05:00Z"}, {"_id": "895218", "course": "Doncaster", "off_time": "4:35", "race_datetime": "2025-06-15T14:35:00Z"}, {"_id": "895219", "course": "Doncaster", "off_time": "5:05", "race_datetime": "2025-06-15T15:05:00Z"}, {"_id": "895220", "course": "Doncaster", "off_time": "5:37", "race_datetime": "2025-06-15T15:37:00Z"}, {"_id": "897797", "course": "Downpatrick", "off_time": "2:05", "race_datetime": "2025-06-15T12:05:00Z"}, {"_id": "897798", "course": "Downpatrick", "off_time": "2:40", "race_datetime": "2025-06-15T12:40:00Z"}, {"_id": "897799", "course": "Downpatrick", "off_time": "3:15", "race_datetime": "2025-06-15T13:15:00Z"}, {"_id": "897800", "course": "Downpatrick", "off_time": "3:50", "race_datetime": "2025-06-15T13:50:00Z"}, {"_id": "897801", "course": "Downpatrick", "off_time": "4:20", "race_datetime": "2025-06-15T14:20:00Z"}, {"_id": "897802", "course": "Downpatrick", "off_time": "4:50", "race_datetime": "2025-06-15T14:50:00Z"}, {"_id": "897803", "course": "Downpatrick", "off_time": "5:20", "race_datetime": "2025-06-15T15:20:00Z"}, {"_id": "897804", "course": "Gowran Park", "off_time": "1:55", "race_datetime": "2025-06-15T11:55:00Z"}, {"_id": "897805", "course": "Gowran Park", "off_time": "2:30", "race_datetime": "2025-06-15T12:30:00Z"}, {"_id": "897806", "course": "Gowran Park", "off_time": "3:05", "race_datetime": "2025-06-15T13:05:00Z"}, {"_id": "897807", "course": "Gowran Park", "off_time": "3:35", "race_datetime": "2025-06-15T13:35:00Z"}, {"_id": "897808", "course": "Gowran Park", "off_time": "4:10", "race_datetime": "2025-06-15T14:10:00Z"}, {"_id": "897809", "course": "Gowran Park", "off_time": "4:40", "race_datetime": "2025-06-15T14:40:00Z"}, {"_id": "897810", "course": "Gowran Park", "off_time": "5:10", "race_datetime": "2025-06-15T15:10:00Z"}, {"_id": "895228", "course": "Hamilton", "off_time": "3:45", "race_datetime": "2025-06-15T13:45:00Z"}, {"_id": "895227", "course": "Hamilton", "off_time": "4:15", "race_datetime": "2025-06-15T14:15:00Z"}, {"_id": "895222", "course": "Hamilton", "off_time": "4:45", "race_datetime": "2025-06-15T14:45:00Z"}, {"_id": "895223", "course": "Hamilton", "off_time": "5:15", "race_datetime": "2025-06-15T15:15:00Z"}, {"_id": "895224", "course": "Hamilton", "off_time": "5:45", "race_datetime": "2025-06-15T15:45:00Z"}, {"_id": "895226", "course": "Hamilton", "off_time": "6:15", "race_datetime": "2025-06-15T16:15:00Z"}, {"_id": "895225", "course": "Hamilton", "off_time": "6:45", "race_datetime": "2025-06-15T16:45:00Z"}, {"_id": "895235", "course": "Salisbury", "off_time": "2:15", "race_datetime": "2025-06-15T12:15:00Z"}, {"_id": "895234", "course": "Salisbury", "off_time": "2:50", "race_datetime": "2025-06-15T12:50:00Z"}, {"_id": "895233", "course": "Salisbury", "off_time": "3:23", "race_datetime": "2025-06-15T13:23:00Z"}, {"_id": "895230", "course": "Salisbury", "off_time": "4:00", "race_datetime": "2025-06-15T14:00:00Z"}, {"_id": "895229", "course": "Salisbury", "off_time": "4:30", "race_datetime": "2025-06-15T14:30:00Z"}, {"_id": "895231", "course": "Salisbury", "off_time": "5:00", "race_datetime": "2025-06-15T15:00:00Z"}, {"_id": "895232", "course": "Salisbury", "off_time": "5:30", "race_datetime": "2025-06-15T15:30:00Z"}]
-    </script>
-        <script src="races.js"></script>
-
-
-        <div class="race-group-list">
-            <section class="course-section">
-                <h2 class="course-title">Doncaster</h2>
-                <div class="race-times-row">
-                    <a class="race-time-btn" href="race-895216.html">1:50</a>
-                    <a class="race-time-btn" href="race-897930.html">2:25</a>
-                    <a class="race-time-btn" href="race-895221.html">3:00</a>
-                    <a class="race-time-btn" href="race-895217.html">3:30</a>
-                    <a class="race-time-btn" href="race-895215.html">4:05</a>
-                    <a class="race-time-btn" href="race-895218.html">4:35</a>
-                    <a class="race-time-btn" href="race-895219.html">5:05</a>
-                    <a class="race-time-btn" href="race-895220.html">5:37</a>
-                </div>
-            </section>
-            <section class="course-section">
-                <h2 class="course-title">Downpatrick</h2>
-                <div class="race-times-row">
-                    <a class="race-time-btn" href="race-897797.html">2:05</a>
-                    <a class="race-time-btn" href="race-897798.html">2:40</a>
-                    <a class="race-time-btn" href="race-897799.html">3:15</a>
-                    <a class="race-time-btn" href="race-897800.html">3:50</a>
-                    <a class="race-time-btn" href="race-897801.html">4:20</a>
-                    <a class="race-time-btn" href="race-897802.html">4:50</a>
-                    <a class="race-time-btn" href="race-897803.html">5:20</a>
-                </div>
-            </section>
-            <section class="course-section">
-                <h2 class="course-title">Gowran Park</h2>
-                <div class="race-times-row">
-                    <a class="race-time-btn" href="race-897804.html">1:55</a>
-                    <a class="race-time-btn" href="race-897805.html">2:30</a>
-                    <a class="race-time-btn" href="race-897806.html">3:05</a>
-                    <a class="race-time-btn" href="race-897807.html">3:35</a>
-                    <a class="race-time-btn" href="race-897808.html">4:10</a>
-                    <a class="race-time-btn" href="race-897809.html">4:40</a>
-                    <a class="race-time-btn" href="race-897810.html">5:10</a>
-                </div>
-            </section>
-            <section class="course-section">
-                <h2 class="course-title">Hamilton</h2>
-                <div class="race-times-row">
-                    <a class="race-time-btn" href="race-895228.html">3:45</a>
-                    <a class="race-time-btn" href="race-895227.html">4:15</a>
-                    <a class="race-time-btn" href="race-895222.html">4:45</a>
-                    <a class="race-time-btn" href="race-895223.html">5:15</a>
-                    <a class="race-time-btn" href="race-895224.html">5:45</a>
-                    <a class="race-time-btn" href="race-895226.html">6:15</a>
-                    <a class="race-time-btn" href="race-895225.html">6:45</a>
-                </div>
-            </section>
-            <section class="course-section">
-                <h2 class="course-title">Salisbury</h2>
-                <div class="race-times-row">
-                    <a class="race-time-btn" href="race-895235.html">2:15</a>
-                    <a class="race-time-btn" href="race-895234.html">2:50</a>
-                    <a class="race-time-btn" href="race-895233.html">3:23</a>
-                    <a class="race-time-btn" href="race-895230.html">4:00</a>
-                    <a class="race-time-btn" href="race-895229.html">4:30</a>
-                    <a class="race-time-btn" href="race-895231.html">5:00</a>
-                    <a class="race-time-btn" href="race-895232.html">5:30</a>
-                </div>
-            </section>
-        </div>
+<html lang="en"><head><meta charset="utf-8">
+  <title>Racecards 2025-06-15</title>
+  <link rel="stylesheet" href="styles.css">
+</head><body>
+  <h1>Racecards 2025-06-15</h1>
+    <div class="race-entry">
+      <a href="race-895220.html">Doncaster @ 5:37</a>
+      <span class="forecast-inline">Forecast: —</span>
     </div>
-</body>
-
-</html>
+    <div class="race-entry">
+      <a href="race-895219.html">Doncaster @ 5:05</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895218.html">Doncaster @ 4:35</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895215.html">Doncaster @ 4:05</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895217.html">Doncaster @ 3:30</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895221.html">Doncaster @ 3:00</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897930.html">Doncaster @ 2:25</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895216.html">Doncaster @ 1:50</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895225.html">Hamilton @ 6:45</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895226.html">Hamilton @ 6:15</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895224.html">Hamilton @ 5:45</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895223.html">Hamilton @ 5:15</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895222.html">Hamilton @ 4:45</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895227.html">Hamilton @ 4:15</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895228.html">Hamilton @ 3:45</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895232.html">Salisbury @ 5:30</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895231.html">Salisbury @ 5:00</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895229.html">Salisbury @ 4:30</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895230.html">Salisbury @ 4:00</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895233.html">Salisbury @ 3:23</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895234.html">Salisbury @ 2:50</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-895235.html">Salisbury @ 2:15</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897803.html">Downpatrick @ 5:20</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897802.html">Downpatrick @ 4:50</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897801.html">Downpatrick @ 4:20</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897800.html">Downpatrick @ 3:50</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897799.html">Downpatrick @ 3:15</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897798.html">Downpatrick @ 2:40</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897797.html">Downpatrick @ 2:05</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897810.html">Gowran Park @ 5:10</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897809.html">Gowran Park @ 4:40</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897808.html">Gowran Park @ 4:10</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897807.html">Gowran Park @ 3:35</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897806.html">Gowran Park @ 3:05</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897805.html">Gowran Park @ 2:30</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+    <div class="race-entry">
+      <a href="race-897804.html">Gowran Park @ 1:55</a>
+      <span class="forecast-inline">Forecast: —</span>
+    </div>
+</body></html>
