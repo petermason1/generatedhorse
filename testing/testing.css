@@ -1,0 +1,152 @@
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fa;
+  color: #222b33;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 2.5em 0 1.2em 0;
+  text-align: center;
+  font-size: 2.1em;
+  color: #1759b3;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  margin: 1.1em 0 0.3em 0;
+  font-size: 1.22em;
+  color: #1d315c;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+div[style*="border-bottom"] {
+  background: #fff;
+  box-shadow: 0 3px 20px rgba(35,65,120,0.08);
+  border-radius: 14px;
+  margin: 2em auto;
+  padding: 1.6em 1.6em 1.3em 1.6em;
+  max-width: 800px;
+  transition: box-shadow 0.18s;
+}
+
+.summary-block {
+  background: linear-gradient(90deg, #e9f5ff 0%, #f8f8f8 100%);
+  border-radius: 10px;
+  margin: 2em auto 2.5em auto;
+  max-width: 570px;
+  box-shadow: 0 1px 10px rgba(32,50,120,0.06);
+  font-size: 1.08em;
+}
+
+table.runners {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: #f7f9fc;
+  margin: 1.2em 0 0.4em 0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 1.01em;
+  box-shadow: 0 2px 8px rgba(0,70,130,0.05);
+}
+
+.runners th,
+.runners td {
+  padding: 0.47em 0.7em;
+  border: none;
+  text-align: center;
+}
+
+.runners th {
+  background: #e8f0fa;
+  font-weight: 800;
+  color: #233870;
+  font-size: 1.01em;
+  border-bottom: 2px solid #e2e8f0;
+  letter-spacing: 0.01em;
+}
+
+.runners tr {
+  transition: background 0.15s;
+}
+
+.runners tr.top-pick {
+  background: #f3f8ff;
+  font-weight: bold;
+  border-left: 5px solid #51b3fc;
+}
+
+.runners tr.winner td,
+.runners tr.winner td strong {
+  color: #178c41;
+  font-weight: bold;
+  background: #ebffef;
+}
+
+.runners tr.loser td {
+  color: #c2c9d6;
+}
+
+.runners td strong {
+  color: #193866;
+}
+
+.return-cell {
+  font-weight: 700;
+  color: #0e5b8d;
+  background: #e7f5ff;
+  border-radius: 6px;
+}
+
+.runners td {
+  border-bottom: 1px solid #eef1f7;
+}
+
+.runners td:last-child {
+  border-right: none;
+}
+
+.runners tr:last-child td {
+  border-bottom: none;
+}
+
+input.sp-input {
+  width: 54px;
+  padding: 0.14em 0.35em;
+  font-size: 0.97em;
+  border: 1px solid #b2cdf3;
+  border-radius: 4px;
+  background: #f9fcff;
+  color: #215b8a;
+}
+
+input.sp-input:focus {
+  border: 1.5px solid #3178e5;
+  outline: none;
+  background: #fff;
+}
+
+.skip-race {
+  transform: scale(1.22);
+}
+
+@media (max-width: 650px) {
+  h2 { font-size: 1em; }
+  div[style*="border-bottom"] {
+    padding: 0.75em 0.2em 0.8em 0.7em;
+    max-width: 99vw;
+  }
+  .summary-block {
+    max-width: 98vw;
+    padding: 1.2em 0.6em 1.2em 0.6em;
+    font-size: 1em;
+  }
+  table.runners, .runners th, .runners td {
+    font-size: 0.96em;
+    padding: 0.36em 0.25em;
+  }
+}
