@@ -1,29 +1,39 @@
 (function () {
-    function localISODateTimeString(date) {
-        function pad(n) { return String(n).padStart(2, '0'); }
-        return date.getFullYear() + '-' +
-            pad(date.getMonth() + 1) + '-' +
-            pad(date.getDate()) + 'T' +
-            pad(date.getHours()) + ':' +
-            pad(date.getMinutes());
+    // Helper to get the correct Date object for each race
+    function getRaceDate(r) {
+        if (r.off_dt) {
+            // ISO8601 with timezone, safest!
+            return new Date(r.off_dt);
+        }
+        if (r.race_datetime) {
+            // Fallback: often "YYYY-MM-DDTHH:MM" (local, no tz)
+            // Parse as local
+            return new Date(r.race_datetime);
+        }
+        if (r.off_time && r.date) {
+            // Last-ditch: combine fields to build a date string
+            return new Date(r.date + "T" + r.off_time);
+        }
+        // Absolute fallback: now
+        return new Date();
     }
 
     const data = document.getElementById('races-data');
     if (!data) return;
     let races = JSON.parse(data.textContent).slice();
 
-    // Sort by local datetime string for accuracy
-    races.sort((a, b) => a.race_datetime.localeCompare(b.race_datetime));
+    // Sort races by actual time
+    races.sort((a, b) => getRaceDate(a) - getRaceDate(b));
 
-    // Device time in LOCAL ISO string (YYYY-MM-DDTHH:MM)
-    const nowISO = localISODateTimeString(new Date());
+    // Device time now
+    const now = new Date();
 
-    // Mark races as past (compare local to local)
+    // Mark races as past or future
     races.forEach(r => {
-        r.isPast = r.race_datetime < nowISO;
+        r.isPast = getRaceDate(r) < now;
     });
 
-    // Next 6 races (future)
+    // Next 6 races that are not past
     let nextRaces = races.filter(r => !r.isPast).slice(0, 6);
 
     // Get the bar element
@@ -31,14 +41,11 @@
     if (!bar) return;
 
     if (nextRaces.length === 0) {
-        // No upcoming races left today, hide the bar
-        bar.innerHTML = '';
-        // Or show a message:
-        // bar.innerHTML = '<span class="next6-title">No more races today</span>';
+        bar.innerHTML = '<span class="next6-title">No more races today</span>';
         return;
     }
 
-    // Render the next 6 bar
+    // Render the Next 6 Races bar
     bar.innerHTML =
         `<span class="next6-title">Next 6 Races</span>
         <div class="next6-pill-group">` +
@@ -50,7 +57,7 @@
         ).join('') +
         `</div>`;
 
-    // Mark past races in main card if present
+    // Mark past races in any clickable list if needed (eg. main card)
     const lookup = {};
     races.forEach(r => lookup[r._id] = r);
 
