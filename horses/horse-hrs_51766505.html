@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dapper Charm – Horse Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<nav class="main-navbar">
+  <a href="index.html" class="brand">🏇 Racecards</a>
+  <button id="hamburger" aria-label="Menu">&#9776;</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="results/today.html">Results</a>
+    <a href="results/yesterday.html">Yesterday</a>
+  </div>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  });
+</script><div class="main-container">
+  <a href="../index.html" class="back-link">← Back to Racecards</a>
+  <h1>
+    Dapper Charm
+      <img src="https://www.rp-assets.com/svg/2/4/4/287442.svg" alt="silks" style="height:2.2em; vertical-align:middle; margin-left:0.48em;">
+  </h1>
+  <div class="meta">
+    <span><strong>Sex:</strong> colt</span>
+    <span><strong>Age:</strong> 2</span>
+    <span><strong>Colour:</strong> b</span>
+    <span><strong>DOB:</strong> 2023-03-20</span>
+    <span><strong>Trainer:</strong> Archie Watson</span>
+    <span><strong>Owner:</strong> Hambleton Racing Ltd XXXI And Partner</span>
+  </div>
+
+  <h2>Recent Runs</h2>
+  <div style="overflow-x:auto;">
+    <table class="runners">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Course</th>
+          <th>Race</th>
+          <th>Pos</th>
+          <th>SP</th>
+          <th>Draw</th>
+          <th>Jockey</th>
+          <th>Trainer</th>
+          <th>View Race</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+class="placed"
+        >
+          <td>2025-05-19</td>
+          <td>Windsor</td>
+          <td>Juddmonte EBF Restricted Maiden Stakes (Band D) (EBF Restricted Race Qualifier) (GBB Race)</td>
+          <td>2</td>
+          <td>11/2</td>
+          <td>5</td>
+          <td>Hollie Doyle</td>
+          <td>Archie Watson</td>
+          <td>
+            <a href="../races/race-rac_11619322.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+class="placed"
+        >
+          <td>2025-04-30</td>
+          <td>Brighton</td>
+          <td>Star Sports We Believe In Bookmaking EBF Restricted Maiden Stakes (Band D) (EBF Qualifier) (GBB)</td>
+          <td>2</td>
+          <td>4/9F</td>
+          <td>3</td>
+          <td>Luke Morris</td>
+          <td>Archie Watson</td>
+          <td>
+            <a href="../races/race-rac_11590306.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+class="placed"
+        >
+          <td>2025-04-12</td>
+          <td>Brighton</td>
+          <td>Star Sports EBF Restricted Maiden Stakes (Bands C And D) (EBF Restricted Race Qualifier) (GBB Race)</td>
+          <td>2</td>
+          <td>5/2</td>
+          <td>3</td>
+          <td>Luke Morris</td>
+          <td>Archie Watson</td>
+          <td>
+            <a href="../races/race-rac_11574550.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+class="placed"
+        >
+          <td>2025-04-12</td>
+          <td>Brighton</td>
+          <td>Star Sports EBF Restricted Maiden Stakes (Bands C And D) (EBF Restricted Race Qualifier) (GBB Race)</td>
+          <td>2</td>
+          <td>5/2</td>
+          <td>3</td>
+          <td>Luke Morris</td>
+          <td>Archie Watson</td>
+          <td>
+            <a href="../races/race-rac_11574550.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+  // Hamburger nav for mobile
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.main-navbar .nav-links');
+    if (hamburger) {
+      hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+      });
+    }
+  });
+</script>
+</body>
+</html>

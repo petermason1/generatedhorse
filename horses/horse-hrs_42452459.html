@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sievier – Horse Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<nav class="main-navbar">
+  <a href="index.html" class="brand">🏇 Racecards</a>
+  <button id="hamburger" aria-label="Menu">&#9776;</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="results/today.html">Results</a>
+    <a href="results/yesterday.html">Yesterday</a>
+  </div>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  });
+</script><div class="main-container">
+  <a href="../index.html" class="back-link">← Back to Racecards</a>
+  <h1>
+    Sievier
+      <img src="https://www.rp-assets.com/svg/4/4/3/309344.svg" alt="silks" style="height:2.2em; vertical-align:middle; margin-left:0.48em;">
+  </h1>
+  <div class="meta">
+    <span><strong>Sex:</strong> filly</span>
+    <span><strong>Age:</strong> 4</span>
+    <span><strong>Colour:</strong> ch</span>
+    <span><strong>DOB:</strong> 2021-04-23</span>
+    <span><strong>Trainer:</strong> Jack Channon</span>
+    <span><strong>Owner:</strong> D Elsworth &amp; Partner</span>
+  </div>
+
+  <h2>Recent Runs</h2>
+  <div style="overflow-x:auto;">
+    <table class="runners">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Course</th>
+          <th>Race</th>
+          <th>Pos</th>
+          <th>SP</th>
+          <th>Draw</th>
+          <th>Jockey</th>
+          <th>Trainer</th>
+          <th>View Race</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+        >
+          <td>2024-08-29</td>
+          <td>Ffos Las</td>
+          <td>DragonBet Foal With It Handicap</td>
+          <td>6</td>
+          <td>40/1</td>
+          <td>1</td>
+          <td>Adam Farragher</td>
+          <td>Jack Channon</td>
+          <td>
+            <a href="../races/race-rac_11359400.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2024-08-29</td>
+          <td>Ffos Las</td>
+          <td>DragonBet Foal With It Handicap</td>
+          <td>6</td>
+          <td>40/1</td>
+          <td>1</td>
+          <td>Adam Farragher</td>
+          <td>Jack Channon</td>
+          <td>
+            <a href="../races/race-rac_11359400.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2024-08-02</td>
+          <td>Bath</td>
+          <td>bettingsites.co.uk Betting Sites Fillies&#39; Restricted Novice Stakes (Horses In Bands C And D) (GBB)</td>
+          <td>5</td>
+          <td>28/1</td>
+          <td>1</td>
+          <td>George Bass</td>
+          <td>Jack Channon</td>
+          <td>
+            <a href="../races/race-rac_11336559.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2024-07-19</td>
+          <td>Nottingham</td>
+          <td>Follow Rhino.Bet On Instagram EBF Fillies&#39; Restricted Novice Stakes (Horses In Bands C And D) (GBB)</td>
+          <td>5</td>
+          <td>28/1</td>
+          <td>4</td>
+          <td>Nicola Currie</td>
+          <td>Jack Channon</td>
+          <td>
+            <a href="../races/race-rac_11325717.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2024-07-08</td>
+          <td>Ripon</td>
+          <td>Sky Sports Racing Virgin 519 Restricted Maiden Fillies&#39; Stakes (Bands C-D) (GBB Race)</td>
+          <td>6</td>
+          <td>11/2</td>
+          <td>6</td>
+          <td>George Bass</td>
+          <td>Jack Channon</td>
+          <td>
+            <a href="../races/race-rac_11315447.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+  // Hamburger nav for mobile
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.main-navbar .nav-links');
+    if (hamburger) {
+      hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+      });
+    }
+  });
+</script>
+</body>
+</html>

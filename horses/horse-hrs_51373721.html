@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tee Aitch Aye – Horse Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<nav class="main-navbar">
+  <a href="index.html" class="brand">🏇 Racecards</a>
+  <button id="hamburger" aria-label="Menu">&#9776;</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="results/today.html">Results</a>
+    <a href="results/yesterday.html">Yesterday</a>
+  </div>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  });
+</script><div class="main-container">
+  <a href="../index.html" class="back-link">← Back to Racecards</a>
+  <h1>
+    Tee Aitch Aye
+      <img src="https://www.rp-assets.com/svg/3/6/5/356563.svg" alt="silks" style="height:2.2em; vertical-align:middle; margin-left:0.48em;">
+  </h1>
+  <div class="meta">
+    <span><strong>Sex:</strong> gelding</span>
+    <span><strong>Age:</strong> 4</span>
+    <span><strong>Colour:</strong> b</span>
+    <span><strong>DOB:</strong> 2021-03-20</span>
+    <span><strong>Trainer:</strong> Iain Jardine</span>
+    <span><strong>Owner:</strong> Kevin Kerr</span>
+  </div>
+
+  <h2>Recent Runs</h2>
+  <div style="overflow-x:auto;">
+    <table class="runners">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Course</th>
+          <th>Race</th>
+          <th>Pos</th>
+          <th>SP</th>
+          <th>Draw</th>
+          <th>Jockey</th>
+          <th>Trainer</th>
+          <th>View Race</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+        >
+          <td>2025-05-29</td>
+          <td>Carlisle</td>
+          <td>PricedUp Daily Sports Boosts Novice Stakes (GBB Race)</td>
+          <td>6</td>
+          <td>100/1</td>
+          <td>12</td>
+          <td>Andrew Mullen</td>
+          <td>Iain Jardine</td>
+          <td>
+            <a href="../races/race-rac_11621896.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2025-04-28</td>
+          <td>Ayr</td>
+          <td>Coral We&#39;re Here For It Restricted Maiden Stakes (For Horses In Bands C And D) (GBB Race)</td>
+          <td>4</td>
+          <td>16/1</td>
+          <td>6</td>
+          <td>Andrew Mullen</td>
+          <td>Iain Jardine</td>
+          <td>
+            <a href="../races/race-rac_11589942.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2025-04-28</td>
+          <td>Ayr</td>
+          <td>Coral We&#39;re Here For It Restricted Maiden Stakes (For Horses In Bands C And D) (GBB Race)</td>
+          <td>4</td>
+          <td>16/1</td>
+          <td>6</td>
+          <td>Andrew Mullen</td>
+          <td>Iain Jardine</td>
+          <td>
+            <a href="../races/race-rac_11589942.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2025-04-02</td>
+          <td>Musselburgh</td>
+          <td>Livescore Bet Best Odds Daily Confined Maiden Stakes (Three Runs Or Less) (GBB Race)</td>
+          <td>4</td>
+          <td>80/1</td>
+          <td>4</td>
+          <td>Andrew Mullen</td>
+          <td>Iain Jardine</td>
+          <td>
+            <a href="../races/race-rac_11560939.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+  // Hamburger nav for mobile
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.main-navbar .nav-links');
+    if (hamburger) {
+      hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+      });
+    }
+  });
+</script>
+</body>
+</html>

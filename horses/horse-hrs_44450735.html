@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Spuddling – Horse Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<nav class="main-navbar">
+  <a href="index.html" class="brand">🏇 Racecards</a>
+  <button id="hamburger" aria-label="Menu">&#9776;</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="results/today.html">Results</a>
+    <a href="results/yesterday.html">Yesterday</a>
+  </div>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  });
+</script><div class="main-container">
+  <a href="../index.html" class="back-link">← Back to Racecards</a>
+  <h1>
+    Spuddling
+      <img src="https://www.rp-assets.com/svg/b/0/7/101370b.svg" alt="silks" style="height:2.2em; vertical-align:middle; margin-left:0.48em;">
+  </h1>
+  <div class="meta">
+    <span><strong>Sex:</strong> gelding</span>
+    <span><strong>Age:</strong> 3</span>
+    <span><strong>Colour:</strong> b</span>
+    <span><strong>DOB:</strong> 2022-04-05</span>
+    <span><strong>Trainer:</strong> Bill Turner</span>
+    <span><strong>Owner:</strong> Mrs Tracy Turner</span>
+  </div>
+
+  <h2>Recent Runs</h2>
+  <div style="overflow-x:auto;">
+    <table class="runners">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Course</th>
+          <th>Race</th>
+          <th>Pos</th>
+          <th>SP</th>
+          <th>Draw</th>
+          <th>Jockey</th>
+          <th>Trainer</th>
+          <th>View Race</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+        >
+          <td>2025-05-27</td>
+          <td>Leicester</td>
+          <td>Dark Horse Wines Handicap</td>
+          <td>10</td>
+          <td>33/1</td>
+          <td>9</td>
+          <td>Kieran O&#39;Neill</td>
+          <td>Bill Turner</td>
+          <td>
+            <a href="../races/race-rac_11621129.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2025-01-13</td>
+          <td>Lingfield (AW)</td>
+          <td>Boost Your Acca At BetMGM Handicap (Div II)</td>
+          <td>5</td>
+          <td>12/1</td>
+          <td>6</td>
+          <td>Gina Mangan</td>
+          <td>Bill Turner</td>
+          <td>
+            <a href="../races/race-rac_11517324.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2024-12-27</td>
+          <td>Wolverhampton (AW)</td>
+          <td>Weekly Free Bets With BetMGM Extra Novice Stakes (GBB Race)</td>
+          <td>10</td>
+          <td>250/1</td>
+          <td>3</td>
+          <td>Brandon Wilkie</td>
+          <td>Bill Turner</td>
+          <td>
+            <a href="../races/race-rac_11473943.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2024-11-16</td>
+          <td>Wolverhampton (AW)</td>
+          <td>Boost Your Acca At BetMGM EBF &#39;Confined&#39; Restr&#39; Maiden Stakes (No More Than 3 Runs) (GBB) (Div II)</td>
+          <td>7</td>
+          <td>50/1</td>
+          <td>4</td>
+          <td>Ethan Jones</td>
+          <td>Bill Turner</td>
+          <td>
+            <a href="../races/race-rac_11466130.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+        >
+          <td>2024-10-17</td>
+          <td>Brighton</td>
+          <td>Docker Hughes Memorial EBF Restricted Novice Stakes (Bands B C And D No More Than 3 Runs) (GBB)</td>
+          <td>5</td>
+          <td>80/1</td>
+          <td>3</td>
+          <td>Ethan Jones</td>
+          <td>Bill Turner</td>
+          <td>
+            <a href="../races/race-rac_11398608.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+        <tr
+class="placed"
+        >
+          <td>2024-08-26</td>
+          <td>Chepstow</td>
+          <td>Choose Solar With The Eco Scheme Restricted Maiden Stakes (For horses In Band D) (GBB Race)</td>
+          <td>PU</td>
+          <td>100/1</td>
+          <td>7</td>
+          <td>Thomas Greatrex</td>
+          <td>Bill Turner</td>
+          <td>
+            <a href="../races/race-rac_11358659.html" class="race-time-btn" title="View full racecard">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+  // Hamburger nav for mobile
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.main-navbar .nav-links');
+    if (hamburger) {
+      hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+      });
+    }
+  });
+</script>
+</body>
+</html>
