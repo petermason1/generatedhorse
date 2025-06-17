@@ -6,196 +6,206 @@ body {
   font-family: 'Inter', Arial, sans-serif;
 }
 
-#main,
-.next6-bar,
-.courses-list {
-  padding: 12px;
-  max-width: 700px; /* everything lines up now */
+.container {
+  max-width: 800px;
   margin: 0 auto;
+  padding: 30px 18px 50px 18px;
 }
 
-@media (max-width: 720px) {
-  #main,
-  .next6-bar,
-  .courses-list {
-    padding: 5px;
-    max-width: 99vw;
-  }
+/* --- NAVBAR --- */
+.main-navbar {
+  background: #171a20;
+  box-shadow: 0 1px 7px #0002;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-
-/* ---- RACE HEADER AND CARDS ---- */
-.race-header {
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #2a3340;
-}
-.race-header h1 {
-  font-size: 1.4em;
-  margin: 0 0 4px 0;
-}
-.race-meta {
-  font-size: 1.05em;
-  margin-bottom: 3px;
-}
-.race-details {
-  color: #f6f8fbcc;
-  font-size: .97em;
-  margin-bottom: 5px;
-}
-.runners-list {
+.navbar-inner {
+  max-width: 950px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 11px;
-}
-.runner-card {
-  background: #23293a;
-  border-radius: 9px;
-  display: flex;
-  align-items: flex-start;
-  padding: 10px 10px 8px 10px;
-  gap: 10px;
-  box-shadow: 0 2px 7px #1119;
-  position: relative;
-  flex-wrap: wrap;
-}
-.runner-num-draw {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  font-size: 1.1em;
-  min-width: 28px;
+  justify-content: space-between;
+  padding: 0.65em 1em;
 }
-.runner-num {
-  font-weight: bold;
+.nav-brand {
   font-size: 1.18em;
-  background: #444e55;
-  border-radius: 7px;
-  padding: 2px 9px;
-  margin-bottom: 2px;
-}
-.runner-draw {
-  font-size: .97em;
-  color: #ffe564;
-  opacity: 0.85;
-}
-.runner-silk {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  border-radius: 5px;
-  background: #fff3;
-  margin-top: 3px;
-}
-.runner-main {
-  flex: 1 1 0px;
-  min-width: 0;
-}
-.runner-horse {
-  font-size: 1.13em;
-  font-weight: bold;
-  letter-spacing: .1px;
-}
-.runner-meta {
-  font-size: .96em;
-  margin-bottom: 2px;
-  color: #f6f8fbcb;
-}
-.runner-form {
-  background: #232;
-  color: #73ffb7;
-  font-size: .95em;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 1px 5px;
-  margin-left: 7px;
-}
-.runner-info {
-  font-size: .94em;
-  margin-bottom: 3px;
-}
-.runner-odds {
-  position: absolute;
-  right: 14px;
-  top: 10px;
-  background: #1a262a;
-  color: #ffe564;
-  font-weight: bold;
-  border-radius: 7px;
-  padding: 2px 9px;
-  font-size: 1.08em;
-  box-shadow: 0 1px 3px #111a;
-}
-.runner-more {
-  display: none;
-  margin-top: 6px;
-  background: #12181d;
-  border-radius: 7px;
-  padding: 8px 10px 6px 10px;
-  font-size: .98em;
-  color: #f6f8fbcc;
-}
-.runner-card.expanded .runner-more {
-  display: block;
-}
-.runner-more-btn {
-  background: #21283a;
-  color: #45db91;
-  border: none;
-  font-weight: bold;
-  padding: 4px 13px;
+  font-weight: 900;
+  color: #ffc900;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 2px 13px 2px 5px;
   border-radius: 6px;
-  cursor: pointer;
-  margin-top: 6px;
-  transition: background 0.13s;
+  background: #232a32;
+  transition: background 0.13s, color 0.13s;
 }
-.runner-more-btn:hover { background: #2bf0aa; color: #191b1f; }
-
-@media (max-width: 700px) {
-  .runner-card { padding: 8px 4px 7px 4px; gap: 7px; }
-  .runner-silk { width: 30px; height: 30px; }
+.nav-brand:hover { background: #36e8b5; color: #191e23; }
+.nav-links {
+  display: flex;
+  gap: 1.12em;
+}
+.nav-link {
+  color: #36e8b5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.04em;
+  padding: 3px 13px;
+  border-radius: 5px;
+  transition: background 0.12s, color 0.12s;
+}
+.nav-link:hover, .nav-link-active {
+  background: #36e8b5;
+  color: #191e23 !important;
 }
 
-/* ---- NEXT 6 RACES ---- */
-.next6-bar {
-  background: #191e23;
-  border-radius: 12px;
-  padding: 1em 0.5em 1.3em 0.5em;
-  margin: 1.1em 0 1.2em 0;
-  box-shadow: 0 2px 10px #0002;
+/* --- HEADINGS & DESC --- */
+h1, h2, h3 {
+  font-family: inherit;
+  font-weight: 800;
+  line-height: 1.19;
+  color: #ffd700;
+  margin-top: 0;
+}
+h1 { font-size: 2.15em; margin-bottom: 0.22em; text-align: center; }
+h2 { font-size: 1.27em; margin-bottom: 0.6em; }
+h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
+
+.page-desc {
+  color: #b7b7b7;
+  font-size: 1.09em;
+  max-width: 580px;
+  margin: 0 auto 1.8em auto;
   text-align: center;
 }
 
+/* --- TOP PICKS/TIPS --- */
+.top-picks-bar {
+  max-width: 700px;
+  margin: 0 auto 2.3em auto;
+}
+.top-picks-title {
+  color: #ffd700;
+  text-align: center;
+  font-size: 1.38em;
+  margin-bottom: 0.7em;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+.top-picks-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.top-pick-card {
+  background: #232d37;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px #1116;
+  width: 100%;
+  min-height: 60px;
+  padding: 0.77em 1.35em 0.77em 1.35em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.05em;
+  font-size: 1.08em;
+}
+.top-pick-label {
+  font-size: 1.07em;
+  font-weight: 700;
+  color: #ffc900;
+  width: 74px;
+  flex-shrink: 0;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.top-pick-horse {
+  color: #35e9ae;
+  font-weight: 900;
+  font-size: 1.13em;
+  text-decoration: none;
+  margin-right: 7px;
+  min-width: 90px;
+}
+.top-pick-odds {
+  color: #ffe564;
+  font-weight: 700;
+  font-size: 1.05em;
+  margin-right: 14px;
+}
+.top-pick-reason {
+  color: #bbb;
+  font-size: 1em;
+  font-weight: 400;
+  margin-right: 12px;
+  flex: 1;
+  text-align: left;
+  min-width: 80px;
+  max-width: 230px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.top-pick-race {
+  color: #ffc900;
+  font-size: .98em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+@media (max-width: 750px) {
+  .top-picks-bar, .next6-bar { max-width: 99vw; }
+  .top-pick-card { flex-direction: column; align-items: flex-start; min-height: unset; padding: 0.7em 1em; gap: 4px; }
+  .top-pick-label { width: auto; text-align: left; margin-bottom: 2px;}
+  .top-pick-reason, .top-pick-race { max-width: 100%; white-space: normal;}
+}
+
+/* --- SEE TIPS BUTTON --- */
+.see-tips-btn {
+  display: inline-block;
+  margin-top: 18px;
+  background: #36e8b5;
+  color: #191e23;
+  font-weight: 700;
+  font-size: 1.09em;
+  padding: 10px 26px 9px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 10px #19e7b633;
+  letter-spacing: 0.5px;
+}
+.see-tips-btn:hover {
+  background: #191e23;
+  color: #36e8b5;
+  box-shadow: 0 3px 18px #191e23cc;
+}
+
+/* --- NEXT 6 RACES --- */
+.next6-bar {
+  background: #21242a;
+  border-radius: 12px;
+  padding: 1.1em 0.7em 1.3em 0.7em;
+  margin: 1.2em 0 1.4em 0;
+  box-shadow: 0 2px 12px #0002;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .next6-races {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 0.25em;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.23em;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  justify-items: stretch;
-  align-items: stretch;
 }
-
-/* Desktop: 6 columns x 1 row */
-@media (min-width: 1024px) {
-  .next6-races {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: unset;
-    max-width: 700px;
-  }
+@media (max-width: 1024px) {
+  .next6-races { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); }
 }
-
-/* Mobile (stack as 3x2, but shrink padding) */
-@media (max-width: 520px) {
-  .next6-races {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    max-width: 99vw;
-    gap: 0.14em;
-  }
-}
-
 .next6-race-link {
   display: flex;
   flex-direction: column;
@@ -203,120 +213,415 @@ body {
   justify-content: center;
   background: #232d37;
   border-radius: 8px;
-  padding: 0.45em 0.85em;
+  padding: 0.44em 0.7em;
   color: #28d987;
   text-decoration: none;
   font-weight: bold;
-  min-width: 0;
-  min-height: 68px;
+  min-height: 62px;
   border: 2px solid #1f6037;
   transition: background 0.15s, color 0.15s;
   box-shadow: 0 2px 6px #0001;
-  width: 100%;
-  box-sizing: border-box;
 }
 .next6-race-link:hover {
   background: #28d987;
   color: #161c22;
 }
 .next6-time {
-  font-size: 1.1em;
+  font-size: 1.06em;
   font-weight: bold;
-  line-height: 1.1;
+  line-height: 1.08;
 }
 .next6-course {
-  font-size: 0.92em;
+  font-size: 0.93em;
   color: #fff;
-  opacity: 0.82;
-  line-height: 1.12;
+  opacity: 0.80;
+  line-height: 1.10;
 }
 
-/* ---- COURSE RACE LIST ---- */
-.courses-list {
-  margin-top: 1em;
+/* --- RACES BY COURSE --- */
+.races-course-list {
+  margin-top: 2.2em;
 }
-
-.course-block {
-  margin-bottom: 1.2em;
+.racecard-course-row {
+  margin-bottom: 1.3em;
 }
-.course-block h3 {
-  font-size: 1em;
-  margin-bottom: 0.15em;
-  color: #ffc900;
-  font-weight: 600;
+.racecard-course-header {
+  font-size: 1.16em;
+  color: #28d987;
+  font-weight: bold;
+  margin-bottom: 0.13em;
+  letter-spacing: .2px;
 }
-.course-races {
+.racecard-race-row {
+  display: flex;
+  gap: 0.25em;
+  flex-wrap: wrap;
+  margin-bottom: 0.7em;
+}
+.racecard-time-link {
   display: flex;
   flex-direction: column;
-  gap: 0.13em;
-}
-.race-link {
-  color: #28d987;
+  align-items: flex-start;
+  background: #232d33;
+  border-radius: 7px;
+  color: #ffe564;
   text-decoration: none;
-  background: #222a30;
-  border-radius: 6px;
-  padding: 0.32em 0.6em;
-  margin-bottom: 1px;
-  font-size: 1em;
+  font-size: 1.04em;
+  font-weight: 500;
+  min-width: 106px;
+  padding: 0.38em 0.75em 0.34em 0.8em;
   transition: background 0.13s, color 0.13s;
-  display: block;
-  line-height: 1.13;
+  margin-bottom: 4px;
+  box-shadow: 0 2px 5px #1c1c1f07;
 }
-.race-link:hover {
-  background: #28d987;
-  color: #222a30;
+.racecard-time-link:hover {
+  background: #35e9ae;
+  color: #181c1f;
+}
+.racecard-time {
+  color: #ffc900;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.racecard-title {
+  color: #ffe564;
+  font-size: 1em;
+  margin-top: -1px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width:600px) {
+  .racecard-race-row { flex-wrap: wrap; gap: 2px; }
+  .racecard-time-link { min-width: 95px; padding: 0.28em 0.4em 0.21em 0.48em; }
 }
 
-.main-navbar {
-  width: 100%;
-  background: #171a20;
-  box-shadow: 0 1px 7px #0002;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  margin-bottom: 1em;
+/* --- UTILITIES & RESPONSIVE --- */
+@media (max-width: 800px) {
+  .container { padding: 18px 2vw 34px 2vw; }
+  .next6-bar, .best-bets-list { max-width: 99vw; }
+}
+/* --- ABOUT PAGE --- */
+.about-container {
+  background: #21242a;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px #0c0c0f1a;
+  max-width: 900px;
+  margin: 2.6em auto 2.3em auto;
+  padding: 2.1em 2em 2.3em 2em;
 }
 
-.navbar-inner {
-  max-width: 950px;
-  margin: 0 auto;
+.about-header {
+  text-align: center;
+  color: #ffd700;
+  font-size: 2.15em;
+  margin-bottom: 1.3em;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.about-sub {
+  color: #b7b7b7;
+  text-align: center;
+  font-size: 1.11em;
+  margin-bottom: 1.9em;
+}
+
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 2.2em 0;
+}
+.about-list li {
+  margin-bottom: 0.62em;
+  font-size: 1.1em;
+  position: relative;
+  padding-left: 1.7em;
+}
+.about-list li:before {
+  content: "•";
+  color: #35e9ae;
+  font-size: 1.4em;
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+}
+@media (max-width: 700px) {
+  .about-container { padding: 1em 4vw; }
+  .about-header { font-size: 1.35em; }
+}
+
+/* --- TEAM SECTION --- */
+.team-section {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+  justify-content: center;
+}
+.team-card {
+  background: #23293a;
+  border-radius: 13px;
+  box-shadow: 0 4px 18px #1119;
+  flex: 1 1 210px;
+  min-width: 210px;
+  max-width: 310px;
+  padding: 1.18em 1.15em;
+  margin-bottom: 0.7em;
+}
+.team-name {
+  color: #35e9ae;
+  font-weight: 700;
+  font-size: 1.12em;
+}
+.team-role {
+  color: #ffd700;
+  font-size: 1.04em;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+.team-desc {
+  color: #eaeaea;
+  font-size: 1em;
+  line-height: 1.45;
+}
+
+.about-section-title {
+  font-size: 1.19em;
+  color: #ffc900;
+  font-weight: 700;
+  margin-top: 2.2em;
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid #292d33;
+  display: inline-block;
+  padding-bottom: 2px;
+  letter-spacing: 0.02em;
+}
+
+/* --- TRUST SECTION --- */
+.trust-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.8em 0 1.7em 0;
+}
+.trust-list li {
+  font-size: 1.05em;
+  margin-bottom: 0.55em;
+  padding-left: 1.7em;
+  position: relative;
+}
+.trust-list li:before {
+  content: "★";
+  color: #ffc900;
+  position: absolute;
+  left: 0;
+  top: 0.09em;
+  font-size: 1.15em;
+}
+
+.about-footer {
+  margin-top: 2em;
+  font-size: 1em;
+  text-align: center;
+  color: #a6a6a6;
+}
+
+.about-footer a {
+  color: #ffc900;
+  text-decoration: underline;
+}
+.about-footer a:hover {
+  color: #35e9ae;
+}
+
+/* Highlight nav-link-active */
+.nav-link.nav-link-active {
+  background: #36e8b5;
+  color: #191e23 !important;
+}
+/* --- COURSE BAR (at top of each race page) --- */
+.course-bar {
+  display: flex;
+  gap: 10px;
+  padding: 15px 0 18px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual course button/link */
+.course-link {
+  background: #21242a;
+  color: #36e8b5;
+  border-radius: 8px;
+  padding: 0.40em 1.2em;
+  font-weight: 700;
+  font-size: 1.06em;
+  text-decoration: none;
+  transition: background 0.14s, color 0.14s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px #1113;
+}
+.course-link.active,
+.course-link:hover {
+  background: #36e8b5;
+  color: #191e23;
+  box-shadow: 0 2px 16px #19e7b6bb;
+}
+
+/* --- RACE HEADER --- */
+.race-header h1 {
+  color: #ffd700;
+  font-size: 1.4em;
+  margin-bottom: .32em;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+.race-meta, .race-details {
+  color: #c1cbe8;
+  font-size: 1.09em;
+  text-align: center;
+  margin-bottom: .22em;
+}
+
+/* --- COURSE RACE LINKS (horizontal bar, inside race page) --- */
+.race-links-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.6em 1em;
+  gap: 9px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
 }
-
-.nav-brand {
-  font-size: 1.24em;
-  font-weight: 900;
+.race-links-course {
+  color: #32dd99;
+  font-weight: 800;
+  font-size: 1.11em;
+  letter-spacing: 0.04em;
+  margin-right: 1.4em;
+}
+.race-link {
   color: #ffc900;
-  letter-spacing: 1px;
+  background: #232d33;
+  border-radius: 7px;
+  padding: 3px 16px;
+  font-weight: 700;
+  font-size: 1.07em;
   text-decoration: none;
-  padding: 2px 14px 2px 6px;
-  border-radius: 6px;
-  background: #232a32;
+  margin-right: 4px;
   transition: background 0.13s, color 0.13s;
 }
-.nav-brand:hover {
+.race-link:last-child { margin-right: 0; }
+.race-link-active,
+.race-link:hover {
   background: #36e8b5;
-  color: #191e23;
+  color: #191e23 !important;
 }
 
-.nav-links {
+/* --- RUNNER CARDS --- */
+.runners-list {
+  margin-top: 1.5em;
+}
+.runner-card {
+  background: #232d33;
+  color: #fff;
+  border-radius: 12px;
   display: flex;
-  gap: 1.2em;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  padding: 1.08em 1.3em;
+  box-shadow: 0 4px 17px #161c2260;
+  gap: 1.1em;
+  transition: background 0.16s, box-shadow 0.14s;
+  position: relative;
 }
-
-.nav-link {
-  color: #36e8b5;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.04em;
-  padding: 2px 9px;
-  border-radius: 5px;
-  transition: background 0.12s, color 0.12s;
+.runner-card.expanded { background: #263441; }
+.runner-nr { opacity: 0.66; filter: grayscale(0.15); }
+.runner-num-draw {
+  min-width: 47px;
+  text-align: center;
+  color: #ffc900;
+  font-weight: 900;
+  font-size: 1.13em;
+  margin-right: 9px;
 }
-.nav-link:hover {
+.runner-score {
+  display: block;
+  font-size: 0.97em;
+  color: #35e9ae;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.runner-horse {
+  font-weight: 700;
+  color: #35e9ae;
+  font-size: 1.13em;
+  margin-bottom: 2px;
+}
+.runner-main {
+  flex: 1;
+  min-width: 0;
+}
+.runner-meta {
+  color: #c2c8de;
+  font-size: 1.01em;
+  margin-bottom: 0.14em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.28em;
+}
+.runner-form {
+  color: #fff;
+  background: #1a212b;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 0.97em;
+  margin-left: 12px;
+}
+.runner-odds {
+  color: #ffe564;
+  font-weight: 700;
+  font-size: 1.10em;
+  margin-left: 14px;
+  align-self: center;
+}
+.runner-info {
+  font-size: 0.98em;
+  color: #aad6e7;
+  margin-bottom: 2px;
+}
+.runner-silk {
+  width: 39px; height: 39px;
+  object-fit: contain;
+  background: #161c22;
+  border-radius: 8px;
+  margin-right: 13px;
+  align-self: flex-start;
+}
+.runner-more-btn {
+  margin: 0.5em 0 0 0;
   background: #36e8b5;
   color: #191e23;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  padding: 4px 14px;
+  cursor: pointer;
+  font-size: 0.98em;
+  transition: background 0.13s, color 0.13s;
+}
+.runner-more-btn:hover { background: #191e23; color: #36e8b5; }
+.runner-more {
+  display: none;
+  margin-top: 0.7em;
+  font-size: 0.96em;
+  color: #bbf5ed;
+}
+.runner-card.expanded .runner-more { display: block; }
+
+@media (max-width: 700px) {
+  .race-links-bar, .course-bar { flex-direction: column; gap: 8px; }
+  .runner-card { flex-direction: column; align-items: flex-start; gap: 7px; padding: 1em 0.7em; }
+  .runner-num-draw, .runner-silk { margin-right: 0; }
+  .runner-main, .runner-odds { margin-left: 0 !important; }
 }

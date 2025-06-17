@@ -6,25 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="global.css" />
 </head>
-<nav class="main-navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">🏇 Racecards</a>
-    <div class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="tips.html" class="nav-link">Tips</a>
-    </div>
-  </div>
-</nav>
-
-
 <body>
-  <h1 style="text-align:center;margin-top:1.2em;font-size:2em;">Horse Racing Tips</h1>
-  <div style="text-align:center;max-width:600px;margin:0 auto 1.5em auto;color:#aaa;font-size:1.07em;">
-    Every racecard is scored live using our in-house ratings — instantly highlighting value, form, class and the most likely winners. <br>
-    Tap any race for a full breakdown or try our “Best Bets of the Day” below.
-  </div>
-  <div id="best-bets"></div>
-  <main id="main"></main>
+  <nav class="main-navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">🏇 Racecards</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link nav-link-active">Home</a>
+        <a href="tips.html" class="nav-link">Tips</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Horse Racing Tips</h1>
+    <div class="page-desc">
+      Live UK & Irish racecards, real-time stats and every meeting — updated daily.<br>
+      Instantly see the latest runners, sorted by value, class, and our own scoring system.
+    </div>
+    <div style="text-align:center;">
+      <a href="tips.html" class="see-tips-btn">See Today's Best Bets &rarr;</a>
+    </div>
+    <div id="main"></div>
+  </main>
   <script src="data.js"></script>
   <script src="index.js"></script>
 </body>
