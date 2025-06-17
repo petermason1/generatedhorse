@@ -14,23 +14,39 @@ function scoreRunner(r) {
     oddsDec = parseFloat(r.odds[0].decimal);
     if (isNaN(oddsDec)) oddsDec = 0;
   }
-  // Form parsing
+
+  // --- Form parsing ---
   let wins = 0, places = 0;
   if (typeof r.form === 'string') {
     wins = (r.form.match(/1/g) || []).length;
     places = (r.form.match(/[23]/g) || []).length;
   }
 
-  // === Compose score (tweak weights for your model) ===
+  // === Core Scoring (adjust weights as needed) ===
   score += rpr;
   score += 0.5 * ts;
   score += 0.3 * or;
   score += 3 * wins + 1 * places;
-  score += Math.max(0, 50 - lastRun) * 0.13;
-  if (oddsDec > 0) score += 10 / oddsDec;
+  // Penalty for not running recently (>60 days, penalize hard)
+  if (lastRun > 60) score -= (lastRun - 60) * 0.5;
+  // Mild bonus for freshness
+  score += Math.max(0, 60 - lastRun) * 0.08;
+
+  // === Odds Penalty (the main fix) ===
+  // Penalize bigger odds hard: (Over 8/1 = -10, Over 14/1 = -25, Over 25/1 = -50)
+  if (oddsDec >= 8) score -= (oddsDec - 7) * 3;    // Over 7/1, hit hard
+  if (oddsDec >= 15) score -= (oddsDec - 14) * 6;  // Over 14/1, hit even harder
+  if (oddsDec >= 26) score -= (oddsDec - 25) * 10; // Over 25/1, death penalty
+
+  // Tiny bonus for being fancied (reverse)
+  if (oddsDec > 0 && oddsDec <= 7) score += 8 / oddsDec;
+
+  // Clamp: never go below 0
+  score = Math.max(score, 0);
 
   return Math.round(score * 10) / 10; // always a number
 }
+
 
 // ========== Helper to get race_id from URL ==========
 function getRaceId() {
