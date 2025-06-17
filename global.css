@@ -266,3 +266,57 @@ body {
   background: #28d987;
   color: #222a30;
 }
+
+.main-navbar {
+  width: 100%;
+  background: #171a20;
+  box-shadow: 0 1px 7px #0002;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-bottom: 1em;
+}
+
+.navbar-inner {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6em 1em;
+}
+
+.nav-brand {
+  font-size: 1.24em;
+  font-weight: 900;
+  color: #ffc900;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 2px 14px 2px 6px;
+  border-radius: 6px;
+  background: #232a32;
+  transition: background 0.13s, color 0.13s;
+}
+.nav-brand:hover {
+  background: #36e8b5;
+  color: #191e23;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2em;
+}
+
+.nav-link {
+  color: #36e8b5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.04em;
+  padding: 2px 9px;
+  border-radius: 5px;
+  transition: background 0.12s, color 0.12s;
+}
+.nav-link:hover {
+  background: #36e8b5;
+  color: #191e23;
+}
