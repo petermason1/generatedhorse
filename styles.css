@@ -1,32 +1,26 @@
 :root {
-  /* ===== COLOURS ===== */
   --main-bg: #13191f;
   --main-text: #f7f9fb;
   --brand: #36c35b;
-  --brand-dark: #21954b;
   --highlight: #ffc900;
   --muted: #8ba1b2;
-  --card-bg: #222e3c;
+  --card-bg: #1b2533;
   --border: #2a3747;
-  --shadow: 0 8px 40px rgba(24,48,74,0.27);
-  --card-shadow: 0 3px 20px rgba(36,182,126,0.09);
-  --pill-bg: #18283a;
+  --shadow: 0 8px 32px rgba(24,48,74,0.22);
+  --pill-bg: #16222e;
   --danger: #e54c47;
-  --success: #27e54c;
-  --score-highlight: #1c262e;
 }
 
+/* General */
 body {
-  margin: 0;
-  padding: 0;
   background: var(--main-bg);
   color: var(--main-text);
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  font-size: 17px;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
 }
-
-/* ===== LINKS ===== */
 a {
   color: var(--brand);
   text-decoration: none;
@@ -34,191 +28,99 @@ a {
 }
 a:hover { color: var(--highlight); }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .main-navbar {
   background: #17212c;
   box-shadow: 0 1px 8px #13201d55;
   border-bottom: 2.5px solid var(--brand);
-  display: flex;
-  align-items: center;
+  display: flex; align-items: center;
   padding: 0.37em 1.8em 0.37em 1.25em;
-  position: sticky;
-  top: 0;
-  z-index: 101;
+  position: sticky; top: 0; z-index: 101;
 }
 .brand {
-  font-size: 1.25em;
+  font-size: 1.23em;
   font-weight: bold;
   color: var(--brand);
   letter-spacing: 0.04em;
 }
-.nav-links { display: flex; gap: 1.13em; margin-left: auto; }
+.nav-links { display: flex; gap: 1.1em; margin-left: auto; }
 .nav-links a {
-  color: #fff;
-  font-weight: 600;
+  color: #fff; font-weight: 600;
   padding: 0.13rem 0.88em;
-  border-radius: 5.5px;
+  border-radius: 5px;
   transition: background 0.11s, color 0.13s;
 }
 .nav-links a:hover {
   background: var(--brand);
-  color: #1a261f;
+  color: #13191f;
 }
 #hamburger { display: none; }
+@media (max-width: 700px) {
+  .main-navbar { flex-wrap: wrap; padding: 0.19em 0.5em; }
+  .nav-links { display: none; flex-direction: column; width: 100%; }
+  .nav-links.show { display: flex; }
+  #hamburger { display: block; }
+}
 
-/* ===== HERO ===== */
-.hero-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto 1.5em auto;
-  width: 100%;
+/* Main container */
+.main-container {
   max-width: 1050px;
+  margin: 1.2em auto 2em auto;
+  padding: 0.6em 1.1em 2em 1.1em;
+  background: transparent;
 }
-.hero-headline {
-  font-size: 2.25rem;
-  font-weight: 900;
-  color: #fff;
-  margin: 1.3em 0 0.18em 0;
-  letter-spacing: 0.015em;
-  text-align: center;
-}
-.hero-highlight { color: var(--brand); }
-.hero-subhook {
-  font-size: 1.16rem;
-  color: #bee9c7;
-  margin-bottom: 0.7em;
-  text-align: center;
-}
-.date-pill {
-  background: var(--brand);
-  color: #181e23;
-  font-size: 1.07em;
-  font-weight: 900;
-  padding: 0.19em 1.45em;
-  border-radius: 19px;
-  margin: 1.3em auto 1.1em auto;
-  letter-spacing: 0.01em;
-  display: inline-block;
+@media (max-width: 700px) {
+  .main-container { padding: 0.25em 0.05em 1em 0.05em; }
 }
 
-/* ===== HERO CARDS ===== */
-.hero-card-deck {
-  display: flex;
-  flex-direction: row;
-  gap: 2.1em;
-  justify-content: center;
-  width: 100%;
-  max-width: 980px;
-  margin-bottom: 0.2em;
-}
-.top-picks-card h2, .ascot-card h2 {
-  font-size: 1.18em;
-  margin: 0 0 0.42em 0;
-  font-weight: 800;
-  color: var(--highlight);
-  letter-spacing: 0.01em;
-}
-.top-picks-card ul { margin: 0 0 0.23em 0; padding-left: 1.1em; }
-.top-picks-card li { margin-bottom: 0.13em; }
-.pick-horse { color: var(--highlight); font-weight: 700; }
-.pick-reason { color: var(--brand); font-size: 0.98em; }
-.see-all-picks-btn {
-  display: inline-block;
-  margin-top: 0.45em;
-  color: #0b1922;
-  font-weight: 800;
-  background: var(--brand);
-  border-radius: 8px;
-  padding: 0.21em 0.93em;
-  text-decoration: none;
-  font-size: 1.04em;
-  transition: background 0.12s, color 0.11s;
-}
-.see-all-picks-btn:hover { background: #25b24e; color: #fff; }
-.ascot-card p { margin: 0; font-size: 1.02em; color: #a9bcd1; }
-.section-divider {
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, var(--brand) 0%, var(--highlight) 100%);
-  border-radius: 3.5px;
-  margin: 1.7em 0 1em 0;
-  box-shadow: 0 3px 16px #24b67e12;
-}
-
-/* ===== NEXT 6 RACES ===== */
+/* Next 6 Races */
 .next6-bar {
-  margin: 0.5em 0 1.2em 0;
+  margin: 1.1em 0 1.2em 0;
   text-align: center;
   background: var(--card-bg);
-  border-radius: 14px;
-  box-shadow: var(--card-shadow);
-  border: 2px solid var(--border);
-  padding: 1.2em 0.6em;
+  border-radius: 13px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--brand);
+  padding: 1.1em 0.7em;
 }
 .next6-bar h2 {
   font-weight: 900;
-  font-size: 1.15em;
+  font-size: 1.13em;
   color: var(--highlight);
   margin-bottom: 0.13em;
-  letter-spacing: 0.03em;
 }
-.next6-grid, .next6-pill-group {
+.next6-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 0.95em;
+  gap: 0.65em;
   justify-items: center;
   width: 100%;
-  margin-top: 0.58em;
+  margin-top: 0.5em;
 }
-.next6-pill, .next6-item {
-  min-width: 97px;
-  min-height: 67px;
-  background: #223147;
-  border-radius: 12px;
-  box-shadow: 0 1px 13px #151d1e55;
-  border: 1.8px solid #32a355;
-  padding: 0.19em 0.2em 0.15em 0.2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.13em;
-  color: #e3fdeb;
-  transition: box-shadow 0.15s, border 0.13s;
+@media (max-width: 900px) {
+  .next6-grid { grid-template-columns: repeat(3, 1fr); }
 }
-.next6-course {
-  font-size: 1.01em;
-  color: var(--brand);
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 0.13em;
-  letter-spacing: 0.01em;
+@media (max-width: 600px) {
+  .next6-grid { grid-template-columns: repeat(2, 1fr); gap: 0.28em; }
 }
-.next6-time, .next6-time-btn {
-  background: #232e45;
-  color: var(--highlight);
+.next6-item {
+  min-width: 95px;
+  min-height: 63px;
+  background: #1d2938;
   border-radius: 10px;
-  padding: 0.17em 0.7em;
-  margin-top: 0.01em;
-  font-size: 1.22em;
-  font-weight: 900;
-  border: 1px solid #ffc90080;
-  box-shadow: 0 1px 6px #ffc90015;
-  transition: background 0.12s, color 0.12s, transform 0.11s;
-  min-width: 2.3em;
-  text-align: center;
+  box-shadow: 0 1px 8px #151d1e45;
+  border: 1.5px solid var(--brand);
+  padding: 0.18em 0.22em;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-weight: 800;
+  font-size: 1.08em;
+  color: #e3fdeb;
+  transition: background 0.15s, border 0.13s;
 }
-.next6-time-btn:hover { background: #161d21; color: var(--brand); transform: scale(1.04); }
+.next6-course { font-size: 1em; color: var(--brand); font-weight: 700; margin-bottom: 0.1em; }
+.next6-time { background: #232e45; color: var(--highlight); border-radius: 10px; padding: 0.15em 0.68em; font-weight: 900; margin-top: 0.02em; }
 
-/* ===== RACE DETAILS ===== */
-.main-container {
-  max-width: 1050px;
-  margin: 1.5rem auto;
-  padding: 0.5em 1.1em 2.4em 1.1em;
-  background: transparent;
-}
+/* Race header */
 .race-header {
   display: flex;
   justify-content: space-between;
@@ -228,11 +130,10 @@ a:hover { color: var(--highlight); }
   margin-bottom: 1em;
 }
 .race-header h1 {
-  font-size: 1.45em;
+  font-size: 1.32em;
   font-weight: 900;
-  margin: 0 0 0.3em 0;
+  margin: 0 0 0.19em 0;
   color: var(--highlight);
-  text-shadow: 0 1px 4px #13191f99;
 }
 .race-meta {
   color: #e3fdeb;
@@ -244,15 +145,16 @@ a:hover { color: var(--highlight); }
   font-size: 1em;
   color: var(--brand);
   padding: 0.14rem 0.9em;
-  border-radius: 7px;
+  border-radius: 6px;
   background: #183a1f;
   text-decoration: none;
-  box-shadow: 0 1px 4px #13e36624;
+  box-shadow: 0 1px 4px #13e36618;
   transition: background 0.11s;
   font-weight: 700;
 }
 .back-link:hover { background: #25b24e; color: #fff; }
 
+/* Course navigation (race times at a course) */
 .course-nav {
   margin: 1em 0 1.2em 0;
   font-size: 1em;
@@ -261,18 +163,19 @@ a:hover { color: var(--highlight); }
   align-items: center;
   gap: 0.45em;
 }
-.course-nav .races-label { color: #ffc900; font-weight: 500; margin-right: 0.7em; }
+.races-label { color: var(--highlight); font-weight: 600; margin-right: 0.7em; }
 .course-nav-link {
-  background: #16222e;
-  border-radius: 6px;
-  padding: 0.13em 0.9em;
+  background: var(--pill-bg);
+  border-radius: 17px;
+  padding: 0.13em 1.1em;
   text-decoration: none;
   color: var(--brand);
   font-weight: 800;
-  margin-right: 0.2em;
-  box-shadow: 0 1px 3px #b9c8df11;
-  border: 1px solid #2a3747;
+  margin-right: 0.22em;
+  box-shadow: 0 1px 3px #b9c8df10;
+  border: 1.6px solid var(--brand);
   transition: background 0.13s, color 0.12s;
+  display: inline-block;
 }
 .course-nav-link.active,
 .course-nav-link:hover {
@@ -280,25 +183,26 @@ a:hover { color: var(--highlight); }
   color: #182033;
 }
 
+/* Forecast block */
 .forecast-card {
-  background: #182a1f;
-  border-radius: 9px;
-  box-shadow: 0 2px 8px #193a1312;
+  background: #19271e;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #193a1322;
   margin: 1.3em 0 1.2em 0;
-  padding: 0.7em 1.1em 0.9em 1.1em;
+  padding: 0.6em 1em 0.85em 1em;
   color: var(--highlight);
   border: 2px solid var(--brand);
   font-weight: 700;
-  font-size: 1.08em;
+  font-size: 1.06em;
 }
 
-/* ===== TABLES ===== */
+/* TABLE (Desktop) */
 .runners-table-wrap {
   overflow-x: auto;
   background: var(--card-bg);
-  border-radius: 15px;
-  box-shadow: 0 2px 16px #17c35b11;
-  margin-bottom: 1.4em;
+  border-radius: 13px;
+  box-shadow: 0 2px 16px #17c35b14;
+  margin-bottom: 1.3em;
   border: 1.7px solid var(--border);
 }
 .runners-table {
@@ -308,48 +212,39 @@ a:hover { color: var(--highlight); }
   background: var(--card-bg);
 }
 .runners-table th, .runners-table td {
-  padding: 0.7em 0.6em;
+  padding: 0.72em 0.63em;
   text-align: left;
   font-size: 1em;
-  border-bottom: 1.5px solid var(--border);
+  border-bottom: 1.2px solid var(--border);
   color: var(--main-text);
 }
 .runners-table th {
   color: var(--highlight);
   background: #192126;
   font-size: 1.07em;
-  letter-spacing: 0.01em;
-  border-bottom: 3px solid var(--brand);
+  border-bottom: 2px solid var(--brand);
   font-weight: 800;
 }
-.runners-table tr {
-  transition: background 0.11s;
-}
-.runners-table tr:hover {
-  background: #183b2455;
-}
-.runner-row.highlight {
-  background: #233a22cc;
-}
+.runners-table tr { transition: background 0.12s; }
+.runners-table tr:hover { background: #183b2435; }
+.runner-row.highlight { background: #213e2bcc; }
 .number-draw { display: flex; flex-direction: column; }
-.number { font-weight: 700; font-size: 1.08em; color: var(--highlight); }
+.number { font-weight: 700; font-size: 1.06em; color: var(--highlight); }
 .draw, .draw-head { font-size: 0.87em; color: #a9bcd1; margin-left: 1px; }
 .silks-img {
-  max-width: 36px;
-  max-height: 36px;
+  max-width: 32px;
+  max-height: 32px;
   border-radius: 6px;
   border: 2px solid var(--border);
   background: #191b23;
 }
-.horse-name a, .horse-name { color: var(--brand); font-weight: 800; text-decoration: none; font-size: 1.08em; }
-.horse-meta { display: block; font-size: 0.90em; color: #e9efeb; font-weight: 400; }
+.horse-name a, .horse-name { color: var(--brand); font-weight: 800; text-decoration: none; font-size: 1.06em; }
+.horse-meta { display: block; font-size: 0.92em; color: #e9efeb; font-weight: 400; }
 .jockey { color: var(--brand); font-weight: 700; }
-.trainer { color: #ffc900; font-weight: 700; }
-.form { font-family: 'Roboto Mono', monospace; font-size: 0.97em; color: var(--highlight); }
+.trainer { color: var(--highlight); font-weight: 700; }
+.form { font-family: 'Roboto Mono', monospace; font-size: 0.98em; color: var(--highlight); }
 .sp { font-family: 'Roboto Mono', monospace; color: var(--highlight); font-weight: 800; }
 .score { color: var(--brand); font-weight: 900; }
-
-/* Plus Button */
 .show-more-btn {
   background: var(--brand);
   color: #181e23;
@@ -357,15 +252,13 @@ a:hover { color: var(--highlight); }
   border-radius: 50%;
   width: 2em; height: 2em;
   border: none;
-  box-shadow: 0 1px 5px #0006;
+  box-shadow: 0 1px 5px #0004;
   transition: background 0.13s;
-  font-size: 1.14em;
+  font-size: 1.12em;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
 }
 .show-more-btn:hover { background: var(--highlight); color: #13191f; }
-
-/* Details (desktop) */
 .runner-details-row { background: #1a242e; color: #fff; }
 .runner-details {
   padding: 0.8em 1em;
@@ -373,105 +266,66 @@ a:hover { color: var(--highlight); }
   font-size: 1.05em;
   position: relative;
 }
-.runner-details-close {
-  background: #262a33;
-  color: #ffc900;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.23em;
-  position: absolute;
-  right: 0.7em; top: 0.7em;
-  width: 2em; height: 2em;
-  cursor: pointer;
-}
-.runner-details-close:hover { background: var(--danger); color: #fff; }
-
-/* ===== NON RUNNERS ===== */
-.nonrunners-block {
-  margin-top: 1.4em;
-  background: #312824;
-  border-radius: 10px;
-  border: 2px solid #eebcbe;
-  box-shadow: 0 2px 8px #eebcbe18;
-  padding: 1em 1.2em 1.1em 1.2em;
-}
-.nonrunners-block h3 {
-  margin-top: 0;
-  color: #ffc900;
-  font-size: 1.14em;
-  font-weight: bold;
-  margin-bottom: 0.9em;
-}
-.nonrunners-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.1em;
-}
-.nonrunner {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  min-width: 180px;
-}
-.nr-silks-img {
-  width: 22px;
-  height: 22px;
-  border-radius: 5px;
-  border: 1.4px solid #eebcbe;
-  background: #312824;
-}
-.nr-name { color: #ffc900; font-weight: 700; margin-right: 0.3em; }
-.nr-jt { color: #ffcab9; font-size: 0.97em; }
-
 
 /* ===== MOBILE ===== */
-@media (max-width: 900px) {
-  .hero-card-deck, .next6-pill-group, .next6-grid { grid-template-columns: repeat(3, 1fr); }
-}
+.desktop-only { display: table; }
+.mobile-only { display: none; }
 @media (max-width: 700px) {
   .desktop-only { display: none !important; }
   .mobile-only { display: block !important; }
 
-  .main-navbar { flex-wrap: wrap; padding: 0.19em 0.5em; }
-  #hamburger { display: block; }
-  .nav-links { display: none; flex-direction: column; width: 100%; }
-  .nav-links.show { display: flex; }
-
-  .main-container { padding: 0.3em 0.08em 1em 0.08em; }
   .runners-cards-list {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.1em;
   }
   .runner-card {
     background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(44,71,116,0.09);
-    border: 1.8px solid var(--border);
-    padding: 0.85em 0.85em 0.7em 0.85em;
-    margin-bottom: 0.6em;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(44,71,116,0.13);
+    border: 1.7px solid var(--border);
+    padding: 0.7em 0.7em 0.6em 0.7em;
+    margin-bottom: 0.7em;
     color: #fff;
+    font-size: 1.07em;
   }
   .runner-card-head {
     display: flex;
     align-items: center;
     gap: 0.55em;
-    margin-bottom: 0.18em;
+    margin-bottom: 0.12em;
   }
-  .runner-card .number { font-weight: 700; font-size: 1.09em; color: var(--highlight); }
+  .runner-card .number { font-weight: 700; color: var(--highlight); font-size: 1.13em; }
   .runner-card .draw { font-size: 0.95em; color: #bee9c7; }
-  .runner-card .horse-name { font-weight: 700; margin-left: 0.5em; color: var(--brand);}
-  .runner-card .sp { margin-left: auto; color: var(--highlight); font-weight: 800; }
-  .runner-card .silks-img { max-width: 26px; max-height: 26px; border-radius: 5px; border: 2px solid var(--border); }
+  .runner-card .horse-name { font-weight: 800; margin-left: 0.5em; color: var(--brand);}
+  .runner-card .sp { margin-left: auto; color: var(--highlight); font-weight: 800; font-size: 1.09em; }
+  .runner-card .silks-img { max-width: 24px; max-height: 24px; border-radius: 5px; border: 2px solid var(--border); }
   .meta-row { font-size: 0.98em; color: #b9c8df; margin-bottom: 1px; }
-  .next6-pill-group, .next6-grid { grid-template-columns: repeat(2, 1fr); gap: 0.36em; }
 }
-@media (max-width: 600px) {
-  .hero-main { max-width: 99vw; }
-  .hero-headline { font-size: 1.3rem; }
-  .hero-card-deck { flex-direction: column; gap: 1.1em; }
+
+/* Non-runners */
+.nonrunners-block {
+  margin-top: 1.4em;
+  background: #28251c;
+  border-radius: 10px;
+  border: 2px solid #eebcbe;
+  box-shadow: 0 2px 8px #eebcbe12;
+  padding: 1em 1em 1.1em 1em;
 }
-@media (max-width: 480px) {
-  .main-navbar, .main-container { padding: 0.1em 0.04em; }
-  .runner-card { padding: 0.51em 0.38em 0.31em 0.38em; }
+.nonrunners-block h3 {
+  margin-top: 0;
+  color: #ffc900;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.9em;
 }
+.nonrunners-list { display: flex; flex-wrap: wrap; gap: 1.05em; }
+.nonrunner { display: flex; align-items: center; gap: 0.48em; min-width: 160px; }
+.nr-silks-img {
+  width: 20px; height: 20px;
+  border-radius: 5px;
+  border: 1.4px solid #eebcbe;
+  background: #312824;
+}
+.nr-name { color: #ffc900; font-weight: 700; margin-right: 0.2em; }
+.nr-jt { color: #ffcab9; font-size: 0.97em; }
