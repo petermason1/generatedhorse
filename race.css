@@ -1,0 +1,148 @@
+.race-header {
+  margin-bottom: 0.6em;
+  padding: 0.5em 0.1em 0.4em 0.1em;
+  border-bottom: 2px solid var(--brand);
+  text-align: left;
+}
+.race-header h1 {
+  font-size: 1.19em;
+  color: var(--highlight);
+  margin-bottom: 0.08em;
+}
+.race-meta {
+  font-size: 1em;
+  color: var(--text);
+}
+
+.race-times-nav {
+  display: flex;
+  gap: 0.35em;
+  overflow-x: auto;
+  margin-bottom: 1.2em;
+  padding: 0.12em 0.1em 0.1em 0.1em;
+}
+.race-time-btn {
+  background: var(--pill-bg);
+  border-radius: 13px;
+  padding: 0.13em 0.85em;
+  color: var(--brand);
+  font-weight: 800;
+  border: 1.3px solid var(--brand);
+  font-size: 1em;
+  text-align: center;
+  transition: background 0.13s, color 0.13s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.race-time-btn.active,
+.race-time-btn:hover {
+  background: var(--brand);
+  color: #182033;
+}
+
+.forecast {
+  background: #19271e;
+  border-radius: 8px;
+  margin: 0.7em 0 1.2em 0;
+  padding: 0.65em 1em;
+  color: var(--highlight);
+  border: 2px solid var(--brand);
+  font-weight: 700;
+  font-size: 1.04em;
+  word-break: break-word;
+}
+
+.runners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15em;
+  margin-bottom: 1.8em;
+}
+
+.runner-card {
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 1.6px solid var(--border);
+  padding: 0.7em 0.7em 0.6em 0.7em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.21em;
+  position: relative;
+}
+.runner-card.highlight {
+  border: 2.5px solid var(--brand);
+}
+.runner-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.54em;
+  margin-bottom: 0.16em;
+}
+.runner-card .number {
+  font-weight: 700;
+  color: var(--highlight);
+  font-size: 1.08em;
+}
+.runner-card .draw {
+  font-size: 0.95em;
+  color: #bee9c7;
+}
+.runner-card .horse-name {
+  font-weight: 800;
+  margin-left: 0.45em;
+  color: var(--brand);
+}
+.runner-card .sp {
+  margin-left: auto;
+  color: var(--highlight);
+  font-weight: 800;
+  font-size: 1.07em;
+}
+.runner-card .silks-img {
+  max-width: 25px;
+  max-height: 25px;
+  border-radius: 5px;
+  border: 2px solid var(--border);
+  margin-right: 0.13em;
+}
+.meta-row {
+  font-size: 0.99em;
+  color: #b9c8df;
+  margin-bottom: 1px;
+}
+.score-row {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.more-info-btn {
+  background: var(--brand);
+  color: #181e23;
+  font-weight: 900;
+  border-radius: 16px;
+  border: none;
+  padding: 0.13em 1.1em;
+  font-size: 1.03em;
+  margin-top: 0.13em;
+  margin-bottom: 0.22em;
+  cursor: pointer;
+  transition: background 0.13s;
+}
+.more-info-btn:hover {
+  background: var(--highlight);
+  color: #13191f;
+}
+.runner-extra {
+  margin-top: 0.32em;
+  background: #273a2e;
+  border-radius: 6px;
+  padding: 0.51em 0.65em;
+  color: #fff;
+  font-size: 1.02em;
+  display: none;
+}
+.runner-card.open .runner-extra {
+  display: block;
+}

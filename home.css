@@ -1,0 +1,186 @@
+.hero {
+  padding: 1.2em 0.3em 0.7em 0.3em;
+  text-align: center;
+}
+.hero h1 { font-size: 1.22em; font-weight: 900; margin-bottom: 0.17em; }
+.hero .brand-text { color: var(--brand); }
+.hero p { color: var(--muted); font-size: 1.04em; margin: 0; }
+.next6-wrapper h2 {
+  font-size: 1.09em;
+  color: var(--highlight);
+  font-weight: 800;
+  margin-bottom: 0.1em;
+  padding-left: 0.15em;
+}
+.next6-bar {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.65em;
+  padding: 0.18em 0 0.18em 0.1em;
+  margin-bottom: 1.1em;
+}
+.next6-pill {
+  background: var(--pill-bg);
+  border-radius: 11px;
+  min-width: 68px;
+  padding: 0.43em 0.65em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  border: 1.2px solid var(--brand);
+  box-shadow: 0 1px 5px #0002;
+}
+.next6-course {
+  font-size: 0.97em;
+  color: var(--brand);
+  font-weight: 700;
+  margin-bottom: 0.07em;
+  max-width: 55px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.next6-time-btn {
+  background: none;
+  border: none;
+  color: var(--highlight);
+  font-size: 1.1em;
+  font-weight: 900;
+  margin-top: 0.07em;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.next6-time-btn.past { color: #888; text-decoration: line-through; }
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+  padding-bottom: 2em;
+}
+.course-section {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 0.7em 0.55em 1em 0.55em;
+}
+.course-title {
+  color: var(--highlight);
+  font-size: 1.09em;
+  font-weight: 900;
+  margin-bottom: 0.41em;
+}
+.race-times-row {
+  display: flex;
+  gap: 0.31em;
+  overflow-x: auto;
+}
+.race-time-btn {
+  background: var(--pill-bg);
+  border-radius: 15px;
+  padding: 0.13em 1em;
+  color: var(--brand);
+  font-weight: 800;
+  border: 1.2px solid var(--brand);
+  text-align: center;
+  margin-right: 0.17em;
+  transition: background 0.13s, color 0.13s;
+}
+.race-time-btn.active,
+.race-time-btn:hover {
+  background: var(--brand);
+  color: #182033;
+}
+.hero {
+  padding: 1.2em 0.3em 0.7em 0.3em;
+  text-align: center;
+}
+.hero h1 { font-size: 1.22em; font-weight: 900; margin-bottom: 0.17em; }
+.hero .brand-text { color: var(--brand); }
+.hero p { color: var(--muted); font-size: 1.04em; margin: 0; }
+.next6-wrapper h2 {
+  font-size: 1.09em;
+  color: var(--highlight);
+  font-weight: 800;
+  margin-bottom: 0.1em;
+  padding-left: 0.15em;
+}
+.next6-bar {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.65em;
+  padding: 0.18em 0 0.18em 0.1em;
+  margin-bottom: 1.1em;
+}
+.next6-pill {
+  background: var(--pill-bg);
+  border-radius: 11px;
+  min-width: 68px;
+  padding: 0.43em 0.65em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  border: 1.2px solid var(--brand);
+  box-shadow: 0 1px 5px #0002;
+}
+.next6-course {
+  font-size: 0.97em;
+  color: var(--brand);
+  font-weight: 700;
+  margin-bottom: 0.07em;
+  max-width: 55px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.next6-time-btn {
+  background: none;
+  border: none;
+  color: var(--highlight);
+  font-size: 1.1em;
+  font-weight: 900;
+  margin-top: 0.07em;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.next6-time-btn.past { color: #888; text-decoration: line-through; }
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+  padding-bottom: 2em;
+}
+.course-section {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 0.7em 0.55em 1em 0.55em;
+}
+.course-title {
+  color: var(--highlight);
+  font-size: 1.09em;
+  font-weight: 900;
+  margin-bottom: 0.41em;
+}
+.race-times-row {
+  display: flex;
+  gap: 0.31em;
+  overflow-x: auto;
+}
+.race-time-btn {
+  background: var(--pill-bg);
+  border-radius: 15px;
+  padding: 0.13em 1em;
+  color: var(--brand);
+  font-weight: 800;
+  border: 1.2px solid var(--brand);
+  text-align: center;
+  margin-right: 0.17em;
+  transition: background 0.13s, color 0.13s;
+}
+.race-time-btn.active,
+.race-time-btn:hover {
+  background: var(--brand);
+  color: #182033;
+}
