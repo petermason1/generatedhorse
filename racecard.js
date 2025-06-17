@@ -9,6 +9,7 @@ function scoreRunner(r) {
   const ts = parseInt(r.ts) || 0;
   const or = parseInt(r.ofr) || 0;
   const lastRun = parseInt(r.last_run) || 99; // If missing, treat as not fresh
+
   let oddsDec = 0;
   if (r.odds?.[0]?.decimal) {
     oddsDec = parseFloat(r.odds[0].decimal);
@@ -22,30 +23,40 @@ function scoreRunner(r) {
     places = (r.form.match(/[23]/g) || []).length;
   }
 
+  // --- Trainer/Jockey 14 day stats ---
+  let trainerPercent = r.trainer_14_days?.percent ? parseFloat(r.trainer_14_days.percent) : 0;
+  let trainerWins = r.trainer_14_days?.wins ? parseInt(r.trainer_14_days.wins) : 0;
+  let trainerRuns = r.trainer_14_days?.runs ? parseInt(r.trainer_14_days.runs) : 0;
+  // Jockey could be handled similarly if your data has it
+
   // === Core Scoring (adjust weights as needed) ===
   score += rpr;
   score += 0.5 * ts;
   score += 0.3 * or;
   score += 3 * wins + 1 * places;
-  // Penalty for not running recently (>60 days, penalize hard)
   if (lastRun > 60) score -= (lastRun - 60) * 0.5;
-  // Mild bonus for freshness
   score += Math.max(0, 60 - lastRun) * 0.08;
 
-  // === Odds Penalty (the main fix) ===
-  // Penalize bigger odds hard: (Over 8/1 = -10, Over 14/1 = -25, Over 25/1 = -50)
-  if (oddsDec >= 8) score -= (oddsDec - 7) * 3;    // Over 7/1, hit hard
-  if (oddsDec >= 15) score -= (oddsDec - 14) * 6;  // Over 14/1, hit even harder
-  if (oddsDec >= 26) score -= (oddsDec - 25) * 10; // Over 25/1, death penalty
+  // Trainer impact
+  score += 0.9 * trainerPercent;
+  score += 1.2 * trainerWins;
+  // Add Jockey impact if you have the fields
 
-  // Tiny bonus for being fancied (reverse)
+  // Odds penalty/bonus as before
+  if (oddsDec >= 8) score -= (oddsDec - 7) * 3;
+  if (oddsDec >= 15) score -= (oddsDec - 14) * 6;
+  if (oddsDec >= 26) score -= (oddsDec - 25) * 10;
   if (oddsDec > 0 && oddsDec <= 7) score += 8 / oddsDec;
 
-  // Clamp: never go below 0
-  score = Math.max(score, 0);
+  // **If all else fails, give a score based just on odds**
+  if (score === 0 && oddsDec > 0) {
+    score = 12 / oddsDec;
+  }
 
-  return Math.round(score * 10) / 10; // always a number
+  score = Math.max(score, 0);
+  return Math.round(score * 10) / 10;
 }
+
 
 
 // ========== Helper to get race_id from URL ==========
