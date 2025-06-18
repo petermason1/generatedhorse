@@ -53,6 +53,7 @@ function scoreRunner(r) {
 }
 
 
+
 // ========== Helper: Is Non-Runner ==========
 function isNonRunner(r) {
   if (typeof r.form === 'string' && r.form.match(/\bNR\b/i)) return true;

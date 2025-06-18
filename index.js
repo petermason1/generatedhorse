@@ -18,9 +18,12 @@ const next6 = [...races]
 // ---- Races grouped by course ----
 const byCourse = {};
 for (const rc of races) {
-  if (!byCourse[rc.course]) byCourse[rc.course] = [];
-  byCourse[rc.course].push(rc);
+  let course = rc.course;
+  if (course.startsWith("Lingfield")) course = "Lingfield";
+  if (!byCourse[course]) byCourse[course] = [];
+  byCourse[course].push(rc);
 }
+
 
 // ---- Main Section HTML ----
 let html = "";
