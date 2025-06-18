@@ -1,18 +1,18 @@
 console.log('racecard.js loaded');
 console.log(window.racecardsData);
 
-// ========== Scoring System ==========
 function scoreRunner(r) {
-  let score = 0;
-  const rpr = parseInt(r.rpr) || 0;
-  const ts = parseInt(r.ts) || 0;
-  const or = parseInt(r.ofr) || 0;
-  const lastRun = parseInt(r.last_run) || 99;
+  // Parse with safe defaults (force number or 0)
+  const rpr = Number.parseInt(r.rpr) || 0;
+  const ts = Number.parseInt(r.ts) || 0;
+  const or = Number.parseInt(r.ofr) || 0;
+  const lastRun = Number.parseInt(r.last_run);
+  const lastRunVal = Number.isFinite(lastRun) ? lastRun : 99;
 
   let oddsDec = 0;
   if (r.odds?.[0]?.decimal) {
-    oddsDec = parseFloat(r.odds[0].decimal);
-    if (isNaN(oddsDec)) oddsDec = 0;
+    oddsDec = Number.parseFloat(r.odds[0].decimal);
+    if (!Number.isFinite(oddsDec)) oddsDec = 0;
   }
 
   let wins = 0, places = 0;
@@ -21,16 +21,16 @@ function scoreRunner(r) {
     places = (r.form.match(/[23]/g) || []).length;
   }
 
-  let trainerPercent = r.trainer_14_days?.percent ? parseFloat(r.trainer_14_days.percent) : 0;
-  let trainerWins = r.trainer_14_days?.wins ? parseInt(r.trainer_14_days.wins) : 0;
+  const trainerPercent = Number.parseFloat(r.trainer_14_days?.percent) || 0;
+  const trainerWins = Number.parseInt(r.trainer_14_days?.wins) || 0;
 
-  // Core scoring
+  let score = 0;
   score += rpr;
   score += 0.5 * ts;
   score += 0.3 * or;
   score += 3 * wins + 1 * places;
-  if (lastRun > 60) score -= (lastRun - 60) * 0.4;
-  score += Math.max(0, 60 - lastRun) * 0.1;
+  if (lastRunVal > 60) score -= (lastRunVal - 60) * 0.4;
+  score += Math.max(0, 60 - lastRunVal) * 0.1;
   score += 0.7 * trainerPercent;
   score += 1.1 * trainerWins;
 
@@ -46,8 +46,12 @@ function scoreRunner(r) {
   // Clamp extreme negatives softly (prevents -80, -99, etc.)
   if (score < -15) score = -15 + (score + 15) * 0.3;
 
+  // Final: Clamp to real number
+  if (!Number.isFinite(score)) score = 0;
+
   return Math.round(score * 10) / 10;
 }
+
 
 // ========== Helper: Is Non-Runner ==========
 function isNonRunner(r) {

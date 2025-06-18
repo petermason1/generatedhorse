@@ -210,7 +210,7 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;;
   background: #232d37;
   border-radius: 8px;
   padding: 0.44em 0.7em;
@@ -253,27 +253,41 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   letter-spacing: .2px;
 }
 .racecard-race-row {
-  display: flex;
-  gap: 0.25em;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.23em;
   margin-bottom: 0.7em;
+
 }
+
+@media (max-width: 1024px) {
+  .racecard-race-row {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+
+
 .racecard-time-link {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;         /* Center horizontally */
+  justify-content: center;     /* Center vertically */
   background: #232d33;
   border-radius: 7px;
   color: #ffe564;
   text-decoration: none;
   font-size: 1.04em;
   font-weight: 500;
-  min-width: 106px;
-  padding: 0.38em 0.75em 0.34em 0.8em;
+  min-width: 66px;            /* Was 106px, make this smaller to match above */
+  min-height: 45px;           /* Add a fixed height to keep uniformity */
+  padding: 0.24em 0.7em;      /* Tweak as needed */
   transition: background 0.13s, color 0.13s;
   margin-bottom: 4px;
   box-shadow: 0 2px 5px #1c1c1f07;
 }
+
 .racecard-time-link:hover {
   background: #35e9ae;
   color: #181c1f;
@@ -281,8 +295,10 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
 .racecard-time {
   color: #ffc900;
   font-weight: 700;
-  margin-right: 5px;
+  margin: 0 auto;        /* Center horizontally in flex */
+  text-align: center;
 }
+
 .racecard-title {
   color: #ffe564;
   font-size: 1em;
