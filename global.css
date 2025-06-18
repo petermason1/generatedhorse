@@ -254,16 +254,16 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
 }
 .racecard-race-row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 0.23em;
   margin-bottom: 0.7em;
-
 }
+
 
 @media (max-width: 1024px) {
   .racecard-race-row {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 
@@ -678,14 +678,29 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   margin-top: 2px;
 }
 
-.runner-info {
-  font-size: 0.98em;
-  color: #aad6e7;
-  margin-bottom: 2px;
+.runner-odds {
+  color: #ffe564;
+  font-weight: 700;
+  font-size: 1.10em;
+  margin-left: 14px;
+  align-self: center;
+  min-width: 36px;
+  text-align: center;
   margin-top: 2px;
-  line-height: 1.13;
-  font-weight: 400;
+  white-space: nowrap;   /* <-- prevents wrap */
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .runner-odds {
+    margin-left: 6px;
+    font-size: 1.02em;
+    min-width: 34px;    /* try slightly bigger, e.g. 34-40px */
+    margin-top: 0;
+    white-space: nowrap; /* <-- add here too */
+  }
+}
+
 
 /* ---- More Info Dropdown ---- */
 .runner-more-btn {

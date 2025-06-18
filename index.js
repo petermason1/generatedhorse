@@ -14,7 +14,6 @@ const next6 = [...races]
   .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
   .slice(0, 6);
 
-
 // ---- Races grouped by course ----
 const byCourse = {};
 for (const rc of races) {
@@ -24,6 +23,14 @@ for (const rc of races) {
   byCourse[course].push(rc);
 }
 
+// ---- Sort courses by earliest off_dt ----
+const courseRows = Object.entries(byCourse)
+  .map(([course, courseRaces]) => {
+    // Find the earliest off_dt for this course
+    const minOffDt = Math.min(...courseRaces.map(r => new Date(r.off_dt)));
+    return { course, courseRaces, minOffDt };
+  })
+  .sort((a, b) => a.minOffDt - b.minOffDt); // Sort by earliest race
 
 // ---- Main Section HTML ----
 let html = "";
@@ -48,7 +55,7 @@ if (next6.length) {
 html += `
   <section class="races-course-list" style="margin-top:2.4em;">
     <h2 style="margin-bottom:.9em;color:#ffc900;">Today's Racecards</h2>
-    ${Object.entries(byCourse).map(([course, courseRaces]) => `
+    ${courseRows.map(({ course, courseRaces }) => `
       <div class="racecard-course-row">
         <div class="racecard-course-header">${course}</div>
         <div class="racecard-race-row">

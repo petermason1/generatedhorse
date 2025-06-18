@@ -2,18 +2,11 @@ console.log('racecard.js loaded');
 console.log(window.racecardsData);
 
 function scoreRunner(r) {
-  // Parse with safe defaults (force number or 0)
   const rpr = Number.parseInt(r.rpr) || 0;
   const ts = Number.parseInt(r.ts) || 0;
   const or = Number.parseInt(r.ofr) || 0;
   const lastRun = Number.parseInt(r.last_run);
   const lastRunVal = Number.isFinite(lastRun) ? lastRun : 99;
-
-  let oddsDec = 0;
-  if (r.odds?.[0]?.decimal) {
-    oddsDec = Number.parseFloat(r.odds[0].decimal);
-    if (!Number.isFinite(oddsDec)) oddsDec = 0;
-  }
 
   let wins = 0, places = 0;
   if (typeof r.form === 'string') {
@@ -23,36 +16,27 @@ function scoreRunner(r) {
 
   const trainerPercent = Number.parseFloat(r.trainer_14_days?.percent) || 0;
   const trainerWins = Number.parseInt(r.trainer_14_days?.wins) || 0;
+  const trainerBonus = trainerPercent >= 20 ? 0.5 : 0;
+  const layoffPenalty = (wins === 0 && lastRunVal > 50) ? -2.5 : 0;
 
   let score = 0;
-  score += rpr;
-  score += 0.5 * ts;
-  score += 0.3 * or;
-  score += 3 * wins + 1 * places;
-  if (lastRunVal > 60) score -= (lastRunVal - 60) * 0.4;
-  score += Math.max(0, 60 - lastRunVal) * 0.1;
-  score += 0.7 * trainerPercent;
-  score += 1.1 * trainerWins;
+  score += 1.1 * rpr;
+  score += 0.6 * ts;
+  score += 0.32 * or;
+  score += 2.1 * wins + 1.1 * places;
+  if (lastRunVal > 50) {
+    score += -(lastRunVal - 50) * 0.19;
+  } else {
+    score += (50 - lastRunVal) * 0.13;
+  }
+  score += 0.8 * trainerPercent;
+  score += 1.2 * trainerWins;
+  score += trainerBonus + layoffPenalty;
 
-  // Odds bonus/penalty (tempered)
-  if (oddsDec >= 8) score -= (oddsDec - 7) * 2;
-  if (oddsDec >= 15) score -= (oddsDec - 14) * 4;
-  if (oddsDec >= 26) score -= (oddsDec - 25) * 7;
-  if (oddsDec > 0 && oddsDec <= 7) score += 8 / oddsDec;
-
-  // Baseline if all else fails
-  if (score === 0 && oddsDec > 0) score = 10 / oddsDec;
-
-  // Clamp extreme negatives softly (prevents -80, -99, etc.)
-  if (score < -15) score = -15 + (score + 15) * 0.3;
-
-  // Final: Clamp to real number
+  if (score < -12) score = -12 + (score + 12) * 0.4;
   if (!Number.isFinite(score)) score = 0;
-
-  return Math.round(score * 10) / 10;
+  return Math.round(score * 100) / 100;
 }
-
-
 
 // ========== Helper: Is Non-Runner ==========
 function isNonRunner(r) {
@@ -127,6 +111,61 @@ function renderTopPicks(race) {
   `;
 }
 
+// --- More Info Table ---
+function renderRunnerMore(r) {
+  return `
+    <b>Comment:</b> ${r.comment || '<span style="color:#888">No comment</span>'}<br>
+    <b>Spotlight:</b> ${r.spotlight || '<span style="color:#888">No spotlight</span>'}<br>
+    <table class="runner-stats-table" style="margin:0.7em 0;font-size:0.97em;background:#21242a;border-radius:7px;width:100%;">
+      <tbody>
+        <tr>
+          <td><b>Trainer 14d:</b></td>
+          <td>${r.trainer_14_days?.wins || '0'} wins from ${r.trainer_14_days?.runs || '0'} runs (${r.trainer_14_days?.percent || '0'}%)</td>
+          <td><b>Trainer RTF:</b></td>
+          <td>${r.trainer_rtf ?? '-'}</td>
+        </tr>
+        <tr>
+          <td><b>Jockey:</b></td>
+          <td>${r.jockey || '-'}</td>
+          <td><b>Draw:</b></td>
+          <td>${r.draw || '-'}</td>
+        </tr>
+        <tr>
+          <td><b>Owner:</b></td>
+          <td colspan="3">
+            ${r.owner || '-'}
+            ${
+              r.prev_owners && r.prev_owners.length
+                ? `<br><span style="color:#90f">Prev: ${r.prev_owners.map(po=>po.owner).join(', ')}</span>`
+                : ''
+            }
+          </td>
+        </tr>
+        <tr>
+          <td><b>Breeder:</b></td>
+          <td>${r.breeder || '-'}</td>
+          <td><b>Colour:</b></td>
+          <td>${r.colour || '-'}</td>
+        </tr>
+        <tr>
+          <td><b>Sire:</b></td>
+          <td>${r.sire || '-'}</td>
+          <td><b>Dam:</b></td>
+          <td>${r.dam || '-'}</td>
+        </tr>
+        <tr>
+          <td><b>Headgear:</b></td>
+          <td>${r.headgear || '-'}</td>
+          <td><b>Wind Surgery:</b></td>
+          <td>${r.wind_surgery ? 'Yes' : '-'}</td>
+        </tr>
+      </tbody>
+    </table>
+    <b>Quotes:</b> <ul>${r.quotes?.map(q=>`<li><b>${q.date || ''}:</b> ${q.quote}</li>`).join('') || '-'}</ul>
+    <b>Stable Tour:</b> <ul>${r.stable_tour?.map(st=>`<li>${st.quote}</li>`).join('') || '-'}</ul>
+  `;
+}
+
 function renderRace(race) {
   main.innerHTML = `
     <div class="container">
@@ -175,17 +214,7 @@ function renderRace(race) {
               </div>
               <button class="runner-more-btn" type="button">More info ▼</button>
               <div class="runner-more">
-                <b>Comment:</b> ${r.comment || '<span style="color:#888">No comment</span>'}<br>
-                <b>Spotlight:</b> ${r.spotlight || '<span style="color:#888">No spotlight</span>'}<br>
-                <b>Breeding:</b> ${r.sire || '-'} / ${r.dam || '-'}<br>
-                <b>Owner:</b> ${r.owner || '-'}<br>
-                <b>Jockey/Trainer last 14d:</b>
-                  ${r.trainer_14_days?.wins || '-'} wins from ${r.trainer_14_days?.runs || '-'} runs (${r.trainer_14_days?.percent || '-'}%)
-                <br>
-                <b>Prev Trainers:</b> ${r.prev_trainers?.map(pt=>pt.trainer).join(', ') || '-'}<br>
-                <b>Prev Owners:</b> ${r.prev_owners?.map(po=>po.owner).join(', ') || '-'}<br>
-                <b>Quotes:</b> <ul>${r.quotes?.map(q=>`<li><b>${q.date}:</b> ${q.quote}</li>`).join('') || '-'}</ul>
-                <b>Stable Tour:</b> <ul>${r.stable_tour?.map(st=>`<li>${st.quote}</li>`).join('') || '-'}</ul>
+                ${renderRunnerMore(r)}
               </div>
             </div>
             <span class="runner-odds">${r.odds?.[0]?.fractional || ''}</span>
