@@ -7,7 +7,7 @@ if (!races.length) {
   throw new Error('No racecards!');
 }
 
-// --- Score function (as above, tweak as needed) ---
+// --- Score function (same as your main) ---
 function scoreRunner(r) {
   let score = 0;
   const rpr = parseInt(r.rpr) || 0;
@@ -72,37 +72,45 @@ function runnerKey(r, race) {
   return `${race._id || race.race_id || ''}|${r.horse_id || r.horse}`;
 }
 
+// --- Tips arrays
 const topPicks = [];
 const valuePicks = [];
 const outsiders = [];
+const skippedTopLongshots = [];
 
 // --- Logic ---
 races.forEach(race => {
   if (!race.runners || !race.runners.length) return;
+
+  // Sort by your model score (best to worst)
   const sorted = [...race.runners].sort((a, b) => (b.score || 0) - (a.score || 0));
   const top = sorted[0];
+
+  // Find top 3 in market (lowest odds)
+  const sortedByOdds = [...race.runners]
+    .filter(r => r.odds?.[0]?.decimal)
+    .sort((a, b) => parseFloat(a.odds[0].decimal) - parseFloat(b.odds[0].decimal));
+  const topMarketHorses = sortedByOdds.slice(0, 3).map(r => r.horse_id || r.horse);
+
+  // --- Top pick: only if best scoring runner is in top 3 of market ---
+  let topPick = null;
+  const topIsInMarket = topMarketHorses.includes(top.horse_id || top.horse);
   const topOdds = top.odds?.[0]?.decimal ? parseFloat(top.odds[0].decimal) : 0;
 
-  // --- Top pick (max 6 per day, skip odds-on favs) ---
-  let topPick = null;
-  if (topOdds > 2.0) {
+  if (topIsInMarket && topOdds > 2.0) {
+    // Main system pick
     topPick = top;
-  } else {
-    // Take next runner above evens if available
-    for (let i = 1; i < sorted.length; i++) {
-      const o = sorted[i].odds?.[0]?.decimal ? parseFloat(sorted[i].odds[0].decimal) : 0;
-      if (o > 2.0) {
-        topPick = sorted[i];
-        break;
-      }
-    }
+  } else if (!topIsInMarket && topOdds > 6.0) {
+    // It's a rag, keep for outsiders later
+    skippedTopLongshots.push({ ...top, race });
   }
+
   if (topPick && topPicks.length < 6) {
     topPicks.push({ ...topPick, race });
     pickedKeys.add(runnerKey(topPick, race));
   }
 
-  // --- Value pick: runner with odds ≥5/1, score ≥90% of top, not already picked ---
+  // --- Value pick: odds ≥5/1, score ≥90% of top, not already picked ---
   let bestValue = null, bestValScore = -Infinity;
   for (const r of sorted) {
     const odds = r.odds?.[0]?.decimal ? parseFloat(r.odds[0].decimal) : 0;
@@ -118,7 +126,7 @@ races.forEach(race => {
     pickedKeys.add(runnerKey(bestValue, race));
   }
 
-  // --- Outsider pick: runner odds ≥12/1, score ≥75% of top, not already picked ---
+  // --- Outsider pick: odds ≥12/1, score ≥75% of top, not already picked ---
   let bestOutsider = null, bestOutScore = -Infinity;
   for (const r of sorted) {
     const odds = r.odds?.[0]?.decimal ? parseFloat(r.odds[0].decimal) : 0;
@@ -134,6 +142,15 @@ races.forEach(race => {
     pickedKeys.add(runnerKey(bestOutsider, race));
   }
 });
+
+// --- Add any top longshots that weren't picked as top or value ---
+// (so you don't lose the clever high-score rag as a tip)
+for (const r of skippedTopLongshots) {
+  if (!pickedKeys.has(runnerKey(r, r.race)) && outsiders.length < 4) {
+    outsiders.push(r);
+    pickedKeys.add(runnerKey(r, r.race));
+  }
+}
 
 // --- Limit shown ---
 const showValue = valuePicks.slice(0, 5);
