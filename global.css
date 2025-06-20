@@ -816,3 +816,22 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
 ::-webkit-scrollbar-track {
   background: #191e23;
 }
+/* Fix grid for 6 races on mobile */
+@media (max-width: 1024px) {
+  .next6-races, .racecard-race-row {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .next6-races, .racecard-race-row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .next6-races, .racecard-race-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+}
