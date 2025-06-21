@@ -835,3 +835,62 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
     grid-template-rows: none;
   }
 }
+/* —————————————————————————————
+   Yesterday’s Results Overrides
+   ————————————————————————————— */
+
+.results-container {
+  max-width: 800px;
+  margin: 2.5em auto 4em auto;
+  padding: 0 18px;
+}
+
+.results-container h1 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.results-summary {
+  background: #232a32;
+  padding: 1.1em 1.3em;
+  border-radius: 8px;
+  margin-bottom: 1.8em;
+  font-size: 1.03em;
+  line-height: 1.5;
+}
+
+.results-summary b {
+  color: #ffc900;
+  display: inline-block;
+  width: 100px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+  padding: 0.7em 0.9em;
+  font-size: 1em;
+  text-align: left;
+}
+
+.results-table th {
+  color: #ffc900;
+  background: #191e23;
+}
+
+.results-table tr:nth-child(even) {
+  background: #232a32;
+}
+
+.results-table tr:nth-child(odd) {
+  background: #1f242a;
+}
+
+.results-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
