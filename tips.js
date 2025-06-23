@@ -123,27 +123,50 @@ console.log('tips.js: Script started.');
         let placed = (form.match(/[23]/g) || []).length;
         const courseFormWins = (r.course_form?.match(/1/g) || []).length;
 
-        // Positive indicators (strengths)
+        // **Prioritize more impactful reasons first, especially for outsiders**
+        if (trainerP >= 25 && trainerW >= 5) reasons.push(`trainer in excellent recent form (${trainerP}% with ${trainerW} wins)`);
+        else if (trainerP >= 20) reasons.push(`trainer in hot form (${trainerP}% last 2wks)`);
+        else if (trainerW >= 3) reasons.push(`trainer has multiple recent winners (${trainerW})`);
+
         if (wins >= 2) reasons.push(`multiple recent wins (${wins})`);
         else if (wins === 1) reasons.push(`a recent win`);
-        if (placed > 0) reasons.push(`consistent form with ${placed} places`);
-        if (rpr > 120) reasons.push(`a high RPR (${rpr})`);
-        if (ts > 90) reasons.push(`strong Topspeed (${ts})`);
-        if (or > 110) reasons.push(`a top Official Rating (${or})`);
-        if (lastRun <= 25) reasons.push(`raced recently (${lastRun} days ago)`);
-        if (trainerP > 20) reasons.push(`trainer in hot form (${trainerP}% last 2wks)`);
-        if (trainerW > 3) reasons.push(`trainer has multiple recent winners (${trainerW})`);
-        if (courseFormWins >= 1) reasons.push(`proven course form (${courseFormWins} course win)`);
 
-        // Negative indicators (considerations/weaknesses)
+        if (rpr > 125) reasons.push(`a very high RPR (${rpr})`);
+        else if (rpr > 110) reasons.push(`a high RPR (${rpr})`);
+
+        if (ts > 95) reasons.push(`impressive Topspeed (${ts})`);
+        else if (ts > 85) reasons.push(`strong Topspeed (${ts})`);
+
+        if (or > 115) reasons.push(`a top Official Rating (${or})`);
+        else if (or > 105) reasons.push(`a strong Official Rating (${or})`);
+
+        if (placed >= 3) reasons.push(`very consistent with ${placed} recent places`);
+        else if (placed > 0) reasons.push(`consistent form with ${placed} places`);
+
+        if (courseFormWins >= 2) reasons.push(`proven course specialist with ${courseFormWins} course wins`);
+        else if (courseFormWins === 1) reasons.push(`proven course form with a course win`);
+
+        if (lastRun <= 25) reasons.push(`raced recently (${lastRun} days ago)`);
+
+
+        // Negative indicators (considerations/weaknesses) - kept distinct to be appended
         let negativeReasons = [];
         if (lastRun > 90 && wins === 0) negativeReasons.push(`a long layoff without recent wins`);
 
         // Construct the main reason string, combining positive and negative
-        let mainReason = reasons.length ? `Showing strengths such as ${reasons.slice(0, 3).join(', ')}.` : 'Solid profile for this contest.';
+        let mainReason = '';
+        if (reasons.length > 0) {
+            mainReason = `Key strengths include ${reasons.slice(0, 3).join(', ')}.`;
+            if (reasons.length > 3) {
+                 mainReason += ` Other positives: ${reasons.slice(3, 5).join(', ')}.`; // Add a few more if available
+            }
+        } else {
+            mainReason = 'Solid profile for this contest.'; // Fallback if no specific strengths
+        }
+
 
         if (negativeReasons.length) {
-            mainReason += ` Key considerations include ${negativeReasons.join(', ')}.`;
+            mainReason += ` Considerations: ${negativeReasons.join(', ')}.`;
         }
 
         if (oddsFrac) {
@@ -172,7 +195,8 @@ console.log('tips.js: Script started.');
     const topPicks = [];
     const valuePicks = [];
     const outsiders = [];
-    const pickedKeys = new Set(); // To ensure a horse is picked only once across all categories
+    const pickedKeys = new Set(); // To ensure a horse is picked only once across ALL categories
+    const pickedRaceIds = new Set(); // NEW: To ensure only one horse per race is picked
 
     // Helper function to add a pick if space is available and not duplicated
     function addPick(pick, categoryArray, maxLimit) {
@@ -181,10 +205,14 @@ console.log('tips.js: Script started.');
             console.error("tips.js: Attempted to add pick for runner without associated race object:", pick);
             return false;
         }
-        const key = runnerKey(pick, pick.race);
-        if (categoryArray.length < maxLimit && !pickedKeys.has(key)) {
+        const runnerIdKey = runnerKey(pick, pick.race);
+        const raceIdKey = pick.race._id || pick.race.race_id;
+
+        // Check if this specific runner or its race has already been picked
+        if (categoryArray.length < maxLimit && !pickedKeys.has(runnerIdKey) && !pickedRaceIds.has(raceIdKey)) {
             categoryArray.push(pick);
-            pickedKeys.add(key);
+            pickedKeys.add(runnerIdKey);
+            pickedRaceIds.add(raceIdKey); // Add race ID to the set
             return true;
         }
         return false;
@@ -202,7 +230,7 @@ console.log('tips.js: Script started.');
             return; // Skip if no valid top scorer or score is not positive
         }
 
-        // --- Top Pick Logic ---
+        // --- Top Pick Logic (attempt to add first) ---
         // The highest-scoring horse, but only if its odds are relatively short (e.g., < 6/1 decimal)
         if (topScorerInRace.oddsDecimal && topScorerInRace.oddsDecimal <= 7.0) { // 7.0 includes 6/1
             addPick(topScorerInRace, topPicks, MAX_TOP_PICKS);
@@ -211,7 +239,10 @@ console.log('tips.js: Script started.');
         // --- Value Pick Logic ---
         // Look for runners with good scores (e.g., at least 75% of the top score) at mid-range odds
         for (const r of sortedByScore) {
-            if (pickedKeys.has(runnerKey(r, race))) continue; // Skip if already picked
+            // Check if this race has already had a pick from a previous category
+            if (pickedRaceIds.has(r.race._id || r.race.race_id)) continue;
+            // Check if this specific runner was already picked (though the above line should largely prevent this)
+            if (pickedKeys.has(runnerKey(r, r.race))) continue;
 
             const minOddsValue = 6.0; // Corresponds to 5/1
             const maxOddsValue = 17.0; // Corresponds to 16/1
@@ -226,7 +257,10 @@ console.log('tips.js: Script started.');
         // --- Outsider Pick Logic ---
         // Look for runners with decent scores (e.g., at least 50% of the top score) at long odds
         for (const r of sortedByScore) {
-            if (pickedKeys.has(runnerKey(r, race))) continue; // Skip if already picked
+            // Check if this race has already had a pick from a previous category
+            if (pickedRaceIds.has(r.race._id || r.race.race_id)) continue;
+            // Check if this specific runner was already picked
+            if (pickedKeys.has(runnerKey(r, r.race))) continue;
 
             const minOddsOutsider = 17.0; // Corresponds to 16/1
             const minScoreRatioOutsider = 0.50; // Must have at least 50% of the top scorer's score
