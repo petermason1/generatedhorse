@@ -7,52 +7,50 @@ console.log(window.racecardsData);
  * @returns {number} The calculated score, rounded to two decimal places.
  */
 function scoreRunner(r) {
-  const rpr = Number.parseInt(r.rpr) || 0;
-  const ts = Number.parseInt(r.ts) || 0;
-  const or = Number.parseInt(r.ofr) || 0;
-  const lastRun = Number.parseInt(r.last_run);
-  const lastRunVal = Number.isFinite(lastRun) ? lastRun : 99; // Default to 99 if not a valid number
+  function safeInt(x, def = 0) {
+    if (x === null || x === undefined || x === '' || x === '-' || String(x).toLowerCase() === 'nan') return def;
+    let v = parseInt(x);
+    return Number.isFinite(v) ? v : def;
+  }
+  function safeFloat(x, def = 0.0) {
+    if (x === null || x === undefined || x === '' || x === '-' || String(x).toLowerCase() === 'nan') return def;
+    let v = parseFloat(x);
+    return Number.isFinite(v) ? v : def;
+  }
+
+  const rpr = safeInt(r.rpr);
+  const ts = safeInt(r.ts);
+  const orating = safeInt(r.ofr);
+  const last_run = safeInt(r.last_run, 99);
 
   let wins = 0, places = 0;
   if (typeof r.form === 'string') {
-    // Count '1's for wins, '2' or '3' for places in the form string
     wins = (r.form.match(/1/g) || []).length;
-    places = (r.form.match(/[23]/g) || []).length;
+    places = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
   }
 
-  const trainerPercent = Number.parseFloat(r.trainer_14_days?.percent) || 0;
-  const trainerWins = Number.parseInt(r.trainer_14_days?.wins) || 0;
-  const trainerBonus = trainerPercent >= 20 ? 0.5 : 0; // Bonus for high trainer win rate
-  const layoffPenalty = (wins === 0 && lastRunVal > 50) ? -2.5 : 0; // Penalty for long layoff without a win
+  const trainer = r.trainer_14_days || {};
+  const trainerPercent = safeFloat(trainer.percent);
+  const trainerWins = safeInt(trainer.wins);
+  const trainer_bonus = trainerPercent >= 20 ? 0.5 : 0;
+  const layoff_penalty = (wins === 0 && last_run > 50) ? -2.5 : 0;
 
   let score = 0;
-  // Weighted addition of various performance metrics
   score += 1.1 * rpr;
   score += 0.6 * ts;
-  score += 0.32 * or;
+  score += 0.32 * orating;
   score += 2.1 * wins + 1.1 * places;
-
-  // Adjust score based on last run days (recency bias)
-  if (lastRunVal > 50) {
-    score += -(lastRunVal - 50) * 0.19; // Penalty for long layoffs
-  } else {
-    score += (50 - lastRunVal) * 0.13; // Bonus for recent runs
-  }
-
-  // Trainer form contribution
+  score += last_run > 50 ? -(last_run - 50) * 0.19 : (50 - last_run) * 0.13;
   score += 0.8 * trainerPercent;
   score += 1.2 * trainerWins;
+  score += trainer_bonus + layoff_penalty;
 
-  // Apply calculated bonuses/penalties
-  score += trainerBonus + layoffPenalty;
-
-  // Prevent extremely low scores from skewing
   if (score < -12) score = -12 + (score + 12) * 0.4;
-  // Ensure score is a finite number, default to 0 if not
   if (!Number.isFinite(score)) score = 0;
 
-  return Math.round(score * 100) / 100; // Round to two decimal places
+  return Math.round(score * 100) / 100;
 }
+
 
 /**
  * Checks if a runner is a non-runner.

@@ -113,13 +113,12 @@
     background: #2ce8c0; /* Solid color when active */
 }
 
-/* --- Slider Grid Layout --- */
 .slider-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
-    gap: 1.8em 3em; /* Increased row and column gap */
-    margin-bottom: 1.5em; /* More space below sliders */
-    padding: 0.5em 0; /* Slight internal padding for the grid area */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7em 1.2em; /* Much tighter! */
+    margin-bottom: 1.1em;
+    padding: 0.15em 0;
 }
 
 /* --- Individual Slider Group Styling --- */
@@ -193,7 +192,10 @@
     font-weight: 700;
     font-size: 1.15em; /* Slightly larger value display */
     text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
 }
+
+
 
 /* --- Custom Race Header Styles --- */
 .custom-race-header {
@@ -451,227 +453,138 @@
   line-height: 1.4;
 }
 
-/* --- Responsive Adjustments for Custom Score Page --- */
-@media (max-width: 768px) {
-    .page-title {
-        font-size: 2.2em;
-        margin-top: 1.5em;
-        margin-bottom: 0.8em;
-    }
-    .race-selector-container {
-        margin-top: 1.2em;
-        margin-bottom: 1.5em;
-        gap: 10px;
-    }
-    .race-selector-container label {
-        font-size: 1.1em;
-    }
-    .race-selector-dropdown {
-        padding: 8px 15px;
-        font-size: 1em;
-    }
-    .score-controls {
-        padding: 1em; /* Further reduced padding for the entire control section */
-        margin-top: 1.5em;
-        margin-bottom: 2em;
-        border-radius: 12px;
-    }
-    .score-controls h2 {
-        font-size: 1.6em;
-        margin-bottom: 1em;
-    }
-    /* Preset buttons adjust to 3 columns for tablets/midsized mobiles */
-    .preset-buttons {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-top: 2em;
-        margin-bottom: 1.5em;
-    }
-    .preset-button {
-        padding: 8px 16px;
-        font-size: 0.95em;
-        border-radius: 8px;
-    }
-    /* Sliders revert to single column (flex column) */
-    .slider-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 0.6em; /* Further reduced gap for column layout on mobile */
-    }
-    .slider-group {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px; /* Further reduced gap within slider group */
-    }
-    .slider-group label {
-        width: 100%;
-        font-size: 0.95em; /* Slightly smaller font for label */
-    }
-    .slider-group input[type="range"] {
-        width: calc(100% - 65px); /* Make more room for value span */
-        margin-right: 55px; /* Push slider to left, making space for value */
-        height: 6px; /* Reduced track height on mobile */
-    }
-    .slider-group input[type="range"]::-webkit-slider-thumb,
-    .slider-group input[type="range"]::-moz-range-thumb {
-        width: 18px; /* Reduced thumb size on mobile */
-        height: 18px;
-        box-shadow: 0 0 5px rgba(54,232,181,0.5); /* Less intense glow */
-    }
-    .slider-group span {
-        position: absolute;
-        right: 1.5em; /* Position value to the right of the slider */
-        top: 24px; /* Adjusted top to bring it even closer to the slider */
-        font-size: 1em; /* Slightly smaller value display */
-        width: 50px;
-    }
-    .custom-race-header h2 {
-        font-size: 1.6em;
-    }
-    .custom-race-header h3 {
-        font-size: 1.1em;
-    }
+/* ======================= CUSTOM SCORE PAGE MEDIA QUERIES ======================= */
 
-    /* Runner Card mobile adjustments */
-    .runner-card {
-        flex-wrap: wrap; /* Allow wrapping */
-        flex-direction: row; /* Keep elements in a row if space allows */
-        gap: 7px; /* Reduce gap */
-        align-items: flex-start;
-        padding: 0.8em 0.25em 0.79em 0.28em; /* Adjusted padding */
-        min-height: 58px;
-        border-radius: 9px;
-    }
-    .runner-num-draw {
-        min-width: 36px;
-        font-size: 0.98em;
-        margin-right: 6px;
-        margin-bottom: 2px;
-        gap: 2px;
-    }
-    .runner-silk {
-        width: 32px;
-        height: 32px;
-        margin-right: 6px;
-    }
-    .runner-main {
-        min-width: 95px; /* Allow content to shrink more */
-        gap: 1px;
-        font-size: 0.98em;
-        margin-bottom: 0;
-    }
-    .runner-horse {
-        font-size: 1.08em;
-        margin-bottom: 0;
-        font-weight: 700;
-    }
-    .runner-meta-line {
-        gap: 0.14em;
-        font-size: 0.98em;
-        margin-bottom: 0.07em;
-    }
-    .runner-meta-line .runner-form {
-        font-size: 0.9em;
-        margin-left: 7px;
-        padding: 2px 6px;
-    }
-    .runner-info-line {
-        font-size: 0.94em;
-        margin-top: 1px;
-        margin-bottom: 1px;
-        gap: 0.3em 0.8em;
-    }
-    .runner-odds {
-        margin-left: 6px; /* Adjust spacing */
-        font-size: 1.05em;
-        min-width: 38px;
-        margin-top: 0;
-        text-align: center;
-    }
-    .runner-more-btn {
-        padding: 3px 9px;
-        font-size: 0.94em;
-        margin-top: 0.3em;
-    }
-    .runner-more {
-        font-size: 0.94em;
-        padding: 0.6em 0.5em 0.45em 0.5em;
-    }
-    .runner-stats-table th, .runner-stats-table td {
-        padding: 6px 8px;
-        font-size: 0.9em;
-    }
+/* ------ Tablets & mid screens (≤ 768px) ------ */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2em;
+    margin-top: 1.1em;
+    margin-bottom: 0.7em;
+  }
+  .score-controls {
+    padding: 1em 0.4em;
+    margin-top: 1.1em;
+    margin-bottom: 1.2em;
+    border-radius: 12px;
+  }
+  .score-controls h2 {
+    font-size: 1.22em;
+    margin-bottom: 1em;
+  }
+  .preset-buttons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 1.3em 0 1.3em 0;
+  }
+  .preset-button {
+    padding: 8px 8px;
+    font-size: 0.93em;
+    border-radius: 8px;
+  }
+  .slider-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+    margin-bottom: 0.8em;
+    padding: 0.2em 0;
+  }
+  .slider-group {
+    gap: 9px;
+    margin-bottom: 0.1em;
+    padding: 0.13em 0 0.05em 0;
+  }
+  .slider-group label {
+    font-size: 0.98em;
+    margin-bottom: 0;
+  }
+  .slider-group span {
+    font-size: 1em;
+    margin-left: 5px;
+  }
+  .custom-race-header h2 { font-size: 1.13em; }
+  .custom-race-header h3 { font-size: 1em; }
+  .runner-card {
+    padding: 0.6em 0.2em 0.6em 0.25em;
+    border-radius: 8px;
+    gap: 7px;
+    min-height: 50px;
+    flex-wrap: wrap;
+  }
+  .runner-horse { font-size: 1.01em; }
+  .runner-num-draw { min-width: 34px; font-size: 0.97em; }
+  .runner-silk { width: 30px; height: 30px; }
 }
 
+/* ------ Phones (≤ 600px) ------ */
+@media (max-width: 600px) {
+  .page-title { font-size: 1.45em; }
+  .score-controls { padding: 0.7em 0.2em; }
+  .score-controls h2 { font-size: 1.08em; }
+  .preset-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 1em 0 1em 0;
+  }
+  .preset-button {
+    padding: 6px 4px;
+    font-size: 0.9em;
+    border-radius: 7px;
+  }
+  .slider-grid {
+    gap: 0.15em !important;
+    margin-bottom: 0.3em;
+    padding: 0 !important;
+  }
+  .slider-group {
+    gap: 5px !important;
+    margin-bottom: 0.02em;
+    padding: 0.05em 0;
+  }
+  .slider-group label { font-size: 0.96em; }
+  .slider-group input[type="range"] {
+    width: 74%;
+    height: 5px;
+    margin-right: 4px;
+  }
+  .slider-group span {
+    font-size: 0.93em;
+    margin-left: 2px;
+    min-width: 36px;
+  }
+  .custom-race-header h2 { font-size: 1.01em; }
+  .custom-race-header h3 { font-size: 0.93em; }
+  .runner-card {
+    padding: 0.38em 0.1em 0.38em 0.1em;
+    border-radius: 7px;
+    gap: 4px;
+    min-height: 39px;
+  }
+  .runner-horse { font-size: 0.97em; }
+  .runner-num-draw { min-width: 26px; font-size: 0.91em; }
+  .runner-silk { width: 22px; height: 22px; }
+}
+
+/* ------ Tiny Phones (≤ 480px) ------ */
 @media (max-width: 480px) {
-    .page-title {
-        font-size: 1.9em;
-        margin-top: 1em;
-        margin-bottom: 0.7em;
-    }
-    .score-controls {
-        padding: 0.6em; /* Even further reduced padding for very small mobile */
-        border-radius: 10px;
-    }
-    .score-controls h2 {
-        font-size: 1.4em;
-        margin-bottom: 0.8em;
-    }
-    .preset-buttons {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller phones */
-        gap: 8px;
-        margin-top: 1.2em;
-        margin-bottom: 1em;
-    }
-    .preset-button {
-        padding: 7px 14px;
-        font-size: 0.9em;
-    }
-    .slider-group label {
-        font-size: 0.9em; /* Even smaller label font */
-    }
-    .slider-group input[type="range"] {
-        width: calc(100% - 55px);
-        margin-right: 45px;
-        height: 5px; /* Further reduced track height on very small mobile */
-    }
-    .slider-group span {
-        font-size: 0.95em; /* Even smaller value font */
-        right: 1em;
-        top: 22px; /* Adjusted top for very small screens */
-        width: 40px;
-    }
-    .custom-race-header h2 {
-        font-size: 1.6em;
-    }
-    .custom-race-header h3 {
-        font-size: 1.1em;
-    }
-    .runner-card {
-        padding: 0.7em 0.2em 0.6em 0.2em;
-        min-height: 55px;
-    }
-    .runner-num-draw {
-        min-width: 32px;
-        font-size: 0.9em;
-    }
-    .runner-silk {
-        width: 28px;
-        height: 28px;
-    }
-    .runner-horse {
-        font-size: 1em;
-    }
-    .runner-meta-line, .runner-info-line {
-        font-size: 0.9em;
-        gap: 0.2em 0.5em;
-    }
-    .runner-odds {
-        font-size: 1em;
-        min-width: 32px;
-    }
-    .runner-more-btn {
-        font-size: 0.9em;
-        padding: 2px 7px;
-    }
+  .page-title { font-size: 1.09em; }
+  .score-controls { padding: 0.33em 0.03em; }
+  .score-controls h2 { font-size: 0.99em; }
+  .preset-buttons {
+    gap: 6px;
+    margin: 0.8em 0 0.7em 0;
+  }
+  .preset-button { font-size: 0.86em; padding: 5px 2px; }
+  .slider-grid { gap: 0.07em !important; }
+  .slider-group { gap: 3px !important; }
+  .slider-group label { font-size: 0.92em; }
+  .slider-group input[type="range"] { height: 4px; }
+  .slider-group span { font-size: 0.89em; min-width: 25px; }
+  .runner-card { padding: 0.2em 0.06em 0.18em 0.06em; border-radius: 6px; gap: 2px; }
+  .runner-horse { font-size: 0.92em; }
+}
+
+/* ------ Always center preset buttons on small screens ------ */
+@media (max-width: 768px) {
+  .preset-buttons { justify-items: center; }
 }

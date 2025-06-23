@@ -79,6 +79,47 @@
   opacity: 1; /* Fully opaque on hover */
 }
 
+.see-tips-btn {
+  display: inline-block;
+  margin: 1.1em auto 0.7em auto;
+  padding: 0.82em 1.5em 0.82em 1.12em;
+  background: #28d987;
+  color: #161c22;
+  font-weight: 700;
+  font-size: 1.12em;
+  letter-spacing: .03em;
+  border: 2px solid #25b272;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(40,217,135,0.11), 0 1.5px 0.7px rgba(0,0,0,0.11);
+  cursor: pointer;
+  text-decoration: none;
+  transition: 
+    background 0.14s cubic-bezier(.32,1.29,.44,.97),
+    color 0.16s,
+    border-color 0.18s cubic-bezier(.32,1.29,.44,.97),
+    box-shadow 0.17s cubic-bezier(.32,1.29,.44,.97),
+    transform 0.13s;
+  position: relative;
+  z-index: 2;
+}
+
+.see-tips-btn:hover,
+.see-tips-btn:focus {
+  background: #1e2a27;
+  color: #28d987;
+  border-color: #28d987;
+  box-shadow: 0 4px 20px rgba(40,217,135,0.14);
+  transform: translateY(-1.5px) scale(1.03);
+}
+
+.see-tips-btn:active {
+  background: #28d987;
+  color: #161c22;
+  border-color: #21955e;
+  transform: translateY(0.5px) scale(0.98);
+}
+
+
 /* --- RACES BY COURSE --- */
 .races-course-list {
   margin-top: 2.2em;
