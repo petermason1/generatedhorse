@@ -471,7 +471,7 @@
         font-size: 1em;
     }
     .score-controls {
-        padding: 1.5em;
+        padding: 1em; /* Further reduced padding for the entire control section */
         margin-top: 1.5em;
         margin-bottom: 2em;
         border-radius: 12px;
@@ -496,33 +496,33 @@
     .slider-grid {
         display: flex;
         flex-direction: column;
-        gap: 1.2em; /* Adjust gap for column layout on mobile */
+        gap: 0.6em; /* Further reduced gap for column layout on mobile */
     }
     .slider-group {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px; /* More space between label and slider */
+        gap: 4px; /* Further reduced gap within slider group */
     }
     .slider-group label {
         width: 100%;
-        font-size: 1em;
+        font-size: 0.95em; /* Slightly smaller font for label */
     }
     .slider-group input[type="range"] {
         width: calc(100% - 65px); /* Make more room for value span */
         margin-right: 55px; /* Push slider to left, making space for value */
-        height: 8px; /* Slightly thinner track on mobile */
+        height: 6px; /* Reduced track height on mobile */
     }
     .slider-group input[type="range"]::-webkit-slider-thumb,
     .slider-group input[type="range"]::-moz-range-thumb {
-        width: 20px; /* Smaller thumb on mobile */
-        height: 20px;
+        width: 18px; /* Reduced thumb size on mobile */
+        height: 18px;
         box-shadow: 0 0 5px rgba(54,232,181,0.5); /* Less intense glow */
     }
     .slider-group span {
         position: absolute;
         right: 1.5em; /* Position value to the right of the slider */
-        top: 30px; /* Position to align with the slider thumb, adjusted for new layout */
-        font-size: 1.05em; /* Slightly smaller value display */
+        top: 24px; /* Adjusted top to bring it even closer to the slider */
+        font-size: 1em; /* Slightly smaller value display */
         width: 50px;
     }
     .custom-race-header h2 {
@@ -610,7 +610,7 @@
         margin-bottom: 0.7em;
     }
     .score-controls {
-        padding: 1em;
+        padding: 0.6em; /* Even further reduced padding for very small mobile */
         border-radius: 10px;
     }
     .score-controls h2 {
@@ -628,16 +628,17 @@
         font-size: 0.9em;
     }
     .slider-group label {
-        font-size: 0.95em;
+        font-size: 0.9em; /* Even smaller label font */
     }
     .slider-group input[type="range"] {
         width: calc(100% - 55px);
         margin-right: 45px;
+        height: 5px; /* Further reduced track height on very small mobile */
     }
     .slider-group span {
-        font-size: 1em;
+        font-size: 0.95em; /* Even smaller value font */
         right: 1em;
-        top: 28px;
+        top: 22px; /* Adjusted top for very small screens */
         width: 40px;
     }
     .custom-race-header h2 {
