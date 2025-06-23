@@ -1,0 +1,324 @@
+/* tips.css: Styles specific to the tips.html page */
+
+/* --- TIPS PAGE SPECIFIC STYLES --- */
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  margin: 1.8em auto 1em auto; /* Adjusted margins for more vertical space */
+  font-size: 2.6em; /* Larger, more impactful title */
+  color: #ffd700; /* Main golden yellow color */
+  font-weight: 900; /* Extra bold for prominence */
+  letter-spacing: 0.03em; /* Slightly more prominent letter spacing */
+  max-width: 750px; /* Slightly wider constraint */
+  text-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 0 15px rgba(255,215,0,0.3); /* Subtle text shadow/glow */
+}
+
+/* Introduction Paragraph */
+.tips-intro {
+  color: #b7b7b7;
+  font-size: 1.1em; /* Slightly larger for readability */
+  max-width: 700px; /* Consistent width */
+  margin: 0 auto 3em auto; /* More space below the intro */
+  text-align: center;
+  line-height: 1.7; /* Improved line height for readability */
+  padding: 0 15px; /* Slight horizontal padding for smaller screens */
+}
+.tips-intro b {
+  color: #ffc900; /* Highlighted text */
+  font-weight: 700;
+}
+
+/* Section Containers */
+.tips-section {
+  margin: 0 auto 3.5em auto; /* Increased margin between sections */
+  max-width: 750px; /* Matches page title width */
+}
+
+/* Section Headings (Top Picks, Value, Outsiders) */
+.section-title {
+  font-size: 1.6em; /* More prominent section titles */
+  font-weight: 800; /* Bold */
+  margin-bottom: 1.2em; /* More space below heading */
+  padding-bottom: 0.5em; /* Increased padding for the border */
+  border-bottom: 3px solid; /* Thicker border for emphasis */
+  text-align: center; /* Centered headings */
+  letter-spacing: 0.02em;
+  text-transform: uppercase; /* Uppercase for stronger visual */
+  /* Added subtle shadow to headings */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: block; /* Ensures border spans full width */
+}
+
+.section-subtitle {
+  font-size: 0.75em; /* Slightly smaller subtitle */
+  font-weight: 500; /* Medium weight */
+  color: #a0a8b7;
+  margin-left: 0.8em; /* More space from main title */
+  text-transform: none; /* Subtitle should not be uppercase */
+}
+
+.top-picks-title {
+  color: #ffc900;
+  border-color: #ffc900;
+}
+
+.value-picks-title {
+  color: #36e8b5;
+  border-color: #36e8b5;
+}
+
+.outsider-picks-title {
+  color: #87ceeb;
+  border-color: #87ceeb;
+}
+
+/* No Picks Message */
+.no-picks {
+  color: #b7b7b7;
+  text-align: center;
+  padding: 2em; /* More padding */
+  background: linear-gradient(145deg, #2a313a, #212833); /* Subtle gradient */
+  border-radius: 12px; /* More rounded corners */
+  margin-bottom: 2.5em;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3); /* Stronger shadow */
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* Tip Card Styling */
+.tip-card {
+  background: linear-gradient(160deg, #282d34, #20242b); /* Deeper, more pronounced gradient */
+  border-radius: 12px; /* More rounded corners */
+  padding: 1.2em 1.4em 1.1em 1.2em; /* Increased padding */
+  margin-bottom: 1em; /* More space between cards */
+  display: flex;
+  align-items: flex-start;
+  gap: 15px; /* Slightly more gap */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35); /* Stronger, professional shadow */
+  transition: all 0.3s ease-out; /* Smoother transition */
+  border: 1px solid rgba(54,232,181,0.0); /* Transparent border for initial state */
+}
+
+.tip-card:hover {
+  background: linear-gradient(160deg, #2b313a, #232931);
+  transform: translateY(-7px); /* More pronounced lift effect */
+  box-shadow: 0 12px 35px rgba(0,0,0,0.5), 0 0 25px rgba(54,232,181,0.5); /* Stronger shadow + glow */
+  border-color: #36e8b5; /* Accent border on hover */
+}
+
+/* Tip Number */
+.tip-num {
+  font-weight: 900; /* Extra bold */
+  font-size: 1.3em; /* Larger number */
+  width: 1.8em; /* Adjusted width */
+  color: #ffc900;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Main content area within the card */
+.tip-content {
+  flex: 1;
+}
+
+/* Header line for Horse Name, Odds, Score */
+.tip-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 0.4em; /* More space below header */
+}
+
+/* Horse Name */
+.tip-horse {
+  color: #35e9ae;
+  font-size: 1.25em; /* More prominent horse name */
+  font-weight: 800; /* Extra bold */
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tip-horse:hover {
+  color: #2ce8c0;
+  text-decoration: underline;
+}
+
+/* Odds */
+.tip-odds {
+  color: #ffe564;
+  font-weight: 800; /* Extra bold */
+  font-size: 1.1em; /* Larger odds */
+  margin-left: 12px; /* More space */
+  white-space: nowrap;
+}
+
+/* Score */
+.tip-score {
+  color: #a0a8b7;
+  font-weight: 700; /* Bolder score */
+  font-size: 1em; /* Slightly larger */
+  margin-left: 8px; /* More space */
+  white-space: nowrap;
+}
+
+/* Race Info (Course, Time, Race Name) */
+.tip-race-info {
+  font-size: 1em; /* Consistent font size */
+  opacity: .9; /* Slightly less opaque */
+  color: #f0f0f0;
+  margin-bottom: 0.7em; /* More space before reason */
+}
+
+.tip-race-name {
+  color: #ffc900;
+  font-weight: 600; /* Bolder race name */
+}
+
+/* Tip Reason */
+.tip-reason {
+  margin-top: 8px; /* More space above reason */
+  color: #c0f0ff;
+  font-size: 1em; /* Consistent size */
+  line-height: 1.5; /* Better line height */
+  background: rgba(0,0,0,0.1); /* Very subtle background for the blurb */
+  padding: 0.7em 1em;
+  border-radius: 6px;
+  border-left: 3px solid #36e8b5; /* Accent border */
+}
+
+/* Tip Badges */
+.tip-badge {
+  display: inline-block;
+  font-size: 0.8em; /* Slightly smaller for compactness */
+  font-weight: 800; /* Extra bold */
+  padding: 5px 10px; /* More padding */
+  border-radius: 6px; /* Slightly more rounded */
+  margin-top: 12px; /* More space above badge */
+  text-transform: uppercase;
+  letter-spacing: 0.7px; /* More letter spacing */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Stronger shadow */
+  transition: all 0.2s ease-out; /* Smooth transition */
+}
+
+.tip-badge.top-pick {
+  background: #ffc900;
+  color: #191e23;
+}
+
+.tip-badge.value {
+  background: #36e8b5;
+  color: #191e23;
+}
+
+.tip-badge.outsider {
+  background: #87ceeb;
+  color: #191e23;
+}
+
+.tip-badge:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+
+/* --- Responsive Adjustments for Tips Screen --- */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.2em;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+  }
+  .tips-intro {
+    font-size: 1.05em;
+    margin-bottom: 2em;
+  }
+  .tips-section {
+    max-width: 98vw; /* Allow sections to take more width on smaller screens */
+    padding: 0 2vw; /* Add some padding from edges */
+    margin-bottom: 3em;
+  }
+  .section-title {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    padding-bottom: 0.4em;
+  }
+  .section-subtitle {
+    display: block; /* Put subtitle on new line if wraps */
+    margin-left: 0;
+    margin-top: 0.3em;
+  }
+  .tip-card {
+    flex-direction: column; /* Stack elements vertically in card on smaller screens */
+    align-items: flex-start; /* Align content to the left */
+    gap: 10px; /* Reduce gap */
+    padding: 1.2em;
+  }
+  .tip-num {
+    font-size: 1.2em;
+    width: auto;
+    margin-bottom: 0.5em;
+  }
+  .tip-header {
+    flex-direction: column; /* Stack horse, odds, score vertically */
+    align-items: flex-start;
+    margin-bottom: 0.5em;
+  }
+  .tip-horse {
+    font-size: 1.15em;
+  }
+  .tip-odds, .tip-score {
+    margin-left: 0; /* Remove left margin when stacked */
+    margin-top: 5px; /* Add top margin when stacked */
+  }
+  .tip-race-info, .tip-reason {
+    font-size: 0.95em;
+  }
+  .tip-reason {
+    margin-top: 5px;
+    padding: 0.6em 0.8em;
+  }
+  .tip-badge {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.9em;
+    margin-top: 1em;
+    margin-bottom: 0.7em;
+  }
+  .tips-intro {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    padding: 0 10px;
+  }
+  .tips-section {
+    padding: 0 1vw;
+    margin-bottom: 2.5em;
+  }
+  .section-title {
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+  }
+  .tip-card {
+    padding: 1em;
+    gap: 8px;
+  }
+  .tip-horse {
+    font-size: 1.05em;
+  }
+  .tip-odds, .tip-score {
+    font-size: 1em;
+  }
+  .tip-reason {
+    font-size: 0.9em;
+    padding: 0.5em 0.7em;
+  }
+  .tip-badge {
+    font-size: 0.75em;
+    padding: 4px 8px;
+    margin-top: 8px;
+  }
+}

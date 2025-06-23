@@ -11,10 +11,11 @@
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
-  <title>Smart Racecards | Horse Racing Tips & Analysis</title> <!-- SEO Enhancement: More descriptive title -->
-  <meta name="description" content="Get expert horse racing tips and data-driven analysis for UK & Irish races from Smart Racecards. Find today's best picks!"> <!-- SEO Enhancement: Added meta description -->
+  <title>Smart Racecards | Horse Racing Tips & Analysis</title>
+  <meta name="description" content="Get expert horse racing tips and data-driven analysis for UK & Irish races from Smart Racecards. Find today's best picks!">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="base.css" /> <!-- Link to base.css first -->
+  <link rel="stylesheet" href="index.css" /> <!-- Then link to index.css -->
 </head>
 
 <body>
@@ -25,7 +26,7 @@
         <a href="index.html" class="nav-link nav-link-active">Home</a>
         <a href="tips.html" class="nav-link">Tips</a>
         <a href="yesterday.html" class="nav-link">Yesterday</a>
-          <a href="custom-score.html" class="nav-link">Custom Score</a> <!-- New Link -->
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
         <a href="about.html" class="nav-link">About</a>
       </div>
       <div class="hamburger" id="hamburger">
@@ -37,7 +38,7 @@
   </nav>
 
   <main class="container">
-    <h1>Daily Horse Racing Tips & Analysis</h1> <!-- SEO Enhancement: More descriptive H1 -->
+    <h1>Daily Horse Racing Tips & Analysis</h1>
     <div class="page-desc">
       Your edge in UK & Irish horse racing: <b>Smart Racecards</b> delivers daily, real-time race data, advanced stats, and intelligent insights. Quickly find high-value runners, expertly ranked by class, form, and our unique performance metrics.
     </div>
@@ -66,7 +67,7 @@
     });
   });
 
-  // Highlight active nav link based on current page - added for consistency
+  // Highlight active nav link based on current page
   document.addEventListener('DOMContentLoaded', () => {
       const currentPath = window.location.pathname.split('/').pop();
       document.querySelectorAll('.nav-link').forEach(link => {

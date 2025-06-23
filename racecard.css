@@ -1,0 +1,817 @@
+    /* racecard.css: Styles specific to the racecard.html page */
+
+    /* --- RACE HEADER --- */
+    .race-header {
+      background: linear-gradient(160deg, #1f242a, #1a1e23);
+      border-radius: 12px;
+      padding: 1.5em 1em 1.2em 1em;
+      margin: 1.5em auto;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 700px;
+    }
+
+    .race-header h1 {
+      font-size: 2em;
+      margin-bottom: 0.3em;
+      color: #ffd700;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .race-header-time {
+      font-weight: 600;
+      color: #36e8b5;
+    }
+
+    .race-meta, .race-details {
+      color: #c1cbe8;
+      font-size: 1.05em;
+      text-align: center;
+      margin-bottom: 0.4em;
+      line-height: 1.5;
+    }
+
+    .race-meta strong.race-name {
+      color: #36e8b5;
+      font-size: 1.1em;
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: 700;
+    }
+
+    .race-details-line-1 b, .race-details-line-2 b {
+      color: #ffc900;
+      font-weight: 700;
+    }
+
+    /* --- RACE LINKS BAR (ALWAYS 1 ROW, SCROLLS IF OVERFLOW) --- */
+    .race-links-bar {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      width: 100%;
+      margin-bottom: 18px;
+      padding-bottom: 2px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      background: transparent;
+    }
+    .race-links-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    .race-links-course {
+      color: #32dd99;
+      font-weight: 800;
+      font-size: 1.09em;
+      letter-spacing: 0.04em;
+      margin-right: 1.3em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .race-link {
+      flex: 0 0 auto;
+      min-width: 0;
+      box-sizing: border-box;
+      padding: 6px 18px;
+      font-size: 1.08em;
+      background: linear-gradient(145deg, #232d33, #1e262c);
+      color: #ffc900;
+      border-radius: 7px;
+      text-decoration: none;
+      margin-right: 0;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+      transition: all 0.15s ease-out;
+      border: 2px solid transparent;
+      outline: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .race-link:last-child { margin-right: 0; }
+
+    .race-link-active,
+    .race-link:hover,
+    .race-link:focus {
+      background: #36e8b5;
+      color: #191e23 !important;
+      border-color: #35e9ae;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(54,232,174,0.3);
+    }
+
+    /* --- RACE TOP PICKS --- */
+    .race-top-picks {
+      background: linear-gradient(145deg, #21282f, #1b2027);
+      border-radius: 10px;
+      padding: 1.2em 1.5em;
+      margin: 0 auto 2em auto;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+      max-width: 700px;
+    }
+
+    .race-top-picks-title {
+      font-weight: 700;
+      font-size: 1.1em;
+      color: #ffc900;
+      margin-bottom: 0.8em;
+      border-bottom: 1px solid rgba(255,201,0,0.2);
+      padding-bottom: 0.5em;
+      text-align: left;
+    }
+
+    .race-top-picks-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8em 1.5em;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .race-top-pick-item {
+      display: inline-flex;
+      align-items: baseline;
+      font-size: 1em;
+      white-space: nowrap;
+      color: #f6f8fb;
+    }
+
+    .pick-number {
+      color: #ffc900;
+      font-weight: 800;
+      margin-right: 0.3em;
+      font-size: 1.1em;
+    }
+
+    .pick-horse {
+      color: #32dd99;
+      font-weight: 700;
+      margin-right: 0.5em;
+      text-decoration: none;
+      transition: color 0.15s ease-out;
+    }
+    .pick-horse:hover {
+        color: #2ce8c0;
+        text-decoration: underline;
+    }
+
+    .pick-score {
+      color: #b7b7b7;
+      font-weight: 600;
+      font-size: 0.95em;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      white-space: nowrap;
+    }
+
+    .pick-odds {
+      color: #ffe564;
+      font-weight: 700;
+      font-size: 1em;
+      white-space: nowrap;
+    }
+
+    /* --- RUNNER CARDS --- */
+    .runners-list {
+      margin-top: 1.5em;
+      padding-bottom: 20px;
+    }
+
+    .runner-card {
+      background: linear-gradient(145deg, #232d33, #1e262c);
+      color: #f6f8fb;
+      border-radius: 11px;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      padding: 1.1em 1.2em 1.1em 1em;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.35);
+      gap: 1.1em;
+      position: relative;
+      transition: all 0.25s ease-out;
+      border: 1px solid transparent;
+      scroll-margin-top: 80px; /* Added to ensure sticky header clearance */
+    }
+
+    .runner-card:hover:not(.expanded) {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 20px rgba(54,232,181,0.4);
+      border-color: #36e8b5;
+      background: linear-gradient(145deg, #2a343f, #232d38);
+    }
+
+    .runner-card.expanded {
+      background: linear-gradient(145deg, #263441, #1f2833);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+      border-color: #28d987;
+    }
+
+    .runner-nr {
+      opacity: 0.6;
+      filter: grayscale(0.15);
+    }
+
+    .runner-num-draw {
+      min-width: 50px;
+      text-align: center;
+      color: #ffc900;
+      font-weight: 900;
+      font-size: 1.18em;
+      margin-right: 9px;
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      flex-shrink: 0;
+    }
+    .runner-num-draw .runner-num {
+      line-height: 1;
+    }
+    .runner-num-draw .runner-draw {
+      font-size: 0.85em;
+      color: #a0a8b7;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .runner-num-draw .runner-score {
+      display: block;
+      font-size: 0.93em;
+      color: #32dd99;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .runner-silk {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      background: #161c22;
+      border-radius: 8px;
+      margin-right: 13px;
+      align-self: flex-start;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      flex-shrink: 0;
+    }
+
+    .runner-main {
+      flex: 1 1 250px;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .runner-horse {
+      font-weight: 700;
+      color: #35e9ae;
+      font-size: 1.2em;
+      margin-bottom: 2px;
+      line-height: 1.18;
+      transition: color 0.15s ease-out;
+    }
+    .runner-card:hover .runner-horse {
+      color: #2ce8c0;
+    }
+
+
+    .runner-meta-line {
+      color: #c2c8de;
+      font-size: 1.01em;
+      margin-bottom: 0.09em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.28em;
+      line-height: 1.3;
+    }
+    .runner-meta-line .runner-meta-separator {
+      opacity: 0.5;
+    }
+    .runner-meta-line .runner-form {
+      color: #fff;
+      background: #1a212b;
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 0.9em;
+      margin-left: 10px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .runner-meta-line .runner-nr-tag {
+      color: #e55;
+      font-weight: 700;
+      margin-left: 8px;
+      background: rgba(229, 85, 85, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .runner-info-line {
+      color: #c2c8de;
+      font-size: 0.97em;
+      line-height: 1.4;
+      margin-top: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em 1em;
+    }
+    .runner-info-line b {
+      color: #bbf5ed;
+      font-weight: 600;
+    }
+
+
+    .runner-odds {
+      color: #ffe564;
+      font-weight: 700;
+      font-size: 1.2em;
+      margin-left: 14px;
+      align-self: center;
+      min-width: 45px;
+      text-align: right;
+      margin-top: 2px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ---- More Info Dropdown Button ---- */
+    .runner-more-btn {
+      margin: 0.6em 0 0 0;
+      background: linear-gradient(145deg, #36e8b5, #2ce8c0);
+      color: #191e23;
+      font-weight: 700;
+      border: none;
+      border-radius: 7px;
+      padding: 6px 16px;
+      cursor: pointer;
+      font-size: 0.98em;
+      transition: all 0.2s ease-out;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .runner-more-btn:hover {
+      background: linear-gradient(145deg, #2ce8c0, #36e8b5);
+      color: #191e23;
+      box-shadow: 0 4px 12px rgba(54,232,181,0.3);
+      transform: translateY(-2px);
+    }
+    .runner-more-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    /* ---- More Info Content ---- */
+    .runner-more {
+      display: none;
+      margin-top: 0.7em;
+      font-size: 0.96em;
+      color: #bbf5ed;
+      background: #182028;
+      border-radius: 8px;
+      padding: 0.75em 1em 0.65em 1em;
+      line-height: 1.5;
+    }
+    .runner-card.expanded .runner-more { display: block; }
+
+    .runner-more b {
+      color: #ffc900;
+    }
+    .runner-more .no-data {
+      color: #888;
+      font-style: italic;
+    }
+    .runner-more .prev-owners {
+      color: #90f;
+      font-size: 0.9em;
+    }
+
+    /* Runner Stats Table inside More Info */
+    .runner-stats-table {
+      margin: 0.7em 0;
+      font-size: 0.97em;
+      background: #1a212b;
+      border-radius: 7px;
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+    }
+    .runner-stats-table th,
+    .runner-stats-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-right: 1px solid rgba(255,255,255,0.02);
+    }
+    .runner-stats-table tr:last-child td {
+      border-bottom: none;
+    }
+    .runner-stats-table tr td:last-child {
+      border-right: none;
+    }
+    .runner-stats-table b {
+      color: #35e9ae;
+    }
+
+    .runner-quotes, .runner-stable-tour {
+      margin-top: 1em;
+      background: #1a212b;
+      padding: 0.8em 1em;
+      border-radius: 7px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    }
+    .runner-quotes b, .runner-stable-tour b {
+        color: #ffc900;
+    }
+    .runner-quotes ul, .runner-stable-tour ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.5em;
+    }
+    .runner-quotes li, .runner-stable-tour li {
+      margin-bottom: 0.5em;
+      position: relative;
+      padding-left: 1.2em;
+      color: #d0d0d0;
+      font-size: 0.95em;
+    }
+    .runner-quotes li:last-child, .runner-stable-tour li:last-child {
+        margin-bottom: 0;
+    }
+    .runner-quotes li::before, .runner-stable-tour li::before {
+      content: '▪';
+      color: #35e9ae;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+
+    /* --- Custom Scoring Page Specific Styles (for custom-score.html, which also uses runner-cards) --- */
+    .score-controls {
+        background: linear-gradient(145deg, #21282f, #1b2027);
+        border-radius: 10px;
+        padding: 1.5em;
+        margin: 1.5em auto 2em auto;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+        max-width: 700px;
+    }
+
+    .score-controls h2 {
+        color: #ffc900;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 1.2em;
+        font-size: 1.6em;
+        letter-spacing: 0.02em;
+    }
+
+    /* Preset Buttons Layout */
+    .preset-buttons {
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+        gap: 10px;
+        justify-content: center; /* Center the grid itself */
+    }
+
+    .preset-button {
+        background: linear-gradient(145deg, #36e8b5, #2ce8c0);
+        color: #191e23;
+        font-weight: 700;
+        border: none;
+        border-radius: 7px;
+        padding: 8px 18px;
+        cursor: pointer;
+        font-size: 0.95em;
+        transition: all 0.2s ease-out;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .preset-button:hover {
+        background: linear-gradient(145deg, #2ce8c0, #36e8b5);
+        box-shadow: 0 4px 12px rgba(54,232,181,0.3);
+        transform: translateY(-2px);
+    }
+
+    .preset-button:active {
+        transform: translateY(0);
+        box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Slider Grid Layout (for larger screens) */
+    .slider-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Sliders remain 2-wide on large screens */
+        gap: 1.5em 2.5em; /* Row gap, column gap */
+        margin-bottom: 1em;
+    }
+
+    /* Individual Slider Group Styling */
+    .slider-group {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: relative; /* For absolute positioning of value on mobile */
+    }
+
+    .slider-group label {
+        flex: 0 0 160px; /* Fixed width for labels */
+        color: #bbf5ed;
+        font-weight: 600;
+        font-size: 1.05em;
+    }
+
+    .slider-group input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none; /* Standard property */
+        width: 100%;
+        height: 8px;
+        background: #1a212b;
+        outline: none;
+        opacity: 0.9;
+        transition: opacity .15s ease-in-out;
+        border-radius: 4px;
+    }
+
+    .slider-group input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #36e8b5;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(54,232,181,0.5);
+    }
+
+    .slider-group input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #36e8b5;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(54,232,181,0.5);
+    }
+
+    .slider-group span {
+        flex-shrink: 0;
+        width: 40px; /* Space for displaying value */
+        text-align: right;
+        color: #ffe564;
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+
+    /* Custom Race Header Styles */
+    .custom-race-header {
+        text-align: center;
+        margin-bottom: 2em;
+        color: #ffd700;
+        scroll-margin-top: 80px; /* Adjust this value if your navbar height changes or jump is still off */
+    }
+    .custom-race-header h3 {
+        color: #32dd99;
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+    }
+
+    /* Race Selector Dropdown Styles */
+    .race-selector-container {
+        text-align: center;
+        margin-bottom: 1.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .race-selector-container label {
+        color: #bbf5ed;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    .race-selector-dropdown {
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #36e8b5;
+        background-color: #232d33;
+        color: #f6f8fb;
+        font-size: 1em;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+        outline: none;
+        max-width: 100%;
+    }
+    .race-selector-dropdown:hover,
+    .race-selector-dropdown:focus {
+        background-color: #2a343f;
+        border-color: #2ce8c0;
+        box-shadow: 0 0 10px rgba(54,232,181,0.3);
+    }
+
+
+    /* ==== MOBILE/TABLET LAYOUT (Racer Card) ==== */
+    @media (max-width: 850px) {
+      .runner-card {
+        gap: 0.77em;
+        padding: 0.84em 0.5em 0.82em 0.65em;
+      }
+      .runner-main {
+        gap: 0px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .race-header h1 {
+        font-size: 1.6em;
+      }
+      .race-meta, .race-details {
+        font-size: 1em;
+      }
+      .race-top-picks {
+        padding: 1em;
+      }
+      .race-top-picks-list {
+        gap: 0.6em 1em;
+        justify-content: flex-start;
+      }
+      .race-top-pick-item {
+        font-size: 0.9em;
+      }
+
+      .runner-card {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 7px;
+        align-items: flex-start;
+        padding: 0.8em 0.25em 0.79em 0.28em;
+        min-height: 58px;
+        border-radius: 9px;
+      }
+      .runner-num-draw {
+        min-width: 36px;
+        font-size: 0.98em;
+        margin-right: 6px;
+        margin-bottom: 2px;
+        gap: 2px;
+      }
+      .runner-silk {
+        width: 32px;
+        height: 32px;
+        margin-right: 6px;
+      }
+      .runner-main {
+        min-width: 95px;
+        gap: 1px;
+        font-size: 0.98em;
+        margin-bottom: 0;
+      }
+      .runner-horse {
+        font-size: 1.08em;
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+      .runner-meta-line {
+        gap: 0.14em;
+        font-size: 0.98em;
+        margin-bottom: 0.07em;
+      }
+      .runner-meta-line .runner-form {
+        font-size: 0.9em;
+        margin-left: 7px;
+        padding: 2px 6px;
+      }
+      .runner-info-line {
+        font-size: 0.94em;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        gap: 0.3em 0.8em;
+      }
+      .runner-odds {
+        margin-left: 6px;
+        font-size: 1.05em;
+        min-width: 38px;
+        margin-top: 0;
+        text-align: center;
+      }
+      .runner-more-btn {
+        padding: 3px 9px;
+        font-size: 0.94em;
+        margin-top: 0.3em;
+      }
+      .runner-more {
+        font-size: 0.94em;
+        padding: 0.6em 0.5em 0.45em 0.5em;
+      }
+      .runner-stats-table th,
+      .runner-stats-table td {
+        padding: 6px 8px;
+        font-size: 0.9em;
+      }
+    }
+
+    @media (max-width: 400px) {
+        .race-top-picks-list {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .race-top-pick-item {
+            font-size: 0.95em;
+            margin-right: 0;
+            margin-bottom: 0.3em;
+        }
+
+        .runner-card {
+            padding: 0.7em 0.2em 0.6em 0.2em;
+            min-height: 55px;
+        }
+        .runner-num-draw {
+            min-width: 32px;
+            font-size: 0.9em;
+        }
+        .runner-silk {
+            width: 28px;
+            height: 28px;
+        }
+        .runner-horse {
+            font-size: 1em;
+        }
+        .runner-meta-line, .runner-info-line {
+            font-size: 0.9em;
+            gap: 0.2em 0.5em;
+        }
+        .runner-odds {
+            font-size: 1em;
+            min-width: 32px;
+        }
+        .runner-more-btn {
+            font-size: 0.9em;
+            padding: 2px 7px;
+        }
+    }
+
+    /* --- Responsive Adjustments for Sliders and Preset Buttons (custom-score.html) --- */
+    @media (max-width: 768px) {
+        .score-controls {
+            padding: 1em;
+        }
+        .score-controls h2 {
+            font-size: 1.4em;
+        }
+
+        /* Sliders revert to single column (flex column) */
+        .slider-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8em;
+        }
+        .slider-group {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+        .slider-group label {
+            width: 100%;
+            font-size: 1em;
+        }
+        .slider-group input[type="range"] {
+            width: calc(100% - 60px);
+            margin-right: 50px;
+        }
+        .slider-group span {
+            position: absolute;
+            right: 1em;
+            top: 25px;
+        }
+
+        /* Preset buttons adjust to 3 columns for tablets/midsized mobiles */
+        .preset-buttons {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 1.5em;
+        }
+        .preset-button {
+            padding: 7px 14px;
+            font-size: 0.9em;
+        }
+    }
+
+    /* For very small screens, make preset buttons 2 columns */
+    @media (max-width: 480px) {
+        .preset-buttons {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    

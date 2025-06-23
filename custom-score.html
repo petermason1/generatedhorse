@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,8 +12,11 @@
     </script>
     <meta charset="UTF-8" />
     <title>Custom Scoring Tool | Smart Racecards</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="global.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to base.css first for general site-wide styles -->
+    <link rel="stylesheet" href="base.css" />
+    <!-- Then link to custom-score.css for page-specific styles -->
+    <link rel="stylesheet" href="custom-score.css" />
 </head>
 <body>
     <nav class="main-navbar">
@@ -22,7 +26,7 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="tips.html" class="nav-link">Tips</a>
                 <a href="yesterday.html" class="nav-link">Yesterday</a>
-                <a href="custom-score.html" class="nav-link nav-link-active">Custom Score</a> <!-- New Link -->
+                <a href="custom-score.html" class="nav-link">Custom Score</a>
                 <a href="about.html" class="nav-link">About</a>
             </div>
             <div class="hamburger" id="hamburger">
@@ -35,6 +39,78 @@
 
     <main class="container">
         <h1 class="page-title">Custom Race Scoring</h1>
+
+        <!-- START OF HOW-TO INSTRUCTIONS SECTION -->
+        <section class="how-to-section">
+            <h2 class="section-title">How to Use This Tool</h2>
+
+            <h3>1. Select a Race</h3>
+            <ul>
+                <li>At the top of the page, you'll see a dropdown menu labeled "Select a Race."</li>
+                <li>This dropdown is automatically populated with the day's races, sorted by their 'off' time.</li>
+                <li>Simply click on the dropdown and choose the race you want to analyze. The page will immediately update to show the runners for that selected race.</li>
+            </ul>
+
+            <h3>2. Adjust Scoring Weights</h3>
+            <p>This is the core of the tool! Below the race selector, you'll find a section titled "Adjust Scoring Weights" with a series of sliders and preset buttons.</p>
+            
+            <h4>Scoring Factors:</h4>
+            <p>Each slider corresponds to a different factor that contributes to a horse's overall custom score:</p>
+            <ul>
+                <li><strong>RPR Weight:</strong> Racing Post Rating – a performance rating.</li>
+                <li><strong>TS Weight:</strong> Top Speed Rating – indicates a horse's fastest recorded speed.</li>
+                <li><strong>OR Weight:</strong> Official Rating – assigned by handicappers.</li>
+                <li><strong>Wins (1st) Weight:</strong> Emphasize horses that finish first.</li>
+                <li><strong>Places (2nd/3rd) Weight:</strong> Emphasize horses that frequently finish in the top three.</li>
+                <li><strong>Long Layoff Weight:</strong> Applies a penalty to horses that haven't run in a while (over 50 days).</li>
+                <li><strong>Recent Run Weight:</strong> Applies a bonus to horses that have run relatively recently (within 50 days).</li>
+                <li><strong>Trainer % Weight:</strong> Based on the trainer's recent win percentage (last 14 days).</li>
+                <li><strong>Trainer Wins Weight:</strong> Based on the trainer's total wins (last 14 days).</li>
+                <li><strong>Trainer 20%+ Bonus:</strong> Adds an extra bonus if the trainer's recent win percentage is 20% or higher.</li>
+                <li><strong>No Win/Long Layoff Penalty:</strong> A significant penalty for horses that have never won AND have had a long layoff.</li>
+                <li><strong>Course Form Weight:</strong> Awards points for previous wins at the specific course.</li>
+            </ul>
+
+            <h4>Using the Sliders:</h4>
+            <ul>
+                <li>Drag each slider left or right to decrease or increase its importance (weight) in the overall score.</li>
+                <li>As you move a slider, the numerical value next to it will update, and the horse list below will re-sort in real-time, showing you the immediate impact of your changes.</li>
+                <li>Positive weights increase a horse's score for that attribute, while negative weights (like for penalties) decrease it.</li>
+            </ul>
+
+            <h4>Using Preset Buttons:</h4>
+            <ul>
+                <li>Below the "Adjust Scoring Weights" title, you'll find several preset buttons (e.g., "Speed Focus", "Form Focus", "Trainer Focus").</li>
+                <li>Clicking any of these buttons will instantly load a predefined set of weights, allowing you to quickly switch between different strategic approaches and see their effect on the scores.</li>
+            </ul>
+
+            <h3>3. Analyze the Scored Runners List</h3>
+            <ul>
+                <li>Below the "Adjust Scoring Weights" section, you'll see the current race displayed, along with its details (distance, going).</li>
+                <li>The "Custom Scored Runners" list shows all horses in the selected race, sorted by their calculated custom score (highest score first).</li>
+                <li><strong>Non-Runners (NR):</strong> Horses marked with "NR" are non-runners and will appear at the bottom of the list. Their scores are not calculated.</li>
+                <li><strong>Default Sorting:</strong> If all weights are set to `0.00` (i.e., the "Default" preset), the list will automatically sort horses by their odds (lowest odds first), providing a traditional view.</li>
+                <li><strong>"More Info" Button:</strong> Each horse card has a "More info ▼" button. Click this to expand a detailed section with additional data about the horse, including comments, spotlight information, detailed trainer/jockey stats, draw, owner, sire/dam, headgear, and wind surgery info. Click "Less info ▲" to collapse it.</li>
+            </ul>
+
+            <h2 class="section-title">How it Works (Under the Hood)</h2>
+            <p>The magic happens in the `calculateCustomScore` function within `custom-score.js`.</p>
+            <ol>
+                <li><strong>Data Extraction:</strong> For each horse, the function pulls out relevant data points like RPR, TS, OR, number of wins/places (derived from its 'form' string), days since last run, trainer's recent percentage and wins, and course form.</li>
+                <li><strong>Weighted Summation:</strong> It then takes these data points and multiplies them by the "weights" you've set using the sliders (or a preset). For example: `score += weights.rprWeight * rpr;` If `rprWeight` is `2.0` and a horse's RPR is `100`, it adds `200` to its score.</li>
+                <li><strong>Conditional Bonuses/Penalties:</strong>
+                    <ul>
+                        <li>The `lastRunPenaltyWeight` and `lastRunBonusWeight` apply deductions or additions based on the `last_run` value (days since last run). A higher `last_run` value (longer layoff) will incur a penalty if `lastRunPenaltyWeight` is negative. A lower `last_run` value (more recent run) will gain a bonus if `lastRunBonusWeight` is positive.</li>
+                        <li>`trainerBonusValue` is added only if the trainer's 14-day win percentage is 20% or more.</li>
+                        <li>`layoffPenaltyValue` is applied specifically if a horse has no wins AND a long layoff (over 50 days), aiming to penalize unproven horses returning from a break.</li>
+                    </ul>
+                </li>
+                <li><strong>Final Score:</strong> All these weighted values, bonuses, and penalties are summed up to produce a single `customScore` for each horse.</li>
+                <li><strong>Dynamic Sorting:</strong> The tool then takes all active (non-non-runner) horses and sorts them based on this `customScore` (highest first), instantly re-rendering the list in the browser. If your custom weights are all at `0.00`, it gracefully falls back to sorting by traditional fractional odds.</li>
+            </ol>
+            <p>By adjusting the weights, you're essentially telling the algorithm which factors you believe are most important for predicting a horse's performance in a given race!</p>
+        </section>
+        <!-- END OF HOW-TO INSTRUCTIONS SECTION -->
 
         <div class="race-selector-container">
             <label for="raceSelector">Select a Race:</label>
@@ -55,65 +131,65 @@
                 <button class="preset-button" data-preset="Consistency Focus">Consistency Focus</button>
             </div>
 
-            <div class="slider-grid"> <!-- Wrapper for grid layout -->
+            <div class="slider-grid">
                 <div class="slider-group">
                     <label for="rprWeight">RPR Weight:</label>
-                    <input type="range" id="rprWeight" min="0" max="3" step="0.01" value="0.0">
+                    <input type="range" id="rprWeight" min="0" max="5" step="0.01" value="0.0">
                     <span id="rprWeightValue">0.00</span>
                 </div>
                 <div class="slider-group">
                     <label for="tsWeight">TS Weight:</label>
-                    <input type="range" id="tsWeight" min="0" max="3" step="0.01" value="0.0">
+                    <input type="range" id="tsWeight" min="0" max="5" step="0.01" value="0.0">
                     <span id="tsWeightValue">0.00</span>
                 </div>
                 <div class="slider-group">
                     <label for="orWeight">OR Weight:</label>
-                    <input type="range" id="orWeight" min="0" max="3" step="0.01" value="0.0">
+                    <input type="range" id="orWeight" min="0" max="5" step="0.01" value="0.0">
                     <span id="orWeightValue">0.00</span>
                 </div>
                 <div class="slider-group">
                     <label for="winsWeight">Wins (1st) Weight:</label>
-                    <input type="range" id="winsWeight" min="0" max="5" step="0.01" value="0.0">
+                    <input type="range" id="winsWeight" min="0" max="10" step="0.01" value="0.0">
                     <span id="winsWeightValue">0.00</span>
                 </div>
                 <div class="slider-group">
                     <label for="placesWeight">Places (2nd/3rd) Weight:</label>
-                    <input type="range" id="placesWeight" min="0" max="5" step="0.01" value="0.0">
+                    <input type="range" id="placesWeight" min="0" max="10" step="0.01" value="0.0">
                     <span id="placesWeightValue">0.00</span>
                  </div>
                  <div class="slider-group">
                     <label for="lastRunPenaltyWeight">Long Layoff Weight:</label>
-                    <input type="range" id="lastRunPenaltyWeight" min="-0.5" max="0" step="0.01" value="0.0">
+                    <input type="range" id="lastRunPenaltyWeight" min="-1.0" max="0" step="0.01" value="0.0">
                     <span id="lastRunPenaltyWeightValue">0.00</span>
                 </div>
                  <div class="slider-group">
                     <label for="lastRunBonusWeight">Recent Run Weight:</label>
-                    <input type="range" id="lastRunBonusWeight" min="0" max="0.5" step="0.01" value="0.0">
+                    <input type="range" id="lastRunBonusWeight" min="0" max="1.0" step="0.01" value="0.0">
                     <span id="lastRunBonusWeightValue">0.00</span>
                 </div>
                 <div class="slider-group">
                     <label for="trainerPercentWeight">Trainer % Weight:</label>
-                    <input type="range" id="trainerPercentWeight" min="0" max="3" step="0.01" value="0.0">
+                    <input type="range" id="trainerPercentWeight" min="0" max="5" step="0.01" value="0.0">
                     <span id="trainerPercentWeightValue">0.00</span>
                 </div>
                 <div class="slider-group">
                     <label for="trainerWinsWeight">Trainer Wins Weight:</label>
-                    <input type="range" id="trainerWinsWeight" min="0" max="3" step="0.01" value="0.0">
+                    <input type="range" id="trainerWinsWeight" min="0" max="5" step="0.01" value="0.0">
                     <span id="trainerWinsWeightValue">0.00</span>
                 </div>
                 <div class="slider-group">
                     <label for="trainerBonusValue">Trainer 20%+ Bonus:</label>
-                    <input type="range" id="trainerBonusValue" min="0" max="5" step="0.1" value="0.0">
+                    <input type="range" id="trainerBonusValue" min="0" max="10" step="0.1" value="0.0">
                     <span id="trainerBonusValueDisplay">0.0</span>
                 </div>
                  <div class="slider-group">
                     <label for="layoffPenaltyValue">No Win/Long Layoff Penalty:</label>
-                    <input type="range" id="layoffPenaltyValue" min="-5" max="0" step="0.1" value="0.0">
+                    <input type="range" id="layoffPenaltyValue" min="-10" max="0" step="0.1" value="0.0">
                     <span id="layoffPenaltyValueDisplay">0.0</span>
                 </div>
                 <div class="slider-group">
-                    <label for="courseFormWeight">Course Form Weight:</label> <!-- NEW SLIDER -->
-                    <input type="range" id="courseFormWeight" min="0" max="3" step="0.01" value="0.0">
+                    <label for="courseFormWeight">Course Form Weight:</label>
+                    <input type="range" id="courseFormWeight" min="0" max="5" step="0.01" value="0.0">
                     <span id="courseFormWeightValue">0.00</span>
                 </div>
             </div>

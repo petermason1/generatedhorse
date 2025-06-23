@@ -1,0 +1,62 @@
+    /* yesterday.css: Styles specific to the yesterday.html page */
+
+    .summary {
+        margin-bottom: 30px;
+        background: linear-gradient(145deg, #282d34, #20242b);
+        padding: 20px 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+        color: #f6f8fb;
+    }
+    .summary h2 {
+        color: #ffc900;
+        font-size: 1.5em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    .summary b {
+        color: #36e8b5;
+        font-weight: 700;
+    }
+    .summary br {
+        margin-bottom: 0.5em;
+    }
+
+    /* Headings consistent with global.css */
+    h1 {
+        font-size: 2.15em;
+        margin-bottom: 0.8em;
+        text-align: center;
+        color: #ffd700;
+        font-weight: 800;
+    }
+    h3 { /* For "Winning Selections" */
+        font-size: 1.27em;
+        margin-bottom: 1em;
+        color: #32dd99;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 600px) {
+        .summary {
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .summary h2 {
+            font-size: 1.3em;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        h3 {
+            font-size: 1.1em;
+        }
+        th, td {
+            padding: 10px 12px;
+            font-size: 0.9em;
+        }
+    }
+    

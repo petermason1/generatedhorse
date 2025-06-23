@@ -3,169 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yesterday's Horse Racing Results | Smart Racecards</title> <!-- SEO: Enhanced Title -->
-    <meta name="description" content="View detailed horse racing results and ROI breakdown for yesterday's selections from Smart Racecards."> <!-- SEO: Added Meta Description -->
+    <title>Yesterday's Horse Racing Results | Smart Racecards</title>
+    <meta name="description" content="View detailed horse racing results and ROI breakdown for yesterday's selections from Smart Racecards.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="global.css" />
-    <style>
-        /* Specific styles for the ROI/Results tables, overriding or complementing global.css */
-        .summary {
-            margin-bottom: 30px; /* Increased space below summary */
-            background: linear-gradient(145deg, #282d34, #20242b); /* Gradient for summary card */
-            padding: 20px 25px; /* Increased padding */
-            border-radius: 12px; /* Slightly more rounded */
-            box-shadow: 0 6px 18px rgba(0,0,0,0.4); /* Stronger shadow */
-            color: #f6f8fb; /* Ensure text color is readable */
-        }
-        .summary h2 {
-            color: #ffc900; /* Matching brand color */
-            font-size: 1.5em; /* Larger heading */
-            margin-top: 0;
-            margin-bottom: 1em;
-            text-align: center;
-        }
-        .summary b {
-            color: #36e8b5; /* Highlight labels */
-            font-weight: 700;
-        }
-        .summary br { /* Add a bit more spacing for breaks in summary */
-            margin-bottom: 0.5em;
-        }
-
-        /* General table styling */
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            background: #232d33; /* Darker background for tables */
-            border-radius: 12px;
-            overflow: hidden; /* Ensures the border-radius is applied to table corners */
-            box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-            margin-bottom: 30px; /* Space below tables */
-        }
-
-        th, td {
-            padding: 14px 18px; /* Increased padding for cells */
-            text-align: left;
-            border-bottom: 1px solid rgba(255,255,255,0.08); /* Subtle cell borders */
-            color: #e0e0e0; /* Default text color for cells */
-            font-size: 0.98em;
-        }
-
-        th {
-            background: linear-gradient(145deg, #1f242a, #1a1e23); /* Gradient for headers */
-            color: #ffc900;
-            font-size: 1.05em; /* Slightly larger header font */
-            font-weight: 700;
-            position: sticky; /* Make headers sticky for long tables */
-            top: 0;
-            z-index: 1;
-        }
-        /* Rounded corners for top of header */
-        table thead tr:first-child th:first-child {
-            border-top-left-radius: 12px;
-        }
-        table thead tr:first-child th:last-child {
-            border-top-right-radius: 12px;
-        }
-
-        /* Zebra striping for rows */
-        tr:nth-child(even) {
-            background: #2a2e33;
-        }
-        tr:nth-child(odd) {
-            background: #23262A;
-        }
-        /* No bottom border on last row */
-        table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* Winning row highlight */
-        tr.win-row {
-            background: linear-gradient(145deg, #36e8b5, #2ce8c0) !important; /* Green gradient */
-            color: #191e23; /* Dark text for contrast */
-            font-weight: 600; /* Slightly bolder */
-            box-shadow: inset 0 0 10px rgba(54,232,181,0.5); /* Inner glow effect */
-        }
-        tr.win-row td { /* Ensure text color applies to all cells in winning row */
-            color: #191e23 !important;
-        }
-        
-        td:last-child {
-            font-weight: bold;
-            color: #ffc900; /* Gold for last column, e.g., ROI/Win Return */
-        }
-        tr.win-row td:last-child {
-            color: #191e23 !important; /* Override for winning rows */
-        }
-
-        /* Responsive Table - horizontal scroll for overflow */
-        .table-responsive {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-            margin-bottom: 30px;
-        }
-
-        /* Custom scrollbar for tables */
-        .table-responsive::-webkit-scrollbar {
-            height: 8px;
-        }
-        .table-responsive::-webkit-scrollbar-thumb {
-            background: #35e9ae;
-            border-radius: 4px;
-        }
-        .table-responsive::-webkit-scrollbar-track {
-            background: #181c22;
-        }
-        /* Firefox scrollbar */
-        .table-responsive {
-            scrollbar-width: thin;
-            scrollbar-color: #35e9ae #181c22;
-        }
-
-
-        /* Headings consistent with global.css */
-        h1 {
-            font-size: 2.15em;
-            margin-bottom: 0.8em; /* Slightly more space for page title */
-            text-align: center;
-            color: #ffd700;
-            font-weight: 800;
-        }
-        h3 {
-            font-size: 1.27em; /* Use h2 size from global for main sections */
-            margin-bottom: 1em;
-            color: #32dd99;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .summary {
-                padding: 15px;
-                border-radius: 10px;
-            }
-            .summary h2 {
-                font-size: 1.3em;
-            }
-            th, td {
-                padding: 10px 12px;
-                font-size: 0.9em;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            h3 {
-                font-size: 1.1em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="base.css" /> <!-- Link to base.css first -->
+    <link rel="stylesheet" href="yesterday.css" /> <!-- Then link to yesterday.css -->
 </head>
 <body>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -182,7 +28,7 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="tips.html" class="nav-link">Tips</a>
          <a href="yesterday.html" class="nav-link">Yesterday</a>
-           <a href="custom-score.html" class="nav-link">Custom Score</a> <!-- New Link -->
+         <a href="custom-score.html" class="nav-link">Custom Score</a>
          <a href="about.html" class="nav-link">About</a>
       </div>
       <div class="hamburger" id="hamburger">
@@ -202,7 +48,7 @@
             <b>Total races processed:</b> 19<br>
             <b>Races with non-runner/missing result:</b> 2
             <br><br>
-            <div class="table-responsive"> <!-- Added for responsiveness -->
+            <div class="table-responsive">
                 <table>
                     <thead>
                         <tr><th>Subset</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>
@@ -224,7 +70,7 @@
         </div>
 
         <h3>Winning Selections</h3>
-        <div class="table-responsive"> <!-- Added for responsiveness -->
+        <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
@@ -315,7 +161,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const currentPath = window.location.pathname.split('/').pop();
             document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('nav-link-active'); // Remove any hardcoded active class
+                link.classList.remove('nav-link-active');
                 if (link.getAttribute('href') === currentPath) {
                     link.classList.add('nav-link-active');
                 }

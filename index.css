@@ -1,0 +1,246 @@
+/* --- NEXT 6 RACES --- */
+.next6-bar {
+  background: #21242a;
+  border-radius: 12px;
+  padding: 1.5em 1em 1.7em 1em;
+  margin: 1.2em auto 1.4em auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35); /* Enhanced shadow for more depth */
+  text-align: center;
+  max-width: 700px;
+}
+
+.next6-races {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Default for larger screens */
+  gap: 0.6em;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.next6-race-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Subtle gradient for a more dynamic background */
+  background: linear-gradient(145deg, #232d37, #1e262f);
+  border-radius: 8px;
+  padding: 0.8em 0.3em;
+  color: #28d987;
+  text-decoration: none;
+  font-weight: bold;
+  min-height: 75px;
+  border: 2px solid #1f6037;
+  transition: background 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Smoother transitions for all properties */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Stronger initial shadow */
+}
+
+.next6-race-link:hover {
+  background: #28d987; /* Solid color for hover, as per original design */
+  color: #161c22;
+  border-color: #28d987;
+  transform: translateY(-3px); /* Subtle lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0,220,150,0.3); /* Greenish glow on hover */
+}
+
+.next6-time {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 5px;
+  color: #28d987;
+  /* Transition for color change on hover */
+  transition: color 0.2s ease-out;
+}
+
+.next6-race-link:hover .next6-time {
+  color: #161c22; /* Text color on hover matches background */
+}
+
+
+.next6-course {
+  font-size: 0.88em;
+  color: #fff;
+  opacity: 0.85;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  /* Transition for color change on hover */
+  transition: color 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.next6-race-link:hover .next6-course {
+  color: #161c22; /* Text color on hover matches background */
+  opacity: 1; /* Fully opaque on hover */
+}
+
+/* --- RACES BY COURSE --- */
+.races-course-list {
+  margin-top: 2.2em;
+}
+.racecard-course-row {
+  margin-bottom: 1.3em;
+}
+.racecard-course-header {
+  font-size: 1.16em;
+  color: #28d987;
+  font-weight: bold;
+  margin-bottom: 0.13em;
+  letter-spacing: .2px;
+}
+.racecard-race-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Default for larger screens */
+  gap: 0.23em;
+  margin-bottom: 0.7em;
+}
+
+.racecard-time-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Subtle gradient for a more dynamic background */
+  background: linear-gradient(145deg, #232d33, #1e262c);
+  border-radius: 7px;
+  color: #ffe564;
+  text-decoration: none;
+  font-size: 1.04em;
+  font-weight: 500;
+  min-width: 66px;
+  min-height: 45px;
+  padding: 0.24em 0.7em;
+  transition: background 0.13s ease-out, color 0.13s ease-out, transform 0.13s ease-out, box-shadow 0.13s ease-out; /* Smoother transitions */
+  margin-bottom: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Slightly stronger shadow */
+}
+
+.racecard-time-link:hover {
+  background: #35e9ae;
+  color: #181c1f;
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+  box-shadow: 0 4px 12px rgba(53,233,174,0.3); /* Greenish glow on hover */
+}
+
+.racecard-time {
+  color: #ffc900;
+  font-weight: 700;
+  margin: 0 auto;
+  text-align: center;
+  transition: color 0.13s ease-out;
+}
+
+.racecard-time-link:hover .racecard-time {
+  color: #181c1f;
+}
+
+.racecard-title {
+  color: #ffe564;
+  font-size: 1em;
+  margin-top: -1px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.13s ease-out;
+}
+
+.racecard-time-link:hover .racecard-title {
+  color: #181c1f;
+}
+
+
+/* --- RESPONSIVE GRID OVERRIDES (Guaranteed 3-wide minimum) --- */
+
+/* For tablets and larger mobiles (e.g., 601px to 1024px) */
+@media (max-width: 1024px) {
+  .next6-races {
+    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
+  }
+  .racecard-race-row {
+    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
+  }
+}
+
+/* For smaller mobiles (e.g., up to 600px) */
+@media (max-width: 600px) {
+  .next6-races {
+    /* Still enforce 3 columns, will shrink more */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4em;
+  }
+  .next6-race-link {
+    padding: 0.7em 0.2em;
+    min-height: 68px;
+  }
+  .next6-time {
+    font-size: 1.0em;
+  }
+  .next6-course {
+    font-size: 0.8em;
+  }
+
+  .racecard-race-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.15em;
+  }
+  .racecard-time-link {
+    min-width: unset;
+    padding: 0.2em 0.3em;
+    min-height: 42px;
+    font-size: 0.95em;
+  }
+  /* NEW: Adjust font sizes for time and title within racecard-time-link */
+  .racecard-time-link .racecard-time {
+      font-size: 0.9em; /* Smaller font for time */
+  }
+  .racecard-time-link .racecard-title {
+      font-size: 0.8em; /* Smaller font for title */
+  }
+}
+
+/* For very small mobiles (e.g., up to 400px), if 3 cols are too tight, further optimize */
+@media (max-width: 400px) {
+    .next6-races {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.3em;
+    }
+    .next6-race-link {
+        padding: 0.6em 0.1em;
+        min-height: 65px;
+    }
+    .next6-time {
+        font-size: 0.95em;
+    }
+    .next6-course {
+        font-size: 0.75em;
+    }
+
+    .racecard-race-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.1em;
+    }
+    .racecard-time-link {
+        font-size: 0.9em;
+        min-height: 40px;
+    }
+    /* NEW: Even smaller font sizes for time and title on very small screens */
+    .racecard-time-link .racecard-time {
+        font-size: 0.8em; /* Even smaller font for time */
+    }
+    .racecard-time-link .racecard-title {
+        font-size: 0.7em; /* Even smaller font for title */
+    }
+}
+
+
+/* --- UTILITIES & RESPONSIVE --- */
+@media (max-width: 800px) {
+  .container { padding: 18px 2vw 34px 2vw; }
+  .next6-bar, .best-bets-list { max-width: 99vw; }
+}

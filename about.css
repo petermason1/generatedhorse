@@ -1,0 +1,227 @@
+    /* about.css: Styles specific to the about.html page */
+
+    /* --- ABOUT PAGE --- */
+    .about-container {
+      background: #21242a;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+      max-width: 900px;
+      margin: 2.6em auto 2.3em auto;
+      padding: 2.1em 2.5em 2.3em 2.5em;
+    }
+
+    .about-header {
+      text-align: center;
+      color: #ffd700;
+      font-size: 2.2em;
+      margin-bottom: 1.2em;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .about-intro {
+      color: #b7b7b7;
+      font-size: 1.09em;
+      max-width: 700px;
+      margin: 0 auto 2.5em auto;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .about-intro b {
+      color: #ffc900;
+    }
+
+    .section-title {
+      font-size: 1.35em;
+      color: #ffc900;
+      font-weight: 700;
+      margin-top: 2.8em;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #292d33;
+      display: inline-block;
+      padding-bottom: 0.2em;
+      letter-spacing: 0.02em;
+      text-align: left;
+      width: 100%;
+    }
+
+
+    /* --- Fancy List (used for How It Works and Why Trust Us) --- */
+    .fancy-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.8em 0 2.2em 0;
+    }
+    .fancy-list li {
+      margin-bottom: 0.8em;
+      font-size: 1.08em;
+      position: relative;
+      padding-left: 2.2em;
+      color: #e0e0e0;
+      line-height: 1.4;
+    }
+    .fancy-list li:before {
+      content: attr(data-icon);
+      color: #35e9ae;
+      font-size: 1.6em;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.5em;
+      text-align: center;
+    }
+    /* Specific icons for lists - based on your existing HTML and the 'fancy-list' usage */
+    .fancy-list li:nth-child(1):before { content: "🏇"; }
+    .fancy-list li:nth-child(2):before { content: "📊"; }
+    .fancy-list li:nth-child(3):before { content: "⚡"; }
+    .fancy-list li:nth-child(4):before { content: "🔎"; }
+    .fancy-list li:nth-child(5):before { content: "💡"; }
+
+    /* Why Trust Us list icons - ensure these map to the correct child if you use this class multiple times */
+    .trust-list li:nth-child(1):before { content: "📈"; }
+    .trust-list li:nth-child(2):before { content: "🔍"; }
+    .trust-list li:nth-child(3):before { content: "🛡️"; }
+    .trust-list li:nth-child(4):before { content: "🤝"; }
+
+
+    /* --- TEAM SECTION --- */
+    .team-section {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 3em;
+      justify-content: center;
+    }
+    .team-card {
+      background: linear-gradient(145deg, #23293a, #1c212b);
+      border-radius: 13px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      flex: 1 1 230px;
+      min-width: 230px;
+      max-width: 350px;
+      padding: 1.3em 1.2em;
+      margin-bottom: 0.7em;
+      transition: all 0.25s ease-out;
+      border: 1px solid transparent;
+    }
+    .team-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 25px rgba(54,232,181,0.5);
+      border-color: #36e8b5;
+      background: linear-gradient(145deg, #2a3142, #212833);
+    }
+
+    .team-name {
+      color: #35e9ae;
+      font-weight: 700;
+      font-size: 1.18em;
+      margin-bottom: 0.1em;
+      display: block;
+    }
+    .team-role {
+      color: #ffd700;
+      font-size: 1.05em;
+      font-weight: 600;
+      margin-bottom: 0.6em;
+      display: block;
+    }
+    .team-desc {
+      color: #eaeaea;
+      font-size: 1em;
+      line-height: 1.55;
+    }
+
+
+    /* About Contact Footer */
+    .about-contact-footer {
+      margin-top: 3em;
+      font-size: 0.98em;
+      text-align: center;
+      color: #a6a6a6;
+      line-height: 1.6;
+      padding-top: 2em;
+      border-top: 1px solid #292d33;
+    }
+
+    .about-contact-footer b {
+      color: #ffc900;
+      font-weight: 700;
+    }
+
+    .about-contact-footer a {
+      color: #ffc900;
+      text-decoration: underline;
+      transition: color 0.15s ease-out;
+    }
+    .about-contact-footer a:hover {
+      color: #35e9ae;
+    }
+
+    /* --- RESPONSIVE ADJUSTMENTS for ABOUT PAGE --- */
+    @media (max-width: 700px) {
+      .about-container {
+        padding: 1.5em 3vw;
+      }
+      .about-header {
+        font-size: 1.8em;
+        margin-bottom: 1em;
+      }
+      .about-intro {
+        font-size: 1em;
+        margin-bottom: 1.8em;
+      }
+      .section-title {
+        font-size: 1.2em;
+        margin-top: 2em;
+        margin-bottom: 0.8em;
+      }
+      .fancy-list li {
+        font-size: 1em;
+        padding-left: 2em;
+      }
+      .fancy-list li:before {
+        font-size: 1.4em;
+      }
+      .team-section {
+        gap: 15px;
+        margin-bottom: 2em;
+      }
+      .team-card {
+        flex: 1 1 180px;
+        padding: 1em;
+      }
+      .team-name {
+        font-size: 1.1em;
+      }
+      .team-role {
+        font-size: 1em;
+      }
+      .team-desc {
+        font-size: 0.95em;
+      }
+      .about-contact-footer {
+        font-size: 0.9em;
+        margin-top: 2.5em;
+      }
+    }
+    @media (max-width: 480px) {
+      .about-container {
+        padding: 1em 2vw;
+      }
+      .about-header {
+        font-size: 1.5em;
+      }
+      .about-intro {
+        font-size: 0.95em;
+      }
+      .section-title {
+        font-size: 1.1em;
+      }
+      .fancy-list li {
+        font-size: 0.95em;
+      }
+      .team-card {
+        min-width: 100%;
+      }
+    }
+    

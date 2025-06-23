@@ -11,10 +11,11 @@
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
-  <title>Daily Horse Racing Tips | Today's Picks - Smart Racecards</title> <!-- SEO Enhancement: More descriptive title -->
-  <meta name="description" content="Access our daily horse racing tips. Smart Racecards provides data-backed top picks, value bets, and outsider analysis for UK & Irish races."> <!-- SEO Enhancement: Added meta description -->
+  <title>Daily Horse Racing Tips | Today's Picks - Smart Racecards</title>
+  <meta name="description" content="Access our daily horse racing tips. Smart Racecards provides data-backed top picks, value bets, and outsider analysis for UK & Irish races.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="base.css" /> <!-- Link to base.css first -->
+  <link rel="stylesheet" href="tips.css" /> <!-- Then link to tips.css -->
 </head>
 
 <body>
@@ -25,7 +26,7 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="tips.html" class="nav-link">Tips</a>
          <a href="yesterday.html" class="nav-link">Yesterday</a>
-           <a href="custom-score.html" class="nav-link">Custom Score</a> <!-- New Link -->
+         <a href="custom-score.html" class="nav-link">Custom Score</a>
          <a href="about.html" class="nav-link">About</a>
       </div>
       <div class="hamburger" id="hamburger">
@@ -36,7 +37,7 @@
     </div>
   </nav>
 
-  <main id="main"></main> <!-- Content for tips page will be dynamically rendered here by tips.js -->
+  <main id="main"></main>
 
   <script src="data.js"></script>
   <script src="tips.js"></script>
@@ -57,11 +58,10 @@
     });
   });
 
-  // Highlight active nav link based on current page - added for consistency
+  // Highlight active nav link based on current page
   document.addEventListener('DOMContentLoaded', () => {
       const currentPath = window.location.pathname.split('/').pop();
       document.querySelectorAll('.nav-link').forEach(link => {
-          // Remove potential hardcoded 'nav-link-active' from the HTML
           link.classList.remove('nav-link-active');
           if (link.getAttribute('href') === currentPath) {
               link.classList.add('nav-link-active');
