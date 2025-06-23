@@ -1,82 +1,150 @@
 console.log('racecard.js loaded');
 console.log(window.racecardsData);
 
+/**
+ * Calculates a score for a given runner based on various factors.
+ * @param {object} r - The runner object.
+ * @returns {number} The calculated score, rounded to two decimal places.
+ */
 function scoreRunner(r) {
   const rpr = Number.parseInt(r.rpr) || 0;
   const ts = Number.parseInt(r.ts) || 0;
   const or = Number.parseInt(r.ofr) || 0;
   const lastRun = Number.parseInt(r.last_run);
-  const lastRunVal = Number.isFinite(lastRun) ? lastRun : 99;
+  const lastRunVal = Number.isFinite(lastRun) ? lastRun : 99; // Default to 99 if not a valid number
 
   let wins = 0, places = 0;
   if (typeof r.form === 'string') {
+    // Count '1's for wins, '2' or '3' for places in the form string
     wins = (r.form.match(/1/g) || []).length;
     places = (r.form.match(/[23]/g) || []).length;
   }
 
   const trainerPercent = Number.parseFloat(r.trainer_14_days?.percent) || 0;
   const trainerWins = Number.parseInt(r.trainer_14_days?.wins) || 0;
-  const trainerBonus = trainerPercent >= 20 ? 0.5 : 0;
-  const layoffPenalty = (wins === 0 && lastRunVal > 50) ? -2.5 : 0;
+  const trainerBonus = trainerPercent >= 20 ? 0.5 : 0; // Bonus for high trainer win rate
+  const layoffPenalty = (wins === 0 && lastRunVal > 50) ? -2.5 : 0; // Penalty for long layoff without a win
 
   let score = 0;
+  // Weighted addition of various performance metrics
   score += 1.1 * rpr;
   score += 0.6 * ts;
   score += 0.32 * or;
   score += 2.1 * wins + 1.1 * places;
+
+  // Adjust score based on last run days (recency bias)
   if (lastRunVal > 50) {
-    score += -(lastRunVal - 50) * 0.19;
+    score += -(lastRunVal - 50) * 0.19; // Penalty for long layoffs
   } else {
-    score += (50 - lastRunVal) * 0.13;
+    score += (50 - lastRunVal) * 0.13; // Bonus for recent runs
   }
+
+  // Trainer form contribution
   score += 0.8 * trainerPercent;
   score += 1.2 * trainerWins;
+
+  // Apply calculated bonuses/penalties
   score += trainerBonus + layoffPenalty;
 
+  // Prevent extremely low scores from skewing
   if (score < -12) score = -12 + (score + 12) * 0.4;
+  // Ensure score is a finite number, default to 0 if not
   if (!Number.isFinite(score)) score = 0;
-  return Math.round(score * 100) / 100;
+
+  return Math.round(score * 100) / 100; // Round to two decimal places
 }
 
-// ========== Helper: Is Non-Runner ==========
+/**
+ * Checks if a runner is a non-runner.
+ * @param {object} r - The runner object.
+ * @returns {boolean} True if the runner is a non-runner, false otherwise.
+ */
 function isNonRunner(r) {
   if (typeof r.form === 'string' && r.form.match(/\bNR\b/i)) return true;
   if (r.status && r.status.toUpperCase() === 'NR') return true;
-  if (r.non_runner === true) return true;
+  if (r.non_runner === true) return true; // Explicit non_runner flag
   return false;
 }
 
-// ========== Helper: Get race_id from URL ==========
+/**
+ * Extracts the race_id from the URL query parameters.
+ * @returns {string|null} The race_id if found, otherwise null.
+ */
 function getRaceId() {
   const url = new URL(window.location.href);
   return url.searchParams.get('race_id');
 }
 
-// ========== Main Logic ==========
-const main = document.getElementById('main');
-const allRaces = window.racecardsData.racecards;
-const raceId = getRaceId();
+/**
+ * Finds the most relevant race for a given course.
+ * It prioritizes the first upcoming race. If all races are in the past, it returns the first race of the day.
+ * @param {string} courseName - The name of the course.
+ * @param {Array<object>} allRaces - An array of all available race objects.
+ * @returns {object|null} The target race object, or null if no races are found for the course.
+ */
+function getTargetRaceForCourse(courseName, allRaces) {
+  const racesForCourse = allRaces
+    .filter(r => r.course === courseName)
+    .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt)); // Sort all races for the course by time
 
-let race = null;
-if (raceId) race = allRaces.find(r => r._id === raceId);
-if (!race) race = allRaces[0];
-if (!race) {
-  main.innerHTML = '<p style="color: #e54c47;">No race found.</p>';
-  throw new Error('No race found!');
+  const now = new Date();
+
+  // Find the first upcoming race for this course
+  const upcomingRace = racesForCourse.find(r => new Date(r.off_dt) > now);
+
+  if (upcomingRace) {
+    return upcomingRace; // Return the first upcoming race
+  } else if (racesForCourse.length > 0) {
+    // If no upcoming races, return the first race of the day for that course
+    return racesForCourse[0];
+  }
+  return null; // No races found for this course
 }
 
-// Score and sort all runners, push non-runners to bottom
-race.runners.forEach(r => r.score = scoreRunner(r));
-race.runners.sort((a, b) => (b.score ?? -9999) - (a.score ?? -9999));
-const nrs = race.runners.filter(isNonRunner);
-const runners = race.runners.filter(r => !isNonRunner(r));
-race.runners = [...runners, ...nrs];
+/**
+ * Renders the navigation bar for all courses.
+ * Each link directs to the most relevant race (closest to current time or first if all past) on that course.
+ * @param {Array<object>} allRaces - All available race data.
+ * @param {string} currentRaceId - The ID of the currently active race, used for highlighting.
+ * @returns {string} HTML string for the course navigation bar.
+ */
+function renderCourseNavigation(allRaces, currentRaceId) {
+  // Get unique course names and sort them alphabetically
+  const uniqueCourses = [...new Set(allRaces.map(r => r.course))].sort();
 
-// --- Course Race Bar ---
+  const courseLinksHtml = uniqueCourses.map(courseName => {
+    const targetRace = getTargetRaceForCourse(courseName, allRaces);
+    if (!targetRace) return ''; // Skip if no target race found for a course
+
+    // Determine if this course is currently active
+    const currentActiveCourse = allRaces.find(r => r._id === currentRaceId)?.course;
+    const isActive = targetRace.course === currentActiveCourse;
+
+    return `
+      <a class="course-link${isActive ? ' active' : ''}" href="racecard.html?race_id=${targetRace._id}">
+        ${courseName}
+      </a>
+    `;
+  }).join('');
+
+  return `
+    <nav class="course-bar">
+      ${courseLinksHtml}
+    </nav>
+  `;
+}
+
+/**
+ * Renders the race times navigation bar for the current course.
+ * @param {object} race - The current race object.
+ * @param {Array<object>} allRaces - All available race data.
+ * @returns {string} HTML string for the race times navigation bar.
+ */
 function renderCourseLinks(race, allRaces) {
   const courseRaces = allRaces
     .filter(r => r.course === race.course)
-    .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
+    .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt)); // Sort races for the current course by time
+
   return `
     <nav class="race-links-bar">
       <span class="race-links-course">${race.course}</span>
@@ -89,21 +157,26 @@ function renderCourseLinks(race, allRaces) {
   `;
 }
 
-// --- Top 3 picks (excluding NRs) ---
+/**
+ * Renders the top 3 picks for the current race.
+ * @param {object} race - The current race object.
+ * @returns {string} HTML string for the top picks section.
+ */
 function renderTopPicks(race) {
+  // Filter out non-runners and take the top 3
   let top = race.runners.filter(r => !isNonRunner(r)).slice(0, 3);
-  if (!top.length) return '';
+  if (!top.length) return ''; // Don't render if no top picks
+
   return `
-    <div class="top-picks" style="margin-bottom:15px;">
-      <div style="font-weight:700; font-size:1.07em; color:#ffc900; margin-bottom:3px;">
-        Top Picks
-      </div>
-      <div>
+    <div class="race-top-picks">
+      <div class="race-top-picks-title">Top Picks</div>
+      <div class="race-top-picks-list">
         ${top.map((r, i) => `
-          <span style="display:inline-block; margin-right:13px;">
-            <b>${i+1}.</b> <span style="color:#32dd99;">${r.horse}</span>
-            <span style="font-weight:600; color:#fff;">(${r.score})</span>
-            <span style="color:#ffe564; margin-left:2px;">${r.odds?.[0]?.fractional||''}</span>
+          <span class="race-top-pick-item">
+            <b class="pick-number">${i+1}.</b>
+            <span class="pick-horse">${r.horse}</span>
+            <span class="pick-score">(${r.score})</span>
+            <span class="pick-odds">${r.odds?.[0]?.fractional||''}</span>
           </span>
         `).join('')}
       </div>
@@ -111,79 +184,154 @@ function renderTopPicks(race) {
   `;
 }
 
-// --- More Info Table ---
+/**
+ * Renders the detailed "More Info" section for a single runner.
+ * @param {object} r - The runner object.
+ * @returns {string} HTML string for the runner's more info section.
+ */
 function renderRunnerMore(r) {
   return `
-    <b>Comment:</b> ${r.comment || '<span style="color:#888">No comment</span>'}<br>
-    <b>Spotlight:</b> ${r.spotlight || '<span style="color:#888">No spotlight</span>'}<br>
-    <table class="runner-stats-table" style="margin:0.7em 0;font-size:0.97em;background:#21242a;border-radius:7px;width:100%;">
-      <tbody>
-        <tr>
-          <td><b>Trainer 14d:</b></td>
-          <td>${r.trainer_14_days?.wins || '0'} wins from ${r.trainer_14_days?.runs || '0'} runs (${r.trainer_14_days?.percent || '0'}%)</td>
-          <td><b>Trainer RTF:</b></td>
-          <td>${r.trainer_rtf ?? '-'}</td>
-        </tr>
-        <tr>
-          <td><b>Jockey:</b></td>
-          <td>${r.jockey || '-'}</td>
-          <td><b>Draw:</b></td>
-          <td>${r.draw || '-'}</td>
-        </tr>
-        <tr>
-          <td><b>Owner:</b></td>
-          <td colspan="3">
-            ${r.owner || '-'}
-            ${
-              r.prev_owners && r.prev_owners.length
-                ? `<br><span style="color:#90f">Prev: ${r.prev_owners.map(po=>po.owner).join(', ')}</span>`
-                : ''
-            }
-          </td>
-        </tr>
-        <tr>
-          <td><b>Breeder:</b></td>
-          <td>${r.breeder || '-'}</td>
-          <td><b>Colour:</b></td>
-          <td>${r.colour || '-'}</td>
-        </tr>
-        <tr>
-          <td><b>Sire:</b></td>
-          <td>${r.sire || '-'}</td>
-          <td><b>Dam:</b></td>
-          <td>${r.dam || '-'}</td>
-        </tr>
-        <tr>
-          <td><b>Headgear:</b></td>
-          <td>${r.headgear || '-'}</td>
-          <td><b>Wind Surgery:</b></td>
-          <td>${r.wind_surgery ? 'Yes' : '-'}</td>
-        </tr>
-      </tbody>
-    </table>
-    <b>Quotes:</b> <ul>${r.quotes?.map(q=>`<li><b>${q.date || ''}:</b> ${q.quote}</li>`).join('') || '-'}</ul>
-    <b>Stable Tour:</b> <ul>${r.stable_tour?.map(st=>`<li>${st.quote}</li>`).join('') || '-'}</ul>
+    <div class="runner-more-content">
+        <p class="runner-comment"><b>Comment:</b> ${r.comment || '<span class="no-data">No comment</span>'}</p>
+        <p class="runner-spotlight"><b>Spotlight:</b> ${r.spotlight || '<span class="no-data">No spotlight</span>'}</p>
+
+        <table class="runner-stats-table">
+          <tbody>
+            <tr>
+              <td><b>Trainer 14d:</b></td>
+              <td>${r.trainer_14_days?.wins || '0'} wins from ${r.trainer_14_days?.runs || '0'} runs (${r.trainer_14_days?.percent || '0'}%)</td>
+            </tr>
+            <tr>
+              <td><b>Trainer RTF:</b></td>
+              <td>${r.trainer_rtf ?? '<span class="no-data">-</span>'}</td>
+            </tr>
+            <tr>
+              <td><b>Jockey:</b></td>
+              <td>${r.jockey || '<span class="no-data">-</span>'}</td>
+            </tr>
+            <tr>
+              <td><b>Draw:</b></td>
+              <td>${r.draw || '<span class="no-data">-</span>'}</td>
+            </tr>
+            <tr>
+              <td><b>Owner:</b></td>
+              <td>
+                ${r.owner || '<span class="no-data">-</span>'}
+                ${
+                  r.prev_owners && r.prev_owners.length
+                    ? `<br><span class="prev-owners">Prev: ${r.prev_owners.map(po=>po.owner).join(', ')}</span>`
+                    : ''
+                }
+              </td>
+            </tr>
+            <tr>
+              <td><b>Breeder:</b></td>
+              <td>${r.breeder || '<span class="no-data">-</span>'}</td>
+            </tr>
+            <tr>
+              <td><b>Colour:</b></td>
+              <td>${r.colour || '<span class="no-data">-</span>'}</td>
+            </tr>
+            <tr>
+              <td><b>Sire:</b></td>
+              <td>${r.sire || '<span class="no-data">-</span>'}</td>
+            </tr>
+            <tr>
+              <td><b>Dam:</b></td>
+              <td>${r.dam || '<span class="no-data">-</span>'}</td>
+            </tr>
+            <tr>
+              <td><b>Headgear:</b></td>
+              <td>${r.headgear || '<span class="no-data">-</span>'}</td>
+            </tr>
+            <tr>
+              <td><b>Wind Surgery:</b></td>
+              <td>${r.wind_surgery ? 'Yes' : '<span class="no-data">-</span>'}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        ${r.quotes && r.quotes.length ? `
+        <div class="runner-quotes">
+            <b>Quotes:</b>
+            <ul>
+                ${r.quotes.map(q=>`<li><b>${q.date || ''}:</b> ${q.quote}</li>`).join('')}
+            </ul>
+        </div>
+        ` : ''}
+
+        ${r.stable_tour && r.stable_tour.length ? `
+        <div class="runner-stable-tour">
+            <b>Stable Tour:</b>
+            <ul>
+                ${r.stable_tour.map(st=>`<li>${st.quote}</li>`).join('')}
+            </ul>
+        </div>
+        ` : ''}
+    </div>
   `;
 }
 
+
+// ========== Main Logic Execution ==========
+const allRaces = window.racecardsData.racecards;
+const raceId = getRaceId();
+
+let race = null;
+if (raceId) race = allRaces.find(r => r._id === raceId);
+if (!race) race = allRaces[0]; // Fallback to first race if ID not found
+if (!race) {
+  const mainElement = document.getElementById('main');
+  if (mainElement) {
+    mainElement.innerHTML = '<p class="error-message">No race found.</p>';
+  }
+  throw new Error('No race found or main element not found!');
+}
+
+// Score and sort all runners, push non-runners to bottom
+race.runners.forEach(r => r.score = scoreRunner(r));
+race.runners.sort((a, b) => (b.score ?? -9999) - (a.score ?? -9999));
+const nrs = race.runners.filter(isNonRunner);
+const runners = race.runners.filter(r => !isNonRunner(r));
+race.runners = [...runners, ...nrs];
+
+/**
+ * Renders the entire race page content into the 'main' element.
+ * @param {object} race - The race object to render.
+ */
 function renderRace(race) {
-  main.innerHTML = `
+  const mainElement = document.getElementById('main');
+  if (!mainElement) {
+    console.error("Main element not found!");
+    return;
+  }
+
+  // Generate the new course navigation bar
+  const courseNavigationHtml = renderCourseNavigation(allRaces, race._id);
+
+  // Generate the existing race links bar for the current course's times
+  const raceLinksHtml = renderCourseLinks(race, allRaces);
+
+  mainElement.innerHTML = `
     <div class="container">
-      ${renderCourseLinks(race, allRaces)}
+      ${courseNavigationHtml}
+      ${raceLinksHtml}
       <section class="race-header">
-        <h1>${race.course} <span style="font-weight: 600;">${race.off_time}</span></h1>
+        <h1>${race.course} <span class="race-header-time">${race.off_time}</span></h1>
         <div class="race-meta">
-          <strong>${race.race_name}</strong>
-          <div>
-            Prize: <b>${race.prize?.replace(/\u00a3/, '£') || '-'}</b>
-            • Runners: <b>${race.field_size || '-'}</b>
-            • Age/Sex: <b>${race.age_band||'-'}</b>
-            • Pattern: <b>${race.pattern||race.race_class||''}</b>
-            • Region: <b>${race.region||'-'}</b>
+          <strong class="race-name">${race.race_name}</strong>
+          <div class="race-details-line-1">
+            Prize: <b class="race-prize">${race.prize?.replace(/\u00a3/, '£') || '-'}</b>
+            • Runners: <b class="race-field-size">${race.field_size || '-'}</b>
+            • Age/Sex: <b class="race-age-band">${race.age_band||'-'}</b>
           </div>
-        </div>
-        <div class="race-details">
-          Class ${race.race_class?.replace('Class ','') || '-'} • ${race.distance || '-'} • ${race.going || '-'}
+          <div class="race-details-line-2">
+            Pattern: <b class="race-pattern">${race.pattern||race.race_class||''}</b>
+            • Region: <b class="race-region">${race.region||'-'}</b>
+            • Class <b class="race-class">${race.race_class?.replace('Class ','') || '-'}</b>
+            • <b class="race-distance">${race.distance || '-'}</b>
+            • <b class="race-going">${race.going || '-'}</b>
+          </div>
         </div>
       </section>
       ${renderTopPicks(race)}
@@ -193,24 +341,26 @@ function renderRace(race) {
             <div class="runner-num-draw">
               <span class="runner-num">${r.number || i+1}</span>
               <span class="runner-draw">${(r.draw && r.draw !== r.number) ? `(${r.draw})` : ''}</span>
-              <span class="runner-score" style="display:block;font-size:0.93em;color:#32dd99;font-weight:700;">${typeof r.score === 'number' ? r.score : ''}</span>
+              <span class="runner-score">${typeof r.score === 'number' ? r.score : ''}</span>
             </div>
-            <img class="runner-silk" src="${r.silk_url||''}" alt="silks" />
+            <img class="runner-silk" src="${r.silk_url||'https://placehold.co/39x39/161c22/fff?text=S'}" alt="silks" onerror="this.src='https://placehold.co/39x39/161c22/fff?text=S';" />
             <div class="runner-main">
               <div class="runner-horse">${r.horse || ''}</div>
-              <div class="runner-meta">
-                ${r.jockey || ''} <span style="opacity:.5;">|</span> ${r.trainer || ''}
+              <div class="runner-meta-line">
+                <span class="runner-jockey">${r.jockey || ''}</span>
+                <span class="runner-meta-separator">|</span>
+                <span class="runner-trainer">${r.trainer || ''}</span>
                 <span class="runner-form">${r.form || ''}</span>
-                ${isNonRunner(r) ? '<span style="color:#e55;font-weight:700;margin-left:8px;">NR</span>' : ''}
+                ${isNonRunner(r) ? '<span class="runner-nr-tag">NR</span>' : ''}
               </div>
-              <div class="runner-info">
-                Age <b>${r.age || '-'}</b>
-                • Weight <b>${r.lbs || '-'}</b>
-                • RPR <b>${r.rpr || '-'}</b>
-                • OR <b>${r.ofr || '-'}</b>
-                • TS <b>${r.ts || '-'}</b>
-                ${r.headgear ? `• Headgear <b>${r.headgear}</b>` : ''}
-                ${r.last_run ? `• Last run <b>${r.last_run}d</b>` : ''}
+              <div class="runner-info-line">
+                Age <b class="runner-age">${r.age || '-'}</b>
+                • Weight <b class="runner-weight">${r.lbs || '-'}</b>
+                • RPR <b class="runner-rpr">${r.rpr || '-'}</b>
+                • OR <b class="runner-or">${r.ofr || '-'}</b>
+                • TS <b class="runner-ts">${r.ts || '-'}</b>
+                ${r.headgear ? `• Headgear <b class="runner-headgear">${r.headgear}</b>` : ''}
+                ${r.last_run ? `• Last run <b class="runner-last-run">${r.last_run}d</b>` : ''}
               </div>
               <button class="runner-more-btn" type="button">More info ▼</button>
               <div class="runner-more">
@@ -225,13 +375,17 @@ function renderRace(race) {
   `;
 }
 
+// Initial render of the race page
 renderRace(race);
 
-// Toggle the more-info section for each runner
-main.addEventListener('click', (e) => {
+// Event listener for toggling the more-info section
+document.addEventListener('click', (e) => {
   if (e.target.classList.contains('runner-more-btn')) {
     const card = e.target.closest('.runner-card');
     card.classList.toggle('expanded');
+    // Update button text based on expanded state
     e.target.textContent = card.classList.contains('expanded') ? 'Less info ▲' : 'More info ▼';
   }
 });
+
+console.log('racecard.js finished.');
