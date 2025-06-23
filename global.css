@@ -15,7 +15,7 @@ body {
 /* --- NAVBAR --- */
 .main-navbar {
   background: #171a20;
-  box-shadow: 0 1px 7px #0002;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.2);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -66,7 +66,7 @@ body {
 
 /* --- Hamburger Menu Styles --- */
 .hamburger {
-  display: none; /* Hidden by default, only show on smaller screens */
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -79,47 +79,42 @@ body {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #36e8b5; /* Adjusted to your accent color for visibility */
+  background-color: #36e8b5;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
 
-/* Hide nav links by default on smaller screens */
-/* .nav-links { display: flex; } - already defined above, keeping original for desktop */
-
-/* Media query for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex; /* Show hamburger on small screens */
-    margin-left: 1em; /* Add some space from the brand */
+    display: flex;
+    margin-left: 1em;
   }
 
   .nav-links {
     position: absolute;
-    top: 50px; /* Adjusted to be closer to the navbar height */
+    top: 50px;
     left: 0;
     width: 100%;
-    background-color: #171a20; /* Dark background to match your theme */
+    background-color: #171a20;
     flex-direction: column;
     align-items: center;
-    padding: 15px 0; /* Slightly reduced padding */
-    display: none; /* Hide by default on mobile */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Stronger shadow for depth */
+    padding: 15px 0;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
   }
 
-  .nav-links.active { /* Class added by JS when menu is open */
-    display: flex; /* Show when active */
+  .nav-links.active {
+    display: flex;
   }
 
   .nav-links a {
     padding: 10px 0;
     width: 100%;
     text-align: center;
-    color: #36e8b5; /* Ensure links are visible on dark background */
+    color: #36e8b5;
   }
 }
 
-/* Optional: Hamburger animation when open */
 .hamburger.active span:nth-child(1) {
   transform: translateY(11px) rotate(45deg);
 }
@@ -133,7 +128,7 @@ body {
 }
 
 
-/* --- HEADINGS & DESC (General site headings) --- */
+/* --- General Headings & Descriptions --- */
 h1, h2, h3 {
   font-family: inherit;
   font-weight: 800;
@@ -214,7 +209,7 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
 .top-pick-card {
   background: #232d37;
   border-radius: 10px;
-  box-shadow: 0 2px 14px #1116;
+  box-shadow: 0 2px 14px rgba(17,17,17,0.37);
   width: 100%;
   min-height: 60px;
   padding: 0.77em 1.35em 0.77em 1.35em;
@@ -918,13 +913,13 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   font-size: 1.06em;
   text-decoration: none;
   transition: background 0.14s, color 0.14s, box-shadow 0.15s;
-  box-shadow: 0 2px 8px #1113;
+  box-shadow: 0 2px 8px rgba(17,17,17,0.2);
 }
 .course-link.active,
 .course-link:hover {
   background: #36e8b5;
   color: #191e23;
-  box-shadow: 0 2px 16px #19e7b6bb;
+  box-shadow: 0 2px 16px rgba(25,231,182,0.73);
 }
 
 /* Race Header (main info block on racecard.html) */
@@ -1525,5 +1520,196 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
     .runner-more-btn {
         font-size: 0.9em;
         padding: 2px 7px;
+    }
+}
+
+/* Custom Scoring Page Styles */
+.score-controls {
+    background: linear-gradient(145deg, #21282f, #1b2027);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: 1.5em auto 2em auto;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+    max-width: 700px;
+}
+
+.score-controls h2 {
+    color: #ffc900;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    font-size: 1.6em;
+    letter-spacing: 0.02em;
+}
+
+.slider-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 15px;
+}
+
+.slider-group label {
+    flex: 0 0 160px; /* Fixed width for labels */
+    color: #bbf5ed;
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+.slider-group input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none; /* Standard property */
+    width: 100%;
+    height: 8px;
+    background: #1a212b;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity .15s ease-in-out;
+    border-radius: 4px;
+}
+
+.slider-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #36e8b5;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(54,232,181,0.5);
+}
+
+.slider-group input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #36e8b5;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(54,232,181,0.5);
+}
+
+.slider-group span {
+    flex-shrink: 0;
+    width: 40px; /* Space for displaying value */
+    text-align: right;
+    color: #ffe564;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.custom-race-header {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #ffd700;
+}
+.custom-race-header h3 {
+    color: #32dd99;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* New styles for race selection dropdown */
+.race-selector-container {
+    text-align: center;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.race-selector-container label {
+    color: #bbf5ed;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.race-selector-dropdown {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #36e8b5;
+    background-color: #232d33;
+    color: #f6f8fb;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    outline: none;
+    max-width: 100%; /* Ensure it fits on small screens */
+}
+.race-selector-dropdown:hover,
+.race-selector-dropdown:focus {
+    background-color: #2a343f;
+    border-color: #2ce8c0;
+    box-shadow: 0 0 10px rgba(54,232,181,0.3);
+}
+
+/* New styles for preset buttons */
+.preset-buttons {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.preset-button {
+    background: linear-gradient(145deg, #36e8b5, #2ce8c0);
+    color: #191e23;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 18px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.preset-button:hover {
+    background: linear-gradient(145deg, #2ce8c0, #36e8b5);
+    box-shadow: 0 4px 12px rgba(54,232,181,0.3);
+    transform: translateY(-2px);
+}
+
+.preset-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+
+/* Responsive adjustments for sliders */
+@media (max-width: 600px) {
+    .score-controls {
+        padding: 1em;
+    }
+    .score-controls h2 {
+        font-size: 1.4em;
+    }
+    .slider-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .slider-group label {
+        width: 100%;
+        font-size: 1em;
+    }
+    .slider-group span {
+        position: absolute; /* Position value next to slider on smaller screens */
+        right: 1em; /* Adjust as needed */
+    }
+    .slider-group input[type="range"] {
+        width: calc(100% - 60px); /* Make room for value span */
+        margin-right: 50px;
+    }
+    .preset-buttons {
+        gap: 8px;
+        margin-top: 1.5em;
+    }
+    .preset-button {
+        padding: 7px 14px;
+        font-size: 0.9em;
     }
 }

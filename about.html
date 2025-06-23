@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-NMB0VG2VBB');
-</script>
+    gtag('config', 'G-NMB0VG2VBB');
+  </script>
   <meta charset="UTF-8" />
-  <title>About | Racecards</title>
+  <title>About Smart Racecards | Data-Driven Horse Racing Analysis</title> <!-- SEO Enhancement: More descriptive title -->
+  <meta name="description" content="Learn about Smart Racecards: our team, proprietary rating system, and commitment to transparent, data-driven horse racing analysis."> <!-- SEO Enhancement: Added meta description -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="global.css" />
 </head>
@@ -22,7 +24,8 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="tips.html" class="nav-link">Tips</a>
          <a href="yesterday.html" class="nav-link">Yesterday</a>
-         <a href="about.html" class="nav-link nav-link-active">About</a>
+         <a href="custom-score.html" class="nav-link">Custom Score</a> <!-- New Link -->
+         <a href="about.html" class="nav-link">About</a> <!-- Removed hardcoded nav-link-active, JS will handle -->
       </div>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -87,7 +90,7 @@
     </div>
 
     <h2 class="section-title">Why Trust Us?</h2>
-    <ul class="fancy-list trust-list"> <!-- Added trust-list class for specific icon handling -->
+    <ul class="fancy-list trust-list">
       <li>Full transparency: all tips and results are published, win or lose</li>
       <li>Our selections are based on independent, data-driven analysis</li>
       <li>We operate with integrity—no hype, no selective reporting</li>
@@ -115,6 +118,18 @@
       navLinks.classList.remove('active');
       hamburger.classList.remove('active');
     });
+  });
+
+  // Highlight active nav link based on current page - added for consistency
+  document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop();
+      document.querySelectorAll('.nav-link').forEach(link => {
+          // Remove potential hardcoded 'nav-link-active' from the HTML
+          link.classList.remove('nav-link-active');
+          if (link.getAttribute('href') === currentPath) {
+              link.classList.add('nav-link-active');
+          }
+      });
   });
 </script>
 </body>

@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-NMB0VG2VBB');
-</script>
+    gtag('config', 'G-NMB0VG2VBB');
+  </script>
   <meta charset="UTF-8" />
-  <title>Horse Racing Tips</title>
+  <title>Daily Horse Racing Tips | Today's Picks - Smart Racecards</title> <!-- SEO Enhancement: More descriptive title -->
+  <meta name="description" content="Access our daily horse racing tips. Smart Racecards provides data-backed top picks, value bets, and outsider analysis for UK & Irish races."> <!-- SEO Enhancement: Added meta description -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="global.css" />
 </head>
-<!-- Google tag (gtag.js) -->
+
 <body>
 <nav class="main-navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-brand">🏇 Racecards</a>
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="tips.html" class="nav-link nav-link-active">Tips</a> <!-- Added nav-link-active here -->
-         <a href="yesterday.html" class="nav-link">Yesterday</a> <!-- Removed nav-link-active here -->
+        <a href="tips.html" class="nav-link">Tips</a>
+         <a href="yesterday.html" class="nav-link">Yesterday</a>
+           <a href="custom-score.html" class="nav-link">Custom Score</a> <!-- New Link -->
          <a href="about.html" class="nav-link">About</a>
       </div>
       <div class="hamburger" id="hamburger">
@@ -33,7 +36,8 @@
     </div>
   </nav>
 
-  <main id="main"></main>
+  <main id="main"></main> <!-- Content for tips page will be dynamically rendered here by tips.js -->
+
   <script src="data.js"></script>
   <script src="tips.js"></script>
     <script>
@@ -51,6 +55,18 @@
       navLinks.classList.remove('active');
       hamburger.classList.remove('active');
     });
+  });
+
+  // Highlight active nav link based on current page - added for consistency
+  document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop();
+      document.querySelectorAll('.nav-link').forEach(link => {
+          // Remove potential hardcoded 'nav-link-active' from the HTML
+          link.classList.remove('nav-link-active');
+          if (link.getAttribute('href') === currentPath) {
+              link.classList.add('nav-link-active');
+          }
+      });
   });
 </script>
 </body>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NMB0VG2VBB');
+    </script>
+    <meta charset="UTF-8" />
+    <title>Custom Scoring Tool | Smart Racecards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="global.css" />
+</head>
+<body>
+    <nav class="main-navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="nav-brand">🏇 Racecards</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tips.html" class="nav-link">Tips</a>
+                <a href="yesterday.html" class="nav-link">Yesterday</a>
+                <a href="custom-score.html" class="nav-link nav-link-active">Custom Score</a> <!-- New Link -->
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="page-title">Custom Race Scoring</h1>
+
+        <div class="race-selector-container">
+            <label for="raceSelector">Select a Race:</label>
+            <select id="raceSelector" class="race-selector-dropdown">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+
+        <div class="score-controls">
+            <h2>Adjust Scoring Weights</h2>
+
+            <div class="preset-buttons">
+                <button class="preset-button" data-preset="Default">Default</button>
+                <button class="preset-button" data-preset="Speed Focus">Speed Focus</button>
+                <button class="preset-button" data-preset="Form Focus">Form Focus</button>
+                <button class="preset-button" data-preset="Trainer Focus">Trainer Focus</button>
+            </div>
+
+            <div class="slider-group">
+                <label for="rprWeight">RPR Weight:</label>
+                <input type="range" id="rprWeight" min="0" max="3" step="0.01" value="1.1">
+                <span id="rprWeightValue">1.10</span>
+            </div>
+            <div class="slider-group">
+                <label for="tsWeight">TS Weight:</label>
+                <input type="range" id="tsWeight" min="0" max="3" step="0.01" value="0.6">
+                <span id="tsWeightValue">0.60</span>
+            </div>
+            <div class="slider-group">
+                <label for="orWeight">OR Weight:</label>
+                <input type="range" id="orWeight" min="0" max="3" step="0.01" value="0.32">
+                <span id="orWeightValue">0.32</span>
+            </div>
+            <div class="slider-group">
+                <label for="winsWeight">Wins (1st) Weight:</label>
+                <input type="range" id="winsWeight" min="0" max="5" step="0.01" value="2.1">
+                <span id="winsWeightValue">2.10</span>
+            </div>
+            <div class="slider-group">
+                <label for="placesWeight">Places (2nd/3rd) Weight:</label>
+                <input type="range" id="placesWeight" min="0" max="5" step="0.01" value="1.1">
+                <span id="placesWeightValue">1.10</span>
+            </div>
+             <div class="slider-group">
+                <label for="lastRunPenaltyWeight">Long Layoff Weight:</label>
+                <input type="range" id="lastRunPenaltyWeight" min="-0.5" max="0" step="0.01" value="-0.19">
+                <span id="lastRunPenaltyWeightValue">-0.19</span>
+            </div>
+             <div class="slider-group">
+                <label for="lastRunBonusWeight">Recent Run Weight:</label>
+                <input type="range" id="lastRunBonusWeight" min="0" max="0.5" step="0.01" value="0.13">
+                <span id="lastRunBonusWeightValue">0.13</span>
+            </div>
+            <div class="slider-group">
+                <label for="trainerPercentWeight">Trainer % Weight:</label>
+                <input type="range" id="trainerPercentWeight" min="0" max="3" step="0.01" value="0.8">
+                <span id="trainerPercentWeightValue">0.80</span>
+            </div>
+            <div class="slider-group">
+                <label for="trainerWinsWeight">Trainer Wins Weight:</label>
+                <input type="range" id="trainerWinsWeight" min="0" max="3" step="0.01" value="1.2">
+                <span id="trainerWinsWeightValue">1.20</span>
+            </div>
+            <div class="slider-group">
+                <label for="trainerBonusValue">Trainer 20%+ Bonus:</label>
+                <input type="range" id="trainerBonusValue" min="0" max="5" step="0.1" value="0.5">
+                <span id="trainerBonusValue">0.5</span>
+            </div>
+             <div class="slider-group">
+                <label for="layoffPenaltyValue">No Win/Long Layoff Penalty:</label>
+                <input type="range" id="layoffPenaltyValue" min="-5" max="0" step="0.1" value="-2.5">
+                <span id="layoffPenaltyValue">-2.5</span>
+            </div>
+        </div>
+
+        <div class="custom-race-header">
+            <h2 id="currentRaceDisplay"></h2>
+            <h3 id="currentRaceDetails"></h3>
+        </div>
+
+        <div id="customRunnersList" class="runners-list">
+            <!-- Custom scored runners will be rendered here -->
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="custom-score.js"></script>
+    <script>
+        // Hamburger menu logic - copied for consistency
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Highlight active nav link based on current page - copied for consistency
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('nav-link-active');
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('nav-link-active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
