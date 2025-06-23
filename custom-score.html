@@ -51,62 +51,71 @@
                 <button class="preset-button" data-preset="Speed Focus">Speed Focus</button>
                 <button class="preset-button" data-preset="Form Focus">Form Focus</button>
                 <button class="preset-button" data-preset="Trainer Focus">Trainer Focus</button>
+                <button class="preset-button" data-preset="Outsider Value">Outsider Value</button>
+                <button class="preset-button" data-preset="Consistency Focus">Consistency Focus</button>
             </div>
 
-            <div class="slider-group">
-                <label for="rprWeight">RPR Weight:</label>
-                <input type="range" id="rprWeight" min="0" max="3" step="0.01" value="1.1">
-                <span id="rprWeightValue">1.10</span>
-            </div>
-            <div class="slider-group">
-                <label for="tsWeight">TS Weight:</label>
-                <input type="range" id="tsWeight" min="0" max="3" step="0.01" value="0.6">
-                <span id="tsWeightValue">0.60</span>
-            </div>
-            <div class="slider-group">
-                <label for="orWeight">OR Weight:</label>
-                <input type="range" id="orWeight" min="0" max="3" step="0.01" value="0.32">
-                <span id="orWeightValue">0.32</span>
-            </div>
-            <div class="slider-group">
-                <label for="winsWeight">Wins (1st) Weight:</label>
-                <input type="range" id="winsWeight" min="0" max="5" step="0.01" value="2.1">
-                <span id="winsWeightValue">2.10</span>
-            </div>
-            <div class="slider-group">
-                <label for="placesWeight">Places (2nd/3rd) Weight:</label>
-                <input type="range" id="placesWeight" min="0" max="5" step="0.01" value="1.1">
-                <span id="placesWeightValue">1.10</span>
-            </div>
-             <div class="slider-group">
-                <label for="lastRunPenaltyWeight">Long Layoff Weight:</label>
-                <input type="range" id="lastRunPenaltyWeight" min="-0.5" max="0" step="0.01" value="-0.19">
-                <span id="lastRunPenaltyWeightValue">-0.19</span>
-            </div>
-             <div class="slider-group">
-                <label for="lastRunBonusWeight">Recent Run Weight:</label>
-                <input type="range" id="lastRunBonusWeight" min="0" max="0.5" step="0.01" value="0.13">
-                <span id="lastRunBonusWeightValue">0.13</span>
-            </div>
-            <div class="slider-group">
-                <label for="trainerPercentWeight">Trainer % Weight:</label>
-                <input type="range" id="trainerPercentWeight" min="0" max="3" step="0.01" value="0.8">
-                <span id="trainerPercentWeightValue">0.80</span>
-            </div>
-            <div class="slider-group">
-                <label for="trainerWinsWeight">Trainer Wins Weight:</label>
-                <input type="range" id="trainerWinsWeight" min="0" max="3" step="0.01" value="1.2">
-                <span id="trainerWinsWeightValue">1.20</span>
-            </div>
-            <div class="slider-group">
-                <label for="trainerBonusValue">Trainer 20%+ Bonus:</label>
-                <input type="range" id="trainerBonusValue" min="0" max="5" step="0.1" value="0.5">
-                <span id="trainerBonusValue">0.5</span>
-            </div>
-             <div class="slider-group">
-                <label for="layoffPenaltyValue">No Win/Long Layoff Penalty:</label>
-                <input type="range" id="layoffPenaltyValue" min="-5" max="0" step="0.1" value="-2.5">
-                <span id="layoffPenaltyValue">-2.5</span>
+            <div class="slider-grid"> <!-- Wrapper for grid layout -->
+                <div class="slider-group">
+                    <label for="rprWeight">RPR Weight:</label>
+                    <input type="range" id="rprWeight" min="0" max="3" step="0.01" value="0.0">
+                    <span id="rprWeightValue">0.00</span>
+                </div>
+                <div class="slider-group">
+                    <label for="tsWeight">TS Weight:</label>
+                    <input type="range" id="tsWeight" min="0" max="3" step="0.01" value="0.0">
+                    <span id="tsWeightValue">0.00</span>
+                </div>
+                <div class="slider-group">
+                    <label for="orWeight">OR Weight:</label>
+                    <input type="range" id="orWeight" min="0" max="3" step="0.01" value="0.0">
+                    <span id="orWeightValue">0.00</span>
+                </div>
+                <div class="slider-group">
+                    <label for="winsWeight">Wins (1st) Weight:</label>
+                    <input type="range" id="winsWeight" min="0" max="5" step="0.01" value="0.0">
+                    <span id="winsWeightValue">0.00</span>
+                </div>
+                <div class="slider-group">
+                    <label for="placesWeight">Places (2nd/3rd) Weight:</label>
+                    <input type="range" id="placesWeight" min="0" max="5" step="0.01" value="0.0">
+                    <span id="placesWeightValue">0.00</span>
+                 </div>
+                 <div class="slider-group">
+                    <label for="lastRunPenaltyWeight">Long Layoff Weight:</label>
+                    <input type="range" id="lastRunPenaltyWeight" min="-0.5" max="0" step="0.01" value="0.0">
+                    <span id="lastRunPenaltyWeightValue">0.00</span>
+                </div>
+                 <div class="slider-group">
+                    <label for="lastRunBonusWeight">Recent Run Weight:</label>
+                    <input type="range" id="lastRunBonusWeight" min="0" max="0.5" step="0.01" value="0.0">
+                    <span id="lastRunBonusWeightValue">0.00</span>
+                </div>
+                <div class="slider-group">
+                    <label for="trainerPercentWeight">Trainer % Weight:</label>
+                    <input type="range" id="trainerPercentWeight" min="0" max="3" step="0.01" value="0.0">
+                    <span id="trainerPercentWeightValue">0.00</span>
+                </div>
+                <div class="slider-group">
+                    <label for="trainerWinsWeight">Trainer Wins Weight:</label>
+                    <input type="range" id="trainerWinsWeight" min="0" max="3" step="0.01" value="0.0">
+                    <span id="trainerWinsWeightValue">0.00</span>
+                </div>
+                <div class="slider-group">
+                    <label for="trainerBonusValue">Trainer 20%+ Bonus:</label>
+                    <input type="range" id="trainerBonusValue" min="0" max="5" step="0.1" value="0.0">
+                    <span id="trainerBonusValueDisplay">0.0</span>
+                </div>
+                 <div class="slider-group">
+                    <label for="layoffPenaltyValue">No Win/Long Layoff Penalty:</label>
+                    <input type="range" id="layoffPenaltyValue" min="-5" max="0" step="0.1" value="0.0">
+                    <span id="layoffPenaltyValueDisplay">0.0</span>
+                </div>
+                <div class="slider-group">
+                    <label for="courseFormWeight">Course Form Weight:</label> <!-- NEW SLIDER -->
+                    <input type="range" id="courseFormWeight" min="0" max="3" step="0.01" value="0.0">
+                    <span id="courseFormWeightValue">0.00</span>
+                </div>
             </div>
         </div>
 

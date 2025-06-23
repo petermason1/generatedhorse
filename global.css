@@ -1125,6 +1125,7 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   position: relative;
   transition: all 0.25s ease-out;
   border: 1px solid transparent;
+  scroll-margin-top: 80px; /* Added to ensure sticky header clearance */
 }
 
 .runner-card:hover:not(.expanded) {
@@ -1542,11 +1543,152 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
     letter-spacing: 0.02em;
 }
 
+/* Custom Scoring Page Styles */
+/* ... existing .score-controls and h2 ... */
+
+/* NEW: Grid for sliders on larger screens */
+.slider-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Sliders remain 2-wide on large screens */
+    gap: 1.5em 2.5em; /* Row gap, column gap */
+    margin-bottom: 1em;
+}
+
+/* ... existing .slider-group, input[type="range"], span ... */
+
+
+/* New styles for preset buttons */
+.preset-buttons {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    display: grid; /* Changed to grid */
+    grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
+    gap: 10px;
+    justify-content: center; /* Still center the grid itself */
+}
+
+/* ... existing .preset-button styling ... */
+
+/* Responsive adjustments for sliders and preset buttons */
+@media (max-width: 768px) {
+    .slider-grid { /* Revert to flex column for sliders on smaller screens */
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em; /* Adjust gap for column layout on mobile */
+    }
+    .slider-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .slider-group label {
+        width: 100%;
+        font-size: 1em;
+    }
+    .slider-group input[type="range"] {
+        width: calc(100% - 60px); /* Make room for value span */
+        margin-right: 50px;
+    }
+    .slider-group span {
+        position: absolute; /* Position value next to slider on smaller screens */
+        right: 1em; /* Adjust as needed */
+        top: 25px; /* Position to align with the slider thumb */
+    }
+
+    .preset-buttons { /* NEW: Adjust preset button grid for tablets/midsized mobiles */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets/mobs */
+        gap: 8px; /* Slightly smaller gap */
+        margin-top: 1.5em;
+    }
+    .preset-button {
+        padding: 7px 14px;
+        font-size: 0.9em;
+    }
+}
+/* For very small screens, make preset buttons 2 columns */
+@media (max-width: 480px) {
+    .preset-buttons {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller phones */
+    }
+}
+
+/* Runner Card specific: Ensure sticky header clearance */
+.runner-card {
+  /* ... existing styles ... */
+  scroll-margin-top: 80px; /* Adjust this value if your navbar height changes or jump is still off */
+}
+
+
+/* Custom Scoring Page Specific Styles */
+
+.score-controls {
+    background: linear-gradient(145deg, #21282f, #1b2027);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: 1.5em auto 2em auto;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+    max-width: 700px;
+}
+
+.score-controls h2 {
+    color: #ffc900;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    font-size: 1.6em;
+    letter-spacing: 0.02em;
+}
+
+/* Preset Buttons Layout */
+.preset-buttons {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    gap: 10px;
+    justify-content: center; /* Center the grid itself */
+}
+
+.preset-button {
+    background: linear-gradient(145deg, #36e8b5, #2ce8c0);
+    color: #191e23;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 18px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.preset-button:hover {
+    background: linear-gradient(145deg, #2ce8c0, #36e8b5);
+    box-shadow: 0 4px 12px rgba(54,232,181,0.3);
+    transform: translateY(-2px);
+}
+
+.preset-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Slider Grid Layout (for larger screens) */
+.slider-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Sliders remain 2-wide on large screens */
+    gap: 1.5em 2.5em; /* Row gap, column gap */
+    margin-bottom: 1em;
+}
+
+/* Individual Slider Group Styling */
 .slider-group {
     display: flex;
     align-items: center;
-    margin-bottom: 1em;
     gap: 15px;
+    position: relative; /* For absolute positioning of value on mobile */
 }
 
 .slider-group label {
@@ -1597,10 +1739,16 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
     font-size: 1.1em;
 }
 
+/* Custom Race Header Styles */
 .custom-race-header {
     text-align: center;
     margin-bottom: 2em;
     color: #ffd700;
+    /* Adjust this value to control where the screen lands relative to the top. */
+    /* If the current jump is too low (hiding the header), reduce this value. */
+    /* If the current jump is too high (showing too much space above the header), increase this value. */
+    /* Start with a larger value, like 120px or 150px, and adjust from there. */
+    scroll-margin-top: 80px; /* CURRENT VALUE - Try increasing this! */
 }
 .custom-race-header h3 {
     color: #32dd99;
@@ -1608,7 +1756,16 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
     margin-bottom: 0.5em;
 }
 
-/* New styles for race selection dropdown */
+/* Also ensure your .runner-card has a scroll-margin-top if you ever scroll directly to it */
+.runner-card {
+  /* ... other styles ... */
+  scroll-margin-top: 80px; /* Make sure this is also set to accommodate the navbar */
+}
+
+/* ... (rest of your global.css, including preset-buttons and slider-grid layouts) ... */
+
+
+/* Race Selector Dropdown Styles */
 .race-selector-container {
     text-align: center;
     margin-bottom: 1.5em;
@@ -1643,49 +1800,20 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
     box-shadow: 0 0 10px rgba(54,232,181,0.3);
 }
 
-/* New styles for preset buttons */
-.preset-buttons {
-    text-align: center;
-    margin-top: 2em;
-    margin-bottom: 1.5em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.preset-button {
-    background: linear-gradient(145deg, #36e8b5, #2ce8c0);
-    color: #191e23;
-    font-weight: 700;
-    border: none;
-    border-radius: 7px;
-    padding: 8px 18px;
-    cursor: pointer;
-    font-size: 0.95em;
-    transition: all 0.2s ease-out;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.preset-button:hover {
-    background: linear-gradient(145deg, #2ce8c0, #36e8b5);
-    box-shadow: 0 4px 12px rgba(54,232,181,0.3);
-    transform: translateY(-2px);
-}
-
-.preset-button:active {
-    transform: translateY(0);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-
-/* Responsive adjustments for sliders */
-@media (max-width: 600px) {
+/* Responsive Adjustments for Sliders and Preset Buttons */
+@media (max-width: 768px) {
     .score-controls {
         padding: 1em;
     }
     .score-controls h2 {
         font-size: 1.4em;
+    }
+
+    /* Sliders revert to single column (flex column) */
+    .slider-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em; /* Adjust gap for column layout on mobile */
     }
     .slider-group {
         flex-direction: column;
@@ -1696,20 +1824,39 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
         width: 100%;
         font-size: 1em;
     }
-    .slider-group span {
-        position: absolute; /* Position value next to slider on smaller screens */
-        right: 1em; /* Adjust as needed */
-    }
     .slider-group input[type="range"] {
         width: calc(100% - 60px); /* Make room for value span */
         margin-right: 50px;
     }
+    .slider-group span {
+        position: absolute; /* Position value next to slider on smaller screens */
+        right: 1em; /* Adjust as needed */
+        top: 25px; /* Position to align with the slider thumb */
+    }
+
+    /* Preset buttons adjust to 3 columns for tablets/midsized mobiles */
     .preset-buttons {
-        gap: 8px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px; /* Slightly smaller gap */
         margin-top: 1.5em;
     }
     .preset-button {
         padding: 7px 14px;
         font-size: 0.9em;
     }
+}
+
+/* For very small screens, make preset buttons 2 columns */
+@media (max-width: 480px) {
+    .preset-buttons {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller phones */
+    }
+}
+
+/* Runner Card specific: Ensure sticky header clearance (if not already defined elsewhere) */
+/* This is a general style that might be defined in the main part of your global.css */
+/* If you have a .runner-card definition earlier, ensure this line is within it. */
+.runner-card {
+  /* ... existing styles ... */
+  scroll-margin-top: 80px; /* If the jump is still off, try increasing this value (e.g., to 100px, 120px) */
 }

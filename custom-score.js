@@ -13,6 +13,7 @@ const trainerPercentWeightInput = document.getElementById('trainerPercentWeight'
 const trainerWinsWeightInput = document.getElementById('trainerWinsWeight');
 const trainerBonusValueInput = document.getElementById('trainerBonusValue');
 const layoffPenaltyValueInput = document.getElementById('layoffPenaltyValue');
+const courseFormWeightInput = document.getElementById('courseFormWeight'); // NEW SLIDER INPUT
 
 const rprWeightValue = document.getElementById('rprWeightValue');
 const tsWeightValue = document.getElementById('tsWeightValue');
@@ -23,8 +24,9 @@ const lastRunPenaltyWeightValue = document.getElementById('lastRunPenaltyWeightV
 const lastRunBonusWeightValue = document.getElementById('lastRunBonusWeightValue');
 const trainerPercentWeightValue = document.getElementById('trainerPercentWeightValue');
 const trainerWinsWeightValue = document.getElementById('trainerWinsWeightValue');
-const trainerBonusValue = document.getElementById('trainerBonusValue');
-const layoffPenaltyValue = document.getElementById('layoffPenaltyValue');
+const trainerBonusValueDisplay = document.getElementById('trainerBonusValueDisplay');
+const layoffPenaltyValueDisplay = document.getElementById('layoffPenaltyValueDisplay');
+const courseFormWeightValue = document.getElementById('courseFormWeightValue'); // NEW SLIDER VALUE SPAN
 
 const customRunnersListDiv = document.getElementById('customRunnersList');
 const currentRaceDisplay = document.getElementById('currentRaceDisplay');
@@ -32,48 +34,51 @@ const currentRaceDetails = document.getElementById('currentRaceDetails');
 
 // Race selection elements
 const raceSelector = document.getElementById('raceSelector');
-let currentSelectedRace = null; // To hold the currently displayed race object
+let currentSelectedRace = null;
 
 // Define weight presets
 const weightPresets = {
     "Default": {
-        rprWeight: 1.1,
-        tsWeight: 0.6,
-        orWeight: 0.32,
-        winsWeight: 2.1,
-        placesWeight: 1.1,
-        lastRunPenaltyWeight: -0.19,
-        lastRunBonusWeight: 0.13,
-        trainerPercentWeight: 0.8,
-        trainerWinsWeight: 1.2,
-        trainerBonusValue: 0.5,
-        layoffPenaltyValue: -2.5
+        rprWeight: 0.0,
+        tsWeight: 0.0,
+        orWeight: 0.0,
+        winsWeight: 0.0,
+        placesWeight: 0.0,
+        lastRunPenaltyWeight: 0.0,
+        lastRunBonusWeight: 0.0,
+        trainerPercentWeight: 0.0,
+        trainerWinsWeight: 0.0,
+        trainerBonusValue: 0.0,
+        layoffPenaltyValue: 0.0,
+        courseFormWeight: 0.0 // NEW DEFAULT WEIGHT
     },
     "Speed Focus": {
-        rprWeight: 2.5, // Higher RPR
-        tsWeight: 1.5,  // Higher TS
+        rprWeight: 2.5,
+        tsWeight: 1.5,
         orWeight: 0.5,
         winsWeight: 1.0,
         placesWeight: 0.5,
-        lastRunPenaltyWeight: -0.25, // More penalty for long layoffs
-        lastRunBonusWeight: 0.2,    // More bonus for recent speed
+        lastRunPenaltyWeight: -0.25,
+        lastRunBonusWeight: 0.2,
         trainerPercentWeight: 0.4,
         trainerWinsWeight: 0.6,
         trainerBonusValue: 0.2,
-        layoffPenaltyValue: -1.0
+        layoffPenaltyValue: -1.0,
+        courseFormWeight: 0.5 // NEW PRESET WEIGHT
     },
     "Form Focus": {
         rprWeight: 0.8,
         tsWeight: 0.3,
         orWeight: 0.2,
-        winsWeight: 4.0, // Much higher wins
-        placesWeight: 2.5, // Much higher places
+        winsWeight: 4.0,
+        placesWeight: 2.5,
         lastRunPenaltyWeight: -0.1,
         lastRunBonusWeight: 0.1,
-        trainerPercentWeight: 1.5, // More emphasis on trainer form
-        trainerWinsWeight: 2.0,    // More emphasis on trainer wins
-        trainerBonusValue: 1.0,    // Stronger trainer bonus
-        layoffPenaltyValue: -4.0   // Stronger layoff penalty
+        trainerPercentWeight: 1.5,
+        trainerWinsWeight: 2.0,
+        trainerBonusValue: 1.0,
+        layoffPenaltyValue: -4.0,
+        courseFormWeight: 1.0 // NEW PRESET WEIGHT
     },
     "Trainer Focus": {
         rprWeight: 0.5,
@@ -83,10 +88,39 @@ const weightPresets = {
         placesWeight: 0.5,
         lastRunPenaltyWeight: -0.1,
         lastRunBonusWeight: 0.1,
-        trainerPercentWeight: 2.5, // Strong emphasis on trainer %
-        trainerWinsWeight: 2.5,    // Strong emphasis on trainer wins
-        trainerBonusValue: 2.0,    // Very strong trainer bonus
-        layoffPenaltyValue: -1.0
+        trainerPercentWeight: 2.5,
+        trainerWinsWeight: 2.5,
+        trainerBonusValue: 2.0,
+        layoffPenaltyValue: -1.0,
+        courseFormWeight: 0.3 // NEW PRESET WEIGHT
+    },
+    "Outsider Value": {
+        rprWeight: 1.5,
+        tsWeight: 1.0,
+        orWeight: 1.0,
+        winsWeight: 0.5,
+        placesWeight: 0.8,
+        lastRunPenaltyWeight: -0.1,
+        lastRunBonusWeight: 0.15,
+        trainerPercentWeight: 0.7,
+        trainerWinsWeight: 0.9,
+        trainerBonusValue: 0.3,
+        layoffPenaltyValue: -0.5,
+        courseFormWeight: 0.7 // NEW PRESET WEIGHT
+    },
+    "Consistency Focus": {
+        rprWeight: 0.7,
+        tsWeight: 0.5,
+        orWeight: 0.4,
+        winsWeight: 1.5,
+        placesWeight: 3.0,
+        lastRunPenaltyWeight: -0.15,
+        lastRunBonusWeight: 0.25,
+        trainerPercentWeight: 1.0,
+        trainerWinsWeight: 1.0,
+        trainerBonusValue: 0.7,
+        layoffPenaltyValue: -2.0,
+        courseFormWeight: 1.2 // NEW PRESET WEIGHT
     }
 };
 
@@ -108,7 +142,10 @@ function calculateCustomScore(r, weights) {
     const trainerPercent = Number.parseFloat(r.trainer_14_days?.percent) || 0;
     const trainerWins = Number.parseInt(r.trainer_14_days?.wins) || 0;
 
-    // Apply weights from sliders
+    // Course form: Simple example - count '1' in 'course_form' if available, otherwise 0
+    // You'd ideally get this from your data.js or a more sophisticated lookup.
+    const courseFormWins = (r.course_form?.match(/1/g) || []).length; // Assuming course_form exists like 'form'
+
     let score = 0;
     score += weights.rprWeight * rpr;
     score += weights.tsWeight * ts;
@@ -117,15 +154,16 @@ function calculateCustomScore(r, weights) {
     score += weights.placesWeight * places;
 
     if (lastRunVal > 50) {
-        score += (lastRunVal - 50) * weights.lastRunPenaltyWeight; // Negative weight for penalty
+        score += (lastRunVal - 50) * weights.lastRunPenaltyWeight;
     } else {
-        score += (50 - lastRunVal) * weights.lastRunBonusWeight; // Positive weight for bonus
+        score += (50 - lastRunVal) * weights.lastRunBonusWeight;
     }
 
     score += weights.trainerPercentWeight * trainerPercent;
     score += weights.trainerWinsWeight * trainerWins;
-    score += (trainerPercent >= 20 ? weights.trainerBonusValue : 0); // Trainer bonus applied as a flat value
-    score += (wins === 0 && lastRunVal > 50) ? weights.layoffPenaltyValue : 0; // Layoff penalty applied as a flat value
+    score += (trainerPercent >= 20 ? weights.trainerBonusValue : 0);
+    score += (wins === 0 && lastRunVal > 50) ? weights.layoffPenaltyValue : 0;
+    score += weights.courseFormWeight * courseFormWins; // NEW SCORING METRIC ADDED
 
     if (score < -12) score = -12 + (score + 12) * 0.4;
     if (!Number.isFinite(score)) score = 0;
@@ -139,6 +177,25 @@ function isNonRunner(r) {
   if (r.non_runner === true) return true;
   return false;
 }
+
+// Helper: Converts fractional odds string (e.g., "7/4") to a decimal number.
+function fractionToDecimalOdds(fraction) {
+    if (!fraction || typeof fraction !== 'string') return Infinity;
+    const parts = fraction.split('/');
+    if (parts.length === 2) {
+        const numerator = parseFloat(parts[0]);
+        const denominator = parseFloat(parts[1]);
+        if (denominator !== 0 && Number.isFinite(numerator) && Number.isFinite(denominator)) {
+            return (numerator / denominator) + 1;
+        }
+    }
+    const decimalValue = parseFloat(fraction);
+    if (Number.isFinite(decimalValue)) {
+        return decimalValue;
+    }
+    return Infinity;
+}
+
 
 // --- More Info Table (re-used from racecard.js) ---
 function renderRunnerMore(r) {
@@ -234,10 +291,9 @@ function populateRaceDropdown() {
         return;
     }
 
-    // Sort races by date and time
     allRaces.sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
 
-    raceSelector.innerHTML = ''; // Clear existing options
+    raceSelector.innerHTML = '';
     allRaces.forEach((race, index) => {
         const option = document.createElement('option');
         option.value = race._id;
@@ -245,8 +301,6 @@ function populateRaceDropdown() {
         raceSelector.appendChild(option);
     });
 
-    // Set the initial selected race to the first one, or based on a URL parameter if needed
-    // For this example, we'll just select the first race initially
     currentSelectedRace = allRaces[0];
     if (currentSelectedRace) {
         raceSelector.value = currentSelectedRace._id;
@@ -275,26 +329,14 @@ function updateSliderValues(weights) {
     trainerPercentWeightValue.textContent = weights.trainerPercentWeight.toFixed(2);
     trainerWinsWeightInput.value = weights.trainerWinsWeight;
     trainerWinsWeightValue.textContent = weights.trainerWinsWeight.toFixed(2);
-    trainerBonusValueInput.value = weights.trainerBonusValue;
-    trainerBonusValue.textContent = weights.trainerBonusValue.toFixed(1);
-    layoffPenaltyValueInput.value = weights.layoffPenaltyValue;
-    layoffPenaltyValue.textContent = weights.layoffPenaltyValue.toFixed(1);
+    trainerBonusValueDisplay.textContent = weights.trainerBonusValue.toFixed(1);
+    layoffPenaltyValueDisplay.textContent = weights.layoffPenaltyValue.toFixed(1);
+    courseFormWeightInput.value = weights.courseFormWeight;
+    courseFormWeightValue.textContent = weights.courseFormWeight.toFixed(2);
 }
 
-// Main function to render runners with custom scores
-function renderCustomScoredRunners() {
-    if (!currentSelectedRace) {
-        customRunnersListDiv.innerHTML = '<p class="error-message">Please select a race.</p>';
-        currentRaceDisplay.textContent = '';
-        currentRaceDetails.textContent = '';
-        return;
-    }
-
-    // Update current race display
-    currentRaceDisplay.textContent = `${currentSelectedRace.course} ${currentSelectedRace.off_time}`;
-    currentRaceDetails.textContent = `${currentSelectedRace.race_name} • ${currentSelectedRace.distance} • ${currentSelectedRace.going}`;
-
-    // Get current weights from sliders
+// Helper to check if all current weights are zero (effectively "default")
+function areAllWeightsZero() {
     const currentWeights = {
         rprWeight: parseFloat(rprWeightInput.value),
         tsWeight: parseFloat(tsWeightInput.value),
@@ -306,21 +348,67 @@ function renderCustomScoredRunners() {
         trainerPercentWeight: parseFloat(trainerPercentWeightInput.value),
         trainerWinsWeight: parseFloat(trainerWinsWeightInput.value),
         trainerBonusValue: parseFloat(trainerBonusValueInput.value),
-        layoffPenaltyValue: parseFloat(layoffPenaltyValueInput.value)
+        layoffPenaltyValue: parseFloat(layoffPenaltyValueInput.value),
+        courseFormWeight: parseFloat(courseFormWeightInput.value)
     };
 
-    // Calculate scores for each runner using custom weights
-    currentSelectedRace.runners.forEach(r => {
+    for (const key in weightPresets.Default) {
+        if (Math.abs(currentWeights[key] - weightPresets.Default[key]) > 0.001) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+// Main function to render runners with custom scores
+function renderCustomScoredRunners() {
+    if (!currentSelectedRace) {
+        customRunnersListDiv.innerHTML = '<p class="error-message">No race data available. Please select a race.</p>';
+        currentRaceDisplay.textContent = '';
+        currentRaceDetails.textContent = '';
+        return;
+    }
+
+    currentRaceDisplay.textContent = `${currentSelectedRace.course} ${currentSelectedRace.off_time}`;
+    currentRaceDetails.textContent = `${currentSelectedRace.race_name} • ${currentSelectedRace.distance} • ${currentSelectedRace.going}`;
+
+    const currentWeights = {
+        rprWeight: parseFloat(rprWeightInput.value),
+        tsWeight: parseFloat(tsWeightInput.value),
+        orWeight: parseFloat(orWeightInput.value),
+        winsWeight: parseFloat(winsWeightInput.value),
+        placesWeight: parseFloat(placesWeightInput.value),
+        lastRunPenaltyWeight: parseFloat(lastRunPenaltyWeightInput.value),
+        lastRunBonusWeight: parseFloat(lastRunBonusWeightInput.value),
+        trainerPercentWeight: parseFloat(trainerPercentWeightInput.value),
+        trainerWinsWeight: parseFloat(trainerWinsWeightInput.value),
+        trainerBonusValue: parseFloat(trainerBonusValueInput.value),
+        layoffPenaltyValue: parseFloat(layoffPenaltyValueInput.value),
+        courseFormWeight: parseFloat(courseFormWeightInput.value)
+    };
+
+    const runnersToProcess = JSON.parse(JSON.stringify(currentSelectedRace.runners));
+
+    runnersToProcess.forEach(r => {
         r.customScore = calculateCustomScore(r, currentWeights);
     });
 
-    // Sort runners by custom score (non-runners to bottom)
-    const nrs = currentSelectedRace.runners.filter(isNonRunner);
-    const activeRunners = currentSelectedRace.runners.filter(r => !isNonRunner(r));
-    activeRunners.sort((a, b) => (b.customScore ?? -9999) - (a.customScore ?? -9999));
+    const nrs = runnersToProcess.filter(isNonRunner);
+    let activeRunners = runnersToProcess.filter(r => !isNonRunner(r));
+
+    if (areAllWeightsZero()) {
+        activeRunners.sort((a, b) => {
+            const oddsA = fractionToDecimalOdds(a.odds?.[0]?.fractional);
+            const oddsB = fractionToDecimalOdds(b.odds?.[0]?.fractional);
+            return oddsA - oddsB;
+        });
+    } else {
+        activeRunners.sort((a, b) => (b.customScore ?? -9999) - (a.customScore ?? -9999));
+    }
+
     const sortedRunners = [...activeRunners, ...nrs];
 
-    // Render the runners list
     customRunnersListDiv.innerHTML = sortedRunners.map((r, i) => `
         <div class="runner-card${isNonRunner(r) ? ' runner-nr' : ''}" data-i="${i}">
             <div class="runner-num-draw">
@@ -356,20 +444,17 @@ function renderCustomScoredRunners() {
         </div>
     `).join('');
 
-    // Re-attach event listeners for "More info" buttons after content is rendered
     document.querySelectorAll('.runner-more-btn').forEach(button => {
-        button.removeEventListener('click', toggleMoreInfo); // Prevent duplicate listeners
+        button.removeEventListener('click', toggleMoreInfo);
         button.addEventListener('click', toggleMoreInfo);
     });
 }
 
-// Function to toggle more info section (copied from racecard.js)
 function toggleMoreInfo(e) {
     const card = e.target.closest('.runner-card');
     card.classList.toggle('expanded');
     e.target.textContent = card.classList.contains('expanded') ? 'Less info ▲' : 'More info ▼';
 }
-
 
 // Event listeners for slider changes
 rprWeightInput.addEventListener('input', () => {
@@ -409,13 +494,18 @@ trainerWinsWeightInput.addEventListener('input', () => {
     renderCustomScoredRunners();
 });
 trainerBonusValueInput.addEventListener('input', () => {
-    trainerBonusValue.textContent = parseFloat(trainerBonusValueInput.value).toFixed(1);
+    trainerBonusValueDisplay.textContent = parseFloat(trainerBonusValueInput.value).toFixed(1);
     renderCustomScoredRunners();
 });
 layoffPenaltyValueInput.addEventListener('input', () => {
-    layoffPenaltyValue.textContent = parseFloat(layoffPenaltyValueInput.value).toFixed(1);
+    layoffPenaltyValueDisplay.textContent = parseFloat(layoffPenaltyValueInput.value).toFixed(1);
     renderCustomScoredRunners();
 });
+courseFormWeightInput.addEventListener('input', () => {
+    courseFormWeightValue.textContent = parseFloat(courseFormWeightInput.value).toFixed(2);
+    renderCustomScoredRunners();
+});
+
 
 // Event listener for race selection change
 raceSelector.addEventListener('change', () => {
@@ -423,6 +513,10 @@ raceSelector.addEventListener('change', () => {
     const selectedRaceId = raceSelector.value;
     currentSelectedRace = allRaces.find(r => r._id === selectedRaceId);
     renderCustomScoredRunners();
+    const targetElement = document.querySelector('.custom-race-header');
+    if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 });
 
 // Event listeners for preset buttons
@@ -433,17 +527,22 @@ document.querySelectorAll('.preset-button').forEach(button => {
         if (presetWeights) {
             updateSliderValues(presetWeights);
             renderCustomScoredRunners();
+            const targetElement = document.querySelector('.custom-race-header');
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     });
 });
 
 // Initial setup when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    populateRaceDropdown(); // Populate dropdown first
+    populateRaceDropdown();
     if (window.racecardsData && window.racecardsData.racecards && window.racecardsData.racecards.length > 0) {
-        currentSelectedRace = window.racecardsData.racecards[0]; // Set initial race (first in sorted list)
+        currentSelectedRace = window.racecardsData.racecards[0];
     }
-    renderCustomScoredRunners(); // Render runners with initial (or default) weights
+    updateSliderValues(weightPresets.Default);
+    renderCustomScoredRunners();
 });
 
 console.log('custom-score.js finished.');
