@@ -78,164 +78,334 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   text-align: center;
 }
 
-/* --- TOP PICKS/TIPS --- */
-.top-picks-bar {
-  max-width: 700px;
-  margin: 0 auto 2.3em auto;
-}
-.top-picks-title {
-  color: #ffd700;
+/* --- TIPS PAGE SPECIFIC STYLES --- */
+
+/* Page Title (overrides h1 for this page, or adds more specific style) */
+.page-title {
   text-align: center;
-  font-size: 1.38em;
-  margin-bottom: 0.7em;
-  font-weight: 800;
-  letter-spacing: 0.01em;
-}
-.top-picks-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-.top-pick-card {
-  background: #232d37;
-  border-radius: 10px;
-  box-shadow: 0 2px 14px #1116;
-  width: 100%;
-  min-height: 60px;
-  padding: 0.77em 1.35em 0.77em 1.35em;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.05em;
-  font-size: 1.08em;
-}
-.top-pick-label {
-  font-size: 1.07em;
-  font-weight: 700;
-  color: #ffc900;
-  width: 74px;
-  flex-shrink: 0;
-  text-align: right;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-.top-pick-horse {
-  color: #35e9ae;
-  font-weight: 900;
-  font-size: 1.13em;
-  text-decoration: none;
-  margin-right: 7px;
-  min-width: 90px;
-}
-.top-pick-odds {
-  color: #ffe564;
-  font-weight: 700;
-  font-size: 1.05em;
-  margin-right: 14px;
-}
-.top-pick-reason {
-  color: #bbb;
-  font-size: 1em;
-  font-weight: 400;
-  margin-right: 12px;
-  flex: 1;
-  text-align: left;
-  min-width: 80px;
-  max-width: 230px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.top-pick-race {
-  color: #ffc900;
-  font-size: .98em;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-@media (max-width: 750px) {
-  .top-picks-bar, .next6-bar { max-width: 99vw; }
-  .top-pick-card { flex-direction: column; align-items: flex-start; min-height: unset; padding: 0.7em 1em; gap: 4px; }
-  .top-pick-label { width: auto; text-align: left; margin-bottom: 2px;}
-  .top-pick-reason, .top-pick-race { max-width: 100%; white-space: normal;}
+  margin: 1.5em auto 0.8em auto; /* Adjusted margins */
+  font-size: 2.3em; /* Slightly larger for prominence */
+  color: #ffd700; /* Main golden yellow color */
+  font-weight: 800; /* Bold */
+  letter-spacing: 0.02em; /* Subtle spacing */
+  max-width: 700px; /* Constrain width */
 }
 
-/* --- SEE TIPS BUTTON --- */
-.see-tips-btn {
+/* Section titles for Top Picks, Value, Outsiders */
+.tips-section {
+  margin: 0 auto 2.5em auto;
+  max-width: 700px; /* Matches the width of tip cards */
+}
+
+.section-title {
+  font-size: 1.4em; /* Slightly larger than generic h2 */
+  font-weight: 700; /* Bold */
+  margin-bottom: 0.8em; /* Space below heading */
+  padding-bottom: 0.3em; /* Padding for the border */
+  border-bottom: 2px solid; /* Solid border for emphasis */
+  text-align: left; /* Align to the left */
+  letter-spacing: 0.01em;
+}
+
+.top-picks-title {
+  color: #ffc900; /* Golden yellow for Top Picks */
+  border-color: #ffc900;
+}
+
+.value-picks-title {
+  color: #36e8b5; /* Green for Value Picks */
+  border-color: #36e8b5;
+}
+
+.outsider-picks-title {
+  color: #87ceeb; /* Lighter blue for Outsiders */
+  border-color: #87ceeb;
+}
+
+.no-picks {
+  color: #b7b7b7; /* Lighter grey for 'no picks' message */
+  text-align: center;
+  padding: 1.5em;
+  background: #232d37;
+  border-radius: 8px;
+  margin-bottom: 2em; /* Space after the message */
+}
+
+/* Tip Card Styling (main container for each tip) */
+.tip-card {
+  /* Subtle gradient for a modern, lifted look */
+  background: linear-gradient(145deg, #282d34, #20242b);
+  border-radius: 9px;
+  padding: 1.1em 1.1em 1em 1.1em;
+  margin-bottom: 0.78em;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Enhanced shadow */
+  transition: all 0.25s ease-out; /* Smooth transition for hover effects */
+  border: 1px solid transparent; /* Prepare for border on hover */
+}
+
+.tip-card:hover {
+  background: linear-gradient(145deg, #2b313a, #232931); /* Slightly lighter on hover */
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 20px rgba(54,232,181,0.4); /* Stronger shadow + glow */
+  border-color: #36e8b5; /* Accent border on hover */
+}
+
+/* Tip Number */
+.tip-num {
+  font-weight: bold;
+  font-size: 1.22em;
+  width: 2em; /* Fixed width for alignment */
+  flex-shrink: 0; /* Prevent shrinking */
   display: inline-block;
-  margin-top: 18px;
+  color: #ffc900;
+  text-align: center;
+  align-self: flex-start; /* Align to the top of the card content */
+  margin-top: 0.1em; /* Small adjustment for vertical alignment */
+}
+
+/* Main content area within the card */
+.tip-content {
+  flex: 1; /* Take remaining space */
+}
+
+/* Header line for Horse Name, Odds, Score */
+.tip-header {
+  display: flex;
+  align-items: baseline; /* Align text baselines */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  margin-bottom: 0.2em; /* Space below header line */
+}
+
+/* Horse Name */
+.tip-horse {
+  color: #35e9ae; /* Your green accent color */
+  font-size: 1.18em; /* Slightly larger */
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease-out; /* Smooth color transition */
+}
+
+.tip-horse:hover {
+  color: #2ce8c0; /* Slightly brighter green on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Odds */
+.tip-odds {
+  color: #ffe564; /* Brighter yellow for prominence */
+  font-weight: bold;
+  font-size: 1.05em; /* Slightly larger */
+  margin-left: 10px; /* Space from horse name */
+  white-space: nowrap; /* Keep odds on one line */
+}
+
+/* Score */
+.tip-score {
+  color: #a0a8b7; /* Subtle greyish blue */
+  font-weight: 600;
+  font-size: .95em; /* Slightly smaller for subtlety */
+  margin-left: 6px; /* Space from odds */
+  white-space: nowrap;
+}
+
+/* Race Info (Course, Time, Race Name) */
+.tip-race-info {
+  font-size: .98em;
+  opacity: .88; /* Slightly more visible */
+  color: #f0f0f0; /* Default text color */
+  margin-bottom: 0.5em; /* Space before reason */
+}
+
+.tip-race-name {
+  color: #ffc900; /* Highlight race name */
+  font-weight: 500;
+}
+
+/* Tip Reason */
+.tip-reason {
+  margin-top: 5px;
+  color: #c0f0ff; /* Lighter blue for a distinct look */
+  font-size: .98em;
+  line-height: 1.4;
+}
+
+/* Tip Badges */
+.tip-badge {
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-top: 8px; /* Space above badge */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.tip-badge.top-pick {
+  background: #ffc900;
+  color: #191e23;
+}
+
+.tip-badge.value {
   background: #36e8b5;
   color: #191e23;
-  font-weight: 700;
-  font-size: 1.09em;
-  padding: 10px 26px 9px 26px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
-  box-shadow: 0 2px 10px #19e7b633;
-  letter-spacing: 0.5px;
 }
-.see-tips-btn:hover {
-  background: #191e23;
-  color: #36e8b5;
-  box-shadow: 0 3px 18px #191e23cc;
+
+.tip-badge.outsider {
+  background: #87ceeb;
+  color: #191e23;
+}
+
+
+/* --- Responsive Adjustments for Tips Screen --- */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  .tips-section {
+    max-width: 96vw; /* Allow sections to take more width on smaller screens */
+    padding: 0 2vw; /* Add some padding from edges */
+  }
+  .section-title {
+    font-size: 1.2em;
+    margin-bottom: 0.7em;
+  }
+  .tip-card {
+    flex-direction: column; /* Stack elements vertically in card on smaller screens */
+    align-items: flex-start; /* Align content to the left */
+    gap: 8px; /* Reduce gap */
+    padding: 1em;
+  }
+  .tip-num {
+    font-size: 1.1em;
+    width: auto;
+    margin-bottom: 0.5em;
+  }
+  .tip-header {
+    flex-direction: column; /* Stack horse, odds, score vertically */
+    align-items: flex-start;
+    margin-bottom: 0.5em;
+  }
+  .tip-horse {
+    font-size: 1.1em;
+  }
+  .tip-odds, .tip-score {
+    margin-left: 0; /* Remove left margin when stacked */
+    margin-top: 5px; /* Add top margin when stacked */
+  }
+  .tip-race-info, .tip-reason {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5em;
+  }
+  .tips-section {
+    padding: 0 1vw;
+  }
+  .tip-card {
+    padding: 0.8em;
+    gap: 6px;
+  }
+  .tip-horse {
+    font-size: 1em;
+  }
+  .tip-odds, .tip-score {
+    font-size: 0.95em;
+  }
+  .tip-badge {
+    font-size: 0.8em;
+    padding: 3px 6px;
+  }
 }
 
 /* --- NEXT 6 RACES --- */
 .next6-bar {
   background: #21242a;
   border-radius: 12px;
-  padding: 1.1em 0.7em 1.3em 0.7em;
-  margin: 1.2em 0 1.4em 0;
-  box-shadow: 0 2px 12px #0002;
+  padding: 1.5em 1em 1.7em 1em; /* Increased padding around the entire bar content */
+  margin: 1.2em auto 1.4em auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35); /* Enhanced shadow for more depth */
   text-align: center;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
+
 .next6-races {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.23em;
+  grid-template-columns: repeat(6, 1fr); /* Default for larger screens */
+  gap: 0.6em;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
 }
-@media (max-width: 1024px) {
-  .next6-races { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); }
-}
+
 .next6-race-link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;;
-  background: #232d37;
+  justify-content: center;
+  /* Subtle gradient for a more dynamic background */
+  background: linear-gradient(145deg, #232d37, #1e262f);
   border-radius: 8px;
-  padding: 0.44em 0.7em;
+  padding: 0.8em 0.3em; /* Adjusted padding within each box for better internal spacing */
   color: #28d987;
   text-decoration: none;
   font-weight: bold;
-  min-height: 62px;
+  min-height: 75px; /* Ensures consistent vertical spacing for content */
   border: 2px solid #1f6037;
-  transition: background 0.15s, color 0.15s;
-  box-shadow: 0 2px 6px #0001;
+  transition: background 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Smoother transitions for all properties */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Stronger initial shadow */
 }
+
 .next6-race-link:hover {
-  background: #28d987;
+  background: #28d987; /* Solid color for hover, as per original design */
   color: #161c22;
+  border-color: #28d987;
+  transform: translateY(-3px); /* Subtle lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0,220,150,0.3); /* Greenish glow on hover */
 }
+
 .next6-time {
-  font-size: 1.06em;
+  font-size: 1.1em;
   font-weight: bold;
-  line-height: 1.08;
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 5px; /* Increased margin to separate from course name above */
+  color: #28d987; /* Ensure time specifically has the green color */
+  /* Transition for color change on hover */
+  transition: color 0.2s ease-out;
 }
+
+.next6-race-link:hover .next6-time {
+  color: #161c22; /* Text color on hover matches background */
+}
+
+
 .next6-course {
-  font-size: 0.93em;
+  font-size: 0.88em;
   color: #fff;
-  opacity: 0.80;
-  line-height: 1.10;
+  opacity: 0.85;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap; /* Keep text on a single line (truncated by JS) */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for truncated text */
+  max-width: 100%; /* Ensure it doesn't break out of its container */
+  /* Transition for color change on hover */
+  transition: color 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.next6-race-link:hover .next6-course {
+  color: #161c22; /* Text color on hover matches background */
+  opacity: 1; /* Fully opaque on hover */
 }
 
 /* --- RACES BY COURSE --- */
@@ -254,47 +424,48 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
 }
 .racecard-race-row {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr); /* Default for larger screens */
   gap: 0.23em;
   margin-bottom: 0.7em;
-}
-
-
-@media (max-width: 1024px) {
-  .racecard-race-row {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
 }
 
 .racecard-time-link {
   display: flex;
   flex-direction: column;
-  align-items: center;         /* Center horizontally */
-  justify-content: center;     /* Center vertically */
-  background: #232d33;
+  align-items: center;
+  justify-content: center;
+  /* Subtle gradient for a more dynamic background */
+  background: linear-gradient(145deg, #232d33, #1e262c);
   border-radius: 7px;
   color: #ffe564;
   text-decoration: none;
   font-size: 1.04em;
   font-weight: 500;
-  min-width: 66px;            /* Was 106px, make this smaller to match above */
-  min-height: 45px;           /* Add a fixed height to keep uniformity */
-  padding: 0.24em 0.7em;      /* Tweak as needed */
-  transition: background 0.13s, color 0.13s;
+  min-width: 66px;
+  min-height: 45px;
+  padding: 0.24em 0.7em;
+  transition: background 0.13s ease-out, color 0.13s ease-out, transform 0.13s ease-out, box-shadow 0.13s ease-out; /* Smoother transitions */
   margin-bottom: 4px;
-  box-shadow: 0 2px 5px #1c1c1f07;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Slightly stronger shadow */
 }
 
 .racecard-time-link:hover {
   background: #35e9ae;
   color: #181c1f;
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+  box-shadow: 0 4px 12px rgba(53,233,174,0.3); /* Greenish glow on hover */
 }
+
 .racecard-time {
   color: #ffc900;
   font-weight: 700;
-  margin: 0 auto;        /* Center horizontally in flex */
+  margin: 0 auto;
   text-align: center;
+  transition: color 0.13s ease-out;
+}
+
+.racecard-time-link:hover .racecard-time {
+  color: #181c1f; /* Text color on hover matches background */
 }
 
 .racecard-title {
@@ -305,149 +476,321 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color 0.13s ease-out;
 }
-@media (max-width:600px) {
-  .racecard-race-row { flex-wrap: wrap; gap: 2px; }
-  .racecard-time-link { min-width: 95px; padding: 0.28em 0.4em 0.21em 0.48em; }
+
+.racecard-time-link:hover .racecard-title {
+  color: #181c1f; /* Text color on hover matches background */
 }
+
+
+/* --- RESPONSIVE GRID OVERRIDES (Guaranteed 3-wide minimum) --- */
+
+/* For tablets and larger mobiles (e.g., 601px to 1024px) */
+@media (max-width: 1024px) {
+  .next6-races {
+    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
+  }
+  .racecard-race-row {
+    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
+  }
+}
+
+/* For smaller mobiles (e.g., up to 600px) */
+@media (max-width: 600px) {
+  .next6-races {
+    grid-template-columns: repeat(3, 1fr); /* Still enforce 3 columns, will shrink more */
+    gap: 0.4em;
+  }
+  .next6-race-link {
+    padding: 0.7em 0.2em;
+    min-height: 68px;
+  }
+  .next6-time {
+    font-size: 1.0em;
+  }
+  .next6-course {
+    font-size: 0.8em;
+  }
+
+  .racecard-race-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.15em;
+  }
+  .racecard-time-link {
+    min-width: unset;
+    padding: 0.2em 0.3em;
+    min-height: 42px;
+    font-size: 0.95em;
+  }
+}
+
+/* For very small mobiles (e.g., up to 400px), if 3 cols are too tight, further optimize */
+@media (max-width: 400px) {
+    .next6-races {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.3em;
+    }
+    .next6-race-link {
+        padding: 0.6em 0.1em;
+        min-height: 65px;
+    }
+    .next6-time {
+        font-size: 0.95em;
+    }
+    .next6-course {
+        font-size: 0.75em;
+    }
+
+    .racecard-race-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.1em;
+    }
+    .racecard-time-link {
+        font-size: 0.9em;
+        min-height: 40px;
+    }
+}
+
 
 /* --- UTILITIES & RESPONSIVE --- */
 @media (max-width: 800px) {
   .container { padding: 18px 2vw 34px 2vw; }
   .next6-bar, .best-bets-list { max-width: 99vw; }
 }
+
 /* --- ABOUT PAGE --- */
 .about-container {
   background: #21242a;
   border-radius: 16px;
-  box-shadow: 0 4px 18px #0c0c0f1a;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.4); /* Stronger, professional shadow */
   max-width: 900px;
   margin: 2.6em auto 2.3em auto;
-  padding: 2.1em 2em 2.3em 2em;
+  padding: 2.1em 2.5em 2.3em 2.5em; /* Increased horizontal padding */
 }
 
 .about-header {
   text-align: center;
   color: #ffd700;
-  font-size: 2.15em;
-  margin-bottom: 1.3em;
+  font-size: 2.2em; /* Slightly adjusted size */
+  margin-bottom: 1.2em; /* Adjusted margin */
   font-weight: 800;
   letter-spacing: 0.03em;
 }
 
-.about-sub {
+.about-intro { /* New class for the introductory paragraph */
   color: #b7b7b7;
+  font-size: 1.09em;
+  max-width: 700px; /* Constrain width for readability */
+  margin: 0 auto 2.5em auto; /* Centered with more space below */
   text-align: center;
-  font-size: 1.11em;
-  margin-bottom: 1.9em;
+  line-height: 1.6; /* Improved line height for readability */
+}
+.about-intro b {
+  color: #ffc900; /* Highlight the site name */
 }
 
-.about-list {
+/* Re-using .section-title from your global css, ensuring it looks good here */
+.section-title {
+  font-size: 1.35em; /* Slightly larger for sub-headings */
+  color: #ffc900; /* Accent color for section titles */
+  font-weight: 700;
+  margin-top: 2.8em; /* More space above sections */
+  margin-bottom: 1em; /* More space below section title */
+  border-bottom: 2px solid #292d33; /* Stronger border */
+  display: inline-block; /* To make border only under text */
+  padding-bottom: 0.2em;
+  letter-spacing: 0.02em;
+  text-align: left; /* Align to left (default flex start) */
+  width: 100%; /* Ensure it spans full width */
+}
+
+
+/* --- Fancy List (used for How It Works and Why Trust Us) --- */
+.fancy-list {
   list-style: none;
   padding-left: 0;
-  margin: 0 0 2.2em 0;
+  margin: 0.8em 0 2.2em 0; /* Adjusted margins for lists */
 }
-.about-list li {
-  margin-bottom: 0.62em;
-  font-size: 1.1em;
+.fancy-list li {
+  margin-bottom: 0.8em; /* More space between list items */
+  font-size: 1.08em; /* Consistent font size */
   position: relative;
-  padding-left: 1.7em;
+  padding-left: 2.2em; /* More padding for icon */
+  color: #e0e0e0; /* Slightly lighter text for readability */
+  line-height: 1.4;
 }
-.about-list li:before {
-  content: "•";
-  color: #35e9ae;
-  font-size: 1.4em;
+.fancy-list li:before {
+  content: attr(data-icon); /* Placeholder for dynamic icon, or use specific character */
+  color: #35e9ae; /* Green accent for icons */
+  font-size: 1.6em; /* Larger icon size */
   position: absolute;
   left: 0;
-  top: 0.1em;
+  top: 0; /* Align icon to top */
+  width: 1.5em; /* Fixed width for icon spacing */
+  text-align: center;
 }
-@media (max-width: 700px) {
-  .about-container { padding: 1em 4vw; }
-  .about-header { font-size: 1.35em; }
-}
+/* Specific icons for lists - based on your existing HTML and the 'fancy-list' usage */
+.fancy-list li:nth-child(1):before { content: "🏇"; } /* How It Works - horse */
+.fancy-list li:nth-child(2):before { content: "📊"; } /* How It Works - chart */
+.fancy-list li:nth-child(3):before { content: "⚡"; } /* How It Works - lightning */
+.fancy-list li:nth-child(4):before { content: "🔎"; } /* How It Works - search */
+.fancy-list li:nth-child(5):before { content: "💡"; } /* How It Works - idea */
+
+/* Why Trust Us list icons - ensure these map to the correct child if you use this class multiple times */
+/* If you use emojis in HTML, then remove the content property here, but keep the styling for position/color */
+.trust-list li:nth-child(1):before { content: "📈"; }
+.trust-list li:nth-child(2):before { content: "🔍"; }
+.trust-list li:nth-child(3):before { content: "🛡️"; }
+.trust-list li:nth-child(4):before { content: "🤝"; }
+
 
 /* --- TEAM SECTION --- */
 .team-section {
   display: flex;
-  gap: 22px;
+  gap: 25px; /* Increased gap between cards */
   flex-wrap: wrap;
-  margin-bottom: 1.5em;
+  margin-bottom: 3em; /* More space below team section */
   justify-content: center;
 }
 .team-card {
-  background: #23293a;
+  background: linear-gradient(145deg, #23293a, #1c212b); /* Subtle gradient for team cards */
   border-radius: 13px;
-  box-shadow: 0 4px 18px #1119;
-  flex: 1 1 210px;
-  min-width: 210px;
-  max-width: 310px;
-  padding: 1.18em 1.15em;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3); /* Stronger shadow */
+  flex: 1 1 230px; /* Allow cards to be slightly wider */
+  min-width: 230px;
+  max-width: 350px; /* Increased max-width */
+  padding: 1.3em 1.2em; /* Increased padding */
   margin-bottom: 0.7em;
+  transition: all 0.25s ease-out; /* Smooth transition for hover effects */
+  border: 1px solid transparent; /* Prepare for border on hover */
 }
+.team-card:hover {
+  transform: translateY(-7px); /* More pronounced lift effect */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 25px rgba(54,232,181,0.5); /* Stronger shadow + glow */
+  border-color: #36e8b5; /* Accent border on hover */
+  background: linear-gradient(145deg, #2a3142, #212833); /* Slightly lighter gradient on hover */
+}
+
 .team-name {
   color: #35e9ae;
   font-weight: 700;
-  font-size: 1.12em;
+  font-size: 1.18em; /* Slightly larger */
+  margin-bottom: 0.1em;
+  display: block;
 }
 .team-role {
   color: #ffd700;
-  font-size: 1.04em;
+  font-size: 1.05em; /* Slightly larger */
   font-weight: 600;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.6em; /* More space below role */
+  display: block;
 }
 .team-desc {
   color: #eaeaea;
   font-size: 1em;
-  line-height: 1.45;
+  line-height: 1.55; /* Improved line height */
 }
 
-.about-section-title {
-  font-size: 1.19em;
-  color: #ffc900;
-  font-weight: 700;
-  margin-top: 2.2em;
-  margin-bottom: 0.7em;
-  border-bottom: 1px solid #292d33;
-  display: inline-block;
-  padding-bottom: 2px;
-  letter-spacing: 0.02em;
-}
 
-/* --- TRUST SECTION --- */
-.trust-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0.8em 0 1.7em 0;
-}
-.trust-list li {
-  font-size: 1.05em;
-  margin-bottom: 0.55em;
-  padding-left: 1.7em;
-  position: relative;
-}
-.trust-list li:before {
-  content: "★";
-  color: #ffc900;
-  position: absolute;
-  left: 0;
-  top: 0.09em;
-  font-size: 1.15em;
-}
+/* --- TRUST SECTION (Replaced existing .trust-list rules) --- */
+/* The HTML uses .fancy-list for this now, so these specific rules aren't strictly needed if fancy-list handles it */
+/* However, if you want specific icon differences, you can keep specific content: for :before */
 
-.about-footer {
-  margin-top: 2em;
-  font-size: 1em;
+
+/* About Contact Footer (New section) */
+.about-contact-footer {
+  margin-top: 3em; /* More space above footer */
+  font-size: 0.98em;
   text-align: center;
   color: #a6a6a6;
+  line-height: 1.6; /* Improved line height */
+  padding-top: 2em; /* Padding from the content above */
+  border-top: 1px solid #292d33; /* A subtle separator line */
 }
 
-.about-footer a {
+.about-contact-footer b {
+  color: #ffc900;
+  font-weight: 700;
+}
+
+.about-contact-footer a {
   color: #ffc900;
   text-decoration: underline;
+  transition: color 0.15s ease-out;
 }
-.about-footer a:hover {
+.about-contact-footer a:hover {
   color: #35e9ae;
 }
+
+/* --- RESPONSIVE ADJUSTMENTS for ABOUT PAGE --- */
+@media (max-width: 700px) {
+  .about-container {
+    padding: 1.5em 3vw; /* Adjusted padding for smaller screens */
+  }
+  .about-header {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+  }
+  .about-intro {
+    font-size: 1em;
+    margin-bottom: 1.8em;
+  }
+  .section-title {
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+  }
+  .fancy-list li {
+    font-size: 1em;
+    padding-left: 2em;
+  }
+  .fancy-list li:before {
+    font-size: 1.4em;
+  }
+  .team-section {
+    gap: 15px;
+    margin-bottom: 2em;
+  }
+  .team-card {
+    flex: 1 1 180px; /* Smaller min-width for mobile cards */
+    padding: 1em;
+  }
+  .team-name {
+    font-size: 1.1em;
+  }
+  .team-role {
+    font-size: 1em;
+  }
+  .team-desc {
+    font-size: 0.95em;
+  }
+  .about-contact-footer {
+    font-size: 0.9em;
+    margin-top: 2.5em;
+  }
+}
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1em 2vw;
+  }
+  .about-header {
+    font-size: 1.5em;
+  }
+  .about-intro {
+    font-size: 0.95em;
+  }
+  .section-title {
+    font-size: 1.1em;
+  }
+  .fancy-list li {
+    font-size: 0.95em;
+  }
+  .team-card {
+    min-width: 100%; /* Stack team cards on very small screens */
+  }
+}
+
 
 /* Highlight nav-link-active */
 .nav-link.nav-link-active {
@@ -817,6 +1160,9 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   background: #191e23;
 }
 /* Fix grid for 6 races on mobile */
+/* These media queries are now controlled by the section above "RESPONSIVE GRID OVERRIDES (Guaranteed 3-wide minimum)" */
+/* You can remove these older, potentially conflicting ones: */
+/*
 @media (max-width: 1024px) {
   .next6-races, .racecard-race-row {
     grid-template-columns: repeat(3, 1fr);
@@ -835,6 +1181,7 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
     grid-template-rows: none;
   }
 }
+*/
 /* —————————————————————————————
    Yesterday’s Results Overrides
    ————————————————————————————— */
@@ -894,3 +1241,139 @@ h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
   text-align: right;
   white-space: nowrap;
 }
+
+/* --- Hamburger Menu Styles --- */
+.hamburger {
+  display: none; /* Hidden by default, only show on smaller screens */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #36e8b5; /* Adjusted to your accent color for visibility */
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hide nav links by default on smaller screens */
+.nav-links {
+  display: flex; /* Keep original display for desktop */
+}
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .hamburger {
+    display: flex; /* Show hamburger on small screens */
+    margin-left: 1em; /* Add some space from the brand */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 50px; /* Adjusted to be closer to the navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #171a20; /* Dark background to match your theme */
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0; /* Slightly reduced padding */
+    display: none; /* Hide by default on mobile */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Stronger shadow for depth */
+  }
+
+  .nav-links.active { /* Class added by JS when menu is open */
+    display: flex; /* Show when active */
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: #36e8b5; /* Ensure links are visible on dark background */
+  }
+}
+
+/* Optional: Hamburger animation when open */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* --- BUTTON STYLES --- */
+.see-tips-btn {
+  display: inline-block; /* Allows setting padding, width, height */
+  background: linear-gradient(145deg, #36e8b5, #2ce8c0); /* Green gradient */
+  color: #191e23; /* Dark text for contrast */
+  font-size: 1.15em; /* Readable font size */
+  font-weight: 700; /* Bold text */
+  padding: 0.9em 1.8em; /* Generous padding */
+  border-radius: 8px; /* Slightly rounded corners */
+  text-decoration: none; /* Remove underline */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  transition: all 0.25s ease-out; /* Smooth transition for hover effects */
+  margin-top: 1.8em; /* Space above the button from content */
+  margin-bottom: 2em; /* Space below the button */
+  border: none; /* No default border */
+  cursor: pointer; /* Indicate it's clickable */
+  letter-spacing: 0.02em; /* Subtle letter spacing */
+}
+
+.see-tips-btn:hover {
+  background: linear-gradient(145deg, #2ce8c0, #36e8b5); /* Invert gradient or slightly darker green */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(54, 232, 181, 0.6); /* Stronger shadow with a green glow */
+}
+
+.see-tips-btn:active {
+  transform: translateY(0); /* Press down effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Smaller shadow when pressed */
+}
+
+/* --- Responsive Adjustments for Button --- */
+@media (max-width: 600px) {
+  .see-tips-btn {
+    font-size: 1em; /* Slightly smaller on smaller screens */
+    padding: 0.8em 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .see-tips-btn {
+    font-size: 0.9em;
+    padding: 0.7em 1.2em;
+  }
+}
+
+/* --- HEADINGS & DESC (updated for .page-desc) --- */
+/* Your existing h1, h2, h3 rules remain unchanged above this */
+
+.page-desc {
+  color: #b7b7b7;
+  font-size: 1.09em;
+  max-width: 580px;
+  margin: 0 auto 1.8em auto;
+  text-align: center;
+  line-height: 1.6; /* ADDED: Improved line spacing for readability */
+}
+
+.page-desc b { /* ADDED: Style for the bolded site name */
+  color: #ffc900; /* Your golden yellow accent color */
+  font-weight: 700; /* Ensure it's bold */
+}
+
+/* The rest of your global.css continues below */

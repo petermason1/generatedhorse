@@ -1,4 +1,4 @@
-window.racecardsDAta ={
+window.racecardsData = {
   "racecards": [
     {
       "_id": "896246",

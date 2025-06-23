@@ -7,6 +7,15 @@ if (!races.length) {
   throw new Error('No racecards!');
 }
 
+// Helper function to truncate text
+function truncateText(text, maxLength) {
+  if (text.length > maxLength) {
+    // Ensure we don't truncate too much if original text is shorter than maxLength-3
+    return text.substring(0, maxLength - 3) + '...'; 
+  }
+  return text;
+}
+
 // ---- Next 6 races (not gone off, sorted by time ascending) ----
 const now = new Date();
 const next6 = [...races]
@@ -41,12 +50,15 @@ if (next6.length) {
     <section class="next6-bar" style="margin-bottom:2.2em;">
       <h2 style="color:#ffc900;">Next 6 Races</h2>
       <div class="next6-races">
-        ${next6.map(r => `
-          <a class="next6-race-link" href="racecard.html?race_id=${r._id}">
-            <div class="next6-time">${r.off_time}</div>
-            <div class="next6-course">${r.course}</div>
-          </a>
-        `).join('')}
+        ${next6.map(r => {
+          const truncatedCourse = truncateText(r.course, 10); // Apply truncation here
+          return `
+            <a class="next6-race-link" href="racecard.html?race_id=${r._id}">
+              <div class="next6-course">${truncatedCourse}</div>
+              <div class="next6-time">${r.off_time}</div>
+            </a>
+          `;
+        }).join('')}
       </div>
     </section>
   `;

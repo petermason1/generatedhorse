@@ -1,52 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yesterday’s Results</title>
-  <link rel="stylesheet" href="global.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horse Racing ROI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css" />
+   <style>
+
+
+        .summary {
+            margin-bottom: 25px;
+            background: #23262A;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: #23262A;
+            border-radius: 8px;
+            overflow: hidden; /* Ensures the border-radius is applied to table corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background: #101214;
+            color: #ffc900;
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+        /* Zebra striping for rows */
+        tr:nth-child(even) {
+            background: #2a2e33;
+        }
+        tr:nth-child(odd) {
+            background: #23262A;
+        }
+
+        /* Winning row highlight */
+        tr.win-row {
+            background: #245829 !important; /* Kept important to override other styles */
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        td:last-child {
+            font-weight: bold;
+        }
+
+    </style>
 </head>
 <body>
-    <nav class="main-navbar">
+<nav class="main-navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-brand">🏇 Racecards</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link nav-link-active">Home</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a> <!-- Removed nav-link-active here -->
         <a href="tips.html" class="nav-link">Tips</a>
-        <a href="about.html" class="nav-link">About</a>
+         <a href="yesterday.html" class="nav-link nav-link-active">Yesterday</a> <!-- Added nav-link-active here -->
+         <a href="about.html" class="nav-link">About</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </nav>
-  <div class="results-container">
-    <h1>Yesterday’s Results</h1>
-    <div class="results-summary">
-      <b>Total races:</b> 38<br>
-      <b>Staked:</b> £38.00<br>
-      <b>Returned:</b> £48.98<br>
-      <b>ROI:</b> 28.89%
+
+    <div class="container">
+
+        <h1>Selections &amp; ROI Breakdown</h1>
+
+        <div class='summary'>
+            <h2>ROI Summary (V3_ImproverAngle)</h2>
+            <b>Total races processed:</b> 19<br>
+            <b>Races with non-runner/missing result:</b> 2
+            <br><br>
+            <table>
+                <tr><th>Subset</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>
+                <tr class="win-row"><td>ALL</td><td>17</td><td>£17</td><td>£24.62</td><td>44.82</td></tr>
+                <tr class="win-row"><td>Type: Handicap</td><td>12</td><td>£12</td><td>£22.37</td><td>86.42</td></tr>
+                <tr class="win-row"><td>Type: Maiden</td><td>2</td><td>£2</td><td>£2.25</td><td>12.50</td></tr>
+                <tr><td>Type: Novice</td><td>2</td><td>£2</td><td>£0.00</td><td>-100.00</td></tr>
+                <tr><td>Type: Stakes</td><td>1</td><td>£1</td><td>£0.00</td><td>-100.00</td></tr>
+                <tr class="win-row"><td>Dist: 1m5f–2m</td><td>5</td><td>£5</td><td>£13.00</td><td>160.00</td></tr>
+                <tr class="win-row"><td>Dist: ≤1m</td><td>11</td><td>£11</td><td>£11.62</td><td>5.64</td></tr>
+                <tr class="win-row"><td>Class: Class 4</td><td>5</td><td>£5</td><td>£13.00</td><td>160.00</td></tr>
+                <tr class="win-row"><td>Class: Class 5</td><td>4</td><td>£4</td><td>£5.25</td><td>31.25</td></tr>
+                <tr class="win-row"><td>Class: Class 6</td><td>5</td><td>£5</td><td>£6.37</td><td>27.40</td></tr>
+            </table>
+        </div>
+
+        <h3>Winning Selections</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Course</th>
+              <th>Off Time</th>
+              <th>Tip</th>
+              <th>Tip Odds</th>
+              <th>Position</th>
+              <th>SP</th>
+              <th>Win Return</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="win-row">
+              <td>22/06/2025</td>
+              <td>Ffos Las</td>
+              <td>3:30</td>
+              <td>Arctic Dawn</td>
+              <td>13/8</td>
+              <td>1</td>
+              <td>2.25</td>
+              <td>£2.25</td>
+            </tr>
+            <tr class="win-row">
+              <td>22/06/2025</td>
+              <td>Ffos Las</td>
+              <td>5:15</td>
+              <td>Run Of Luck</td>
+              <td>7/4</td>
+              <td>1</td>
+              <td>3.25</td>
+              <td>£3.25</td>
+            </tr>
+            <tr class="win-row">
+              <td>22/06/2025</td>
+              <td>Hexham</td>
+              <td>4:25</td>
+              <td>Cracking Destiny</td>
+              <td>12/1</td>
+              <td>1</td>
+              <td>13.00</td>
+              <td>£13.00</td>
+            </tr>
+            <tr class="win-row">
+              <td>22/06/2025</td>
+              <td>Pontefract</td>
+              <td>2:40</td>
+              <td>Twilight Guest</td>
+              <td>7/4</td>
+              <td>1</td>
+              <td>3.12</td>
+              <td>£3.12</td>
+            </tr>
+            <tr class="win-row">
+              <td>22/06/2025</td>
+              <td>Pontefract</td>
+              <td>5:25</td>
+              <td>Style Of Life</td>
+              <td>11/4</td>
+              <td>1</td>
+              <td>3.00</td>
+              <td>£3.00</td>
+            </tr>
+          </tbody>
+        </table>
+
     </div>
-    <table class="results-table">
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Course</th>
-          <th>Race</th>
-          <th>Winner</th>
-          <th>Return</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>5:20</td><td>Goodwood</td><td>EBF Maiden Stakes</td><td>Blue Orbit</td><td>£1.40</td></tr>
-        <tr><td>7:03</td><td>Goodwood</td><td>Membership Maiden Stakes</td><td>Way Of Stars</td><td>£1.83</td></tr>
-        <tr><td>3:13</td><td>Market Rasen</td><td>Port Of Grimsby H’cap Chase</td><td>Greenrock Abbey</td><td>£2.50</td></tr>
-        <tr><td>5:05</td><td>Market Rasen</td><td>Port Of Hull H’cap Hurdle</td><td>Record Art</td><td>£7.00</td></tr>
-        <tr><td>4:47</td><td>Newmarket (July)</td><td>Fillies’ Novice Stakes</td><td>Date Line</td><td>£2.20</td></tr>
-        <tr><td>5:57</td><td>Newmarket (July)</td><td>Zyn Handicap</td><td>Where’s Freddy</td><td>£17.00</td></tr>
-        <tr><td>8:25</td><td>Newmarket (July)</td><td>Debenhams Handicap</td><td>Atlantic Sunset</td><td>£10.00</td></tr>
-        <tr><td>3:23</td><td>Redcar</td><td>Marske Handicap</td><td>Marhaba Ghaiyyath</td><td>£2.50</td></tr>
-        <tr><td>4:40</td><td>Redcar</td><td>Free Trial Handicap</td><td>Hot Dancer</td><td>£2.75</td></tr>
-        <tr><td>6:50</td><td>Down Royal</td><td>Median Auction Maiden</td><td>North Coast</td><td>£1.80</td></tr>
-      </tbody>
-    </table>
-  </div>
+
 </body>
 </html>
+```

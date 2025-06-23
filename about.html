@@ -15,26 +15,33 @@
   <link rel="stylesheet" href="global.css" />
 </head>
 <body>
-  <nav class="main-navbar">
+<nav class="main-navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-brand">🏇 Racecards</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link">Home</a>
         <a href="tips.html" class="nav-link">Tips</a>
-        <a href="about.html" class="nav-link nav-link-active">About</a>
+         <a href="yesterday.html" class="nav-link">Yesterday</a>
+         <a href="about.html" class="nav-link nav-link-active">About</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </nav>
 
+
   <main class="about-container">
     <h1 class="about-header">About This Site</h1>
 
-    <div class="about-desc">
-      <b>Racecards</b> is a data-driven horse racing analysis project, combining decades of punting experience, statistical expertise, and a commitment to honest results.  
+    <div class="about-intro"> <!-- Changed from .about-desc to .about-intro for clarity and specific styling -->
+      <b>Racecards</b> is a data-driven horse racing analysis project, combining decades of punting experience, statistical expertise, and a commitment to honest results.
       Our team uses a custom rating system built on real-world data—designed to highlight the true contenders in every UK and Irish race.
     </div>
 
-    <div class="section-title">How It Works</div>
+    <h2 class="section-title">How It Works</h2> <!-- Using h2 for section title semantic value -->
 <ul class="fancy-list">
   <li>🏇 Every UK & Irish race is rated daily using our proprietary algorithm</li>
   <li>📊 Each horse is scored on form, speed, trainer stats, and more</li>
@@ -44,7 +51,7 @@
 </ul>
 
 
-    <div class="section-title">Meet the Team</div>
+    <h2 class="section-title">Meet the Team</h2> <!-- Using h2 for section title semantic value -->
     <div class="team-section">
 
       <div class="team-card">
@@ -79,7 +86,7 @@
 
     </div>
 
-    <div class="section-title">Why Trust Us?</div>
+    <h2 class="section-title">Why Trust Us?</h2> <!-- Using h2 for section title semantic value -->
     <ul class="fancy-list">
       <li>📈 Full transparency: all tips and results are published, win or lose</li>
       <li>🔍 Our selections are based on independent, data-driven analysis</li>
@@ -87,12 +94,28 @@
       <li>🤝 If the site ever features paid services or affiliate partnerships, this will be clearly disclosed</li>
     </ul>
 
-    <hr>
-    <div style="font-size:0.97em; color:#aaa; text-align:center; margin-top:1.5em;">
+    <div class="about-contact-footer"> <!-- New class for the footer section -->
       <b>Questions or suggestions?</b><br>
-      <a href="mailto:info@smartracecards.com" style="color:#ffc900;">Contact us here</a>.<br>
+      <a href="mailto:info@smartracecards.com">Contact us here</a>.<br>
       <i>Punting should be enjoyable and responsible. Never bet more than you can afford to lose. This site is for informational purposes, not betting advice.</i>
     </div>
   </main>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+
+  // Optional: Close menu when a link is clicked (good for single-page sites)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>

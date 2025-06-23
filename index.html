@@ -18,14 +18,17 @@
 </head>
 
 <body>
-  <nav class="main-navbar">
+<nav class="main-navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-brand">🏇 Racecards</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link nav-link-active">Home</a>
+      <div class="nav-links" id="navLinks"> <a href="index.html" class="nav-link nav-link-active">Home</a>
         <a href="tips.html" class="nav-link">Tips</a>
-      
-        <a href="about.html" class="nav-link">About</a>
+         <a href="yesterday.html" class="nav-link">Yesterday</a>
+         <a href="about.html" class="nav-link">About</a>
+      </div>
+      <div class="hamburger" id="hamburger"> <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </nav>
@@ -33,15 +36,32 @@
   <main class="container">
     <h1>Horse Racing Tips</h1>
     <div class="page-desc">
-      Live UK & Irish racecards, real-time stats and every meeting — updated daily.<br>
-      Instantly see the latest runners, sorted by value, class, and our own scoring system.
+      Your edge in UK & Irish horse racing: <b>Smart Racecards</b> delivers daily, real-time race data, advanced stats, and intelligent insights. Quickly find high-value runners, expertly ranked by class, form, and our unique performance metrics.
     </div>
     <div style="text-align:center;">
       <a href="tips.html" class="see-tips-btn">See Today's Best Bets &rarr;</a>
     </div>
     <div id="main"></div>
   </main>
+
   <script src="data.js"></script>
   <script src="index.js"></script>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+
+  // Optional: Close menu when a link is clicked (good for single-page sites)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>

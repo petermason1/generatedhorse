@@ -3,7 +3,7 @@ console.log('tips.js loaded');
 const main = document.getElementById('main');
 const races = (window.racecardsData && window.racecardsData.racecards) || [];
 if (!races.length) {
-  main.innerHTML = '<h2>No racecards loaded.</h2>';
+  main.innerHTML = '<div class="container"><h2>No racecards loaded.</h2></div>'; // Added container
   throw new Error('No racecards!');
 }
 
@@ -159,23 +159,19 @@ const showOutsiders = outsiders.slice(0, 4);
 // --- Render helper ---
 function renderTipCard(r, i, badge) {
   return `
-    <div class="best-bet-card" style="background:#282d34;border-radius:9px;padding:1.1em 1.1em 1em 1.1em;margin-bottom:0.78em;display:flex;align-items:flex-start;gap:13px;box-shadow:0 2px 7px #1119;">
-      <span style="font-weight:bold;font-size:1.22em;width:2em;display:inline-block;color:#ffc900;">${i+1}</span>
-      <div style="flex:1">
-        <div>
-          <a href="racecard.html?race_id=${r.race._id}" style="color:#35e9ae;font-size:1.13em;font-weight:700;text-decoration:none;">
-            ${r.horse}
-          </a>
-          <span style="color:#ffe564;font-weight:bold;font-size:1em;margin-left:8px;">
-            ${r.odds?.[0]?.fractional || ''}
-          </span>
-          <span style="color:#fff;font-weight:600;font-size:.98em;margin-left:4px;">(${r.score})</span>
+    <div class="tip-card">
+      <span class="tip-num">${i+1}</span>
+      <div class="tip-content">
+        <div class="tip-header">
+          <a href="racecard.html?race_id=${r.race._id}" class="tip-horse">${r.horse}</a>
+          <span class="tip-odds">${r.odds?.[0]?.fractional || ''}</span>
+          <span class="tip-score">(${r.score})</span>
         </div>
-        <div style="font-size:.98em;opacity:.81;">
-          ${r.race.course} ${r.race.off_time} — <span style="color:#ffc900">${r.race.race_name}</span>
+        <div class="tip-race-info">
+          ${r.race.course} ${r.race.off_time} — <span class="tip-race-name">${r.race.race_name}</span>
         </div>
-        <div style="margin-top:5px;color:#a8e7ff;font-size:.97em;">${explainPick(r)}</div>
-        ${badge ? `<span class="tip-badge">${badge}</span>` : ''}
+        <div class="tip-reason">${explainPick(r)}</div>
+        ${badge ? `<span class="tip-badge ${badge.toLowerCase().replace(' ', '-')}">${badge}</span>` : ''}
       </div>
     </div>
   `;
@@ -183,15 +179,21 @@ function renderTipCard(r, i, badge) {
 
 // --- Render the page
 main.innerHTML = `
-  <h1 style="text-align:center;margin:1.5em 0 0.3em 0;font-size:2em;">Today’s Horse Racing Tips</h1>
-  <section style="margin:0 auto 2.5em auto;max-width:700px;">
-    <h2 style="color:#ffc900;margin-bottom:0.65em;">Top Picks</h2>
-    ${topPicks.length ? topPicks.map((r, i) => renderTipCard(r, i, 'Top Pick')).join('') : '<div style="color:#ccc">No top picks today.</div>'}
-    <h2 style="color:#2ce8c0;margin-bottom:0.65em;">Value Picks</h2>
-    ${showValue.length ? showValue.map((r, i) => renderTipCard(r, i, 'Value')).join('') : '<div style="color:#ccc">No value picks today.</div>'}
-    <h2 style="color:#68aeff;margin-bottom:0.65em;">Outside Chancers</h2>
-    ${showOutsiders.length ? showOutsiders.map((r, i) => renderTipCard(r, i, 'Outsider')).join('') : '<div style="color:#ccc">No outsider picks today.</div>'}
-  </section>
+  <div class="container"> <!-- Wrapped content in container for proper max-width and padding -->
+    <h1 class="page-title">Today’s Horse Racing Tips</h1>
+    <section class="tips-section">
+      <h2 class="section-title top-picks-title">Top Picks</h2>
+      ${topPicks.length ? topPicks.map((r, i) => renderTipCard(r, i, 'Top Pick')).join('') : '<div class="no-picks">No top picks today.</div>'}
+    </section>
+    <section class="tips-section">
+      <h2 class="section-title value-picks-title">Value Picks</h2>
+      ${showValue.length ? showValue.map((r, i) => renderTipCard(r, i, 'Value')).join('') : '<div class="no-picks">No value picks today.</div>'}
+    </section>
+    <section class="tips-section">
+      <h2 class="section-title outsider-picks-title">Outside Chancers</h2>
+      ${showOutsiders.length ? showOutsiders.map((r, i) => renderTipCard(r, i, 'Outsider')).join('') : '<div class="no-picks">No outsider picks today.</div>'}
+    </section>
+  </div>
 `;
 
 console.log('tips.js finished.');

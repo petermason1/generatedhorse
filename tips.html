@@ -16,13 +16,19 @@
 </head>
 <!-- Google tag (gtag.js) -->
 <body>
-  <nav class="main-navbar">
+<nav class="main-navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-brand">🏇 Racecards</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="tips.html" class="nav-link nav-link-active">Tips</a> <!-- HIGHLIGHTED HERE -->
-        <a href="about.html" class="nav-link">About</a>
+        <a href="tips.html" class="nav-link nav-link-active">Tips</a> <!-- Added nav-link-active here -->
+         <a href="yesterday.html" class="nav-link">Yesterday</a> <!-- Removed nav-link-active here -->
+         <a href="about.html" class="nav-link">About</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </nav>
@@ -30,5 +36,22 @@
   <main id="main"></main>
   <script src="data.js"></script>
   <script src="tips.js"></script>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+
+  // Optional: Close menu when a link is clicked (good for single-page sites)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>
