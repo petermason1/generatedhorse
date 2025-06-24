@@ -2,171 +2,204 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yesterday's Horse Racing Results | Smart Racecards</title>
-    <meta name="description" content="View detailed horse racing results and ROI breakdown for yesterday's selections from Smart Racecards.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="base.css" /> <!-- Link to base.css first -->
-    <link rel="stylesheet" href="yesterday.css" /> <!-- Then link to yesterday.css -->
+    <title>Selections & ROI Breakdown | Smart Racecards</title>
+    <meta name="description" content="Combined winners and ROI from the last two days.">
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 1.05em; background: #181C1F; color: #f0f0f0; }
+        h1, h2, h3 { color: #ffd700; }
+        .summary { margin-bottom: 18px; background: #23262A; padding: 15px 18px; border-radius: 7px; }
+        table { border-collapse: collapse; width: 100%; background: #23262A; }
+        th, td { padding: 6px 7px; font-size: 1em; }
+        th { background: #181C1F; color: #ffc900; font-size: 1em; }
+        tr:nth-child(even) { background: #23262A; }
+        tr:nth-child(odd) { background: #181C1F; }
+        tr.win-row { background: #245829 !important; color: #fff; }
+        td.score-col, th.score-col { max-width: 60px; width: 60px; }
+    </style>
 </head>
 <body>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <h1>Selections &amp; ROI Breakdown</h1>
 
-  gtag('config', 'G-NMB0VG2VBB');
-</script>
-
-<nav class="main-navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-brand">🏇 Racecards</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="tips.html" class="nav-link">Tips</a>
-         <a href="yesterday.html" class="nav-link">Yesterday</a>
-         <a href="custom-score.html" class="nav-link">Custom Score</a>
-         <a href="about.html" class="nav-link">About</a>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </nav>
-
-    <div class="container">
-
-        <h1>Selections &amp; ROI Breakdown</h1>
-
-        <div class='summary'>
-            <h2>ROI Summary (V3_ImproverAngle)</h2>
-            <b>Total races processed:</b> 19<br>
-            <b>Races with non-runner/missing result:</b> 2
-            <br><br>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr><th>Subset</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr class="win-row"><td>ALL</td><td>17</td><td>£17</td><td>£24.62</td><td>44.82</td></tr>
-                        <tr class="win-row"><td>Type: Handicap</td><td>12</td><td>£12</td><td>£22.37</td><td>86.42</td></tr>
-                        <tr class="win-row"><td>Type: Maiden</td><td>2</td><td>£2</td><td>£2.25</td><td>12.50</td></tr>
-                        <tr><td>Type: Novice</td><td>2</td><td>£2</td><td>£0.00</td><td>-100.00</td></tr>
-                        <tr><td>Type: Stakes</td><td>1</td><td>£1</td><td>£0.00</td><td>-100.00</td></tr>
-                        <tr class="win-row"><td>Dist: 1m5f–2m</td><td>5</td><td>£5</td><td>£13.00</td><td>160.00</td></tr>
-                        <tr class="win-row"><td>Dist: &le;1m</td><td>11</td><td>£11</td><td>£11.62</td><td>5.64</td></tr>
-                        <tr class="win-row"><td>Class: Class 4</td><td>5</td><td>£5</td><td>£13.00</td><td>160.00</td></tr>
-                        <tr class="win-row"><td>Class: Class 5</td><td>4</td><td>£4</td><td>£5.25</td><td>31.25</td></tr>
-                        <tr class="win-row"><td>Class: Class 6</td><td>5</td><td>£5</td><td>£6.37</td><td>27.40</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <h3>Winning Selections</h3>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                      <th>Date</th>
-                      <th>Course</th>
-                      <th>Off Time</th>
-                      <th>Tip</th>
-                      <th>Tip Odds</th>
-                      <th>Position</th>
-                      <th>SP</th>
-                      <th>Win Return</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="win-row">
-                      <td>22/06/2025</td>
-                      <td>Ffos Las</td>
-                      <td>3:30</td>
-                      <td>Arctic Dawn</td>
-                      <td>13/8</td>
-                      <td>1</td>
-                      <td>2.25</td>
-                      <td>£2.25</td>
-                    </tr>
-                    <tr class="win-row">
-                      <td>22/06/2025</td>
-                      <td>Ffos Las</td>
-                      <td>5:15</td>
-                      <td>Run Of Luck</td>
-                      <td>7/4</td>
-                      <td>1</td>
-                      <td>3.25</td>
-                      <td>£3.25</td>
-                    </tr>
-                    <tr class="win-row">
-                      <td>22/06/2025</td>
-                      <td>Hexham</td>
-                      <td>4:25</td>
-                      <td>Cracking Destiny</td>
-                      <td>12/1</td>
-                      <td>1</td>
-                      <td>13.00</td>
-                      <td>£13.00</td>
-                    </tr>
-                    <tr class="win-row">
-                      <td>22/06/2025</td>
-                      <td>Pontefract</td>
-                      <td>2:40</td>
-                      <td>Twilight Guest</td>
-                      <td>7/4</td>
-                      <td>1</td>
-                      <td>3.12</td>
-                      <td>£3.12</td>
-                    </tr>
-                    <tr class="win-row">
-                      <td>22/06/2025</td>
-                      <td>Pontefract</td>
-                      <td>5:25</td>
-                      <td>Style Of Life</td>
-                      <td>11/4</td>
-                      <td>1</td>
-                      <td>3.00</td>
-                      <td>£3.00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <!-- Overall ROI Summary -->
+    <div class='summary'>
+        <h2>Overall ROI Breakdown (V3_ImproverAngle)</h2>
+        <b>Total races processed:</b> 44<br>
+        <b>Total staked:</b> £44.00<br>
+        <b>Total returned:</b> £37.05<br>
+        <b>Overall ROI:</b> -15.80%
+        <br><br>
+        <table>
+            <tr><th>Subset</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>
+            <tr><td>ALL</td><td>44</td><td>£44</td><td>£37.05</td><td>-15.80</td></tr>
+            <tr><td>Type: Handicap</td><td>30</td><td>£30</td><td>£33.18</td><td>10.60</td></tr>
+            <!-- Add others if needed -->
+        </table>
     </div>
 
-    <script>
-        // Hamburger menu logic
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
+    <!-- Individual Day Summaries -->
+    <div class='summary'>
+        <h2>ROI Summary (22/06/2025)</h2>
+        <b>Total races processed:</b> 17<br>
+        <b>Races with non-runner/missing result:</b> 2
+        <br><br>
+        <table>
+            <tr><th>Subset</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>
+            <tr class="win-row"><td>ALL</td><td>17</td><td>£17</td><td>£24.62</td><td>44.82</td></tr>
+            <tr class="win-row"><td>Type: Handicap</td><td>12</td><td>£12</td><td>£22.37</td><td>86.42</td></tr>
+            <tr class="win-row"><td>Type: Maiden</td><td>2</td><td>£2</td><td>£2.25</td><td>12.50</td></tr>
+            <tr><td>Type: Novice</td><td>2</td><td>£2</td><td>£0.00</td><td>-100.00</td></tr>
+            <tr><td>Type: Stakes</td><td>1</td><td>£1</td><td>£0.00</td><td>-100.00</td></tr>
+            <tr class="win-row"><td>Dist: 1m5f–2m</td><td>5</td><td>£5</td><td>£13.00</td><td>160.00</td></tr>
+            <tr class="win-row"><td>Dist: &le;1m</td><td>11</td><td>£11</td><td>£11.62</td><td>5.64</td></tr>
+            <tr class="win-row"><td>Class: Class 4</td><td>5</td><td>£5</td><td>£13.00</td><td>160.00</td></tr>
+            <tr class="win-row"><td>Class: Class 5</td><td>4</td><td>£4</td><td>£5.25</td><td>31.25</td></tr>
+            <tr class="win-row"><td>Class: Class 6</td><td>5</td><td>£5</td><td>£6.37</td><td>27.40</td></tr>
+        </table>
+    </div>
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
+    <div class='summary'>
+        <h2>ROI Breakdown (23/06/2025)</h2>
+        <b>Total races processed:</b> 27<br>
+        <b>Races with non-runner/missing result:</b> 2
+        <br><br>
+        <table>
+            <tr><th>Subset</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>
+            <tr><td>ALL</td><td>27</td><td>£27</td><td>£12.43</td><td>-53.96</td></tr>
+            <tr><td>Type: Handicap</td><td>18</td><td>£18</td><td>£10.81</td><td>-39.94</td></tr>
+            <tr><td>Type: Maiden</td><td>6</td><td>£6</td><td>£1.62</td><td>-73.00</td></tr>
+            <tr><td>Type: Novice</td><td>2</td><td>£2</td><td>£0.00</td><td>-100.00</td></tr>
+            <tr><td>Region: OTHER</td><td>27</td><td>£27</td><td>£12.43</td><td>-53.96</td></tr>
+            <tr><td>Dist: 1m1f–1m4f</td><td>1</td><td>£1</td><td>£0.00</td><td>-100.00</td></tr>
+            <tr><td>Dist: ≤1m</td><td>26</td><td>£26</td><td>£12.43</td><td>-52.19</td></tr>
+            <tr><td>Class: Class 3</td><td>1</td><td>£1</td><td>£2.80</td><td>180.00</td></tr>
+            <tr><td>Class: Class 4</td><td>2</td><td>£2</td><td>£0.00</td><td>-100.00</td></tr>
+            <tr><td>Class: Class 5</td><td>12</td><td>£12</td><td>£5.76</td><td>-52.00</td></tr>
+            <tr><td>Class: Class 6</td><td>7</td><td>£7</td><td>£2.25</td><td>-67.86</td></tr>
+            <tr><td>Class: Unknown</td><td>5</td><td>£5</td><td>£1.62</td><td>-67.60</td></tr>
+        </table>
+    </div>
 
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-
-        // Highlight active nav link based on current page
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentPath = window.location.pathname.split('/').pop();
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('nav-link-active');
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('nav-link-active');
-                }
-            });
-        });
-    </script>
+    <!-- Winning Selections Table -->
+    <h3>Winning Selections (22–23/06/2025)</h3>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Course</th>
+                  <th>Off Time</th>
+                  <th>Tip</th>
+                  <th>Tip Odds</th>
+                  <th>Position</th>
+                  <th>SP</th>
+                  <th>Win Return</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 22/06/2025 winners (from your earlier example) -->
+                <tr class="win-row">
+                  <td>22/06/2025</td>
+                  <td>Ffos Las</td>
+                  <td>3:30</td>
+                  <td>Arctic Dawn</td>
+                  <td>13/8</td>
+                  <td>1</td>
+                  <td>2.25</td>
+                  <td>£2.25</td>
+                </tr>
+                <tr class="win-row">
+                  <td>22/06/2025</td>
+                  <td>Ffos Las</td>
+                  <td>5:15</td>
+                  <td>Run Of Luck</td>
+                  <td>7/4</td>
+                  <td>1</td>
+                  <td>3.25</td>
+                  <td>£3.25</td>
+                </tr>
+                <tr class="win-row">
+                  <td>22/06/2025</td>
+                  <td>Hexham</td>
+                  <td>4:25</td>
+                  <td>Cracking Destiny</td>
+                  <td>12/1</td>
+                  <td>1</td>
+                  <td>13.00</td>
+                  <td>£13.00</td>
+                </tr>
+                <tr class="win-row">
+                  <td>22/06/2025</td>
+                  <td>Pontefract</td>
+                  <td>2:40</td>
+                  <td>Twilight Guest</td>
+                  <td>7/4</td>
+                  <td>1</td>
+                  <td>3.12</td>
+                  <td>£3.12</td>
+                </tr>
+                <tr class="win-row">
+                  <td>22/06/2025</td>
+                  <td>Pontefract</td>
+                  <td>5:25</td>
+                  <td>Style Of Life</td>
+                  <td>11/4</td>
+                  <td>1</td>
+                  <td>3.00</td>
+                  <td>£3.00</td>
+                </tr>
+                <!-- 23/06/2025 winners (position == 1, win_return > 0) -->
+                <tr class="win-row">
+                  <td>23/06/2025</td>
+                  <td>Chepstow</td>
+                  <td>3:45</td>
+                  <td>All Ways Glamorous</td>
+                  <td>7/2</td>
+                  <td>1</td>
+                  <td>2.88</td>
+                  <td>£2.88</td>
+                </tr>
+                <tr class="win-row">
+                  <td>23/06/2025</td>
+                  <td>Chepstow</td>
+                  <td>4:20</td>
+                  <td>Thurso</td>
+                  <td>9/4</td>
+                  <td>1</td>
+                  <td>2.88</td>
+                  <td>£2.88</td>
+                </tr>
+                <tr class="win-row">
+                  <td>23/06/2025</td>
+                  <td>Windsor</td>
+                  <td>6:58</td>
+                  <td>Nogo's Dream</td>
+                  <td>15/8</td>
+                  <td>1</td>
+                  <td>2.80</td>
+                  <td>£2.80</td>
+                </tr>
+                <tr class="win-row">
+                  <td>23/06/2025</td>
+                  <td>Windsor</td>
+                  <td>5:25</td>
+                  <td>Darkened Edge</td>
+                  <td>2/1</td>
+                  <td>1</td>
+                  <td>2.25</td>
+                  <td>£2.25</td>
+                </tr>
+                <tr class="win-row">
+                  <td>23/06/2025</td>
+                  <td>Ballinrobe</td>
+                  <td>5:40</td>
+                  <td>Nobler</td>
+                  <td>5/6</td>
+                  <td>1</td>
+                  <td>1.62</td>
+                  <td>£1.62</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
