@@ -3,8 +3,11 @@ console.log(window.racecardsData);
 
 /**
  * Calculates a score for a given runner based on various factors.
+/**
+ * Calculates a score for a given runner based on various factors.
+ * (Direct port of score_logic_v1_balanced from Python)
  * @param {object} r - The runner object.
- * @returns {number} The calculated score, rounded to two decimal places.
+ * @returns {number} The calculated score, rounded to one decimal place.
  */
 function scoreRunner(r) {
   function safeInt(x, def = 0) {
@@ -23,33 +26,40 @@ function scoreRunner(r) {
   const orating = safeInt(r.ofr);
   const last_run = safeInt(r.last_run, 99);
 
+  // Form parsing
   let wins = 0, places = 0;
   if (typeof r.form === 'string') {
     wins = (r.form.match(/1/g) || []).length;
     places = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
   }
 
+  // Trainer 14 day data
   const trainer = r.trainer_14_days || {};
   const trainerPercent = safeFloat(trainer.percent);
   const trainerWins = safeInt(trainer.wins);
-  const trainer_bonus = trainerPercent >= 20 ? 0.5 : 0;
-  const layoff_penalty = (wins === 0 && last_run > 50) ? -2.5 : 0;
 
+  // Scoring logic (direct translation)
   let score = 0;
-  score += 1.1 * rpr;
-  score += 0.6 * ts;
-  score += 0.32 * orating;
-  score += 2.1 * wins + 1.1 * places;
-  score += last_run > 50 ? -(last_run - 50) * 0.19 : (50 - last_run) * 0.13;
-  score += 0.8 * trainerPercent;
-  score += 1.2 * trainerWins;
-  score += trainer_bonus + layoff_penalty;
+  score += rpr;
+  score += 0.5 * ts;
+  score += 0.3 * orating;
+  score += 3 * wins + 1 * places;
+  if (last_run > 60) {
+    score -= (last_run - 60) * 0.4;
+  }
+  score += Math.max(0, 60 - last_run) * 0.1;
+  score += 0.7 * trainerPercent;
+  score += 1.1 * trainerWins;
 
-  if (score < -12) score = -12 + (score + 12) * 0.4;
+  // Clamp extreme negatives softly (prevents -80, -99, etc.)
+  if (score < -15) {
+    score = -15 + (score + 15) * 0.3;
+  }
   if (!Number.isFinite(score)) score = 0;
-
-  return Math.round(score * 100) / 100;
+  // Return rounded to 1 decimal
+  return Math.round(score * 10) / 10;
 }
+
 
 
 /**
