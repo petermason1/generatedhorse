@@ -208,80 +208,63 @@
   }
 }
 
-/* For smaller mobiles (e.g., up to 600px) */
+/* For small mobiles (up to 600px) */
 @media (max-width: 600px) {
-  .next6-races {
-    /* Still enforce 3 columns, will shrink more */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.4em;
-  }
-  .next6-race-link {
-    padding: 0.7em 0.2em;
-    min-height: 68px;
-  }
-  .next6-time {
-    font-size: 1.0em;
-  }
-  .next6-course {
-    font-size: 0.8em;
-  }
-
+  .next6-races,
   .racecard-race-row {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.15em;
+    gap: 0.28em;
   }
+  .next6-race-link,
   .racecard-time-link {
-    min-width: unset;
-    padding: 0.2em 0.3em;
-    min-height: 42px;
-    font-size: 0.95em;
+    padding: 0.44em 0.1em;
+    min-height: 54px;
+    font-size: 0.93em;
   }
-  /* NEW: Adjust font sizes for time and title within racecard-time-link */
-  .racecard-time-link .racecard-time {
-      font-size: 0.9em; /* Smaller font for time */
+  .next6-time,
+  .racecard-time {
+    font-size: 0.93em;
   }
-  .racecard-time-link .racecard-title {
-      font-size: 0.8em; /* Smaller font for title */
+  .next6-course,
+  .racecard-title {
+    font-size: 0.76em;
   }
 }
 
-/* For very small mobiles (e.g., up to 400px), if 3 cols are too tight, further optimize */
-@media (max-width: 400px) {
-    .next6-races {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.3em;
-    }
-    .next6-race-link {
-        padding: 0.6em 0.1em;
-        min-height: 65px;
-    }
-    .next6-time {
-        font-size: 0.95em;
-    }
-    .next6-course {
-        font-size: 0.75em;
-    }
-
-    .racecard-race-row {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.1em;
-    }
-    .racecard-time-link {
-        font-size: 0.9em;
-        min-height: 40px;
-    }
-    /* NEW: Even smaller font sizes for time and title on very small screens */
-    .racecard-time-link .racecard-time {
-        font-size: 0.8em; /* Even smaller font for time */
-    }
-    .racecard-time-link .racecard-title {
-        font-size: 0.7em; /* Even smaller font for title */
-    }
+/* For very small mobiles (up to 420px) */
+@media (max-width: 420px) {
+  .next6-races,
+  .racecard-race-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.11em;
+  }
+  .next6-race-link,
+  .racecard-time-link {
+    padding: 0.32em 0.08em;
+    min-height: 38px;
+    font-size: 0.85em;
+  }
+  .next6-time,
+  .racecard-time {
+    font-size: 0.82em;
+  }
+  .next6-course,
+  .racecard-title {
+    font-size: 0.68em;
+  }
 }
 
-
-/* --- UTILITIES & RESPONSIVE --- */
-@media (max-width: 800px) {
-  .container { padding: 18px 2vw 34px 2vw; }
-  .next6-bar, .best-bets-list { max-width: 99vw; }
+/* For ultra-narrow (<=340px): just stack */
+@media (max-width: 340px) {
+  .next6-races,
+  .racecard-race-row {
+    grid-template-columns: 1fr;
+    gap: 0.06em;
+  }
+  .next6-race-link,
+  .racecard-time-link {
+    padding: 0.18em 0.04em;
+    min-height: 29px;
+    font-size: 0.78em;
+  }
 }
