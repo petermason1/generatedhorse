@@ -7,6 +7,40 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="yesterday.css" />
+  <style>
+    /* Responsive Table & Winners Table Fixes */
+    .table-responsive { overflow-x: auto; width: 100%; }
+    table { min-width: 650px; }
+    th, td {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 110px;
+      vertical-align: middle;
+    }
+    /* Let Race and Tip columns wrap if needed */
+    .winners-table th:nth-child(4),
+    .winners-table td:nth-child(4),
+    .winners-table th:nth-child(8),
+    .winners-table td:nth-child(8) {
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      max-width: 190px;
+    }
+    @media (max-width: 900px) {
+      table { min-width: 500px; }
+      th, td { max-width: 90px; font-size: 0.97em; padding: 8px 6px; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 10px 2vw; }
+      th, td { font-size: 0.92em; padding: 6px 4px; }
+      .winners-table th:nth-child(8), .winners-table td:nth-child(8) { max-width: 120px; }
+    }
+    @media (max-width: 420px) {
+      .winners-table th:nth-child(8), .winners-table td:nth-child(8) { display: none; }
+    }
+  </style>
 </head>
 <body>
   <nav class="main-navbar">
@@ -15,9 +49,9 @@
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link">Home</a>
         <a href="tips.html" class="nav-link">Tips</a>
-         <a href="yesterday.html" class="nav-link nav-link-active">Yesterday</a>
-         <a href="custom-score.html" class="nav-link">Custom Score</a>
-         <a href="about.html" class="nav-link">About</a>
+        <a href="yesterday.html" class="nav-link nav-link-active">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link">About</a>
       </div>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -28,7 +62,7 @@
   </nav>
   <div class="container">
     <h1>Selections, Winners & ROI Breakdown</h1>
-    <div class="roi-summary">
+    <div class="roi-summary summary">
       <h2>ROI Summary</h2>
       <p><b>Total races processed:</b> <span id="total-races">...</span></p>
       <p><b>Total staked:</b> <span id="total-staked">...</span></p>
@@ -46,10 +80,10 @@
     <div class="winners-table">
       <h2>All Winners</h2>
       <div class="table-responsive">
-        <table>
+        <table class="winners-table-table">
           <thead>
             <tr>
-              <th>Date</th><th>Course</th><th>Off</th><th>Tip</th><th>Odds</th><th>SP</th><th>Win Return</th><th>Race</th>
+              <th>Date</th><th>Course</th><th>Off</th><th>Tip</th><th>Odds</th><th>SP</th><th>Win Return</th>
             </tr>
           </thead>
           <tbody id="winners-rows">
@@ -84,6 +118,14 @@
       .then(resp => resp.text())
       .then(text => {
         const data = parseCSV(text);
+
+        // Normalize class for grouping (removes weird labels)
+        data.forEach(row => {
+          if (row['class']) {
+            const c = String(row['class']).toLowerCase().replace(/[^\d]/g, '');
+            row['class'] = c ? c : row['class'];
+          }
+        });
 
         // -------- ROI SUMMARY --------
         const totalRaces = data.length;
@@ -145,7 +187,7 @@
             <td>${r.tip_odds}</td>
             <td>${r.sp_dec || ''}</td>
             <td>£${parseFloat(r.win_return||0).toFixed(2)}</td>
-            <td>${r.race}</td>
+           
           </tr>`;
         });
         document.getElementById('winners-rows').innerHTML = winHtml;
