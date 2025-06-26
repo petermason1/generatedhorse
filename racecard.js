@@ -153,16 +153,16 @@ function renderCourseLinks(race, allRaces) {
     .filter(r => r.course === race.course)
     .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt)); // Sort races for the current course by time
 
-  return `
-    <nav class="race-links-bar">
-      <span class="race-links-course">${race.course}</span>
-      ${courseRaces.map(rc => `
-        <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}" href="racecard.html?race_id=${rc._id}">
-          ${rc.off_time}
-        </a>
-      `).join('')}
-    </nav>
-  `;
+    return `
+  <nav class="race-links-bar">
+    ${courseRaces.map(rc => `
+      <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}" href="racecard.html?race_id=${rc._id}">
+        ${rc.off_time}
+      </a>
+    `).join('')}
+  </nav>
+`;
+
 }
 
 /**

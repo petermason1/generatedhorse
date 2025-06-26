@@ -77,16 +77,34 @@ fetch(CSV_PATH)
     document.getElementById('roi-all').textContent = roiAll;
 
     // -------- ROI BY COURSE --------
-    let courseData = groupBy(data, 'course');
-    let html = `<tr><th>Course</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>`;
-    Object.entries(courseData).forEach(([course, rows]) => {
-      const races = rows.length;
-      const staked = rows.reduce((a, r) => a + (parseFloat(r['staked']||'1') || 0), 0);
-      const returned = rows.reduce((a, r) => a + (parseFloat(r['win_return']||'0') || 0), 0);
-      const roi = staked ? (((returned - staked) / staked) * 100).toFixed(2) : '0.00';
-      html += `<tr${roi > 0 ? ' class="win-row"' : ''}><td>${course}</td><td>${races}</td><td>£${staked.toFixed(2)}</td><td>£${returned.toFixed(2)}</td><td>${roi}</td></tr>`;
-    });
-    document.getElementById('roi-by-course').innerHTML = html;
+   let courseData = groupBy(data, 'course');
+let html = `<tr><th>Course</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>`;
+
+// Calculate and collect course rows
+const rowsArr = Object.entries(courseData).map(([course, rows]) => {
+  const races = rows.length;
+  const staked = rows.reduce((a, r) => a + (parseFloat(r['staked']||'1') || 0), 0);
+  const returned = rows.reduce((a, r) => a + (parseFloat(r['win_return']||'0') || 0), 0);
+  const roi = staked ? (((returned - staked) / staked) * 100).toFixed(2) : '0.00';
+  return {
+    course,
+    races,
+    staked,
+    returned,
+    roi: parseFloat(roi), // for sorting
+    html: `<tr${roi > 0 ? ' class="win-row"' : ''}><td>${course}</td><td>${races}</td><td>£${staked.toFixed(2)}</td><td>£${returned.toFixed(2)}</td><td>${roi}</td></tr>`
+  };
+});
+
+// Split into winning and losing, sort each, then concat
+const positive = rowsArr.filter(r => r.roi > 0).sort((a, b) => a.course.localeCompare(b.course));
+const negative = rowsArr.filter(r => r.roi <= 0).sort((a, b) => a.course.localeCompare(b.course));
+
+// Combine and build HTML
+[...positive, ...negative].forEach(r => { html += r.html; });
+
+document.getElementById('roi-by-course').innerHTML = html;
+
 
     // -------- ROI BY TYPE --------
     let typeData = groupBy(data, 'type');
