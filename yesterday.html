@@ -19,9 +19,7 @@
       vertical-align: middle;
     }
     .winners-table th:nth-child(4),
-    .winners-table td:nth-child(4),
-    .winners-table th:nth-child(8),
-    .winners-table td:nth-child(8) {
+    .winners-table td:nth-child(4) {
       white-space: normal;
       word-break: break-word;
       overflow-wrap: anywhere;
@@ -34,10 +32,11 @@
     @media (max-width: 600px) {
       .container { padding: 10px 2vw; }
       th, td { font-size: 0.92em; padding: 6px 4px; }
-      .winners-table th:nth-child(8), .winners-table td:nth-child(8) { max-width: 120px; }
     }
     @media (max-width: 420px) {
-      .winners-table th:nth-child(8), .winners-table td:nth-child(8) { display: none; }
+      /* Hide columns if table is still too wide on tiny screens (add nth-child as needed) */
+      /* Example: Hide 'Course' column: */
+      /* .winners-table th:nth-child(2), .winners-table td:nth-child(2) { display: none; } */
     }
   </style>
 </head>
@@ -73,16 +72,22 @@
     </div>
     <div class="roi-tables">
       <h3>ROI by Course</h3>
-      <div class="table-responsive"><table id="roi-by-course"></table></div>
+      <div class="table-responsive">
+        <table id="roi-by-course" class="roi-table"></table>
+      </div>
       <h3>ROI by Race Type</h3>
-      <div class="table-responsive"><table id="roi-by-type"></table></div>
+      <div class="table-responsive">
+        <table id="roi-by-type" class="roi-table"></table>
+      </div>
       <h3>ROI by Race Class</h3>
-      <div class="table-responsive"><table id="roi-by-class"></table></div>
+      <div class="table-responsive">
+        <table id="roi-by-class" class="roi-table"></table>
+      </div>
     </div>
     <div class="winners-table">
       <h2>All Winners</h2>
       <div class="table-responsive">
-        <table class="winners-table-table">
+        <table class="winners-table">
           <thead>
             <tr>
               <th>Date</th>

@@ -1,120 +1,136 @@
-    /* yesterday.css: Styles specific to the yesterday.html page */
-    
+/* yesterday.css: Styles specific to the yesterday.html page */
 
-    .summary {
-        margin-bottom: 30px;
-        background: linear-gradient(145deg, #282d34, #20242b);
-        padding: 20px 25px;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-        color: #f6f8fb;
-    }
-    .summary h2 {
-        color: #ffc900;
-        font-size: 1.5em;
-        margin-top: 0;
-        margin-bottom: 1em;
-        text-align: center;
-    }
-    .summary b {
-        color: #36e8b5;
-        font-weight: 700;
-    }
-    .summary br {
-        margin-bottom: 0.5em;
-    }
+/* --- SUMMARY PANEL --- */
+.summary {
+  margin-bottom: 30px;
+  background: linear-gradient(145deg, #282d34, #20242b);
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  color: #f6f8fb;
+}
+.summary h2 {
+  color: #ffc900;
+  font-size: 1.5em;
+  margin: 0 0 1em 0;
+  text-align: center;
+}
+.summary b {
+  color: #36e8b5;
+  font-weight: 700;
+}
 
-    /* Headings consistent with global.css */
-    h1 {
-        font-size: 2.15em;
-        margin-bottom: 0.8em;
-        text-align: center;
-        color: #ffd700;
-        font-weight: 800;
-    }
-    h3 { /* For "Winning Selections" */
-        font-size: 1.27em;
-        margin-bottom: 1em;
-        color: #32dd99;
-        font-weight: 700;
-        text-align: center;
-    }
+/* --- HEADINGS --- */
+h1 {
+  font-size: 2.15em;
+  margin-bottom: 0.8em;
+  text-align: center;
+  color: #ffd700;
+  font-weight: 800;
+}
+h3 {
+  font-size: 1.27em;
+  margin-bottom: 1em;
+  color: #32dd99;
+  font-weight: 700;
+  text-align: center;
+}
 
-    /* Mobile Adjustments */
-    @media (max-width: 600px) {
-        .summary {
-            padding: 15px;
-            border-radius: 10px;
-        }
-        .summary h2 {
-            font-size: 1.3em;
-        }
-        h1 {
-            font-size: 1.8em;
-        }
-        h3 {
-            font-size: 1.1em;
-        }
-        th, td {
-            padding: 10px 12px;
-            font-size: 0.9em;
-        }
-    }
-    
-
-    /* Make tables fully responsive, even for long cells */
+/* --- TABLES: GENERAL --- */
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   width: 100%;
 }
 
-/* Table cell fixes for overflow */
-table th, table td {
+table {
+  min-width: 650px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 120px; /* Shrink for mobile */
+  max-width: 110px;
   vertical-align: middle;
+  padding: 10px 14px;
+  font-size: 1em;
 }
 
-/* Allow some columns to be wider/flexible */
-@media (max-width: 700px) {
-  table th, table td {
-    padding: 6px 4px;
-    font-size: 0.97em;
-    max-width: 90px;
-  }
-  .winners-table th:nth-child(8),
-  .winners-table td:nth-child(8) {
-    max-width: 140px;
-    white-space: normal;
-    word-break: break-word;
-    overflow-wrap: anywhere;
-  }
-}
 
-/* Race and Tip cells should wrap, not break table */
+
+/* --- TIP COLUMN: WRAPS TEXT --- */
 .winners-table th:nth-child(4),
-.winners-table td:nth-child(4),
-.winners-table th:nth-child(8),
-.winners-table td:nth-child(8) {
+.winners-table td:nth-child(4) {
   white-space: normal;
   word-break: break-word;
   overflow-wrap: anywhere;
-  max-width: 180px;
+  max-width: 200px;
 }
 
-/* Hide columns or make them tiny if they’re still a problem on tiny screens */
-@media (max-width: 430px) {
-  .winners-table th:nth-child(8),
-  .winners-table td:nth-child(8) {
-    display: none; /* Hide “Race” column if too tight */
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  table { min-width: 500px; }
+  th, td { max-width: 80px; font-size: 0.96em; padding: 8px 7px; }
+  .winners-table th:nth-child(4), .winners-table td:nth-child(4) {
+    max-width: 120px;
   }
 }
+@media (max-width: 700px) {
+  th, td { font-size: 0.94em; padding: 6px 5px; max-width: 65px; }
+  .winners-table th:nth-child(4), .winners-table td:nth-child(4) { max-width: 95px; }
+}
+@media (max-width: 600px) {
+  .summary { padding: 13px; border-radius: 10px; }
+  .summary h2 { font-size: 1.23em; }
+  h1 { font-size: 1.19em; }
+  h3 { font-size: 1.06em; }
+  table { min-width: 330px; }
+  th, td { font-size: 0.90em; padding: 6px 4px; }
+  .winners-table th:nth-child(4), .winners-table td:nth-child(4) { max-width: 70px; }
+}
+@media (max-width: 430px) {
+  .winners-table th:nth-child(2),
+  .winners-table td:nth-child(2) {
+    display: none; /* Hide "Course" column on tiny screens */
+  }
+  .winners-table th:nth-child(4),
+  .winners-table td:nth-child(4) { max-width: 50vw; }
+}
 
-/* Make the table itself not overflow */
-.winners-table table, .winners-table .table-responsive {
+/* --- FIX: TABLES NEVER OVERFLOW THE BOX --- */
+.winners-table {
   width: 100%;
-  min-width: 360px;
+  table-layout: fixed;
+}
+.table-responsive {
+  min-width: 0;
+  max-width: 100vw;
+}
+
+/* --- VISUAL POLISH --- */
+.winners-table thead {
+  background: #21242a;
+}
+.winners-table th {
+  color: #ffd700;
+  font-weight: 800;
+  background: #23293a;
+  border-bottom: 2px solid #36e8b5;
+  text-align: left;
+}
+.winners-table tbody tr:nth-child(even) {
+  background: #22262c;
+}
+.winners-table tbody tr:nth-child(odd) {
+  background: #1a1d23;
+}
+.winners-table td {
+  color: #f6f8fb;
+  border-bottom: 1px solid #282d34;
+}
+.winners-table tr:last-child td {
+  border-bottom: none;
 }
