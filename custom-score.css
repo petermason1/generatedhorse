@@ -26,32 +26,50 @@
 }
 
 .race-selector-container label {
-    color: #bbf5ed;
-    font-size: 1.15em; /* Larger label */
-    font-weight: 600;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: block;
+  font-size: 1.14em;
+  font-weight: 700;
+  color: #ffc900;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.6em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.15);
 }
 
+
 .race-selector-dropdown {
-    padding: 10px 18px; /* Increased padding */
-    border-radius: 10px; /* More rounded */
-    border: 2px solid #36e8b5; /* Thicker, more prominent border */
-    background-color: #232d33; /* Dark background */
-    color: #f6f8fb;
-    font-size: 1.05em; /* Slightly larger font */
-    cursor: pointer;
-    transition: all 0.25s ease-out;
-    outline: none;
-    max-width: 90%; /* Ensure it fits on small screens, preventing overflow */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 13px 16px;
+  font-size: 1.08em;
+  font-weight: 600;
+  color: #d9ffea;
+  background: linear-gradient(120deg, #20292f 82%, #1e3830 100%);
+  border: 2px solid #35e9ae;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(54,232,181,0.13), 0 1.5px 1.5px rgba(0,0,0,0.12);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
 }
-.race-selector-dropdown:hover,
-.race-selector-dropdown:focus {
-    background-color: #2a343f;
-    border-color: #2ce8c0;
-    box-shadow: 0 0 15px rgba(54,232,181,0.5); /* Green glow on hover/focus */
-    transform: translateY(-2px);
+
+.race-selector-dropdown:focus, .race-selector-dropdown:hover {
+  border-color: #ffc900;
+  box-shadow: 0 2px 24px rgba(255,201,0,0.13), 0 2px 12px rgba(54,232,181,0.17);
+  background: linear-gradient(120deg, #242f38 82%, #223d35 100%);
+  color: #fffceb;
 }
+
+.race-selector-dropdown option {
+  background: #20292f;
+  color: #35e9ae;
+  font-size: 1em;
+}
+
 
 /* --- Score Controls Section --- */
 .score-controls {
@@ -839,4 +857,24 @@
     font-size: 0.91em;
     max-width: 95px;
   }
+}
+.show-results-helper {
+  margin: 1.6em auto 0.8em auto;
+  text-align: center;
+  font-size: 1.07em;
+  color: #b8d8cf;
+  background: rgba(47, 224, 160, 0.05);
+  border-radius: 9px;
+  max-width: 540px;
+  padding: 0.7em 1.5em 0.65em 1.5em;
+  box-shadow: 0 1.5px 8px rgba(47,224,160,0.06);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.19s;
+}
+
+.show-results-helper b {
+  color: #ffc900;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }

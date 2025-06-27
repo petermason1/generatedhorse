@@ -391,7 +391,7 @@ function populateRaceDropdown() {
 if (window.racecardsData && window.racecardsData.racecards && window.racecardsData.racecards.length > 0) {
     populateRaceDropdown();
     updateSliderValues(weightPresets.Default);
-    customRunnersListDiv.innerHTML = '<p class="info-message">Adjust weights and press <b>Show Results</b> to view the sorted runners.</p>';
+customRunnersListDiv.innerHTML = '<p class="show-results-helper">Adjust weights and press <b>Show Results</b> to view the sorted runners.</p>';
 } else {
     const mainContent = document.querySelector('main.container');
     if (mainContent) {
