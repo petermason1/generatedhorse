@@ -66,24 +66,36 @@ h1 {
 }
 
 .see-tips-btn {
-  background: #2fe0a0;
+  display: inline-block;
+  margin: 1.1em auto 0.7em auto;
+  padding: 0.95em 2em 0.95em 1.4em;
+  background: linear-gradient(90deg, #2fe0a0 60%, #22c788 100%);
   color: #161c22;
-  font-weight: 800;
-  padding: 12px 32px;
-  border-radius: 8px;
-  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.14em;
+  border-radius: 15px;
+  box-shadow: 0 3px 14px rgba(47,224,160,0.14);
+  letter-spacing: .02em;
   border: none;
-  font-size: 1.05em;
-  box-shadow: 0 1px 6px rgba(47,224,160,0.11);
-  letter-spacing: 0.01em;
-  transition: background 0.13s, color 0.13s, box-shadow 0.14s;
+  transition: 
+    background 0.15s cubic-bezier(.32,1.29,.44,.97),
+    color 0.13s,
+    box-shadow 0.16s cubic-bezier(.32,1.29,.44,.97),
+    transform 0.12s;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
+
 .see-tips-btn:hover,
 .see-tips-btn:focus {
-  background: #1f7857;
+  background: linear-gradient(90deg, #1b8c68 40%, #2fe0a0 100%);
   color: #fff;
-  box-shadow: 0 4px 18px rgba(47,224,160,0.14);
+  box-shadow: 0 6px 24px rgba(47,224,160,0.23);
+  transform: translateY(-2px) scale(1.04);
 }
+
 
 /* --- Responsive tweaks for CTA bar --- */
 @media (max-width: 700px) {
