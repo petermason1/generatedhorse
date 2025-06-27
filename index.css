@@ -414,3 +414,28 @@ body {
   .see-tips-btn { font-size: 0.97em; padding: 13px 0; }
   .next6-races { gap: 0.23em; }
 }
+@media (max-width: 700px) {
+  .see-tips-btn {
+    display: block;
+    margin: 10px auto 0 auto;
+    max-width: 340px;
+    width: 94%;
+    padding: 12px 0;
+    font-size: 1em;
+    min-height: 42px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(47,224,160,0.09);
+    /* Remove border if you want a softer look: border: none; */
+  }
+  .tips-cta-bar {
+    gap: 4px;
+    padding: 10px 5vw 13px 5vw;
+  }
+}
+@media (max-width: 420px) {
+  .see-tips-btn {
+    font-size: 0.96em;
+    max-width: 98vw;
+    padding: 11px 0;
+  }
+}
