@@ -1,12 +1,17 @@
 export default async function handler(req, res) {
-  const apiKey = process.env.RACING_API_KEY;
-  if (!apiKey) {
-    res.status(500).json({ error: "API key not set!" });
+  const username = process.env.RACING_API_USERNAME;
+  const password = process.env.RACING_API_PASSWORD;
+  if (!username || !password) {
+    res.status(500).json({ error: "API username or password not set!" });
     return;
   }
+  const auth = Buffer.from(`${username}:${password}`).toString('base64');
   try {
     const apiRes = await fetch("https://api.theracingapi.com/v1/results/today", {
-      headers: { 'x-api-key': apiKey }
+      headers: {
+        'Authorization': `Basic ${auth}`,
+        'Accept': 'application/json'
+      }
     });
     if (!apiRes.ok) {
       const text = await apiRes.text();
