@@ -1,5 +1,3 @@
-// api/results.js
-
 export default async function handler(req, res) {
   const apiKey = process.env.RACING_API_KEY;
   if (!apiKey) {
