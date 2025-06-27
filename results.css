@@ -1,73 +1,102 @@
 .race-result {
-  margin: 0 auto 34px auto;
-  max-width: 620px;
-  border-radius: 14px;
-  background: linear-gradient(120deg, #1e222a 95%, #232f2c 100%);
-  border: 1px solid #232c34;
-  box-shadow: 0 2px 16px #12121812, 0 1.5px 8px #232f2c22;
-  padding: 22px 28px 17px 24px;
-  transition: box-shadow 0.15s, border 0.13s;
+  margin: 0 auto 38px auto;
+  max-width: 580px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #232a35 92%, #232f2c 100%);
+  border: 1.2px solid #222b32;
+  box-shadow: 0 4px 28px #000b, 0 1.5px 8px #36e8b517;
+  padding: 23px 26px 17px 26px;
+  transition: box-shadow 0.16s, border 0.13s;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  overflow: hidden;
 }
 .race-result:hover {
-  border-color: #36e8b577;
-  box-shadow: 0 8px 38px #36e8b51a, 0 1.5px 8px #232f2c44;
+  border-color: #36e8b5c2;
+  box-shadow: 0 10px 44px #36e8b51a, 0 2px 10px #232f2c33;
 }
 
 .race-result h2 {
-  margin: 0 0 5px 0;
+  margin: 0 0 4px 0;
   color: #36e8b5;
-  font-size: 1.12em;
+  font-size: 1.16em;
   letter-spacing: 0.01em;
   font-weight: 900;
+  line-height: 1.14;
+  text-shadow: 0 2px 7px #1d362733;
 }
 
 .race-meta {
-  font-size: 1em;
-  color: #e9e9e9;
-  margin-bottom: 10px;
-  font-weight: 400;
+  font-size: 1.03em;
+  color: #fafafa;
+  font-weight: 500;
+  opacity: 0.97;
+  margin-bottom: 3px;
+  line-height: 1.15;
 }
 
 .race-horses {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-top: 7px;
+  gap: 3px; /* Tight, but readable */
+  margin-top: 6px;
+  padding-left: 2px;
 }
 
-.winner {
-  color: #36e8b5;
-  font-weight: 700;
-  font-size: 1.13em;
-}
-.placed {
-  color: #ffd700;
-  font-weight: 600;
-}
-.third {
-  color: #f3b;
-}
 .race-horses span {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 1px;
-  font-size: 1em;
+  gap: 9px;
+  font-size: 1.09em;
+  padding: 0.10em 0 0.06em 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  border-radius: 8px;
+  background: none;
+  min-height: 22px;
+  transition: background 0.17s;
+}
+
+.winner {
+  color: #27ed81;
+  font-weight: 800;
+  font-size: 1.11em;
+  text-shadow: 0 0.5px 3px #0e572a;
+}
+.placed {
+  color: #C0C0C0; /* Silver */
+  font-weight: 700;
+  text-shadow: 0 0.5px 2px #222;
+}
+.third {
+  color: #cd7f32; /* Bronze */
+  font-weight: 700;
+  text-shadow: 0 0.5px 2px #543a1b;
+}
+/* If 4th place is ever used: */
+.fourth, .rest {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.race-horses b {
+  font-weight: 800;
+  margin-right: 3px;
+  letter-spacing: 0.01em;
 }
 .race-horses small {
-  font-weight: 400;
-  font-size: 0.95em;
-  margin-left: 2px;
-  color: #ccc;
+  font-weight: 500;
+  font-size: 0.98em;
+  margin-left: 4px;
+  color: #bce6ff;
+  opacity: 0.88;
 }
 
-
-
-.race-result {
-  margin-bottom: 26px; border-bottom: 1px solid #333; padding-bottom: 10px;
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .race-result {
+    max-width: 98vw;
+    padding: 14px 2vw 13px 2vw;
+  }
 }
-.race-result h2 { margin: 6px 0 2px 0; color: #36e8b5; font-size: 1.2em; }
-.winner { color: #36e8b5; font-weight: bold; }
-.placed { color: #ffd700; }
-.third { color: #f3b; }

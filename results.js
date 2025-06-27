@@ -32,12 +32,12 @@ function renderResults(data) {
     const sp = r => r.sp || r.starting_price || r.sp_dec || '-';
 
     // Render each placed runner, always show SP
-    const placeLabels = ["winner", "placed", "third", "placed"];
+    const placeLabels = ["winner", "placed", "third", "placed", "placed"];
+    const medal = i => i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : "";
     const places = top.map((runner, i) => {
-      const label = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : "";
       const cls = placeLabels[i] || "placed";
-      return `<span class="${cls}">${label} <b>${rn(runner)}</b> <small style="color:#999;">(SP: ${sp(runner)})</small></span>`;
-    }).join('<br>');
+      return `<span class="${cls}">${medal(i)} <b>${rn(runner)}</b> <small>(SP: ${sp(runner)})</small></span>`;
+    }).join('');
 
     return `
       <div class="race-result">
