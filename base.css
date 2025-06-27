@@ -1,209 +1,256 @@
 /*
- * base.css: Foundational stylesheet for Smart Racecards.
- * This file contains all global, shared styles across the website.
- * It is meant to be imported first by all HTML pages.
+ * base.css: Global stylesheet for Smart Racecards.
+ * Import this first on every page!
  */
 
 /* --- BASE STYLES --- */
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background: #191e23; /* Dark background */
-  color: #f6f8fb; /* Light text color */
-  font-family: 'Inter', Arial, sans-serif; /* Modern font */
-  -webkit-font-smoothing: antialiased; /* Smoother fonts on Webkit browsers */
-  -moz-osx-font-smoothing: grayscale; /* Smoother fonts on Firefox */
+  background: #191e23;
+  color: #f6f8fb;
+  font-family: 'Inter', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-  max-width: 800px; /* Max width for content */
-  margin: 0 auto; /* Center content */
-  padding: 30px 18px 50px 18px; /* Padding for content area */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 18px 50px 18px;
 }
 
 /* --- NAVBAR --- */
 .main-navbar {
-  background: #171a20; /* Darker navbar background */
-  box-shadow: 0 1px 7px rgba(0,0,0,0.2); /* Subtle shadow */
-  position: sticky; /* Make navbar sticky at the top */
+  width: 100vw;
+  background: #171a20;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.13);
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  position: sticky;
   top: 0;
-  z-index: 10; /* Ensure navbar is above other content */
+  z-index: 100;
 }
 .navbar-inner {
-  max-width: 950px; /* Inner width of navbar */
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.65em 1em;
+  padding: 0.25em 2vw;
+  min-height: 56px;
 }
+
 .nav-brand {
-  font-size: 1.18em;
+  font-size: 1.16em;
   font-weight: 900;
-  color: #ffc900; /* Golden yellow brand color */
+  color: #ffd700;
   letter-spacing: 1px;
   text-decoration: none;
-  padding: 2px 13px 2px 5px;
+  padding: 2px 12px 2px 4px;
   border-radius: 6px;
-  background: #232a32; /* Darker background for brand */
-  transition: background 0.13s, color 0.13s; /* Smooth transition */
+  background: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.13s;
 }
 .nav-brand:hover {
-  background: #36e8b5; /* Green accent on hover */
-  color: #191e23; /* Dark text on hover */
+  color: #36e8b5;
 }
+
 .nav-links {
   display: flex;
-  gap: 1.12em; /* Space between navigation links */
+  gap: 2em;
+  align-items: center;
 }
 .nav-link {
   color: #36e8b5;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.04em;
-  padding: 3px 13px;
-  border-radius: 5px;
-  transition: background 0.12s, color 0.12s;
+  padding: 7px 13px;
+  border-radius: 7px;
+  background: none;
+  transition: background 0.14s, color 0.14s;
+  position: relative;
 }
-.nav-link:hover, .nav-link.nav-link-active {
-  background: #36e8b5;
-  color: #191e23 !important; /* Force dark text for active/hover */
+.nav-link:hover,
+.nav-link.nav-link-active {
+  color: #ffd700 !important;
+  background: #232a32;
+  text-shadow: 0 1px 8px rgba(255, 217, 0, 0.12);
 }
 
-/* --- Hamburger Menu Styles --- */
+/* --- Hamburger Menu (Mobile) --- */
 .hamburger {
-  display: none; /* Hidden by default on desktop */
+  display: none;
   flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 120;
 }
 .hamburger span {
   display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #36e8b5;
-  border-radius: 3px;
-  transition: all 0.3s ease-in-out;
+  width: 75%;
+  height: 4px;
+  margin: 3px 0;
+  background: #36e8b5;
+  border-radius: 2px;
+  transition: all 0.19s;
 }
-/* Hamburger animation for 'active' state */
-.hamburger.active span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
+.hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
+.hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
-/* --- GENERAL HEADINGS & DESCRIPTIONS --- */
+@media (max-width: 800px) {
+  .navbar-inner { padding: 0.17em 1vw; }
+  .nav-links { gap: 1em; }
+}
+@media (max-width: 768px) {
+  .hamburger { display: flex; margin-left: 0.7em; }
+  .nav-links {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 180px;
+    background: #171a20;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 16px 0 12px 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 7px 18px rgba(0,0,0,0.24);
+    display: none;
+    z-index: 119;
+  }
+  .nav-links.active { display: flex; }
+  .nav-link { width: 100%; text-align: right; padding: 12px 19px; border-radius: 0; }
+}
+
+/* --- TYPOGRAPHY & HEADINGS --- */
 h1, h2, h3 {
   font-family: inherit;
   font-weight: 800;
   line-height: 1.19;
-  color: #ffd700; /* Default heading color (golden yellow) */
   margin-top: 0;
 }
-/* Default h1 for general pages, meant to be overridden by page-specific .page-title */
-h1 { font-size: 2.15em; margin-bottom: 0.22em; text-align: center; }
-h2 { font-size: 1.27em; margin-bottom: 0.6em; }
-h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
+h1, .about-header {
+  color: #ffd700;
+  font-size: 2.18em;
+  margin-bottom: 0.27em;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+h2, .section-title {
+  color: #ffd700;
+  font-size: 1.28em;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.01em;
+}
+h3 {
+  color: #35e9ae;
+  font-size: 1.07em;
+  margin-bottom: 0.33em;
+}
 
-.page-desc { /* General descriptive text, used on index.html, about.html */
+/* --- General Description Paragraph --- */
+.page-desc {
   color: #b7b7b7;
   font-size: 1.09em;
-  max-width: 580px;
-  margin: 0 auto 1.8em auto;
+  max-width: 600px;
+  margin: 0 auto 1.9em auto;
   text-align: center;
   line-height: 1.6;
 }
-.page-desc b {
-  color: #ffc900;
-  font-weight: 700;
-}
+.page-desc b { color: #ffc900; }
 
-/* --- REUSABLE BUTTON STYLE --- */
-/* This style is for general buttons that share a common visual appearance */
-.primary-btn { /* Renamed from .see-tips-btn for more generality */
+/* --- Buttons --- */
+.primary-btn {
   display: inline-block;
-  background: linear-gradient(145deg, #36e8b5, #2ce8c0);
+  background: linear-gradient(145deg, #36e8b5, #2ce8c0 88%);
   color: #191e23;
-  font-size: 1.15em;
+  font-size: 1.13em;
   font-weight: 700;
-  padding: 0.9em 1.8em;
-  border-radius: 8px;
+  padding: 0.88em 1.7em;
+  border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s ease-out;
-  margin-top: 1.8em;
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.17);
+  transition: all 0.18s;
+  margin-top: 1.5em;
   margin-bottom: 2em;
   border: none;
   cursor: pointer;
   letter-spacing: 0.02em;
 }
 .primary-btn:hover {
-  background: linear-gradient(145deg, #2ce8c0, #36e8b5);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(54, 232, 181, 0.6);
+  background: linear-gradient(145deg, #2ce8c0, #36e8b5 88%);
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(0, 0, 0, 0.23), 0 0 10px rgba(54, 232, 181, 0.2);
 }
 .primary-btn:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* --- General Table Styles (for yesterday.html and other potential tables) --- */
+/* --- General Table Styles --- */
 table {
-    border-collapse: collapse;
-    width: 100%;
-    background: #232d33;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-    margin-bottom: 30px;
+  border-collapse: collapse;
+  width: 100%;
+  background: #232d33;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.23);
+  margin-bottom: 28px;
 }
 th, td {
-    padding: 14px 18px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    color: #e0e0e0;
-    font-size: 0.98em;
+  padding: 13px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #e0e0e0;
+  font-size: 0.98em;
 }
 th {
-    background: linear-gradient(145deg, #1f242a, #1a1e23);
-    color: #ffc900;
-    font-size: 1.05em;
-    font-weight: 700;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  background: linear-gradient(145deg, #1f242a, #1a1e23);
+  color: #ffd700;
+  font-size: 1.05em;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 table thead tr:first-child th:first-child { border-top-left-radius: 12px; }
 table thead tr:first-child th:last-child { border-top-right-radius: 12px; }
-tr:nth-child(even) { background: #2a2e33; }
-tr:nth-child(odd) { background: #23262A; }
+tr:nth-child(even) { background: #23262a; }
+tr:nth-child(odd) { background: #2a2e33; }
 table tbody tr:last-child td { border-bottom: none; }
-tr.win-row { /* Specific style for win rows, used in yesterday.html */
-    background: linear-gradient(145deg, #36e8b5, #2ce8c0) !important;
-    color: #191e23;
-    font-weight: 600;
-    box-shadow: inset 0 0 10px rgba(54,232,181,0.5);
+tr.win-row {
+  background: linear-gradient(145deg, #36e8b5, #2ce8c0 80%) !important;
+  color: #191e23;
+  font-weight: 600;
+  box-shadow: inset 0 0 9px rgba(54,232,181,0.37);
 }
 tr.win-row td { color: #191e23 !important; }
 td:last-child { font-weight: bold; color: #ffc900; }
 tr.win-row td:last-child { color: #191e23 !important; }
-.table-responsive { /* For horizontal scrolling tables */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-bottom: 30px;
-    scrollbar-width: thin;
-    scrollbar-color: #35e9ae #181c22;
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 28px;
+  scrollbar-width: thin;
+  scrollbar-color: #35e9ae #181c22;
 }
 .table-responsive::-webkit-scrollbar { height: 8px; }
 .table-responsive::-webkit-scrollbar-thumb { background: #35e9ae; border-radius: 4px; }
 .table-responsive::-webkit-scrollbar-track { background: #181c22; }
 
-/* --- Course Bar (general component for navigation between courses, used in racecard.html) --- */
+/* --- Course Bar (Navigation) --- */
 .course-bar {
   display: flex;
   gap: 10px;
-  padding: 15px 0 18px 0;
+  padding: 14px 0 17px 0;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -211,68 +258,114 @@ tr.win-row td:last-child { color: #191e23 !important; }
   background: #21242a;
   color: #36e8b5;
   border-radius: 8px;
-  padding: 0.40em 1.2em;
+  padding: 0.40em 1.1em;
   font-weight: 700;
   font-size: 1.06em;
   text-decoration: none;
-  transition: background 0.14s, color 0.14s, box-shadow 0.15s;
-  box-shadow: 0 2px 8px rgba(17,17,17,0.2);
+  transition: background 0.13s, color 0.13s, box-shadow 0.13s;
+  box-shadow: 0 2px 8px rgba(17,17,17,0.14);
 }
 .course-link.active,
 .course-link:hover {
   background: #36e8b5;
   color: #191e23;
-  box-shadow: 0 2px 16px rgba(25,231,182,0.73);
+  box-shadow: 0 2px 16px rgba(25,231,182,0.53);
 }
 
-/* --- General Responsive Utilities --- */
-@media (max-width: 800px) {
-  .container { padding: 18px 2vw 34px 2vw; }
+/* --- Responsive Utilities --- */
+@media (max-width: 1000px) {
+  .container { padding: 18px 2vw 38px 2vw; }
 }
+@media (max-width: 850px) {
+  .container { padding: 14px 2vw 28px 2vw; }
+}
+@media (max-width: 768px) {
+  .container { padding: 12px 2vw 22px 2vw; }
+  h1, .about-header { font-size: 1.7em; }
+  h2, .section-title { font-size: 1.14em; }
+  .primary-btn { padding: 8px 15px; font-size: 1em; }
+  .course-link { padding: 0.33em 0.93em; font-size: 1em; }
+}
+@media (max-width: 600px) {
+  h1, .about-header { font-size: 1.4em; }
+  .primary-btn { font-size: 0.96em; }
+  .navbar-inner { padding: 0.12em 2vw; }
+}
+@media (max-width: 480px) {
+  .container { padding: 7px 1vw 14px 1vw; }
+  h1, .about-header { font-size: 1.11em; }
+  h2, .section-title { font-size: 1.02em; }
+  .primary-btn { font-size: 0.9em; padding: 6px 9px; }
+}
+
+/* --- Utility Classes --- */
+.hide { display: none !important; }
+.center { text-align: center; }
+.bold { font-weight: 700; }
 
 @media (max-width: 768px) {
-  /* NAVBAR */
-  .hamburger { display: flex; margin-left: 1em; }
-  .nav-links {
-    position: absolute;
-    top: 50px;
+  .main-navbar {
+    position: fixed; /* Navbar stays on top always */
+    width: 100vw;
     left: 0;
-    width: 100%;
-    background-color: #171a20;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-    display: none;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    top: 0;
+    z-index: 120;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.24);
   }
-  .nav-links.active { display: flex; }
-  .nav-links a { padding: 10px 0; width: 100%; text-align: center; color: #36e8b5; }
-
-  /* General headings adjustment */
-  h1 { font-size: 1.8em; margin-top: 1.5em; margin-bottom: 0.8em; }
-  h2 { font-size: 1.6em; margin-bottom: 1em; } /* Larger for mobile for general sections */
-  h3 { font-size: 1.1em; } /* Larger for mobile for general sections */
-
-  .page-desc { font-size: 1.05em; margin-bottom: 2em; }
-
-  /* Buttons */
-  .primary-btn { padding: 8px 16px; font-size: 0.95em; border-radius: 8px; }
-
-  /* Course bar */
-  .course-link { padding: 0.35em 1em; font-size: 1em; }
+  .navbar-inner {
+    padding: 0.14em 2vw;
+    min-height: 54px;
+    max-width: 100vw;
+  }
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+    z-index: 125; /* Always above nav-links */
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    top: 54px;   /* matches navbar height */
+    right: 0;
+    width: 78vw;    /* wide, but not the whole screen */
+    max-width: 320px;
+    background: #181c21;
+    box-shadow: -5px 0 24px rgba(0,0,0,0.45);
+    padding: 28px 0 10px 0;
+    border-radius: 0 0 0 14px;
+    gap: 0.4em;
+    z-index: 123;
+    animation: slideInNav 0.16s;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-link {
+    width: 100%;
+    text-align: right;
+    padding: 15px 30px;
+    font-size: 1.12em;
+    border-radius: 0;
+    color: #35e9ae;
+    background: none;
+    border-bottom: 1px solid #20242a;
+    transition: background 0.13s, color 0.13s;
+  }
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  .nav-link:hover,
+  .nav-link.nav-link-active {
+    background: #232a32;
+    color: #ffd700 !important;
+  }
 }
 
-@media (max-width: 480px) {
-    /* General headings adjustment */
-    h1 { font-size: 1.5em; margin-top: 1em; margin-bottom: 0.7em; }
-    h2 { font-size: 1.4em; margin-bottom: 0.8em; }
-    h3 { font-size: 1.0em; }
-
-    .page-desc { font-size: 1em; margin-bottom: 1.5em; padding: 0 10px; }
-
-    /* Buttons */
-    .primary-btn { padding: 7px 14px; font-size: 0.9em; }
-
-    /* Course bar */
-    .course-link { padding: 0.3em 0.8em; font-size: 0.9em; }
+/* Nice slide animation */
+@keyframes slideInNav {
+  from { transform: translateX(110%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
 }
+
