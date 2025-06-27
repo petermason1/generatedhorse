@@ -4,101 +4,57 @@
   <meta charset="UTF-8">
   <title>Latest Racing Results | Smart Racecards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { background: #181C1F; color: #f0f0f0; font-family: Arial, sans-serif; }
-    h1 { color: #ffd700; }
-    .race-result {
-      margin-bottom: 26px; border-bottom: 1px solid #333; padding-bottom: 10px;
-    }
-    .race-result h2 { margin: 6px 0 2px 0; color: #36e8b5; font-size: 1.2em; }
-    .winner { color: #36e8b5; font-weight: bold; }
-    .placed { color: #ffd700; }
-    .third { color: #f3b; }
-  </style>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="results.css" />
+  <link rel="stylesheet" href="navbar.css" /> <!-- if you split navbar styles -->
 </head>
 <body>
   <nav class="main-navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">🏇 Racecards</a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="results.html" class="nav-link">Results</a>
-      <a href="tips.html" class="nav-link">Tips</a>
-      <a href="yesterday.html" class="nav-link">Historical</a>
-      <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About</a>
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">🏇 Racecards</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="tips.html" class="nav-link">Tips</a>
+        <a href="yesterday.html" class="nav-link">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
-  </div>
-  <div class="nav-backdrop" id="navBackdrop"></div>
-</nav>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+  </nav>
 
   <h1>Latest Racing Results</h1>
   <div id="results">Loading…</div>
-  <script>
-    fetch('/api/results')
-      .then(res => res.json())
-      .then(data => {
-        const resultsDiv = document.getElementById('results');
-        if (!data || !data.results || !data.results.length) {
-          resultsDiv.innerHTML = '<p>No results yet. Please check back later.</p>';
-          return;
-        }
-        resultsDiv.innerHTML = data.results.map(race => {
-          // Flexible field access for API variations
-          const off = race.off || race.off_time || race.time || '-';
-          const course = race.course || race.venue || '-';
-          const name = race.race_name || race.name || '';
-          // Runners sorted by finishing position (lowest = winner)
-          const top = (race.runners || [])
-            .filter(r => r.position && Number(r.position) > 0)
-            .sort((a, b) => Number(a.position) - Number(b.position));
-          // Runner name and SP fallback logic
-          const rn = r => r.horse || r.runner_name || r.name || '-';
-          const sp = r => r.sp || r.starting_price || r.sp_dec || '-';
-          // Render winner, 2nd, 3rd
-          const winner = top[0] ? `<span class="winner">🥇 ${rn(top[0])} <small style="color:#999;">(SP: ${sp(top[0])})</small></span>` : '';
-          const placed = top[1] ? `<span class="placed">🥈 ${rn(top[1])}</span>` : '';
-          const third = top[2] ? `<span class="third">🥉 ${rn(top[2])}</span>` : '';
-          return `
-            <div class="race-result">
-              <h2>${off} - ${course}</h2>
-              <div>${name}</div>
-              <div>${winner}${placed ? '<br>'+placed : ''}${third ? '<br>'+third : ''}</div>
-            </div>
-          `;
-        }).join('');
-      })
-      .catch(() => {
-        document.getElementById('results').innerHTML = '<p>Error loading results.</p>';
-      });
-  </script>
-   <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="tips.html">Tips</a>
-      <a href="yesterday.html">Historical</a>
-      <a href="custom-score.html">Custom Score</a>
-      <a href="about.html">About</a>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="tips.html">Tips</a>
+        <a href="yesterday.html">Historical</a>
+        <a href="custom-score.html">Custom Score</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-meta">
+        <span id="footer-year"></span> Smart Racecards
+        <span>•</span>
+        <a href="mailto:info@smartracecards.com">Contact</a>
+      </div>
+      <div class="footer-disclaimer">
+        <small>
+          For informational purposes only – not betting advice.<br>
+          Please gamble responsibly. 18+
+        </small>
+      </div>
     </div>
-    <div class="footer-meta">
-     <span id="footer-year"></span> Smart Racecards
-      <span>•</span>
-      <a href="mailto:info@smartracecards.com">Contact</a>
-    </div>
-    <div class="footer-disclaimer">
-      <small>
-        For informational purposes only – not betting advice.<br>
-        Please gamble responsibly. 18+
-      </small>
-    </div>
-  </div>
-</footer>
+  </footer>
+  
+  <script src="results.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
