@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics (gtag) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NMB0VG2VBB');
-</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMB0VG2VBB');
+  </script>
   <meta charset="UTF-8" />
-  <title>Racecards</title> <!-- Title will be dynamic via JS for specific race -->
+  <title>Racecards</title>
+  <meta name="description" content="Get expert horse racing tips and data-driven analysis for UK & Irish races from Smart Racecards. Find today's best picks!">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="base.css" /> <!-- Link to base.css first -->
-  <link rel="stylesheet" href="racecard.css" /> <!-- Then link to racecard.css -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="racecard.css" />
 </head>
 <body>
   <nav class="main-navbar">
@@ -36,40 +37,8 @@
 
   <main id="main"></main>
 
-  <!-- Data file should define window.racecardsData -->
   <script src="data.js"></script>
-  <!-- Main logic for the racecard page -->
   <script src="racecard.js"></script>
-
-  <script>
-    // JavaScript for hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked (optional, but good for UX)
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-      });
-    });
-
-    // Highlight active nav link based on current page
-    document.addEventListener('DOMContentLoaded', () => {
-        const currentPath = window.location.pathname.split('/').pop();
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('nav-link-active');
-            } else {
-                link.classList.remove('nav-link-active');
-            }
-        });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

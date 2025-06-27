@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Horse Racing ROI & Winners | Smart Racecards</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="See our full historic record of horse racing tips, winners, and ROI by course, type, and class. Data-driven results and all-time stats from Smart Racecards.">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="yesterday.css" />
@@ -56,8 +57,11 @@
         <span></span>
         <span></span>
       </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
+    <div class="nav-backdrop" id="navBackdrop"></div>
   </nav>
+
   <div class="container">
     <h1>Selections, Winners & ROI Breakdown</h1>
     <div class="roi-summary summary">
@@ -81,7 +85,13 @@
         <table class="winners-table-table">
           <thead>
             <tr>
-              <th>Date</th><th>Course</th><th>Off</th><th>Tip</th><th>Odds</th><th>SP</th><th>Win Return</th>
+              <th>Date</th>
+              <th>Course</th>
+              <th>Off</th>
+              <th>Tip</th>
+              <th>Odds</th>
+              <th>SP</th>
+              <th>Win Return</th>
             </tr>
           </thead>
           <tbody id="winners-rows">
@@ -92,5 +102,6 @@
     </div>
   </div>
   <script src="yesterday.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

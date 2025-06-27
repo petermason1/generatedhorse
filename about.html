@@ -7,36 +7,35 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
-  <title>About Smart Racecards | Data-Driven Horse Racing Analysis</title> <!-- SEO Enhancement: More descriptive title -->
-  <meta name="description" content="Learn about Smart Racecards: our team, proprietary rating system, and commitment to transparent, data-driven horse racing analysis."> <!-- SEO Enhancement: Added meta description -->
+  <title>About Smart Racecards | Data-Driven Horse Racing Analysis</title>
+  <meta name="description" content="Learn about Smart Racecards: our team, proprietary rating system, and commitment to transparent, data-driven horse racing analysis.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="base.css" /> <!-- Link to base.css first -->
-    <link rel="stylesheet" href="about.css" /> <!-- Then link to custom-score.css -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
 <body>
-<nav class="main-navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">🏇 Racecards</a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="tips.html" class="nav-link">Tips</a>
-      <a href="yesterday.html" class="nav-link">Historical</a>
-      <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About</a>
+  <nav class="main-navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">🏇 Racecards</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="tips.html" class="nav-link">Tips</a>
+        <a href="yesterday.html" class="nav-link">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link nav-link-active">About</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</nav>
-
-
+    <div class="nav-backdrop" id="navBackdrop"></div>
+  </nav>
 
   <main class="about-container">
     <h1 class="about-header">About This Site</h1>
@@ -47,60 +46,56 @@
     </div>
 
     <h2 class="section-title">How It Works</h2>
-<ul class="fancy-list">
-  <li>Every UK & Irish race is rated daily using our proprietary algorithm</li>
-  <li>Each horse is scored on form, speed, trainer stats, and more</li>
-  <li>The system highlights both likely winners and value picks</li>
-  <li>Our process is grounded in data—not hype or guesswork</li>
-  <li>New features and membership options may be introduced in the future—details will always be clear and upfront</li>
-</ul>
+    <ul class="fancy-list">
+      <li>Every UK & Irish race is rated daily using our proprietary algorithm</li>
+      <li>Each horse is scored on form, speed, trainer stats, and more</li>
+      <li>The system highlights both likely winners and value picks</li>
+      <li>Our process is grounded in data—not hype or guesswork</li>
+      <li>New features and membership options may be introduced in the future—details will always be clear and upfront</li>
+    </ul>
 
+    <h2 class="section-title">Meet the Team</h2>
+    <div class="team-section">
+      <div class="team-card">
+        <div>
+          <span class="team-name">Peter Mason</span><br>
+          <span class="team-role">Founder, Lead Analyst</span>
+          <div class="team-desc">
+            A specialist in statistical modelling and process automation, Peter leads the design and development of our ratings engine. He’s dedicated to evidence-based analysis and continuous refinement of the system.
+          </div>
+        </div>
+      </div>
 
-  <h2 class="section-title">Meet the Team</h2>
-<div class="team-section">
+      <div class="team-card">
+        <div>
+          <span class="team-name">Chris Waldock</span><br>
+          <span class="team-role">Senior Systems Advisor</span>
+          <div class="team-desc">
+            With over 40 years of racing system design and testing, Chris brings deep expertise in methodology, validation, and industry trends. His disciplined approach underpins the reliability of our data and predictions.
+          </div>
+        </div>
+      </div>
 
-  <div class="team-card">
-    <div>
-      <span class="team-name">Peter Mason</span><br>
-      <span class="team-role">Founder, Lead Analyst</span>
-      <div class="team-desc">
-        A specialist in statistical modelling and process automation, Peter leads the design and development of our ratings engine. He’s dedicated to evidence-based analysis and continuous refinement of the system.
+      <div class="team-card">
+        <div>
+          <span class="team-name">Michael Pilling</span><br>
+          <span class="team-role">Research & Racing History</span>
+          <div class="team-desc">
+            Michael has two decades of experience in racing research, market analysis, and historical form. He ensures our analysis reflects not just the latest data, but also the bigger picture of racing performance.
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div>
+          <span class="team-name">Gary Betts</span><br>
+          <span class="team-role">Sales &amp; Marketing</span>
+          <div class="team-desc">
+            Gary connects our data to the real world. With years in racing and sports media, he’s the voice behind our social channels and keeps punters in the loop about new features and offers.
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="team-card">
-    <div>
-      <span class="team-name">Chris Waldock</span><br>
-      <span class="team-role">Senior Systems Advisor</span>
-      <div class="team-desc">
-        With over 40 years of racing system design and testing, Chris brings deep expertise in methodology, validation, and industry trends. His disciplined approach underpins the reliability of our data and predictions.
-      </div>
-    </div>
-  </div>
-
-  <div class="team-card">
-    <div>
-      <span class="team-name">Michael Pilling</span><br>
-      <span class="team-role">Research & Racing History</span>
-      <div class="team-desc">
-        Michael has two decades of experience in racing research, market analysis, and historical form. He ensures our analysis reflects not just the latest data, but also the bigger picture of racing performance.
-      </div>
-    </div>
-  </div>
-
-  <div class="team-card">
-    <div>
-      <span class="team-name">Gary Betts</span><br>
-      <span class="team-role">Sales &amp; Marketing</span>
-      <div class="team-desc">
-        Gary connects our data to the real world. With years in racing and sports media, he’s the voice behind our social channels and keeps punters in the loop about new features and offers.
-      </div>
-    </div>
-  </div>
-
-</div>
-
 
     <h2 class="section-title">Why Trust Us?</h2>
     <ul class="fancy-list trust-list">
@@ -116,34 +111,8 @@
       <i>Punting should be enjoyable and responsible. Never bet more than you can afford to lose. This site is for informational purposes, not betting advice.</i>
     </div>
   </main>
-    <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  });
-
-  // Optional: Close menu when a link is clicked (good for single-page sites)
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      hamburger.classList.remove('active');
-    });
-  });
-
-  // Highlight active nav link based on current page - added for consistency
-  document.addEventListener('DOMContentLoaded', () => {
-      const currentPath = window.location.pathname.split('/').pop();
-      document.querySelectorAll('.nav-link').forEach(link => {
-          // Remove potential hardcoded 'nav-link-active' from the HTML
-          link.classList.remove('nav-link-active');
-          if (link.getAttribute('href') === currentPath) {
-              link.classList.add('nav-link-active');
-          }
-      });
-  });
-</script>
+  <!-- Global nav logic, no inline nav JS here! -->
+  <script src="main.js"></script>
 </body>
 </html>

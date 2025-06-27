@@ -7,70 +7,40 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
   <title>Daily Horse Racing Tips | Today's Picks - Smart Racecards</title>
   <meta name="description" content="Access our daily horse racing tips. Smart Racecards provides data-backed top picks, value bets, and outsider analysis for UK & Irish races.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="base.css" /> <!-- Link to base.css first -->
-  <link rel="stylesheet" href="tips.css" /> <!-- Then link to tips.css -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="tips.css" />
 </head>
-
 <body>
-<nav class="main-navbar">
+  <nav class="main-navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-brand">🏇 Racecards</a>
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link">Home</a>
         <a href="tips.html" class="nav-link nav-link-active">Tips</a>
-         <a href="yesterday.html" class="nav-link">Historical</a>
-         <a href="custom-score.html" class="nav-link">Custom Score</a>
-         <a href="about.html" class="nav-link">About</a>
+        <a href="yesterday.html" class="nav-link">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link">About</a>
       </div>
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
+    <div class="nav-backdrop" id="navBackdrop"></div>
   </nav>
 
- <main class="tips-main" id="main"></main>
-
+  <main class="tips-main" id="main"></main>
 
   <script src="data.js"></script>
   <script src="tips.js"></script>
-    <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  });
-
-  // Optional: Close menu when a link is clicked (good for single-page sites)
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      hamburger.classList.remove('active');
-    });
-  });
-
-  // Highlight active nav link based on current page
-  document.addEventListener('DOMContentLoaded', () => {
-      const currentPath = window.location.pathname.split('/').pop();
-      document.querySelectorAll('.nav-link').forEach(link => {
-          link.classList.remove('nav-link-active');
-          if (link.getAttribute('href') === currentPath) {
-              link.classList.add('nav-link-active');
-          }
-      });
-  });
-
-  
-</script>
+  <script src="main.js"></script>
 </body>
 </html>
