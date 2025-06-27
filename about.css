@@ -227,3 +227,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0.5em 2vw !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.20);
+    max-width: 99vw; /* Ensures no horizontal scroll */
+    margin: 1em auto 1em auto;
+  }
+}
