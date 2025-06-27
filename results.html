@@ -4,12 +4,21 @@
   <meta charset="UTF-8">
   <title>Latest Racing Results | Smart Racecards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="global.css" />
+  <style>
+    body { background: #181C1F; color: #f0f0f0; font-family: Arial, sans-serif; }
+    h1 { color: #ffd700; }
+    .race-result {
+      margin-bottom: 26px; border-bottom: 1px solid #333; padding-bottom: 10px;
+    }
+    .race-result h2 { margin: 6px 0 2px 0; color: #36e8b5; font-size: 1.2em; }
+    .winner { color: #36e8b5; font-weight: bold; }
+    .placed { color: #ffd700; }
+    .third { color: #f3b; }
+  </style>
 </head>
 <body>
   <h1>Latest Racing Results</h1>
-  <div id="results"></div>
-  <!-- Put your script after your HTML -->
+  <div id="results">Loading…</div>
   <script>
     fetch('/api/results')
       .then(res => res.json())
@@ -20,17 +29,26 @@
           return;
         }
         resultsDiv.innerHTML = data.results.map(race => {
+          // Flexible field access for API variations
+          const off = race.off || race.off_time || race.time || '-';
+          const course = race.course || race.venue || '-';
+          const name = race.race_name || race.name || '';
+          // Runners sorted by finishing position (lowest = winner)
           const top = (race.runners || [])
             .filter(r => r.position && Number(r.position) > 0)
             .sort((a, b) => Number(a.position) - Number(b.position));
-          const winner = top[0] ? `<b>Winner:</b> ${top[0].horse} <span style="color:#888;">(SP: ${top[0].sp})</span>` : '';
-          const placed = top[1] ? ` <b>2nd:</b> ${top[1].horse}` : '';
-          const third = top[2] ? ` <b>3rd:</b> ${top[2].horse}` : '';
+          // Runner name and SP fallback logic
+          const rn = r => r.horse || r.runner_name || r.name || '-';
+          const sp = r => r.sp || r.starting_price || r.sp_dec || '-';
+          // Render winner, 2nd, 3rd
+          const winner = top[0] ? `<span class="winner">🥇 ${rn(top[0])} <small style="color:#999;">(SP: ${sp(top[0])})</small></span>` : '';
+          const placed = top[1] ? `<span class="placed">🥈 ${rn(top[1])}</span>` : '';
+          const third = top[2] ? `<span class="third">🥉 ${rn(top[2])}</span>` : '';
           return `
             <div class="race-result">
-              <h2>${race.off} - ${race.course}</h2>
-              <div>${race.race_name || ''}</div>
-              <div>${winner}${placed}${third}</div>
+              <h2>${off} - ${course}</h2>
+              <div>${name}</div>
+              <div>${winner}${placed ? '<br>'+placed : ''}${third ? '<br>'+third : ''}</div>
             </div>
           `;
         }).join('');

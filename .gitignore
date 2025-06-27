@@ -1,2 +1,15 @@
 .DS_Store
 *.log
+
+# Local environment variable files (never commit secrets!)
+.env
+.env.*
+.env.local
+
+# Build and deployment folders
+node_modules
+.next
+out
+dist
+.cache
+.vercel
