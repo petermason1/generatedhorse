@@ -1,3 +1,118 @@
+/* --- Container and Core Layout --- */
+.container {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 30px 3vw 0 3vw;
+  box-sizing: border-box;
+}
+
+/* --- HERO TITLE & DESC --- */
+h1 {
+  color: #ffc900;
+  font-size: 2.2em;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin: 0 0 0.25em 0;
+}
+
+.page-desc {
+  text-align: center;
+  font-size: 1.15em;
+  color: #f5f7fa;
+  max-width: 640px;
+  margin: 0 auto 1.2em auto;
+  line-height: 1.44;
+}
+
+.what-else-intro {
+  text-align: center;
+  font-size: 1.07em;
+  max-width: 540px;
+  margin: 0 auto 1.1em auto;
+  color: #c2c6cd;
+}
+.what-else-intro a { font-weight: 600; }
+
+/* --- BOOKMARK NOTE --- */
+.bookmark-note {
+  text-align: center;
+  font-size: 0.99em;
+  margin-bottom: 1.05em;
+  color: #ffc900cc;
+}
+
+/* --- CTA BAR (Tips) --- */
+.tips-cta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #22272c;
+  color: #f5f7fa;
+  font-size: 1.12em;
+  padding: 15px 22px;
+  border-radius: 11px;
+  margin: 0 auto 2.1em auto;
+  max-width: 630px;
+  gap: 14px;
+  box-shadow: 0 2px 12px rgba(30,32,45,0.10);
+  font-weight: 500;
+}
+
+.tips-cta-bar span {
+  display: block;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.see-tips-btn {
+  background: #2fe0a0;
+  color: #161c22;
+  font-weight: 800;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  font-size: 1.05em;
+  box-shadow: 0 1px 6px rgba(47,224,160,0.11);
+  letter-spacing: 0.01em;
+  transition: background 0.13s, color 0.13s, box-shadow 0.14s;
+}
+.see-tips-btn:hover,
+.see-tips-btn:focus {
+  background: #1f7857;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(47,224,160,0.14);
+}
+
+/* --- Responsive tweaks for CTA bar --- */
+@media (max-width: 700px) {
+  .container { padding: 14px 1vw 0 1vw; }
+  .tips-cta-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 11px;
+    padding: 12px 9px;
+    max-width: 97vw;
+  }
+  .see-tips-btn {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 6px;
+  }
+}
+
+/* --- General background and font setup, feel free to adjust to your palette --- */
+body {
+  background: #191c22;
+  color: #f5f7fa;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.04em;
+  margin: 0;
+  min-height: 100vh;
+}
+
+
 /* --- NEXT 6 RACES --- */
 .next6-bar {
   background: #21242a;

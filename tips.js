@@ -241,6 +241,8 @@ console.log('tips.js: Script started.');
         main.innerHTML = `<div class="container"><h1 class="page-title">Today’s Horse Racing Tips</h1><p class="tips-intro">Our advanced system analyzes key performance metrics for every horse and race to identify potential top picks, value bets, and promising outsiders for today's racing action. Remember to always gamble responsibly.</p><h2>An error occurred while displaying tips.</h2><p>Please check the browser console for details.</p></div>`;
     }
 
+    
+
     console.log(`tips.js: Rendered ${topPicks.length} top, ${valuePicks.length} value, ${outsiders.length} outsider tips.`);
     console.log('tips.js: Script finished.');
 })();
