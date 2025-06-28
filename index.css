@@ -1,441 +1,130 @@
-/* --- Container and Core Layout --- */
 .container {
-  max-width: 730px;
+  max-width: 710px;
   margin: 0 auto;
-  padding: 30px 3vw 0 3vw;
+  padding: 20px 6vw 0 6vw;
   box-sizing: border-box;
 }
+@media (max-width: 600px) {
+  .container {
+    max-width: 100vw;
+    padding: 8px 2vw 0 2vw;
+  }
+}
 
-/* --- HERO TITLE & DESC --- */
+/* --- HERO HEADINGS --- */
 h1 {
   color: #ffc900;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 900;
+  text-align: center;
+  margin: 0 0 0.17em 0;
   letter-spacing: 0.01em;
-  text-align: center;
-  margin: 0 0 0.25em 0;
+  line-height: 1.13;
+}
+@media (max-width: 600px) {
+  h1 { font-size: 1.18em; }
 }
 
-.page-desc {
+.page-desc, .what-else-intro {
   text-align: center;
-  font-size: 1.15em;
+  font-size: 1.09em;
   color: #f5f7fa;
-  max-width: 640px;
-  margin: 0 auto 1.2em auto;
-  line-height: 1.44;
+  margin: 0 auto 1em auto;
+  line-height: 1.45;
+  max-width: 97vw;
+}
+@media (max-width: 600px) {
+  .page-desc, .what-else-intro { font-size: 0.97em; margin-bottom: 0.7em; }
 }
 
-.what-else-intro {
-  text-align: center;
-  font-size: 1.07em;
-  max-width: 540px;
-  margin: 0 auto 1.1em auto;
-  color: #c2c6cd;
-}
-.what-else-intro a { font-weight: 600; }
-
-/* --- BOOKMARK NOTE --- */
+/* --- Bookmark Note --- */
 .bookmark-note {
   text-align: center;
-  font-size: 0.99em;
-  margin-bottom: 1.05em;
-  color: #ffc900cc;
+  font-size: 0.97em;
+  margin-bottom: 0.8em;
+  color: #ffc900b0;
 }
 
-/* --- CTA BAR (Tips) --- */
+/* --- HERO CARD --- */
+.racecards-hero {
+  background: #20242c;
+  border-radius: 13px;
+  box-shadow: 0 2px 13px #181a2021;
+  padding: 19px 5vw 11px 5vw;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  max-width: 410px;
+}
+@media (max-width: 600px) {
+  .racecards-hero {
+    padding: 9px 3vw 9px 3vw;
+    border-radius: 10px;
+    max-width: 97vw;
+    box-shadow: 0 1.5px 7px #12121824;
+  }
+}
 .tips-cta-bar {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background: #22272c;
   color: #f5f7fa;
-  font-size: 1.12em;
-  padding: 15px 22px;
-  border-radius: 11px;
-  margin: 0 auto 2.1em auto;
-  max-width: 630px;
-  gap: 14px;
-  box-shadow: 0 2px 12px rgba(30,32,45,0.10);
+  font-size: 1.07em;
+  padding: 13px 2vw;
+  border-radius: 10px;
+  margin: 0 auto 1.2em auto;
+  max-width: 97vw;
+  gap: 10px;
+  box-shadow: 0 2px 11px rgba(30,32,45,0.08);
   font-weight: 500;
+}
+@media (max-width: 600px) {
+  .tips-cta-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding: 10px 2vw 13px 2vw;
+    border-radius: 11px;
+  }
 }
 
 .tips-cta-bar span {
-  display: block;
   font-size: 1em;
   font-weight: 500;
 }
 
+/* --- CTA BUTTON --- */
 .see-tips-btn {
-  display: inline-block;
-  margin: 1.1em auto 0.7em auto;
-  padding: 0.95em 2em 0.95em 1.4em;
+  display: block;
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 14px 0;
   background: linear-gradient(90deg, #2fe0a0 60%, #22c788 100%);
   color: #161c22;
   font-weight: 700;
-  font-size: 1.14em;
-  border-radius: 15px;
-  box-shadow: 0 3px 14px rgba(47,224,160,0.14);
-  letter-spacing: .02em;
+  font-size: 1.11em;
+  border-radius: 10px;
   border: none;
-  transition: 
-    background 0.15s cubic-bezier(.32,1.29,.44,.97),
-    color 0.13s,
-    box-shadow 0.16s cubic-bezier(.32,1.29,.44,.97),
-    transform 0.12s;
-  text-align: center;
+  box-shadow: 0 2px 10px rgba(47,224,160,0.08);
   cursor: pointer;
-  position: relative;
-  z-index: 2;
+  text-decoration: none;
+  transition: 
+    background 0.15s,
+    color 0.13s,
+    box-shadow 0.17s,
+    transform 0.12s;
 }
 
 .see-tips-btn:hover,
 .see-tips-btn:focus {
   background: linear-gradient(90deg, #1b8c68 40%, #2fe0a0 100%);
   color: #fff;
-  box-shadow: 0 6px 24px rgba(47,224,160,0.23);
-  transform: translateY(-2px) scale(1.04);
-}
-
-
-/* --- Responsive tweaks for CTA bar --- */
-@media (max-width: 700px) {
-  .container { padding: 14px 1vw 0 1vw; }
-  .tips-cta-bar {
-    flex-direction: column;
-    text-align: center;
-    gap: 11px;
-    padding: 12px 9px;
-    max-width: 97vw;
-  }
-  .see-tips-btn {
-    width: 100%;
-    margin-left: 0 !important;
-    margin-top: 6px;
-  }
-}
-
-/* --- General background and font setup, feel free to adjust to your palette --- */
-body {
-  background: #191c22;
-  color: #f5f7fa;
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  font-size: 1.04em;
-  margin: 0;
-  min-height: 100vh;
-}
-
-
-/* --- NEXT 6 RACES --- */
-.next6-bar {
-  background: #21242a;
-  border-radius: 12px;
-  padding: 1.5em 1em 1.7em 1em;
-  margin: 1.2em auto 1.4em auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.35); /* Enhanced shadow for more depth */
-  text-align: center;
-  max-width: 700px;
-}
-
-.next6-races {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Default for larger screens */
-  gap: 0.6em;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.next6-race-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* Subtle gradient for a more dynamic background */
-  background: linear-gradient(145deg, #232d37, #1e262f);
-  border-radius: 8px;
-  padding: 0.8em 0.3em;
-  color: #28d987;
-  text-decoration: none;
-  font-weight: bold;
-  min-height: 75px;
-  border: 2px solid #1f6037;
-  transition: background 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Smoother transitions for all properties */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Stronger initial shadow */
-}
-
-.next6-race-link:hover {
-  background: #28d987; /* Solid color for hover, as per original design */
-  color: #161c22;
-  border-color: #28d987;
-  transform: translateY(-3px); /* Subtle lift effect on hover */
-  box-shadow: 0 8px 20px rgba(0,220,150,0.3); /* Greenish glow on hover */
-}
-
-.next6-time {
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 5px;
-  color: #28d987;
-  /* Transition for color change on hover */
-  transition: color 0.2s ease-out;
-}
-
-.next6-race-link:hover .next6-time {
-  color: #161c22; /* Text color on hover matches background */
-}
-
-
-.next6-course {
-  font-size: 0.88em;
-  color: #fff;
-  opacity: 0.85;
-  line-height: 1.2;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  /* Transition for color change on hover */
-  transition: color 0.2s ease-out, opacity 0.2s ease-out;
-}
-
-.next6-race-link:hover .next6-course {
-  color: #161c22; /* Text color on hover matches background */
-  opacity: 1; /* Fully opaque on hover */
-}
-
-.see-tips-btn {
-  display: inline-block;
-  margin: 1.1em auto 0.7em auto;
-  padding: 0.82em 1.5em 0.82em 1.12em;
-  background: #28d987;
-  color: #161c22;
-  font-weight: 700;
-  font-size: 1.12em;
-  letter-spacing: .03em;
-  border: 2px solid #25b272;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(40,217,135,0.11), 0 1.5px 0.7px rgba(0,0,0,0.11);
-  cursor: pointer;
-  text-decoration: none;
-  transition: 
-    background 0.14s cubic-bezier(.32,1.29,.44,.97),
-    color 0.16s,
-    border-color 0.18s cubic-bezier(.32,1.29,.44,.97),
-    box-shadow 0.17s cubic-bezier(.32,1.29,.44,.97),
-    transform 0.13s;
-  position: relative;
-  z-index: 2;
-}
-
-.see-tips-btn:hover,
-.see-tips-btn:focus {
-  background: #1e2a27;
-  color: #28d987;
-  border-color: #28d987;
-  box-shadow: 0 4px 20px rgba(40,217,135,0.14);
+  box-shadow: 0 6px 24px rgba(47,224,160,0.14);
   transform: translateY(-1.5px) scale(1.03);
 }
-
 .see-tips-btn:active {
   background: #28d987;
   color: #161c22;
-  border-color: #21955e;
   transform: translateY(0.5px) scale(0.98);
-}
-
-
-/* --- RACES BY COURSE --- */
-.races-course-list {
-  margin-top: 2.2em;
-}
-.racecard-course-row {
-  margin-bottom: 1.3em;
-}
-.racecard-course-header {
-  font-size: 1.16em;
-  color: #28d987;
-  font-weight: bold;
-  margin-bottom: 0.13em;
-  letter-spacing: .2px;
-}
-.racecard-race-row {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Default for larger screens */
-  gap: 0.23em;
-  margin-bottom: 0.7em;
-}
-
-.racecard-time-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* Subtle gradient for a more dynamic background */
-  background: linear-gradient(145deg, #232d33, #1e262c);
-  border-radius: 7px;
-  color: #ffe564;
-  text-decoration: none;
-  font-size: 1.04em;
-  font-weight: 500;
-  min-width: 66px;
-  min-height: 45px;
-  padding: 0.24em 0.7em;
-  transition: background 0.13s ease-out, color 0.13s ease-out, transform 0.13s ease-out, box-shadow 0.13s ease-out; /* Smoother transitions */
-  margin-bottom: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Slightly stronger shadow */
-}
-
-.racecard-time-link:hover {
-  background: #35e9ae;
-  color: #181c1f;
-  transform: translateY(-2px); /* Subtle lift effect on hover */
-  box-shadow: 0 4px 12px rgba(53,233,174,0.3); /* Greenish glow on hover */
-}
-
-.racecard-time {
-  color: #ffc900;
-  font-weight: 700;
-  margin: 0 auto;
-  text-align: center;
-  transition: color 0.13s ease-out;
-}
-
-.racecard-time-link:hover .racecard-time {
-  color: #181c1f;
-}
-
-.racecard-title {
-  color: #ffe564;
-  font-size: 1em;
-  margin-top: -1px;
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: color 0.13s ease-out;
-}
-
-.racecard-time-link:hover .racecard-title {
-  color: #181c1f;
-}
-
-
-/* --- RESPONSIVE GRID OVERRIDES (Guaranteed 3-wide minimum) --- */
-
-/* For tablets and larger mobiles (e.g., 601px to 1024px) */
-@media (max-width: 1024px) {
-  .next6-races {
-    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
-  }
-  .racecard-race-row {
-    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
-  }
-}
-
-@media (max-width: 700px) {
-  .container {
-    padding: 12px 3vw 0 3vw;
-    max-width: 100vw;
-  }
-  h1 {
-    font-size: 1.36em;
-    padding-top: 3px;
-    margin-bottom: 0.22em;
-  }
-  .page-desc,
-  .what-else-intro {
-    font-size: 1.07em;
-    line-height: 1.52;
-    margin-bottom: 1em;
-  }
-  .bookmark-note {
-    font-size: 0.98em;
-    margin-bottom: 0.9em;
-  }
-
-  .tips-cta-bar {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-    padding: 10px 5vw 14px 5vw;
-    gap: 7px;
-    margin-bottom: 1.2em;
-    max-width: 99vw;
-    border-radius: 13px;
-  }
-  .tips-cta-bar span {
-    font-size: 1em;
-    margin-bottom: 0.2em;
-  }
-  .see-tips-btn {
-    width: 100%;
-    font-size: 1.06em;
-    padding: 15px 0;
-    min-height: 48px;
-    margin: 0;
-    border-radius: 14px;
-  }
-
-  .next6-bar {
-    margin-top: 0.9em;
-    padding: 1.1em 0.5em 1.4em 0.5em;
-    border-radius: 11px;
-    max-width: 100vw;
-  }
-  .next6-races {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.44em;
-    max-width: 100vw;
-  }
-  .next6-race-link {
-    min-height: 44px;
-    font-size: 0.99em;
-    border-radius: 9px;
-    padding: 0.58em 0.1em;
-    margin-bottom: 0;
-  }
-  .next6-time {
-    font-size: 1.01em;
-    margin-top: 3px;
-  }
-  .next6-course {
-    font-size: 0.82em;
-    line-height: 1.16;
-  }
-}
-
-/* For very small phones (up to 420px) */
-@media (max-width: 420px) {
-  .container { padding-left: 1vw; padding-right: 1vw; }
-  h1 { font-size: 1.13em; }
-  .see-tips-btn { font-size: 0.97em; padding: 13px 0; }
-  .next6-races { gap: 0.23em; }
-}
-@media (max-width: 700px) {
-  .see-tips-btn {
-    display: block;
-    margin: 10px auto 0 auto;
-    max-width: 340px;
-    width: 94%;
-    padding: 12px 0;
-    font-size: 1em;
-    min-height: 42px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(47,224,160,0.09);
-    /* Remove border if you want a softer look: border: none; */
-  }
-  .tips-cta-bar {
-    gap: 4px;
-    padding: 10px 5vw 13px 5vw;
-  }
-}
-@media (max-width: 420px) {
-  .see-tips-btn {
-    font-size: 0.96em;
-    max-width: 98vw;
-    padding: 11px 0;
-  }
 }
