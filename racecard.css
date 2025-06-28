@@ -391,3 +391,34 @@
 }
 
 
+.date-switcher {
+  text-align: center;
+  margin: 18px 0 12px 0;
+  font-size: 1.15em;
+  letter-spacing: 0.01em;
+}
+
+.date-switcher a {
+  color: #ffd900;
+  background: #232b2e;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 7px 25px;
+  margin: 0 3px;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s;
+  display: inline-block;
+  border: none;
+}
+
+.date-switcher a.active {
+  background: #2afcb1;
+  color: #191e23;
+  font-weight: 900;
+  box-shadow: 0 2px 12px rgba(42,252,177,0.09);
+}
+
+.date-switcher a:hover:not(.active) {
+  background: #ffd900;
+  color: #191e23;
+}

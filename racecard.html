@@ -38,9 +38,23 @@
   </div>
   <div class="nav-backdrop" id="navBackdrop"></div>
 </nav>
+<div class="date-switcher">
+  <a href="racecard.html?date=today" class="active">Today</a>
+  <span>|</span>
+  <a href="racecard.html?date=tomorrow">Tomorrow</a>
+</div>
 
+<main id="main"></main>
+<script>
+  // Highlight active date-switcher link
+  const params = new URLSearchParams(window.location.search);
+  const day = params.get('date') || 'today';
+  document.querySelectorAll('.date-switcher a').forEach(a => {
+    if (a.href.includes(`date=${day}`)) a.classList.add('active');
+    else a.classList.remove('active');
+  });
+</script>
 
-  <main id="main"></main>
 
   <footer class="site-footer">
   <div class="footer-inner">
@@ -66,7 +80,8 @@
 </footer>
 
 
-  <script src="data.js"></script>
+  <script src="data.js"></script>         <!-- Today's races -->
+  <script src="data2.js"></script>        <!-- Tomorrow's races -->
   <script src="racecard.js"></script>
   <script src="main.js"></script>
 </body>
