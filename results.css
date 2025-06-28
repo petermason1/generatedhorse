@@ -100,3 +100,15 @@
     padding: 14px 2vw 13px 2vw;
   }
 }
+
+.fallback-banner {
+  background: #303745;
+  color: #ffd700;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1.05em;
+  box-shadow: 0 2px 8px #0003;
+}

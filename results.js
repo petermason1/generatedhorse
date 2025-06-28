@@ -1,5 +1,3 @@
-// results.js
-
 function getPaidPlaces(race) {
   const isHandicap = /handicap/i.test(race.race_name || "");
   const runners = (race.runners || []).filter(r => r.position && Number(r.position) > 0).length;
@@ -9,13 +7,17 @@ function getPaidPlaces(race) {
   return 1;
 }
 
-function renderResults(data) {
+function renderResults(data, isFallback = false) {
   const resultsDiv = document.getElementById('results');
+  let msg = '';
+  if (isFallback) {
+    msg = `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>`;
+  }
   if (!data || !data.results || !data.results.length) {
-    resultsDiv.innerHTML = '<p>No results yet. Please check back later.</p>';
+    resultsDiv.innerHTML = msg + '<p>No results yet. Please check back later.</p>';
     return;
   }
-  resultsDiv.innerHTML = data.results.map(race => {
+  resultsDiv.innerHTML = msg + data.results.map(race => {
     const off = race.off || race.off_time || race.time || '-';
     const course = race.course || race.venue || '-';
     const name = race.race_name || race.name || '';
@@ -49,10 +51,37 @@ function renderResults(data) {
   }).join('');
 }
 
-// Fetch and render results
+// --- Helper: get yesterday's date in YYYY-MM-DD ---
+function getYesterdaysDateStr() {
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+  return d.toISOString().split('T')[0];
+}
+
+// Main: Try today, fallback to yesterday
 fetch('/api/results')
   .then(res => res.json())
-  .then(renderResults)
+  .then(data => {
+    if (data && data.results && data.results.length) {
+      renderResults(data);
+    } else {
+      // Fallback: fetch yesterday's file
+      const yest = getYesterdaysDateStr();
+      fetch(`/${yest}-results.json`)
+        .then(res2 => res2.json())
+        .then(data2 => renderResults(data2, true))
+        .catch(() => {
+          document.getElementById('results').innerHTML = '<p>No results yet. Please check back later.</p>';
+        });
+    }
+  })
   .catch(() => {
-    document.getElementById('results').innerHTML = '<p>Error loading results.</p>';
+    // Fallback: fetch yesterday's file
+    const yest = getYesterdaysDateStr();
+    fetch(`/${yest}-results.json`)
+      .then(res2 => res2.json())
+      .then(data2 => renderResults(data2, true))
+      .catch(() => {
+        document.getElementById('results').innerHTML = '<p>No results yet. Please check back later.</p>';
+      });
   });
