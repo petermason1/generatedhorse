@@ -48,6 +48,8 @@
 /* --- RACE TIMES NAVIGATION (PER COURSE) --- */
 .race-links-bar {
   display: flex;
+  position: relative;
+  flex-wrap: nowrap;
   gap: 10px;
   overflow-x: auto;
   padding-bottom: 2px;
@@ -57,6 +59,62 @@
   background: transparent;
   justify-content: center; /* Center items on desktop */
 }
+
+.race-links-bar::before,
+.race-links-bar::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 26px;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.18s;
+  opacity: 0.95;
+}
+.race-links-bar::before {
+  left: 0;
+  background: linear-gradient(to right, #181c21 85%, transparent 100%);
+}
+.race-links-bar::after {
+  right: 0;
+  background: linear-gradient(to left, #181c21 85%, transparent 100%);
+}
+
+/* Scroll arrow buttons */
+.race-links-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  background: #191e23;
+  color: #2afcb1;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.44em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+  cursor: pointer;
+  opacity: 0.90;
+  transition: background 0.15s, color 0.15s, opacity 0.17s;
+}
+.race-links-arrow:active {
+  background: #2afcb1;
+  color: #191e23;
+  opacity: 1;
+}
+.race-links-arrow.left { left: -8px; }
+.race-links-arrow.right { right: -8px; }
+
+@media (max-width: 800px) {
+  .race-links-arrow { display: none !important; }
+  .race-links-bar::before,
+  .race-links-bar::after { display: none !important; }
+}
+
 @media (max-width: 600px) {
   .race-links-bar {
     justify-content: flex-start; /* Revert to start on mobile for scrolling */
@@ -421,4 +479,8 @@
 .date-switcher a:hover:not(.active) {
   background: #ffd900;
   color: #191e23;
+}
+@media (max-width: 800px) {
+  .race-links-bar { gap: 5px; }
+  .race-link { padding: 6px 8px; font-size: 0.98em; }
 }

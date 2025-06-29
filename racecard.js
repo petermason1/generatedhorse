@@ -71,15 +71,20 @@ console.log(window.racecardsData);
       : window.racecardsData.racecards;
   }
 
+  // Picks the "next" race if first has gone +3 mins
   function getTargetRaceForCourse(courseName, allRaces) {
     const racesForCourse = allRaces
       .filter(r => r.course === courseName)
       .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
+    if (!racesForCourse.length) return null;
+
     const now = new Date();
-    const upcoming = racesForCourse.find(r => new Date(r.off_dt) > now);
-    if (upcoming) return upcoming;
-    if (racesForCourse.length > 0) return racesForCourse[0];
-    return null;
+    const next = racesForCourse.find(r => {
+      const off = new Date(r.off_dt);
+      return now <= new Date(off.getTime() + 3*60000); // Off time + 3min
+    });
+    if (next) return next;
+    return racesForCourse[racesForCourse.length - 1];
   }
 
   // ========== RENDER FUNCTIONS ==========
@@ -95,7 +100,7 @@ console.log(window.racecardsData);
           const isActive = targetRace.course === currentActiveCourse;
           return `
             <a class="course-link${isActive ? ' active' : ''}" href="#" 
-              data-race-id="${targetRace._id}" data-date="${whichDay}">
+              data-race-id="${targetRace._id}" data-date="${whichDay}" data-course="${courseName}">
               ${courseName}
             </a>
           `;
@@ -104,33 +109,37 @@ console.log(window.racecardsData);
     `;
   }
 
-function renderCourseLinks(race, allRaces, whichDay) {
-  const courseRaces = allRaces
-    .filter(r => r.course === race.course)
-    .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
+  function renderCourseLinks(race, allRaces, whichDay) {
+    const courseRaces = allRaces
+      .filter(r => r.course === race.course)
+      .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
 
-  // De-duplicate by _id, just in case
-  const seen = new Set();
-  const uniqueCourseRaces = [];
-  for (const rc of courseRaces) {
-    if (!seen.has(rc._id)) {
-      seen.add(rc._id);
-      uniqueCourseRaces.push(rc);
+    // Deduplicate by off_time
+    const seenTimes = new Set();
+    const uniqueByTime = [];
+    for (const rc of courseRaces) {
+      if (!seenTimes.has(rc.off_time)) {
+        seenTimes.add(rc.off_time);
+        uniqueByTime.push(rc);
+      }
     }
+
+    // Initially hide arrows, JS will show if needed
+    return `
+      <div class="race-links-wrapper" style="position:relative;">
+        <button class="race-links-arrow left" type="button" aria-label="Scroll left" style="display:none;">&lt;</button>
+        <nav class="race-links-bar">
+          ${uniqueByTime.map(rc => `
+            <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}" 
+              href="#" data-race-id="${rc._id}" data-date="${whichDay}">
+              ${rc.off_time}
+            </a>
+          `).join('')}
+        </nav>
+        <button class="race-links-arrow right" type="button" aria-label="Scroll right" style="display:none;">&gt;</button>
+      </div>
+    `;
   }
-
-  return `
-    <nav class="race-links-bar">
-      ${uniqueCourseRaces.map(rc => `
-        <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}" 
-          href="#" data-race-id="${rc._id}" data-date="${whichDay}">
-          ${rc.off_time}
-        </a>
-      `).join('')}
-    </nav>
-  `;
-}
-
 
   function renderTopPicks(race) {
     let top = race.runners.filter(r => !isNonRunner(r)).slice(0, 3);
@@ -298,6 +307,7 @@ function renderCourseLinks(race, allRaces, whichDay) {
         </div>
       </div>
     `;
+    setupRaceLinksArrows();
   }
 
   // ========== MAIN APP LOGIC ==========
@@ -306,33 +316,82 @@ function renderCourseLinks(race, allRaces, whichDay) {
   let allRaces = getAllRaces(whichDay);
   let raceId = getRaceIdFromURL();
 
-  function findRace(raceId, allRaces) {
+  function findRace(raceId, allRaces, courseName) {
     if (raceId) return allRaces.find(r => r._id === raceId) || allRaces[0];
+    if (courseName) {
+      const target = getTargetRaceForCourse(courseName, allRaces);
+      if (target) return target;
+    }
     return allRaces[0];
   }
 
-  function loadAndRender(raceId, day, pushState=true) {
+  function loadAndRender(raceId, day, pushState=true, courseName) {
     whichDay = day;
     allRaces = getAllRaces(day);
-    let race = findRace(raceId, allRaces);
+    let race = findRace(raceId, allRaces, courseName);
     if (!race) {
       document.getElementById('main').innerHTML = '<p class="error-message">No race found.</p>';
       return;
     }
     if (pushState) {
-      // Update URL bar without full reload (SPA style)
-      history.pushState({ raceId, day }, '', `racecard.html?date=${day}&race_id=${race._id}`);
+      history.pushState({ raceId: race._id, day }, '', `racecard.html?date=${day}&race_id=${race._id}`);
     }
     renderRace(race, allRaces, day);
+  }
+
+  function setupRaceLinksArrows() {
+    document.querySelectorAll('.race-links-wrapper').forEach(wrapper => {
+      const bar = wrapper.querySelector('.race-links-bar');
+      const left = wrapper.querySelector('.race-links-arrow.left');
+      const right = wrapper.querySelector('.race-links-arrow.right');
+      if (!bar || !left || !right) return;
+
+      // Show/hide arrows only if overflow is possible
+      function updateArrowVisibility() {
+        if (bar.scrollWidth > bar.clientWidth + 4) {
+          left.style.display = 'flex';
+          right.style.display = 'flex';
+        } else {
+          left.style.display = 'none';
+          right.style.display = 'none';
+        }
+      }
+
+      // Opacity for end-of-scroll effect
+      function updateArrows() {
+        left.style.opacity = bar.scrollLeft > 4 ? "0.94" : "0.25";
+        right.style.opacity = (bar.scrollWidth - bar.clientWidth - bar.scrollLeft > 4) ? "0.94" : "0.25";
+      }
+
+      left.onclick = () => { bar.scrollBy({ left: -120, behavior: 'smooth' }); };
+      right.onclick = () => { bar.scrollBy({ left: 120, behavior: 'smooth' }); };
+
+      bar.addEventListener('scroll', updateArrows);
+      window.addEventListener('resize', updateArrowVisibility);
+
+      setTimeout(() => {
+        updateArrowVisibility();
+        updateArrows();
+      }, 150);
+    });
   }
 
   // Initial load
   loadAndRender(raceId, whichDay, false);
 
-  // Handle SPA navigation for nav bars
+  // SPA navigation
   document.addEventListener('click', function(e) {
     // Course navigation
-    if (e.target.classList.contains('course-link') || e.target.classList.contains('race-link')) {
+    if (e.target.classList.contains('course-link')) {
+      e.preventDefault();
+      const newRaceId = e.target.getAttribute('data-race-id');
+      const newDay = e.target.getAttribute('data-date') || whichDay;
+      const courseName = e.target.getAttribute('data-course');
+      loadAndRender(newRaceId, newDay, true, courseName);
+      return;
+    }
+    // Race time navigation
+    if (e.target.classList.contains('race-link')) {
       e.preventDefault();
       const newRaceId = e.target.getAttribute('data-race-id');
       const newDay = e.target.getAttribute('data-date') || whichDay;
