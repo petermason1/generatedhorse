@@ -104,21 +104,33 @@ console.log(window.racecardsData);
     `;
   }
 
-  function renderCourseLinks(race, allRaces, whichDay) {
-    const courseRaces = allRaces
-      .filter(r => r.course === race.course)
-      .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
-    return `
-      <nav class="race-links-bar">
-        ${courseRaces.map(rc => `
-          <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}" 
-            href="#" data-race-id="${rc._id}" data-date="${whichDay}">
-            ${rc.off_time}
-          </a>
-        `).join('')}
-      </nav>
-    `;
+function renderCourseLinks(race, allRaces, whichDay) {
+  const courseRaces = allRaces
+    .filter(r => r.course === race.course)
+    .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
+
+  // De-duplicate by _id, just in case
+  const seen = new Set();
+  const uniqueCourseRaces = [];
+  for (const rc of courseRaces) {
+    if (!seen.has(rc._id)) {
+      seen.add(rc._id);
+      uniqueCourseRaces.push(rc);
+    }
   }
+
+  return `
+    <nav class="race-links-bar">
+      ${uniqueCourseRaces.map(rc => `
+        <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}" 
+          href="#" data-race-id="${rc._id}" data-date="${whichDay}">
+          ${rc.off_time}
+        </a>
+      `).join('')}
+    </nav>
+  `;
+}
+
 
   function renderTopPicks(race) {
     let top = race.runners.filter(r => !isNonRunner(r)).slice(0, 3);
