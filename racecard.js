@@ -21,19 +21,16 @@ console.log(window.racecardsData);
     const orating = safeInt(r.ofr);
     const last_run = safeInt(r.last_run, 99);
 
-    // Form parsing
     let wins = 0, places = 0;
     if (typeof r.form === 'string') {
       wins = (r.form.match(/1/g) || []).length;
       places = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
     }
 
-    // Trainer 14 day data
     const trainer = r.trainer_14_days || {};
     const trainerPercent = safeFloat(trainer.percent);
     const trainerWins = safeInt(trainer.wins);
 
-    // Scoring logic
     let score = 0;
     score += rpr;
     score += 0.5 * ts;
@@ -124,7 +121,6 @@ console.log(window.racecardsData);
       }
     }
 
-    // Initially hide arrows, JS will show if needed
     return `
       <div class="race-links-wrapper" style="position:relative;">
         <button class="race-links-arrow left" type="button" aria-label="Scroll left" style="display:none;">&lt;</button>
@@ -242,7 +238,6 @@ console.log(window.racecardsData);
   function renderRace(race, allRaces, whichDay) {
     const mainElement = document.getElementById('main');
     if (!mainElement) return;
-    // Score and sort runners, non-runners last
     race.runners.forEach(r => r.score = scoreRunner(r));
     race.runners.sort((a, b) => (b.score ?? -9999) - (a.score ?? -9999));
     const nrs = race.runners.filter(isNonRunner);
@@ -346,6 +341,17 @@ console.log(window.racecardsData);
       const right = wrapper.querySelector('.race-links-arrow.right');
       if (!bar || !left || !right) return;
 
+      function scrollToActiveRaceLink() {
+        const active = bar.querySelector('.race-link-active');
+        if (bar && active) {
+          // Always left-align active, with a small gap from edge
+          const leftPad = parseInt(window.getComputedStyle(bar).paddingLeft, 10) || 0;
+          let offset = active.offsetLeft - leftPad - 8;
+          if (offset < 0) offset = 0;
+          bar.scrollTo({ left: offset, behavior: 'smooth' });
+        }
+      }
+
       // Show/hide arrows only if overflow is possible
       function updateArrowVisibility() {
         if (bar.scrollWidth > bar.clientWidth + 4) {
@@ -367,12 +373,16 @@ console.log(window.racecardsData);
       right.onclick = () => { bar.scrollBy({ left: 120, behavior: 'smooth' }); };
 
       bar.addEventListener('scroll', updateArrows);
-      window.addEventListener('resize', updateArrowVisibility);
+      window.addEventListener('resize', () => {
+        updateArrowVisibility();
+        updateArrows();
+      });
 
       setTimeout(() => {
         updateArrowVisibility();
         updateArrows();
-      }, 150);
+        scrollToActiveRaceLink();
+      }, 120);
     });
   }
 
