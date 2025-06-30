@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics (gtag) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-NMB0VG2VBB');
   </script>
@@ -13,76 +12,69 @@
   <title>Racecards</title>
   <meta name="description" content="Get expert horse racing tips and data-driven analysis for UK & Irish races from Smart Racecards. Find today's best picks!">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
- <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   <link rel="stylesheet" href="base.css" />
-  <link rel="stylesheet" href="racecard.css" />
-</head>
+  <link rel="stylesheet" href="racecard.yesterday.css" /> </head>
 <body>
-<nav class="main-navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">🏇 Racecards</a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="results.html" class="nav-link">Results</a>
-      <a href="tips.html" class="nav-link">Smart Picks</a>
-      <a href="yesterday.html" class="nav-link">Historical</a>
-      <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About</a>
+  <nav class="main-navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">🏇 Racecards</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="tips.html" class="nav-link">Smart Picks</a>
+        <a href="yesterday.html" class="nav-link">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
-  </div>
-  <div class="nav-backdrop" id="navBackdrop"></div>
-</nav>
-<div class="date-switcher">
-  <a href="racecard.html?date=today" class="active">Today</a>
-  <span>|</span>
-  <a href="racecard.html?date=tomorrow">Tomorrow</a>
-</div>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+  </nav>
 
-<main id="main"></main>
-<script>
-  // Highlight active date-switcher link
-  const params = new URLSearchParams(window.location.search);
-  const day = params.get('date') || 'today';
-  document.querySelectorAll('.date-switcher a').forEach(a => {
-    if (a.href.includes(`date=${day}`)) a.classList.add('active');
-    else a.classList.remove('active');
-  });
-</script>
+  <main id="main">
+    <div id="results"></div>
+  </main>
 
+  <script src="data3.js"></script>
+  <script src="horse-results.js"></script>
+  <script src="racecard.yesterday.js"></script> <script>
+    // Highlight active date-switcher link
+    const params = new URLSearchParams(window.location.search);
+    const day = params.get('date') || 'today';
+    document.querySelectorAll('.date-switcher a').forEach(a => {
+      if (a.href.includes(`date=${day}`)) a.classList.add('active');
+      else a.classList.remove('active');
+    });
+  </script>
 
   <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="tips.html" class="nav-link">Smart Picks</a>
-      <a href="yesterday.html">Historical</a>
-      <a href="custom-score.html">Custom Score</a>
-      <a href="about.html">About</a>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="tips.html" class="nav-link">Smart Picks</a>
+        <a href="yesterday.html">Historical</a>
+        <a href="custom-score.html">Custom Score</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-meta">
+        <span id="footer-year"></span> Smart Racecards
+        <span>•</span>
+        <a href="mailto:info@smartracecards.com">Contact</a>
+      </div>
+      <div class="footer-disclaimer">
+        <small>
+          For informational purposes only – not betting advice.<br>
+          Please gamble responsibly. 18+
+        </small>
+      </div>
     </div>
-    <div class="footer-meta">
-     <span id="footer-year"></span> Smart Racecards
-      <span>•</span>
-      <a href="mailto:info@smartracecards.com">Contact</a>
-    </div>
-    <div class="footer-disclaimer">
-      <small>
-        For informational purposes only – not betting advice.<br>
-        Please gamble responsibly. 18+
-      </small>
-    </div>
-  </div>
-</footer>
-
-
-  <script src="data3.js"></script>         <!-- Today's races -->
-  <script src="data.js"></script>        <!-- Tomorrow's races -->
- <script src="racecard.yesterday.js"></script>
+  </footer>
 
   <script src="main.js"></script>
 </body>

@@ -1,0 +1,470 @@
+/* =========================
+   === CONTAINER
+   ========================= */
+.container {
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 16px 3vw 24px 3vw;
+  box-sizing: border-box;
+}
+
+/* =========================
+   === COURSE NAV BAR (TOP)
+   ========================= */
+.course-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  overflow-x: auto;
+  margin-bottom: 10px;
+  padding: 0.5em 0 0.2em 0;
+  background: transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.course-bar::-webkit-scrollbar { display: none; }
+.course-link {
+  color: #2afcb1;
+  background: linear-gradient(145deg, #232b2e, #192026 97%);
+  border-radius: 9px;
+  font-size: 1em;
+  font-weight: 800;
+  padding: 7px 20px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(54,232,181,0.07);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  outline: none;
+  transition: all 0.14s cubic-bezier(.28,1.25,.52,.99);
+}
+.course-link.active,
+.course-link:hover,
+.course-link:focus {
+  background: #2afcb1;
+  color: #1a212b !important;
+  border-color: #2afcb1;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(54,232,181,0.14);
+}
+
+/* =========================
+   === RACE TIMES NAV (PER COURSE)
+   ========================= */
+.race-links-wrapper {
+  width: 100%;
+  margin-bottom: 14px;
+}
+.race-links-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-x: auto;
+  background: transparent;
+  justify-content: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0;
+}
+.race-links-bar::-webkit-scrollbar { display: none; }
+.race-links-course {
+  color: #26d397;
+  font-weight: 900;
+  font-size: 1.05em;
+  letter-spacing: 0.02em;
+  margin-right: 1em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.race-link {
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 7px 17px;
+  font-size: 1em;
+  background: linear-gradient(145deg, #222b31, #182028);
+  color: #ffd900;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.13s cubic-bezier(.28,1.25,.52,.99);
+}
+.race-link:last-child { margin-right: 0; }
+.race-link-active,
+.race-link:hover,
+.race-link:focus {
+  background: #2afcb1;
+  color: #191e23 !important;
+  border-color: #2afcb1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(54,232,174,0.16);
+}
+
+/* =========================
+   === RACE HEADER
+   ========================= */
+.race-header {
+  background: linear-gradient(160deg, #23282f 65%, #181c21 100%);
+  border-radius: 14px;
+  padding: 1.2em 1em 1em 1em;
+  margin: 1.3em 0 1.2em 0;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.32);
+  text-align: center;
+}
+.race-header h1 {
+  font-size: 1.35rem;
+  margin-bottom: 0.28em;
+  color: #ffd900;
+  font-weight: 900;
+  letter-spacing: 0.015em;
+}
+.race-header-time {
+  font-weight: 600;
+  color: #2afcb1;
+  letter-spacing: 0.04em;
+}
+.race-meta,
+.race-details {
+  color: #c1cbe8;
+  font-size: 1.02em;
+  margin-bottom: 0.38em;
+  line-height: 1.5;
+}
+.race-meta strong.race-name {
+  color: #2afcb1;
+  font-size: 1.08em;
+  display: block;
+  margin-bottom: 0.32em;
+  font-weight: 700;
+}
+.race-details-line-1 b, .race-details-line-2 b {
+  color: #ffd900;
+  font-weight: 700;
+}
+
+/* =========================
+   === RACE TOP PICKS
+   ========================= */
+.race-top-picks {
+  background: linear-gradient(135deg, #222b31 70%, #1a2228 100%);
+  border-radius: 11px;
+  padding: 1.08em 0.7em 0.7em 0.7em;
+  margin: 0 0 1.6em 0;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+}
+.race-top-picks-title {
+  font-weight: 800;
+  font-size: 1.07em;
+  color: #ffd900;
+  margin-bottom: 0.6em;
+  border-bottom: 1px solid rgba(255,201,0,0.16);
+  padding-bottom: 0.38em;
+  text-align: left;
+  letter-spacing: .03em;
+}
+.race-top-picks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.1em;
+  align-items: flex-start;
+  font-size: 1em;
+}
+.race-top-pick-item {
+  display: flex;
+  align-items: baseline;
+  font-size: 1em;
+  white-space: nowrap;
+  color: #f7fafd;
+}
+.pick-number { color: #ffd900; font-weight: 800; margin-right: 0.23em; font-size: 1em; }
+.pick-horse {
+  color: #26d397; font-weight: 700; margin-right: 0.36em;
+  text-decoration: none; transition: color 0.12s;
+}
+.pick-horse:hover { color: #1ff3ab; text-decoration: underline; }
+.pick-score { color: #b7b7b7; font-weight: 600; font-size: 0.95em; margin-left: 0.4em; }
+.pick-odds { color: #ffe564; font-weight: 700; font-size: 1em; }
+
+/* =========================
+   === RUNNER CARDS
+   ========================= */
+.runners-list { margin-top: 1.3em; padding-bottom: 16px; }
+.runner-card {
+  background: linear-gradient(145deg, #222b31, #1a2228 95%);
+  color: #f6f8fb;
+  border-radius: 11px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 13px;
+  padding: 0.8em 0.5em 0.85em 0.8em;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.32);
+  align-items: flex-start;
+  transition: all 0.21s cubic-bezier(.28,1.25,.52,.99);
+  border: 1px solid transparent;
+  scroll-margin-top: 76px;
+}
+.runner-card:hover:not(.expanded) {
+  transform: translateY(-3px) scale(1.018);
+  box-shadow: 0 12px 32px rgba(40,230,170,0.10), 0 2px 14px rgba(0,0,0,0.21);
+  border-color: #2afcb1;
+}
+.runner-card.expanded {
+  background: linear-gradient(145deg, #263441, #1f2833 98%);
+  box-shadow: 0 8px 26px rgba(40,217,135,0.18);
+  border-color: #2afcb1;
+}
+.runner-nr { opacity: 0.63; filter: grayscale(0.17); }
+.runner-num-draw {
+  min-width: 34px; text-align: center; color: #ffd900; font-weight: 900;
+  font-size: 1.12em; margin-right: 5px; margin-top: 2px;
+  display: flex; flex-direction: column; align-items: center; gap: 2.5px; flex-shrink: 0;
+}
+.runner-num-draw .runner-draw { font-size: 0.85em; color: #a0a8b7; font-weight: 600; }
+.runner-num-draw .runner-score { display: block; font-size: 0.92em; color: #26d397; font-weight: 700; }
+.runner-silk {
+  width: 32px; height: 32px; object-fit: contain; background: #181c21; border-radius: 8px;
+  margin-right: 8px; align-self: flex-start; box-shadow: 0 1px 4px rgba(0,0,0,0.18); flex-shrink: 0;
+}
+.runner-main {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.runner-horse {
+  font-weight: 800;
+  color: #2afcb1;
+  font-size: 1.08em;
+  margin-bottom: 1px;
+  line-height: 1.15;
+  transition: color 0.12s;
+}
+.runner-card:hover .runner-horse { color: #1ff3ab; }
+.runner-meta-line {
+  color: #c2c8de;
+  font-size: 0.99em;
+  margin-bottom: 0.07em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.19em;
+  line-height: 1.24;
+}
+.runner-meta-line .runner-meta-separator { opacity: 0.44; }
+.runner-meta-line .runner-form {
+  color: #fff;
+  background: #1a212b;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.89em;
+  margin-left: 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.runner-meta-line .runner-nr-tag {
+  color: #e55; font-weight: 700; margin-left: 8px;
+  background: rgba(229, 85, 85, 0.18); padding: 2px 6px; border-radius: 4px;
+}
+.runner-info-line {
+  color: #c2c8de;
+  font-size: 0.95em;
+  line-height: 1.31;
+  margin-top: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.43em 0.8em;
+}
+.runner-info-line b { color: #95f6e2; font-weight: 700; }
+.runner-odds {
+  color: #ffe564; font-weight: 800; font-size: 1.09em;
+  margin-left: 11px; align-self: center; min-width: 36px; text-align: right; white-space: nowrap; flex-shrink: 0;
+}
+
+/* =========================
+   === More Info Dropdown
+   ========================= */
+/* Corrected .runner-more-btn styling */
+.runner-more-btn {
+  margin: 0.5em 0 0 0;
+  background: linear-gradient(145deg, #2afcb1, #1ff3ab);
+  color: #191e23;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-size: 0.97em;
+  transition: all 0.17s cubic-bezier(.28,1.25,.52,.99);
+  box-shadow: 0 2px 7px rgba(0,0,0,0.17);
+  /* Ensure it takes full width within its flex container */
+  width: auto; /* Changed from 100% to auto to allow it to size based on content and padding */
+  display: inline-block; /* Make it behave like a block but sit inline */
+  text-align: center; /* Center the text within the button */
+  align-self: flex-start; /* Align it to the start if in a flex container */
+}
+
+.runner-more-btn:hover {
+  background: linear-gradient(145deg, #1ff3ab, #2afcb1);
+  color: #191e23;
+  box-shadow: 0 4px 14px rgba(54,232,181,0.18);
+  transform: translateY(-2px);
+}
+.runner-more-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* The container that hides/shows the content */
+.runner-more-collapsible-content {
+  /* This ensures the content is hidden by default and allows transition */
+  display: block; /* Use block to enable max-height transition */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  max-height: 0; /* Hidden state */
+  opacity: 0; /* Hidden state */
+  padding: 0 1em; /* Initial padding to handle transition gracefully */
+  box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+.runner-more-collapsible-content.expanded {
+  max-height: 500px; /* Needs to be larger than actual content height */
+  opacity: 1; /* Visible state */
+  overflow: visible; /* Allow content to be fully visible when expanded */
+  padding: 0.65em 1em; /* Expanded padding matching .runner-more */
+}
+
+/* The actual content inside the collapsible container */
+.runner-more-content {
+  font-size: 0.95em;
+  color: #bbf5ed;
+  background: #181c21;
+  border-radius: 8px;
+  /* Padding is handled by .runner-more-collapsible-content.expanded */
+  line-height: 1.44;
+  margin-top: 0.67em; /* Space between button and content */
+}
+
+.runner-more-content b { color: #ffd900; }
+.runner-more-content .no-data { color: #888; font-style: italic; }
+.runner-more-content .prev-owners { color: #90f; font-size: 0.93em; }
+.runner-stats-table {
+  margin: 0.7em 0;
+  font-size: 0.96em;
+  background: #1a212b;
+  border-radius: 7px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+.runner-stats-table th,
+.runner-stats-table td {
+  padding: 7px 11px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-right: 1px solid rgba(255,255,255,0.02);
+}
+.runner-stats-table tr:last-child td { border-bottom: none; }
+.runner-stats-table tr td:last-child { border-right: none; }
+.runner-stats-table b { color: #2afcb1; }
+.runner-quotes, .runner-stable-tour {
+  margin-top: 1em;
+  background: #1a212b;
+  padding: 0.8em 1em;
+  border-radius: 7px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.09);
+}
+.runner-quotes b, .runner-stable-tour b { color: #ffd900; }
+.runner-quotes ul, .runner-stable-tour ul {
+  list-style: none; padding-left: 0; margin-top: 0.5em;
+}
+.runner-quotes li, .runner-stable-tour li {
+  margin-bottom: 0.45em; position: relative; padding-left: 1.2em; color: #d0d0d0; font-size: 0.95em;
+}
+.runner-quotes li:last-child, .runner-stable-tour li:last-child { margin-bottom: 0; }
+.runner-quotes li::before, .runner-stable-tour li::before {
+  content: '▪'; color: #2afcb1; position: absolute; left: 0; top: 0; font-size: 0.9em; line-height: 1.4;
+}
+
+/* =========================
+   === DATE SWITCHER
+   ========================= */
+.date-switcher {
+  text-align: center;
+  margin: 18px 0 12px 0;
+  font-size: 1.15em;
+  letter-spacing: 0.01em;
+}
+.date-switcher a {
+  color: #ffd900;
+  background: #232b2e;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 7px 25px;
+  margin: 0 3px;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s;
+  display: inline-block;
+  border: none;
+}
+.date-switcher a.active {
+  background: #2afcb1;
+  color: #191e23;
+  font-weight: 900;
+  box-shadow: 0 2px 12px rgba(42,252,177,0.09);
+}
+.date-switcher a:hover:not(.active) {
+  background: #ffd900;
+  color: #191e23;
+}
+
+/* =========================
+   === RESPONSIVE
+   ========================= */
+@media (max-width: 950px) {
+  .container { max-width: 99vw; }
+}
+@media (max-width: 800px) {
+  .course-bar, .race-links-bar { gap: 7px; }
+  .race-links-bar { justify-content: flex-start; }
+  .race-link, .course-link { padding: 6px 11px; font-size: 0.96em; }
+}
+@media (max-width: 600px) {
+  .container { padding: 8px 1vw 16px 1vw; }
+  .race-header { padding: 1em 0.7em 0.9em 0.7em; }
+  .race-header h1 { font-size: 1.02rem; }
+  .race-meta, .race-details { font-size: 0.97em; }
+  .race-top-picks { padding: 0.85em 0.4em 0.65em 0.4em; }
+  .race-top-picks-title { font-size: 1em; }
+  .race-top-picks-list { gap: 0.34em 0.6em; }
+  .race-top-pick-item { font-size: 0.96em; }
+  .runners-list { margin-top: 1.1em; }
+  .runner-card { gap: 6px; padding: 0.63em 0.2em 0.6em 0.2em; min-height: 50px; border-radius: 8px; }
+  .runner-num-draw { min-width: 27px; font-size: 0.98em; margin-right: 3px; }
+  .runner-silk { width: 23px; height: 23px; margin-right: 3px; }
+  .runner-main { min-width: 82px; font-size: 0.97em; }
+  .runner-horse { font-size: 0.97em; }
+  .runner-meta-line, .runner-info-line { font-size: 0.93em; gap: 0.09em; }
+  .runner-odds { font-size: 0.96em; min-width: 26px; }
+  .runner-more-btn { padding: 2.5px 7px; font-size: 0.93em; }
+  /* Ensure the content padding is consistent on mobile too */
+  .runner-more-collapsible-content.expanded { padding: 0.42em 0.3em 0.34em 0.3em; }
+  .runner-stats-table th, .runner-stats-table td { padding: 5px 6px; font-size: 0.87em; }
+}
+@media (max-width: 400px) {
+  .container { padding-left: 2vw; padding-right: 2vw; }
+  .race-top-picks-list { flex-direction: column; align-items: flex-start; }
+  .race-top-pick-item { font-size: 0.95em; margin-bottom: 0.27em; }
+  .runner-card { min-height: 44px; }
+  .runner-num-draw { min-width: 21px; font-size: 0.9em; }
+  .runner-silk { width: 16px; height: 16px; }
+  .runner-horse { font-size: 0.88em; }
+  .runner-meta-line, .runner-info-line { font-size: 0.86em; }
+  .runner-odds { font-size: 0.89em; min-width: 18px; }
+  .runner-more-btn { font-size: 0.87em; padding: 1.5px 4px; }
+}
