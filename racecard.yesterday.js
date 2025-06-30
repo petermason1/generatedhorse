@@ -39,7 +39,7 @@ console.log(window.horseResults); // Confirm horseResults is also loaded
     score += 0.3 * orating;
     score += 3 * wins + 1 * places;
     if (last_run > 60) score -= (last_run - 60) * 0.4;
-    score += Math.max(0, 60 - last_run) * 0.1;
+    // The line 'score += Math.max(0, 60 - last_run) * 0.1;' is intentionally removed here
     score += 0.7 * trainerPercent;
     score += 1.1 * trainerWins;
     if (score < -15) score = -15 + (score + 15) * 0.3;
