@@ -1,137 +1,155 @@
-
+/* =========================
+   === GENERAL LAYOUT & PADDING
+   ========================= */
 .tips-main {
-  padding: 1.5em 0 3em 0; /* Adjusted top/bottom padding for the main content area */
+  padding: 0.8em 0 1.8em 0; /* Adjusted top/bottom padding to make overall page shorter */
   min-height: 70vh;
 }
 
 /* --- PAGE TITLE & INTRO --- */
 .page-title {
   text-align: center;
-  margin: 0.8em auto 0.6em auto; /* Reduced top margin slightly */
-  font-size: clamp(1.8em, 4vw + 0.5rem, 2.7em); /* Responsive font sizing, slightly larger start */
-  color: var(--color-primary-yellow); /* Use CSS variable */
+  margin: 0.5em auto 0.3em auto; /* Reduced top/bottom margin */
+  font-size: clamp(1.5em, 4vw + 0.5rem, 2.4em); /* Slightly adjusted responsive font sizing */
+  color: var(--color-primary-yellow);
   font-weight: 900;
   letter-spacing: 0.03em;
   max-width: 700px;
   text-shadow: 0 3px 9px rgba(0,0,0,0.25), 0 0 10px rgba(255,215,0,0.22);
   line-height: 1.1;
-  padding: 0 10px; /* Add slight horizontal padding for very small screens */
+  padding: 0 10px;
 }
 
 .tips-intro {
-  color: var(--color-text-medium); /* Use CSS variable */
-  font-size: 1.05em; /* Slightly adjusted font size */
-  max-width: 600px; /* Slightly wider max-width */
-  margin: 0 auto 2em auto; /* Increased bottom margin */
+  color: var(--color-text-secondary);
+  font-size: 0.95em; /* Slightly smaller intro text */
+  max-width: 600px;
+  margin: 0 auto 1.3em auto; /* Reduced bottom margin */
   text-align: center;
-  line-height: 1.6;
-  padding: 0 15px; /* Increased horizontal padding */
+  line-height: 1.4; /* Tighter line height */
+  padding: 0 15px;
 }
 
 .tips-intro b {
-  color: var(--color-primary-yellow); /* Use CSS variable */
+  color: var(--color-primary-yellow);
   font-weight: 700;
 }
 
 /* --- SECTIONS & TITLES --- */
 .tips-section {
-  margin: 0 auto 2.5em auto; /* More space between sections */
-  max-width: 700px; /* Adjusted max-width to give cards more space */
-  padding: 0 10px; /* Consistent horizontal padding within the container */
+  margin: 0 auto 1.5em auto; /* Less space between sections */
+  max-width: 700px;
+  padding: 0 10px;
 }
 .section-title {
-  font-size: 1.4em; /* Larger and more prominent */
+  font-size: 1.2em; /* Slightly smaller and more compact */
   font-weight: 900;
-  margin-bottom: 0.8em; /* Adjusted margin */
-  padding-bottom: 0.4em;
+  margin-bottom: 0.5em; /* Adjusted margin */
+  padding-bottom: 0.25em;
   border-bottom: 2px solid;
   text-align: center;
-  letter-spacing: 0.04em; /* Increased letter-spacing */
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   text-shadow: 0 1px 4px rgba(0,0,0,0.14);
-  display: flex; /* Use flex for alignment of subtitle */
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
-  gap: 0.5em; /* Space between title and subtitle */
+  flex-wrap: wrap;
+  gap: 0.2em; /* Even tighter gap */
 }
 .section-subtitle {
-  font-size: 0.7em; /* Relative to section-title */
-  color: var(--color-text-medium); /* Use CSS variable */
-  /* margin-left: 0.5em; */ /* Removed, gap handles it */
+  font-size: 0.55em; /* Relative to section-title, even smaller */
+  color: var(--color-text-secondary);
   font-weight: 500;
   line-height: 1.2;
 }
 .top-picks-title { color: var(--color-primary-yellow); border-color: var(--color-primary-yellow); }
 .value-picks-title { color: var(--color-accent-green); border-color: var(--color-accent-green); }
-.outsider-picks-title { color: #87ceeb; border-color: #87ceeb; } /* Sky blue for outsiders */
+.outsider-picks-title { color: var(--color-sky-blue); border-color: var(--color-sky-blue); }
 
 /* --- NO PICKS --- */
 .no-picks {
-  color: var(--color-text-medium); /* Use CSS variable */
+  color: var(--color-text-secondary);
   text-align: center;
-  padding: 1.5em; /* Increased padding */
-  background: var(--color-dark-table-even); /* Use CSS variable */
-  border-radius: 10px;
-  margin-bottom: 1.5em;
-  box-shadow: var(--shadow-md); /* Use CSS variable */
+  padding: 0.8em; /* Reduced padding */
+  background: var(--color-table-even-bg);
+  border-radius: 7px;
+  margin-bottom: 0.8em; /* Reduced margin */
+  box-shadow: var(--shadow-sm);
   font-style: italic;
-  font-size: 1.05em; /* Slightly larger */
-  border-left: 4px solid var(--color-primary-yellow); /* A subtle border */
+  font-size: 0.95em;
+  border-left: 3px solid var(--color-primary-yellow);
 }
 
-/* --- TIP CARD STYLING --- */
+/* =========================
+   === TIP CARD STYLING
+   ========================= */
 .tip-card {
-  background: linear-gradient(160deg, var(--color-dark-table-odd), var(--color-dark-table-even)); /* Use CSS variables */
-  border-radius: 10px; /* Slightly larger radius */
-  padding: 1em 1.2em 1em 1em; /* Adjusted padding */
-  margin-bottom: 0.7em; /* More space between cards */
+  background: linear-gradient(160deg, var(--color-table-odd-bg), var(--color-table-even-bg));
+  border-radius: 8px;
+  padding: 0.5em 0.7em; /* Adjusted padding to be uniform on left/right */
+  margin-bottom: 0.4em;
   display: flex;
-  align-items: flex-start;
-  gap: 15px; /* Increased gap */
-  box-shadow: var(--shadow-md); /* Use CSS variable */
-  border: 1px solid transparent; /* Start with transparent border */
+  align-items: flex-start; /* Align items to the start for multi-line content */
+  gap: 8px; /* Gap between silks and main content */
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-table-border);
   min-width: 0;
-  transition: box-shadow var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast); /* Add border-color to transition */
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
 }
 
 .tip-card:hover {
-  background: linear-gradient(160deg, #2f3640, #272c35); /* Slightly darker on hover */
-  transform: translateY(-5px) scale(1.005); /* More pronounced lift, less scale */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 18px rgba(54,232,181,0.25); /* Stronger shadow/glow */
-  border-color: var(--color-accent-green); /* Green border on hover */
+  background: linear-gradient(160deg, var(--color-section-bg-hover), var(--color-navbar-bg-hover));
+  transform: translateY(-2px) scale(1.001);
+  box-shadow: var(--shadow-md), 0 0 10px rgba(54,232,181,0.15);
+  border-color: var(--color-accent-green);
 }
 
-/* --- CARD MAIN CONTENT --- */
-.tip-num {
-  font-weight: 900;
-  font-size: 1.15em; /* Slightly larger */
-  width: 2em; /* Wider for better number display */
-  height: 2em; /* Make it square */
-  line-height: 2em; /* Vertically center number */
-  text-align: center;
-  color: var(--color-text-dark); /* Dark text on yellow */
-  background: var(--color-primary-yellow); /* Yellow background */
-  border-radius: 50%; /* Make it a circle */
-  flex-shrink: 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  text-shadow: none; /* Remove text shadow */
+/* --- SILKS --- */
+.silks-wrapper {
+    flex-shrink: 0;
+    width: 40px; /* Slightly smaller silks */
+    height: 40px; /* Slightly smaller silks */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--color-table-header-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border: 1px solid var(--color-table-border);
+    margin-top: 2px; /* Align with text baseline */
 }
+
+.silks-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+}
+
+/* --- MAIN CONTENT AREA --- */
 .tip-content {
   flex: 1;
   min-width: 0;
-  word-break: break-word;
-}
-.tip-header {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  margin-bottom: 0.3em; /* Slightly more space */
-  gap: 0.6em; /* Increased gap */
+  flex-direction: column;
+  gap: 2px; /* Reduced gap between content rows */
 }
+
+.tip-top-row { /* Contains horse, odds, score */
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4em; /* Space between elements */
+}
+
 .tip-horse {
-  color: var(--color-accent-green); /* Use CSS variable */
-  font-size: 1.15em; /* More prominent horse name */
+  color: var(--color-accent-green);
+  font-size: 1.0em; /* Base font size for horse name */
   font-weight: 800;
   text-decoration: none;
   transition: color var(--transition-fast);
@@ -139,165 +157,176 @@
   line-height: 1.2;
 }
 .tip-horse:hover {
-  color: #2ce8c0; /* Slightly brighter green on hover */
+  color: var(--color-accent-green-hover);
   text-decoration: underline;
 }
 .tip-odds {
-  color: var(--color-primary-yellow); /* Use CSS variable */
+  color: var(--color-primary-yellow);
   font-weight: 800;
-  font-size: 1.05em; /* Slightly larger odds */
+  font-size: 0.9em; /* Smaller odds */
   white-space: nowrap;
 }
 .tip-score {
-  color: var(--color-text-medium); /* Use CSS variable */
+  color: var(--color-text-secondary);
   font-weight: 700;
-  font-size: 0.9em; /* Slightly smaller score, less prominent */
+  font-size: 0.7em; /* Smaller score */
   white-space: nowrap;
   opacity: 0.9;
 }
-.tip-race-info {
-  font-size: 0.95em; /* Slightly smaller race info */
-  opacity: .9;
-  color: var(--color-text-light); /* Use CSS variable */
-  margin-bottom: 0.4em; /* More space below */
-  word-break: break-word;
-  line-height: 1.4;
+
+.tip-middle-row { /* Contains off_time, course, and filtered race name */
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4em; /* Space between elements in this row */
+    font-size: 0.82em; /* Smaller font size for this line */
+    opacity: .9;
+    color: var(--color-text-secondary);
+    line-height: 1.2;
+    word-break: break-word;
 }
-.tip-race-name {
-  color: var(--color-primary-yellow); /* Use CSS variable */
-  font-weight: 600;
+
+.tip-race-time-course {
+    font-weight: 600; /* Make time and course slightly bolder */
 }
+
+.tip-race-filtered-name {
+    font-style: italic; /* Style for the filtered race name */
+    color: var(--color-text-secondary);
+}
+
+.tip-bottom-row { /* Contains reason and badge */
+    display: flex;
+    align-items: flex-start;
+    gap: 6px; /* Space between reason and badge */
+    margin-top: 3px; /* Small top margin to separate from race info */
+}
+
 .tip-reason {
-  margin-top: 10px; /* More space above */
-  color: #d1f2ff; /* Slightly brighter blue for contrast */
-  font-size: 0.94em; /* Adjusted font size */
-  line-height: 1.5; /* Increased line height for readability */
-  background: rgba(0,0,0,0.1); /* Slightly darker background */
-  padding: 0.6em 0.9em; /* Adjusted padding */
-  border-radius: 6px; /* Slightly larger radius */
-  border-left: 4px solid var(--color-accent-green); /* Thicker border */
+  flex: 1;
+  color: var(--color-text-primary);
+  font-size: 0.85em; /* Slightly smaller font size */
+  line-height: 1.3;
+  background: var(--color-dark-bg-subtle);
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  border-left: 2px solid var(--color-accent-green);
   word-break: break-word;
   overflow-wrap: anywhere;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.1); /* Subtle inner shadow */
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.08);
 }
 .tip-badge {
+  flex-shrink: 0;
   display: inline-block;
-  font-size: 0.8em; /* Slightly larger badge text */
+  font-size: 0.65em; /* Smaller badge text */
   font-weight: 800;
-  padding: 5px 10px; /* Adjusted padding */
-  border-radius: 6px; /* Slightly larger radius */
-  margin-top: 10px; /* More space above */
+  padding: 2px 5px; /* Reduced padding */
+  border-radius: 4px;
+  margin-top: 0;
   text-transform: uppercase;
-  letter-spacing: 0.7px; /* Slightly more letter-spacing */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.22);
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
-.tip-badge.top-pick { background: var(--color-primary-yellow); color: var(--color-text-dark); }
-.tip-badge.value { background: var(--color-accent-green); color: var(--color-text-dark); }
-.tip-badge.outsider { background: #87ceeb; color: var(--color-text-dark); } /* Use dark text on light badge */
+.tip-badge.smart-pick-badge { background: var(--color-primary-yellow); color: var(--color-text-dark); }
+.tip-badge.value-badge { background: var(--color-accent-green); color: var(--color-text-dark); }
+.tip-badge.outsider-badge { background: var(--color-sky-blue); color: var(--color-text-dark); }
 .tip-badge:hover {
-  transform: scale(1.08); /* More pronounced scale */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.3); /* Stronger shadow */
+  transform: scale(1.03);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 /* --- DISCLAIMER --- */
 .tips-disclaimer {
   text-align: center;
-  color: var(--color-text-medium); /* Use text-medium for disclaimer text */
-  font-size: 0.93em; /* Slightly smaller for disclaimer */
-  margin-top: 3em; /* More space from last section */
-  padding: 0 15px; /* Consistent padding */
-  line-height: 1.5;
+  color: var(--color-text-secondary);
+  font-size: 0.85em;
+  margin-top: 1.8em;
+  padding: 0 15px;
+  line-height: 1.3;
   opacity: 0.9;
 }
 .tips-disclaimer b {
-  color: var(--color-primary-yellow); /* Bold text in disclaimer should be yellow */
+  color: var(--color-primary-yellow);
 }
 
 
-/* --- RESPONSIVE & TIGHTEN ON MOBILE --- */
+/* =========================
+   === RESPONSIVE & MOBILE
+   ========================= */
 @media (max-width: 700px) {
   .tips-main {
-    padding: 1em 0 2em 0; /* Adjusted padding for mobile */
+    padding: 0.6em 0 1.2em 0;
   }
   .page-title {
-    font-size: clamp(1.4em, 5vw, 2.1em); /* Tighter font on mobile */
-    margin-top: 0.6em;
-    margin-bottom: 0.4em;
-    padding: 0 10px;
+    font-size: clamp(1.2em, 5vw, 1.9em);
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
+    padding: 0 6px;
   }
   .tips-intro {
-    font-size: 0.95em;
-    margin-bottom: 1.5em;
+    font-size: 0.9em;
+    margin-bottom: 1em;
     padding: 0 10px;
   }
   .tips-section {
-    max-width: 98vw; /* Use more width on mobile */
-    padding: 0 8px; /* Tighter padding */
-    margin-bottom: 2em; /* Adjusted space between sections */
+    max-width: 98vw;
+    padding: 0 4px;
+    margin-bottom: 1.2em;
   }
   .section-title {
-    font-size: 1.2em; /* Tighter font for section titles */
-    margin-bottom: 0.6em;
-    padding-bottom: 0.3em;
-    gap: 0.4em;
+    font-size: 1.1em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.2em;
+    gap: 0.2em;
   }
   .section-subtitle {
-    font-size: 0.65em; /* Smaller subtitle */
+    font-size: 0.5em;
   }
 
   .tip-card {
-    flex-direction: row; /* Keep elements in a row on smaller mobile if possible */
-    align-items: center; /* Align items center for row layout */
-    gap: 8px; /* Tighter gap */
-    padding: 0.6em 0.8em 0.6em 0.6em; /* Reduced padding */
-    margin-bottom: 0.6em; /* Tighter margin */
-    border-radius: 8px;
-    font-size: 0.95em; /* Overall smaller text */
+    padding: 0.4em 0.6em; /* Adjusted padding */
+    gap: 6px;
+    margin-bottom: 0.4em;
+    border-radius: 6px;
+    font-size: 0.9em;
   }
 
-  .tip-num {
-    font-size: 1.0em; /* Smaller number */
-    width: 1.8em;
-    height: 1.8em;
-    line-height: 1.8em;
+  .silks-wrapper {
+      width: 35px;
+      height: 35px;
   }
-  .tip-content {
-    flex-direction: column; /* Stack content within the card */
-    min-width: 0;
-  }
-  .tip-header {
-    flex-wrap: nowrap; /* Prevent wrapping in header if possible */
-    margin-bottom: 0.15em;
-    gap: 0.4em;
+
+  .tip-top-row {
+    gap: 0.3em;
   }
   .tip-horse {
-    font-size: 1em;
-    margin-bottom: 0;
+    font-size: 0.95em;
   }
   .tip-odds, .tip-score {
-    font-size: 0.9em;
-    margin-top: 0;
+    font-size: 0.78em;
   }
-  .tip-race-info {
-    font-size: 0.88em;
-    margin-bottom: 0.2em;
+  .tip-middle-row {
+    font-size: 0.78em;
+    line-height: 1.2;
+    gap: 0.3em;
+  }
+  .tip-bottom-row {
+    gap: 5px;
+    margin-top: 2px;
   }
   .tip-reason {
-    font-size: 0.88em;
-    padding: 0.4em 0.6em;
-    margin-top: 5px;
-    border-left-width: 3px; /* Slightly thinner border */
+    font-size: 0.8em;
+    padding: 0.25em 0.5em;
+    border-left-width: 2px;
   }
   .tip-badge {
-    font-size: 0.7em;
-    padding: 3px 7px;
-    margin-top: 6px;
-    border-radius: 4px;
+    font-size: 0.62em;
+    padding: 1px 4px;
   }
   .no-picks {
-    padding: 1em;
-    font-size: 0.95em;
+    padding: 0.7em;
+    font-size: 0.9em;
   }
 }
 
@@ -305,57 +334,159 @@
   .tip-card {
     flex-direction: column; /* Stack completely on very small screens */
     align-items: flex-start;
-    padding: 0.5em 0.7em 0.5em 0.5em;
-    gap: 4px; /* Even tighter gap */
+    padding: 0.3em 0.5em; /* Adjusted padding */
+    gap: 2px;
   }
-  .tip-num {
-    margin-bottom: 5px; /* Add space below number when stacked */
+  .silks-wrapper {
+      width: 30px; /* Even smaller silks on tiny screens */
+      height: 30px;
+      margin-top: 0; /* Reset margin-top for stacking */
+      margin-bottom: 4px; /* Add space below silks when stacked */
   }
-  .tip-header {
-    flex-direction: column; /* Stack header elements */
-    align-items: flex-start;
-    gap: 0.1em; /* Minimal gap */
-    margin-bottom: 0.1em;
+  .tip-content {
+    width: 100%; /* Take full width when stacked */
+    gap: 1px;
+  }
+  .tip-top-row {
+    flex-wrap: wrap;
+    gap: 0.2em;
   }
   .tip-horse {
-    font-size: 1.05em; /* Slightly larger horse name again */
+    font-size: 0.88em;
   }
   .tip-odds, .tip-score {
-    font-size: 0.95em;
+    font-size: 0.75em;
   }
-  .tip-race-info {
-    font-size: 0.9em;
+  .tip-middle-row {
+    font-size: 0.75em;
+  }
+  .tip-bottom-row {
+    flex-direction: column; /* Stack reason and badge on tiny screens */
+    align-items: flex-start;
+    gap: 3px;
+    margin-top: 2px;
   }
   .tip-reason {
-    font-size: 0.85em;
-    padding: 0.3em 0.5em;
+    font-size: 0.78em;
+    padding: 0.2em 0.4em;
   }
   .tip-badge {
-    font-size: 0.68em;
-    padding: 2px 5px;
-    margin-top: 4px;
+    font-size: 0.58em;
+    padding: 1px 3px;
   }
   .tips-disclaimer {
-    font-size: 0.88em;
-    margin-top: 2em;
+    font-size: 0.8em;
+    margin-top: 1.2em;
   }
 }
 
 @media (max-width: 380px) {
   .tips-section {
-    padding: 0 5px; /* Even tighter horizontal padding */
+    padding: 0 3px;
   }
   .tip-card {
-    padding: 0.3em 0.5em 0.3em 0.3em;
-    font-size: 0.92em;
+    padding: 0.2em 0.3em; /* Adjusted padding */
+    font-size: 0.85em;
   }
-  .tip-num {
-    width: 1.6em;
-    height: 1.6em;
-    line-height: 1.6em;
-    font-size: 0.9em;
+  .silks-wrapper {
+      width: 26px;
+      height: 26px;
   }
-  .tip-reason {
+  .tip-horse {
     font-size: 0.82em;
   }
+  .tip-reason {
+    font-size: 0.75em;
+  }
+}
+
+/* =========================
+   === LIGHT MODE OVERRIDES
+   ========================= */
+html[data-theme="light"] .page-title {
+    text-shadow: 0 3px 9px rgba(0,0,0,0.1), 0 0 10px rgba(255,215,0,0.1);
+}
+
+html[data-theme="light"] .section-title {
+    text-shadow: none;
+}
+
+html[data-theme="light"] .no-picks {
+    box-shadow: var(--shadow-md);
+    border-left-color: var(--color-primary-yellow);
+}
+
+html[data-theme="light"] .tip-card {
+    background: linear-gradient(160deg, var(--color-table-odd-bg), var(--color-table-even-bg));
+    box-shadow: var(--shadow-sm);
+    border-color: var(--color-table-border);
+}
+
+html[data-theme="light"] .tip-card:hover {
+    background: linear-gradient(160deg, var(--color-section-bg-hover), var(--color-navbar-bg-hover));
+    transform: translateY(-2px) scale(1.001);
+    box-shadow: var(--shadow-md), 0 0 10px rgba(0,143,93,0.1);
+    border-color: var(--color-accent-green);
+}
+
+html[data-theme="light"] .silks-wrapper {
+    background-color: var(--color-table-header-bg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-color: var(--color-table-border);
+}
+
+html[data-theme="light"] .tip-num { /* This is no longer used */
+    color: var(--color-text-dark);
+    background: var(--color-primary-yellow);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+html[data-theme="light"] .tip-horse {
+    color: var(--color-accent-green);
+    text-shadow: none;
+}
+html[data-theme="light"] .tip-horse:hover {
+    color: var(--color-accent-green-hover);
+}
+
+html[data-theme="light"] .tip-odds {
+    color: var(--color-primary-yellow);
+}
+
+html[data-theme="light"] .tip-score {
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="light"] .tip-middle-row { /* New element, uses text-secondary */
+    color: var(--color-text-secondary);
+}
+html[data-theme="light"] .tip-race-time-course {
+    color: var(--color-text-secondary); /* Ensure this is also secondary in light mode */
+}
+html[data-theme="light"] .tip-race-filtered-name {
+    color: var(--color-text-secondary); /* Ensure this is also secondary in light mode */
+}
+
+html[data-theme="light"] .tip-reason {
+    color: var(--color-text-primary);
+    background: var(--color-dark-bg-subtle); /* This should be a light mode subtle background */
+    border-left-color: var(--color-accent-green);
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+}
+
+html[data-theme="light"] .tip-badge {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+html[data-theme="light"] .tip-badge.smart-pick-badge { background: var(--color-primary-yellow); color: var(--color-text-dark); }
+html[data-theme="light"] .tip-badge.value-badge { background: var(--color-accent-green); color: var(--color-text-dark); }
+html[data-theme="light"] .tip-badge.outsider-badge { background: var(--color-sky-blue); color: var(--color-text-dark); }
+html[data-theme="light"] .tip-badge:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+html[data-theme="light"] .tips-disclaimer {
+    color: var(--color-text-secondary);
+}
+html[data-theme="light"] .tips-disclaimer b {
+    color: var(--color-primary-yellow);
 }

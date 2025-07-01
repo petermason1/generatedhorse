@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" data-theme="dark"> <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,15 +20,19 @@
 <body>
 <nav class="main-navbar">
   <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">🏇 Smart Racecards</a>
+    <a href="index.html" class="nav-brand">🏇 Racecards</a>
     <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link nav-link-active">Home</a>
+      <a href="index.html" class="nav-link">Home</a>
       <a href="results.html" class="nav-link">Results</a>
       <a href="tips.html" class="nav-link">Smart Picks</a>
       <a href="yesterday.html" class="nav-link">Historical</a>
       <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About Us</a>
+      <a href="about.html" class="nav-link">About</a>
     </div>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -107,9 +110,5 @@
 <script src="data.js"></script>
 <script src="index.js"></script>
 <script src="main.js"></script>
-<script>
-  // Dynamic year for footer
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-</script>
 </body>
 </html>

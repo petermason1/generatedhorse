@@ -1,7 +1,7 @@
 /* --- ABOUT PAGE CONTAINER --- */
 .about-container {
   /* Using more dynamic gradients for background */
-  background: linear-gradient(155deg, #2a2f3b, #1e222b);
+  background: linear-gradient(155deg, #2a2f3b, #1e222b); /* Dark mode specific gradient */
   border-radius: 20px; /* Slightly larger, softer radius */
   box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 20px rgba(54,232,181,0.05); /* Stronger, more diffused shadow with subtle glow */
   max-width: 950px; /* Wider container */
@@ -13,73 +13,73 @@
 /* --- HEADER & INTRO --- */
 .about-header {
   text-align: center;
-  color: var(--color-primary-yellow); /* Using CSS variable */
-  font-size: clamp(2em, 4.5vw + 0.5rem, 2.8em); /* Responsive font sizing */
+  color: var(--color-primary-yellow);
+  font-size: clamp(2em, 4.5vw + 0.5rem, 2.8em);
   margin-bottom: 1em;
-  font-weight: 900; /* Bolder */
-  letter-spacing: 0.04em; /* Slightly more prominent */
+  font-weight: 900;
+  letter-spacing: 0.04em;
   text-shadow: 0 3px 10px rgba(0,0,0,0.3), 0 0 15px rgba(255,215,0,0.25); /* Enhanced text shadow */
 }
 
 .about-intro {
-  color: var(--color-text-medium); /* Using CSS variable */
-  font-size: 1.1em; /* Slightly larger text */
-  max-width: 750px; /* Wider intro text */
-  margin: 0 auto 3em auto; /* More space below intro */
+  color: var(--color-text-secondary); /* Use secondary for intro paragraphs as it's typically slightly less prominent than primary */
+  font-size: 1.1em;
+  max-width: 750px;
+  margin: 0 auto 3em auto;
   text-align: center;
-  line-height: 1.7; /* Improved line height for readability */
-  padding: 0 10px; /* Small horizontal padding for very narrow screens */
+  line-height: 1.7;
+  padding: 0 10px;
 }
 .about-intro b {
-  color: var(--color-primary-yellow); /* Using CSS variable */
+  color: var(--color-primary-yellow);
   font-weight: 700;
 }
 
 /* --- SECTION TITLES --- */
 .section-title {
-  font-size: 1.6em; /* More prominent section titles */
-  color: var(--color-primary-yellow); /* Using CSS variable */
-  font-weight: 800; /* Bolder */
-  margin-top: 3.5em; /* More space above sections */
-  margin-bottom: 1.2em; /* More space below titles */
-  border-bottom: 2px solid var(--color-accent-green); /* More visible border */
-  padding-bottom: 0.4em; /* More space below border */
+  font-size: 1.6em;
+  color: var(--color-primary-yellow);
+  font-weight: 800;
+  margin-top: 3.5em;
+  margin-bottom: 1.2em;
+  border-bottom: 2px solid var(--color-accent-green);
+  padding-bottom: 0.4em;
   letter-spacing: 0.03em;
   width: 100%;
   text-align: left;
-  text-transform: uppercase; /* Uppercase for impact */
-  text-shadow: 0 1px 4px rgba(0,0,0,0.14); /* Subtle text shadow */
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.14);
 }
 
 /* --- FANCY LISTS --- */
 .fancy-list {
   list-style: none;
   padding-left: 0;
-  margin: 1em 0 3em 0; /* Adjusted margins */
+  margin: 1em 0 3em 0;
 }
 .fancy-list li {
-  margin-bottom: 1.1em; /* More space between list items */
-  font-size: 1.1em; /* Slightly larger text */
+  margin-bottom: 1.1em;
+  font-size: 1.1em;
   position: relative;
-  padding-left: 2.8em; /* More padding for emoji */
-  color: var(--color-text-light); /* Using CSS variable */
+  padding-left: 2.8em;
+  color: var(--color-text-primary); /* Use primary for list items */
   line-height: 1.5;
-  transition: color 0.15s ease-out; /* Smooth transition */
+  transition: color 0.15s ease-out;
 }
 .fancy-list li:hover {
-  color: #c9eaff; /* Slightly lighter on hover */
+  color: #c9eaff; /* This color is specific to dark mode hover, will need adjustment for light mode */
 }
 .fancy-list li:before {
-  color: var(--color-accent-green); /* Vibrant green color for emojis */
-  font-size: 1.8em; /* Larger emojis */
+  color: var(--color-accent-green);
+  font-size: 1.8em;
   position: absolute;
   left: 0;
-  top: -0.1em; /* Adjust vertical alignment */
-  width: 1.8em; /* Make space for emoji */
+  top: -0.1em;
+  width: 1.8em;
   text-align: center;
-  line-height: 1; /* Keep emoji line height consistent */
+  line-height: 1;
   opacity: 0.9;
-  text-shadow: 0 0 5px rgba(54,232,181,0.4); /* Subtle glow for emojis */
+  text-shadow: 0 0 5px rgba(54,232,181,0.4);
 }
 /* Emojis are already defined in HTML, so these selectors are fine */
 
@@ -87,86 +87,86 @@
 /* --- TEAM SECTION (2x2 GRID) --- */
 .team-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* More flexible grid, ensures minimum card width */
-  gap: 35px; /* More space between team cards */
-  margin-bottom: 4em; /* More space below team section */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  margin-bottom: 4em;
   justify-content: center;
-  align-items: stretch; /* Ensure cards stretch to same height if content varies */
+  align-items: stretch;
 }
 .team-card {
-  background: linear-gradient(155deg, #2b313d, #212630); /* Refined gradient */
-  border-radius: 15px; /* Softer radius */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Softer shadow */
-  padding: 1.8em 1.5em; /* More internal padding */
+  background: linear-gradient(155deg, #2b313d, #212630); /* Dark mode specific gradient */
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  padding: 1.8em 1.5em;
   margin: 0 auto;
-  transition: all 0.3s ease-out; /* Slower, smoother transition */
-  border: 1px solid rgba(48,53,68,0.5); /* Subtle border */
+  transition: all 0.3s ease-out;
+  border: 1px solid rgba(48,53,68,0.5); /* Dark mode specific border */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 200px; /* Ensure a minimum height for visual consistency */
+  min-height: 200px;
 }
 .team-card:hover {
-  transform: translateY(-8px) scale(1.01); /* More pronounced lift, slight scale */
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 30px rgba(54,232,181,0.6); /* Stronger shadow/glow */
-  border-color: var(--color-accent-green); /* Green border on hover */
-  background: linear-gradient(155deg, #303746, #262c37); /* Slightly brighter hover background */
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 30px rgba(54,232,181,0.6); /* Dark mode specific shadow/glow */
+  border-color: var(--color-accent-green);
+  background: linear-gradient(155deg, #303746, #262c37); /* Dark mode specific hover background */
 }
 
 .team-name {
-  color: var(--color-accent-green); /* Using CSS variable */
-  font-weight: 800; /* Bolder */
-  font-size: 1.3em; /* Larger name */
+  color: var(--color-accent-green);
+  font-weight: 800;
+  font-size: 1.3em;
   margin-bottom: 0.1em;
   display: block;
   letter-spacing: 0.02em;
 }
 .team-role {
-  color: var(--color-primary-yellow); /* Using CSS variable */
-  font-size: 1.1em; /* Slightly larger role */
+  color: var(--color-primary-yellow);
+  font-size: 1.1em;
   font-weight: 600;
-  margin-bottom: 0.8em; /* More space below role */
+  margin-bottom: 0.8em;
   display: block;
   opacity: 0.9;
 }
 .team-desc {
-  color: #e8eaf0; /* Slightly lighter text for readability */
-  font-size: 1.05em; /* Slightly larger description text */
+  color: var(--color-text-primary); /* Use primary text color */
+  font-size: 1.05em;
   line-height: 1.6;
-  flex-grow: 1; /* Allows description to push content to bottom if needed */
+  flex-grow: 1;
 }
 
 /* --- CONTACT FOOTER --- */
 .about-contact-footer {
-  margin-top: 4em; /* More space above footer */
-  font-size: 1em; /* Consistent font size */
+  margin-top: 4em;
+  font-size: 1em;
   text-align: center;
-  color: var(--color-text-medium); /* Using CSS variable */
+  color: var(--color-text-secondary); /* Using CSS variable for consistency */
   line-height: 1.7;
-  padding-top: 2.5em; /* More padding above border */
-  border-top: 1px solid rgba(48,53,68,0.6); /* Consistent border style */
+  padding-top: 2.5em;
+  border-top: 1px solid rgba(48,53,68,0.6); /* Dark mode specific border */
 }
 .about-contact-footer b {
-  color: var(--color-primary-yellow); /* Using CSS variable */
+  color: var(--color-primary-yellow);
   font-weight: 700;
 }
 .about-contact-footer a {
-  color: var(--color-primary-yellow); /* Using CSS variable */
+  color: var(--color-primary-yellow);
   text-decoration: underline;
   transition: color var(--transition-fast);
 }
 .about-contact-footer a:hover {
-  color: var(--color-accent-green); /* Using CSS variable */
+  color: var(--color-accent-green);
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 990px) { /* Adjust for slightly larger tablets/desktops */
+@media (max-width: 990px) {
   .about-container {
     padding: 2em 2.5em;
     margin: 2em auto;
   }
 }
-@media (max-width: 768px) { /* Standard tablet breakpoint */
+@media (max-width: 768px) {
   .about-container {
     max-width: 98vw;
     padding: 1.8em 4vw;
@@ -195,14 +195,14 @@
     font-size: 1.6em;
   }
   .team-section {
-    grid-template-columns: 1fr; /* Stack team cards vertically on smaller tablets */
+    grid-template-columns: 1fr;
     gap: 25px;
     margin-bottom: 3em;
   }
   .team-card {
     padding: 1.5em;
-    max-width: 500px; /* Limit single column width */
-    margin: 0 auto; /* Center single column */
+    max-width: 500px;
+    margin: 0 auto;
   }
   .team-name { font-size: 1.25em; }
   .team-role { font-size: 1.05em; }
@@ -213,11 +213,11 @@
   }
 }
 
-@media (max-width: 480px) { /* Smaller mobile screens */
+@media (max-width: 480px) {
   .about-container {
-    padding: 1.2em 3vw; /* Tighter padding for small screens */
-    border-radius: 10px; /* Smaller border-radius */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Lighter shadow */
+    padding: 1.2em 3vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     margin: 1em auto;
   }
   .about-header {
@@ -262,4 +262,77 @@
     margin-top: 2.5em;
     padding-top: 1.8em;
   }
+}
+
+/* =========================================================================== */
+/* --- LIGHT MODE STYLES (for data-theme="light") --- */
+/* =========================================================================== */
+html[data-theme="light"] .about-container {
+  background: var(--color-section-bg); /* Use light section background */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1), 0 0 10px rgba(0,143,93,0.03); /* Lighter shadow */
+  border: 1px solid var(--color-table-border); /* Use lighter border */
+}
+
+html[data-theme="light"] .about-header {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.1), 0 0 10px rgba(168,125,0,0.15); /* Lighter text shadow */
+}
+
+html[data-theme="light"] .about-intro {
+  color: var(--color-text-secondary);
+}
+html[data-theme="light"] .about-intro b {
+  color: var(--color-primary-yellow);
+}
+
+html[data-theme="light"] .section-title {
+  color: var(--color-primary-yellow); /* Keep it yellow in light mode */
+  border-bottom: 2px solid var(--color-accent-green); /* Keep green border */
+  text-shadow: none; /* Remove text shadow in light mode */
+}
+
+html[data-theme="light"] .fancy-list li {
+  color: var(--color-text-primary);
+}
+html[data-theme="light"] .fancy-list li:hover {
+  color: var(--color-accent-green); /* Hover color for light mode */
+}
+html[data-theme="light"] .fancy-list li:before {
+  color: var(--color-accent-green);
+  text-shadow: none; /* Remove glow for emojis in light mode */
+}
+
+html[data-theme="light"] .team-card {
+  background: var(--color-table-odd-bg); /* Use a light background for cards */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Lighter shadow for cards */
+  border: 1px solid var(--color-table-border); /* Lighter border for cards */
+}
+html[data-theme="light"] .team-card:hover {
+  transform: translateY(-4px) scale(1.005); /* Less pronounced lift/scale */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15), 0 0 20px rgba(0,143,93,0.1); /* Lighter hover shadow/glow */
+  border-color: var(--color-accent-green);
+  background: var(--color-table-even-bg); /* Slightly different background on hover */
+}
+
+html[data-theme="light"] .team-name {
+  color: var(--color-accent-green);
+}
+html[data-theme="light"] .team-role {
+  color: var(--color-primary-yellow);
+}
+html[data-theme="light"] .team-desc {
+  color: var(--color-text-primary);
+}
+
+html[data-theme="light"] .about-contact-footer {
+  color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-table-border); /* Use lighter border */
+}
+html[data-theme="light"] .about-contact-footer b {
+  color: var(--color-primary-yellow);
+}
+html[data-theme="light"] .about-contact-footer a {
+  color: var(--color-primary-yellow); /* Keep yellow for links */
+}
+html[data-theme="light"] .about-contact-footer a:hover {
+  color: var(--color-accent-green);
 }

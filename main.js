@@ -1,4 +1,6 @@
 // main.js
+
+// Helper function to get race date
 function getRaceDate(r) {
   if (r.off_dt) return new Date(r.off_dt);
   if (r.race_datetime) return new Date(r.race_datetime);
@@ -7,29 +9,45 @@ function getRaceDate(r) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Hamburger menu
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function () {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    });
+  const navCloseBtn = document.getElementById('navCloseBtn');
+  const navBackdrop = document.getElementById('navBackdrop');
+  const body = document.body; // Reference to the body for 'nav-open' class
 
-    // Close nav on any link click (mobile UX)
-    navLinks.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-      });
+  // --- Navbar Toggling Logic ---
+  function toggleNav() {
+    navLinks.classList.toggle('active');
+    navBackdrop.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    body.classList.toggle('nav-open'); // Toggle body class to prevent scroll
+
+    // Toggle close button visibility based on nav state
+    if (navLinks.classList.contains('active')) {
+      navCloseBtn.style.display = 'block';
+      hamburger.setAttribute('aria-expanded', 'true');
+    } else {
+      navCloseBtn.style.display = 'none';
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  if (hamburger && navLinks && navCloseBtn && navBackdrop) {
+    hamburger.addEventListener('click', toggleNav);
+    navCloseBtn.addEventListener('click', toggleNav);
+    navBackdrop.addEventListener('click', toggleNav);
+
+    // Close nav when any link inside navLinks is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', toggleNav); // Use the same toggle function to close
     });
   }
 
-  // Highlight active nav link based on current page (works for /, /index.html, etc.)
+  // --- Highlight active nav link based on current page ---
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(function(link) {
     const href = link.getAttribute('href');
-    // Handles both index.html and root
+    // Handles both index.html and root, and accounts for empty href for root
     if (
       href === currentPath ||
       (currentPath === 'index.html' && (href === './' || href === '')) ||
@@ -40,6 +58,61 @@ document.addEventListener('DOMContentLoaded', function () {
       link.classList.remove('nav-link-active');
     }
   });
+
+
+  // --- Theme Toggle Logic ---
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const htmlElement = document.documentElement; // This is the <html> tag
+
+  // Function to set the theme
+  function setTheme(theme) {
+    htmlElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme); // Store user preference
+
+    // Update aria-label for accessibility
+    if (themeToggleBtn) { // Ensure button exists before setting attributes
+      if (theme === 'light') {
+        themeToggleBtn.setAttribute('aria-label', 'Switch to dark mode');
+      } else {
+        themeToggleBtn.setAttribute('aria-label', 'Switch to light mode');
+      }
+    }
+  }
+
+  // Function to toggle the theme
+  function toggleTheme() {
+    if (htmlElement.getAttribute('data-theme') === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+
+  // Check for user's preferred theme on page load
+  // Order of preference: localStorage > OS preference > default (dark)
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme); // Apply saved theme
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    // If no saved theme, check OS preference and set to light if preferred
+    setTheme('light');
+  } else {
+    // Default to dark mode if no preference saved and OS preference is not light
+    setTheme('dark');
+  }
+
+  // Add event listener to the theme toggle button
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+  }
+
+
+  // --- Footer Year Logic ---
+  const footerYear = document.getElementById('footer-year');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+
 
   // ----- Optional: Racecards logic if window.racecardsData exists -----
   if (window.racecardsData && window.racecardsData.length) {
@@ -84,70 +157,4 @@ document.addEventListener('DOMContentLoaded', function () {
       `).join('');
     }
   }
-});
-
-
-// main.js
-document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  const navCloseBtn = document.getElementById('navCloseBtn');
-  const navBackdrop = document.getElementById('navBackdrop');
-  const body = document.body;
-
-  // Hamburger opens nav
-  if (hamburger && navLinks && navCloseBtn && navBackdrop) {
-    hamburger.addEventListener('click', function () {
-      navLinks.classList.add('active');
-      navCloseBtn.style.display = 'block';
-      navBackdrop.classList.add('active');
-      body.classList.add('nav-open');
-      hamburger.classList.add('active');
-    });
-    // Close button closes nav
-    navCloseBtn.addEventListener('click', function () {
-      navLinks.classList.remove('active');
-      navCloseBtn.style.display = 'none';
-      navBackdrop.classList.remove('active');
-      body.classList.remove('nav-open');
-      hamburger.classList.remove('active');
-    });
-    // Overlay closes nav
-    navBackdrop.addEventListener('click', function () {
-      navLinks.classList.remove('active');
-      navCloseBtn.style.display = 'none';
-      navBackdrop.classList.remove('active');
-      body.classList.remove('nav-open');
-      hamburger.classList.remove('active');
-    });
-    // Clicking a link closes nav
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navCloseBtn.style.display = 'none';
-        navBackdrop.classList.remove('active');
-        body.classList.remove('nav-open');
-        hamburger.classList.remove('active');
-      });
-    });
-  }
-
-  // Highlight active nav link based on current page
-  const currentPath = window.location.pathname.split('/').pop() || "index.html";
-  document.querySelectorAll('.nav-link').forEach(link => {
-    if (
-      link.getAttribute('href') === currentPath ||
-      (currentPath === '' && (link.getAttribute('href') === 'index.html' || link.getAttribute('href') === './'))
-    ) {
-      link.classList.add('nav-link-active');
-    } else {
-      link.classList.remove('nav-link-active');
-    }
-  });
-});
-
-  document.getElementById('footer-year').textContent = "© " + new Date().getFullYear();
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('footer-year').textContent = "© " + new Date().getFullYear();
 });

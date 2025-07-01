@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <!-- Google Analytics (gtag) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,7 +12,7 @@
   <title>Racecards</title>
   <meta name="description" content="Get expert horse racing tips and data-driven analysis for UK & Irish races from Smart Racecards. Find today's best picks!">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
- <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="racecard.css" />
 </head>
@@ -29,6 +28,10 @@
       <a href="custom-score.html" class="nav-link">Custom Score</a>
       <a href="about.html" class="nav-link">About</a>
     </div>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -38,6 +41,7 @@
   </div>
   <div class="nav-backdrop" id="navBackdrop"></div>
 </nav>
+
 <div class="date-switcher">
   <a href="racecard.html?date=today" class="active">Today</a>
   <span>|</span>
@@ -45,6 +49,7 @@
 </div>
 
 <main id="main"></main>
+
 <script>
   // Highlight active date-switcher link
   const params = new URLSearchParams(window.location.search);
@@ -55,8 +60,7 @@
   });
 </script>
 
-
-  <footer class="site-footer">
+<footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-links">
       <a href="index.html">Home</a>
@@ -79,10 +83,9 @@
   </div>
 </footer>
 
-
-  <script src="data.js"></script>         <!-- Today's races -->
-  <script src="data2.js"></script>        <!-- Tomorrow's races -->
-  <script src="racecard.js"></script>
-  <script src="main.js"></script>
+<script src="data.js"></script>
+<script src="data2.js"></script>
+<script src="racecard.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

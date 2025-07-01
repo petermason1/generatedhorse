@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+<html lang="en" data-theme="dark"> <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -16,27 +14,32 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="results.css" />
-  <link rel="stylesheet" href="navbar.css" /> <!-- if you split navbar styles -->
-</head>
+  </head>
 <body>
-  <nav class="main-navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-brand">🏇 Racecards</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="results.html" class="nav-link">Results</a>
-        <a href="tips.html" class="nav-link">Smart Picks</a>
-        <a href="yesterday.html" class="nav-link">Historical</a>
-        <a href="custom-score.html" class="nav-link">Custom Score</a>
-        <a href="about.html" class="nav-link">About</a>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
+<nav class="main-navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-brand">🏇 Racecards</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="results.html" class="nav-link">Results</a>
+      <a href="tips.html" class="nav-link">Smart Picks</a>
+      <a href="yesterday.html" class="nav-link">Historical</a>
+      <a href="custom-score.html" class="nav-link">Custom Score</a>
+      <a href="about.html" class="nav-link">About</a>
     </div>
-    <div class="nav-backdrop" id="navBackdrop"></div>
-  </nav>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</nav>
 
   <h1>Latest Racing Results</h1>
   <div id="results">Loading…</div>
@@ -63,7 +66,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script src="results.js"></script>
   <script src="main.js"></script>
 </body>

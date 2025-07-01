@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Google Analytics tag (gtag.js) -->
+<html lang="en" data-theme="dark"> <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -24,11 +22,15 @@
     <div class="nav-links" id="navLinks">
       <a href="index.html" class="nav-link">Home</a>
       <a href="results.html" class="nav-link">Results</a>
-     <a href="tips.html" class="nav-link">Smart Picks</a>
+      <a href="tips.html" class="nav-link">Smart Picks</a>
       <a href="yesterday.html" class="nav-link">Historical</a>
       <a href="custom-score.html" class="nav-link">Custom Score</a>
       <a href="about.html" class="nav-link">About</a>
     </div>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -39,11 +41,9 @@
   <div class="nav-backdrop" id="navBackdrop"></div>
 </nav>
 
-
     <main class="container">
         <h1 class="page-title">Custom Race Scoring</h1>
 
-        <!-- Show/Hide Instructions Button -->
         <button id="toggleHowTo" class="instructions-toggle-btn">Show Instructions ▼</button>
         <section class="how-to-section hidden" id="howToSection">
           <h2 class="section-title">How to Use This Tool</h2>
@@ -113,8 +113,7 @@
         <div class="race-selector-container">
             <label for="raceSelector">Select a Race:</label>
             <select id="raceSelector" class="race-selector-dropdown">
-                <!-- Options populated by JS -->
-            </select>
+                </select>
         </div>
 
         <div class="score-controls">
@@ -197,8 +196,7 @@
             <h3 id="currentRaceDetails"></h3>
         </div>
         <div id="customRunnersList" class="runners-list">
-            <!-- Custom scored runners will be rendered here -->
-        </div>
+            </div>
     </main>
     <footer class="site-footer">
   <div class="footer-inner">
@@ -224,7 +222,6 @@
 </footer>
 
 
-    <!-- Load nav logic + main JS globally everywhere -->
     <script src="main.js"></script>
     <script src="data.js"></script>
     <script src="custom-score.js"></script>
