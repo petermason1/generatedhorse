@@ -472,3 +472,116 @@
   .footer-links { gap: 8px; }
   .race-header h1 { font-size: 1em; }
 }
+
+@media (max-width: 600px) {
+  .racecard-topbar {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+    padding: 8px 0 5px 0;
+    position: static;
+  }
+  .racecard-topbar-left,
+  .racecard-topbar-right {
+    min-width: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .racecard-topbar-center {
+    position: static;
+    transform: none;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
+  .next6-label {
+    margin-bottom: 2px;
+    margin-top: 4px;
+    text-align: center;
+    font-size: 1em;
+  }
+  .next6-bar {
+    width: 100%;
+    justify-content: center;
+    gap: 3px;
+    margin-bottom: 6px;
+  }
+  .next6-link {
+    min-width: 34px;
+    padding: 3px 4px;
+    font-size: 0.87em;
+    border-radius: 7px;
+  }
+
+  .course-bar, .race-links-bar {
+    gap: 6px;
+    font-size: 0.96em;
+    margin: 0.8em 0 0.7em 0;
+  }
+
+  .race-header h1 {
+    font-size: 1.04em;
+  }
+  .race-top-picks-list {
+    gap: 6px;
+  }
+
+  .runners-list {
+    gap: 7px;
+    margin-bottom: 1.2em;
+  }
+  .runner-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+    padding: 6px 2px 6px 2px;
+    min-width: 0;
+  }
+  .runner-num-draw {
+    flex-direction: row;
+    gap: 7px;
+    min-width: 0;
+    margin-bottom: 1px;
+  }
+  .runner-num {
+    width: 20px;
+    height: 20px;
+    font-size: 0.88em;
+    margin: 0 2px 0 0;
+  }
+  .runner-silk {
+    width: 18px;
+    height: 18px;
+    margin: 0 2px 0 0;
+  }
+  .runner-main {
+    min-width: 0;
+    padding: 0;
+  }
+  .runner-horse {
+    font-size: 1em;
+    margin-bottom: 1px;
+  }
+  .runner-meta-line, .runner-info-line {
+    font-size: 0.91em;
+    gap: 3px;
+  }
+  .runner-more-btn {
+    font-size: 0.91em;
+    padding: 2px 7px;
+    margin-top: 3px;
+  }
+  .runner-odds {
+    min-width: 30px;
+    font-size: 0.92em;
+    margin-left: 2px;
+    padding: 0;
+  }
+  .runner-more {
+    font-size: 0.93em;
+    padding: 7px 6px;
+    margin-top: 6px;
+  }
+}
