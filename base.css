@@ -526,7 +526,8 @@ html[data-theme="light"] .theme-toggle .icon-light { display: block; }
   cursor: pointer;
   z-index: 200;
   margin-left: 10px;
-  transition: transform var(--transition-fast); /* Optimized: Specific transition */
+  /* IMPORTANT: Add transitions for opacity, visibility, pointer-events here */
+  transition: transform var(--transition-fast), opacity 0.3s ease, visibility 0.3s ease, pointer-events 0.3s ease;
   border-radius: 50%;
   background: rgba(255,255,255,0.05);
 }
@@ -542,6 +543,8 @@ html[data-theme="light"] .theme-toggle .icon-light { display: block; }
   border-radius: 2px;
   transition: all 0.25s ease-in-out;
 }
+/* Keep these active states for the hamburger's internal span animation if desired,
+   but its overall visibility will be controlled by the new rules below. */
 .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
@@ -578,12 +581,11 @@ html[data-theme="light"] .hamburger span {
     height: 100vh;
     background: var(--color-navbar-bg);
     box-shadow: -9px 0 38px rgba(0,0,0,0.85);
-    padding: 70px 0 var(--spacing-xl) 0; /* Use variable for bottom padding */
+    padding: 70px 0 var(--spacing-xl) 0;
     flex-direction: column;
     align-items: flex-start;
     display: flex;
     z-index: 250;
-    /* Optimized: Specific transition properties */
     transition: transform var(--transition-medium), background 0.3s ease, box-shadow 0.3s ease;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -597,16 +599,14 @@ html[data-theme="light"] .hamburger span {
     text-align: left;
     padding: 18px 25px;
     font-size: 1.15em;
-    color: var(--color-text-primary); /* Uses primary text color for mobile */
+    color: var(--color-text-primary);
     border-bottom: 1px solid var(--color-table-border);
-    /* Optimized: Remove redundant background: none; border-radius: 0; already handled by more specific desktop rule or not needed */
     font-weight: 700;
     letter-spacing: 0.01em;
-    /* Optimized: Specific transition properties */
     transition: background var(--transition-fast), color var(--transition-fast);
     white-space: normal;
   }
-.nav-link:last-child {
+  .nav-link:last-child {
     border-bottom: none;
   }
   .nav-link:hover, .nav-link.nav-link-active {
@@ -615,11 +615,11 @@ html[data-theme="light"] .hamburger span {
     box-shadow: inset 3px 0 0 var(--color-primary-yellow);
   }
   .nav-link:after {
-      display: none; /* Hide the underline on mobile */
+      display: none;
   }
 
   .nav-close-btn {
-    display: block;
+    /* REMOVED: display: block; from here. Visibility is now controlled by new rules. */
     position: absolute;
     top: 15px;
     right: 15px;
@@ -631,7 +631,13 @@ html[data-theme="light"] .hamburger span {
     cursor: pointer;
     line-height: 1;
     padding: 5px;
-    transition: color var(--transition-fast);
+    /* IMPORTANT: Add transitions for opacity, visibility, pointer-events here */
+    transition: color var(--transition-fast), opacity 0.3s ease, visibility 0.3s ease, pointer-events 0.3s ease;
+
+    /* Initial state: Hidden on mobile until nav is active */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Make it unclickable when hidden */
   }
   .nav-close-btn:hover {
       color: var(--color-primary-yellow);
@@ -652,15 +658,29 @@ html[data-theme="light"] .hamburger span {
     transition: opacity var(--transition-medium);
   }
   .nav-backdrop.active {
-    display: block;
+    display: block; /* Keep display: block; for backdrop as it's full-screen overlay */
     opacity: 1;
+  }
+
+  /* --- NEW RULES: Control Hamburger and Close Button Visibility --- */
+  /* These rules hide the hamburger and show the close button when the nav is open */
+  .nav-links.active ~ .hamburger {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Make it unclickable when hidden */
+  }
+
+  .nav-links.active ~ .nav-close-btn {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* Make it clickable when visible */
   }
 
   /* Responsive adjustment for theme toggle button */
   .theme-toggle {
-    order: 1; /* Place theme toggle before hamburger */
-    margin-left: auto; /* Push it to the right, before hamburger */
-    margin-right: var(--spacing-sm); /* Keep some space from hamburger */
+    order: 1;
+    margin-left: auto;
+    margin-right: var(--spacing-sm);
   }
 
   /* Optimized: Mobile Nav in light mode consolidated */
@@ -688,7 +708,7 @@ html[data-theme="light"] .hamburger span {
 /* =========================================================================== */
 .primary-btn {
   display: inline-block;
-  background: var(--gradient-primary-button); /* Optimized: Use variable */
+  background: var(--gradient-primary-button);
   color: var(--color-text-inverted);
   font-size: 1.13em;
   font-weight: 700;
@@ -696,7 +716,6 @@ html[data-theme="light"] .hamburger span {
   border-radius: 10px;
   text-decoration: none;
   box-shadow: var(--shadow-md);
-  /* Optimized: Specific transition properties */
   transition: background var(--transition-ease), transform var(--transition-ease), box-shadow var(--transition-ease);
   margin-top: 1.5em;
   margin-bottom: 2em;
@@ -705,10 +724,9 @@ html[data-theme="light"] .hamburger span {
   letter-spacing: 0.02em;
 }
 .primary-btn:hover {
-  background: var(--gradient-primary-button-hover); /* Optimized: Use variable */
+  background: var(--gradient-primary-button-hover);
   transform: translateY(-2px);
-  /* Optimized: Combined shadows for cleaner hover effect */
-  box-shadow: var(--shadow-lg), 0 0 10px rgba(54, 232, 181, 0.2); /* Keep subtle glow */
+  box-shadow: var(--shadow-lg), 0 0 10px rgba(54, 232, 181, 0.2);
 }
 .primary-btn:active {
   transform: translateY(0);
@@ -726,7 +744,7 @@ html[data-theme="light"] .primary-btn {
 }
 html[data-theme="light"] .primary-btn:hover {
   background: var(--gradient-primary-button-hover);
-  box-shadow: var(--shadow-lg), 0 0 10px rgba(0, 143, 93, 0.2); /* Lighter hover shadow with subtle glow */
+  box-shadow: var(--shadow-lg), 0 0 10px rgba(0, 143, 93, 0.2);
 }
 
 
@@ -738,18 +756,18 @@ html[data-theme="light"] .primary-btn:hover {
   -webkit-overflow-scrolling: touch;
   margin-bottom: 28px;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-accent-green) var(--color-bg); /* Uses current theme's bg */
+  scrollbar-color: var(--color-accent-green) var(--color-bg);
 }
 .table-responsive::-webkit-scrollbar { height: 8px; }
 .table-responsive::-webkit-scrollbar-thumb { background: var(--color-accent-green); border-radius: 4px; }
-.table-responsive::-webkit-scrollbar-track { background: var(--color-bg); } /* Uses current theme's bg */
+.table-responsive::-webkit-scrollbar-track { background: var(--color-bg); }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  background: var(--color-table-even-bg); /* Initial background, overwritten by row styles */
+  background: var(--color-table-even-bg);
   border-radius: 12px;
-  overflow: hidden; /* Ensures border-radius applies */
+  overflow: hidden;
   box-shadow: var(--shadow-lg);
   margin-bottom: 28px;
   transition: background 0.3s ease, box-shadow 0.3s ease;
@@ -762,7 +780,7 @@ th, td {
   font-size: 0.98em;
 }
 th {
-  background: var(--gradient-table-header); /* Optimized: Use variable */
+  background: var(--gradient-table-header);
   color: var(--color-primary-yellow);
   font-size: 1.05em;
   font-weight: 700;
@@ -780,9 +798,9 @@ tr:nth-child(odd) { background: var(--color-table-odd-bg); }
 table tbody tr:last-child td { border-bottom: none; }
 
 tr.win-row {
-  background: var(--gradient-win-row) !important; /* Optimized: Use variable */
+  background: var(--gradient-win-row) !important;
   color: var(--color-text-inverted);
-  box-shadow: inset 0 0 9px rgba(54,232,181,0.37); /* Specific dark mode shadow, keep for distinction */
+  box-shadow: inset 0 0 9px rgba(54,232,181,0.37);
 }
 tr.win-row td { color: var(--color-text-inverted) !important; }
 td:last-child { font-weight: bold; color: var(--color-primary-yellow); }
@@ -810,24 +828,21 @@ html[data-theme="light"] th {
 }
 html[data-theme="light"] tr.win-row {
   background: var(--gradient-win-row) !important;
-  box-shadow: inset 0 0 9px rgba(0,143,93,0.2); /* Lighter win row shadow */
+  box-shadow: inset 0 0 9px rgba(0,143,93,0.2);
 }
-/* No explicit overrides needed for tr:nth-child(even/odd) or last-child td in light mode,
-   as they correctly inherit from the root variables. */
 
 
 /* =========================================================================== */
 /* --- Footer --- */
 /* =========================================================================== */
 .site-footer {
-  background: var(--gradient-footer); /* Optimized: Use variable */
+  background: var(--gradient-footer);
   color: var(--color-text-secondary);
   padding: 2.2em 1em 1.2em 1em;
   margin-top: 4em;
   font-size: 1em;
   border-top: 2px solid var(--color-table-border);
   box-shadow: var(--shadow-footer);
-  /* Optimized: Specific transition properties */
   transition: background 0.3s ease, border-top 0.3s ease, box-shadow 0.3s ease;
 }
 .footer-inner {
@@ -889,24 +904,6 @@ html[data-theme="light"] .site-footer {
   border-top: 2px solid var(--color-table-border);
   box-shadow: var(--shadow-footer);
 }
-/* These are already controlled by variables, no specific light mode override needed here */
-/* html[data-theme="light"] .footer-links a,
-html[data-theme="light"] .footer-meta a {
-  color: var(--color-link-footer);
-}
-html[data-theme="light"] .footer-links a:hover,
-html[data-theme="light"] .footer-meta a:hover {
-  color: var(--color-primary-yellow);
-}
-html[data-theme="light"] .footer-disclaimer {
-  color: var(--color-text-secondary);
-}
-html[data-theme="light"] .page-desc {
-  color: var(--color-text-secondary);
-}
-html[data-theme="light"] .page-desc b {
-  color: var(--color-primary-yellow);
-} */
 
 
 /* =========================================================================== */
@@ -926,62 +923,180 @@ html[data-theme="light"] .page-desc b {
   border: 0;
 }
 
+/* racecard.css */
+
+/* ... (previous CSS code) ... */
+
+
 /* =========================================================================== */
-/* --- Responsive Utilities & Adjustments --- */
+/* --- [11] RESPONSIVE ADJUSTMENTS --- */
 /* =========================================================================== */
-@media (max-width: 1000px) {
-  .container { padding: 18px 2vw 38px 2vw; }
+
+/* Max-width 900px: General container adjustments */
+@media (max-width: 900px) {
+  .container {
+    max-width: 99vw;
+  }
+  .navbar-inner {
+    max-width: 99vw;
+  }
 }
-@media (max-width: 850px) {
-  .container { padding: 14px 2vw 28px 2vw; }
+
+/* Max-width 700px: Smaller screens, general adjustments */
+@media (max-width: 700px) {
+  .next6-bar {
+    gap: 7px;
+  }
+  .next6-link {
+    min-width: 57px;
+    font-size: 0.93em;
+    padding: 5px 7px;
+  }
+  .runners-list {
+    gap: 10px;
+  }
+  .runner-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    /* ADJUSTED PADDING FOR SMALLER SCREENS */
+    padding: 9px 10px; /* Increased horizontal padding from 5px to 10px */
+    min-width: 0;
+  }
+  .runner-num-draw,
+  .runner-silk {
+    margin-right: 0;
+  }
+  .runner-main {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+  .runner-odds {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .runner-more {
+    width: 100%;
+    margin-top: 6px;
+  }
+  .race-header h1 {
+    font-size: 1.13em;
+  }
 }
-@media (max-width: 768px) {
-  .container { padding: 12px 2vw 22px 2vw; }
-  h1 { font-size: clamp(1.5em, 5vw, 1.7em); }
-  h2 { font-size: clamp(1.0em, 3vw, 1.14em); }
-  .primary-btn { padding: 8px 15px; font-size: 1em; }
-}
+
+/* Max-width 600px: Mobile-specific layout changes and fine-tuning */
 @media (max-width: 600px) {
-  h1 { font-size: clamp(1.2em, 4vw, 1.4em); }
-  .primary-btn { font-size: 0.96em; }
-  .navbar-inner { padding: 0.12em 2vw; }
-  .footer-inner {
-    padding: 0 1vw;
-    gap: 0.7em;
+  /* ... (previous 600px media query code) ... */
+
+  /* Runners List & Cards adjustments */
+  .runners-list {
+    gap: 7px;
+    margin-bottom: 1.2em;
+  }
+  .runner-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    /* ADJUSTED PADDING FOR EVEN SMALLER SCREENS */
+    padding: 6px 8px; /* Increased horizontal padding from 2px to 8px */
+    min-width: 0;
+  }
+  .runner-num-draw {
+    flex-direction: column;
+    gap: 1px;
+    min-width: unset;
+    align-items: center;
+  }
+  .runner-num {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .runner-draw {
+    font-size: 0.8em;
+  }
+  .runner-silk {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .runner-main {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+  .runner-horse {
+    font-size: 0.95em;
+    margin-bottom: 0px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .runner-meta-line,
+  .runner-info-line {
+    font-size: 0.85em;
+    gap: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .runner-more-btn {
+    font-size: 0.85em;
+    padding: 2px 5px;
+    margin-top: 2px;
+  }
+  .runner-odds {
+    min-width: 35px;
+    font-size: 0.95em;
+    margin-left: auto;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .runner-more {
+    width: 100%;
+    font-size: 0.93em;
+    padding: 7px 6px;
+    margin-top: 6px;
+  }
+}
+
+/* Max-width 500px: Smallest screen adjustments */
+@media (max-width: 500px) {
+  /* ... (previous 500px media query code) ... */
+
+  .runner-card {
+    gap: 4px;
+    /* ADJUSTED PADDING AGAIN FOR SMALLEST SCREENS */
+    padding: 4px 6px; /* Increased horizontal padding from 2px to 6px */
+  }
+  .runner-num {
+    width: 22px;
+    height: 22px;
+    font-size: 0.85em;
+  }
+  .runner-silk {
+    width: 24px;
+    height: 24px;
+  }
+  .runner-horse {
+    font-size: 0.9em;
+  }
+  .runner-meta-line,
+  .runner-info-line {
+    font-size: 0.8em;
+  }
+  .runner-odds {
+    min-width: 30px;
+    font-size: 0.9em;
   }
   .footer-links {
-    gap: 0.9em;
-    font-size: 0.98em;
+    gap: 8px;
   }
-  .footer-meta {
-    flex-direction: column;
-    gap: 0.2em;
-    font-size: 0.97em;
-  }
-  /* Responsive adjustments for next6-bar specific to 600px */
-  #next6-bar {
-    margin: var(--spacing-lg) auto; /* Reduce margin on smaller screens */
-    padding: var(--spacing-sm); /* Reduce padding */
-  }
-  .next6-pill {
-    padding: 5px 10px; /* Slightly less padding */
-  }
-  .next6-course {
-    font-size: 0.9em;
-    max-width: 65px; /* Further limit width on very small screens */
-  }
-  .next6-time-btn {
-    font-size: 0.85em;
-    padding: 4px 10px;
-  }
-}
-@media (max-width: 480px) {
-  .container { padding: 7px 1vw 14px 1vw; }
-  h1 { font-size: clamp(1.0em, 3vw, 1.11em); }
-  h2 { font-size: clamp(0.95em, 2.8vw, 1.02em); }
-  .primary-btn { font-size: 0.9em; padding: 6px 9px; }
-  /* Responsive adjustments for next6-bar specific to 400px */
-  #next6-bar {
-    gap: var(--spacing-xs); /* Even less gap on very narrow screens */
+  .race-header h1 {
+    font-size: 1em;
   }
 }

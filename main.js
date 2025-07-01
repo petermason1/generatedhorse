@@ -13,25 +13,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.getElementById('navLinks');
   const navCloseBtn = document.getElementById('navCloseBtn');
   const navBackdrop = document.getElementById('navBackdrop');
-  const body = document.body; // Reference to the body for 'nav-open' class
+  const body = document.body;
 
   // --- Navbar Toggling Logic ---
   function toggleNav() {
+    const navIsNowOpen = !navLinks.classList.contains('active');
+
     navLinks.classList.toggle('active');
     navBackdrop.classList.toggle('active');
-    hamburger.classList.toggle('active');
     body.classList.toggle('nav-open'); // Toggle body class to prevent scroll
 
-    // Toggle close button visibility based on nav state
-    if (navLinks.classList.contains('active')) {
-      navCloseBtn.style.display = 'block';
-      hamburger.setAttribute('aria-expanded', 'true');
-    } else {
-      navCloseBtn.style.display = 'none';
-      hamburger.setAttribute('aria-expanded', 'false');
-    }
+    // Update ARIA attributes for accessibility
+    hamburger.setAttribute('aria-expanded', navIsNowOpen);
+    hamburger.setAttribute('aria-label', navIsNowOpen ? 'Close menu' : 'Open menu');
   }
 
+  // Ensure all elements exist before adding listeners
   if (hamburger && navLinks && navCloseBtn && navBackdrop) {
     hamburger.addEventListener('click', toggleNav);
     navCloseBtn.addEventListener('click', toggleNav);
@@ -39,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Close nav when any link inside navLinks is clicked
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', toggleNav); // Use the same toggle function to close
+      link.addEventListener('click', toggleNav);
     });
   }
 
@@ -47,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(function(link) {
     const href = link.getAttribute('href');
-    // Handles both index.html and root, and accounts for empty href for root
     if (
       href === currentPath ||
       (currentPath === 'index.html' && (href === './' || href === '')) ||
@@ -62,15 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Theme Toggle Logic ---
   const themeToggleBtn = document.getElementById('theme-toggle');
-  const htmlElement = document.documentElement; // This is the <html> tag
+  const htmlElement = document.documentElement;
 
-  // Function to set the theme
   function setTheme(theme) {
     htmlElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme); // Store user preference
+    localStorage.setItem('theme', theme);
 
-    // Update aria-label for accessibility
-    if (themeToggleBtn) { // Ensure button exists before setting attributes
+    if (themeToggleBtn) {
       if (theme === 'light') {
         themeToggleBtn.setAttribute('aria-label', 'Switch to dark mode');
       } else {
@@ -79,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Function to toggle the theme
   function toggleTheme() {
     if (htmlElement.getAttribute('data-theme') === 'light') {
       setTheme('dark');
@@ -88,20 +81,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Check for user's preferred theme on page load
-  // Order of preference: localStorage > OS preference > default (dark)
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
-    setTheme(savedTheme); // Apply saved theme
+    setTheme(savedTheme);
   } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    // If no saved theme, check OS preference and set to light if preferred
     setTheme('light');
   } else {
-    // Default to dark mode if no preference saved and OS preference is not light
     setTheme('dark');
   }
 
-  // Add event listener to the theme toggle button
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', toggleTheme);
   }
@@ -127,7 +115,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const nextRaces = races.filter(r => !r.isPast).slice(0, 6);
       if (!nextRaces.length) {
         bar.innerHTML = '<span class="next6-title">No more races today</span>';
+        bar.style.display = 'none'; // Hide the entire bar if no races
       } else {
+        bar.style.display = 'flex'; // Ensure it's visible if there are races
         bar.innerHTML = nextRaces.map(r =>
           `<div class="next6-pill">
             <div class="next6-course" title="${r.course}">${r.course.length > 8 ? r.course.slice(0, 8) + '…' : r.course}</div>
