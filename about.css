@@ -1,13 +1,13 @@
 /* --- ABOUT PAGE CONTAINER --- */
 .about-container {
-  /* Using more dynamic gradients for background */
-  background: linear-gradient(155deg, #2a2f3b, #1e222b); /* Dark mode specific gradient */
+  /* Reintroducing a subtle gradient using existing theme variables */
+  background: linear-gradient(155deg, var(--color-section-bg), var(--color-navbar-bg)); /* Uses existing variables for a cohesive gradient */
   border-radius: 20px; /* Slightly larger, softer radius */
   box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 20px rgba(54,232,181,0.05); /* Stronger, more diffused shadow with subtle glow */
   max-width: 950px; /* Wider container */
   margin: 2.8em auto 2.5em auto; /* Adjusted top/bottom margins */
   padding: 2.5em 3em 2.8em 3em; /* More generous internal padding */
-  border: 1px solid rgba(48,53,68,0.6); /* Subtle border for definition */
+  border: 1px solid rgba(48,53,68,0.6); /* Subtle border for definition, specific dark mode value */
 }
 
 /* --- HEADER & INTRO --- */
@@ -94,7 +94,8 @@
   align-items: stretch;
 }
 .team-card {
-  background: linear-gradient(155deg, #2b313d, #212630); /* Dark mode specific gradient */
+  /* Reintroducing a subtle gradient using existing theme variables */
+  background: linear-gradient(155deg, var(--color-table-odd-bg), var(--color-table-even-bg)); /* Uses table variables for gradient */
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   padding: 1.8em 1.5em;
@@ -110,7 +111,7 @@
   transform: translateY(-8px) scale(1.01);
   box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 30px rgba(54,232,181,0.6); /* Dark mode specific shadow/glow */
   border-color: var(--color-accent-green);
-  background: linear-gradient(155deg, #303746, #262c37); /* Dark mode specific hover background */
+  background: linear-gradient(155deg, var(--color-table-even-bg), var(--color-table-odd-bg)); /* Reverse gradient on hover */
 }
 
 .team-name {
@@ -268,7 +269,8 @@
 /* --- LIGHT MODE STYLES (for data-theme="light") --- */
 /* =========================================================================== */
 html[data-theme="light"] .about-container {
-  background: var(--color-section-bg); /* Use light section background */
+  /* Light mode gradient for about container */
+  background: linear-gradient(155deg, var(--color-section-bg), var(--color-navbar-bg));
   box-shadow: 0 8px 30px rgba(0,0,0,0.1), 0 0 10px rgba(0,143,93,0.03); /* Lighter shadow */
   border: 1px solid var(--color-table-border); /* Use lighter border */
 }
@@ -302,7 +304,8 @@ html[data-theme="light"] .fancy-list li:before {
 }
 
 html[data-theme="light"] .team-card {
-  background: var(--color-table-odd-bg); /* Use a light background for cards */
+  /* Light mode gradient for team cards */
+  background: linear-gradient(155deg, var(--color-table-odd-bg), var(--color-table-even-bg));
   box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Lighter shadow for cards */
   border: 1px solid var(--color-table-border); /* Lighter border for cards */
 }
@@ -310,7 +313,7 @@ html[data-theme="light"] .team-card:hover {
   transform: translateY(-4px) scale(1.005); /* Less pronounced lift/scale */
   box-shadow: 0 10px 25px rgba(0,0,0,0.15), 0 0 20px rgba(0,143,93,0.1); /* Lighter hover shadow/glow */
   border-color: var(--color-accent-green);
-  background: var(--color-table-even-bg); /* Slightly different background on hover */
+  background: linear-gradient(155deg, var(--color-table-even-bg), var(--color-table-odd-bg)); /* Reverse gradient on hover */
 }
 
 html[data-theme="light"] .team-name {

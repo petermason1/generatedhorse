@@ -1,5 +1,3 @@
-
-
 .container {
   padding: 20px 20px; /* More consistent padding */
   max-width: 900px; /* Increased max-width for tables */
@@ -36,12 +34,12 @@ h3 {
 /* --- SUMMARY PANEL --- */
 .roi-summary {
   margin-bottom: 40px; /* More space below summary */
-  background: linear-gradient(145deg, var(--color-dark-table-odd), var(--color-dark-table-even));
+  background: linear-gradient(145deg, var(--color-dark-table-odd), var(--color-dark-table-even)); /* Use theme variables for gradient */
   padding: 25px 30px; /* More padding */
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   color: var(--color-text-light);
-  border: 1px solid rgba(54,232,181,0.05); /* Subtle border */
+  border: 1px solid var(--color-table-border); /* Subtle border using theme variable */
 }
 .roi-summary h2 {
   color: var(--color-primary-yellow);
@@ -51,33 +49,51 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.02em;
 }
-.roi-summary p {
-  font-size: 1.1em; /* Larger text in summary */
-  line-height: 1.8;
-  margin: 0.5em 0;
-  display: flex; /* Use flex for alignment */
-  justify-content: space-between; /* Space out key-value pairs */
-  align-items: baseline;
-  padding: 0 5px;
+
+/* New Grid for Summary Items */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between items */
 }
-.roi-summary b {
-  color: var(--color-accent-green);
-  font-weight: 700;
-  flex-basis: 60%; /* Give bold text more space on left */
-  text-align: left;
+
+.summary-item {
+  background: var(--color-section-bg); /* Use a slightly different background for each item */
+  padding: 18px 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  border: 1px solid var(--color-table-border);
 }
-.roi-summary span {
-  color: var(--color-primary-yellow); /* Values are yellow */
-  font-weight: 700;
-  font-size: 1.15em; /* Values slightly larger */
-  flex-basis: 40%; /* Values on right */
-  text-align: right;
-  white-space: nowrap;
+
+.summary-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
-.roi-summary #roi-all {
-    font-size: 1.3em; /* Make overall ROI stand out more */
-    color: var(--color-primary-yellow); /* Keep it yellow */
-    font-weight: 900;
+
+.summary-label {
+  color: var(--color-text-secondary);
+  font-size: 0.95em;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.summary-value {
+  color: var(--color-primary-yellow);
+  font-size: 1.5em; /* Larger values */
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.summary-item.overall-roi .summary-value {
+  font-size: 1.8em; /* Make overall ROI stand out even more */
+  color: var(--color-accent-green); /* Highlight ROI with green */
+  text-shadow: 0 0 8px rgba(54, 232, 181, 0.3); /* Subtle glow for ROI */
 }
 
 
@@ -88,13 +104,13 @@ h3 {
   width: 100%;
   border-radius: 10px; /* Apply radius to wrapper for overall table */
   box-shadow: var(--shadow-sm); /* Subtle shadow for tables */
+  margin-bottom: 2em; /* Space below tables */
 }
 
 table {
   min-width: 680px; /* Slightly larger min-width for better desktop look */
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1em; /* Space below tables */
   border-radius: 10px; /* Radius directly on table too */
   overflow: hidden; /* Ensures border-radius works with content */
 }
@@ -103,17 +119,18 @@ th, td {
   padding: 12px 15px; /* More padding in cells */
   font-size: 0.98em; /* Consistent font size */
   vertical-align: middle;
-  border-bottom: 1px solid var(--color-dark-table-odd); /* Subtle internal borders */
+  border-bottom: 1px solid var(--color-table-border); /* Subtle internal borders using theme var */
   text-align: left; /* Default text alignment */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 120px; /* Default max-width for most columns */
+  color: var(--color-text-primary); /* Ensure text color is primary */
 }
 
 /* Table Header Styles (Applied to all tables) */
 .roi-table th, .winners-table th {
-  background: var(--color-dark-header);
+  background: var(--color-dark-header); /* Use theme variable for header background */
   color: var(--color-primary-yellow);
   font-weight: 800;
   border-bottom: 2px solid var(--color-accent-green); /* Green accent bottom border */
@@ -126,22 +143,25 @@ th, td {
 /* Table Body Row Styles (Applied to all tables) */
 .roi-table tbody tr:nth-child(even),
 .winners-table tbody tr:nth-child(even) {
-  background: var(--color-dark-table-even);
+  background: var(--color-dark-table-even); /* Use theme variable */
 }
 .roi-table tbody tr:nth-child(odd),
 .winners-table tbody tr:nth-child(odd) {
-  background: var(--color-dark-table-odd);
+  background: var(--color-dark-table-odd); /* Use theme variable */
 }
 
 /* Win row styling for positive ROI */
+.win-row {
+  background: var(--gradient-win-row) !important; /* Use existing win row gradient */
+  color: var(--color-text-inverted) !important; /* Inverted text color for win rows */
+  box-shadow: inset 0 0 9px rgba(54,232,181,0.37); /* Consistent shadow */
+}
 .win-row td {
-  color: var(--color-text-light);
+  color: var(--color-text-inverted) !important; /* Ensure all text in win row is inverted */
   font-weight: 600;
 }
-.roi-table .win-row {
-  /* background-color: rgba(54,232,181,0.1); */ /* Subtle green tint */
-  border-left: 4px solid var(--color-accent-green); /* Highlight positive ROI rows */
-}
+/* No specific border-left for win-row if gradient is used */
+
 
 /* Specific alignment for numerical columns */
 .roi-table td:nth-child(2), /* Races */
@@ -166,7 +186,7 @@ th, td {
 }
 
 /* --- WINNERS TABLE SPECIFIC --- */
-.winners-table {
+.winners-table-wrapper { /* New wrapper for winners table for better spacing */
   margin-top: 3.5em; /* More space above winners table */
 }
 .winners-table h2 {
@@ -186,7 +206,7 @@ th, td {
   overflow-wrap: anywhere;
   max-width: 250px; /* Increased max-width for better visibility */
 }
-.winners-table td:last-child {
+.winners-table tbody tr:last-child td {
   border-bottom: none; /* No bottom border on the last row */
 }
 
@@ -205,32 +225,36 @@ th, td {
   .winners-table th:nth-child(4), .winners-table td:nth-child(4) {
     max-width: 180px; /* Adjust tip column for smaller screens */
   }
-  .roi-summary p { font-size: 1.05em; }
-  .roi-summary span { font-size: 1.1em; }
+  .roi-summary h2 { font-size: 1.5em; }
+  h3 { font-size: 1.2em; margin-top: 2em; margin-bottom: 1em; }
+  .summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Adjust grid for smaller screens */
+  }
+  .summary-item { padding: 15px; }
+  .summary-value { font-size: 1.3em; }
+  .summary-item.overall-roi .summary-value { font-size: 1.6em; }
 }
 
 @media (max-width: 768px) {
     h1 { font-size: clamp(1.6em, 4.5vw, 2.2em); }
     .roi-summary h2 { font-size: 1.5em; }
     h3 { font-size: 1.2em; margin-top: 2em; margin-bottom: 1em; }
-    .roi-summary p {
-      font-size: 1em;
-      flex-direction: column; /* Stack key-value pairs in summary */
-      align-items: center;
-      gap: 3px;
+    /* Summary items remain as grid, but might wrap to 2 columns on smaller screens */
+    .summary-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
     }
-    .roi-summary b, .roi-summary span {
-      text-align: center;
-      flex-basis: auto;
-    }
-    .roi-summary #roi-all { font-size: 1.2em; }
+    .summary-item { padding: 12px; }
+    .summary-label { font-size: 0.9em; }
+    .summary-value { font-size: 1.2em; }
+    .summary-item.overall-roi .summary-value { font-size: 1.5em; }
 }
 
 @media (max-width: 650px) {
   table { min-width: 550px; } /* Adjust min-width further */
-  th, td { font-size: 0.9em; padding: 8px 8px; max-width: 80px; }
+  th, td { padding: 10px 8px; font-size: 0.9em; max-width: 90px; }
   .winners-table th:nth-child(4), .winners-table td:nth-child(4) {
-    max-width: 140px;
+    max-width: 160px;
   }
   .winners-table h2 { font-size: 1.5em; }
 }
@@ -238,21 +262,33 @@ th, td {
 @media (max-width: 550px) {
   .container { padding: 10px 10px; }
   table { min-width: 480px; } /* Further adjust min-width for small phones */
-  th, td { font-size: 0.88em; padding: 7px 6px; max-width: 70px; }
+  th, td { font-size: 0.88em; padding: 7px 6px; max-width: 80px; }
   .winners-table th:nth-child(4), .winners-table td:nth-child(4) {
-    max-width: 110px;
+    max-width: 130px;
   }
   h1 { font-size: 1.5em; }
   .roi-summary { padding: 18px 20px; }
   .roi-summary h2 { font-size: 1.3em; }
   h3 { font-size: 1.1em; }
+  .summary-grid {
+    grid-template-columns: 1fr; /* Stack summary items vertically on very small screens */
+    gap: 10px;
+  }
+  .summary-item {
+    flex-direction: row; /* Align label and value horizontally */
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  .summary-label { margin-bottom: 0; }
+  .summary-value { font-size: 1.3em; }
+  .summary-item.overall-roi .summary-value { font-size: 1.6em; }
 }
 
 @media (max-width: 480px) {
   table { min-width: 400px; } /* Minimum reasonable width before hiding columns */
-  th, td { max-width: 60px; font-size: 0.85em; padding: 6px 5px; }
+  th, td { max-width: 70px; font-size: 0.85em; padding: 6px 5px; }
   .winners-table th:nth-child(4), .winners-table td:nth-child(4) {
-    max-width: 90px;
+    max-width: 110px;
   }
   /* Hide the "Off" (Off_time) column in the Winners table */
   .winners-table th:nth-child(3),
@@ -263,9 +299,9 @@ th, td {
 
 @media (max-width: 400px) {
   table { min-width: 350px; }
-  th, td { max-width: 50px; font-size: 0.82em; padding: 5px 4px; }
+  th, td { max-width: 60px; font-size: 0.82em; padding: 5px 4px; }
   .winners-table th:nth-child(4), .winners-table td:nth-child(4) {
-    max-width: 70px;
+    max-width: 90px;
   }
   /* Hide the "SP" column in the Winners table */
   .winners-table th:nth-child(6),
@@ -275,7 +311,7 @@ th, td {
   /* Adjust max-width for the Tip column as other columns hide */
   .winners-table th:nth-child(4),
   .winners-table td:nth-child(4) {
-    max-width: 100px; /* Give Tip more space when SP is hidden */
+    max-width: 120px; /* Give Tip more space when SP is hidden */
   }
 }
 
@@ -283,7 +319,7 @@ th, td {
   table { min-width: 300px; }
   th, td { font-size: 0.8em; padding: 4px 3px; }
   .winners-table th:nth-child(4), .winners-table td:nth-child(4) {
-    max-width: 80px;
+    max-width: 100px;
   }
   /* Hide "Odds" column */
   .winners-table th:nth-child(5),
@@ -293,6 +329,57 @@ th, td {
   /* Adjust Tip max-width again */
   .winners-table th:nth-child(4),
   .winners-table td:nth-child(4) {
-    max-width: 120px;
+    max-width: 150px;
   }
+}
+
+/* Light Mode Overrides for yesterday.css */
+html[data-theme="light"] .roi-summary {
+  background: linear-gradient(145deg, var(--color-dark-table-even), var(--color-dark-table-odd));
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-table-border);
+}
+
+html[data-theme="light"] .summary-item {
+  background: var(--color-section-bg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-table-border);
+}
+html[data-theme="light"] .summary-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+html[data-theme="light"] .summary-label {
+  color: var(--color-text-secondary);
+}
+html[data-theme="light"] .summary-value {
+  color: var(--color-primary-yellow);
+}
+html[data-theme="light"] .summary-item.overall-roi .summary-value {
+  color: var(--color-accent-green);
+  text-shadow: none;
+}
+
+html[data-theme="light"] .roi-table th, html[data-theme="light"] .winners-table th {
+  background: var(--color-dark-header);
+  color: var(--color-primary-yellow);
+  border-bottom: 2px solid var(--color-accent-green);
+}
+
+html[data-theme="light"] .roi-table tbody tr:nth-child(even),
+html[data-theme="light"] .winners-table tbody tr:nth-child(even) {
+  background: var(--color-dark-table-even);
+}
+html[data-theme="light"] .roi-table tbody tr:nth-child(odd),
+html[data-theme="light"] .winners-table tbody tr:nth-child(odd) {
+  background: var(--color-dark-table-odd);
+}
+
+html[data-theme="light"] .win-row {
+  background: var(--gradient-win-row) !important;
+  color: var(--color-text-inverted) !important;
+  box-shadow: inset 0 0 9px rgba(0,143,93,0.2);
+}
+html[data-theme="light"] .win-row td {
+  color: var(--color-text-inverted) !important;
 }

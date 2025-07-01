@@ -38,6 +38,11 @@
   --color-accent-green-hover: #2ce8c0; /* For tip-horse hover color in dark mode */
   --color-text-dark: #101216; /* Very dark text for contrast on bright elements (e.g., yellow number circle) */
 
+  /* New variables for ROI/Winners page table backgrounds */
+  --color-dark-table-odd: #2a2e33; /* Darker shade for odd rows/cards */
+  --color-dark-table-even: #23262a; /* Lighter shade for even rows/cards */
+  --color-dark-header: #1a1e23; /* Darker header background */
+
 
   /* Fonts */
   --font-family-primary: 'Inter', Arial, sans-serif;
@@ -112,6 +117,11 @@ html[data-theme="light"] {
   --shadow-xl: 0 8px 20px rgba(0,0,0,0.15);
   --shadow-navbar: 0 2px 18px rgba(0,0,0,0.08);
   --shadow-footer: 0 -3px 12px rgba(0,0,0,0.08);
+
+  /* New variables for ROI/Winners page table backgrounds - Light Mode */
+  --color-dark-table-odd: #f9f9f9; /* Lightest shade for odd rows/cards */
+  --color-dark-table-even: #ffffff; /* Slightly darker shade for even rows/cards */
+  --color-dark-header: #e0e2e5; /* Lighter header background */
 
   /* Gradients (Light Mode Overrides) */
   --gradient-primary-button: linear-gradient(145deg, var(--color-accent-green), #00a87a 88%);
@@ -219,7 +229,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 150;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0; /* Adjusted vertical padding */
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar-inner {
@@ -229,36 +239,36 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--spacing-md);
-  min-height: 60px;
+  min-height: 60px; /* Ensures a consistent height for the navbar */
   position: relative;
 }
 
 .nav-brand {
-  font-size: 1.3em;
-  font-weight: 900;
-  color: var(--color-primary-yellow);
-  letter-spacing: 1px;
+  /* Removed font styles as content is now an image */
   text-decoration: none;
-  padding: 2px 12px 2px 4px;
-  border-radius: 6px;
-  transition: color var(--transition-fast), text-shadow var(--transition-fast);
+  padding: 0; /* Remove padding from the link itself to let the img control spacing */
+  border-radius: 6px; /* Keep for focus outline */
   display: flex;
   align-items: center;
+  transition: opacity 0.2s ease-out; /* Smooth transition for hover effect */
 }
 .nav-brand:hover {
-  color: var(--color-accent-green);
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  opacity: 0.85; /* Slight dim on hover for visual feedback */
 }
-/* Optimized: Light mode override for nav-brand hover text-shadow moved here */
-html[data-theme="light"] .nav-brand:hover {
-  text-shadow: none;
+/* No specific light mode overrides for nav-brand itself when it's an image */
+
+/* Styles for the logo.png image within the nav-brand */
+.nav-brand img {
+    height: 35px; /* Optimal height for the logo */
+    vertical-align: middle; /* Ensures image aligns well with other inline elements */
+    margin-right: 0; /* Remove margin-right if the logo is standalone */
+    transition: transform 0.2s ease-out; /* Smooth hover effect for the image */
 }
 
-.nav-brand img {
-    height: 30px;
-    margin-right: 8px;
-    vertical-align: middle;
+.nav-brand img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
+
 
 .nav-links {
   display: flex;
