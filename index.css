@@ -1,29 +1,381 @@
-/* --- Container and Core Layout --- */
-.container {
-  max-width: 730px;
+/*
+ * index.css: Page-specific stylesheet for the homepage.
+ * Contains: Homepage specific layout, CTA bars, Racecard sections.
+ */
+
+/* --- Page Introduction & CTA Sections --- */
+/*
+ * index.css: Page-specific stylesheet for the homepage.
+ * Contains: Homepage specific layout, CTA bars, Racecard sections.
+ */
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  margin-bottom: 3.5em; /* Space below the hero */
+  padding-top: 1.5em;
+}
+
+.hero-section h1 {
+  /* Inherits from base.css, but can fine-tune here if needed */
+  margin-bottom: 0.5em;
+}
+
+.hero-cta {
+  margin-top: 2.5em; /* More space below the description */
+  padding: 1em 2.5em; /* Larger button */
+  font-size: 1.25em; /* Larger text */
+  border-radius: 12px;
+}
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), 0 0 15px rgba(54, 232, 181, 0.3);
+}
+
+
+/* --- Quick Access Links --- */
+.quick-access-links {
+  margin-bottom: 4em; /* Space before the dynamic content */
+  padding: 2.5em 0;
+  background: var(--color-dark-section); /* Use a variable for consistency */
+  border-radius: 14px;
+  box-shadow: var(--shadow-lg); /* Consistent shadow */
+}
+
+.quick-access-links .link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 1.5em;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 30px 3vw 0 3vw;
-  box-sizing: border-box;
+  padding: 0 1.5em;
 }
 
-/* --- HERO TITLE & DESC --- */
-h1 {
-  color: #ffc900;
-  font-size: 2.2em;
-  font-weight: 900;
-  letter-spacing: 0.01em;
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin: 0 0 0.25em 0;
+  background: linear-gradient(145deg, #2a2e33, #23262a); /* Subtle gradient for depth */
+  border-radius: 10px;
+  padding: 1.5em;
+  text-decoration: none;
+  color: var(--color-text-light);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-ease), box-shadow var(--transition-ease), background var(--transition-ease);
+  border: 1px solid rgba(255,255,255,0.05); /* Subtle border */
 }
 
-.page-desc {
-  text-align: center;
-  font-size: 1.15em;
-  color: #f5f7fa;
-  max-width: 640px;
-  margin: 0 auto 1.2em auto;
-  line-height: 1.44;
+.quick-link:hover,
+.quick-link:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(145deg, #32383f, #2a2e33); /* Slightly brighter on hover */
+  border-color: var(--color-accent-green); /* Highlight border on hover */
 }
+
+.quick-link h3 {
+  color: var(--color-accent-green); /* Emphasize headings */
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.quick-link h3 i { /* Icon styling */
+  font-size: 1.4em;
+  color: var(--color-primary-yellow); /* Icons in yellow */
+}
+
+.quick-link p {
+  color: var(--color-text-medium);
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* --- CTA Bar (Tips) --- */
+.cta-bar-bottom {
+  margin-top: 4em; /* Space above the footer */
+  margin-bottom: 3em; /* Space above the footer */
+}
+.tips-cta-bar {
+  /* Inherits styles from base.css */
+  max-width: 800px; /* Make it wider for more impact */
+  padding: 20px 30px; /* Larger padding */
+  border-radius: 15px; /* More rounded */
+  background: linear-gradient(145deg, #2e353f, #242931); /* Deeper, more appealing background */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  font-size: 1.18em;
+}
+.tips-cta-bar span {
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+.tips-cta-bar b {
+  color: var(--color-primary-yellow); /* Yellow highlight for the main message */
+}
+
+.see-tips-btn {
+  /* Inherits styles from base.css, overrides specific for this section */
+  padding: 1.05em 2.2em; /* Slightly larger button */
+  font-size: 1.18em;
+  border-radius: 17px;
+  background: linear-gradient(90deg, #36e8b5 60%, #29d99c 100%); /* Stronger green gradient */
+  box-shadow: 0 4px 18px rgba(54,232,181,0.2);
+}
+.see-tips-btn:hover {
+  background: linear-gradient(90deg, #29d99c 40%, #36e8b5 100%);
+  box-shadow: 0 8px 28px rgba(54,232,181,0.35);
+  transform: translateY(-3px) scale(1.02);
+}
+
+
+/* --- NEXT 6 RACES Section --- */
+.next6-bar {
+  background: var(--color-dark-section);
+  border-radius: 12px;
+  padding: 1.5em 1em 1.7em 1em;
+  margin: 2.2em auto 2.4em auto; /* Adjusted margins */
+  box-shadow: var(--shadow-lg); /* Stronger shadow */
+  text-align: center;
+  max-width: 700px;
+}
+
+.next6-bar h2 {
+  color: var(--color-primary-yellow);
+  margin-bottom: 1.2em; /* Adjusted spacing */
+}
+
+.next6-races {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Slightly wider min for items */
+  gap: 0.8em; /* Increased gap */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.next6-race-link {
+  background: linear-gradient(145deg, #232d37, #1e262f);
+  border-radius: 10px; /* Slightly more rounded */
+  padding: 1em 0.5em; /* Adjusted padding */
+  min-height: 85px; /* Taller links */
+  border: 2px solid #28d987; /* Stronger border */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25); /* Stronger shadow */
+}
+
+.next6-race-link:hover,
+.next6-race-link:focus-visible {
+  background: #36e8b5; /* Use a variable directly here */
+  color: var(--color-text-dark);
+  border-color: #36e8b5;
+  transform: translateY(-4px); /* More pronounced lift */
+  box-shadow: 0 10px 25px rgba(54, 232, 181, 0.4);
+}
+
+.next6-time {
+  font-size: 1.2em; /* Larger time */
+  margin-top: 7px; /* More space */
+  color: var(--color-primary-yellow); /* Changed time color */
+  font-weight: 800;
+}
+
+.next6-race-link:hover .next6-time,
+.next6-race-link:focus-visible .next6-time {
+  color: var(--color-text-dark);
+}
+
+.next6-course {
+  font-size: 0.95em; /* Slightly larger course name */
+  color: var(--color-text-light); /* Consistent text color */
+  opacity: 0.95;
+  font-weight: 600;
+}
+
+.next6-race-link:hover .next6-course,
+.next6-race-link:focus-visible .next6-course {
+  color: var(--color-text-dark);
+  opacity: 1;
+}
+
+/* --- RACES BY COURSE Section --- */
+.races-course-list {
+  margin-top: 3em; /* Adjusted margin */
+  margin-bottom: 3.5em; /* Space before potential bottom CTA or footer */
+}
+.races-course-list h2 {
+    color: var(--color-primary-yellow); /* Consistent heading color */
+    margin-bottom:1em; /* Adjusted margin */
+}
+
+.racecard-course-row {
+  margin-bottom: 1.7em; /* More space between course blocks */
+  background: var(--color-dark-section);
+  border-radius: 14px; /* Slightly more rounded */
+  padding: 1.2em; /* More padding */
+  box-shadow: var(--shadow-md); /* Stronger shadow */
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.racecard-course-header {
+  font-size: 1.25em; /* Larger header */
+  color: var(--color-primary-yellow); /* Consistent heading color */
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid var(--color-table-border); /* Use variable */
+  letter-spacing: .05em;
+}
+
+.racecard-race-row {
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Slightly wider min for times */
+  gap: 0.6em; /* Increased gap */
+  margin-top: 1.2em;
+}
+
+.racecard-time-link {
+  background: linear-gradient(145deg, #2a2e33, #23262a); /* Match quick links background */
+  border-radius: 9px; /* More rounded */
+  min-width: 70px;
+  min-height: 50px; /* Taller links */
+  padding: 0.3em 0.8em;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.racecard-time-link:hover,
+.racecard-time-link:focus-visible {
+  background: var(--color-accent-green); /* Consistent hover green */
+  color: var(--color-text-dark);
+  transform: translateY(-3px); /* More pronounced lift */
+  box-shadow: 0 6px 15px rgba(53,233,174,0.4);
+}
+
+.racecard-time {
+  color: var(--color-primary-yellow); /* Consistent time color */
+  font-weight: 800;
+  font-size: 1.08em;
+}
+
+.racecard-time-link:hover .racecard-time,
+.racecard-time-link:focus-visible .racecard-time {
+  color: var(--color-text-dark);
+}
+
+/* Consider removing racecard-title if not used in your HTML, or provide content for it */
+.racecard-title {
+  color: var(--color-text-light); /* Consistent color */
+  font-weight: 600;
+  font-size: 0.95em; /* Slightly larger */
+}
+
+.racecard-time-link:hover .racecard-title,
+.racecard-time-link:focus-visible .racecard-title {
+  color: var(--color-text-dark);
+}
+
+/* --- Responsive Layout Adjustments for index.css specific elements --- */
+@media (max-width: 700px) {
+  .hero-section {
+    margin-bottom: 2em;
+    padding-top: 0.5em;
+  }
+  .hero-cta {
+    margin-top: 1.5em;
+    padding: 0.9em 2em;
+    font-size: 1.15em;
+  }
+  .quick-access-links {
+    margin-bottom: 2.5em;
+    padding: 1.5em 0.5em;
+    border-radius: 12px;
+  }
+  .quick-access-links .link-grid {
+    grid-template-columns: 1fr; /* Stack vertically on small screens */
+    padding: 0 1em;
+  }
+  .quick-link {
+    padding: 1em;
+  }
+  .quick-link h3 {
+    font-size: 1.1em;
+  }
+  .quick-link p {
+    font-size: 0.9em;
+  }
+
+  .cta-bar-bottom {
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+  }
+  .tips-cta-bar {
+    padding: 15px 20px;
+    font-size: 1.05em;
+  }
+  .see-tips-btn {
+    padding: 15px 0;
+    font-size: 1.03em;
+  }
+
+  .next6-bar {
+    margin-top: 1.5em;
+    padding: 1.2em 0.7em;
+  }
+  .next6-races {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important; /* Adjust min-width if needed for 2 columns */
+    gap: 0.6em;
+  }
+  .next6-race-link {
+    min-height: 70px;
+  }
+  .next6-time {
+    font-size: 1.1em;
+  }
+  .next6-course {
+    font-size: 0.85em;
+  }
+
+  .races-course-list {
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+  }
+  .racecard-course-row {
+    margin-bottom: 1.2em;
+    padding: 1em;
+  }
+  .racecard-course-header {
+    font-size: 1.15em;
+    margin-bottom: 0.6em;
+    padding-bottom: 0.6em;
+  }
+  .racecard-race-row {
+    gap: 0.5em;
+  }
+  .racecard-time-link {
+    min-height: 40px;
+  }
+  .racecard-time {
+    font-size: 1em;
+  }
+}
+
+/* For very small phones (up to 420px) */
+@media (max-width: 420px) {
+  .hero-cta {
+    font-size: 1.05em;
+    padding: 0.8em 1.5em;
+  }
+  .tips-cta-bar {
+    font-size: 0.95em;
+  }
+  .see-tips-btn {
+    font-size: 0.95em;
+  }
+  .next6-races {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)) !important;
+  }
+}
+
 
 .what-else-intro {
   text-align: center;
@@ -32,23 +384,39 @@ h1 {
   margin: 0 auto 1.1em auto;
   color: #c2c6cd;
 }
-.what-else-intro a { font-weight: 600; }
+.what-else-intro a {
+  font-weight: 600;
+  color: #2fe0a0; /* Specific color for this link */
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+.what-else-intro a:hover {
+  color: var(--color-primary-yellow);
+}
+.what-else-intro a:focus-visible {
+  outline: 2px solid var(--color-primary-yellow);
+  outline-offset: 2px;
+}
 
-/* --- BOOKMARK NOTE --- */
+/* --- Bookmark Note --- */
 .bookmark-note {
   text-align: center;
   font-size: 0.99em;
   margin-bottom: 1.05em;
-  color: #ffc900cc;
+  color: #ffc900cc; /* Slightly desaturated yellow */
+  font-weight: 500; /* Added for subtle emphasis */
+}
+.bookmark-note b {
+  color: var(--color-primary-yellow);
 }
 
-/* --- CTA BAR (Tips) --- */
+/* --- CTA Bar (Tips) --- */
 .tips-cta-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #22272c;
-  color: #f5f7fa;
+  color: var(--color-text-light);
   font-size: 1.12em;
   padding: 15px 22px;
   border-radius: 11px;
@@ -57,88 +425,76 @@ h1 {
   gap: 14px;
   box-shadow: 0 2px 12px rgba(30,32,45,0.10);
   font-weight: 500;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .tips-cta-bar span {
   display: block;
   font-size: 1em;
   font-weight: 500;
+  flex: 1; /* Allows text to take available space */
+  min-width: 200px; /* Ensures text doesn't get too narrow before wrapping */
+}
+
+.tips-cta-bar b {
+  color: var(--color-accent-green); /* Highlight the "Want Free Daily Tips?" */
 }
 
 .see-tips-btn {
   display: inline-block;
-  margin: 1.1em auto 0.7em auto;
+  margin: 1.1em auto 0.7em auto; /* Adjusted margins for flex context */
   padding: 0.95em 2em 0.95em 1.4em;
-  background: linear-gradient(90deg, #2fe0a0 60%, #22c788 100%);
-  color: #161c22;
+  background: linear-gradient(90deg, #2fe0a0 60%, #22c788 100%); /* Slightly different green gradient */
+  color: var(--color-text-dark);
   font-weight: 700;
   font-size: 1.14em;
   border-radius: 15px;
   box-shadow: 0 3px 14px rgba(47,224,160,0.14);
   letter-spacing: .02em;
   border: none;
-  transition: 
-    background 0.15s cubic-bezier(.32,1.29,.44,.97),
+  transition:
+    background 0.2s cubic-bezier(.32,1.29,.44,.97), /* Smoother bounce */
     color 0.13s,
-    box-shadow 0.16s cubic-bezier(.32,1.29,.44,.97),
-    transform 0.12s;
+    box-shadow 0.2s cubic-bezier(.32,1.29,.44,.97),
+    transform 0.15s;
   text-align: center;
   cursor: pointer;
   position: relative;
   z-index: 2;
+  white-space: nowrap; /* Prevent button text from wrapping */
 }
 
 .see-tips-btn:hover,
-.see-tips-btn:focus {
+.see-tips-btn:focus-visible {
   background: linear-gradient(90deg, #1b8c68 40%, #2fe0a0 100%);
   color: #fff;
   box-shadow: 0 6px 24px rgba(47,224,160,0.23);
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-2px) scale(1.02); /* Slightly larger scale */
+}
+.see-tips-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 10px rgba(47,224,160,0.1);
 }
 
-
-/* --- Responsive tweaks for CTA bar --- */
-@media (max-width: 700px) {
-  .container { padding: 14px 1vw 0 1vw; }
-  .tips-cta-bar {
-    flex-direction: column;
-    text-align: center;
-    gap: 11px;
-    padding: 12px 9px;
-    max-width: 97vw;
-  }
-  .see-tips-btn {
-    width: 100%;
-    margin-left: 0 !important;
-    margin-top: 6px;
-  }
-}
-
-/* --- General background and font setup, feel free to adjust to your palette --- */
-body {
-  background: #191c22;
-  color: #f5f7fa;
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  font-size: 1.04em;
-  margin: 0;
-  min-height: 100vh;
-}
-
-
-/* --- NEXT 6 RACES --- */
+/* --- NEXT 6 RACES Section --- */
 .next6-bar {
-  background: #21242a;
+  background: var(--color-dark-section);
   border-radius: 12px;
   padding: 1.5em 1em 1.7em 1em;
   margin: 1.2em auto 1.4em auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.35); /* Enhanced shadow for more depth */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
   text-align: center;
   max-width: 700px;
 }
 
+.next6-bar h2 {
+  color: var(--color-primary-yellow);
+  margin-bottom: 1em; /* Adjust spacing below title */
+}
+
 .next6-races {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Default for larger screens */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adaptive columns */
   gap: 0.6em;
   width: 100%;
   max-width: 700px;
@@ -150,7 +506,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Subtle gradient for a more dynamic background */
   background: linear-gradient(145deg, #232d37, #1e262f);
   border-radius: 8px;
   padding: 0.8em 0.3em;
@@ -159,16 +514,18 @@ body {
   font-weight: bold;
   min-height: 75px;
   border: 2px solid #1f6037;
-  transition: background 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Smoother transitions for all properties */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Stronger initial shadow */
+  transition: all var(--transition-ease);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-.next6-race-link:hover {
-  background: #28d987; /* Solid color for hover, as per original design */
-  color: #161c22;
+.next6-race-link:hover,
+.next6-race-link:focus-visible { /* Added focus-visible for accessibility */
+  background: #28d987;
+  color: var(--color-text-dark);
   border-color: #28d987;
-  transform: translateY(-3px); /* Subtle lift effect on hover */
-  box-shadow: 0 8px 20px rgba(0,220,150,0.3); /* Greenish glow on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,220,150,0.3);
+  outline: none; /* Remove default outline, as we have custom shadow/border */
 }
 
 .next6-time {
@@ -178,14 +535,13 @@ body {
   text-align: center;
   margin-top: 5px;
   color: #28d987;
-  /* Transition for color change on hover */
-  transition: color 0.2s ease-out;
+  transition: color var(--transition-ease);
 }
 
-.next6-race-link:hover .next6-time {
-  color: #161c22; /* Text color on hover matches background */
+.next6-race-link:hover .next6-time,
+.next6-race-link:focus-visible .next6-time {
+  color: var(--color-text-dark);
 }
-
 
 .next6-course {
   font-size: 0.88em;
@@ -197,75 +553,48 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
-  /* Transition for color change on hover */
-  transition: color 0.2s ease-out, opacity 0.2s ease-out;
+  transition: color var(--transition-ease), opacity var(--transition-ease);
 }
 
-.next6-race-link:hover .next6-course {
-  color: #161c22; /* Text color on hover matches background */
-  opacity: 1; /* Fully opaque on hover */
+.next6-race-link:hover .next6-course,
+.next6-race-link:focus-visible .next6-course {
+  color: var(--color-text-dark);
+  opacity: 1;
 }
 
-.see-tips-btn {
-  display: inline-block;
-  margin: 1.1em auto 0.7em auto;
-  padding: 0.82em 1.5em 0.82em 1.12em;
-  background: #28d987;
-  color: #161c22;
-  font-weight: 700;
-  font-size: 1.12em;
-  letter-spacing: .03em;
-  border: 2px solid #25b272;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(40,217,135,0.11), 0 1.5px 0.7px rgba(0,0,0,0.11);
-  cursor: pointer;
-  text-decoration: none;
-  transition: 
-    background 0.14s cubic-bezier(.32,1.29,.44,.97),
-    color 0.16s,
-    border-color 0.18s cubic-bezier(.32,1.29,.44,.97),
-    box-shadow 0.17s cubic-bezier(.32,1.29,.44,.97),
-    transform 0.13s;
-  position: relative;
-  z-index: 2;
-}
-
-.see-tips-btn:hover,
-.see-tips-btn:focus {
-  background: #1e2a27;
-  color: #28d987;
-  border-color: #28d987;
-  box-shadow: 0 4px 20px rgba(40,217,135,0.14);
-  transform: translateY(-1.5px) scale(1.03);
-}
-
-.see-tips-btn:active {
-  background: #28d987;
-  color: #161c22;
-  border-color: #21955e;
-  transform: translateY(0.5px) scale(0.98);
-}
-
-
-/* --- RACES BY COURSE --- */
+/* --- RACES BY COURSE Section --- */
 .races-course-list {
-  margin-top: 2.2em;
+  margin-top: 2.4em; /* Match original, but ensure consistency */
 }
+.races-course-list h2 {
+    color: #ffc900; /* Specific color for this heading */
+    margin-bottom:.9em; /* Specific margin */
+}
+
 .racecard-course-row {
   margin-bottom: 1.3em;
+  background: var(--color-dark-section); /* Consistent section background */
+  border-radius: 12px;
+  padding: 1em;
+  box-shadow: var(--shadow-sm); /* Subtle shadow for each course block */
 }
+
 .racecard-course-header {
   font-size: 1.16em;
   color: #28d987;
   font-weight: bold;
-  margin-bottom: 0.13em;
+  margin-bottom: 0.5em; /* Increased margin for better separation */
   letter-spacing: .2px;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(255,255,255,0.05); /* Subtle separator */
 }
+
 .racecard-race-row {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Default for larger screens */
-  gap: 0.23em;
-  margin-bottom: 0.7em;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Adaptive columns for times */
+  gap: 0.4em; /* Slightly increased gap for better separation */
+  margin-top: 1em;
+  margin-bottom: 0; /* No margin-bottom here, controlled by parent .racecard-course-row */
 }
 
 .racecard-time-link {
@@ -273,7 +602,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Subtle gradient for a more dynamic background */
   background: linear-gradient(145deg, #232d33, #1e262c);
   border-radius: 7px;
   color: #ffe564;
@@ -283,16 +611,17 @@ body {
   min-width: 66px;
   min-height: 45px;
   padding: 0.24em 0.7em;
-  transition: background 0.13s ease-out, color 0.13s ease-out, transform 0.13s ease-out, box-shadow 0.13s ease-out; /* Smoother transitions */
-  margin-bottom: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Slightly stronger shadow */
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.racecard-time-link:hover {
+.racecard-time-link:hover,
+.racecard-time-link:focus-visible {
   background: #35e9ae;
-  color: #181c1f;
-  transform: translateY(-2px); /* Subtle lift effect on hover */
-  box-shadow: 0 4px 12px rgba(53,233,174,0.3); /* Greenish glow on hover */
+  color: var(--color-text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(53,233,174,0.3);
+  outline: none;
 }
 
 .racecard-time {
@@ -300,13 +629,15 @@ body {
   font-weight: 700;
   margin: 0 auto;
   text-align: center;
-  transition: color 0.13s ease-out;
+  transition: color var(--transition-fast);
 }
 
-.racecard-time-link:hover .racecard-time {
-  color: #181c1f;
+.racecard-time-link:hover .racecard-time,
+.racecard-time-link:focus-visible .racecard-time {
+  color: var(--color-text-dark);
 }
 
+/* Consider removing racecard-title if not used in your HTML, or provide content for it */
 .racecard-title {
   color: #ffe564;
   font-size: 1em;
@@ -315,26 +646,15 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.13s ease-out;
+  transition: color var(--transition-fast);
 }
 
-.racecard-time-link:hover .racecard-title {
-  color: #181c1f;
+.racecard-time-link:hover .racecard-title,
+.racecard-time-link:focus-visible .racecard-title {
+  color: var(--color-text-dark);
 }
 
-
-/* --- RESPONSIVE GRID OVERRIDES (Guaranteed 3-wide minimum) --- */
-
-/* For tablets and larger mobiles (e.g., 601px to 1024px) */
-@media (max-width: 1024px) {
-  .next6-races {
-    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
-  }
-  .racecard-race-row {
-    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
-  }
-}
-
+/* --- Responsive Layout Adjustments for index.css specific elements --- */
 @media (max-width: 700px) {
   .container {
     padding: 12px 3vw 0 3vw;
@@ -358,7 +678,7 @@ body {
 
   .tips-cta-bar {
     flex-direction: column;
-    align-items: stretch;
+    align-items: stretch; /* Stretch items to fill width */
     text-align: center;
     padding: 10px 5vw 14px 5vw;
     gap: 7px;
@@ -369,13 +689,14 @@ body {
   .tips-cta-bar span {
     font-size: 1em;
     margin-bottom: 0.2em;
+    max-width: none; /* Override min-width for mobile */
   }
   .see-tips-btn {
-    width: 100%;
+    width: 100%; /* Make button full width */
     font-size: 1.06em;
     padding: 15px 0;
     min-height: 48px;
-    margin: 0;
+    margin: 0; /* Remove auto margins when flex column */
     border-radius: 14px;
   }
 
@@ -386,7 +707,7 @@ body {
     max-width: 100vw;
   }
   .next6-races {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important; /* Min 130px for better two-column layout on medium phones */
     gap: 0.44em;
     max-width: 100vw;
   }
@@ -405,6 +726,10 @@ body {
     font-size: 0.82em;
     line-height: 1.16;
   }
+
+  .racecard-race-row {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Min 80px for course times */
+  }
 }
 
 /* For very small phones (up to 420px) */
@@ -413,29 +738,4 @@ body {
   h1 { font-size: 1.13em; }
   .see-tips-btn { font-size: 0.97em; padding: 13px 0; }
   .next6-races { gap: 0.23em; }
-}
-@media (max-width: 700px) {
-  .see-tips-btn {
-    display: block;
-    margin: 10px auto 0 auto;
-    max-width: 340px;
-    width: 94%;
-    padding: 12px 0;
-    font-size: 1em;
-    min-height: 42px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(47,224,160,0.09);
-    /* Remove border if you want a softer look: border: none; */
-  }
-  .tips-cta-bar {
-    gap: 4px;
-    padding: 10px 5vw 13px 5vw;
-  }
-}
-@media (max-width: 420px) {
-  .see-tips-btn {
-    font-size: 0.96em;
-    max-width: 98vw;
-    padding: 11px 0;
-  }
 }

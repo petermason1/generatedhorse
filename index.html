@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,24 +9,26 @@
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
-  <title>Smart Racecards | Horse Racing Tips & Analysis</title>
-  <meta name="description" content="Get expert horse racing tips and data-driven analysis for UK & Irish races from Smart Racecards. Find today's best picks!">
+  <title>Smart Racecards | Expert Horse Racing Tips & Analysis</title>
+  <meta name="description" content="Unlock your edge in UK & Irish horse racing with Smart Racecards. Get daily, data-driven tips, advanced stats, and unique performance metrics for informed betting decisions.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
- <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMwM.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <nav class="main-navbar">
   <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">🏇 Racecards</a>
+    <a href="index.html" class="nav-brand">🏇 Smart Racecards</a>
     <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html" class="nav-link nav-link-active">Home</a>
       <a href="results.html" class="nav-link">Results</a>
       <a href="tips.html" class="nav-link">Smart Picks</a>
       <a href="yesterday.html" class="nav-link">Historical</a>
       <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About</a>
+      <a href="about.html" class="nav-link">About Us</a>
     </div>
     <div class="hamburger" id="hamburger">
       <span></span>
@@ -39,37 +40,58 @@
   <div class="nav-backdrop" id="navBackdrop"></div>
 </nav>
 
+<main class="container">
+  <header class="hero-section">
+    <h1>Your Edge in UK & Irish Horse Racing</h1>
+    <p class="page-desc">
+      Stop guessing, start winning. <b>Smart Racecards</b> delivers daily, real-time race data, advanced stats, and intelligent insights. Quickly find high-value runners, expertly ranked by class, form, and our unique performance metrics.
+    </p>
+    </header>
 
-  <main class="container">
-    <h1>Daily Horse Racing Tips & Analysis</h1>
-    <div class="page-desc">
-      Your edge in UK & Irish horse racing: <b>Smart Racecards</b> delivers daily, real-time race data, advanced stats, and intelligent insights. Quickly find high-value runners, expertly ranked by class, form, and our unique performance metrics.
+  <section class="quick-access-links">
+    <h2>Quick Navigation</h2>
+    <div class="link-grid">
+      <a href="racecard.html" class="quick-link">
+        <h3><i class="fas fa-calendar-alt"></i> Today's Racecards</h3>
+        <p>Explore full details for every race meeting today.</p>
+      </a>
+      <a href="custom-score.html" class="quick-link">
+        <h3><i class="fas fa-sliders-h"></i> Custom Score Tool</h3>
+        <p>Craft your own winning strategy with our customizable scoring system.</p>
+      </a>
+      <a href="yesterday.html" class="quick-link">
+        <h3><i class="fas fa-history"></i> Historical Results</h3>
+        <p>Analyze past performance and discover historical ROI for informed decisions.</p>
+      </a>
+      <a href="about.html" class="quick-link">
+        <h3><i class="fas fa-info-circle"></i> About Smart Racecards</h3>
+        <p>Learn how our data-driven approach gives you the ultimate advantage.</p>
+      </a>
     </div>
-    <div class="what-else-intro">
-      Also try our <a href="custom-score.html" style="color:#2fe0a0;font-weight:600;text-decoration:underline;">Custom Scoring Tool</a>
-      to find your own angle, or check <a href="yesterday.html" style="color:#ffc900;font-weight:600;text-decoration:underline;">historical results</a> for historic ROI.
-    </div>
-    <div class="bookmark-note">
-      ⭐ <b>Tip:</b> Bookmark this site for daily free tips (CTRL+D or tap the star in your browser)!
-    </div>
+  </section>
+
+  <div id="main-content-dynamic"></div>
+
+  <section class="cta-bar-bottom">
     <div class="tips-cta-bar">
-      <span>🎯 <b>Want Free Daily Tips?</b> See our best bets, value picks, and dark horses — updated every morning!</span>
-      <a href="tips.html" class="see-tips-btn" style="margin-left:1em;">See Today's Tips &rarr;</a>
+      <span>🎯 <b>Want Even More Free Daily Tips?</b> Get our expert analysis, value picks, and dark horses — updated every morning!</span>
+      <a href="tips.html" class="see-tips-btn">Access All Smart Picks Now &rarr;</a>
     </div>
-    <div id="main"></div>
-  </main>
-  <footer class="site-footer">
+  </section>
+
+</main>
+
+<footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="tips.html">Tips</a>
       <a href="yesterday.html">Historical</a>
       <a href="custom-score.html">Custom Score</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
     </div>
     <div class="footer-meta">
-     <span id="footer-year"></span> Smart Racecards
-
+      <span id="footer-year"></span> Smart Racecards
       <span>•</span>
       <a href="mailto:info@smartracecards.com">Contact</a>
     </div>
@@ -82,9 +104,12 @@
   </div>
 </footer>
 
-
-  <script src="data.js"></script>
-  <script src="index.js"></script>
-  <script src="main.js"></script>
+<script src="data.js"></script>
+<script src="index.js"></script>
+<script src="main.js"></script>
+<script>
+  // Dynamic year for footer
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
