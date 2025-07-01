@@ -43,10 +43,8 @@
     </div>
     <div class="nav-backdrop" id="navBackdrop"></div>
   </nav>
-<!-- [2] RACE PAGE CONTENT WRAPPER -->
 <div id="racecard-main">
 
-  <!-- [2.1] TOPBAR: Back left, Next 6 (title + bar) centered -->
   <div class="racecard-topbar">
     <div class="racecard-topbar-left">
       <button class="primary-btn back-btn" onclick="window.location.href='today.html'">
@@ -54,22 +52,20 @@
       </button>
     </div>
     <div class="racecard-topbar-center">
-      <span class="next6-label">Next 6 Races</span>
-      <div class="next6-bar" id="next6Bar"></div>
+      <div id="next6-section">
+        <span class="next6-label">Next 6 Races</span>
+        <div class="next6-bar" id="next6Bar"></div>
+      </div>
     </div>
     <div class="racecard-topbar-right"></div>
   </div>
 
-  <!-- [2.2] COURSE NAVIGATION (Meetings as Pills) -->
   <nav class="course-bar" id="racecardCourses"></nav>
 
-  <!-- [2.3] RACE TIMES FOR CURRENT MEETING -->
   <nav class="race-links-bar" id="courseTimesNav"></nav>
 
-  <!-- [2.4] MAIN RACE CARD (header + runners, all JS-injected) -->
   <main class="container" id="mainRacecard"></main>
 </div>
-
 
   <!-- 3. FOOTER -->
   <footer class="site-footer">

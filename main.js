@@ -103,21 +103,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // ----- Optional: Racecards logic if window.racecardsData exists -----
-  if (window.racecardsData && window.racecardsData.length) {
+  // Get the new wrapper section for "Next 6 Races"
+  const next6Section = document.getElementById('next6-section');
+
+  // Check if racecardsData exists and has length, AND if the next6Section exists in the DOM
+  if (window.racecardsData && window.racecardsData.length && next6Section) {
     const races = window.racecardsData.slice();
     races.sort((a, b) => getRaceDate(a) - getRaceDate(b));
     const now = new Date();
     races.forEach(r => r.isPast = getRaceDate(r) < now);
 
-    // NEXT 6 RACES BAR
-    const bar = document.getElementById('next6-bar');
-    if (bar) {
+    // NEXT 6 RACES BAR (inside the next6Section)
+    const bar = document.getElementById('next6Bar'); // Use the correct ID for the bar itself
+    if (bar) { // Check if the bar element exists
       const nextRaces = races.filter(r => !r.isPast).slice(0, 6);
       if (!nextRaces.length) {
-        bar.innerHTML = '<span class="next6-title">No more races today</span>';
-        bar.style.display = 'none'; // Hide the entire bar if no races
+        // If no future races, hide the entire section
+        next6Section.style.display = 'none';
       } else {
-        bar.style.display = 'flex'; // Ensure it's visible if there are races
+        // If there are future races, ensure the section is visible
+        next6Section.style.display = ''; // Resets to default CSS display (e.g., 'block' or 'flex')
         bar.innerHTML = nextRaces.map(r =>
           `<div class="next6-pill">
             <div class="next6-course" title="${r.course}">${r.course.length > 8 ? r.course.slice(0, 8) + '…' : r.course}</div>
@@ -125,26 +130,54 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>`
         ).join('');
       }
+    } else {
+      // If the bar element itself is missing but racecardsData exists, still hide the section
+      next6Section.style.display = 'none';
     }
+  } else {
+    // If window.racecardsData is completely missing, empty, or next6Section doesn't exist, hide it
+    if (next6Section) { // Only try to hide if the section actually exists in the HTML
+      next6Section.style.display = 'none';
+    }
+  }
 
-    // COURSES LIST
-    const courses = {};
-    races.forEach(r => {
+  // COURSES LIST
+  const courses = {};
+  if (window.racecardsData && window.racecardsData.length) { // Ensure racecardsData exists for this part too
+    window.racecardsData.forEach(r => {
       if (!courses[r.course]) courses[r.course] = [];
       courses[r.course].push(r);
     });
-    const coursesList = document.getElementById('courses-list');
-    if (coursesList) {
+  }
+  const coursesList = document.getElementById('racecardCourses'); // Corrected ID from courses-list to racecardCourses
+  if (coursesList) {
+    // Only build courses list if there are courses
+    if (Object.keys(courses).length > 0) {
       coursesList.innerHTML = Object.entries(courses).map(([course, courseRaces]) => `
-        <section class="course-section">
-          <h2 class="course-title">${course}</h2>
-          <div class="race-times-row">
-            ${courseRaces.map(rc =>
-              `<a class="race-time-btn" href="race-${rc._id}.html">${rc.off_time}</a>`
-            ).join('')}
-          </div>
-        </section>
+        <a class="course-link" href="#">${course}</a>
       `).join('');
+      // You'll likely need additional JS to handle clicks on these course-links
+      // and update the race times (courseTimesNav) based on the selected course.
+    } else {
+      coursesList.style.display = 'none'; // Hide if no courses
     }
+  }
+
+
+  // RACE TIMES FOR CURRENT MEETING (assuming this is populated based on selected course)
+  const courseTimesNav = document.getElementById('courseTimesNav');
+  // You'll need logic here to populate this based on which course is active/selected.
+  // For now, let's just ensure it can be hidden if empty, similar to the above.
+  if (courseTimesNav && (!window.racecardsData || window.racecardsData.length === 0)) {
+     courseTimesNav.style.display = 'none';
+  }
+
+
+  // MAIN RACE CARD (header + runners, all JS-injected)
+  const mainRacecard = document.getElementById('mainRacecard');
+  // This section would typically be populated with detailed race info and runners
+  // based on the race currently being viewed.
+  if (mainRacecard && (!window.racecardsData || window.racecardsData.length === 0)) {
+    mainRacecard.style.display = 'none'; // Hide if no race data
   }
 });
