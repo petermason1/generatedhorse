@@ -9,6 +9,7 @@ console.log(window.racecardsData);
     let v = parseInt(x);
     return Number.isFinite(v) ? v : def;
   }
+
   function safeFloat(x, def = 0.0) {
     if (x === null || x === undefined || x === '' || x === '-' || String(x).toLowerCase() === 'nan') return def;
     let v = parseFloat(x);
@@ -40,8 +41,16 @@ console.log(window.racecardsData);
     score += Math.max(0, 60 - last_run) * 0.1;
     score += 0.7 * trainerPercent;
     score += 1.1 * trainerWins;
-    if (score < -15) score = -15 + (score + 15) * 0.3;
+
+    // Python scaling for negative scores
+    if (score < -15) {
+      score = -15 + (score + 15) * 0.3;
+    }
+
+    // Ensure score is a valid number
     if (!Number.isFinite(score)) score = 0;
+
+    // Rounding to 1 decimal place (same as Python's round(score, 1))
     return Math.round(score * 10) / 10;
   }
 
@@ -78,7 +87,7 @@ console.log(window.racecardsData);
     const now = new Date();
     const next = racesForCourse.find(r => {
       const off = new Date(r.off_dt);
-      return now <= new Date(off.getTime() + 3*60000); // Off time + 3min
+      return now <= new Date(off.getTime() + 3 * 60000); // Off time + 3min
     });
     if (next) return next;
     return racesForCourse[racesForCourse.length - 1];
@@ -146,10 +155,10 @@ console.log(window.racecardsData);
         <div class="race-top-picks-list">
           ${top.map((r, i) => `
             <span class="race-top-pick-item">
-              <b class="pick-number">${i+1}.</b>
+              <b class="pick-number">${i + 1}.</b>
               <span class="pick-horse">${r.horse}</span>
               <span class="pick-score">(${r.score})</span>
-              <span class="pick-odds">${r.odds?.[0]?.fractional||''}</span>
+              <span class="pick-odds">${r.odds?.[0]?.fractional || ''}</span>
             </span>
           `).join('')}
         </div>
