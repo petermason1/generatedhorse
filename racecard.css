@@ -1,4 +1,15 @@
-/* --- [2.1] TOPBAR LAYOUT --- */
+/*
+ * racecard.css: Stylesheet for individual racecard pages.
+ * Contains: Topbar Layout, Next 6 Races Navigation, Course Navigation,
+ * Race Times Navigation, Race Header, Top Picks, Runners List & Cards,
+ * and Responsive Adjustments.
+ *
+ * This file assumes base.css variables are available.
+ */
+
+/* =========================================================================== */
+/* --- [1] TOPBAR LAYOUT --- */
+/* =========================================================================== */
 .racecard-topbar {
   position: relative;
   display: flex;
@@ -32,7 +43,9 @@
   flex: 0 0 120px;
 }
 
-/* --- NEXT 6 LABEL & BAR --- */
+/* =========================================================================== */
+/* --- [2] NEXT 6 RACES NAVIGATION --- */
+/* =========================================================================== */
 .next6-label {
   font-size: 1.16em;
   color: var(--color-primary-yellow);
@@ -51,7 +64,6 @@
   min-width: 180px;
 }
 
-/* --- NEXT 6 LINKS --- */
 .next6-link {
   display: flex;
   flex-direction: column;
@@ -67,10 +79,11 @@
   font-size: 1em;
   text-decoration: none;
   border: 1.5px solid transparent;
-  box-shadow: 0 2px 7px #23293024;
+  box-shadow: 0 2px 7px #23293024; /* Specific shadow, consider using a variable if common */
   white-space: nowrap;
   transition: background 0.13s, color 0.13s, border 0.13s;
 }
+
 .next6-link.active,
 .next6-link:focus-visible,
 .next6-link:hover {
@@ -79,6 +92,7 @@
   border: 1.5px solid var(--color-primary-yellow);
   outline: none;
 }
+
 .next6-time {
   font-size: 1.08em;
   font-weight: 900;
@@ -86,6 +100,7 @@
   margin-bottom: 2px;
   color: var(--color-primary-yellow);
 }
+
 .next6-course {
   font-size: 0.93em;
   color: var(--color-accent-green);
@@ -93,26 +108,9 @@
   opacity: 0.91;
 }
 
-/* Responsive: Stack label and bar, shrink spacing on mobile */
-@media (max-width: 600px) {
-  .racecard-topbar-center {
-    position: static;
-    transform: none;
-    width: 100%;
-    padding: 0;
-    margin-top: 4px;
-    margin-bottom: 8px;
-  }
-  .racecard-topbar {
-    flex-direction: column;
-    min-height: unset;
-    padding: 12px 0 5px 0;
-  }
-}
-
-
-
-/* ============ [6] COURSE NAVIGATION ("MEETING PILLS") ============ */
+/* =========================================================================== */
+/* --- [3] COURSE NAVIGATION ("MEETING PILLS") --- */
+/* =========================================================================== */
 .course-bar {
   display: flex;
   flex-wrap: wrap;
@@ -120,19 +118,21 @@
   justify-content: center;
   margin: 1.1em 0 1.2em 0;
 }
+
 .course-link {
   display: inline-block;
   padding: 8px 20px;
-  background: rgba(26,32,39,0.93);
+  background: rgba(26,32,39,0.93); /* Specific opacity, consider variable if used elsewhere */
   color: var(--color-accent-green);
   font-weight: 800;
   font-size: 1em;
   border-radius: 13px;
-  box-shadow: 0 2px 9px #2329300d;
+  box-shadow: 0 2px 9px #2329300d; /* Specific shadow, consider using a variable if common */
   text-decoration: none;
   border: 1.5px solid transparent;
   transition: background 0.13s, color 0.12s, border 0.13s;
 }
+
 .course-link.active,
 .course-link:hover,
 .course-link:focus-visible {
@@ -142,7 +142,9 @@
   outline: none;
 }
 
-/* ============ [7] RACE TIMES NAV ============ */
+/* =========================================================================== */
+/* --- [4] RACE TIMES NAVIGATION --- */
+/* =========================================================================== */
 .race-links-bar {
   display: flex;
   flex-wrap: wrap;
@@ -151,11 +153,12 @@
   margin-bottom: 1.2em;
   padding: 3px 0 0 0;
 }
+
 .race-link {
   display: inline-block;
   padding: 7px 16px;
   border-radius: 7px;
-  background: rgba(40,45,51,0.96);
+  background: rgba(40,45,51,0.96); /* Specific opacity, consider variable if used elsewhere */
   color: var(--color-accent-green);
   font-weight: 700;
   font-size: 1em;
@@ -163,6 +166,7 @@
   border: 1.2px solid transparent;
   transition: background 0.14s, color 0.13s, border 0.12s;
 }
+
 .race-link.race-link-active,
 .race-link:hover,
 .race-link:focus-visible {
@@ -172,11 +176,14 @@
   outline: none;
 }
 
-/* ============ [8] RACE HEADER ============ */
+/* =========================================================================== */
+/* --- [5] RACE HEADER --- */
+/* =========================================================================== */
 .race-header {
   margin-bottom: 1.2em;
   text-align: center;
 }
+
 .race-header h1 {
   margin: 0 0 0.15em 0;
   font-size: 2em;
@@ -184,6 +191,7 @@
   font-weight: 900;
   letter-spacing: 0.02em;
 }
+
 .race-header-time {
   font-size: 0.74em;
   font-weight: 700;
@@ -191,34 +199,41 @@
   margin-left: 8px;
   letter-spacing: 0.01em;
 }
+
 .race-meta {
   color: var(--color-text-secondary);
   font-size: 1em;
   margin-top: 0.18em;
 }
+
 .race-meta strong {
   color: var(--color-accent-green);
   font-size: 1.09em;
   font-weight: 800;
 }
 
-/* ============ [9] TOP PICKS ============ */
+/* =========================================================================== */
+/* --- [6] TOP PICKS --- */
+/* =========================================================================== */
 .race-top-picks {
   margin: 0.3em auto 1.1em auto;
   text-align: center;
 }
+
 .race-top-picks-title {
   color: var(--color-primary-yellow);
   font-weight: 900;
   font-size: 1.13em;
   margin-bottom: 0.22em;
 }
+
 .race-top-picks-list {
   display: flex;
   gap: 13px;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .race-top-pick-item {
   display: flex;
   align-items: center;
@@ -229,43 +244,62 @@
   font-weight: 800;
   color: var(--color-accent-green);
   font-size: 1em;
-  box-shadow: 0 2px 12px #191d2212;
+  box-shadow: 0 2px 12px #191d2212; /* Specific shadow, consider using a variable if common */
 }
-.race-top-pick-item .pick-number { color: var(--color-primary-yellow); }
-.race-top-pick-item .pick-score { font-weight: 700; color: var(--color-primary-yellow); }
-.race-top-pick-item .pick-odds { color: #adffa2; font-weight: 700; font-size: 0.96em; margin-left: 3px; }
 
-/* ============ [10] RUNNERS LIST & CARDS ============ */
+.race-top-pick-item .pick-number {
+  color: var(--color-primary-yellow);
+}
+
+.race-top-pick-item .pick-score {
+  font-weight: 700;
+  color: var(--color-primary-yellow);
+}
+
+.race-top-pick-item .pick-odds {
+  color: #adffa2; /* Specific color, consider variable if common */
+  font-weight: 700;
+  font-size: 0.96em;
+  margin-left: 3px;
+}
+
+/* =========================================================================== */
+/* --- [7] RUNNERS LIST & CARDS --- */
+/* =========================================================================== */
 .runners-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-bottom: 2.5em;
 }
+
 .runner-card {
   display: flex;
   align-items: flex-start;
   gap: 13px;
   background: var(--color-section-bg);
   border-radius: 12px;
-  box-shadow: 0 3px 13px #36e8b519;
+  box-shadow: 0 3px 13px #36e8b519; /* Specific shadow, consider using a variable if common */
   padding: 13px 16px 13px 12px;
   border: 1.5px solid var(--color-table-border);
   transition: box-shadow 0.16s, border 0.13s;
   position: relative;
   cursor: pointer;
 }
-.runner-card:hover, .runner-card.expanded {
+
+.runner-card:hover,
+.runner-card.expanded {
   border-color: var(--color-accent-green);
-  box-shadow: 0 7px 22px #36e8b53a;
+  box-shadow: 0 7px 22px #36e8b53a; /* Specific shadow, consider using a variable if common */
 }
+
 .runner-card.runner-nr {
   filter: grayscale(0.46);
   opacity: 0.62;
-  background: #25282e;
+  background: #25282e; /* Specific background, consider using a variable if common */
 }
 
-/* ============ [11] RUNNER CARD - LEFT ============ */
+/* --- [7.1] RUNNER CARD - LEFT SECTION --- */
 .runner-num-draw {
   display: flex;
   flex-direction: column;
@@ -273,10 +307,11 @@
   gap: 0.13em;
   min-width: 34px;
 }
+
 .runner-num {
   background: var(--color-primary-yellow);
   color: var(--color-text-dark);
-  border-radius: 60%;
+  border-radius: 60%; /* Adjusted for a circular shape */
   width: 29px;
   height: 29px;
   display: flex;
@@ -285,34 +320,46 @@
   font-weight: 900;
   font-size: 1.09em;
   margin-bottom: 2px;
-  box-shadow: 0 1.5px 8px #ffd9002b;
+  box-shadow: 0 1.5px 8px #ffd9002b; /* Specific shadow, consider using a variable if common */
 }
-.runner-draw { font-size: 0.92em; color: var(--color-accent-green); }
-.runner-score { font-size: 0.9em; color: #95ffe4; font-weight: 600; }
+
+.runner-draw {
+  font-size: 0.92em;
+  color: var(--color-accent-green);
+}
+
+.runner-score {
+  font-size: 0.9em;
+  color: #95ffe4; /* Specific color, consider variable if common */
+  font-weight: 600;
+}
+
 .runner-nr-tag {
   color: #fff;
-  background: #ba1f2f;
+  background: #ba1f2f; /* Specific background, consider variable if common */
   border-radius: 6px;
   font-size: 0.78em;
   padding: 1.5px 7px;
   margin-left: 7px;
 }
 
-/* ============ [12] RUNNER CARD - MAIN ============ */
+/* --- [7.2] RUNNER CARD - MAIN SECTION --- */
 .runner-silk {
   width: 38px;
   height: 38px;
   object-fit: contain;
   border-radius: 7px;
-  box-shadow: 0 2px 7px #191d224a;
-  background: #181e24;
+  box-shadow: 0 2px 7px #191d224a; /* Specific shadow, consider using a variable if common */
+  background: #181e24; /* Specific background, consider variable if common */
   margin-right: 4px;
   margin-top: 1px;
 }
+
 .runner-main {
   flex: 1 1 auto;
   min-width: 0;
 }
+
 .runner-horse {
   font-size: 1.15em;
   font-weight: 900;
@@ -323,6 +370,7 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
 .runner-meta-line {
   display: flex;
   align-items: center;
@@ -332,8 +380,19 @@
   margin-bottom: 1px;
   white-space: nowrap;
 }
-.runner-meta-separator { color: #757575; margin: 0 2px; }
-.runner-form { color: #ffdb89; font-weight: 700; font-size: 1em; margin-left: 5px; }
+
+.runner-meta-separator {
+  color: #757575; /* Specific color, consider variable if common */
+  margin: 0 2px;
+}
+
+.runner-form {
+  color: #ffdb89; /* Specific color, consider variable if common */
+  font-weight: 700;
+  font-size: 1em;
+  margin-left: 5px;
+}
+
 .runner-info-line {
   font-size: 0.98em;
   color: var(--color-text-secondary);
@@ -341,10 +400,18 @@
   font-weight: 500;
   margin-top: 2px;
 }
-.runner-age, .runner-weight, .runner-rpr, .runner-or, .runner-ts, .runner-headgear, .runner-last-run {
+
+.runner-age,
+.runner-weight,
+.runner-rpr,
+.runner-or,
+.runner-ts,
+.runner-headgear,
+.runner-last-run {
   color: var(--color-accent-green);
   font-weight: 700;
 }
+
 .runner-more-btn {
   margin-top: 3px;
   font-size: 0.97em;
@@ -357,35 +424,46 @@
   font-weight: 700;
   transition: background 0.13s, color 0.11s;
 }
+
 .runner-more-btn:hover,
-.runner-more-btn:focus-visible { background: var(--color-accent-green); color: #111; outline: none; }
+.runner-more-btn:focus-visible {
+  background: var(--color-accent-green);
+  color: #111; /* Specific color, consider variable if common */
+  outline: none;
+}
+
 .runner-more {
   display: none;
   margin-top: 8px;
   background: var(--color-table-even-bg);
   padding: 12px 13px 9px 13px;
   border-radius: 10px;
-  box-shadow: 0 2px 7px #23293012;
+  box-shadow: 0 2px 7px #23293012; /* Specific shadow, consider using a variable if common */
   color: var(--color-text-primary);
   font-size: 0.99em;
   border: 1px solid var(--color-table-border);
 }
-.runner-card.expanded .runner-more { display: block; }
 
-/* ============ [13] RUNNER ODDS ============ */
+.runner-card.expanded .runner-more {
+  display: block;
+}
+
+/* --- [7.3] RUNNER CARD - ODDS SECTION --- */
 .runner-odds {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   min-width: 44px;
   font-size: 1.06em;
-  color: #adffa2;
+  color: #adffa2; /* Specific color, consider variable if common */
   font-weight: 800;
   margin-left: 4px;
   letter-spacing: 0.01em;
 }
 
-/* ============ [14] TABLES IN "MORE" ============ */
+/* =========================================================================== */
+/* --- [8] TABLES IN "MORE" SECTION --- */
+/* =========================================================================== */
 .runner-more-content table {
   width: 100%;
   margin-top: 7px;
@@ -393,6 +471,7 @@
   border-radius: 8px;
   border-collapse: collapse;
 }
+
 .runner-more-content td {
   padding: 2.5px 5px;
   font-size: 0.97em;
@@ -400,32 +479,51 @@
   border: none;
   vertical-align: top;
 }
-.runner-more-content tr td:first-child { font-weight: 600; color: var(--color-primary-yellow); }
 
-/* ============ [15] QUOTES / STABLE TOUR ============ */
-.runner-quotes, .runner-stable-tour {
+.runner-more-content tr td:first-child {
+  font-weight: 600;
+  color: var(--color-primary-yellow);
+}
+
+/* =========================================================================== */
+/* --- [9] QUOTES / STABLE TOUR --- */
+/* =========================================================================== */
+.runner-quotes,
+.runner-stable-tour {
   margin-top: 9px;
   font-size: 0.98em;
   color: var(--color-accent-green);
 }
-.runner-quotes ul, .runner-stable-tour ul {
+
+.runner-quotes ul,
+.runner-stable-tour ul {
   margin: 3px 0 0 0;
   padding-left: 14px;
 }
-.runner-quotes li, .runner-stable-tour li {
+
+.runner-quotes li,
+.runner-stable-tour li {
   color: var(--color-text-secondary);
   margin-bottom: 3px;
 }
 
-/* ============ [16] FOOTER ============ */
+/* =========================================================================== */
+/* --- [10] FOOTER (Global from base.css, simplified for racecard context) --- */
+/* =========================================================================== */
+/* Note: This footer block appears to be a partial duplicate/override from base.css.
+   It's recommended to define global styles like the footer in base.css and only
+   override specific properties here if absolutely necessary for the racecard page.
+   For consistency, ideally this section would be removed if it's already well-defined
+   in your global stylesheet and doesn't need unique racecard-specific modifications. */
 .site-footer {
-  background: #181c20;
+  background: #181c20; /* Consider using var(--color-footer-bg) from base.css */
   padding: 23px 0 16px 0;
-  color: #98a9ad;
+  color: #98a9ad; /* Consider using var(--color-text-secondary) from base.css */
   font-size: 1.02em;
-  border-top: 1.5px solid #262b31;
+  border-top: 1.5px solid #262b31; /* Consider using var(--color-table-border) from base.css */
   margin-top: 35px;
 }
+
 .footer-inner {
   max-width: 840px;
   margin: 0 auto;
@@ -434,52 +532,91 @@
   gap: 7px;
   align-items: center;
 }
+
 .footer-links {
   display: flex;
   gap: 19px;
   margin-bottom: 5px;
 }
+
 .footer-links a {
-  color: #bfffe0;
+  color: #bfffe0; /* Consider using var(--color-link-footer) from base.css */
   text-decoration: none;
   font-weight: 600;
   font-size: 1.06em;
 }
+
 .footer-meta {
   font-size: 0.97em;
-  color: #829398;
+  color: #829398; /* Consider using var(--color-text-secondary) from base.css */
 }
 
-/* ============ [17] RESPONSIVE ADJUSTMENTS ============ */
+/* =========================================================================== */
+/* --- [11] RESPONSIVE ADJUSTMENTS --- */
+/* =========================================================================== */
+
+/* Max-width 900px: General container adjustments */
 @media (max-width: 900px) {
-  .container { max-width: 99vw; }
-  .navbar-inner { max-width: 99vw; }
-}
-@media (max-width: 700px) {
-  .next6-bar { gap: 7px; }
-  .next6-link { min-width: 57px; font-size: 0.93em; padding: 5px 7px; }
-  .runners-list { gap: 10px; }
-  .runner-card { flex-direction: column; align-items: stretch; gap: 6px; padding: 9px 5px; }
-  .runner-num-draw, .runner-silk { margin-right: 0; }
-  .race-header h1 { font-size: 1.13em; }
-}
-@media (max-width: 500px) {
-  .next6-bar { gap: 4px; }
-  .next6-link { min-width: 35px; font-size: 0.79em; padding: 3px 2px; }
-  .runner-card { padding: 5px 2px; }
-  .runner-num { width: 20px; height: 20px; font-size: 0.9em; }
-  .runner-silk { width: 19px; height: 19px; }
-  .footer-links { gap: 8px; }
-  .race-header h1 { font-size: 1em; }
+  .container {
+    max-width: 99vw;
+  }
+  .navbar-inner {
+    max-width: 99vw;
+  }
 }
 
+/* Max-width 700px: Smaller screens, general adjustments */
+@media (max-width: 700px) {
+  .next6-bar {
+    gap: 7px;
+  }
+  .next6-link {
+    min-width: 57px;
+    font-size: 0.93em;
+    padding: 5px 7px;
+  }
+  .runners-list {
+    gap: 10px;
+  }
+  .runner-card {
+    /* Changed: Keep as row, allow wrapping for 'more' content */
+    flex-direction: row; /* Ensure main card items stay in a row */
+    flex-wrap: wrap; /* Allow items to wrap, specifically for .runner-more */
+    align-items: center; /* Vertically align items in the main row */
+    gap: 8px; /* Adjusted gap for horizontal space */
+    padding: 9px 5px; /* Reduced horizontal padding */
+    min-width: 0; /* Allow the card to shrink */
+  }
+  .runner-num-draw,
+  .runner-silk {
+    margin-right: 0; /* Ensure no extra margins push content */
+  }
+  .runner-main {
+    flex: 1 1 0%; /* Allow main content to shrink and grow, taking remaining space */
+    min-width: 0; /* Crucial for text-overflow: ellipsis to work */
+  }
+  .runner-odds {
+    margin-left: auto; /* Pushes odds to the far right */
+    flex-shrink: 0; /* Prevents odds from shrinking */
+  }
+  .runner-more {
+    width: 100%; /* Ensures 'more' section wraps to next line and takes full width */
+    margin-top: 6px; /* Adjust margin for wrapped content */
+  }
+  .race-header h1 {
+    font-size: 1.13em;
+  }
+}
+
+/* Max-width 600px: Mobile-specific layout changes and fine-tuning */
 @media (max-width: 600px) {
+  /* Topbar Layout adjustments */
   .racecard-topbar {
     flex-direction: column;
-    align-items: stretch;
+    align-items: stretch; /* Align items to stretch the full width */
     min-height: unset;
     padding: 8px 0 5px 0;
-    position: static;
+    position: static; /* Remove absolute positioning */
   }
   .racecard-topbar-left,
   .racecard-topbar-right {
@@ -488,14 +625,16 @@
     justify-content: flex-start;
   }
   .racecard-topbar-center {
-    position: static;
-    transform: none;
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Remove transform */
     width: 100%;
-    align-items: center;
+    align-items: center; /* Center content horizontally */
     padding: 0;
-    margin: 0;
+    margin: 0; /* Reset margins */
     z-index: 1;
   }
+
+  /* Next 6 Races Navigation adjustments */
   .next6-label {
     margin-bottom: 2px;
     margin-top: 4px;
@@ -515,12 +654,15 @@
     border-radius: 7px;
   }
 
-  .course-bar, .race-links-bar {
+  /* Course and Race Times Navigation adjustments */
+  .course-bar,
+  .race-links-bar {
     gap: 6px;
     font-size: 0.96em;
     margin: 0.8em 0 0.7em 0;
   }
 
+  /* Race Header and Top Picks adjustments */
   .race-header h1 {
     font-size: 1.04em;
   }
@@ -528,60 +670,120 @@
     gap: 6px;
   }
 
+  /* Runners List & Cards adjustments */
   .runners-list {
     gap: 7px;
     margin-bottom: 1.2em;
   }
   .runner-card {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 3px;
-    padding: 6px 2px 6px 2px;
-    min-width: 0;
+    /* Changed: Maintain row, allow wrapping */
+    flex-direction: row; /* Keep main card items in a row */
+    flex-wrap: wrap; /* Allow items to wrap, specifically for .runner-more */
+    align-items: center; /* Vertically align items in the main row */
+    gap: 5px; /* Further reduced gap for smaller screens */
+    padding: 6px 2px; /* Reduced padding for more horizontal space */
+    min-width: 0; /* Ensure it can shrink */
   }
   .runner-num-draw {
-    flex-direction: row;
-    gap: 7px;
-    min-width: 0;
-    margin-bottom: 1px;
+    flex-direction: column; /* Keep num and draw stacked vertically within their own box */
+    gap: 1px; /* Smaller gap for num/draw */
+    min-width: unset; /* Allow to shrink */
+    align-items: center;
   }
   .runner-num {
-    width: 20px;
-    height: 20px;
-    font-size: 0.88em;
-    margin: 0 2px 0 0;
+    width: 25px; /* Keep consistent size with 700px breakpoint */
+    height: 25px;
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .runner-draw {
+    font-size: 0.8em; /* Smaller draw number */
   }
   .runner-silk {
-    width: 18px;
-    height: 18px;
-    margin: 0 2px 0 0;
+    width: 28px; /* Keep consistent size with 700px breakpoint */
+    height: 28px;
+    margin: 0;
+    flex-shrink: 0; /* Prevent silk from shrinking */
   }
   .runner-main {
-    min-width: 0;
-    padding: 0;
+    flex: 1 1 0%; /* Allow main content to take remaining space and shrink */
+    min-width: 0; /* Crucial for overflow handling */
+    /* Removed padding: 0; as it's better handled by the parent card padding */
   }
   .runner-horse {
-    font-size: 1em;
-    margin-bottom: 1px;
+    font-size: 0.95em; /* Slightly smaller horse name */
+    margin-bottom: 0px; /* Reduce vertical space below horse name */
+    line-height: 1.2; /* Tighter line height */
+    white-space: nowrap; /* Ensure it stays on one line */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
   }
-  .runner-meta-line, .runner-info-line {
-    font-size: 0.91em;
-    gap: 3px;
+  .runner-meta-line,
+  .runner-info-line {
+    font-size: 0.85em; /* Smaller meta/info text */
+    gap: 2px; /* Smaller gap within meta lines */
+    white-space: nowrap; /* Ensure they stay on one line if possible */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .runner-more-btn {
-    font-size: 0.91em;
-    padding: 2px 7px;
-    margin-top: 3px;
+    font-size: 0.85em;
+    padding: 2px 5px; /* Smaller button padding */
+    margin-top: 2px; /* Reduced top margin */
+  }
+  .runner-odds {
+    min-width: 35px; /* Ensure sufficient width for odds */
+    font-size: 0.95em;
+    margin-left: auto; /* Push odds to the right */
+    padding: 0;
+    flex-shrink: 0; /* Prevent odds from shrinking */
+  }
+  .runner-more {
+    width: 100%; /* Ensures 'more' section wraps to next line and takes full width */
+    font-size: 0.93em;
+    padding: 7px 6px;
+    margin-top: 6px; /* Adjust margin for wrapped content */
+  }
+}
+
+/* Max-width 500px: Smallest screen adjustments */
+@media (max-width: 500px) {
+  .next6-bar {
+    gap: 4px;
+  }
+  .next6-link {
+    min-width: 35px;
+    font-size: 0.79em;
+    padding: 3px 2px;
+  }
+  .runner-card {
+    gap: 4px; /* Even tighter gap */
+    padding: 4px 2px;
+  }
+  .runner-num {
+    width: 22px;
+    height: 22px;
+    font-size: 0.85em;
+  }
+  .runner-silk {
+    width: 24px;
+    height: 24px;
+  }
+  .runner-horse {
+    font-size: 0.9em;
+  }
+  .runner-meta-line,
+  .runner-info-line {
+    font-size: 0.8em;
   }
   .runner-odds {
     min-width: 30px;
-    font-size: 0.92em;
-    margin-left: 2px;
-    padding: 0;
+    font-size: 0.9em;
   }
-  .runner-more {
-    font-size: 0.93em;
-    padding: 7px 6px;
-    margin-top: 6px;
+  .footer-links {
+    gap: 8px;
+  }
+  .race-header h1 {
+    font-size: 1em;
   }
 }

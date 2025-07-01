@@ -165,6 +165,133 @@ body.nav-open {
   touch-action: none; /* Prevents scrolling on touch devices */
 }
 
+/* =========================================================================== */
+/* --- Next 6 Races Bar --- */
+/* =========================================================================== */
+#next6-bar {
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  gap: var(--spacing-sm); /* Spacing between pills */
+  justify-content: center; /* Center the pills horizontally */
+  align-items: center; /* Vertically align items */
+  background: var(--color-section-bg); /* Use a consistent background from your variables */
+  padding: var(--spacing-md) var(--spacing-sm); /* Padding inside the bar */
+  border-radius: 10px; /* Slightly rounded corners for the bar */
+  box-shadow: var(--shadow-md); /* Add a subtle shadow */
+  margin: var(--spacing-xl) auto; /* Top/bottom margin and center horizontally */
+  max-width: 900px; /* Keep it within a reasonable width, similar to .container */
+  border: 1px solid var(--color-table-border); /* Subtle border */
+  transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#next6-bar .next6-title {
+  color: var(--color-text-secondary); /* Style for the "No more races today" text */
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 0 var(--spacing-sm); /* Some internal padding */
+}
+
+.next6-pill {
+  display: flex; /* Flexbox for content inside each pill */
+  align-items: center; /* Vertically align items inside the pill */
+  background: var(--color-table-odd-bg); /* Background for each pill */
+  border-radius: 8px; /* Rounded corners for pills */
+  padding: var(--spacing-xs) var(--spacing-sm); /* Padding inside pills */
+  box-shadow: var(--shadow-sm); /* Subtle shadow for each pill */
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  border: 1px solid var(--color-table-border); /* Subtle border for pills */
+}
+
+.next6-pill:hover {
+  background: var(--color-section-bg-hover); /* Darker on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+  box-shadow: var(--shadow-md);
+}
+
+.next6-course {
+  color: var(--color-text-primary); /* Course name text color */
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-right: var(--spacing-sm); /* Space between course name and time */
+  white-space: nowrap; /* Prevent course name from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for truncated names */
+  max-width: 80px; /* Limit width to ensure truncation happens if needed */
+  transition: color var(--transition-fast);
+}
+
+.next6-time-btn {
+  display: inline-flex; /* Use flex to easily center content if needed */
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary-button); /* Use your primary button gradient */
+  color: var(--color-text-inverted); /* Inverted text color for contrast */
+  font-size: 0.9em;
+  font-weight: 700;
+  padding: 6px 12px; /* Padding for the time button */
+  border-radius: 6px; /* Rounded corners for the time button */
+  text-decoration: none; /* Remove underline */
+  box-shadow: var(--shadow-sm); /* Subtle shadow for the button */
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  flex-shrink: 0; /* Prevent the button from shrinking */
+}
+
+.next6-time-btn:hover {
+  background: var(--gradient-primary-button-hover); /* Hover gradient */
+  transform: translateY(-0.5px);
+  box-shadow: var(--shadow-md);
+}
+
+.next6-time-btn.past {
+  /* Styles for past races, if you want them to look different */
+  background: var(--color-table-header-bg); /* Muted background */
+  color: var(--color-text-secondary); /* Muted text color */
+  box-shadow: none;
+  pointer-events: none; /* Prevent clicking on past races if desired */
+  opacity: 0.7;
+}
+
+/* Light Mode Overrides for Next 6 Races Bar */
+html[data-theme="light"] #next6-bar {
+  background: var(--color-section-bg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-table-border);
+}
+
+html[data-theme="light"] .next6-pill {
+  background: var(--color-table-even-bg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-table-border);
+}
+
+html[data-theme="light"] .next6-pill:hover {
+  background: var(--color-section-bg-hover);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-theme="light"] .next6-course {
+  color: var(--color-text-primary);
+}
+
+html[data-theme="light"] .next6-time-btn {
+  background: var(--gradient-primary-button);
+  color: var(--color-text-inverted);
+  box-shadow: var(--shadow-sm);
+}
+
+html[data-theme="light"] .next6-time-btn:hover {
+  background: var(--gradient-primary-button-hover);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-theme="light"] .next6-time-btn.past {
+  background: var(--color-table-header-bg);
+  color: var(--color-text-secondary);
+}
+/* End Next 6 Races Bar styles */
+/* =========================================================================== */
+
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -831,10 +958,30 @@ html[data-theme="light"] .page-desc b {
     gap: 0.2em;
     font-size: 0.97em;
   }
+  /* Responsive adjustments for next6-bar specific to 600px */
+  #next6-bar {
+    margin: var(--spacing-lg) auto; /* Reduce margin on smaller screens */
+    padding: var(--spacing-sm); /* Reduce padding */
+  }
+  .next6-pill {
+    padding: 5px 10px; /* Slightly less padding */
+  }
+  .next6-course {
+    font-size: 0.9em;
+    max-width: 65px; /* Further limit width on very small screens */
+  }
+  .next6-time-btn {
+    font-size: 0.85em;
+    padding: 4px 10px;
+  }
 }
 @media (max-width: 480px) {
   .container { padding: 7px 1vw 14px 1vw; }
   h1 { font-size: clamp(1.0em, 3vw, 1.11em); }
   h2 { font-size: clamp(0.95em, 2.8vw, 1.02em); }
   .primary-btn { font-size: 0.9em; padding: 6px 9px; }
+  /* Responsive adjustments for next6-bar specific to 400px */
+  #next6-bar {
+    gap: var(--spacing-xs); /* Even less gap on very narrow screens */
+  }
 }
