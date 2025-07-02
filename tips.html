@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark"> <head>
+<html lang="en" data-theme="dark">
+<head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -8,41 +9,54 @@
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
-  <title>Smart Picks | Daily Data-Driven Racing Insights - Smart Racecards</title>
-  <meta name="description" content="View today’s Smart Picks – our data-backed horse racing selections for UK & Irish races. See how our ratings identify strong, value, and outsider runners. Not betting advice." />
+  <title>Tipster Showdown! Michael vs Chris vs Cal’s Smart Picks | Smart Racecards</title>
+  <meta name="description" content="It’s tipster vs tipster! See who comes out on top with Michael Pilling, Chris Waldock and Cal’s data-powered picks for today’s UK & Irish racing. Who gets bragging rights?" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="tips.css" />
 </head>
 <body>
-<nav class="main-navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">
-      <img src="logo.png" alt="Smart Racecards Logo">
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="results.html" class="nav-link">Results</a>
-      <a href="tips.html" class="nav-link">Smart Picks</a>
-      <a href="yesterday.html" class="nav-link">Historical</a>
-      <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About</a>
+  <nav class="main-navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="Smart Racecards Logo">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="tips.html" class="nav-link">Tipster</a>
+        <a href="yesterday.html" class="nav-link">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+        <span class="icon-dark">🌙</span>
+        <span class="icon-light">☀️</span>
+      </button>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
-    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
-      <span class="icon-dark">🌙</span>
-      <span class="icon-light">☀️</span>
-    </button>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
-  </div>
-  <div class="nav-backdrop" id="navBackdrop"></div>
-</nav>
-  <main class="tips-main" id="main"></main>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+  </nav>
+  
+  <main class="tips-main" id="main">
+    <header class="hero-section" style="text-align:center;">
+      <h1 class="page-title" style="font-size:2.3em;line-height:1.14">
+        <span style="color:#ffd700;">Tipster Showdown!</span><br>
+        <span style="font-size:0.8em;font-weight:400;">Michael vs Chris vs Cal’s Algorithm</span>
+      </h1>
+      <p class="tips-intro" style="font-size:1.15em;">
+        It’s bragging rights on the line!<br>
+        Can Michael or Chris out-tip the Smart Racecards AI? <b>See today’s best from all three—then follow along and decide who’s king for the day.</b>
+      </p>
+    </header>
+    <!-- Remainder of the main content is rendered by tips.js -->
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
@@ -60,8 +74,8 @@
       </div>
       <div class="footer-disclaimer">
         <small>
-          These “Smart Picks” are generated using automated data analysis and are <b>not betting advice</b>.<br>
-          No profits are guaranteed. For information only. Gamble responsibly. 18+
+          All “Smart Picks” and tipster selections are for information only. No betting advice or guarantees.<br>
+          Please gamble responsibly. 18+
         </small>
       </div>
     </div>

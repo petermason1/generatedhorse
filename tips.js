@@ -4,7 +4,6 @@ console.log('tips.js: Script started.');
     const main = document.getElementById('main');
     if (!main) {
         console.error("tips.js: Main element with ID 'main' not found in the DOM.");
-        console.error("Error: Page structure incomplete. Missing 'main' element. Please check tips.html.");
         return;
     }
 
@@ -16,10 +15,10 @@ console.log('tips.js: Script started.');
         } else {
             main.innerHTML = `
               <div class="container">
-                <h1 class="page-title">Today’s Smart Picks</h1>
+                <h1 class="page-title">Today’s Tipster Showdown</h1>
                 <p class="tips-intro">
-                  Our data-driven system automatically highlights standout runners based on ratings, form, and key stats.
-                  <br><b>For information only — NOT betting advice.</b>
+                  Data-driven highlights from today’s UK & Irish racing.<br>
+                  <b>For information only — NOT betting advice.</b>
                 </p>
                 <h2>No racecards loaded or data format is incorrect.</h2>
                 <p>Please ensure 'data.js' is correctly generated and contains valid racecard data.</p>
@@ -30,10 +29,10 @@ console.log('tips.js: Script started.');
         console.error("tips.js: Error loading racecards data:", error);
         main.innerHTML = `
           <div class="container">
-            <h1 class="page-title">Today’s Smart Picks</h1>
+            <h1 class="page-title">Today’s Tipster Showdown</h1>
             <p class="tips-intro">
-              Our data-driven system automatically highlights standout runners based on ratings, form, and key stats.
-              <br><b>For information only — NOT betting advice.</b>
+              Data-driven highlights from today’s UK & Irish racing.<br>
+              <b>For information only — NOT betting advice.</b>
             </p>
             <h2>An error occurred while displaying picks.</h2>
             <p>Please check the browser console for details.</p>
@@ -41,14 +40,13 @@ console.log('tips.js: Script started.');
         return;
     }
 
-    // Scoring weights (tune as needed)
+    // === SCORING (keep your system as-is) ===
     const TIPS_WEIGHTS = {
         rprWeight: 1.8, tsWeight: 1.0, orWeight: 0.7, winsWeight: 3.5, placesWeight: 2.0,
         lastRunPenaltyWeight: -0.3, lastRunBonusWeight: 0.15,
         trainerPercentWeight: 1.8, trainerWinsWeight: 1.5,
         trainerBonusValue: 0.8, layoffPenaltyValue: -3.0, courseFormWeight: 1.0
     };
-
     function scoreRunner(r) {
         const rpr = Number.parseInt(r.rpr) || 0;
         const ts = Number.parseInt(r.ts) || 0;
@@ -63,7 +61,6 @@ console.log('tips.js: Script started.');
         const trainerPercent = Number.parseFloat(r.trainer_14_days?.percent) || 0;
         const trainerWins = Number.parseInt(r.trainer_14_days?.wins) || 0;
         const courseFormWins = (r.course_form?.match(/1/g) || []).length;
-
         let score = 0;
         score += TIPS_WEIGHTS.rprWeight * rpr;
         score += TIPS_WEIGHTS.tsWeight * ts;
@@ -81,7 +78,6 @@ console.log('tips.js: Script started.');
         if (!Number.isFinite(score)) score = 0;
         return Math.round(score * 100) / 100;
     }
-
     function explainPick(r) {
         let reasons = [];
         const rpr = Number.parseInt(r.rpr) || 0;
@@ -95,7 +91,6 @@ console.log('tips.js: Script started.');
         let wins = (form.match(/1/g) || []).length;
         let placed = (form.match(/[23]/g) || []).length;
         const courseFormWins = (r.course_form?.match(/1/g) || []).length;
-
         if (trainerP >= 25 && trainerW >= 5) reasons.push(`trainer in excellent recent form (${trainerP}% with ${trainerW} wins)`);
         else if (trainerP >= 20) reasons.push(`trainer in hot form (${trainerP}% last 2wks)`);
         else if (trainerW >= 3) reasons.push(`trainer has multiple recent winners (${trainerW})`);
@@ -114,7 +109,6 @@ console.log('tips.js: Script started.');
         if (lastRun <= 25) reasons.push(`raced recently (${lastRun} days ago)`);
         let negativeReasons = [];
         if (lastRun > 90 && wins === 0) negativeReasons.push(`a long layoff without recent wins`);
-
         let mainReason = '';
         if (reasons.length > 0) {
             mainReason = `Key strengths include ${reasons.slice(0, 3).join(', ')}.`;
@@ -128,7 +122,6 @@ console.log('tips.js: Script started.');
         if (oddsFrac) mainReason += ` Current odds: ${oddsFrac}.`;
         return mainReason.charAt(0).toUpperCase() + mainReason.slice(1);
     }
-
     function fractionToDecimalOdds(fraction) {
         if (!fraction || typeof fraction !== 'string') return Infinity;
         const parts = fraction.split('/');
@@ -143,7 +136,6 @@ console.log('tips.js: Script started.');
         if (Number.isFinite(decimalValue)) return decimalValue;
         return Infinity;
     }
-
     // Attach scores and odds to all runners
     races.forEach(race => {
         (race.runners || []).forEach(r => {
@@ -153,87 +145,82 @@ console.log('tips.js: Script started.');
         });
     });
 
-    // Collect picks by type (unfiltered, can overlap by race)
-    let topRaw = [], valueRaw = [], outsiderRaw = [];
-    races.forEach(race => {
-        if (!race.runners || !race.runners.length) return;
-        const sorted = [...race.runners].sort((a, b) => (b.score || 0) - (a.score || 0));
-        const [first, second, third] = sorted;
-        if (!first || first.score <= 0) return;
-        // Top Pick: clear best, not too short, big gap
-        if (
-            second &&
-            first.oddsDecimal && first.oddsDecimal <= 7.0 &&
-            ((first.score - second.score) / Math.max(second.score, 1)) > 0.15
-        ) {
-            topRaw.push({ ...first, tipType: "Top Pick" });
-        }
-        // Value: 2nd/3rd best, mid odds, nearly as good as best
-        for (let r of [second, third]) {
-            if (!r) continue;
-            if (
-                r.oddsDecimal && r.oddsDecimal >= 5 && r.oddsDecimal < 17 &&
-                r.score / first.score >= 0.85 && r.score > 0
-            ) {
-                valueRaw.push({ ...r, tipType: "Value" });
-            }
-        }
-        // Outsider: 2nd/3rd, big price, not hopeless
-        for (let r of [second, third]) {
-            if (!r) continue;
-            if (
-                r.oddsDecimal && r.oddsDecimal >= 17 &&
-                r.score / first.score >= 0.70 && r.score > 0
-            ) {
-                outsiderRaw.push({ ...r, tipType: "Outsider" });
-            }
-        }
-    });
+    // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
+const michaelsTips = ["Easy Peeler", "Dandy Style", "Jaipaletemps", "Halondo"];
+const chrisTips    = ["Gone in sixty", "Play Pretend", "Alzahir", "miss Barfad"];
+const peterTips    = ["village master", "nana noodleman", "Bobacious", "Starlight Time"];
 
-    // Helper to get unique races per tip type (don't double up on same race in category)
-    function filterUniqueRace(tipsArr) {
-        const used = new Set();
-        return tipsArr.filter(tip => {
-            const key = tip.race._id || tip.race.race_id;
-            if (used.has(key)) return false;
-            used.add(key);
-            return true;
+    // Helper to find a runner object by horse name
+    function getRunnerByHorseName(horseName, races) {
+        for (const race of races) {
+            const runner = (race.runners || []).find(r =>
+                (r.horse || '').toLowerCase() === horseName.toLowerCase()
+            );
+            if (runner) return { ...runner, race };
+        }
+        return null;
+    }
+
+    // Sort by race off time (works with various date/time fields)
+    function sortByOffTime(arr) {
+        return arr.slice().sort((a, b) => {
+            const getTime = r => {
+                if (r.race.off_dt) return new Date(r.race.off_dt).getTime();
+                if (r.race.race_datetime) return new Date(r.race.race_datetime).getTime();
+                if (r.race.date && r.race.off_time) return new Date(`${r.race.date}T${r.race.off_time}`).getTime();
+                if (r.race.off_time) {
+                    const [h, m] = r.race.off_time.split(':');
+                    return (parseInt(h,10) * 60 + parseInt(m,10)) * 60 * 1000;
+                }
+                return 0;
+            };
+            return getTime(a) - getTime(b);
         });
     }
 
-    // Final: max 3 per type, no same race in same category
-    const topPicks = filterUniqueRace(topRaw).slice(0, 3);
-    const valuePicks = filterUniqueRace(valueRaw.filter(
-        v => !topPicks.some(t => (t.race._id || t.race.race_id) === (v.race._id || v.race.race_id))
-    )).slice(0, 3);
-    const outsiders = filterUniqueRace(outsiderRaw.filter(
-        o => !topPicks.some(t => (t.race._id || t.race.race_id) === (o.race._id || o.race.race_id)) &&
-             !valuePicks.some(v => (v.race._id || v.race.race_id) === (o.race._id || o.race.race_id))
-    )).slice(0, 3);
+    // Build tipster pick cards (skip if name not found in data, then sort)
+    const michaelsFeatured = sortByOffTime(
+        michaelsTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    );
+    const chrisFeatured = sortByOffTime(
+        chrisTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    );
+    const peterFeatured = sortByOffTime(
+        peterTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    );
 
-    // RENDERING
+    // === CAL'S PICKS: HIGHEST SCORING 3 RUNNERS OF THE DAY (NO DUPLICATE RACES), THEN SORT BY OFF TIME ===
+    const allRunners = races.flatMap(race => (race.runners || []).map(r => ({...r, race})));
+    const sortedByScore = allRunners.filter(r => r.score > 0).sort((a, b) => b.score - a.score);
+    const usedRaceIds = new Set();
+let calsPicks = [];
+for (const r of sortedByScore) {
+    const raceId = r.race._id || r.race.race_id;
+    if (!usedRaceIds.has(raceId)) {
+        calsPicks.push(r);
+        usedRaceIds.add(raceId);
+    }
+    if (calsPicks.length === 4) break;   // <-- set to 4 here!
+}
+calsPicks = sortByOffTime(calsPicks);
+
+
+    // === RENDER ===
 
     function renderTipCard(r, i, badge) {
-      // Use r.silk_url as confirmed by the user, with a placeholder for missing silks
       const silksImageUrl = r.silk_url ? r.silk_url : 'https://placehold.co/40x40/333/fff?text=No+Silk';
-
-      // Extract race type from race_name and filter it out
       let raceName = r.race.race_name || '';
-      const raceTypeMatch = raceName.match(/\((.*?)\)/); // Matches content in parentheses
+      const raceTypeMatch = raceName.match(/\((.*?)\)/);
       let filteredRaceName = raceName;
       if (raceTypeMatch && raceTypeMatch[0]) {
           filteredRaceName = raceName.replace(raceTypeMatch[0], '').trim();
       }
-      // Further filter out common race type keywords if not in parentheses
       const commonRaceTypes = ['Handicap', 'Maiden', 'Stakes', 'Chase', 'Hurdle', 'Flat', 'National Hunt'];
       for (const type of commonRaceTypes) {
           filteredRaceName = filteredRaceName.replace(new RegExp(type, 'gi'), '').trim();
       }
-      // Remove any trailing hyphens or empty parentheses left from filtering
       filteredRaceName = filteredRaceName.replace(/-\s*$/, '').trim();
       filteredRaceName = filteredRaceName.replace(/\(\s*\)/, '').trim();
-
-
       return `
         <div class="tip-card">
           <div class="silks-wrapper">
@@ -258,34 +245,33 @@ console.log('tips.js: Script started.');
       `;
     }
 
+    // === FINAL PAGE HTML ===
     try {
         main.innerHTML = `
           <div class="container">
-            <h1 class="page-title">Today’s Smart Picks</h1>
+            <h1 class="page-title">Today’s Tipster Showdown</h1>
             <p class="tips-intro">
-              <b>Automated shortlists for today’s UK & Irish racing.</b><br>
-              Selections below are generated by our system using performance ratings, form, and key stats.
-              <br><span style="color:var(--color-primary-yellow)"><b>These are NOT tips or betting advice – just data-driven suggestions.</b></span>
+              Michael, Chris, Peter, and Cal’s data bot go head-to-head.<br>
+              <b>Who lands bragging rights today?</b>
             </p>
-
-            <section class="tips-section">
-              <h2 class="section-title top-picks-title">Smart Picks <span class="section-subtitle">(Best Rated)</span></h2>
-              ${topPicks.length ? topPicks.map((r, i) => renderTipCard(r, i, 'Smart Pick')).join('') : '<div class="no-picks">No standouts today.</div>'}
+            <section class="tips-section featured-section">
+              <h2 class="section-title">Michael Pilling’s Tips of the Day</h2>
+              ${michaelsFeatured.length ? michaelsFeatured.map((r, i) => renderTipCard(r, i, "Michael's Pick")).join('') : '<div class="no-picks">No tips submitted.</div>'}
             </section>
-
-            <section class="tips-section">
-              <h2 class="section-title value-picks-title">Value Runners <span class="section-subtitle">(Strong Scores, Mid-Range Odds)</span></h2>
-              ${valuePicks.length ? valuePicks.map((r, i) => renderTipCard(r, i, 'Value')).join('') : '<div class="no-picks">No value runners today.</div>'}
+            <section class="tips-section featured-section">
+              <h2 class="section-title">Chris Waldock’s Tips of the Day</h2>
+              ${chrisFeatured.length ? chrisFeatured.map((r, i) => renderTipCard(r, i, "Chris's Pick")).join('') : '<div class="no-picks">No tips submitted.</div>'}
             </section>
-
-            <section class="tips-section">
-              <h2 class="section-title outsider-picks-title">Outsiders <span class="section-subtitle">(Potential at Longer Odds)</span></h2>
-              ${outsiders.length ? outsiders.map((r, i) => renderTipCard(r, i, 'Outsider')).join('') : '<div class="no-picks">No outsiders today.</div>'}
+            <section class="tips-section featured-section">
+              <h2 class="section-title">Peter Mason’s Tips of the Day</h2>
+              ${peterFeatured.length ? peterFeatured.map((r, i) => renderTipCard(r, i, "Peter's Pick")).join('') : '<div class="no-picks">No tips submitted.</div>'}
             </section>
-
+            <section class="tips-section featured-section">
+              <h2 class="section-title">Cal’s Picks of the Day <span class="section-subtitle">(Top Data-Rated)</span></h2>
+              ${calsPicks.length ? calsPicks.map((r, i) => renderTipCard(r, i, "Cal's Pick")).join('') : '<div class="no-picks">No strong picks today.</div>'}
+            </section>
             <div class="tips-disclaimer" style="text-align:center;color:var(--color-primary-yellow);font-size:0.98em;margin-top:2em;">
-              <b>Disclaimer:</b> These “Smart Picks” are automated and not intended as betting advice.<br>
-              No profits are guaranteed. For information only. Please gamble responsibly. 18+
+              <b>Disclaimer:</b> All picks are for information only and not betting advice. Please gamble responsibly.
             </div>
           </div>
         `;
@@ -293,16 +279,14 @@ console.log('tips.js: Script started.');
         console.error("tips.js: Error during final HTML rendering:", renderError);
         main.innerHTML = `
           <div class="container">
-            <h1 class="page-title">Today’s Smart Picks</h1>
+            <h1 class="page-title">Today’s Tipster Showdown</h1>
             <p class="tips-intro">
-              Our data-driven system automatically highlights standout runners based on ratings, form, and key stats.
-              <br><b>For information only — NOT betting advice.</b>
+              An error occurred while displaying picks.<br>
+              Please check the browser console for details.
             </p>
-            <h2>An error occurred while displaying picks.</h2>
-            <p>Please check the browser console for details.</p>
           </div>`;
     }
 
-    console.log(`tips.js: Rendered ${topPicks.length} top, ${valuePicks.length} value, ${outsiders.length} outsider picks.`);
+    console.log(`tips.js: Rendered ${michaelsFeatured.length} Michael, ${chrisFeatured.length} Chris, ${peterFeatured.length} Peter, ${calsPicks.length} Cal picks.`);
     console.log('tips.js: Script finished.');
 })();
