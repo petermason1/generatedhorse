@@ -251,7 +251,7 @@ calsPicks = sortByOffTime(calsPicks);
           <div class="container">
             <h1 class="page-title">Today’s Tipster Showdown</h1>
             <p class="tips-intro">
-              Michael, Chris, Peter, and Cal’s data bot go head-to-head.<br>
+              Michael, Chris, Peter, and The Calc's data bot go head-to-head.<br>
               <b>Who lands bragging rights today?</b>
             </p>
             <section class="tips-section featured-section">
