@@ -267,7 +267,7 @@ calsPicks = sortByOffTime(calsPicks);
               ${peterFeatured.length ? peterFeatured.map((r, i) => renderTipCard(r, i, "Peter's Pick")).join('') : '<div class="no-picks">No tips submitted.</div>'}
             </section>
             <section class="tips-section featured-section">
-              <h2 class="section-title">Cal’s Picks of the Day <span class="section-subtitle">(Top Data-Rated)</span></h2>
+              <h2 class="section-title">Calc’s Picks of the Day <span class="section-subtitle">(Top Data-Rated)</span></h2>
               ${calsPicks.length ? calsPicks.map((r, i) => renderTipCard(r, i, "Cal's Pick")).join('') : '<div class="no-picks">No strong picks today.</div>'}
             </section>
             <div class="tips-disclaimer" style="text-align:center;color:var(--color-primary-yellow);font-size:0.98em;margin-top:2em;">
