@@ -1,35 +1,26 @@
-require('dotenv').config();
-const express = require('express');
-const fetch = require('node-fetch');
-const app = express();
-const port = 3001;
-
-app.get('/api/results', async (req, res) => {
-  const username = process.env.RACINGAPI_USERNAME;
-  const password = process.env.RACINGAPI_PASSWORD;
+export default async function handler(req, res) {
+  const username = process.env.RACING_API_USERNAME;
+  const password = process.env.RACING_API_PASSWORD;
+  if (!username || !password) {
+    res.status(500).json({ error: "API username or password not set!" });
+    return;
+  }
   const auth = Buffer.from(`${username}:${password}`).toString('base64');
-  const apiUrl = `https://api.theracingapi.com/v1/results/today`;
-
   try {
-    const apiRes = await fetch(apiUrl, {
+    const apiRes = await fetch("https://api.theracingapi.com/v1/results/today", {
       headers: {
         'Authorization': `Basic ${auth}`,
-        'Accept': 'application/json',
+        'Accept': 'application/json'
       }
     });
-
     if (!apiRes.ok) {
-      res.status(apiRes.status).json({ error: "API error" });
+      const text = await apiRes.text();
+      res.status(apiRes.status).json({ error: "API error", details: text });
       return;
     }
-
     const data = await apiRes.json();
     res.status(200).json(data);
   } catch (e) {
-    res.status(500).json({ error: 'Error fetching from RacingAPI' });
+    res.status(500).json({ error: 'Error fetching from RacingAPI', details: e.message });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Local API server running at http://localhost:${port}/api/results`);
-});
+}
