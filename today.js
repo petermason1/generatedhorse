@@ -40,26 +40,24 @@ function renderNext6Bar(races) {
   let nextIndex = getNextRaceIndex(races);
 
   // Always show 6 boxes (pad with nulls)
-  while (races.length < 6) races.push(null);
+  // IMPORTANT: Ensure you have exactly 6 items for a 3x2 grid to fill correctly
+  while (races.length < 6) {
+      races.push(null);
+  }
+  // If you have more than 6, slice it to ensure only 6 are rendered in this component
+  races = races.slice(0, 6);
 
   if (isMobile()) {
-    let row1 = races.slice(0, 3);
-    let row2 = races.slice(3, 6);
+    // For mobile (3x2 grid), place all race boxes directly into next6-bar-grid
     barDiv.innerHTML = `
       <div class="next6-bar-grid">
-        <div class="next6-row">
-          ${row1.map((race, i) =>
-            race ? renderRaceBox(race, i, nextIndex, now, 'race-bar-box') : `<span class="race-bar-box race-bar-empty"></span>`
-          ).join('')}
-        </div>
-        <div class="next6-row">
-          ${row2.map((race, i) =>
-            race ? renderRaceBox(race, i + 3, nextIndex, now, 'race-bar-box') : `<span class="race-bar-box race-bar-empty"></span>`
-          ).join('')}
-        </div>
+        ${races.map((race, i) =>
+          race ? renderRaceBox(race, i, nextIndex, now, 'race-bar-box') : `<span class="race-bar-box race-bar-empty"></span>`
+        ).join('')}
       </div>
     `;
   } else {
+    // For desktop (flex row), keep the next6-bar container
     barDiv.innerHTML = `
       <div class="next6-bar">
         ${races.map((race, i) =>
