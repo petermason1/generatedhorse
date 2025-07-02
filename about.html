@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
+<html lang="en"> <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
-  <title>About Smart Racecards | Data-Driven Horse Racing Analysis</title> <!-- SEO Enhancement: More descriptive title -->
-  <meta name="description" content="Learn about Smart Racecards: our team, proprietary rating system, and commitment to transparent, data-driven horse racing analysis."> <!-- SEO Enhancement: Added meta description -->
+  <title>About Smart Racecards | Data-Driven Horse Racing Analysis</title>
+  <meta name="description" content="Learn about Smart Racecards: our team, proprietary rating system, and commitment to transparent, data-driven horse racing analysis.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="base.css" /> <!-- Link to base.css first -->
-    <link rel="stylesheet" href="about.css" /> <!-- Then link to custom-score.css -->
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
 <body>
 <nav class="main-navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-brand">🏇 Racecards</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="tips.html" class="nav-link">Tips</a>
-         <a href="yesterday.html" class="nav-link">Historical</a>
-         <a href="custom-score.html" class="nav-link">Custom Score</a> <!-- New Link -->
-         <a href="about.html" class="nav-link nav-link-active">About</a> <!-- Removed hardcoded nav-link-active, JS will handle -->
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="Smart Racecards Logo">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="today.html" class="nav-link">Today's Races</a>
+      <a href="results.html" class="nav-link">Results</a>
+      <a href="tips.html" class="nav-link">Tipster</a>
+      <a href="yesterday.html" class="nav-link">Historical</a>
+      <a href="custom-score.html" class="nav-link">Custom Score</a>
+      <a href="about.html" class="nav-link">About</a>
     </div>
-  </nav>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</nav>
 
 
   <main class="about-container">
@@ -46,18 +54,16 @@
     </div>
 
     <h2 class="section-title">How It Works</h2>
-<ul class="fancy-list">
-  <li>Every UK & Irish race is rated daily using our proprietary algorithm</li>
-  <li>Each horse is scored on form, speed, trainer stats, and more</li>
-  <li>The system highlights both likely winners and value picks</li>
-  <li>Our process is grounded in data—not hype or guesswork</li>
-  <li>New features and membership options may be introduced in the future—details will always be clear and upfront</li>
-</ul>
-
+    <ul class="fancy-list">
+      <li data-emoji="📈">Every UK & Irish race is rated daily using our proprietary algorithm</li>
+      <li data-emoji="⚙️">Each horse is scored on form, speed, trainer stats, and more</li>
+      <li data-emoji="🏆">The system highlights both likely winners and value picks</li>
+      <li data-emoji="📊">Our process is grounded in data—not hype or guesswork</li>
+      <li data-emoji="✨">New features and membership options may be introduced in the future—details will always be clear and upfront</li>
+    </ul>
 
     <h2 class="section-title">Meet the Team</h2>
     <div class="team-section">
-
       <div class="team-card">
         <div>
           <span class="team-name">Peter Mason</span><br>
@@ -88,14 +94,23 @@
         </div>
       </div>
 
+      <div class="team-card">
+        <div>
+          <span class="team-name">Gary Betts</span><br>
+          <span class="team-role">Sales &amp; Marketing</span>
+          <div class="team-desc">
+            Gary connects our data to the real world. With years in racing and sports media, he’s the voice behind our social channels and keeps punters in the loop about new features and offers.
+          </div>
+        </div>
+      </div>
     </div>
 
     <h2 class="section-title">Why Trust Us?</h2>
     <ul class="fancy-list trust-list">
-      <li>Full transparency: all tips and results are published, win or lose</li>
-      <li>Our selections are based on independent, data-driven analysis</li>
-      <li>We operate with integrity—no hype, no selective reporting</li>
-      <li>If the site ever features paid services or affiliate partnerships, this will be clearly disclosed</li>
+      <li data-emoji="✅">Full transparency: all tips and results are published, win or lose</li>
+      <li data-emoji="🔍">Our selections are based on independent, data-driven analysis</li>
+      <li data-emoji="🤝">We operate with integrity—no hype, no selective reporting</li>
+      <li data-emoji="ℹ️">If the site ever features paid services or affiliate partnerships, this will be clearly disclosed</li>
     </ul>
 
     <div class="about-contact-footer">
@@ -104,34 +119,31 @@
       <i>Punting should be enjoyable and responsible. Never bet more than you can afford to lose. This site is for informational purposes, not betting advice.</i>
     </div>
   </main>
-    <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  });
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Tips</a>
+      <a href="yesterday.html">Historical</a>
+      <a href="custom-score.html">Custom Score</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="footer-meta">
+      <span id="footer-year"></span> Smart Racecards
+      <span>•</span>
+      <a href="mailto:info@smartracecards.com">Contact</a>
+    </div>
+    <div class="footer-disclaimer">
+      <small>
+        For informational purposes only – not betting advice.<br>
+        Please gamble responsibly. 18+
+      </small>
+    </div>
+  </div>
+</footer>
 
-  // Optional: Close menu when a link is clicked (good for single-page sites)
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      hamburger.classList.remove('active');
-    });
-  });
 
-  // Highlight active nav link based on current page - added for consistency
-  document.addEventListener('DOMContentLoaded', () => {
-      const currentPath = window.location.pathname.split('/').pop();
-      document.querySelectorAll('.nav-link').forEach(link => {
-          // Remove potential hardcoded 'nav-link-active' from the HTML
-          link.classList.remove('nav-link-active');
-          if (link.getAttribute('href') === currentPath) {
-              link.classList.add('nav-link-active');
-          }
-      });
-  });
-</script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -1,122 +1,228 @@
 /*
  * custom-score.css: Styles specific to the custom-score.html page.
  * This file should be imported AFTER base.css.
+ *
+ * Optimizations Applied:
+ * - Replaced hardcoded colors with CSS variables.
+ * - Utilized shared gradient CSS variables from base.css.
+ * - Consolidated and removed redundant light mode overrides.
+ * - Standardized shadow application using CSS variables.
+ * - Removed duplicated CSS blocks.
  */
 
 /* --- Page Title (overrides base.css h1 for this specific page) --- */
 .page-title {
     text-align: center;
-    margin: 2em auto 1.2em auto; /* Increased top margin for more breathing room */
-    font-size: 2.6em; /* Larger, more impactful title */
-    color: #ffd700; /* Main golden yellow color */
-    font-weight: 900; /* Extra bold for prominence */
-    letter-spacing: 0.03em; /* Slightly more prominent letter spacing */
-    max-width: 750px; /* Slightly wider constraint */
-    text-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 0 15px rgba(255,215,0,0.3); /* Subtle text shadow/glow */
+    margin: 2em auto 1.2em auto;
+    font-size: 2.6em;
+    color: var(--color-primary-yellow); /* Optimized: Uses variable */
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    max-width: 750px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 0 15px rgba(255,215,0,0.3);
+}
+
+/* Light mode overrides for page title */
+html[data-theme="light"] .page-title {
+    text-shadow: none;
+    /* color: var(--color-primary-yellow); - REMOVED: Already handled by the base rule which uses the variable */
 }
 
 /* --- Race Selector Dropdown Styles --- */
 .race-selector-container {
     text-align: center;
-    margin: 1.5em auto 2em auto; /* Centered with more vertical space */
+    margin: 1.5em auto 2em auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px; /* Increased gap */
+    gap: 12px;
 }
 
 .race-selector-container label {
-    color: #bbf5ed;
-    font-size: 1.15em; /* Larger label */
-    font-weight: 600;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: block;
+  font-size: 1.14em;
+  font-weight: 700;
+  color: var(--color-primary-yellow); /* Optimized: Uses variable */
+  letter-spacing: 0.01em;
+  margin-bottom: 0.6em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.15);
 }
 
+/* Light mode overrides for race selector label */
+html[data-theme="light"] .race-selector-container label {
+    text-shadow: none;
+    /* color: var(--color-primary-yellow); - REMOVED: Already handled by the base rule which uses the variable */
+}
+
+
 .race-selector-dropdown {
-    padding: 10px 18px; /* Increased padding */
-    border-radius: 10px; /* More rounded */
-    border: 2px solid #36e8b5; /* Thicker, more prominent border */
-    background-color: #232d33; /* Dark background */
-    color: #f6f8fb;
-    font-size: 1.05em; /* Slightly larger font */
-    cursor: pointer;
-    transition: all 0.25s ease-out;
-    outline: none;
-    max-width: 90%; /* Ensure it fits on small screens, preventing overflow */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 13px 16px;
+  font-size: 1.08em;
+  font-weight: 600;
+  color: var(--color-accent-green); /* Optimized: Uses variable */
+  background: linear-gradient(120deg, var(--color-table-odd-bg) 82%, var(--color-navbar-bg) 100%); /* Optimized: Uses variables */
+  border: 2px solid var(--color-accent-green); /* Optimized: Uses variable */
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(54,232,181,0.13), 0 1.5px 1.5px rgba(0,0,0,0.12);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
 }
-.race-selector-dropdown:hover,
-.race-selector-dropdown:focus {
-    background-color: #2a343f;
-    border-color: #2ce8c0;
-    box-shadow: 0 0 15px rgba(54,232,181,0.5); /* Green glow on hover/focus */
-    transform: translateY(-2px);
+
+/* Light mode overrides for race selector dropdown */
+html[data-theme="light"] .race-selector-dropdown {
+    color: var(--color-text-primary); /* Optimized: Still needed as the default is --color-accent-green */
+    background: var(--color-table-odd-bg); /* Optimized: Uses variable */
+    border: 2px solid var(--color-table-border); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
 }
+
+.race-selector-dropdown:focus, .race-selector-dropdown:hover {
+  border-color: var(--color-primary-yellow); /* Optimized: Uses variable */
+  box-shadow: 0 2px 24px rgba(255,201,0,0.13), 0 2px 12px rgba(54,232,181,0.17);
+  background: linear-gradient(120deg, var(--color-table-even-bg) 82%, var(--color-table-header-bg) 100%); /* Optimized: Uses variables */
+  color: var(--color-text-primary); /* Optimized: Uses variable */
+}
+
+/* Light mode overrides for race selector dropdown hover/focus */
+html[data-theme="light"] .race-selector-dropdown:focus,
+html[data-theme="light"] .race-selector-dropdown:hover {
+    border-color: var(--color-primary-yellow); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-md); /* Optimized: Uses variable */
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+    /* color: var(--color-text-primary); - REMOVED: Already handled by the base rule which uses the variable */
+}
+
+
+.race-selector-dropdown option {
+  background: var(--color-section-bg); /* Optimized: Uses variable */
+  color: var(--color-accent-green); /* Optimized: Uses variable */
+}
+
+/* Light mode overrides for dropdown options */
+html[data-theme="light"] .race-selector-dropdown option {
+    /* background: var(--color-section-bg); - REMOVED: Already handled by the base rule which uses the variable */
+    color: var(--color-text-primary); /* Optimized: Still needed as the default is --color-accent-green */
+}
+
 
 /* --- Score Controls Section --- */
 .score-controls {
-    background: linear-gradient(160deg, #21282f, #1b2027); /* Deeper, more pronounced gradient */
-    border-radius: 15px; /* More rounded corners */
-    padding: 2em; /* Increased padding */
-    margin: 1.8em auto 2.5em auto; /* More vertical space */
-    box-shadow: 0 8px 30px rgba(0,0,0,0.4); /* Stronger, professional shadow */
-    max-width: 750px; /* Aligns with page title */
-    border: 1px solid rgba(54,232,181,0.1); /* Subtle accent border */
+    background: var(--gradient-footer); /* Optimized: Using footer gradient for similar effect */
+    border-radius: 15px;
+    padding: 2em;
+    margin: 1.8em auto 2.5em auto;
+    box-shadow: var(--shadow-xl); /* Optimized: Uses variable */
+    max-width: 750px;
+    border: 1px solid rgba(54,232,181,0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.score-controls h2 { /* Section title within score controls */
-    color: #ffc900;
+/* Light mode overrides for score controls */
+html[data-theme="light"] .score-controls {
+    background: var(--color-section-bg); /* Optimized: Uses variable (lighter default in light mode) */
+    box-shadow: var(--shadow-lg); /* Optimized: Uses variable */
+    border: 1px solid var(--color-table-border); /* Optimized: Uses variable */
+}
+
+
+.score-controls h2 {
+    color: var(--color-primary-yellow); /* Optimized: Uses variable */
     text-align: center;
     margin-top: 0;
-    margin-bottom: 1.5em; /* More space below heading */
-    font-size: 1.8em; /* Larger heading */
+    margin-bottom: 1.5em;
+    font-size: 1.8em;
     letter-spacing: 0.03em;
     font-weight: 800;
     text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* --- Preset Buttons Layout --- */
+/* Light mode overrides for score controls h2 */
+html[data-theme="light"] .score-controls h2 {
+    text-shadow: none;
+    /* color: var(--color-primary-yellow); - REMOVED: Already handled by the base rule which uses the variable */
+}
+
+
+/* --- Preset Buttons Layout & Individual Button Styling --- */
 .preset-buttons {
     text-align: center;
-    margin-top: 2.5em; /* More space above buttons */
-    margin-bottom: 2em; /* More space below buttons */
+    margin-top: 2.5em;
+    margin-bottom: 2em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adaptive columns */
-    gap: 12px; /* Increased gap */
-    justify-content: center; /* Center the grid itself */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+    justify-content: center;
 }
 
 .preset-button {
-    background: linear-gradient(145deg, #36e8b5, #2ce8c0); /* Vibrant green gradient */
-    color: #191e23; /* Dark text for contrast */
+    width: 100%; /* Consolidated from the duplicated block */
+    min-width: 0; /* Consolidated from the duplicated block */
+    min-height: 54px; /* Consolidated from the duplicated block */
+    font-size: 1em;
     font-weight: 700;
+    display: flex; /* Consolidated from the duplicated block */
+    align-items: center; /* Consolidated from the duplicated block */
+    justify-content: center; /* Consolidated from the duplicated block */
+    text-align: center; /* Consolidated from the duplicated block */
+    word-break: break-word; /* Consolidated from the duplicated block */
+    box-sizing: border-box; /* Consolidated from the duplicated block */
     border: none;
-    border-radius: 9px; /* Slightly more rounded */
-    padding: 10px 20px; /* Increased padding */
+    border-radius: 9px;
+    padding: 0 6px; /* Consolidated from the duplicated block, adjusted from 10px 20px */
     cursor: pointer;
-    font-size: 1em; /* Slightly larger font */
-    transition: all 0.25s ease-out; /* Smoother transition */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Stronger shadow */
-    text-transform: uppercase; /* Make text uppercase for visual punch */
+    background: var(--gradient-primary-button); /* Optimized: Uses variable */
+    color: var(--color-text-inverted); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-md); /* Optimized: Uses variable */
+    text-transform: uppercase;
     letter-spacing: 0.03em;
+    transition: all 0.25s ease-out;
+}
+
+/* Light mode overrides for preset buttons */
+html[data-theme="light"] .preset-button {
+    /* color: var(--color-text-inverted); - REMOVED: Already handled by the base rule which uses the variable */
+    background: var(--gradient-primary-button); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
 }
 
 .preset-button:hover {
-    background: linear-gradient(145deg, #2ce8c0, #36e8b5);
-    box-shadow: 0 6px 18px rgba(54,232,181,0.4); /* Stronger green glow */
-    transform: translateY(-3px); /* More pronounced lift effect */
+    background: var(--gradient-primary-button-hover); /* Optimized: Uses variable */
+    box-shadow: 0 6px 18px rgba(54,232,181,0.4);
+    transform: translateY(-3px);
+}
+
+/* Light mode overrides for preset button hover */
+html[data-theme="light"] .preset-button:hover {
+    background: var(--gradient-primary-button-hover); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-md); /* Optimized: Uses variable */
+    transform: translateY(-2px);
 }
 
 .preset-button:active {
     transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    background: #2ce8c0; /* Solid color when active */
+    box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
+    background: var(--color-accent-green); /* Optimized: Uses variable */
 }
+
+/* Light mode overrides for preset button active */
+html[data-theme="light"] .preset-button:active {
+    /* background: var(--color-accent-green); - REMOVED: Already handled by the base rule which uses the variable */
+    box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
+}
+
 
 .slider-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.7em 1.2em; /* Much tighter! */
+    gap: 0.7em 1.2em;
     margin-bottom: 1.1em;
     padding: 0.15em 0;
 }
@@ -125,139 +231,215 @@
 .slider-group {
     display: flex;
     align-items: center;
-    gap: 18px; /* Increased gap */
-    position: relative; /* For absolute positioning of value on mobile */
+    gap: 18px;
+    position: relative;
 }
 
 .slider-group label {
-    flex: 0 0 160px; /* Fixed width for labels */
-    color: #bbf5ed;
+    flex: 0 0 160px;
+    color: var(--color-accent-green); /* Optimized: Uses variable */
     font-weight: 600;
-    font-size: 1.08em; /* Slightly larger font */
+    font-size: 1.08em;
     text-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* Light mode overrides for slider group label */
+html[data-theme="light"] .slider-group label {
+    color: var(--color-text-primary); /* Optimized: Still needed as default is accent green */
+    text-shadow: none;
+}
+
+
 .slider-group input[type="range"] {
     -webkit-appearance: none;
-    appearance: none; /* Standard property */
+    appearance: none;
     width: 100%;
-    height: 10px; /* Thicker track */
-    background: #1a212b; /* Darker track background */
+    height: 10px;
+    background: var(--color-table-header-bg); /* Optimized: Uses variable */
     outline: none;
     opacity: 0.9;
-    transition: opacity .15s ease-in-out;
-    border-radius: 5px; /* More rounded track */
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3); /* Inner shadow for depth */
+    transition: opacity .15s ease-in-out, background 0.2s;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
+
+/* Light mode overrides for slider track */
+html[data-theme="light"] .slider-group input[type="range"] {
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+}
+
 
 .slider-group input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 24px; /* Larger thumb */
+    width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: #36e8b5; /* Vibrant green thumb */
-    cursor: grab; /* Indicates draggable */
-    box-shadow: 0 0 8px rgba(54,232,181,0.7); /* Stronger glow */
-    border: 2px solid #1a212b; /* Dark border around thumb */
-    transition: background 0.1s, box-shadow 0.1s;
+    background: var(--color-accent-green); /* Optimized: Uses variable */
+    cursor: grab;
+    box-shadow: 0 0 8px rgba(54,232,181,0.7);
+    border: 2px solid var(--color-bg); /* Optimized: Uses variable */
+    transition: background 0.1s, box-shadow 0.1s, border-color 0.1s;
 }
 .slider-group input[type="range"]::-webkit-slider-thumb:active {
     cursor: grabbing;
-    background: #2ce8c0;
+    background: #2ce8c0; /* Kept specific for dark mode active glow */
     box-shadow: 0 0 10px rgba(54,232,181,1);
 }
+
+/* Light mode overrides for WebKit slider thumb */
+html[data-theme="light"] .slider-group input[type="range"]::-webkit-slider-thumb {
+    background: var(--color-accent-green); /* Optimized: Uses variable */
+    box-shadow: 0 0 8px rgba(0, 143, 93, 0.3);
+    border: 2px solid var(--color-table-even-bg); /* Optimized: Uses variable */
+}
+html[data-theme="light"] .slider-group input[type="range"]::-webkit-slider-thumb:active {
+    background: #00a87a; /* Kept specific for light mode active glow */
+    box-shadow: 0 0 10px rgba(0, 143, 93, 0.5);
+}
+
 
 .slider-group input[type="range"]::-moz-range-thumb {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: #36e8b5;
+    background: var(--color-accent-green); /* Optimized: Uses variable */
     cursor: grab;
     box-shadow: 0 0 8px rgba(54,232,181,0.7);
-    border: 2px solid #1a212b;
-    transition: background 0.1s, box-shadow 0.1s;
+    border: 2px solid var(--color-bg); /* Optimized: Uses variable */
+    transition: background 0.1s, box-shadow 0.1s, border-color 0.1s;
 }
 .slider-group input[type="range"]::-moz-range-thumb:active {
     cursor: grabbing;
-    background: #2ce8c0;
+    background: #2ce8c0; /* Kept specific for dark mode active glow */
     box-shadow: 0 0 10px rgba(54,232,181,1);
 }
 
-.slider-group span {
-    flex-shrink: 0;
-    width: 50px; /* Increased space for displaying value */
-    text-align: right;
-    color: #ffe564;
-    font-weight: 700;
-    font-size: 1.15em; /* Slightly larger value display */
-    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
-
+/* Light mode overrides for Mozilla slider thumb */
+html[data-theme="light"] .slider-group input[type="range"]::-moz-range-thumb {
+    background: var(--color-accent-green); /* Optimized: Uses variable */
+    box-shadow: 0 0 8px rgba(0, 143, 93, 0.3);
+    border: 2px solid var(--color-table-even-bg); /* Optimized: Uses variable */
+}
+html[data-theme="light"] .slider-group input[type="range"]::-moz-range-thumb:active {
+    background: #00a87a; /* Kept specific for light mode active glow */
+    box-shadow: 0 0 10px rgba(0, 143, 93, 0.5);
 }
 
+
+.slider-group span {
+    flex-shrink: 0;
+    width: 50px;
+    text-align: right;
+    color: var(--color-primary-yellow); /* Optimized: Uses variable */
+    font-weight: 700;
+    font-size: 1.15em;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Light mode overrides for slider value span */
+html[data-theme="light"] .slider-group span {
+    /* color: var(--color-primary-yellow); - REMOVED: Already handled by the base rule which uses the variable */
+    text-shadow: none;
+}
 
 
 /* --- Custom Race Header Styles --- */
 .custom-race-header {
     text-align: center;
-    margin: 2.5em auto 2em auto; /* More vertical space */
-    color: #ffd700;
-    scroll-margin-top: 80px; /* Crucial for scroll-into-view to clear sticky navbar */
+    margin: 2.5em auto 2em auto;
+    color: var(--color-primary-yellow); /* Optimized: Uses variable */
+    scroll-margin-top: 80px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+/* Light mode overrides for custom race header */
+html[data-theme="light"] .custom-race-header {
+    text-shadow: none;
+    /* color: var(--color-primary-yellow); - REMOVED: Already handled by the base rule which uses the variable */
+}
+
 .custom-race-header h2 {
-    color: #ffc900;
-    font-size: 2em; /* Larger, more prominent h2 */
+    color: var(--color-primary-yellow); /* Optimized: Uses variable */
+    font-size: 2em;
     margin-bottom: 0.3em;
     font-weight: 900;
     letter-spacing: 0.02em;
 }
+/* No specific light mode override needed for h2 color here, as it uses --color-primary-yellow which changes */
+
 .custom-race-header h3 {
-    color: #32dd99;
-    font-size: 1.25em; /* Slightly larger h3 */
+    color: var(--color-accent-green); /* Optimized: Uses variable */
+    font-size: 1.25em;
     margin-bottom: 0.5em;
     font-weight: 700;
 }
+/* No specific light mode override needed for h3 color here, as it uses --color-accent-green which changes */
+
 
 /* --- Runner Cards (Main display of horses on custom-score page) --- */
-.runners-list { /* Container for all runner cards */
+.runners-list {
   margin-top: 1.5em;
   padding-bottom: 20px;
 }
 .runner-card {
-  background: linear-gradient(145deg, #232d33, #1e262c);
-  color: #f6f8fb;
+  background: linear-gradient(145deg, var(--color-table-even-bg), var(--color-section-bg)); /* Optimized: Uses variables */
+  color: var(--color-text-primary); /* Optimized: Uses variable */
   border-radius: 11px;
   display: flex;
   align-items: flex-start;
   margin-bottom: 14px;
   padding: 1.1em 1.2em 1.1em 1em;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.35);
+  box-shadow: var(--shadow-lg); /* Optimized: Uses variable */
   gap: 1.1em;
   position: relative;
   transition: all 0.25s ease-out;
   border: 1px solid transparent;
-  scroll-margin-top: 80px; /* Added to ensure sticky header clearance */
+  scroll-margin-top: 80px;
 }
+
+/* Light mode overrides for runner card */
+html[data-theme="light"] .runner-card {
+    background: var(--color-table-odd-bg); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-md); /* Optimized: Uses variable */
+}
+
 .runner-card:hover:not(.expanded) {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 20px rgba(54,232,181,0.4);
-  border-color: #36e8b5;
-  background: linear-gradient(145deg, #2a343f, #232d38);
+  border-color: var(--color-accent-green); /* Optimized: Uses variable */
+  background: linear-gradient(145deg, var(--color-table-odd-bg), var(--color-table-even-bg)); /* Optimized: Uses variables */
 }
-.runner-card.expanded { /* Style when the card is expanded */
-  background: linear-gradient(145deg, #263441, #1f2833);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.5);
-  border-color: #28d987;
+
+/* Light mode overrides for runner card hover */
+html[data-theme="light"] .runner-card:hover:not(.expanded) {
+    box-shadow: var(--shadow-lg); /* Optimized: Uses variable */
+    border-color: var(--color-accent-green); /* Optimized: Uses variable */
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+    transform: translateY(-3px);
 }
-.runner-nr { /* Non-runner style */
+
+.runner-card.expanded {
+  background: linear-gradient(145deg, var(--color-section-bg), var(--color-navbar-bg)); /* Optimized: Uses variables */
+  box-shadow: var(--shadow-xl); /* Optimized: Uses variable */
+  border-color: var(--color-accent-green); /* Optimized: Uses variable */
+}
+
+/* Light mode overrides for expanded runner card */
+html[data-theme="light"] .runner-card.expanded {
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-lg); /* Optimized: Uses variable */
+    border-color: var(--color-accent-green); /* Optimized: Uses variable */
+}
+
+.runner-nr {
     opacity: 0.6;
     filter: grayscale(0.15);
 }
 .runner-num-draw {
   min-width: 50px;
   text-align: center;
-  color: #ffc900;
+  color: var(--color-primary-yellow); /* Optimized: Uses variable */
   font-weight: 900;
   font-size: 1.18em;
   margin-right: 9px;
@@ -271,14 +453,14 @@
 .runner-num-draw .runner-num { line-height: 1; }
 .runner-num-draw .runner-draw {
   font-size: 0.85em;
-  color: #a0a8b7;
+  color: var(--color-text-secondary); /* Optimized: Uses variable */
   font-weight: 600;
   line-height: 1;
 }
 .runner-num-draw .runner-score {
   display: block;
   font-size: 0.93em;
-  color: #32dd99;
+  color: var(--color-accent-green); /* Optimized: Uses variable */
   font-weight: 700;
   margin-top: 3px;
 }
@@ -286,13 +468,20 @@
   width: 42px;
   height: 42px;
   object-fit: contain;
-  background: #161c22;
+  background: var(--color-navbar-bg); /* Optimized: Uses variable */
   border-radius: 8px;
   margin-right: 13px;
   align-self: flex-start;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
   flex-shrink: 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+/* Light mode overrides for runner silk background */
+html[data-theme="light"] .runner-silk {
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
+}
+
 .runner-main {
   flex: 1 1 250px;
   min-width: 0;
@@ -302,15 +491,17 @@
 }
 .runner-horse {
   font-weight: 700;
-  color: #35e9ae;
+  color: var(--color-accent-green); /* Optimized: Uses variable */
   font-size: 1.2em;
   margin-bottom: 2px;
   line-height: 1.18;
   transition: color 0.15s ease-out;
 }
-.runner-card:hover .runner-horse { color: #2ce8c0; }
+.runner-card:hover .runner-horse { color: var(--color-accent-green); /* Optimized: Uses variable */ }
+/* No separate light mode hover needed here as --color-accent-green is already handled */
+
 .runner-meta-line {
-  color: #c2c8de;
+  color: var(--color-text-secondary); /* Optimized: Uses variable */
   font-size: 1.01em;
   margin-bottom: 0.09em;
   display: flex;
@@ -321,15 +512,22 @@
 }
 .runner-meta-line .runner-meta-separator { opacity: 0.5; }
 .runner-meta-line .runner-form {
-  color: #fff;
-  background: #1a212b;
+  color: var(--color-text-primary); /* Optimized: Uses variable */
+  background: var(--color-table-header-bg); /* Optimized: Uses variable */
   border-radius: 6px;
   padding: 2px 8px;
   font-size: 0.9em;
   margin-left: 10px;
   font-weight: 500;
   white-space: nowrap;
+  transition: background 0.3s ease, color 0.3s ease;
 }
+/* Light mode overrides for runner form */
+html[data-theme="light"] .runner-meta-line .runner-form {
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+    /* color: var(--color-text-primary); - REMOVED: Already handled by the base rule which uses the variable */
+}
+
 .runner-meta-line .runner-nr-tag {
   color: #e55;
   font-weight: 700;
@@ -339,7 +537,7 @@
   border-radius: 4px;
 }
 .runner-info-line {
-  color: #c2c8de;
+  color: var(--color-text-secondary); /* Optimized: Uses variable */
   font-size: 0.97em;
   line-height: 1.4;
   margin-top: 3px;
@@ -347,9 +545,9 @@
   flex-wrap: wrap;
   gap: 0.5em 1em;
 }
-.runner-info-line b { color: #bbf5ed; font-weight: 600; }
+.runner-info-line b { color: var(--color-accent-green); /* Optimized: Uses variable */ font-weight: 600; }
 .runner-odds {
-  color: #ffe564;
+  color: var(--color-primary-yellow); /* Optimized: Uses variable */
   font-weight: 700;
   font-size: 1.2em;
   margin-left: 14px;
@@ -364,88 +562,139 @@
 /* ---- More Info Dropdown Button ---- */
 .runner-more-btn {
   margin: 0.6em 0 0 0;
-  background: linear-gradient(145deg, #36e8b5, #2ce8c0);
-  color: #191e23;
-  font-weight: 700;
   border: none;
   border-radius: 7px;
   padding: 6px 16px;
   cursor: pointer;
   font-size: 0.98em;
   transition: all 0.2s ease-out;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background: var(--gradient-primary-button); /* Optimized: Uses variable */
+  color: var(--color-text-inverted); /* Optimized: Uses variable */
+  font-weight: 700;
+  box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
 }
+
+/* Light mode overrides for runner more button */
+html[data-theme="light"] .runner-more-btn {
+    /* color: var(--color-text-inverted); - REMOVED: Already handled by the base rule which uses the variable */
+    background: var(--gradient-primary-button); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
+}
+
 .runner-more-btn:hover {
-  background: linear-gradient(145deg, #2ce8c0, #36e8b5);
-  color: #191e23;
+  background: var(--gradient-primary-button-hover); /* Optimized: Uses variable */
+  /* color: var(--color-text-inverted); - REMOVED: Already handled by the base rule which uses the variable */
   box-shadow: 0 4px 12px rgba(54,232,181,0.3);
   transform: translateY(-2px);
 }
+
+/* Light mode overrides for runner more button hover */
+html[data-theme="light"] .runner-more-btn:hover {
+    background: var(--gradient-primary-button-hover); /* Optimized: Uses variable */
+    /* color: var(--color-text-inverted); - REMOVED: Already handled by the base rule which uses the variable */
+    box-shadow: var(--shadow-md); /* Optimized: Uses variable */
+    transform: translateY(-1px);
+}
+
 .runner-more-btn:active {
   transform: translateY(0);
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
+
 /* ---- More Info Content (Hidden by default) ---- */
 .runner-more {
-  display: none; /* THIS IS THE CRITICAL RULE TO HIDE IT */
+  display: none;
   margin-top: 0.7em;
   font-size: 0.96em;
-  color: #bbf5ed;
-  background: #182028;
+  color: var(--color-text-secondary); /* Optimized: Uses variable */
+  background: var(--color-table-header-bg); /* Optimized: Uses variable */
   border-radius: 8px;
   padding: 0.75em 1em 0.65em 1em;
   line-height: 1.5;
-  width: 100%; /* Ensures it takes full width of parent */
-  box-sizing: border-box; /* Include padding in width */
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.3s ease, color 0.3s ease;
 }
-/* This rule reveals the content when 'expanded' class is added to parent card */
 .runner-card.expanded .runner-more {
   display: block;
 }
 
-.runner-more b { color: #ffc900; }
-.runner-more .no-data { color: #888; font-style: italic; }
-.runner-more .prev-owners { color: #90f; font-size: 0.9em; }
+/* Light mode overrides for runner more content */
+html[data-theme="light"] .runner-more {
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+    /* color: var(--color-text-secondary); - REMOVED: Already handled by the base rule which uses the variable */
+}
+
+.runner-more b { color: var(--color-primary-yellow); /* Optimized: Uses variable */ }
+.runner-more .no-data {
+    color: var(--color-text-secondary); /* Optimized: Uses variable */
+    font-style: italic;
+}
+.runner-more .prev-owners { color: #90f; font-size: 0.9em; } /* Kept hardcoded as it's a unique accent color */
 .runner-stats-table {
   margin: 0.7em 0;
   font-size: 0.97em;
-  background: #1a212b;
+  background: var(--color-table-header-bg); /* Optimized: Uses variable */
   border-radius: 7px;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  overflow: hidden; /* Ensures rounded corners on table */
+  overflow: hidden;
+  transition: background 0.3s ease;
 }
+
+/* Light mode overrides for runner stats table */
+html[data-theme="light"] .runner-stats-table {
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+}
+
 .runner-stats-table th,
 .runner-stats-table td {
   padding: 8px 12px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid var(--color-table-border); /* Optimized: Uses variable */
   border-right: 1px solid rgba(255,255,255,0.02);
 }
+
+/* Light mode overrides for table borders */
+html[data-theme="light"] .runner-stats-table th,
+html[data-theme="light"] .runner-stats-table td {
+    /* border-bottom: 1px solid var(--color-table-border); - REMOVED: Already handled by the base rule which uses the variable */
+    border-right: 1px solid rgba(0,0,0,0.02);
+}
+
 .runner-stats-table tr:last-child td { border-bottom: none; }
 .runner-stats-table tr td:last-child { border-right: none; }
-.runner-stats-table b { color: #35e9ae; }
+.runner-stats-table b { color: var(--color-accent-green); /* Optimized: Uses variable */ }
 .runner-quotes, .runner-stable-tour {
   margin-top: 1em;
-  background: #1a212b;
+  background: var(--color-table-header-bg); /* Optimized: Uses variable */
   padding: 0.8em 1em;
   border-radius: 7px;
   box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
 }
-.runner-quotes b, .runner-stable-tour b { color: #ffc900; }
+
+/* Light mode overrides for quotes/stable tour backgrounds */
+html[data-theme="light"] .runner-quotes,
+html[data-theme="light"] .runner-stable-tour {
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+}
+
+
+.runner-quotes b, .runner-stable-tour b { color: var(--color-primary-yellow); /* Optimized: Uses variable */ }
 .runner-quotes ul, .runner-stable-tour ul { list-style: none; padding-left: 0; margin-top: 0.5em; }
 .runner-quotes li, .runner-stable-tour li {
   margin-bottom: 0.5em;
   position: relative;
   padding-left: 1.2em;
-  color: #d0d0d0;
+  color: var(--color-text-secondary); /* Optimized: Uses variable */
   font-size: 0.95em;
 }
 .runner-quotes li:last-child, .runner-stable-tour li:last-child { margin-bottom: 0; }
 .runner-quotes li::before, .runner-stable-tour li::before {
   content: '▪';
-  color: #35e9ae;
+  color: var(--color-accent-green); /* Optimized: Uses variable */
   position: absolute;
   left: 0;
   top: 0;
@@ -562,7 +811,7 @@
   }
   .runner-horse { font-size: 0.97em; }
   .runner-num-draw { min-width: 26px; font-size: 0.91em; }
-  .runner-silk { width: 22px; height: 22px; }
+  .runner-silk { width: 30px; height: 30px; }
 }
 
 /* ------ Tiny Phones (≤ 480px) ------ */
@@ -590,159 +839,215 @@
 }
 
 
-\/* Hide element when .hidden is present */
+/* Hide element when .hidden is present */
 .hidden { display: none !important; }
 
 /* Style for toggle button (optional) */
 .instructions-toggle-btn {
   margin: 0 auto 1em auto;
   display: block;
-  background: linear-gradient(145deg, #36e8b5, #2ce8c0);
-  color: #191e23;
   font-weight: 700;
   border: none;
   border-radius: 9px;
   padding: 12px 24px;
   cursor: pointer;
   font-size: 1.05em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   transition: all 0.22s;
+  background: var(--gradient-primary-button); /* Optimized: Uses variable */
+  color: var(--color-text-inverted); /* Optimized: Uses variable */
+  box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
 }
+
+/* Light mode overrides for instructions toggle button */
+html[data-theme="light"] .instructions-toggle-btn {
+    /* color: var(--color-text-inverted); - REMOVED: Already handled by the base rule which uses the variable */
+    background: var(--gradient-primary-button); /* Optimized: Uses variable */
+    box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
+}
+
 .instructions-toggle-btn:hover {
-  background: linear-gradient(145deg, #2ce8c0, #36e8b5);
-  color: #191e23;
+  background: var(--gradient-primary-button-hover); /* Optimized: Uses variable */
+  /* color: var(--color-text-inverted); - REMOVED: Already handled by the base rule which uses the variable */
 }
 
-.hidden {
-  display: none !important;
+/* Light mode overrides for instructions toggle button hover */
+html[data-theme="light"] .instructions-toggle-btn:hover {
+    background: var(--gradient-primary-button-hover); /* Optimized: Uses variable */
+    /* color: var(--color-text-inverted); - REMOVED: Already handled by the base rule which uses the variable */
 }
-/* --- Preset Buttons Grid: 3x2 on desktop, 2x3 on tablet, 1x6 on small phone --- */
-.preset-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 12px;
-  margin: 2.2em auto 2em auto;
-  max-width: 600px;
-  width: 100%;
-  align-items: stretch;  /* make all cells the same height */
-}
-
-.preset-button {
-  width: 100%;
-  min-width: 0;
-  min-height: 54px;
-  font-size: 1em;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  word-break: break-word;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 9px;
-  background: linear-gradient(145deg, #36e8b5, #2ce8c0);
-  color: #191e23;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  transition: all 0.25s ease-out;
-  padding: 0 6px;
-}
-
-.preset-button:hover {
-  background: linear-gradient(145deg, #2ce8c0, #36e8b5);
-  box-shadow: 0 6px 18px rgba(54,232,181,0.4);
-  transform: translateY(-3px);
-}
-
-.preset-button:active {
-  background: #2ce8c0;
-  transform: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-/* ------ Tablets & Small Screens (≤ 600px) ------ */
-@media (max-width: 600px) {
-  .preset-buttons {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 8px;
-    margin: 1em auto;
-    max-width: 98vw;
-    width: 100%;
-  }
-  .preset-button {
-    min-height: 44px;
-    font-size: 0.97em;
-    padding: 0 4px;
-  }
-  .show-results-btn {
-    font-size: 1em;
-    padding: 12px 8px;
-    border-radius: 9px;
-    width: 90vw;
-    max-width: 350px;
-    margin: 1em auto;
-    display: block;
-  }
-}
-
-/* ------ Tiny Phones (≤ 430px) ------ */
-@media (max-width: 430px) {
-  .preset-buttons {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    gap: 6px;
-    max-width: 99vw;
-  }
-  .preset-button {
-    min-height: 38px;
-    font-size: 0.93em;
-    padding: 0 3px;
-  }
-  .show-results-btn {
-    font-size: 0.93em;
-    padding: 10px 4px;
-    border-radius: 8px;
-    width: 95vw;
-    max-width: 300px;
-    margin: 0.7em auto;
-    display: block;
-  }
-}
-
 /* --- Show Results Button Styling (matches site theme & is always centered) --- */
 .show-results-btn {
   display: block;
   margin: 1.8em auto 0.8em auto;
   padding: 14px 48px;
-  background: linear-gradient(145deg, #ffd700, #36e8b5 95%);
-  color: #232d33;
+  /* Optimized: Using a custom gradient variable as it's a unique combination */
+  background: linear-gradient(145deg, var(--color-primary-yellow), var(--color-accent-green) 95%);
+  color: var(--color-text-inverted); /* Optimized: Uses variable */
   font-size: 1.28em;
   font-weight: 900;
   border: none;
   border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(54,232,181,0.11), 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 24px rgba(54,232,181,0.11), 0 2px 8px rgba(0,0,0,0.15); /* Keep specific glow part, general shadow part can be simplified */
   letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.22s, box-shadow 0.22s, transform 0.13s;
+  transition: background 0.22s, box-shadow 0.22s, transform 0.13s, color 0.22s;
   width: 100%;
   max-width: 420px;
 }
 
+/* Light mode overrides for show results button */
+html[data-theme="light"] .show-results-btn {
+    /* Background and color are already using variables, so no explicit override needed if the gradient handles the light mode appearance */
+    background: linear-gradient(145deg, var(--color-primary-yellow), var(--color-accent-green) 95%); /* Optimized: Use light mode colors from variables */
+    color: var(--color-text-inverted); /* Optimized: Use light mode color from variable */
+    box-shadow: var(--shadow-md); /* Optimized: Uses variable */
+}
+
 .show-results-btn:hover, .show-results-btn:focus {
-  background: linear-gradient(145deg, #36e8b5 10%, #ffd700 90%);
-  box-shadow: 0 10px 38px rgba(54,232,181,0.28), 0 4px 16px rgba(0,0,0,0.18);
-  color: #161c22;
+  /* Optimized: Using a custom gradient variable for hover */
+  background: linear-gradient(145deg, var(--color-accent-green) 10%, var(--color-primary-yellow) 90%);
+  box-shadow: 0 10px 38px rgba(54,232,181,0.28), 0 4px 16px rgba(0,0,0,0.18); /* Keep specific glow part, simplify general shadow */
+  color: var(--color-text-inverted); /* Optimized: Uses variable */
   transform: translateY(-3px) scale(1.03);
 }
 
+/* Light mode overrides for show results button hover/focus */
+html[data-theme="light"] .show-results-btn:hover,
+html[data-theme="light"] .show-results-btn:focus {
+    /* Background and color are already using variables, no explicit override needed */
+    background: linear-gradient(145deg, var(--color-accent-green) 10%, var(--color-primary-yellow) 90%); /* Optimized: Use light mode colors from variables */
+    color: var(--color-text-inverted); /* Optimized: Use light mode color from variable */
+    box-shadow: var(--shadow-lg); /* Optimized: Uses variable */
+    transform: translateY(-2px) scale(1.02);
+}
+
 .show-results-btn:active {
-  background: #2ce8c0;
-  color: #191e23;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.11);
+  background: var(--color-accent-green); /* Optimized: Uses variable */
+  color: var(--color-text-inverted); /* Optimized: Uses variable */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.11); /* Kept hardcoded for specific small black shadow */
   transform: none;
+}
+
+
+/* ====== SQUASH VERTICAL SPACE EVEN MORE ON TINY PHONES ====== */
+@media (max-width: 430px) {
+  .page-title {
+    font-size: 0.93em;
+    margin: 1em 0 0.7em 0;
+    padding: 0;
+    max-width: 99vw;
+  }
+  .score-controls {
+    padding: 0.18em 0.03em;
+    margin: 0.8em auto 1em auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.12); /* Kept hardcoded for specific minimal shadow */
+    max-width: 99vw;
+  }
+  .preset-buttons {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 4px;
+    max-width: 99vw;
+    margin: 0.7em 0 0.7em 0;
+  }
+  .preset-button {
+    min-height: 30px;
+    font-size: 0.91em;
+    padding: 0 2px;
+    border-radius: 6px;
+  }
+  .slider-grid {
+    gap: 0.02em !important;
+    margin-bottom: 0.2em;
+    padding: 0 !important;
+  }
+  .slider-group label {
+    font-size: 0.90em;
+    flex-basis: 120px;
+    padding: 0 2px 0 0;
+    margin: 0;
+    white-space: nowrap;
+  }
+  .slider-group input[type="range"] {
+    width: 63%;
+    height: 3px;
+    margin: 0 2px 0 0;
+  }
+  .slider-group span {
+    font-size: 0.83em;
+    min-width: 18px;
+    margin-left: 1px;
+  }
+  .show-results-btn {
+    font-size: 0.91em;
+    padding: 7px 3px;
+    border-radius: 7px;
+    width: 97vw;
+    max-width: 210px;
+    margin: 0.6em auto;
+  }
+  .runner-card {
+    padding: 0.14em 0.01em 0.14em 0.01em;
+    border-radius: 5px;
+    gap: 1px;
+    min-height: 24px;
+    font-size: 0.95em;
+  }
+  .runner-num-draw { min-width: 14px; font-size: 0.81em; }
+  .runner-silk { width: 14px; height: 14px; }
+  .runner-horse { font-size: 0.82em; }
+}
+
+@media (max-width: 340px) {
+  .score-controls, .runner-card, .show-results-btn { max-width: 98vw !important; }
+}
+
+/* ====== TABLE CELL WRAPPING FOR TIPS/WINNERS (Add to your winners/tips CSS) ====== */
+@media (max-width: 600px) {
+  table, .runners-list table, .winners-table-table, .tips-table {
+    font-size: 0.97em;
+    word-break: break-word;
+  }
+  th, td {
+    white-space: normal !important;
+    word-break: break-word !important;
+    font-size: 0.92em;
+    padding: 4px 2px !important;
+    max-width: 85px;
+  }
+  td.runner-horse, td.tip, td.comment, td.form {
+    word-break: break-word;
+    white-space: normal;
+    font-size: 0.91em;
+    max-width: 95px;
+  }
+}
+.show-results-helper {
+  margin: 1.6em auto 0.8em auto;
+  text-align: center;
+  font-size: 1.07em;
+  color: var(--color-text-secondary); /* Optimized: Uses variable */
+  background: rgba(47, 224, 160, 0.05); /* Kept hardcoded for specific light green background for dark mode */
+  border-radius: 9px;
+  max-width: 540px;
+  padding: 0.7em 1.5em 0.65em 1.5em;
+  box-shadow: 0 1.5px 8px rgba(47,224,160,0.06); /* Kept hardcoded for specific light green shadow for dark mode */
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.19s, color 0.19s;
+}
+
+/* Light mode overrides for show results helper */
+html[data-theme="light"] .show-results-helper {
+    background: var(--color-table-even-bg); /* Optimized: Uses variable */
+    /* color: var(--color-text-secondary); - REMOVED: Already handled by the base rule which uses the variable */
+    box-shadow: var(--shadow-sm); /* Optimized: Uses variable */
+}
+
+.show-results-helper b {
+  color: var(--color-primary-yellow); /* Optimized: Uses variable */
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }

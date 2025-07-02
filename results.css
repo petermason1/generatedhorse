@@ -1,0 +1,145 @@
+/* =========================
+   === RACE RESULT CARD
+   ========================= */
+.race-result {
+  margin: 0 auto 38px auto;
+  max-width: 580px;
+  border-radius: 16px;
+  /* Use base.css variables for background gradient and border */
+  background: linear-gradient(120deg, var(--color-section-bg) 92%, var(--color-navbar-bg) 100%); /* Adjusted from #232a35, #232f2c */
+  border: 1.2px solid var(--color-table-border); /* Adjusted from #222b32 */
+  /* Use base.css variables for box-shadows */
+  box-shadow: var(--shadow-lg), 0 1.5px 8px rgba(54,232,181,0.09); /* Adjusted from #000b, #36e8b517 */
+  padding: 23px 26px 17px 26px;
+  transition: box-shadow 0.16s, border 0.13s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  overflow: hidden;
+}
+.race-result:hover {
+  border-color: var(--color-accent-green); /* Adjusted from #36e8b5c2 */
+  /* Adjust hover shadows to use base variables, with a specific green glow if desired */
+  box-shadow: var(--shadow-xl), 0 2px 10px rgba(54,232,181,0.1); /* Adjusted from #36e8b51a, #232f2c33 */
+}
+
+.race-result h2 {
+  margin: 0 0 4px 0;
+  color: var(--color-accent-green); /* Adjusted from #36e8b5 */
+  font-size: 1.16em;
+  letter-spacing: 0.01em;
+  font-weight: 900;
+  line-height: 1.14;
+  /* Keep specific shadow or generalize if you have a variable for it */
+  text-shadow: 0 2px 7px rgba(29, 54, 39, 0.2); /* Adjusted from #1d362733 */
+}
+
+.race-meta {
+  font-size: 1.03em;
+  color: var(--color-text-primary); /* Adjusted from #fafafa */
+  font-weight: 500;
+  opacity: 0.97;
+  margin-bottom: 3px;
+  line-height: 1.15;
+}
+
+.race-horses {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 6px;
+  padding-left: 2px;
+}
+
+.race-horses span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.09em;
+  padding: 0.10em 0 0.06em 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  border-radius: 8px;
+  background: none;
+  min-height: 22px;
+  transition: background 0.17s;
+}
+
+.winner {
+  color: var(--color-accent-green); /* Adjusted from #27ed81 - using main accent green */
+  font-weight: 800;
+  font-size: 1.11em;
+  text-shadow: 0 0.5px 3px rgba(14, 87, 42, 0.3); /* Adjusted from #0e572a */
+}
+.placed {
+  color: var(--color-text-secondary); /* Using secondary text for silver/grey-ish */
+  font-weight: 700;
+  text-shadow: 0 0.5px 2px rgba(34,34,34,0.7); /* Adjusted from #222 */
+}
+.third {
+  color: #cd7f32; /* Bronze - Keep hardcoded if not a variable in base.css */
+  font-weight: 700;
+  text-shadow: 0 0.5px 2px #543a1b; /* Keep hardcoded if not a variable in base.css */
+}
+/* If 4th place is ever used: */
+.fourth, .rest {
+  color: var(--color-primary-yellow); /* Adjusted from #ffd700 */
+  font-weight: 600;
+}
+
+.race-horses b {
+  font-weight: 800;
+  margin-right: 3px;
+  letter-spacing: 0.01em;
+}
+.race-horses small {
+  font-weight: 500;
+  font-size: 0.98em;
+  margin-left: 4px;
+  color: var(--color-text-secondary); /* Adjusted from #bce6ff - using secondary text */
+  opacity: 0.88;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .race-result {
+    max-width: 98vw;
+    padding: 14px 2vw 13px 2vw;
+  }
+}
+
+.fallback-banner {
+  background: var(--color-section-bg); /* Adjusted from #303745 */
+  color: var(--color-primary-yellow); /* Adjusted from #ffd700 */
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1.05em;
+  box-shadow: var(--shadow-sm); /* Adjusted from #0003 */
+}
+
+/* --- Light Mode Overrides for Results --- */
+/* These will automatically apply if the HTML data-theme is "light" because
+   the variables themselves change in base.css */
+
+
+html[data-theme="light"] .race-result h2 {
+    /* If accent green changes in light mode, this will update. No direct override needed. */
+    text-shadow: none; /* Remove text shadow in light mode for cleaner look */
+}
+
+html[data-theme="light"] .winner {
+    /* If accent green changes in light mode, this will update. No direct override needed. */
+    text-shadow: none; /* Remove text shadow in light mode for cleaner look */
+}
+html[data-theme="light"] .placed {
+    /* Color will update from --color-text-secondary. */
+    text-shadow: none; /* Remove text shadow in light mode for cleaner look */
+}
+html[data-theme="light"] .third {
+    /* Keep hardcoded or define a light mode bronze variable */
+    text-shadow: none; /* Remove text shadow in light mode for cleaner look */
+}
+

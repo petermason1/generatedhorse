@@ -1,278 +1,1102 @@
 /*
- * base.css: Foundational stylesheet for Smart Racecards.
- * This file contains all global, shared styles across the website.
- * It is meant to be imported first by all HTML pages.
+ * base.css: Global stylesheet for Smart Racecards.
+ * Contains: CSS Variables, Reset/Base, Typography, Buttons, Tables, Footer, Navbar (Desktop & Mobile)
+ *
+ * Optimizations Applied:
+ * - Consolidated repeated gradients into CSS variables.
+ * - Refined transition properties for better specificity.
+ * - Simplified mobile navigation styles.
+ * - Enhanced readability with improved comments and grouping.
+ * - Minimized redundant light mode overrides.
  */
 
-/* --- BASE STYLES --- */
+/* --- CSS Variables (Custom Properties) - DEFAULT (DARK MODE) --- */
+:root {
+  /* Colors */
+  --color-bg: #191e23;
+  --color-navbar-bg: #171a20;
+  --color-section-bg: #21242a;
+  --color-table-odd-bg: #2a2e33;
+  --color-table-even-bg: #23262a;
+  --color-table-header-bg: #1a1e23;
+  --color-footer-bg: #232930;
+
+  --color-primary-yellow: #e0b800; /* Adjusted: Less bright yellow for dark mode */
+  --color-accent-green: #36e8b5;
+  --color-text-primary: #f6f8fb;
+  --color-text-secondary: #b7b7b7;
+  --color-text-inverted: #191e23; /* Used for text on bright backgrounds, like green buttons or win rows */
+  --color-link-footer: #35e9ae;
+  --color-table-border: rgba(255,255,255,0.08);
+  --color-overlay: rgba(24, 28, 34, 0.78);
+
+  /* New variables for tips.css integration and consistency */
+  --color-sky-blue: #70a7ff; /* Adjusted: Brighter blue for better visibility in dark mode */
+  --color-dark-bg-subtle: rgba(0,0,0,0.1); /* For tip-reason background in dark mode */
+  --color-section-bg-hover: #2f3640; /* For tip-card hover background in dark mode */
+  --color-navbar-bg-hover: #272c35; /* For tip-card hover background in dark mode */
+  --color-accent-green-hover: #2ce8c0; /* For tip-horse hover color in dark mode */
+  --color-text-dark: #101216; /* Very dark text for contrast on bright elements (e.g., yellow number circle) */
+
+  /* New variables for ROI/Winners page table backgrounds */
+  --color-dark-table-odd: #2a2e33; /* Darker shade for odd rows/cards */
+  --color-dark-table-even: #23262a; /* Lighter shade for even rows/cards */
+  --color-dark-header: #1a1e23; /* Darker header background */
+
+
+  /* Fonts */
+  --font-family-primary: 'Inter', Arial, sans-serif;
+
+  /* Spacing */
+  --spacing-xxs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.14);
+  --shadow-md: 0 4px 13px rgba(0,0,0,0.17);
+  --shadow-lg: 0 6px 18px rgba(0,0,0,0.23);
+  --shadow-xl: 0 8px 24px rgba(0,0,0,0.3);
+  --shadow-navbar: 0 2px 24px rgba(0,0,0,0.13);
+  --shadow-footer: 0 -4px 16px rgba(0,0,0,0.18);
+
+  /* Transitions */
+  --transition-ease: 0.2s ease-in-out;
+  --transition-fast: 0.15s ease-out;
+  --transition-medium: 0.25s ease-out;
+
+  /* Gradients (Optimized: Centralized for easy modification) */
+  --gradient-primary-button: linear-gradient(145deg, var(--color-accent-green), #2ce8c0 88%);
+  --gradient-primary-button-hover: linear-gradient(145deg, #2ce8c0, var(--color-accent-green) 88%);
+  --gradient-table-header: linear-gradient(145deg, var(--color-bg), var(--color-table-header-bg));
+  --gradient-win-row: linear-gradient(145deg, var(--color-accent-green), #2ce8c0 80%);
+  --gradient-footer: linear-gradient(145deg, var(--color-footer-bg), var(--color-bg) 95%);
+}
+
+/* =========================================================================== */
+/* --- LIGHT MODE VARIABLES (Overrides for data-theme="light") --- */
+/* =========================================================================== */
+html[data-theme="light"] {
+  /* Colors */
+  --color-bg: #f5f7fa;
+  --color-navbar-bg: #ffffff;
+  --color-section-bg: #ffffff;
+  --color-table-odd-bg: #ffffff;
+  --color-table-even-bg: #f9f9f9;
+  --color-table-header-bg: #e0e2e5;
+  --color-footer-bg: #eceff2;
+
+  --color-primary-yellow: #a87d00; /* Adjusted: Slightly darker yellow for light mode */
+  --color-accent-green: #008f5d;
+  --color-text-primary: #333333;
+  --color-text-secondary: #5a5a5a;
+  --color-text-inverted: #ffffff;
+  --color-link-footer: #007a4f;
+  --color-table-border: rgba(0,0,0,0.1);
+  --color-overlay: rgba(0, 0, 0, 0.4);
+
+  /* New variables for tips.css integration - Light Mode */
+  --color-sky-blue: #3a70b3; /* Adjusted: Darker blue for better visibility in light mode */
+  --color-dark-bg-subtle: rgba(0,0,0,0.05); /* Lighter background for tip-reason */
+  --color-section-bg-hover: #e0e6ed; /* Lighter hover for tip-card */
+  --color-navbar-bg-hover: #dce2e9; /* Lighter hover for tip-card */
+  --color-accent-green-hover: #007a4f; /* Slightly darker hover green for light mode */
+  --color-primary-yellow-light: #e6b800; /* This variable is not used in tips.css light mode overrides, can be removed or kept if used elsewhere */
+  --color-text-dark: #101216; /* Stays dark for contrast */
+
+  /* Specific light mode colors for elements that need distinct values */
+  --color-text-medium: #555; /* A medium grey for text that's not primary or secondary */
+  --color-text-light: #777; /* A lighter grey for text */
+
+  /* Shadows - lighter and more subtle in light mode */
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 10px rgba(0,0,0,0.1);
+  --shadow-lg: 0 6px 15px rgba(0,0,0,0.12);
+  --shadow-xl: 0 8px 20px rgba(0,0,0,0.15);
+  --shadow-navbar: 0 2px 18px rgba(0,0,0,0.08);
+  --shadow-footer: 0 -3px 12px rgba(0,0,0,0.08);
+
+  /* New variables for ROI/Winners page table backgrounds - Light Mode */
+  --color-dark-table-odd: #f9f9f9; /* Lightest shade for odd rows/cards */
+  --color-dark-table-even: #ffffff; /* Slightly darker shade for even rows/cards */
+  --color-dark-header: #e0e2e5; /* Lighter header background */
+
+  /* Gradients (Light Mode Overrides) */
+  --gradient-primary-button: linear-gradient(145deg, var(--color-accent-green), #00a87a 88%);
+  --gradient-primary-button-hover: linear-gradient(145deg, #00a87a, var(--color-accent-green) 88%);
+  --gradient-table-header: linear-gradient(145deg, var(--color-table-even-bg), var(--color-table-header-bg));
+  --gradient-win-row: linear-gradient(145deg, var(--color-accent-green), #00a87a 80%);
+  --gradient-footer: linear-gradient(145deg, var(--color-footer-bg), var(--color-bg) 95%);
+}
+
+/* =========================================================================== */
+/* --- Base Reset & Global Styles --- */
+/* =========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: #191e23; /* Dark background */
-  color: #f6f8fb; /* Light text color */
-  font-family: 'Inter', Arial, sans-serif; /* Modern font */
-  -webkit-font-smoothing: antialiased; /* Smoother fonts on Webkit browsers */
-  -moz-osx-font-smoothing: grayscale; /* Smoother fonts on Firefox */
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Optimized: Specific properties for smoother transition */
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
+body.nav-open {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none; /* Prevents scrolling on touch devices */
+}
+
+/* =========================================================================== */
+/* --- Next 6 Races Bar --- */
+/* =========================================================================== */
+#next6-bar {
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  gap: var(--spacing-sm); /* Spacing between pills */
+  justify-content: center; /* Center the pills horizontally */
+  align-items: center; /* Vertically align items */
+  background: var(--color-section-bg); /* Use a consistent background from your variables */
+  padding: var(--spacing-md) var(--spacing-sm); /* Padding inside the bar */
+  border-radius: 10px; /* Slightly rounded corners for the bar */
+  box-shadow: var(--shadow-md); /* Add a subtle shadow */
+  margin: var(--spacing-xl) auto; /* Top/bottom margin and center horizontally */
+  max-width: 900px; /* Keep it within a reasonable width, similar to .container */
+  border: 1px solid var(--color-table-border); /* Subtle border */
+  transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#next6-bar .next6-title {
+  color: var(--color-text-secondary); /* Style for the "No more races today" text */
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 0 var(--spacing-sm); /* Some internal padding */
+}
+
+.next6-pill {
+  display: flex; /* Flexbox for content inside each pill */
+  align-items: center; /* Vertically align items inside the pill */
+  background: var(--color-table-odd-bg); /* Background for each pill */
+  border-radius: 8px; /* Rounded corners for pills */
+  padding: var(--spacing-xs) var(--spacing-sm); /* Padding inside pills */
+  box-shadow: var(--shadow-sm); /* Subtle shadow for each pill */
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  border: 1px solid var(--color-table-border); /* Subtle border for pills */
+}
+
+.next6-pill:hover {
+  background: var(--color-section-bg-hover); /* Darker on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+  box-shadow: var(--shadow-md);
+}
+
+.next6-course {
+  color: var(--color-text-primary); /* Course name text color */
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-right: var(--spacing-sm); /* Space between course name and time */
+  white-space: nowrap; /* Prevent course name from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for truncated names */
+  max-width: 80px; /* Limit width to ensure truncation happens if needed */
+  transition: color var(--transition-fast);
+}
+
+.next6-time-btn {
+  display: inline-flex; /* Use flex to easily center content if needed */
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary-button); /* Use your primary button gradient */
+  color: var(--color-text-inverted); /* Inverted text color for contrast */
+  font-size: 0.9em;
+  font-weight: 700;
+  padding: 6px 12px; /* Padding for the time button */
+  border-radius: 6px; /* Rounded corners for the time button */
+  text-decoration: none; /* Remove underline */
+  box-shadow: var(--shadow-sm); /* Subtle shadow for the button */
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  flex-shrink: 0; /* Prevent the button from shrinking */
+}
+
+.next6-time-btn:hover {
+  background: var(--gradient-primary-button-hover); /* Hover gradient */
+  transform: translateY(-0.5px);
+  box-shadow: var(--shadow-md);
+}
+
+.next6-time-btn.past {
+  /* Styles for past races, if you want them to look different */
+  background: var(--color-table-header-bg); /* Muted background */
+  color: var(--color-text-secondary); /* Muted text color */
+  box-shadow: none;
+  pointer-events: none; /* Prevent clicking on past races if desired */
+  opacity: 0.7;
+}
+
+/* Light Mode Overrides for Next 6 Races Bar */
+html[data-theme="light"] #next6-bar {
+  background: var(--color-section-bg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-table-border);
+}
+
+html[data-theme="light"] .next6-pill {
+  background: var(--color-table-even-bg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-table-border);
+}
+
+html[data-theme="light"] .next6-pill:hover {
+  background: var(--color-section-bg-hover);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-theme="light"] .next6-course {
+  color: var(--color-text-primary);
+}
+
+html[data-theme="light"] .next6-time-btn {
+  background: var(--gradient-primary-button);
+  color: var(--color-text-inverted);
+  box-shadow: var(--shadow-sm);
+}
+
+html[data-theme="light"] .next6-time-btn:hover {
+  background: var(--gradient-primary-button-hover);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-theme="light"] .next6-time-btn.past {
+  background: var(--color-table-header-bg);
+  color: var(--color-text-secondary);
+}
+/* End Next 6 Races Bar styles */
+/* =========================================================================== */
+
 
 .container {
-  max-width: 800px; /* Max width for content */
-  margin: 0 auto; /* Center content */
-  padding: 30px 18px 50px 18px; /* Padding for content area */
-}
-
-/* --- NAVBAR --- */
-.main-navbar {
-  background: #171a20; /* Darker navbar background */
-  box-shadow: 0 1px 7px rgba(0,0,0,0.2); /* Subtle shadow */
-  position: sticky; /* Make navbar sticky at the top */
-  top: 0;
-  z-index: 10; /* Ensure navbar is above other content */
-}
-.navbar-inner {
-  max-width: 950px; /* Inner width of navbar */
+  max-width: 900px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.65em 1em;
-}
-.nav-brand {
-  font-size: 1.18em;
-  font-weight: 900;
-  color: #ffc900; /* Golden yellow brand color */
-  letter-spacing: 1px;
-  text-decoration: none;
-  padding: 2px 13px 2px 5px;
-  border-radius: 6px;
-  background: #232a32; /* Darker background for brand */
-  transition: background 0.13s, color 0.13s; /* Smooth transition */
-}
-.nav-brand:hover {
-  background: #36e8b5; /* Green accent on hover */
-  color: #191e23; /* Dark text on hover */
-}
-.nav-links {
-  display: flex;
-  gap: 1.12em; /* Space between navigation links */
-}
-.nav-link {
-  color: #36e8b5;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.04em;
-  padding: 3px 13px;
-  border-radius: 5px;
-  transition: background 0.12s, color 0.12s;
-}
-.nav-link:hover, .nav-link.nav-link-active {
-  background: #36e8b5;
-  color: #191e23 !important; /* Force dark text for active/hover */
+  padding: var(--spacing-xl) var(--spacing-md);
+  flex-grow: 1; /* Allows container to take available space */
 }
 
-/* --- Hamburger Menu Styles --- */
-.hamburger {
-  display: none; /* Hidden by default on desktop */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  z-index: 1000;
-}
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #36e8b5;
-  border-radius: 3px;
-  transition: all 0.3s ease-in-out;
-}
-/* Hamburger animation for 'active' state */
-.hamburger.active span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
-
-/* --- GENERAL HEADINGS & DESCRIPTIONS --- */
+/* =========================================================================== */
+/* --- Typography & Headings --- */
+/* =========================================================================== */
 h1, h2, h3 {
   font-family: inherit;
   font-weight: 800;
   line-height: 1.19;
-  color: #ffd700; /* Default heading color (golden yellow) */
   margin-top: 0;
 }
-/* Default h1 for general pages, meant to be overridden by page-specific .page-title */
-h1 { font-size: 2.15em; margin-bottom: 0.22em; text-align: center; }
-h2 { font-size: 1.27em; margin-bottom: 0.6em; }
-h3 { font-size: 1.04em; color: #32dd99; margin-bottom: 0.33em; }
 
-.page-desc { /* General descriptive text, used on index.html, about.html */
-  color: #b7b7b7;
+h1 {
+  color: var(--color-primary-yellow);
+  font-size: clamp(1.8em, 4vw + 1rem, 2.8em);
+  margin-bottom: 0.4em;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  color: var(--color-primary-yellow);
+  font-size: clamp(1.2em, 2.5vw + 0.5rem, 1.8em);
+  margin-bottom: 0.7em;
+  letter-spacing: 0.01em;
+}
+
+h3 {
+  color: var(--color-accent-green);
+  font-size: clamp(1.0em, 2vw + 0.3rem, 1.3em);
+  margin-bottom: 0.33em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.page-desc {
+  color: var(--color-text-secondary);
   font-size: 1.09em;
-  max-width: 580px;
-  margin: 0 auto 1.8em auto;
+  max-width: 600px;
+  margin: 0 auto 1.9em auto;
   text-align: center;
   line-height: 1.6;
 }
 .page-desc b {
-  color: #ffc900;
-  font-weight: 700;
+  color: var(--color-primary-yellow);
 }
 
-/* --- REUSABLE BUTTON STYLE --- */
-/* This style is for general buttons that share a common visual appearance */
-.primary-btn { /* Renamed from .see-tips-btn for more generality */
-  display: inline-block;
-  background: linear-gradient(145deg, #36e8b5, #2ce8c0);
-  color: #191e23;
-  font-size: 1.15em;
-  font-weight: 700;
-  padding: 0.9em 1.8em;
-  border-radius: 8px;
+/* =========================================================================== */
+/* --- NAVBAR --- */
+/* =========================================================================== */
+.main-navbar {
+  width: 100%;
+  background: var(--color-navbar-bg);
+  box-shadow: var(--shadow-navbar);
+  position: sticky;
+  top: 0;
+  z-index: 150;
+  padding: 0.5rem 0; /* Adjusted vertical padding */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-md);
+  min-height: 60px; /* Ensures a consistent height for the navbar */
+  position: relative;
+}
+
+.nav-brand {
+  /* Removed font styles as content is now an image */
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s ease-out;
-  margin-top: 1.8em;
+  padding: 0; /* Remove padding from the link itself to let the img control spacing */
+  border-radius: 6px; /* Keep for focus outline */
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease-out; /* Smooth transition for hover effect */
+}
+.nav-brand:hover {
+  opacity: 0.85; /* Slight dim on hover for visual feedback */
+}
+/* No specific light mode overrides for nav-brand itself when it's an image */
+
+/* Styles for the logo.png image within the nav-brand */
+.nav-brand img {
+    height: 35px; /* Optimal height for the logo */
+    vertical-align: middle; /* Ensures image aligns well with other inline elements */
+    margin-right: 0; /* Remove margin-right if the logo is standalone */
+    transition: transform 0.2s ease-out; /* Smooth hover effect for the image */
+}
+
+.nav-brand img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 2.2em;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--color-accent-green); /* Default dark mode color */
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05em;
+  padding: 8px 14px;
+  border-radius: 7px;
+  /* Optimized: Group common transitions */
+  transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  white-space: nowrap;
+
+  /* Nested pseudo-element (SCSS-like syntax, will work in CSS as well) */
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--color-primary-yellow);
+    border-radius: 2px;
+    transition: width 0.25s ease-out;
+  }
+}
+.nav-link:hover,
+.nav-link.nav-link-active {
+  color: var(--color-primary-yellow);
+  background: var(--color-table-even-bg);
+  text-shadow: 0 1px 8px rgba(255, 217, 0, 0.12);
+  box-shadow: var(--shadow-sm);
+}
+.nav-link.nav-link-active:after {
+  width: calc(100% - 28px);
+}
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-accent-green);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Optimized: Light mode overrides for nav-link consolidated */
+html[data-theme="light"] .nav-link {
+  color: var(--color-accent-green); /* Keep specific */
+}
+html[data-theme="light"] .nav-link:hover,
+html[data-theme="light"] .nav-link.nav-link-active {
+  background: var(--color-table-header-bg);
+  color: var(--color-primary-yellow);
+  text-shadow: none; /* Remove text shadow in light mode */
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* --- Theme Toggle Button --- */
+.theme-toggle {
+  background: var(--color-table-even-bg);
+  border: 1px solid var(--color-table-border);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.3em;
+  padding: 0;
+  margin-left: var(--spacing-md);
+  /* Optimized: Specific transition properties */
+  transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-primary-yellow); /* Default icon color (moon) */
+  outline: none;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--color-table-odd-bg);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-accent-green);
+  outline-offset: 2px;
+}
+
+/* By default (dark mode), only show the dark icon (moon) */
+.theme-toggle .icon-dark {
+  display: block;
+}
+
+.theme-toggle .icon-light {
+  display: none;
+}
+
+/* Optimized: Theme Toggle Button - Light Mode Adjustments Consolidated */
+html[data-theme="light"] .theme-toggle {
+  background: var(--color-table-header-bg);
+  border: 1px solid var(--color-table-border);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-primary-yellow); /* Sun icon color in light mode */
+}
+html[data-theme="light"] .theme-toggle:hover {
+  background: var(--color-table-odd-bg);
+  box-shadow: var(--shadow-md);
+}
+html[data-theme="light"] .theme-toggle .icon-dark { display: none; }
+html[data-theme="light"] .theme-toggle .icon-light { display: block; }
+
+
+/* --- Hamburger Menu Icon --- */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 200;
+  margin-left: 10px;
+  /* IMPORTANT: Add transitions for opacity, visibility, pointer-events here */
+  transition: transform var(--transition-fast), opacity 0.3s ease, visibility 0.3s ease, pointer-events 0.3s ease;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.hamburger:hover {
+    background: rgba(255,255,255,0.1);
+}
+.hamburger span {
+  display: block;
+  width: 70%;
+  height: 3px;
+  margin: 5px 0;
+  background: var(--color-accent-green);
+  border-radius: 2px;
+  transition: all 0.25s ease-in-out;
+}
+/* Keep these active states for the hamburger's internal span animation if desired,
+   but its overall visibility will be controlled by the new rules below. */
+.hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+.hamburger:focus-visible {
+  outline: 2px solid var(--color-primary-yellow);
+  outline-offset: 2px;
+}
+
+/* Optimized: Hamburger icon in light mode consolidated */
+html[data-theme="light"] .hamburger {
+  background: rgba(0,0,0,0.05);
+}
+html[data-theme="light"] .hamburger:hover {
+  background: rgba(0,0,0,0.1);
+}
+html[data-theme="light"] .hamburger span {
+  background: var(--color-accent-green);
+}
+
+/* --- Mobile Navigation & Overlay --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Visible on mobile */
+    order: 2; /* Place hamburger after theme toggle */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    width: 88vw;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--color-navbar-bg);
+    box-shadow: -9px 0 38px rgba(0,0,0,0.85);
+    padding: 70px 0 var(--spacing-xl) 0;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    z-index: 250;
+    transition: transform var(--transition-medium), background 0.3s ease, box-shadow 0.3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 18px 25px;
+    font-size: 1.15em;
+    color: var(--color-text-primary);
+    border-bottom: 1px solid var(--color-table-border);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: background var(--transition-fast), color var(--transition-fast);
+    white-space: normal;
+  }
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  .nav-link:hover, .nav-link.nav-link-active {
+    background: var(--color-table-odd-bg);
+    color: var(--color-primary-yellow);
+    box-shadow: inset 3px 0 0 var(--color-primary-yellow);
+  }
+  .nav-link:after {
+      display: none;
+  }
+
+  .nav-close-btn {
+    /* REMOVED: display: block; from here. Visibility is now controlled by new rules. */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2.3em;
+    color: var(--color-text-secondary);
+    background: none;
+    border: none;
+    z-index: 260;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    /* IMPORTANT: Add transitions for opacity, visibility, pointer-events here */
+    transition: color var(--transition-fast), opacity 0.3s ease, visibility 0.3s ease, pointer-events 0.3s ease;
+
+    /* Initial state: Hidden on mobile until nav is active */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Make it unclickable when hidden */
+  }
+  .nav-close-btn:hover {
+      color: var(--color-primary-yellow);
+  }
+  .nav-close-btn:focus-visible {
+    outline: 2px solid var(--color-primary-yellow);
+    outline-offset: 2px;
+  }
+
+  .nav-backdrop {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: var(--color-overlay);
+    z-index: 240;
+    opacity: 0;
+    transition: opacity var(--transition-medium);
+  }
+  .nav-backdrop.active {
+    display: block; /* Keep display: block; for backdrop as it's full-screen overlay */
+    opacity: 1;
+  }
+
+  /* --- NEW RULES: Control Hamburger and Close Button Visibility --- */
+  /* These rules hide the hamburger and show the close button when the nav is open */
+  .nav-links.active ~ .hamburger {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Make it unclickable when hidden */
+  }
+
+  .nav-links.active ~ .nav-close-btn {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* Make it clickable when visible */
+  }
+
+  /* Responsive adjustment for theme toggle button */
+  .theme-toggle {
+    order: 1;
+    margin-left: auto;
+    margin-right: var(--spacing-sm);
+  }
+
+  /* Optimized: Mobile Nav in light mode consolidated */
+  html[data-theme="light"] .nav-links {
+    background: var(--color-navbar-bg);
+    box-shadow: -9px 0 38px rgba(0,0,0,0.2);
+  }
+  html[data-theme="light"] .nav-link {
+    color: var(--color-text-primary);
+    border-bottom: 1px solid var(--color-table-border);
+  }
+  html[data-theme="light"] .nav-link:hover,
+  html[data-theme="light"] .nav-link.nav-link-active {
+    background: var(--color-table-header-bg);
+    color: var(--color-primary-yellow);
+    box-shadow: inset 3px 0 0 var(--color-primary-yellow);
+  }
+  html[data-theme="light"] .nav-close-btn {
+    color: var(--color-text-secondary);
+  }
+}
+
+/* =========================================================================== */
+/* --- Buttons (General) --- */
+/* =========================================================================== */
+.primary-btn {
+  display: inline-block;
+  background: var(--gradient-primary-button);
+  color: var(--color-text-inverted);
+  font-size: 1.13em;
+  font-weight: 700;
+  padding: 0.88em 1.7em;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: background var(--transition-ease), transform var(--transition-ease), box-shadow var(--transition-ease);
+  margin-top: 1.5em;
   margin-bottom: 2em;
   border: none;
   cursor: pointer;
   letter-spacing: 0.02em;
 }
 .primary-btn:hover {
-  background: linear-gradient(145deg, #2ce8c0, #36e8b5);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(54, 232, 181, 0.6);
+  background: var(--gradient-primary-button-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 0 10px rgba(54, 232, 181, 0.2);
 }
 .primary-btn:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+.primary-btn:focus-visible {
+  outline: 2px solid var(--color-primary-yellow);
+  outline-offset: 2px;
 }
 
-/* --- General Table Styles (for yesterday.html and other potential tables) --- */
+/* Optimized: Buttons in light mode consolidated */
+html[data-theme="light"] .primary-btn {
+  background: var(--gradient-primary-button);
+  box-shadow: var(--shadow-md);
+}
+html[data-theme="light"] .primary-btn:hover {
+  background: var(--gradient-primary-button-hover);
+  box-shadow: var(--shadow-lg), 0 0 10px rgba(0, 143, 93, 0.2);
+}
+
+
+/* =========================================================================== */
+/* --- General Table Styles --- */
+/* =========================================================================== */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 28px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent-green) var(--color-bg);
+}
+.table-responsive::-webkit-scrollbar { height: 8px; }
+.table-responsive::-webkit-scrollbar-thumb { background: var(--color-accent-green); border-radius: 4px; }
+.table-responsive::-webkit-scrollbar-track { background: var(--color-bg); }
+
 table {
-    border-collapse: collapse;
-    width: 100%;
-    background: #232d33;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-    margin-bottom: 30px;
+  border-collapse: collapse;
+  width: 100%;
+  background: var(--color-table-even-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 28px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 th, td {
-    padding: 14px 18px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    color: #e0e0e0;
-    font-size: 0.98em;
+  padding: 13px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-table-border);
+  color: var(--color-text-primary);
+  font-size: 0.98em;
 }
 th {
-    background: linear-gradient(145deg, #1f242a, #1a1e23);
-    color: #ffc900;
-    font-size: 1.05em;
-    font-weight: 700;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  background: var(--gradient-table-header);
+  color: var(--color-primary-yellow);
+  font-size: 1.05em;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 table thead tr:first-child th:first-child { border-top-left-radius: 12px; }
 table thead tr:first-child th:last-child { border-top-right-radius: 12px; }
-tr:nth-child(even) { background: #2a2e33; }
-tr:nth-child(odd) { background: #23262A; }
+
+/* Table row striping - these naturally pick up light mode vars when active */
+tr:nth-child(even) { background: var(--color-table-even-bg); }
+tr:nth-child(odd) { background: var(--color-table-odd-bg); }
+
 table tbody tr:last-child td { border-bottom: none; }
-tr.win-row { /* Specific style for win rows, used in yesterday.html */
-    background: linear-gradient(145deg, #36e8b5, #2ce8c0) !important;
-    color: #191e23;
-    font-weight: 600;
-    box-shadow: inset 0 0 10px rgba(54,232,181,0.5);
-}
-tr.win-row td { color: #191e23 !important; }
-td:last-child { font-weight: bold; color: #ffc900; }
-tr.win-row td:last-child { color: #191e23 !important; }
-.table-responsive { /* For horizontal scrolling tables */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-bottom: 30px;
-    scrollbar-width: thin;
-    scrollbar-color: #35e9ae #181c22;
-}
-.table-responsive::-webkit-scrollbar { height: 8px; }
-.table-responsive::-webkit-scrollbar-thumb { background: #35e9ae; border-radius: 4px; }
-.table-responsive::-webkit-scrollbar-track { background: #181c22; }
 
-/* --- Course Bar (general component for navigation between courses, used in racecard.html) --- */
-.course-bar {
+tr.win-row {
+  background: var(--gradient-win-row) !important;
+  color: var(--color-text-inverted);
+  box-shadow: inset 0 0 9px rgba(54,232,181,0.37);
+}
+tr.win-row td { color: var(--color-text-inverted) !important; }
+td:last-child { font-weight: bold; color: var(--color-primary-yellow); }
+tr.win-row td:last-child { color: var(--color-text-inverted) !important; }
+
+/* Optimized: Tables in light mode consolidated */
+html[data-theme="light"] .table-responsive {
+    scrollbar-color: var(--color-accent-green) var(--color-bg);
+}
+html[data-theme="light"] .table-responsive::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+html[data-theme="light"] table {
+  background: var(--color-table-even-bg);
+  box-shadow: var(--shadow-lg);
+}
+html[data-theme="light"] th,
+html[data-theme="light"] td {
+  border-bottom: 1px solid var(--color-table-border);
+  color: var(--color-text-primary);
+}
+html[data-theme="light"] th {
+  background: var(--gradient-table-header);
+  color: var(--color-primary-yellow);
+}
+html[data-theme="light"] tr.win-row {
+  background: var(--gradient-win-row) !important;
+  box-shadow: inset 0 0 9px rgba(0,143,93,0.2);
+}
+
+
+/* =========================================================================== */
+/* --- Footer --- */
+/* =========================================================================== */
+.site-footer {
+  background: var(--gradient-footer);
+  color: var(--color-text-secondary);
+  padding: 2.2em 1em 1.2em 1em;
+  margin-top: 4em;
+  font-size: 1em;
+  border-top: 2px solid var(--color-table-border);
+  box-shadow: var(--shadow-footer);
+  transition: background 0.3s ease, border-top 0.3s ease, box-shadow 0.3s ease;
+}
+.footer-inner {
+  max-width: 830px;
+  margin: 0 auto;
   display: flex;
-  gap: 10px;
-  padding: 15px 0 18px 0;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.footer-links {
+  display: flex;
+  gap: 1.4em;
   flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.08em;
 }
-.course-link {
-  background: #21242a;
-  color: #36e8b5;
-  border-radius: 8px;
-  padding: 0.40em 1.2em;
-  font-weight: 700;
-  font-size: 1.06em;
+.footer-links a {
+  color: var(--color-link-footer);
   text-decoration: none;
-  transition: background 0.14s, color 0.14s, box-shadow 0.15s;
-  box-shadow: 0 2px 8px rgba(17,17,17,0.2);
+  font-weight: 700;
+  transition: color var(--transition-fast);
 }
-.course-link.active,
-.course-link:hover {
-  background: #36e8b5;
-  color: #191e23;
-  box-shadow: 0 2px 16px rgba(25,231,182,0.73);
+.footer-links a:hover {
+  color: var(--color-primary-yellow);
+  text-decoration: underline;
+}
+.footer-links a:focus-visible {
+  outline: 2px solid var(--color-primary-yellow);
+  outline-offset: 2px;
+}
+.footer-meta {
+  display: flex;
+  gap: 0.7em;
+  font-size: 1em;
+  align-items: center;
+  color: var(--color-text-secondary);
+}
+.footer-meta a {
+  color: var(--color-link-footer);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.footer-meta a:focus-visible {
+  outline: 2px solid var(--color-primary-yellow);
+  outline-offset: 2px;
+}
+.footer-disclaimer {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.93em;
+  margin-top: 0.6em;
+  line-height: 1.6;
 }
 
-/* --- General Responsive Utilities --- */
-@media (max-width: 800px) {
-  .container { padding: 18px 2vw 34px 2vw; }
+/* Optimized: Footer in light mode consolidated */
+html[data-theme="light"] .site-footer {
+  background: var(--gradient-footer);
+  border-top: 2px solid var(--color-table-border);
+  box-shadow: var(--shadow-footer);
 }
 
-@media (max-width: 768px) {
-  /* NAVBAR */
-  .hamburger { display: flex; margin-left: 1em; }
-  .nav-links {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background-color: #171a20;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-    display: none;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+
+/* =========================================================================== */
+/* --- Utility Classes --- */
+/* =========================================================================== */
+.text-center { text-align: center; }
+.text-bold { font-weight: 700; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* racecard.css */
+
+/* ... (previous CSS code) ... */
+
+
+/* =========================================================================== */
+/* --- [11] RESPONSIVE ADJUSTMENTS --- */
+/* =========================================================================== */
+
+/* Max-width 900px: General container adjustments */
+@media (max-width: 900px) {
+  .container {
+    max-width: 99vw;
   }
-  .nav-links.active { display: flex; }
-  .nav-links a { padding: 10px 0; width: 100%; text-align: center; color: #36e8b5; }
-
-  /* General headings adjustment */
-  h1 { font-size: 1.8em; margin-top: 1.5em; margin-bottom: 0.8em; }
-  h2 { font-size: 1.6em; margin-bottom: 1em; } /* Larger for mobile for general sections */
-  h3 { font-size: 1.1em; } /* Larger for mobile for general sections */
-
-  .page-desc { font-size: 1.05em; margin-bottom: 2em; }
-
-  /* Buttons */
-  .primary-btn { padding: 8px 16px; font-size: 0.95em; border-radius: 8px; }
-
-  /* Course bar */
-  .course-link { padding: 0.35em 1em; font-size: 1em; }
+  .navbar-inner {
+    max-width: 99vw;
+  }
 }
 
-@media (max-width: 480px) {
-    /* General headings adjustment */
-    h1 { font-size: 1.5em; margin-top: 1em; margin-bottom: 0.7em; }
-    h2 { font-size: 1.4em; margin-bottom: 0.8em; }
-    h3 { font-size: 1.0em; }
+/* Max-width 700px: Smaller screens, general adjustments */
+@media (max-width: 700px) {
+  .next6-bar {
+    gap: 7px;
+  }
+  .next6-link {
+    min-width: 57px;
+    font-size: 0.93em;
+    padding: 5px 7px;
+  }
+  .runners-list {
+    gap: 10px;
+  }
+  .runner-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    /* ADJUSTED PADDING FOR SMALLER SCREENS */
+    padding: 9px 10px; /* Increased horizontal padding from 5px to 10px */
+    min-width: 0;
+  }
+  .runner-num-draw,
+  .runner-silk {
+    margin-right: 0;
+  }
+  .runner-main {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+  .runner-odds {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .runner-more {
+    width: 100%;
+    margin-top: 6px;
+  }
+  .race-header h1 {
+    font-size: 1.13em;
+  }
+}
 
-    .page-desc { font-size: 1em; margin-bottom: 1.5em; padding: 0 10px; }
+/* Max-width 600px: Mobile-specific layout changes and fine-tuning */
+@media (max-width: 600px) {
+  /* ... (previous 600px media query code) ... */
 
-    /* Buttons */
-    .primary-btn { padding: 7px 14px; font-size: 0.9em; }
+  /* Runners List & Cards adjustments */
+  .runners-list {
+    gap: 7px;
+    margin-bottom: 1.2em;
+  }
+  .runner-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    /* ADJUSTED PADDING FOR EVEN SMALLER SCREENS */
+    padding: 6px 8px; /* Increased horizontal padding from 2px to 8px */
+    min-width: 0;
+  }
+  .runner-num-draw {
+    flex-direction: column;
+    gap: 1px;
+    min-width: unset;
+    align-items: center;
+  }
+  .runner-num {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .runner-draw {
+    font-size: 0.8em;
+  }
+  .runner-silk {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .runner-main {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+  .runner-horse {
+    font-size: 0.95em;
+    margin-bottom: 0px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .runner-meta-line,
+  .runner-info-line {
+    font-size: 0.85em;
+    gap: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .runner-more-btn {
+    font-size: 0.85em;
+    padding: 2px 5px;
+    margin-top: 2px;
+  }
+  .runner-odds {
+    min-width: 35px;
+    font-size: 0.95em;
+    margin-left: auto;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .runner-more {
+    width: 100%;
+    font-size: 0.93em;
+    padding: 7px 6px;
+    margin-top: 6px;
+  }
+}
 
-    /* Course bar */
-    .course-link { padding: 0.3em 0.8em; font-size: 0.9em; }
+/* Max-width 500px: Smallest screen adjustments */
+@media (max-width: 500px) {
+  /* ... (previous 500px media query code) ... */
+
+  .runner-card {
+    gap: 4px;
+    /* ADJUSTED PADDING AGAIN FOR SMALLEST SCREENS */
+    padding: 4px 6px; /* Increased horizontal padding from 2px to 6px */
+  }
+  .runner-num {
+    width: 22px;
+    height: 22px;
+    font-size: 0.85em;
+  }
+  .runner-silk {
+    width: 24px;
+    height: 24px;
+  }
+  .runner-horse {
+    font-size: 0.9em;
+  }
+  .runner-meta-line,
+  .runner-info-line {
+    font-size: 0.8em;
+  }
+  .runner-odds {
+    min-width: 30px;
+    font-size: 0.9em;
+  }
+  .footer-links {
+    gap: 8px;
+  }
+  .race-header h1 {
+    font-size: 1em;
+  }
 }

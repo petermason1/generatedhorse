@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NMB0VG2VBB');
+</script>
+
   <meta charset="UTF-8">
   <title>Horse Racing ROI & Winners | Smart Racecards</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="See our full historic record of horse racing tips, winners, and ROI by course, type, and class. Data-driven results and all-time stats from Smart Racecards.">
+ <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="yesterday.css" />
@@ -18,9 +29,7 @@
       vertical-align: middle;
     }
     .winners-table th:nth-child(4),
-    .winners-table td:nth-child(4),
-    .winners-table th:nth-child(8),
-    .winners-table td:nth-child(8) {
+    .winners-table td:nth-child(4) {
       white-space: normal;
       word-break: break-word;
       overflow-wrap: anywhere;
@@ -33,31 +42,42 @@
     @media (max-width: 600px) {
       .container { padding: 10px 2vw; }
       th, td { font-size: 0.92em; padding: 6px 4px; }
-      .winners-table th:nth-child(8), .winners-table td:nth-child(8) { max-width: 120px; }
     }
     @media (max-width: 420px) {
-      .winners-table th:nth-child(8), .winners-table td:nth-child(8) { display: none; }
+      /* Hide columns if table is still too wide on tiny screens (add nth-child as needed) */
+      /* Example: Hide 'Course' column: */
+      /* .winners-table th:nth-child(2), .winners-table td:nth-child(2) { display: none; } */
     }
   </style>
 </head>
 <body>
-  <nav class="main-navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-brand">🏇 Racecards</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="tips.html" class="nav-link">Tips</a>
-        <a href="yesterday.html" class="nav-link nav-link-active">Historical</a>
-        <a href="custom-score.html" class="nav-link">Custom Score</a>
-        <a href="about.html" class="nav-link">About</a>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+<nav class="main-navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="Smart Racecards Logo">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="today.html" class="nav-link">Today's Races</a>
+      <a href="results.html" class="nav-link">Results</a>
+      <a href="tips.html" class="nav-link">Tipster</a>
+      <a href="yesterday.html" class="nav-link">Historical</a>
+      <a href="custom-score.html" class="nav-link">Custom Score</a>
+      <a href="about.html" class="nav-link">About</a>
     </div>
-  </nav>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</nav>
   <div class="container">
     <h1>Selections, Winners & ROI Breakdown</h1>
     <div class="roi-summary summary">
@@ -69,19 +89,31 @@
     </div>
     <div class="roi-tables">
       <h3>ROI by Course</h3>
-      <div class="table-responsive"><table id="roi-by-course"></table></div>
+      <div class="table-responsive">
+        <table id="roi-by-course" class="roi-table"></table>
+      </div>
       <h3>ROI by Race Type</h3>
-      <div class="table-responsive"><table id="roi-by-type"></table></div>
+      <div class="table-responsive">
+        <table id="roi-by-type" class="roi-table"></table>
+      </div>
       <h3>ROI by Race Class</h3>
-      <div class="table-responsive"><table id="roi-by-class"></table></div>
+      <div class="table-responsive">
+        <table id="roi-by-class" class="roi-table"></table>
+      </div>
     </div>
     <div class="winners-table">
       <h2>All Winners</h2>
       <div class="table-responsive">
-        <table class="winners-table-table">
+        <table class="winners-table">
           <thead>
             <tr>
-              <th>Date</th><th>Course</th><th>Off</th><th>Tip</th><th>Odds</th><th>SP</th><th>Win Return</th>
+              <th>Date</th>
+              <th>Course</th>
+              <th>Off</th>
+              <th>Tip</th>
+              <th>Odds</th>
+              <th>SP</th>
+              <th>Win Return</th>
             </tr>
           </thead>
           <tbody id="winners-rows">
@@ -91,6 +123,31 @@
       </div>
     </div>
   </div>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Tips</a>
+      <a href="yesterday.html">Historical</a>
+      <a href="custom-score.html">Custom Score</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="footer-meta">
+      <span id="footer-year"></span> Smart Racecards
+      <span>•</span>
+      <a href="mailto:info@smartracecards.com">Contact</a>
+    </div>
+    <div class="footer-disclaimer">
+      <small>
+        For informational purposes only – not betting advice.<br>
+        Please gamble responsibly. 18+
+      </small>
+    </div>
+  </div>
+</footer>
+
   <script src="yesterday.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -1,17 +1,580 @@
-/* --- NEXT 6 RACES --- */
+/*
+ * index.css: Page-specific stylesheet for the homepage.
+ * Contains: Homepage specific layout, CTA bars, Racecard sections.
+ */
+
+/* --- Page Introduction & CTA Sections --- */
+/*
+ * index.css: Page-specific stylesheet for the homepage.
+ * Contains: Homepage specific layout, CTA bars, Racecard sections.
+ */
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  margin-bottom: 3.5em; /* Space below the hero */
+  padding-top: 1.5em;
+}
+
+.hero-section h1 {
+  /* Inherits from base.css, but can fine-tune here if needed */
+  margin-bottom: 0.5em;
+}
+
+.hero-cta {
+  margin-top: 2.5em; /* More space below the description */
+  padding: 1em 2.5em; /* Larger button */
+  font-size: 1.25em; /* Larger text */
+  border-radius: 12px;
+}
+.hero-cta:hover {
+  /* Keep current hover styles, as they are not color-dependent */
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), 0 0 15px rgba(54, 232, 181, 0.3);
+}
+
+
+/* --- Quick Access Links --- */
+.quick-access-links {
+  margin-bottom: 4em; /* Space before the dynamic content */
+  padding: 2.5em 0;
+  /* CHANGE: Use generic section background variable */
+  background: var(--color-section-bg);
+  border-radius: 14px;
+  box-shadow: var(--shadow-lg); /* Consistent shadow */
+  /* If the h2 is a direct child and you want it centered within this section,
+     you could add text-align: center; here, but it's usually better to target the h2 directly. */
+}
+
+/* New rule to ensure h2 titles are centered within sections */
+/* This assumes your h2 for the quick access links is a direct child
+   or a nearby sibling to .quick-access-links */
+.quick-access-links h2 { /* Target h2 specifically within quick-access-links if it's inside */
+    text-align: center;
+    color: var(--color-primary-yellow); /* Example: match your existing headings */
+    font-size: 1.8em; /* Adjust as needed */
+    margin-top: 0; /* Remove default top margin if it pushes it down too much */
+    margin-bottom: 1em; /* Space below the title */
+    padding-top: 0.5em; /* Add some padding if quick-access-links has padding-top: 0 */
+}
+
+/* If the h2 is outside and *before* .quick-access-links, you might need a more general h2 rule
+   or a specific class for that h2, like: */
+/* .section-heading {
+    text-align: center;
+    color: var(--color-primary-yellow);
+    font-size: 2em;
+    margin-bottom: 1.5em;
+} */
+
+
+.quick-access-links .link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 1.5em;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* CHANGE: Use a generic background variable */
+  background: var(--color-table-odd-bg); /* Use table-odd-bg as a dark base for these cards */
+  border-radius: 10px;
+  padding: 1.5em;
+  text-decoration: none;
+  /* CHANGE: Use generic primary text color */
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-ease), box-shadow var(--transition-ease), background var(--transition-ease);
+  /* CHANGE: Use generic border color variable */
+  border: 1px solid var(--color-table-border);
+}
+
+.quick-link:hover,
+.quick-link:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  /* CHANGE: Use a generic hover background variable */
+  background: var(--color-table-even-bg); /* A slightly different shade for hover */
+  border-color: var(--color-accent-green); /* Highlight border on hover */
+}
+
+.quick-link h3 {
+  color: var(--color-accent-green); /* Emphasize headings */
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%; /* Ensure h3 takes full width to center its content */
+  justify-content: center; /* Center content within the h3 */
+}
+.quick-link h3 i { /* Icon styling */
+  font-size: 1.4em;
+  color: var(--color-primary-yellow); /* Icons in yellow */
+}
+
+.quick-link p {
+  /* CHANGE: Use generic secondary text color */
+  color: var(--color-text-secondary);
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* --- CTA Bar (Tips) --- */
+.cta-bar-bottom {
+  margin-top: 4em; /* Space above the footer */
+  margin-bottom: 3em; /* Space above the footer */
+}
+.tips-cta-bar {
+  /* Inherits styles from base.css */
+  max-width: 800px; /* Make it wider for more impact */
+  padding: 20px 30px; /* Larger padding */
+  border-radius: 15px; /* More rounded */
+  /* CHANGE: Use generic background variable */
+  background: var(--color-table-odd-bg); /* Use table-odd-bg for this bar's background */
+  box-shadow: var(--shadow-lg);
+  font-size: 1.18em;
+}
+.tips-cta-bar span {
+  font-weight: 600;
+  /* CHANGE: Use generic primary text color */
+  color: var(--color-text-primary);
+}
+.tips-cta-bar b {
+  color: var(--color-primary-yellow); /* Yellow highlight for the main message */
+}
+
+.see-tips-btn {
+  /* Inherits styles from base.css, overrides specific for this section */
+  padding: 1.05em 2.2em; /* Slightly larger button */
+  font-size: 1.18em;
+  border-radius: 17px;
+  /* This gradient is fine for default, but if you want it to change in light mode,
+     you'd need to define a new light mode specific gradient variable in :root */
+  background: linear-gradient(90deg, #36e8b5 60%, #29d99c 100%);
+  box-shadow: 0 4px 18px rgba(54,232,181,0.2);
+}
+.see-tips-btn:hover {
+  background: linear-gradient(90deg, #29d99c 40%, #36e8b5 100%);
+  box-shadow: 0 8px 28px rgba(54,232,181,0.35);
+  transform: translateY(-3px) scale(1.02);
+}
+
+
+/* --- NEXT 6 RACES Section --- */
 .next6-bar {
-  background: #21242a;
+  /* CHANGE: Use generic section background variable */
+  background: var(--color-section-bg);
   border-radius: 12px;
   padding: 1.5em 1em 1.7em 1em;
-  margin: 1.2em auto 1.4em auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.35); /* Enhanced shadow for more depth */
+  margin: 2.2em auto 2.4em auto; /* Adjusted margins */
+  box-shadow: var(--shadow-lg); /* Stronger shadow */
   text-align: center;
   max-width: 700px;
 }
 
+.next6-bar h2 {
+  color: var(--color-primary-yellow);
+  margin-bottom: 1.2em; /* Adjusted spacing */
+}
+
 .next6-races {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Default for larger screens */
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Slightly wider min for items */
+  gap: 0.8em; /* Increased gap */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.next6-race-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* CHANGE: Use a generic background variable */
+  background: var(--color-table-even-bg); /* Use table-even-bg as base for these links */
+  border-radius: 10px; /* Slightly more rounded */
+  padding: 1em 0.5em; /* Adjusted padding */
+  min-height: 85px; /* Taller links */
+  /* CHANGE: Use generic accent green for border */
+  border: 2px solid var(--color-accent-green);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25); /* Stronger shadow */
+  transition: all var(--transition-ease);
+  /* CHANGE: Use generic primary text color */
+  color: var(--color-text-primary); /* Default text color for these links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.next6-race-link:hover,
+.next6-race-link:focus-visible {
+  background: var(--color-accent-green); /* Use a variable directly here */
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+  border-color: var(--color-accent-green);
+  transform: translateY(-4px); /* More pronounced lift */
+  box-shadow: 0 10px 25px rgba(54, 232, 181, 0.4);
+}
+
+.next6-time {
+  font-size: 1.2em; /* Larger time */
+  margin-top: 7px; /* More space */
+  color: var(--color-primary-yellow); /* Changed time color */
+  font-weight: 800;
+}
+
+.next6-race-link:hover .next6-time,
+.next6-race-link:focus-visible .next6-time {
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+}
+
+.next6-course {
+  font-size: 0.95em; /* Slightly larger course name */
+  /* CHANGE: Use generic primary text color */
+  color: var(--color-text-primary);
+  opacity: 0.95;
+  font-weight: 600;
+}
+
+.next6-race-link:hover .next6-course,
+.next6-race-link:focus-visible .next6-course {
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+  opacity: 1;
+}
+
+/* --- RACES BY COURSE Section --- */
+.races-course-list {
+  margin-top: 3em; /* Adjusted margin */
+  margin-bottom: 3.5em; /* Space before potential bottom CTA or footer */
+}
+.races-course-list h2 {
+    color: var(--color-primary-yellow); /* Consistent heading color */
+    margin-bottom:1em; /* Adjusted margin */
+}
+
+.racecard-course-row {
+  margin-bottom: 1.7em; /* More space between course blocks */
+  /* CHANGE: Use generic section background variable */
+  background: var(--color-section-bg);
+  border-radius: 14px; /* Slightly more rounded */
+  padding: 1.2em; /* More padding */
+  box-shadow: var(--shadow-md); /* Stronger shadow */
+  /* CHANGE: Use generic table border variable */
+  border: 1px solid var(--color-table-border);
+}
+
+.racecard-course-header {
+  font-size: 1.25em; /* Larger header */
+  color: var(--color-primary-yellow); /* Consistent heading color */
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid var(--color-table-border); /* Use variable */
+  letter-spacing: .05em;
+}
+
+.racecard-race-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Slightly wider min for times */
+  gap: 0.6em; /* Increased gap */
+  margin-top: 1.2em;
+}
+
+.racecard-time-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* CHANGE: Use generic table odd background */
+  background: var(--color-table-odd-bg);
+  border-radius: 9px; /* More rounded */
+  min-width: 70px;
+  min-height: 50px; /* Taller links */
+  padding: 0.3em 0.8em;
+  box-shadow: var(--shadow-sm);
+  /* CHANGE: Use generic table border */
+  border: 1px solid var(--color-table-border);
+  /* CHANGE: Use generic primary yellow for text, as it's typically for "time" */
+  color: var(--color-primary-yellow); /* Default color for time links */
+  text-decoration: none;
+  font-size: 1.04em;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.racecard-time-link:hover,
+.racecard-time-link:focus-visible {
+  background: var(--color-accent-green); /* Consistent hover green */
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+  transform: translateY(-3px); /* More pronounced lift */
+  box-shadow: 0 6px 15px rgba(53,233,174,0.4);
+}
+
+.racecard-time {
+  color: var(--color-primary-yellow); /* Consistent time color */
+  font-weight: 800;
+  margin: 0 auto;
+  text-align: center;
+  transition: color var(--transition-fast);
+}
+
+.racecard-time-link:hover .racecard-time,
+.racecard-time-link:focus-visible .racecard-time {
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+}
+
+/* Consider removing racecard-title if not used in your HTML, or provide content for it */
+.racecard-title {
+  /* CHANGE: Use generic text primary */
+  color: var(--color-text-primary); /* Consistent color */
+  font-weight: 600;
+  font-size: 0.95em; /* Slightly larger */
+  margin-top: -1px; /* Keep this if it's for layout */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color var(--transition-fast);
+}
+
+.racecard-time-link:hover .racecard-title,
+.racecard-time-link:focus-visible .racecard-title {
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+}
+
+/* --- Responsive Layout Adjustments for index.css specific elements --- */
+@media (max-width: 700px) {
+  .hero-section {
+    margin-bottom: 2em;
+    padding-top: 0.5em;
+  }
+  .hero-cta {
+    margin-top: 1.5em;
+    padding: 0.9em 2em;
+    font-size: 1.15em;
+  }
+  .quick-access-links {
+    margin-bottom: 2.5em;
+    padding: 1.5em 0.5em;
+    border-radius: 12px;
+  }
+  .quick-access-links .link-grid {
+    grid-template-columns: 1fr; /* Stack vertically on small screens */
+    padding: 0 1em;
+  }
+  .quick-link {
+    padding: 1em;
+  }
+  .quick-link h3 {
+    font-size: 1.1em;
+  }
+  .quick-link p {
+    font-size: 0.9em;
+  }
+
+  .cta-bar-bottom {
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+  }
+  .tips-cta-bar {
+    padding: 15px 20px;
+    font-size: 1.05em;
+  }
+  .see-tips-btn {
+    padding: 15px 0;
+    font-size: 1.03em;
+  }
+
+  .next6-bar {
+    margin-top: 1.5em;
+    padding: 1.1em 0.5em 1.4em 0.5em; /* Adjusted padding */
+    border-radius: 11px;
+    max-width: 100vw;
+  }
+  .next6-races {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important; /* Min 130px for better two-column layout on medium phones */
+    gap: 0.44em;
+    max-width: 100vw;
+  }
+  .next6-race-link {
+    min-height: 44px;
+    font-size: 0.99em;
+    border-radius: 9px;
+    padding: 0.58em 0.1em;
+    margin-bottom: 0;
+  }
+  .next6-time {
+    font-size: 1.01em;
+    margin-top: 3px;
+  }
+  .next6-course {
+    font-size: 0.82em;
+    line-height: 1.16;
+  }
+
+  .racecard-race-row {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Min 80px for course times */
+  }
+}
+
+/* For very small phones (up to 420px) */
+@media (max-width: 420px) {
+  .container { padding-left: 1vw; padding-right: 1vw; }
+  h1 { font-size: 1.13em; }
+  .see-tips-btn { font-size: 0.97em; padding: 13px 0; }
+  .next6-races { gap: 0.23em; }
+}
+
+
+.what-else-intro {
+  text-align: center;
+  font-size: 1.07em;
+  max-width: 540px;
+  margin: 0 auto 1.1em auto;
+  /* CHANGE: Use generic secondary text color */
+  color: var(--color-text-secondary);
+}
+.what-else-intro a {
+  font-weight: 600;
+  /* CHANGE: Use generic accent green for this link */
+  color: var(--color-accent-green);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+.what-else-intro a:hover {
+  color: var(--color-primary-yellow);
+}
+.what-else-intro a:focus-visible {
+  outline: 2px solid var(--color-primary-yellow);
+  outline-offset: 2px;
+}
+
+/* --- Bookmark Note --- */
+.bookmark-note {
+  text-align: center;
+  font-size: 0.99em;
+  margin-bottom: 1.05em;
+  /* CHANGE: Use generic secondary text color for a softer look */
+  color: var(--color-text-secondary);
+  font-weight: 500; /* Added for subtle emphasis */
+}
+.bookmark-note b {
+  color: var(--color-primary-yellow);
+}
+
+/* --- CTA Bar (Tips) --- */
+/* This section was re-added at the end, so I'm making sure it's also using variables. */
+.tips-cta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* CHANGE: Use generic table odd background variable */
+  background: var(--color-table-odd-bg);
+  /* CHANGE: Use generic primary text color */
+  color: var(--color-text-primary);
+  font-size: 1.12em;
+  padding: 15px 22px;
+  border-radius: 11px;
+  margin: 0 auto 2.1em auto;
+  max-width: 630px;
+  gap: 14px;
+  /* CHANGE: Use generic shadow variable */
+  box-shadow: var(--shadow-sm); /* Using sm for a lighter effect */
+  font-weight: 500;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Override the tips-cta-bar for light mode if specific styling is desired, otherwise it'll just use the var changes */
+html[data-theme="light"] .tips-cta-bar {
+  background: var(--color-section-bg); /* Use a common light background for sections/cards */
+  box-shadow: var(--shadow-md); /* Maybe a slightly more pronounced shadow in light mode */
+}
+
+
+.tips-cta-bar span {
+  display: block;
+  font-size: 1em;
+  font-weight: 500;
+  flex: 1; /* Allows text to take available space */
+  min-width: 200px; /* Ensures text doesn't get too narrow before wrapping */
+}
+
+.tips-cta-bar b {
+  color: var(--color-primary-yellow); /* Highlight the "Want Free Daily Tips?" */
+}
+
+.see-tips-btn {
+  display: inline-block;
+  margin: 1.1em auto 0.7em auto; /* Adjusted margins for flex context */
+  padding: 0.95em 2em 0.95em 1.4em;
+  /* This gradient is fine for default, but if you want it to change in light mode,
+     you'd need to define a new light mode specific gradient variable in :root */
+  background: linear-gradient(90deg, #2fe0a0 60%, #22c788 100%); /* Slightly different green gradient */
+  /* CHANGE: Use generic inverted text color */
+  color: var(--color-text-inverted);
+  font-weight: 700;
+  font-size: 1.14em;
+  border-radius: 15px;
+  box-shadow: 0 3px 14px rgba(47,224,160,0.14);
+  letter-spacing: .02em;
+  border: none;
+  transition:
+    background 0.2s cubic-bezier(.32,1.29,.44,.97), /* Smoother bounce */
+    color 0.13s,
+    box-shadow 0.2s cubic-bezier(.32,1.29,.44,.97),
+    transform 0.15s;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.see-tips-btn:hover,
+.see-tips-btn:focus-visible {
+  background: linear-gradient(90deg, #1b8c68 40%, #2fe0a0 100%);
+  color: #fff; /* Keep white on hover */
+  box-shadow: 0 6px 24px rgba(47,224,160,0.23);
+  transform: translateY(-2px) scale(1.02); /* Slightly larger scale */
+}
+.see-tips-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 10px rgba(47,224,160,0.1);
+}
+
+/* --- NEXT 6 RACES Section --- */
+/* This section was re-added at the end, so I'm making sure it's also using variables. */
+.next6-bar {
+  /* CHANGE: Use generic section background variable */
+  background: var(--color-section-bg);
+  border-radius: 12px;
+  padding: 1.5em 1em 1.7em 1em;
+  margin: 1.2em auto 1.4em auto;
+  /* CHANGE: Use generic shadow variable */
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  max-width: 700px;
+}
+
+.next6-bar h2 {
+  color: var(--color-primary-yellow);
+  margin-bottom: 1em; /* Adjust spacing below title */
+}
+
+.next6-races {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adaptive columns */
   gap: 0.6em;
   width: 100%;
   max-width: 700px;
@@ -23,25 +586,38 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Subtle gradient for a more dynamic background */
-  background: linear-gradient(145deg, #232d37, #1e262f);
+  /* CHANGE: Use generic table even background variable */
+  background: var(--color-table-even-bg);
   border-radius: 8px;
   padding: 0.8em 0.3em;
-  color: #28d987;
+  /* CHANGE: Use generic accent green as default link color */
+  color: var(--color-accent-green);
   text-decoration: none;
   font-weight: bold;
   min-height: 75px;
-  border: 2px solid #1f6037;
-  transition: background 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Smoother transitions for all properties */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Stronger initial shadow */
+  /* CHANGE: Use generic accent green for border */
+  border: 2px solid var(--color-accent-green);
+  transition: all var(--transition-ease);
+  /* CHANGE: Use generic shadow variable */
+  box-shadow: var(--shadow-sm);
 }
 
-.next6-race-link:hover {
-  background: #28d987; /* Solid color for hover, as per original design */
-  color: #161c22;
-  border-color: #28d987;
-  transform: translateY(-3px); /* Subtle lift effect on hover */
-  box-shadow: 0 8px 20px rgba(0,220,150,0.3); /* Greenish glow on hover */
+/* Light mode specific override for next6-race-link background */
+html[data-theme="light"] .next6-race-link {
+  background: var(--color-table-odd-bg); /* Use slightly different shade in light mode */
+  box-shadow: var(--shadow-md); /* Lighter shadow */
+}
+
+
+.next6-race-link:hover,
+.next6-race-link:focus-visible { /* Added focus-visible for accessibility */
+  background: var(--color-accent-green);
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+  border-color: var(--color-accent-green);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,220,150,0.3);
+  outline: none; /* Remove default outline, as we have custom shadow/border */
 }
 
 .next6-time {
@@ -50,19 +626,21 @@
   line-height: 1.1;
   text-align: center;
   margin-top: 5px;
-  color: #28d987;
-  /* Transition for color change on hover */
-  transition: color 0.2s ease-out;
+  /* CHANGE: Use generic primary yellow for time */
+  color: var(--color-primary-yellow);
+  transition: color var(--transition-ease);
 }
 
-.next6-race-link:hover .next6-time {
-  color: #161c22; /* Text color on hover matches background */
+.next6-race-link:hover .next6-time,
+.next6-race-link:focus-visible .next6-time {
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
 }
-
 
 .next6-course {
   font-size: 0.88em;
-  color: #fff;
+  /* CHANGE: Use generic primary text color */
+  color: var(--color-text-primary);
   opacity: 0.85;
   line-height: 1.2;
   text-align: center;
@@ -70,75 +648,55 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
-  /* Transition for color change on hover */
-  transition: color 0.2s ease-out, opacity 0.2s ease-out;
+  transition: color var(--transition-ease), opacity var(--transition-ease);
 }
 
-.next6-race-link:hover .next6-course {
-  color: #161c22; /* Text color on hover matches background */
-  opacity: 1; /* Fully opaque on hover */
+.next6-race-link:hover .next6-course,
+.next6-race-link:focus-visible .next6-course {
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+  opacity: 1;
 }
 
-.see-tips-btn {
-  display: inline-block;
-  margin: 1.1em auto 0.7em auto;
-  padding: 0.82em 1.5em 0.82em 1.12em;
-  background: #28d987;
-  color: #161c22;
-  font-weight: 700;
-  font-size: 1.12em;
-  letter-spacing: .03em;
-  border: 2px solid #25b272;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(40,217,135,0.11), 0 1.5px 0.7px rgba(0,0,0,0.11);
-  cursor: pointer;
-  text-decoration: none;
-  transition: 
-    background 0.14s cubic-bezier(.32,1.29,.44,.97),
-    color 0.16s,
-    border-color 0.18s cubic-bezier(.32,1.29,.44,.97),
-    box-shadow 0.17s cubic-bezier(.32,1.29,.44,.97),
-    transform 0.13s;
-  position: relative;
-  z-index: 2;
-}
-
-.see-tips-btn:hover,
-.see-tips-btn:focus {
-  background: #1e2a27;
-  color: #28d987;
-  border-color: #28d987;
-  box-shadow: 0 4px 20px rgba(40,217,135,0.14);
-  transform: translateY(-1.5px) scale(1.03);
-}
-
-.see-tips-btn:active {
-  background: #28d987;
-  color: #161c22;
-  border-color: #21955e;
-  transform: translateY(0.5px) scale(0.98);
-}
-
-
-/* --- RACES BY COURSE --- */
+/* --- RACES BY COURSE Section --- */
+/* This section was re-added at the end, so I'm making sure it's also using variables. */
 .races-course-list {
-  margin-top: 2.2em;
+  margin-top: 2.4em; /* Match original, but ensure consistency */
 }
+.races-course-list h2 {
+    /* CHANGE: Use generic primary yellow for heading */
+    color: var(--color-primary-yellow);
+    margin-bottom:.9em; /* Specific margin */
+}
+
 .racecard-course-row {
   margin-bottom: 1.3em;
+  /* CHANGE: Use generic section background */
+  background: var(--color-section-bg);
+  border-radius: 12px;
+  padding: 1em;
+  /* CHANGE: Use generic shadow */
+  box-shadow: var(--shadow-sm); /* Subtle shadow for each course block */
 }
+
 .racecard-course-header {
   font-size: 1.16em;
-  color: #28d987;
+  /* CHANGE: Use generic accent green */
+  color: var(--color-accent-green);
   font-weight: bold;
-  margin-bottom: 0.13em;
+  margin-bottom: 0.5em; /* Increased margin for better separation */
   letter-spacing: .2px;
+  padding-bottom: 0.5em;
+  /* CHANGE: Use generic table border */
+  border-bottom: 1px solid var(--color-table-border); /* Subtle separator */
 }
+
 .racecard-race-row {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Default for larger screens */
-  gap: 0.23em;
-  margin-bottom: 0.7em;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Adaptive columns for times */
+  gap: 0.4em; /* Slightly increased gap for better separation */
+  margin-top: 1em;
+  margin-bottom: 0; /* No margin-bottom here, controlled by parent .racecard-course-row */
 }
 
 .racecard-time-link {
@@ -146,125 +704,155 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Subtle gradient for a more dynamic background */
-  background: linear-gradient(145deg, #232d33, #1e262c);
+  /* CHANGE: Use generic table odd background */
+  background: var(--color-table-odd-bg);
   border-radius: 7px;
-  color: #ffe564;
+  /* CHANGE: Use generic primary yellow for text color */
+  color: var(--color-primary-yellow);
   text-decoration: none;
   font-size: 1.04em;
   font-weight: 500;
   min-width: 66px;
   min-height: 45px;
   padding: 0.24em 0.7em;
-  transition: background 0.13s ease-out, color 0.13s ease-out, transform 0.13s ease-out, box-shadow 0.13s ease-out; /* Smoother transitions */
-  margin-bottom: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Slightly stronger shadow */
+  transition: all var(--transition-fast);
+  /* CHANGE: Use generic shadow */
+  box-shadow: var(--shadow-sm);
 }
 
-.racecard-time-link:hover {
-  background: #35e9ae;
-  color: #181c1f;
-  transform: translateY(-2px); /* Subtle lift effect on hover */
-  box-shadow: 0 4px 12px rgba(53,233,174,0.3); /* Greenish glow on hover */
+/* Light mode specific override for racecard-time-link background */
+html[data-theme="light"] .racecard-time-link {
+  background: var(--color-table-even-bg); /* Slightly different shade in light mode */
+  box-shadow: var(--shadow-md); /* Lighter shadow */
+}
+
+
+.racecard-time-link:hover,
+.racecard-time-link:focus-visible {
+  background: var(--color-accent-green);
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(53,233,174,0.3);
+  outline: none;
 }
 
 .racecard-time {
-  color: #ffc900;
+  /* CHANGE: Use generic primary yellow for time */
+  color: var(--color-primary-yellow);
   font-weight: 700;
   margin: 0 auto;
   text-align: center;
-  transition: color 0.13s ease-out;
+  transition: color var(--transition-fast);
 }
 
-.racecard-time-link:hover .racecard-time {
-  color: #181c1f;
+.racecard-time-link:hover .racecard-time,
+.racecard-time-link:focus-visible .racecard-time {
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
 }
 
+/* Consider removing racecard-title if not used in your HTML, or provide content for it */
 .racecard-title {
-  color: #ffe564;
+  /* CHANGE: Use generic primary text color */
+  color: var(--color-text-primary);
   font-size: 1em;
   margin-top: -1px;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.13s ease-out;
+  transition: color var(--transition-fast);
 }
 
-.racecard-time-link:hover .racecard-title {
-  color: #181c1f;
+.racecard-time-link:hover .racecard-title,
+.racecard-time-link:focus-visible .racecard-title {
+  /* CHANGE: Use generic inverted text color for hover */
+  color: var(--color-text-inverted);
 }
 
+/* --- Responsive Layout Adjustments for index.css specific elements --- */
+@media (max-width: 700px) {
+  .container {
+    padding: 12px 3vw 0 3vw;
+    max-width: 100vw;
+  }
+  h1 {
+    font-size: 1.36em;
+    padding-top: 3px;
+    margin-bottom: 0.22em;
+  }
+  .page-desc,
+  .what-else-intro {
+    font-size: 1.07em;
+    line-height: 1.52;
+    margin-bottom: 1em;
+  }
+  .bookmark-note {
+    font-size: 0.98em;
+    margin-bottom: 0.9em;
+  }
 
-/* --- RESPONSIVE GRID OVERRIDES (Guaranteed 3-wide minimum) --- */
+  .tips-cta-bar {
+    flex-direction: column;
+    align-items: stretch; /* Stretch items to fill width */
+    text-align: center;
+    padding: 10px 5vw 14px 5vw;
+    gap: 7px;
+    margin-bottom: 1.2em;
+    max-width: 99vw;
+    border-radius: 13px;
+  }
+  .tips-cta-bar span {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+    max-width: none; /* Override min-width for mobile */
+  }
+  .see-tips-btn {
+    width: 100%; /* Make button full width */
+    font-size: 1.06em;
+    padding: 15px 0;
+    min-height: 48px;
+    margin: 0; /* Remove auto margins when flex column */
+    border-radius: 14px;
+  }
 
-/* For tablets and larger mobiles (e.g., 601px to 1024px) */
-@media (max-width: 1024px) {
+  .next6-bar {
+    margin-top: 0.9em;
+    padding: 1.1em 0.5em 1.4em 0.5em;
+    border-radius: 11px;
+    max-width: 100vw;
+  }
   .next6-races {
-    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important; /* Min 130px for better two-column layout on medium phones */
+    gap: 0.44em;
+    max-width: 100vw;
   }
-  .racecard-race-row {
-    grid-template-columns: repeat(3, 1fr); /* Enforce 3 columns */
+  .next6-race-link {
+    min-height: 44px;
+    font-size: 0.99em;
+    border-radius: 9px;
+    padding: 0.58em 0.1em;
+    margin-bottom: 0;
   }
-}
-
-/* For small mobiles (up to 600px) */
-@media (max-width: 600px) {
-  .next6-races,
-  .racecard-race-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.28em;
+  .next6-time {
+    font-size: 1.01em;
+    margin-top: 3px;
   }
-  .next6-race-link,
-  .racecard-time-link {
-    padding: 0.44em 0.1em;
-    min-height: 54px;
-    font-size: 0.93em;
-  }
-  .next6-time,
-  .racecard-time {
-    font-size: 0.93em;
-  }
-  .next6-course,
-  .racecard-title {
-    font-size: 0.76em;
-  }
-}
-
-/* For very small mobiles (up to 420px) */
-@media (max-width: 420px) {
-  .next6-races,
-  .racecard-race-row {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.11em;
-  }
-  .next6-race-link,
-  .racecard-time-link {
-    padding: 0.32em 0.08em;
-    min-height: 38px;
-    font-size: 0.85em;
-  }
-  .next6-time,
-  .racecard-time {
+  .next6-course {
     font-size: 0.82em;
+    line-height: 1.16;
   }
-  .next6-course,
-  .racecard-title {
-    font-size: 0.68em;
+
+  .racecard-race-row {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Min 80px for course times */
   }
 }
 
-/* For ultra-narrow (<=340px): just stack */
-@media (max-width: 340px) {
-  .next6-races,
-  .racecard-race-row {
-    grid-template-columns: 1fr;
-    gap: 0.06em;
-  }
-  .next6-race-link,
-  .racecard-time-link {
-    padding: 0.18em 0.04em;
-    min-height: 29px;
-    font-size: 0.78em;
-  }
+/* For very small phones (up to 420px) */
+@media (max-width: 420px) {
+  .container { padding-left: 1vw; padding-right: 1vw; }
+  h1 { font-size: 1.13em; }
+  .see-tips-btn { font-size: 0.97em; padding: 13px 0; }
+  .next6-races { gap: 0.23em; }
 }

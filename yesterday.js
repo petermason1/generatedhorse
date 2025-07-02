@@ -71,10 +71,12 @@ fetch(CSV_PATH)
     const totalReturned = data.reduce((a, r) => a + (parseFloat(r['win_return']||'0') || 0), 0);
     const roiAll = totalStaked ? (((totalReturned - totalStaked) / totalStaked) * 100).toFixed(2) : '0.00';
 
+    // Update elements in the new summary-grid structure
     document.getElementById('total-races').textContent = totalRaces;
     document.getElementById('total-staked').textContent = '£' + totalStaked.toFixed(2);
     document.getElementById('total-returned').textContent = '£' + totalReturned.toFixed(2);
-    document.getElementById('roi-all').textContent = roiAll;
+    document.getElementById('roi-all').textContent = roiAll; // No '%' here, as it's in the HTML now
+
 
     // -------- ROI BY COURSE --------
    let courseData = groupBy(data, 'course');

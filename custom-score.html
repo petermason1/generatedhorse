@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Google Analytics tag (gtag.js) -->
+<html lang="en" data-theme="dark"> <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,125 +9,126 @@
     </script>
     <meta charset="UTF-8" />
     <title>Custom Scoring Tool | Smart Racecards</title>
+    <meta name="description" content="Experiment with custom weights for race analysis. Adjust factors like speed, form, trainer stats and more to create your own horse racing score model for UK & Irish racecards.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="custom-score.css" />
 </head>
 <body>
-    <nav class="main-navbar">
-        <div class="navbar-inner">
-            <a href="index.html" class="nav-brand">🏇 Racecards</a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="tips.html" class="nav-link">Tips</a>
-                <a href="yesterday.html" class="nav-link">Historical</a>
-                <a href="custom-score.html" class="nav-link nav-link-active">Custom Score</a>
-                <a href="about.html" class="nav-link">About</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+<nav class="main-navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="Smart Racecards Logo">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="today.html" class="nav-link">Today's Races</a>
+      <a href="results.html" class="nav-link">Results</a>
+      <a href="tips.html" class="nav-link">Tipster</a>
+      <a href="yesterday.html" class="nav-link">Historical</a>
+      <a href="custom-score.html" class="nav-link">Custom Score</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</nav>
 
     <main class="container">
         <h1 class="page-title">Custom Race Scoring</h1>
 
-        <!-- Show/Hide Instructions Button -->
         <button id="toggleHowTo" class="instructions-toggle-btn">Show Instructions ▼</button>
-<section class="how-to-section hidden" id="howToSection">
-  <h2 class="section-title">How to Use This Tool</h2>
-
-  <h3>1. Select a Race</h3>
-  <ul>
-    <li>At the top of the page, you'll see a dropdown menu labeled <b>"Select a Race"</b>.</li>
-    <li>This dropdown is automatically populated with the day's races, sorted by their off time.</li>
-    <li>Click the dropdown and choose the race you want to analyze. The page will immediately update to show the runners for that selected race.</li>
-  </ul>
-
-  <h3>2. Adjust Scoring Weights</h3>
-  <p>
-    Below the race selector, you'll find a section titled <b>"Adjust Scoring Weights"</b> with a series of sliders and preset buttons.
-  </p>
-
-  <h4>Scoring Factors</h4>
-  <ul>
-    <li><b>RPR Weight:</b> Racing Post Rating – a performance rating.</li>
-    <li><b>TS Weight:</b> Top Speed Rating – a horse's fastest recorded speed.</li>
-    <li><b>OR Weight:</b> Official Rating – assigned by handicappers.</li>
-    <li><b>Wins (1st) Weight:</b> Emphasize horses that finish first.</li>
-    <li><b>Places (2nd/3rd) Weight:</b> Emphasize horses that frequently finish in the top three.</li>
-    <li><b>Long Layoff Weight:</b> Penalty for horses that haven't run in a while (over 50 days).</li>
-    <li><b>Recent Run Weight:</b> Bonus for horses that have run recently (within 50 days).</li>
-    <li><b>Trainer % Weight:</b> Trainer's recent win percentage (last 14 days).</li>
-    <li><b>Trainer Wins Weight:</b> Trainer's total wins (last 14 days).</li>
-    <li><b>Trainer 20%+ Bonus:</b> Extra bonus if the trainer's recent win % is 20% or higher.</li>
-    <li><b>No Win/Long Layoff Penalty:</b> Penalty for horses that have never won AND had a long layoff.</li>
-    <li><b>Course Form Weight:</b> Points for previous wins at the specific course.</li>
-  </ul>
-
-  <h4>Using the Sliders</h4>
-  <ul>
-    <li>Drag each slider to decrease/increase its importance (weight) in the overall score.</li>
-    <li>The value next to each slider updates in real time, and the horse list below re-sorts instantly to show the effect of your changes.</li>
-    <li>Positive weights increase a horse's score for that attribute; negative weights (penalties) decrease it.</li>
-  </ul>
-
-  <h4>Using Preset Buttons</h4>
-  <ul>
-    <li>Below "Adjust Scoring Weights," you'll find preset buttons (e.g., "Speed Focus", "Form Focus", "Trainer Focus").</li>
-    <li>Clicking a preset loads a predefined set of weights, letting you quickly try different strategies and see how the scores change.</li>
-  </ul>
-
-  <h3>3. Analyze the Scored Runners List</h3>
-  <ul>
-    <li>Below the weights section, you'll see the current race info (distance, going, etc).</li>
-    <li>The "Custom Scored Runners" list shows all horses in the selected race, sorted by their calculated custom score (highest first).</li>
-    <li><b>Non-Runners (NR):</b> Marked with "NR" and appear at the bottom; their scores are not calculated.</li>
-    <li><b>Default Sorting:</b> If all weights are <code>0.00</code> ("Default" preset), horses are sorted by odds (lowest first) as a traditional view.</li>
-    <li><b>"More Info" Button:</b> Each horse card has a "More info ▼" button. Click it to expand extra info: comments, spotlight, trainer/jockey stats, draw, owner, sire/dam, headgear, wind surgery, etc. Click "Less info ▲" to hide it again.</li>
-  </ul>
-
-  <h2 class="section-title">How it Works (Under the Hood)</h2>
-  <ol>
-    <li><b>Data Extraction:</b> For each horse, the script pulls relevant data: RPR, TS, OR, wins/places (from the 'form' string), days since last run, trainer form, course form, etc.</li>
-    <li><b>Weighted Summation:</b> These points are multiplied by the weights you set using sliders (or a preset). E.g. <code>score += weights.rprWeight * rpr;</code> so if <code>rprWeight</code> is <code>2.0</code> and a horse's RPR is <code>100</code>, it adds <code>200</code> to its score.</li>
-    <li><b>Conditional Bonuses/Penalties:</b>
-      <ul>
-        <li><code>lastRunPenaltyWeight</code> and <code>lastRunBonusWeight</code> adjust scores for layoff/recency (positive or negative depending on days since last run).</li>
-        <li><code>trainerBonusValue</code> is added if the trainer's 14-day win percentage is 20% or more.</li>
-        <li><code>layoffPenaltyValue</code> is applied if a horse has no wins AND a long layoff (&gt;50 days).</li>
-      </ul>
-    </li>
-    <li><b>Final Score:</b> All weighted values, bonuses, and penalties are summed up to create a single <code>customScore</code> for each horse.</li>
-    <li><b>Dynamic Sorting:</b> Horses are sorted by <code>customScore</code> (highest first) and the UI updates instantly. If all weights are <code>0.00</code>, sorting falls back to fractional odds order.</li>
-  </ol>
-  <p>
-    By adjusting weights, you're telling the tool which factors matter most for predicting a horse's performance in a given race!
-  </p>
-</section>
-
+        <section class="how-to-section hidden" id="howToSection">
+          <h2 class="section-title">How to Use This Tool</h2>
+          <h3>1. Select a Race</h3>
+          <ul>
+            <li>At the top of the page, you'll see a dropdown menu labeled <b>"Select a Race"</b>.</li>
+            <li>This dropdown is automatically populated with the day's races, sorted by their off time.</li>
+            <li>Click the dropdown and choose the race you want to analyze. The page will immediately update to show the runners for that selected race.</li>
+          </ul>
+          <h3>2. Adjust Scoring Weights</h3>
+          <p>
+            Below the race selector, you'll find a section titled <b>"Adjust Scoring Weights"</b> with a series of sliders and preset buttons.
+          </p>
+          <h4>Scoring Factors</h4>
+          <ul>
+            <li><b>RPR Weight:</b> Racing Post Rating – a performance rating.</li>
+            <li><b>TS Weight:</b> Top Speed Rating – a horse's fastest recorded speed.</li>
+            <li><b>OR Weight:</b> Official Rating – assigned by handicappers.</li>
+            <li><b>Wins (1st) Weight:</b> Emphasize horses that finish first.</li>
+            <li><b>Places (2nd/3rd) Weight:</b> Emphasize horses that frequently finish in the top three.</li>
+            <li><b>Long Layoff Weight:</b> Penalty for horses that haven't run in a while (over 50 days).</li>
+            <li><b>Recent Run Weight:</b> Bonus for horses that have run recently (within 50 days).</li>
+            <li><b>Trainer % Weight:</b> Trainer's recent win percentage (last 14 days).</li>
+            <li><b>Trainer Wins Weight:</b> Trainer's total wins (last 14 days).</li>
+            <li><b>Trainer 20%+ Bonus:</b> Extra bonus if the trainer's recent win % is 20% or higher.</li>
+            <li><b>No Win/Long Layoff Penalty:</b> Penalty for horses that have never won AND had a long layoff.</li>
+            <li><b>Course Form Weight:</b> Points for previous wins at the specific course.</li>
+          </ul>
+          <h4>Using the Sliders</h4>
+          <ul>
+            <li>Drag each slider to decrease/increase its importance (weight) in the overall score.</li>
+            <li>The value next to each slider updates in real time, and the horse list below re-sorts instantly to show the effect of your changes.</li>
+            <li>Positive weights increase a horse's score for that attribute; negative weights (penalties) decrease it.</li>
+          </ul>
+          <h4>Using Preset Buttons</h4>
+          <ul>
+            <li>Below "Adjust Scoring Weights," you'll find preset buttons (e.g., "Speed Focus", "Form Focus", "Trainer Focus").</li>
+            <li>Clicking a preset loads a predefined set of weights, letting you quickly try different strategies and see how the scores change.</li>
+          </ul>
+          <h3>3. Analyze the Scored Runners List</h3>
+          <ul>
+            <li>Below the weights section, you'll see the current race info (distance, going, etc).</li>
+            <li>The "Custom Scored Runners" list shows all horses in the selected race, sorted by their calculated custom score (highest first).</li>
+            <li><b>Non-Runners (NR):</b> Marked with "NR" and appear at the bottom; their scores are not calculated.</li>
+            <li><b>Default Sorting:</b> If all weights are <code>0.00</code> ("Default" preset), horses are sorted by odds (lowest first) as a traditional view.</li>
+            <li><b>"More Info" Button:</b> Each horse card has a "More info ▼" button. Click it to expand extra info: comments, spotlight, trainer/jockey stats, draw, owner, sire/dam, headgear, wind surgery, etc. Click "Less info ▲" to hide it again.</li>
+          </ul>
+          <h2 class="section-title">How it Works (Under the Hood)</h2>
+          <ol>
+            <li><b>Data Extraction:</b> For each horse, the script pulls relevant data: RPR, TS, OR, wins/places (from the 'form' string), days since last run, trainer form, course form, etc.</li>
+            <li><b>Weighted Summation:</b> These points are multiplied by the weights you set using sliders (or a preset). E.g. <code>score += weights.rprWeight * rpr;</code> so if <code>rprWeight</code> is <code>2.0</code> and a horse's RPR is <code>100</code>, it adds <code>200</code> to its score.</li>
+            <li><b>Conditional Bonuses/Penalties:</b>
+              <ul>
+                <li><code>lastRunPenaltyWeight</code> and <code>lastRunBonusWeight</code> adjust scores for layoff/recency (positive or negative depending on days since last run).</li>
+                <li><code>trainerBonusValue</code> is added if the trainer's 14-day win percentage is 20% or more.</li>
+                <li><code>layoffPenaltyValue</code> is applied if a horse has no wins AND a long layoff (&gt;50 days).</li>
+              </ul>
+            </li>
+            <li><b>Final Score:</b> All weighted values, bonuses, and penalties are summed up to create a single <code>customScore</code> for each horse.</li>
+            <li><b>Dynamic Sorting:</b> Horses are sorted by <code>customScore</code> (highest first) and the UI updates instantly. If all weights are <code>0.00</code>, sorting falls back to fractional odds order.</li>
+          </ol>
+          <p>
+            By adjusting weights, you're telling the tool which factors matter most for predicting a horse's performance in a given race!
+          </p>
+        </section>
 
         <div class="race-selector-container">
             <label for="raceSelector">Select a Race:</label>
             <select id="raceSelector" class="race-selector-dropdown">
-                <!-- Options populated by JS -->
-            </select>
+                </select>
         </div>
 
         <div class="score-controls">
             <h2>Adjust Scoring Weights</h2>
             <div class="preset-buttons">
-  <button class="preset-button" data-preset="Default">Default</button>
-  <button class="preset-button" data-preset="Speed Focus">Speed Focus</button>
-  <button class="preset-button" data-preset="Form Focus">Form Focus</button>
-  <button class="preset-button" data-preset="Trainer Focus">Trainer Focus</button>
-  <button class="preset-button" data-preset="Outsider Value">Outsider Value</button>
-  <button class="preset-button" data-preset="Consistency Focus">Consistency Focus</button>
-</div>
-
+              <button class="preset-button" data-preset="Default">Default</button>
+              <button class="preset-button" data-preset="Speed Focus">Speed Focus</button>
+              <button class="preset-button" data-preset="Form Focus">Form Focus</button>
+              <button class="preset-button" data-preset="Trainer Focus">Trainer Focus</button>
+              <button class="preset-button" data-preset="Outsider Value">Outsider Value</button>
+              <button class="preset-button" data-preset="Consistency Focus">Consistency Focus</button>
+            </div>
             <div class="slider-grid">
                 <div class="slider-group">
                     <label for="rprWeight">RPR Weight:</label>
@@ -195,46 +194,39 @@
         </div>
         <button id="showResultsBtn" class="show-results-btn">Show Results</button>
 
-
         <div class="custom-race-header">
             <h2 id="currentRaceDisplay"></h2>
             <h3 id="currentRaceDetails"></h3>
         </div>
-
         <div id="customRunnersList" class="runners-list">
-            <!-- Custom scored runners will be rendered here -->
-        </div>
+            </div>
     </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Tips</a>
+      <a href="yesterday.html">Historical</a>
+      <a href="custom-score.html">Custom Score</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="footer-meta">
+      <span id="footer-year"></span> Smart Racecards
+      <span>•</span>
+      <a href="mailto:info@smartracecards.com">Contact</a>
+    </div>
+    <div class="footer-disclaimer">
+      <small>
+        For informational purposes only – not betting advice.<br>
+        Please gamble responsibly. 18+
+      </small>
+    </div>
+  </div>
+</footer>
 
-    <!-- Scripts loaded LAST for maximum safety -->
-   
-    <script>
-        // Hamburger menu logic
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-
-        // Highlight active nav link based on current page
-        const currentPath = window.location.pathname.split('/').pop();
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('nav-link-active');
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('nav-link-active');
-            }
-        });
-    </script>
-     <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script src="data.js"></script>
     <script src="custom-score.js"></script>
 </body>
 </html>

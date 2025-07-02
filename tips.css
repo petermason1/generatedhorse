@@ -1,275 +1,492 @@
-/* tips.css: Styles specific to the tips.html page */
-
-/* --- GENERAL PAGE LAYOUT --- */
+/* =========================
+   === GENERAL LAYOUT & PADDING
+   ========================= */
 .tips-main {
-  padding-bottom: 2.5em;
+  padding: 0.8em 0 1.8em 0; /* Adjusted top/bottom padding to make overall page shorter */
+  min-height: 70vh;
 }
 
-body {
-  background: #191d22;
-  color: #f7f9fb;
-  font-family: 'Roboto', Arial, sans-serif;
-  margin: 0;
+/* --- PAGE TITLE & INTRO --- */
+.page-title {
+  text-align: center;
+  margin: 0.5em auto 0.3em auto; /* Reduced top/bottom margin */
+  font-size: clamp(1.5em, 4vw + 0.5rem, 2.4em); /* Slightly adjusted responsive font sizing */
+  color: var(--color-primary-yellow);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  max-width: 700px;
+  text-shadow: 0 3px 9px rgba(0,0,0,0.25), 0 0 10px rgba(255,215,0,0.22);
+  line-height: 1.1;
+  padding: 0 10px;
 }
-h1, h2, h3 {
-  color: #ffc900;
+
+.tips-intro {
+  color: var(--color-text-secondary);
+  font-size: 0.95em; /* Slightly smaller intro text */
+  max-width: 600px;
+  margin: 0 auto 1.3em auto; /* Reduced bottom margin */
+  text-align: center;
+  line-height: 1.4; /* Tighter line height */
+  padding: 0 15px;
+}
+
+.tips-intro b {
+  color: var(--color-primary-yellow);
   font-weight: 700;
 }
 
-/* --- PAGE TITLE --- */
-.page-title {
-  text-align: center;
-  margin: 1.8em auto 1em auto;
-  font-size: 2.6em;
-  color: #ffd700;
-  font-weight: 900;
-  letter-spacing: 0.03em;
-  max-width: 750px;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 0 15px rgba(255,215,0,0.3);
-}
-
-/* --- INTRODUCTION --- */
-.tips-intro {
-  color: #b7b7b7;
-  font-size: 1.1em;
-  max-width: 700px;
-  margin: 0 auto 3em auto;
-  text-align: center;
-  line-height: 1.7;
-  padding: 0 15px;
-}
-.tips-intro b { color: #ffc900; font-weight: 700; }
-
-/* --- SECTIONS --- */
+/* --- SECTIONS & TITLES --- */
 .tips-section {
-  margin: 0 auto 3.5em auto;
-  max-width: 750px;
+  margin: 0 auto 1.5em auto; /* Less space between sections */
+  max-width: 700px;
+  padding: 0 10px;
 }
 .section-title {
-  font-size: 1.6em;
-  font-weight: 800;
-  margin-bottom: 1.2em;
-  padding-bottom: 0.5em;
-  border-bottom: 3px solid;
+  font-size: 1.2em; /* Slightly smaller and more compact */
+  font-weight: 900;
+  margin-bottom: 0.5em; /* Adjusted margin */
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid;
   text-align: center;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  display: block;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.2em; /* Even tighter gap */
 }
 .section-subtitle {
-  font-size: 0.75em;
+  font-size: 0.55em; /* Relative to section-title, even smaller */
+  color: var(--color-text-secondary);
   font-weight: 500;
-  color: #a0a8b7;
-  margin-left: 0.8em;
-  text-transform: none;
+  line-height: 1.2;
 }
-.top-picks-title { color: #ffc900; border-color: #ffc900; }
-.value-picks-title { color: #36e8b5; border-color: #36e8b5; }
-.outsider-picks-title { color: #87ceeb; border-color: #87ceeb; }
+.top-picks-title { color: var(--color-primary-yellow); border-color: var(--color-primary-yellow); }
+.value-picks-title { color: var(--color-accent-green); border-color: var(--color-accent-green); }
+.outsider-picks-title { color: var(--color-sky-blue); border-color: var(--color-sky-blue); }
 
 /* --- NO PICKS --- */
 .no-picks {
-  color: #b7b7b7;
+  color: var(--color-text-secondary);
   text-align: center;
-  padding: 2em;
-  background: linear-gradient(145deg, #2a313a, #212833);
-  border-radius: 12px;
-  margin-bottom: 2.5em;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  padding: 0.8em; /* Reduced padding */
+  background: var(--color-table-even-bg);
+  border-radius: 7px;
+  margin-bottom: 0.8em; /* Reduced margin */
+  box-shadow: var(--shadow-sm);
   font-style: italic;
-  font-size: 1.1em;
+  font-size: 0.95em;
+  border-left: 3px solid var(--color-primary-yellow);
 }
 
-/* --- TIP CARD STYLING --- */
+/* =========================
+   === TIP CARD STYLING
+   ========================= */
 .tip-card {
-  background: linear-gradient(160deg, #282d34, #20242b);
-  border-radius: 12px;
-  padding: 1.2em 1.4em 1.1em 1.2em;
-  margin-bottom: 1em;
+  background: linear-gradient(160deg, var(--color-table-odd-bg), var(--color-table-even-bg));
+  border-radius: 8px;
+  padding: 0.5em 0.7em; /* Adjusted padding to be uniform on left/right */
+  margin-bottom: 0.4em;
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-  transition: all 0.3s ease-out;
-  border: 1px solid rgba(54,232,181,0.0);
+  align-items: flex-start; /* Align items to the start for multi-line content */
+  gap: 8px; /* Gap between silks and main content */
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-table-border);
   min-width: 0;
-}
-.tip-card:hover {
-  background: linear-gradient(160deg, #2b313a, #232931);
-  transform: translateY(-7px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.5), 0 0 25px rgba(54,232,181,0.5);
-  border-color: #36e8b5;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
 }
 
-/* --- CARD MAIN CONTENT --- */
-.tip-num {
-  font-weight: 900;
-  font-size: 1.3em;
-  width: 1.8em;
-  color: #ffc900;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  flex-shrink: 0;
+.tip-card:hover {
+  background: linear-gradient(160deg, var(--color-section-bg-hover), var(--color-navbar-bg-hover));
+  transform: translateY(-2px) scale(1.001);
+  box-shadow: var(--shadow-md), 0 0 10px rgba(54,232,181,0.15);
+  border-color: var(--color-accent-green);
 }
+
+/* --- SILKS --- */
+.silks-wrapper {
+    flex-shrink: 0;
+    width: 40px; /* Slightly smaller silks */
+    height: 40px; /* Slightly smaller silks */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--color-table-header-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border: 1px solid var(--color-table-border);
+    margin-top: 2px; /* Align with text baseline */
+}
+
+.silks-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+}
+
+/* --- MAIN CONTENT AREA --- */
 .tip-content {
   flex: 1;
   min-width: 0;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-.tip-header {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  margin-bottom: 0.4em;
-  gap: 0.6em;
+  flex-direction: column;
+  gap: 2px; /* Reduced gap between content rows */
 }
+
+.tip-top-row { /* Contains horse, odds, score */
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4em; /* Space between elements */
+}
+
 .tip-horse {
-  color: #35e9ae;
-  font-size: 1.25em;
+  color: var(--color-accent-green);
+  font-size: 1.0em; /* Base font size for horse name */
   font-weight: 800;
   text-decoration: none;
-  transition: color 0.2s;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: color var(--transition-fast);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  line-height: 1.2;
 }
 .tip-horse:hover {
-  color: #2ce8c0;
+  color: var(--color-accent-green-hover);
   text-decoration: underline;
 }
 .tip-odds {
-  color: #ffe564;
+  color: var(--color-primary-yellow);
   font-weight: 800;
-  font-size: 1.1em;
+  font-size: 0.9em; /* Smaller odds */
   white-space: nowrap;
 }
 .tip-score {
-  color: #a0a8b7;
+  color: var(--color-text-secondary);
   font-weight: 700;
-  font-size: 1em;
+  font-size: 0.7em; /* Smaller score */
   white-space: nowrap;
-}
-.tip-race-info {
-  font-size: 1em;
-  opacity: .9;
-  color: #f0f0f0;
-  margin-bottom: 0.7em;
-  word-break: break-word;
-}
-.tip-race-name {
-  color: #ffc900;
-  font-weight: 600;
-}
-.tip-reason {
-  margin-top: 8px;
-  color: #c0f0ff;
-  font-size: 1em;
-  line-height: 1.5;
-  background: rgba(0,0,0,0.1);
-  padding: 0.7em 1em;
-  border-radius: 6px;
-  border-left: 3px solid #36e8b5;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
-.tip-badge {
-  display: inline-block;
-  font-size: 0.8em;
-  font-weight: 800;
-  padding: 5px 10px;
-  border-radius: 6px;
-  margin-top: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: all 0.2s;
-}
-.tip-badge.top-pick { background: #ffc900; color: #191e23; }
-.tip-badge.value { background: #36e8b5; color: #191e23; }
-.tip-badge.outsider { background: #87ceeb; color: #191e23; }
-.tip-badge:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  opacity: 0.9;
 }
 
-/* --- EVEN BETTER TIPS MOBILE LAYOUT --- */
-@media (max-width: 700px) {
-  .tips-section { max-width: 100vw; padding: 0 2vw; }
-  .tip-card {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 5px;
-    padding: 0.95em 0.9em 0.95em 0.95em;
-    width: 100%;
-    min-width: 0;
-    margin-bottom: 1.12em;
-    box-sizing: border-box;
-  }
-  .tip-num {
-    margin-bottom: 0.2em;
-    margin-right: 0;
-    font-size: 1.09em;
-    width: auto;
-    text-align: left;
-    padding: 0;
-  }
-  .tip-content {
-    padding: 0;
-    min-width: 0;
+.tip-middle-row { /* Contains off_time, course, and filtered race name */
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4em; /* Space between elements in this row */
+    font-size: 0.82em; /* Smaller font size for this line */
+    opacity: .9;
+    color: var(--color-text-secondary);
+    line-height: 1.2;
     word-break: break-word;
-    overflow-wrap: break-word;
-  }
-  .tip-header {
-    flex-direction: column;
+}
+
+.tip-race-time-course {
+    font-weight: 600; /* Make time and course slightly bolder */
+}
+
+.tip-race-filtered-name {
+    font-style: italic; /* Style for the filtered race name */
+    color: var(--color-text-secondary);
+}
+
+.tip-bottom-row { /* Contains reason and badge */
+    display: flex;
     align-items: flex-start;
-    margin-bottom: 0.45em;
-    gap: 1px;
+    gap: 6px; /* Space between reason and badge */
+    margin-top: 3px; /* Small top margin to separate from race info */
+}
+
+.tip-reason {
+  flex: 1;
+  color: var(--color-text-primary);
+  font-size: 0.85em; /* Slightly smaller font size */
+  line-height: 1.3;
+  background: var(--color-dark-bg-subtle);
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  border-left: 2px solid var(--color-accent-green);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.08);
+}
+.tip-badge {
+  flex-shrink: 0;
+  display: inline-block;
+  font-size: 0.65em; /* Smaller badge text */
+  font-weight: 800;
+  padding: 2px 5px; /* Reduced padding */
+  border-radius: 4px;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.tip-badge.smart-pick-badge { background: var(--color-primary-yellow); color: var(--color-text-dark); }
+.tip-badge.value-badge { background: var(--color-accent-green); color: var(--color-text-dark); }
+.tip-badge.outsider-badge { background: var(--color-sky-blue); color: var(--color-text-dark); }
+.tip-badge:hover {
+  transform: scale(1.03);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* --- DISCLAIMER --- */
+.tips-disclaimer {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.85em;
+  margin-top: 1.8em;
+  padding: 0 15px;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+.tips-disclaimer b {
+  color: var(--color-primary-yellow);
+}
+
+
+/* =========================
+   === RESPONSIVE & MOBILE
+   ========================= */
+@media (max-width: 700px) {
+  .tips-main {
+    padding: 0.6em 0 1.2em 0;
+  }
+  .page-title {
+    font-size: clamp(1.2em, 5vw, 1.9em);
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
+    padding: 0 6px;
+  }
+  .tips-intro {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    padding: 0 10px;
+  }
+  .tips-section {
+    max-width: 98vw;
+    padding: 0 4px;
+    margin-bottom: 1.2em;
+  }
+  .section-title {
+    font-size: 1.1em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.2em;
+    gap: 0.2em;
+  }
+  .section-subtitle {
+    font-size: 0.5em;
+  }
+
+  .tip-card {
+    padding: 0.4em 0.6em; /* Adjusted padding */
+    gap: 6px;
+    margin-bottom: 0.4em;
+    border-radius: 6px;
+    font-size: 0.9em;
+  }
+
+  .silks-wrapper {
+      width: 35px;
+      height: 35px;
+  }
+
+  .tip-top-row {
+    gap: 0.3em;
   }
   .tip-horse {
-    font-size: 1.11em;
-    font-weight: 800;
-    margin-bottom: 2px;
-  }
-  .tip-odds,
-  .tip-score {
-    margin: 1.5px 0 0 0;
-    font-size: 1em;
-    font-weight: 700;
-  }
-  .tip-race-info,
-  .tip-reason {
-    font-size: 0.98em;
-    padding: 0.4em 0.7em 0.5em 0.5em;
-    margin-bottom: 0.16em;
-    background: none;
-  }
-  .tip-reason {
-    border-radius: 5px;
-    margin-top: 5px;
-    padding: 0.5em 0.7em;
     font-size: 0.95em;
-    background: rgba(52, 242, 187, 0.07);
-    border-left: 2.2px solid #36e8b5;
+  }
+  .tip-odds, .tip-score {
+    font-size: 0.78em;
+  }
+  .tip-middle-row {
+    font-size: 0.78em;
+    line-height: 1.2;
+    gap: 0.3em;
+  }
+  .tip-bottom-row {
+    gap: 5px;
+    margin-top: 2px;
+  }
+  .tip-reason {
+    font-size: 0.8em;
+    padding: 0.25em 0.5em;
+    border-left-width: 2px;
   }
   .tip-badge {
-    font-size: 0.8em;
-    padding: 3px 8px;
-    margin: 6px 0 0 0;
-    align-self: flex-start;
+    font-size: 0.62em;
+    padding: 1px 4px;
+  }
+  .no-picks {
+    padding: 0.7em;
+    font-size: 0.9em;
   }
 }
 
 @media (max-width: 480px) {
-  .page-title { font-size: 1.25em; }
-  .tips-intro { font-size: 0.96em; }
-  .tip-card { padding: 0.72em 0.4em 0.75em 0.72em; }
-  .tip-header { gap: 0; }
-  .tip-horse { font-size: 1em; }
-  .tip-badge { font-size: 0.7em; padding: 3px 6px; margin-top: 6px; }
-  .tip-reason { font-size: 0.87em; padding: 0.4em 0.6em; }
+  .tip-card {
+    flex-direction: column; /* Stack completely on very small screens */
+    align-items: flex-start;
+    padding: 0.3em 0.5em; /* Adjusted padding */
+    gap: 2px;
+  }
+  .silks-wrapper {
+      width: 30px; /* Even smaller silks on tiny screens */
+      height: 30px;
+      margin-top: 0; /* Reset margin-top for stacking */
+      margin-bottom: 4px; /* Add space below silks when stacked */
+  }
+  .tip-content {
+    width: 100%; /* Take full width when stacked */
+    gap: 1px;
+  }
+  .tip-top-row {
+    flex-wrap: wrap;
+    gap: 0.2em;
+  }
+  .tip-horse {
+    font-size: 0.88em;
+  }
+  .tip-odds, .tip-score {
+    font-size: 0.75em;
+  }
+  .tip-middle-row {
+    font-size: 0.75em;
+  }
+  .tip-bottom-row {
+    flex-direction: column; /* Stack reason and badge on tiny screens */
+    align-items: flex-start;
+    gap: 3px;
+    margin-top: 2px;
+  }
+  .tip-reason {
+    font-size: 0.78em;
+    padding: 0.2em 0.4em;
+  }
+  .tip-badge {
+    font-size: 0.58em;
+    padding: 1px 3px;
+  }
+  .tips-disclaimer {
+    font-size: 0.8em;
+    margin-top: 1.2em;
+  }
 }
 
-@media (max-width: 375px) {
-  .page-title { font-size: 1em; }
-  .tip-horse, .tip-odds, .tip-score, .tip-reason, .tip-header { font-size: 0.92em; }
-  .tip-card { gap: 3px; }
+@media (max-width: 380px) {
+  .tips-section {
+    padding: 0 3px;
+  }
+  .tip-card {
+    padding: 0.2em 0.3em; /* Adjusted padding */
+    font-size: 0.85em;
+  }
+  .silks-wrapper {
+      width: 26px;
+      height: 26px;
+  }
+  .tip-horse {
+    font-size: 0.82em;
+  }
+  .tip-reason {
+    font-size: 0.75em;
+  }
+}
+
+/* =========================
+   === LIGHT MODE OVERRIDES
+   ========================= */
+html[data-theme="light"] .page-title {
+    text-shadow: 0 3px 9px rgba(0,0,0,0.1), 0 0 10px rgba(255,215,0,0.1);
+}
+
+html[data-theme="light"] .section-title {
+    text-shadow: none;
+}
+
+html[data-theme="light"] .no-picks {
+    box-shadow: var(--shadow-md);
+    border-left-color: var(--color-primary-yellow);
+}
+
+html[data-theme="light"] .tip-card {
+    background: linear-gradient(160deg, var(--color-table-odd-bg), var(--color-table-even-bg));
+    box-shadow: var(--shadow-sm);
+    border-color: var(--color-table-border);
+}
+
+html[data-theme="light"] .tip-card:hover {
+    background: linear-gradient(160deg, var(--color-section-bg-hover), var(--color-navbar-bg-hover));
+    transform: translateY(-2px) scale(1.001);
+    box-shadow: var(--shadow-md), 0 0 10px rgba(0,143,93,0.1);
+    border-color: var(--color-accent-green);
+}
+
+html[data-theme="light"] .silks-wrapper {
+    background-color: var(--color-table-header-bg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-color: var(--color-table-border);
+}
+
+html[data-theme="light"] .tip-num { /* This is no longer used */
+    color: var(--color-text-dark);
+    background: var(--color-primary-yellow);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+html[data-theme="light"] .tip-horse {
+    color: var(--color-accent-green);
+    text-shadow: none;
+}
+html[data-theme="light"] .tip-horse:hover {
+    color: var(--color-accent-green-hover);
+}
+
+html[data-theme="light"] .tip-odds {
+    color: var(--color-primary-yellow);
+}
+
+html[data-theme="light"] .tip-score {
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="light"] .tip-middle-row { /* New element, uses text-secondary */
+    color: var(--color-text-secondary);
+}
+html[data-theme="light"] .tip-race-time-course {
+    color: var(--color-text-secondary); /* Ensure this is also secondary in light mode */
+}
+html[data-theme="light"] .tip-race-filtered-name {
+    color: var(--color-text-secondary); /* Ensure this is also secondary in light mode */
+}
+
+html[data-theme="light"] .tip-reason {
+    color: var(--color-text-primary);
+    background: var(--color-dark-bg-subtle); /* This should be a light mode subtle background */
+    border-left-color: var(--color-accent-green);
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+}
+
+html[data-theme="light"] .tip-badge {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+html[data-theme="light"] .tip-badge.smart-pick-badge { background: var(--color-primary-yellow); color: var(--color-text-dark); }
+html[data-theme="light"] .tip-badge.value-badge { background: var(--color-accent-green); color: var(--color-text-dark); }
+html[data-theme="light"] .tip-badge.outsider-badge { background: var(--color-sky-blue); color: var(--color-text-dark); }
+html[data-theme="light"] .tip-badge:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+html[data-theme="light"] .tips-disclaimer {
+    color: var(--color-text-secondary);
+}
+html[data-theme="light"] .tips-disclaimer b {
+    color: var(--color-primary-yellow);
 }

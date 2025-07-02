@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMB0VG2VBB');
+  </script>
+  <meta charset="UTF-8" />
+  <title>Today’s UK & Irish Horse Races | Smart Racecards</title>
+  <meta name="description" content="Browse all today’s UK & Irish horse racing – see every meeting, all races, and what’s coming up next at a glance.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="today.css" />
+</head>
+<body>
+<nav class="main-navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="Smart Racecards Logo">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="today.html" class="nav-link">Today's Races</a>
+      <a href="results.html" class="nav-link">Results</a>
+      <a href="tips.html" class="nav-link">Tipster</a>
+      <a href="yesterday.html" class="nav-link">Historical</a>
+      <a href="custom-score.html" class="nav-link">Custom Score</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</nav>
+
+<main class="container">
+  <header class="hero-section">
+    <h1>Today’s Races</h1>
+    <p class="page-desc">
+      All today’s UK & Irish horse racing, with the next races up front.<br>
+      <b>Find your next winner at a glance.</b>
+    </p>
+  </header>
+
+  <section class="next6-section">
+    <div class="next6-label">Next to Go</div>
+    <div id="next-races-bar"></div>
+  </section>
+  
+  <section>
+    <div class="todayraces-title">All Meetings & Race Times</div>
+    <div class="todayraces-subtitle">
+      Browse every UK & Irish meeting below. Tap a race time to see full runners, tips, results and more.
+    </div>
+    <div id="course-listings"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <!-- Your normal footer here -->
+</footer>
+<script src="data.js"></script>
+<script src="today.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

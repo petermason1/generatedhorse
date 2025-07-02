@@ -1,43 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" data-theme="dark"> <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NMB0VG2VBB');
+</script>
+
   <meta charset="UTF-8">
   <title>Latest Racing Results | Smart Racecards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="global.css" />
-</head>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="results.css" />
+  </head>
 <body>
+<nav class="main-navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="Smart Racecards Logo">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="today.html" class="nav-link">Today's Races</a>
+      <a href="results.html" class="nav-link">Results</a>
+      <a href="tips.html" class="nav-link">Tipster</a>
+      <a href="yesterday.html" class="nav-link">Historical</a>
+      <a href="custom-score.html" class="nav-link">Custom Score</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</nav>
+
   <h1>Latest Racing Results</h1>
-  <div id="results"></div>
-  <!-- Put your script after your HTML -->
-  <script>
-    fetch('/api/results')
-      .then(res => res.json())
-      .then(data => {
-        const resultsDiv = document.getElementById('results');
-        if (!data || !data.results || !data.results.length) {
-          resultsDiv.innerHTML = '<p>No results yet. Please check back later.</p>';
-          return;
-        }
-        resultsDiv.innerHTML = data.results.map(race => {
-          const top = (race.runners || [])
-            .filter(r => r.position && Number(r.position) > 0)
-            .sort((a, b) => Number(a.position) - Number(b.position));
-          const winner = top[0] ? `<b>Winner:</b> ${top[0].horse} <span style="color:#888;">(SP: ${top[0].sp})</span>` : '';
-          const placed = top[1] ? ` <b>2nd:</b> ${top[1].horse}` : '';
-          const third = top[2] ? ` <b>3rd:</b> ${top[2].horse}` : '';
-          return `
-            <div class="race-result">
-              <h2>${race.off} - ${race.course}</h2>
-              <div>${race.race_name || ''}</div>
-              <div>${winner}${placed}${third}</div>
-            </div>
-          `;
-        }).join('');
-      })
-      .catch(() => {
-        document.getElementById('results').innerHTML = '<p>Error loading results.</p>';
-      });
-  </script>
+  <div id="results">Loading…</div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="tips.html">Tips</a>
+        <a href="yesterday.html">Historical</a>
+        <a href="custom-score.html">Custom Score</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-meta">
+        <span id="footer-year"></span> Smart Racecards
+        <span>•</span>
+        <a href="mailto:info@smartracecards.com">Contact</a>
+      </div>
+      <div class="footer-disclaimer">
+        <small>
+          For informational purposes only – not betting advice.<br>
+          Please gamble responsibly. 18+
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="results.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
