@@ -181,3 +181,63 @@ document.addEventListener('DOMContentLoaded', function () {
     mainRacecard.style.display = 'none'; // Hide if no race data
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Make sure racecardsData is available
+  const data = window.racecardsData;
+  if (!data || !data.racecards) return;
+
+  // Flatten all runners for today
+  const horses = [];
+  data.racecards.forEach(race => {
+    (race.runners || []).forEach(runner => {
+      horses.push({
+        horse: runner.horse,
+        course: race.course,
+        time: race.off_time,
+        race: race.race_name,
+        number: runner.number || "",
+        draw: runner.draw || "",
+        jockey: runner.jockey || "",
+        trainer: runner.trainer || "",
+        horse_id: runner.horse_id || ""
+      });
+    });
+  });
+
+  const input = document.getElementById('horseSearch');
+  const resultsDiv = document.getElementById('horseSearchResults');
+
+  input.addEventListener('input', function() {
+    const q = input.value.trim().toLowerCase();
+    if (!q) {
+      resultsDiv.innerHTML = "";
+      return;
+    }
+
+    // Find matching horses
+    const matches = horses.filter(h =>
+      h.horse.toLowerCase().includes(q)
+    );
+
+    // Show results
+    if (matches.length === 0) {
+      resultsDiv.innerHTML = `<div style="color:#aaa;padding:1em 0;">No horses found.</div>`;
+      return;
+    }
+
+    resultsDiv.innerHTML = matches.map(h => `
+      <div style="background:#23293c;margin-bottom:8px;padding:14px 18px;border-radius:11px;box-shadow:0 1px 10px #0002;">
+        <div><b style="color:#ffc900">${h.horse}</b></div>
+        <div style="font-size:0.99em;color:#a2ecda;">
+          <b>${h.course}</b> &bull; <b>${h.time}</b><br>
+          Race: ${h.race}<br>
+          ${h.number ? `No: ${h.number}` : ""}${h.draw ? ` &bull; Draw: ${h.draw}` : ""}
+          ${h.jockey ? `<br>Jockey: ${h.jockey}` : ""}
+          ${h.trainer ? `<br>Trainer: ${h.trainer}` : ""}
+        </div>
+      </div>
+    `).join('');
+  });
+});
