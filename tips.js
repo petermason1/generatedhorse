@@ -150,7 +150,7 @@ console.log('tips.js: Script started.');
     const chrisTips    = ["Gone in sixty", "Play Pretend", "Alzahir", "miss Barfad"];
     const peterTips    = ["Protection Act", "Phantom Watch", "Bobacious", "Starlight Time"];
     const kenTips      = ["Twilight Diamond", "Al Mootamarid", "Jack The Bachelor", "Harry's Hill"];
-    const racingPostTips = ["Horse 1", "Horse 2", "Horse 3", "Horse 4"]; // <--- EDIT
+    const racingPostTips = ["la cadalora", "Man of Action", "Tapioca Pearl", "Papabella"]; // <--- EDIT
 
     // Helper to find a runner object by horse name
     function getRunnerByHorseName(horseName, races) {
