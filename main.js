@@ -184,11 +184,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Make sure racecardsData is available
   const data = window.racecardsData;
   if (!data || !data.racecards) return;
 
-  // Flatten all runners for today
+  // Flatten all runners and grab race_id for linking
   const horses = [];
   data.racecards.forEach(race => {
     (race.runners || []).forEach(runner => {
@@ -201,6 +200,7 @@ document.addEventListener("DOMContentLoaded", function() {
         draw: runner.draw || "",
         jockey: runner.jockey || "",
         trainer: runner.trainer || "",
+        race_id: race._id || race.race_id || "", // capture race ID for link!
         horse_id: runner.horse_id || ""
       });
     });
@@ -229,7 +229,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     resultsDiv.innerHTML = matches.map(h => `
       <div style="background:#23293c;margin-bottom:8px;padding:14px 18px;border-radius:11px;box-shadow:0 1px 10px #0002;">
-        <div><b style="color:#ffc900">${h.horse}</b></div>
+        <div>
+          <b style="color:#ffc900">
+            <a href="racecard.html?race_id=${encodeURIComponent(h.race_id)}"
+               style="color:#ffc900;text-decoration:underline;"
+               target="_blank" rel="noopener">
+              ${h.horse}
+            </a>
+          </b>
+        </div>
         <div style="font-size:0.99em;color:#a2ecda;">
           <b>${h.course}</b> &bull; <b>${h.time}</b><br>
           Race: ${h.race}<br>
