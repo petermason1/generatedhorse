@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+  <!-- Google Analytics Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,13 +10,23 @@
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
-  <title>Tipster Showdown! Michael vs Chris vs Peter vs The Calc’s Smart Picks | Smart Racecards</title>
-  <meta name="description" content="It’s tipster vs tipster! See who comes out on top with Michael Pilling, Chris Waldock, Peter Mason and The Calc’s data-powered picks for today’s UK & Irish racing. Who gets bragging rights?" />
+  <title>Today’s Best Horse Racing Tips – Tipster Showdown & Daily Competition | Smart Racecards</title>
+  <meta name="description"
+        content="Smart Racecards brings you today’s top horse racing tips! Follow the Tipster Showdown leaderboard as Michael, Ken, Chris, Peter & The Calc compete to be the top UK & Irish racing tipster. Check live results and free tips, every day." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="tips.css" />
+  <!-- Social Preview Meta -->
+  <meta property="og:title" content="Today’s Best Horse Racing Tips – Tipster Showdown & Daily Competition" />
+  <meta property="og:description" content="Follow the UK & Irish Tipster Showdown – Michael, Ken, Chris, Peter & The Calc battle for the best horse racing tips. Get daily tips, results and competition leaderboard on Smart Racecards." />
+  <meta property="og:image" content="https://smartracecards.com/og-tipster-showdown.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://smartracecards.com/tips.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="keywords" content="horse racing tips, free horse racing tips, UK racing tips, Irish racing tips, tipster competition, best tipster, racing predictions, daily horse tips, Smart Racecards" />
 </head>
+
 <body>
   <nav class="main-navbar">
     <div class="navbar-inner">
@@ -25,7 +36,7 @@
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link">Home</a>
         <a href="results.html" class="nav-link">Results</a>
-        <a href="tips.html" class="nav-link">Tipster</a>
+        <a href="tips.html" class="nav-link">Tipster Showdown</a>
         <a href="yesterday.html" class="nav-link">Historical</a>
         <a href="custom-score.html" class="nav-link">Custom Score</a>
         <a href="about.html" class="nav-link">About</a>
@@ -43,41 +54,19 @@
     </div>
     <div class="nav-backdrop" id="navBackdrop"></div>
   </nav>
-  
+
   <main class="tips-main" id="main">
-    <header class="hero-section" style="text-align:center;">
-      <h1 class="page-title" style="font-size:2.3em;line-height:1.14">
-        <span style="color:#ffd700;">Tipster Showdown!</span><br>
-        <span style="font-size:0.8em;font-weight:400;">Michael vs Chris vs Cal’s Algorithm</span>
-      </h1>
-      <p class="tips-intro" style="font-size:1.15em;">
-        It’s bragging rights on the line!<br>
-        Can Michael or Chris out-tip the Smart Racecards AI? <b>See today’s best from all three—then follow along and decide who’s king for the day.</b>
-      </p>
-    </header>
-    <!-- Remainder of the main content is rendered by tips.js -->
+    <!-- Tips and competition leaderboard are loaded here by tips.js -->
   </main>
 
-  <footer class="site-footer">
+  <footer class="main-footer">
     <div class="footer-inner">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="tips.html">Smart Picks</a>
-        <a href="yesterday.html">Historical</a>
-        <a href="custom-score.html">Custom Score</a>
-        <a href="about.html">About</a>
-      </div>
-      <div class="footer-meta">
-        <span id="footer-year"></span> Smart Racecards
-        <span>•</span>
-        <a href="mailto:info@smartracecards.com">Contact</a>
-      </div>
-      <div class="footer-disclaimer">
-        <small>
-          All “Smart Picks” and tipster selections are for information only. No betting advice or guarantees.<br>
-          Please gamble responsibly. 18+
-        </small>
-      </div>
+      <span id="footer-year"></span> Smart Racecards. All rights reserved.
+      <span class="footer-links">
+        <a href="about.html">About</a> | 
+        <a href="contact.html">Contact</a> | 
+        <a href="privacy.html">Privacy</a>
+      </span>
     </div>
   </footer>
 
@@ -85,7 +74,6 @@
   <script src="tips.js"></script>
   <script src="main.js"></script>
   <script>
-    // Update footer year
     document.getElementById('footer-year').textContent = "© " + new Date().getFullYear();
   </script>
 </body>

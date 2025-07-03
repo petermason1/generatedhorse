@@ -1100,3 +1100,49 @@ html[data-theme="light"] .site-footer {
     font-size: 1em;
   }
 }
+
+.faq-section {
+  background: #212a36;
+  color: #eafaff;
+  border-radius: 14px;
+  margin: 48px auto 20px auto;
+  max-width: 720px;
+  padding: 32px 22px 24px 22px;
+  box-shadow: 0 6px 32px rgba(40,70,112,0.12);
+}
+
+.faq-section h2 {
+  color: #ffc900;
+  margin-bottom: 18px;
+  font-size: 1.48em;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item h3 {
+  color: #37e8b5;
+  margin-bottom: 5px;
+  font-size: 1.09em;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #eafaff;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 18px 6vw;
+  }
+  .faq-section h2 {
+    font-size: 1.2em;
+  }
+}

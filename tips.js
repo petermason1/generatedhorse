@@ -145,156 +145,186 @@ console.log('tips.js: Script started.');
         });
     });
 
-// === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
-const michaelsTips = ["Easy Peeler", "Dandy Style", "Jaipaletemps", "Halondo"];
-const chrisTips    = ["Gone in sixty", "Play Pretend", "Alzahir", "miss Barfad"];
-const peterTips    = ["village master", "nana noodleman", "Bobacious", "Starlight Time"];
-const kenTips      = ["Twilight Diamond", "Al Mootamarid", "Jack The Bachelor", "Harry's Hill"]; // <-- EDIT THIS for Ken's picks
+    // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
+    const michaelsTips = ["Easy Peeler", "Dandy Style", "Jaipaletemps", "Halondo"];
+    const chrisTips    = ["Gone in sixty", "Play Pretend", "Alzahir", "miss Barfad"];
+    const peterTips    = ["Protection Act", "Phantom Watch", "Wheresmemoneygone", "Magic Box"];
+    const kenTips      = ["Twilight Diamond", "Al Mootamarid", "Jack The Bachelor", "Harry's Hill"];
+    const racingPostTips = ["La Cadalora", "Man of Action", "Tapioca Pearl", "Papabella"]; // <--- EDIT
 
-// Helper to find a runner object by horse name
-function getRunnerByHorseName(horseName, races) {
-    for (const race of races) {
-        const runner = (race.runners || []).find(r =>
-            (r.horse || '').toLowerCase() === horseName.toLowerCase()
-        );
-        if (runner) return { ...runner, race };
+    // Helper to find a runner object by horse name
+    function getRunnerByHorseName(horseName, races) {
+        for (const race of races) {
+            const runner = (race.runners || []).find(r =>
+                (r.horse || '').toLowerCase() === horseName.toLowerCase()
+            );
+            if (runner) return { ...runner, race };
+        }
+        return null;
     }
-    return null;
-}
 
-// Sort by race off time (works with various date/time fields)
-function sortByOffTime(arr) {
-    return arr.slice().sort((a, b) => {
-        const getTime = r => {
-            if (r.race.off_dt) return new Date(r.race.off_dt).getTime();
-            if (r.race.race_datetime) return new Date(r.race.race_datetime).getTime();
-            if (r.race.date && r.race.off_time) return new Date(`${r.race.date}T${r.race.off_time}`).getTime();
-            if (r.race.off_time) {
-                const [h, m] = r.race.off_time.split(':');
-                return (parseInt(h,10) * 60 + parseInt(m,10)) * 60 * 1000;
-            }
-            return 0;
-        };
-        return getTime(a) - getTime(b);
-    });
-}
-
-// Build tipster pick cards (skip if name not found in data, then sort)
-const michaelsFeatured = sortByOffTime(
-    michaelsTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
-);
-const chrisFeatured = sortByOffTime(
-    chrisTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
-);
-const peterFeatured = sortByOffTime(
-    peterTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
-);
-const kenFeatured = sortByOffTime(
-    kenTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
-);
-
-// === CAL'S PICKS: HIGHEST SCORING 3 RUNNERS OF THE DAY (NO DUPLICATE RACES), THEN SORT BY OFF TIME ===
-const allRunners = races.flatMap(race => (race.runners || []).map(r => ({...r, race})));
-const sortedByScore = allRunners.filter(r => r.score > 0).sort((a, b) => b.score - a.score);
-const usedRaceIds = new Set();
-let calsPicks = [];
-for (const r of sortedByScore) {
-    const raceId = r.race._id || r.race.race_id;
-    if (!usedRaceIds.has(raceId)) {
-        calsPicks.push(r);
-        usedRaceIds.add(raceId);
+    // Sort by race off time (works with various date/time fields)
+    function sortByOffTime(arr) {
+        return arr.slice().sort((a, b) => {
+            const getTime = r => {
+                if (r.race.off_dt) return new Date(r.race.off_dt).getTime();
+                if (r.race.race_datetime) return new Date(r.race.race_datetime).getTime();
+                if (r.race.date && r.race.off_time) return new Date(`${r.race.date}T${r.race.off_time}`).getTime();
+                if (r.race.off_time) {
+                    const [h, m] = r.race.off_time.split(':');
+                    return (parseInt(h,10) * 60 + parseInt(m,10)) * 60 * 1000;
+                }
+                return 0;
+            };
+            return getTime(a) - getTime(b);
+        });
     }
-    if (calsPicks.length === 4) break;   // <-- set to 4 here!
-}
-calsPicks = sortByOffTime(calsPicks);
 
-// === RENDER ===
+    // Build tipster pick cards (skip if name not found in data, then sort)
+    const michaelsFeatured = sortByOffTime(
+        michaelsTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    );
+    const chrisFeatured = sortByOffTime(
+        chrisTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    );
+    const peterFeatured = sortByOffTime(
+        peterTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    );
+    const kenFeatured = sortByOffTime(
+        kenTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    );
+    const racingPostFeatured = sortByOffTime(
+        racingPostTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    );
 
-function renderTipCard(r, i, badge) {
-  const silksImageUrl = r.silk_url ? r.silk_url : 'https://placehold.co/40x40/333/fff?text=No+Silk';
-  let raceName = r.race.race_name || '';
-  const raceTypeMatch = raceName.match(/\((.*?)\)/);
-  let filteredRaceName = raceName;
-  if (raceTypeMatch && raceTypeMatch[0]) {
-      filteredRaceName = raceName.replace(raceTypeMatch[0], '').trim();
-  }
-  const commonRaceTypes = ['Handicap', 'Maiden', 'Stakes', 'Chase', 'Hurdle', 'Flat', 'National Hunt'];
-  for (const type of commonRaceTypes) {
-      filteredRaceName = filteredRaceName.replace(new RegExp(type, 'gi'), '').trim();
-  }
-  filteredRaceName = filteredRaceName.replace(/-\s*$/, '').trim();
-  filteredRaceName = filteredRaceName.replace(/\(\s*\)/, '').trim();
-  return `
-    <div class="tip-card">
-      <div class="silks-wrapper">
-        <img src="${silksImageUrl}" alt="${r.horse} silks" class="silks-img" onerror="this.onerror=null;this.src='https://placehold.co/40x40/333/fff?text=No+Silk';">
-      </div>
-      <div class="tip-content">
-        <div class="tip-top-row">
-          <a href="racecard.html?race_id=${r.race._id}" class="tip-horse">${r.horse}</a>
-          <span class="tip-odds">${r.odds?.[0]?.fractional || ''}</span>
-          <span class="tip-score">(Score: ${r.score})</span>
-        </div>
-        <div class="tip-middle-row">
-          <span class="tip-race-time-course">${r.race.off_time} ${r.race.course}</span>
-          ${filteredRaceName ? `<span class="tip-race-filtered-name">${filteredRaceName}</span>` : ''}
-        </div>
-        <div class="tip-bottom-row">
-          <div class="tip-reason">${explainPick(r)}</div>
-          ${badge ? `<span class="tip-badge ${badge.toLowerCase().replace(' ', '-')}-badge">${badge}</span>` : ''}
-        </div>
-      </div>
-    </div>
-  `;
-}
+    // === CAL'S PICKS: HIGHEST SCORING 3 RUNNERS OF THE DAY (NO DUPLICATE RACES), THEN SORT BY OFF TIME ===
+    const allRunners = races.flatMap(race => (race.runners || []).map(r => ({...r, race})));
+    const sortedByScore = allRunners.filter(r => r.score > 0).sort((a, b) => b.score - a.score);
+    const usedRaceIds = new Set();
+    let calsPicks = [];
+    for (const r of sortedByScore) {
+        const raceId = r.race._id || r.race.race_id;
+        if (!usedRaceIds.has(raceId)) {
+            calsPicks.push(r);
+            usedRaceIds.add(raceId);
+        }
+        if (calsPicks.length === 4) break;   // <-- set to 4 here!
+    }
+    calsPicks = sortByOffTime(calsPicks);
 
-// === FINAL PAGE HTML ===
-try {
-    main.innerHTML = `
-      <div class="container">
-        <h1 class="page-title">Today’s Tipster Showdown</h1>
-        <p class="tips-intro">
-          Michael, Chris, Peter, Ken, and The Calc's data bot go head-to-head.<br>
-          <b>Who lands bragging rights today?</b>
-        </p>
+    function renderTipCard(r, i, badge) {
+      const silksImageUrl = r.silk_url ? r.silk_url : 'https://placehold.co/40x40/333/fff?text=No+Silk';
+      let raceName = r.race.race_name || '';
+      const raceTypeMatch = raceName.match(/\((.*?)\)/);
+      let filteredRaceName = raceName;
+      if (raceTypeMatch && raceTypeMatch[0]) {
+          filteredRaceName = raceName.replace(raceTypeMatch[0], '').trim();
+      }
+      const commonRaceTypes = ['Handicap', 'Maiden', 'Stakes', 'Chase', 'Hurdle', 'Flat', 'National Hunt'];
+      for (const type of commonRaceTypes) {
+          filteredRaceName = filteredRaceName.replace(new RegExp(type, 'gi'), '').trim();
+      }
+      filteredRaceName = filteredRaceName.replace(/-\s*$/, '').trim();
+      filteredRaceName = filteredRaceName.replace(/\(\s*\)/, '').trim();
+      return `
+        <div class="tip-card">
+          <div class="silks-wrapper">
+            <img src="${silksImageUrl}" alt="${r.horse} silks" class="silks-img" onerror="this.onerror=null;this.src='https://placehold.co/40x40/333/fff?text=No+Silk';">
+          </div>
+          <div class="tip-content">
+            <div class="tip-top-row">
+              <a href="racecard.html?race_id=${r.race._id}" class="tip-horse">${r.horse}</a>
+              <span class="tip-odds">${r.odds?.[0]?.fractional || ''}</span>
+              <span class="tip-score">(Score: ${r.score})</span>
+            </div>
+            <div class="tip-middle-row">
+              <span class="tip-race-time-course">${r.race.off_time} ${r.race.course}</span>
+              ${filteredRaceName ? `<span class="tip-race-filtered-name">${filteredRaceName}</span>` : ''}
+            </div>
+            <div class="tip-bottom-row">
+              <div class="tip-reason">${explainPick(r)}</div>
+              ${badge ? `<span class="tip-badge ${badge.toLowerCase().replace(' ', '-')}-badge">${badge}</span>` : ''}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // === FINAL PAGE HTML ===
+    let sections = '';
+
+    if (michaelsFeatured.length) {
+      sections += `
         <section class="tips-section featured-section">
           <h2 class="section-title">Michael Pilling’s Tips of the Day</h2>
-          ${michaelsFeatured.length ? michaelsFeatured.map((r, i) => renderTipCard(r, i, "Michael's Pick")).join('') : '<div class="no-picks">No tips submitted.</div>'}
+          ${michaelsFeatured.map((r, i) => renderTipCard(r, i, "Michael's Pick")).join('')}
         </section>
+      `;
+    }
+    if (chrisFeatured.length) {
+      sections += `
         <section class="tips-section featured-section">
           <h2 class="section-title">Chris Waldock’s Tips of the Day</h2>
-          ${chrisFeatured.length ? chrisFeatured.map((r, i) => renderTipCard(r, i, "Chris's Pick")).join('') : '<div class="no-picks">No tips submitted.</div>'}
+          ${chrisFeatured.map((r, i) => renderTipCard(r, i, "Chris's Pick")).join('')}
         </section>
+      `;
+    }
+    if (peterFeatured.length) {
+      sections += `
         <section class="tips-section featured-section">
           <h2 class="section-title">Peter Mason’s Tips of the Day</h2>
-          ${peterFeatured.length ? peterFeatured.map((r, i) => renderTipCard(r, i, "Peter's Pick")).join('') : '<div class="no-picks">No tips submitted.</div>'}
+          ${peterFeatured.map((r, i) => renderTipCard(r, i, "Peter's Pick")).join('')}
         </section>
+      `;
+    }
+    if (kenFeatured.length) {
+      sections += `
         <section class="tips-section featured-section">
           <h2 class="section-title">Ken Durie’s Tips of the Day</h2>
-          ${kenFeatured.length ? kenFeatured.map((r, i) => renderTipCard(r, i, "Ken's Pick")).join('') : '<div class="no-picks">No tips submitted.</div>'}
+          ${kenFeatured.map((r, i) => renderTipCard(r, i, "Ken's Pick")).join('')}
         </section>
+      `;
+    }
+    if (racingPostFeatured.length) {
+      sections += `
+        <section class="tips-section featured-section">
+          <h2 class="section-title">Racing Post Tips</h2>
+          ${racingPostFeatured.map((r, i) => renderTipCard(r, i, "Racing Post Pick")).join('')}
+        </section>
+      `;
+    }
+    if (calsPicks.length) {
+      sections += `
         <section class="tips-section featured-section">
           <h2 class="section-title">Calc’s Picks of the Day <span class="section-subtitle">(Top Data-Rated)</span></h2>
-          ${calsPicks.length ? calsPicks.map((r, i) => renderTipCard(r, i, "Cal's Pick")).join('') : '<div class="no-picks">No strong picks today.</div>'}
+          ${calsPicks.map((r, i) => renderTipCard(r, i, "Cal's Pick")).join('')}
         </section>
-        <div class="tips-disclaimer" style="text-align:center;color:var(--color-primary-yellow);font-size:0.98em;margin-top:2em;">
-          <b>Disclaimer:</b> All picks are for information only and not betting advice. Please gamble responsibly.
-        </div>
-      </div>
-    `;
-} catch (renderError) {
-    console.error("tips.js: Error during final HTML rendering:", renderError);
-    main.innerHTML = `
-      <div class="container">
-        <h1 class="page-title">Today’s Tipster Showdown</h1>
-        <p class="tips-intro">
-          An error occurred while displaying picks.<br>
-          Please check the browser console for details.
-        </p>
-      </div>`;
-}
+      `;
+    }
+main.innerHTML = `
+  <div class="container">
+    <h1 class="page-title">Horse Racing Tipster Showdown – Today’s Best Tips & Competition</h1>
+    <p class="tips-intro">
+      Daily UK & Irish horse racing tips from Michael, Chris, Peter, Ken, Racing Post and The Calc.<br>
+      Compete, compare, and follow the live tipster leaderboard.<br>
+      <b>Free expert tips, results, and analysis updated daily.</b>
+    </p>
+    <a href="todays-leaderboard.html" class="cta-btn" ...>View Leaderboard & Results</a>
+    ${sections || `<div class="no-picks" ...>No valid tips for today.</div>`}
+    <div class="tips-disclaimer" ...>
+      <b>Disclaimer:</b> All tips are for information only, not betting advice. Please gamble responsibly.
+    </div>
+  </div>
+`;
 
 
-    console.log(`tips.js: Rendered ${michaelsFeatured.length} Michael, ${chrisFeatured.length} Chris, ${peterFeatured.length} Peter, ${calsPicks.length} Cal picks.`);
+    console.log('tips.js: Rendered sections:', {
+      michaels: michaelsFeatured.length,
+      chris: chrisFeatured.length,
+      peter: peterFeatured.length,
+      ken: kenFeatured.length,
+      racingPost: racingPostFeatured.length,
+      cal: calsPicks.length
+    });
     console.log('tips.js: Script finished.');
 })();

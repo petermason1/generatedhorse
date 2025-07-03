@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -10,12 +11,54 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Smart Racecards | Racecard</title>
-  <meta name="description" content="Live UK & Irish horse racing racecard – Smart, mobile friendly, and data-driven.">
+  <!-- SEO Meta -->
+  <title>Today's Live UK & Irish Horse Racing Racecards & Odds | Smart Racecards</title>
+  <meta name="description" content="View today’s free UK & Irish horse racing racecards with live odds, tips, expert analysis, and instant results. Mobile-friendly, real-time, and updated every day." />
+  <link rel="canonical" href="https://smartracecards.com/racecard.html" />
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Live UK & Irish Horse Racing Racecards & Odds | Smart Racecards" />
+  <meta property="og:description" content="Today’s latest UK & Irish racecards, live results, tips, and smart data for every meeting. Crush your racing bets with Smart Racecards." />
+  <meta property="og:image" content="https://smartracecards.com/og-racecard.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://smartracecards.com/racecard.html" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Live UK & Irish Horse Racing Racecards & Odds | Smart Racecards" />
+  <meta name="twitter:description" content="Today’s latest UK & Irish racecards, live results, tips, and smart data for every meeting. Crush your racing bets with Smart Racecards." />
+  <!-- Favicon & Preload Font -->
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMwM.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- CSS -->
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="racecard.css" />
 </head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often are racecards updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our racecards are updated in real-time every morning and refreshed throughout the day as new data comes in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you show live odds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We display the latest available odds, but please check with your bookmaker for live, real-time prices."
+      }
+    }
+    // Add more Q&As...
+  ]
+}
+</script>
+
+
 <body>
   <!-- 1. NAVBAR -->
 <nav class="main-navbar">
@@ -69,6 +112,29 @@
 
   <main class="container" id="mainRacecard"></main>
 </div>
+
+<!-- ...your main racecard HTML... -->
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>How often are racecards updated?</h3>
+      <p>Our racecards are updated in real-time every morning and refreshed throughout the day as new data comes in.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you show live odds?</h3>
+      <p>We display the latest available odds, but please check with your bookmaker for live, real-time prices.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What makes Smart Racecards different?</h3>
+      <p>We combine data-driven ratings, tipster selections, and fast mobile access to give you a unique edge.</p>
+    </div>
+    <!-- Add more Q&As as you like -->
+  </div>
+</section>
+
+
 
   <!-- 3. FOOTER -->
   <footer class="site-footer">
