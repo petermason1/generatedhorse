@@ -148,9 +148,9 @@ console.log('tips.js: Script started.');
     // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
     const michaelsTips = ["Easy Peeler", "Dandy Style", "Jaipaletemps", "Halondo"];
     const chrisTips    = ["Gone in sixty", "Play Pretend", "Alzahir", "miss Barfad"];
-    const peterTips    = ["Protection Act", "Phantom Watch", "Wheresmemoneygone", "Magic Box"];
+    const peterTips    = ["Protection Act", "Phantom Watch", "Bobacious", "Starlight Time"];
     const kenTips      = ["Twilight Diamond", "Al Mootamarid", "Jack The Bachelor", "Harry's Hill"];
-    const racingPostTips = ["La Cadalora", "Man of Action", "Tapioca Pearl", "Papabella"]; // <--- EDIT
+    const racingPostTips = ["Horse 1", "Horse 2", "Horse 3", "Horse 4"]; // <--- EDIT
 
     // Helper to find a runner object by horse name
     function getRunnerByHorseName(horseName, races) {
@@ -301,22 +301,23 @@ console.log('tips.js: Script started.');
         </section>
       `;
     }
-main.innerHTML = `
-  <div class="container">
-    <h1 class="page-title">Horse Racing Tipster Showdown – Today’s Best Tips & Competition</h1>
-    <p class="tips-intro">
-      Daily UK & Irish horse racing tips from Michael, Chris, Peter, Ken, Racing Post and The Calc.<br>
-      Compete, compare, and follow the live tipster leaderboard.<br>
-      <b>Free expert tips, results, and analysis updated daily.</b>
-    </p>
-    <a href="todays-leaderboard.html" class="cta-btn" ...>View Leaderboard & Results</a>
-    ${sections || `<div class="no-picks" ...>No valid tips for today.</div>`}
-    <div class="tips-disclaimer" ...>
-      <b>Disclaimer:</b> All tips are for information only, not betting advice. Please gamble responsibly.
-    </div>
-  </div>
-`;
 
+    main.innerHTML = `
+      <div class="container">
+        <h1 class="page-title">Today’s Tipster Showdown</h1>
+        <p class="tips-intro">
+          Michael, Chris, Peter, Ken, The Calc, and Racing Post go head-to-head.<br>
+          <b>Who lands bragging rights today?</b>
+        </p>
+        <a href="todays-leaderboard.html" class="cta-btn" style="margin: 18px auto 26px; display:inline-block; font-weight:700; background: linear-gradient(90deg,#37e8b5,#ffc900 95%); color:#232d33; border:none; border-radius:14px; padding:14px 42px; font-size:1.13em; box-shadow:0 4px 18px #0002; letter-spacing:0.01em; text-decoration:none; transition:background 0.2s,box-shadow 0.2s; cursor:pointer;">
+          View Leaderboard & Results
+        </a>
+        ${sections || `<div class="no-picks" style="color:#f66;font-weight:700;margin:2em 0;">No valid tips for today.</div>`}
+        <div class="tips-disclaimer" style="text-align:center;color:var(--color-primary-yellow);font-size:0.98em;margin-top:2em;">
+          <b>Disclaimer:</b> All picks are for information only and not betting advice. Please gamble responsibly.
+        </div>
+      </div>
+    `;
 
     console.log('tips.js: Rendered sections:', {
       michaels: michaelsFeatured.length,
