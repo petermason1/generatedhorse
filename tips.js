@@ -162,7 +162,9 @@ console.log('tips.js: Script started.');
         }
         return null;
     }
-
+    function isNonRunner(runner) {
+        return (typeof runner.number === "string" && runner.number.trim().toUpperCase() === "NR");
+    }
     // Sort by race off time (works with various date/time fields)
     function sortByOffTime(arr) {
         return arr.slice().sort((a, b) => {
@@ -197,18 +199,19 @@ console.log('tips.js: Script started.');
         racingPostTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
     );
 
-    // === CAL'S PICKS: HIGHEST SCORING 3 RUNNERS OF THE DAY (NO DUPLICATE RACES), THEN SORT BY OFF TIME ===
+    // === CAL'S PICKS: HIGHEST SCORING 4 RUNNERS OF THE DAY (NO DUPLICATE RACES), SKIP NRs ===
     const allRunners = races.flatMap(race => (race.runners || []).map(r => ({...r, race})));
     const sortedByScore = allRunners.filter(r => r.score > 0).sort((a, b) => b.score - a.score);
     const usedRaceIds = new Set();
     let calsPicks = [];
     for (const r of sortedByScore) {
         const raceId = r.race._id || r.race.race_id;
+        if (isNonRunner(r)) continue; // Skip NR!
         if (!usedRaceIds.has(raceId)) {
             calsPicks.push(r);
             usedRaceIds.add(raceId);
         }
-        if (calsPicks.length === 4) break;   // <-- set to 4 here!
+        if (calsPicks.length === 4) break;
     }
     calsPicks = sortByOffTime(calsPicks);
 
