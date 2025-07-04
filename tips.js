@@ -146,7 +146,7 @@ console.log('tips.js: Script started.');
     });
 
     // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
-    const michaelsTips = ["la cadalora", "look to the stars", "true promise", "simple star"];
+    const michaelsTips = ["windlord", "term of endearment", "homeland", "sword"];
     const chrisTips    = ["Barranco", "Perfidia", "Hostelry", "Triple Force"];
     const peterTips    = ["Harsh", "kassaya", "grey jaguar", "Percy's Daydream"];
     const kenTips      = ["Mon Na Slieve", "Miss Popalong", "Ishe Worth Agamble", "Kassaya"];
