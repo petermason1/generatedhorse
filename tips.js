@@ -147,7 +147,7 @@ console.log('tips.js: Script started.');
 
     // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
     const michaelsTips = ["la cadalora", "look to the stars", "true promise", "simple star"];
-    const chrisTips    = ["spit spot", "blue to blue", "heart above", "glitter code"];
+    const chrisTips    = ["Barranco", "Perfidia", "Hostelry", "Triple Force"];
     const peterTips    = ["Harsh", "kassaya", "grey jaguar", "Percy's Daydream"];
     const kenTips      = ["Mon Na Slieve", "Miss Popalong", "Ishe Worth Agamble", "Kassaya"];
     const racingPostTips = ["a major payne", "elsass", "guernsey lady", "tara iti"]; // <--- EDIT
