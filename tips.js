@@ -149,7 +149,7 @@ console.log('tips.js: Script started.');
     const michaelsTips = ["la cadalora", "look to the stars", "true promise", "simple star"];
     const chrisTips    = ["spit spot", "blue to blue", "heart above", "glitter code"];
     const peterTips    = ["Harsh", "kassaya", "grey jaguar", "Percy's Daydream"];
-    const kenTips      = ["Wren Runner", "Garde des champs", "Jack The Tooth", "Roach Power"];
+    const kenTips      = ["Mon Na Slieve", "Miss Popalong", "Ishe Worth Agamble", "Kassaya"];
     const racingPostTips = ["a major payne", "elsass", "guernsey lady", "tara iti"]; // <--- EDIT
 
     // Helper to find a runner object by horse name
