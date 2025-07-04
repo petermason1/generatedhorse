@@ -339,3 +339,19 @@ html[data-theme="light"] .about-contact-footer a {
 html[data-theme="light"] .about-contact-footer a:hover {
   color: var(--color-accent-green);
 }
+.team-card-cta .team-form input[type="email"] {
+  background: var(--color-section-bg);
+  border: 1px solid var(--color-accent-green);
+  color: var(--color-text-primary);
+}
+.team-card-cta .team-form button {
+  background: var(--color-accent-green);
+  color: #172430;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.team-card-cta .team-form button:hover {
+  background: #29b689;
+}
