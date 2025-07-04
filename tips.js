@@ -312,9 +312,12 @@ console.log('tips.js: Script started.');
           Michael, Chris, Peter, Ken, The Calc, and Racing Post go head-to-head.<br>
           <b>Who lands bragging rights today?</b>
         </p>
-        <a href="todays-leaderboard.html" class="cta-btn" style="margin: 18px auto 26px; display:inline-block; font-weight:700; background: linear-gradient(90deg,#37e8b5,#ffc900 95%); color:#232d33; border:none; border-radius:14px; padding:14px 42px; font-size:1.13em; box-shadow:0 4px 18px #0002; letter-spacing:0.01em; text-decoration:none; transition:background 0.2s,box-shadow 0.2s; cursor:pointer;">
-          View Leaderboard & Results
-        </a>
+   <div style="text-align:center;">
+  <a href="todays-leaderboard.html" class="cta-btn" style="margin: 18px auto 26px; display:inline-block; font-weight:700; background: linear-gradient(90deg,#37e8b5,#ffc900 95%); color:#232d33; border:none; border-radius:14px; padding:14px 42px; font-size:1.13em; box-shadow:0 4px 18px #0002; letter-spacing:0.01em; text-decoration:none; transition:background 0.2s,box-shadow 0.2s; cursor:pointer;">
+    View Leaderboard &amp; Results
+  </a>
+</div>
+
         ${sections || `<div class="no-picks" style="color:#f66;font-weight:700;margin:2em 0;">No valid tips for today.</div>`}
         <div class="tips-disclaimer" style="text-align:center;color:var(--color-primary-yellow);font-size:0.98em;margin-top:2em;">
           <b>Disclaimer:</b> All picks are for information only and not betting advice. Please gamble responsibly.
