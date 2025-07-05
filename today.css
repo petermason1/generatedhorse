@@ -341,3 +341,71 @@
   .course-block { padding: 11px 6px 8px 11px; }
   .course-race-box { min-width: 50px; font-size: 0.93em; }
 }
+
+/* ========== HORSE SEARCH BAR & RESULTS ========== */
+.horse-search-container {
+  margin: 2em auto;
+  max-width: 480px;
+}
+
+.horse-search-input {
+  width: 100%;
+  padding: 1em;
+  font-size: 1.11em;
+  border-radius: 12px;
+  border: 1.4px solid #333;
+  background: #1c2227;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 2px 12px #171d23a8;
+  transition: border 0.15s, box-shadow 0.15s;
+}
+
+.horse-search-input:focus {
+  border-color: var(--color-primary-yellow, #ffe561);
+  box-shadow: 0 4px 22px #37e8b52a;
+  background: #232c34;
+  color: #ffd700;
+}
+
+#horseSearchResults {
+  background: #1d232a;
+  border-radius: 9px;
+  margin-top: 8px;
+  padding: 0.7em 0.5em;
+  box-shadow: 0 2px 14px #10161e99;
+  min-height: 0;
+  font-size: 1.04em;
+  color: #f7f7f7;
+  z-index: 9;
+  position: relative;
+}
+
+.horse-search-result {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: none;
+  transition: background 0.11s, color 0.11s;
+  cursor: pointer;
+}
+
+.horse-search-result a {
+  color: #ffe561;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.horse-search-result a:hover,
+.horse-search-result:hover {
+  background: #292f37;
+  color: #36e8b5;
+}
+
+.horse-search-result:not(:last-child) {
+  border-bottom: 1px solid #22282e;
+}
+
+@media (max-width: 500px) {
+  .horse-search-container { max-width: 98vw; }
+  .horse-search-input { font-size: 1em; padding: 0.85em; }
+}

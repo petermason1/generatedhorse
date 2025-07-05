@@ -1,4 +1,4 @@
-// main.js -- Site UI Only (no racing logic)
+// main.js -- Site UI + Horse Search Bar
 
 // =============== NAVBAR TOGGLING ===============
 document.addEventListener('DOMContentLoaded', function () {
@@ -73,4 +73,106 @@ document.addEventListener('DOMContentLoaded', function () {
   if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
   }
+
+  // =============== HORSE SEARCH BAR ===============
+  // Requires: window.racecardsData.racecards to be loaded
+  const horseSearchInput = document.getElementById('horseSearch');
+  const horseSearchResults = document.getElementById('horseSearchResults');
+  // If present, enable search bar
+  if (horseSearchInput && horseSearchResults && window.racecardsData && Array.isArray(window.racecardsData.racecards)) {
+    const allRaces = window.racecardsData.racecards;
+    // Helper to search for horses
+    function searchHorses(query) {
+      query = query.trim().toLowerCase();
+      if (!query) return [];
+      const results = [];
+      allRaces.forEach(race => {
+        (race.runners || []).forEach(runner => {
+          if ((runner.horse || '').toLowerCase().includes(query)) {
+            results.push({
+              horse: runner.horse,
+              race: race,
+              runner: runner
+            });
+          }
+        });
+      });
+      return results;
+    }
+    horseSearchInput.addEventListener('input', function(e) {
+      const val = e.target.value;
+      horseSearchResults.innerHTML = '';
+      if (val.length < 2) return;
+      const results = searchHorses(val);
+      if (!results.length) {
+        horseSearchResults.innerHTML = `<div style="color:#bbb;">No horses found.</div>`;
+        return;
+      }
+      horseSearchResults.innerHTML = results.slice(0, 8).map(r =>
+        `<div class="horse-search-result">
+          <a href="racecard.html?race_id=${r.race._id}">
+            <b>${r.horse}</b> <span style="color:#aaa;">(${r.race.off_time}, ${r.race.course})</span>
+          </a>
+        </div>`
+      ).join('');
+    });
+    // Optional: click result fills search box
+    horseSearchResults.addEventListener('click', function(e) {
+      if (e.target.closest('a')) {
+        horseSearchInput.value = '';
+        horseSearchResults.innerHTML = '';
+      }
+    });
+  }
 });
+
+(function horseSearchInit() {
+  const horseSearchInput = document.getElementById('horseSearch');
+  const horseSearchResults = document.getElementById('horseSearchResults');
+  // Wait until data is loaded
+  if (!(horseSearchInput && horseSearchResults && window.racecardsData && Array.isArray(window.racecardsData.racecards))) {
+    setTimeout(horseSearchInit, 200);
+    return;
+  }
+  const allRaces = window.racecardsData.racecards;
+  function searchHorses(query) {
+    query = query.trim().toLowerCase();
+    if (!query) return [];
+    const results = [];
+    allRaces.forEach(race => {
+      (race.runners || []).forEach(runner => {
+        if ((runner.horse || '').toLowerCase().includes(query)) {
+          results.push({
+            horse: runner.horse,
+            race: race,
+            runner: runner
+          });
+        }
+      });
+    });
+    return results;
+  }
+  horseSearchInput.addEventListener('input', function(e) {
+    const val = e.target.value;
+    horseSearchResults.innerHTML = '';
+    if (val.length < 2) return;
+    const results = searchHorses(val);
+    if (!results.length) {
+      horseSearchResults.innerHTML = `<div style="color:#bbb;">No horses found.</div>`;
+      return;
+    }
+    horseSearchResults.innerHTML = results.slice(0, 8).map(r =>
+      `<div class="horse-search-result">
+        <a href="racecard.html?race_id=${r.race._id}">
+          <b>${r.horse}</b> <span style="color:#aaa;">(${r.race.off_time}, ${r.race.course})</span>
+        </a>
+      </div>`
+    ).join('');
+  });
+  horseSearchResults.addEventListener('click', function(e) {
+    if (e.target.closest('a')) {
+      horseSearchInput.value = '';
+      horseSearchResults.innerHTML = '';
+    }
+  });
+})();

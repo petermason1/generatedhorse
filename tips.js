@@ -42,6 +42,33 @@ console.log('tips.js: Script started.');
 
     // ========== SCORING LOGICS ==========
 
+    function jsStyleScore(r) {
+      const rpr = parseInt(r.rpr) || 0;
+      const ts = parseInt(r.ts) || 0;
+      const orating = parseInt(r.ofr) || 0;
+      const last_run = parseInt(r.last_run) || 99;
+      let wins = 0, places = 0;
+      if (typeof r.form === 'string') {
+        wins = (r.form.match(/1/g) || []).length;
+        places = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+      }
+      const trainer = r.trainer_14_days || {};
+      const trainerPercent = parseFloat(trainer.percent) || 0;
+      const trainerWins = parseInt(trainer.wins) || 0;
+      let score = 0;
+      score += rpr;
+      score += 0.5 * ts;
+      score += 0.3 * orating;
+      score += 3 * wins + 1 * places;
+      if (last_run > 60) score -= (last_run - 60) * 0.4;
+      score += Math.max(0, 60 - last_run) * 0.1;
+      score += 0.7 * trainerPercent;
+      score += 1.1 * trainerWins;
+      if (score < -15) score = -15 + (score + 15) * 0.3;
+      if (!Number.isFinite(score)) score = 0;
+      return Math.round(score * 10) / 10;
+    }
+
     function scoreLogicV2_FormWeighted(r) {
       const rpr = parseInt(r.rpr) || 0;
       const ts = parseInt(r.ts) || 0;
@@ -97,37 +124,54 @@ console.log('tips.js: Script started.');
       return Math.round(((s2 + s4) / 2) * 1000) / 1000;
     }
 
-    function scoreLogicV3_TrainerHot(r) {
-      const rpr = parseInt(r.rpr) || 0;
-      const ts = parseInt(r.ts) || 0;
-      const orating = parseInt(r.ofr) || 0;
-      const last_run = parseInt(r.last_run) || 99;
-      let wins = 0, placed = 0;
-      if (typeof r.form === 'string') {
-        wins = (r.form.match(/1/g) || []).length;
-        placed = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+    function scoreRunner(r) {
+      // Hybrid scoring: Class 1 or 2 => JS logic, else Combo
+      let raceClass = r.race_class || r.pattern || '';
+      let classNum = null;
+      if (typeof raceClass === "string" && raceClass.toLowerCase().startsWith("class ")) {
+        classNum = parseInt(raceClass.split(" ")[1]);
       }
-      const trainer = r.trainer_14_days || {};
-      const trainerPercent = parseFloat(trainer.percent) || 0;
-      const trainerWins = parseInt(trainer.wins) || 0;
-      const jockey = r.jockey_14_days || {};
-      const jockeyPercent = parseFloat(jockey.percent) || 0;
-      const jockeyWins = parseInt(jockey.wins) || 0;
-      let score = 0;
-      score += 0.7 * rpr + 0.6 * ts + 0.4 * orating;
-      score += 2.5 * wins + 0.7 * placed;
-      score += 1.2 * trainerPercent + 1.2 * trainerWins;
-      score += 1.1 * jockeyPercent + 1.1 * jockeyWins;
-      score -= Math.max(0, last_run - 50) * 0.3;
-      score += Math.max(0, 50 - last_run) * 0.08;
-      if (!Number.isFinite(score)) score = 0;
-      return Math.round(score * 100) / 100;
+      if (classNum === 1 || classNum === 2) {
+        return jsStyleScore(r);
+      }
+      return scoreLogicV1_Combo(r);
     }
 
-    // ==== CHOOSE YOUR SCORING FUNCTION ====
-    function scoreRunner(r) {
-      return scoreLogicV1_Combo(r);   // <-- Combo logic. Swap for V2/V3/V4 if desired
+    function fractionToDecimalOdds(fraction) {
+        if (!fraction || typeof fraction !== 'string') return Infinity;
+        const parts = fraction.split('/');
+        if (parts.length === 2) {
+            const numerator = parseFloat(parts[0]);
+            const denominator = parseFloat(parts[1]);
+            if (denominator !== 0 && Number.isFinite(numerator) && Number.isFinite(denominator)) {
+                return (numerator / denominator) + 1;
+            }
+        }
+        const decimalValue = parseFloat(fraction);
+        if (Number.isFinite(decimalValue)) return decimalValue;
+        return Infinity;
     }
+
+    // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
+    const michaelsTips = ["windlord", "term of endearment", "homeland", "sword"];
+    const chrisTips    = ["Barranco", "Perfidia", "Hostelry", "Triple Force"];
+    const peterTips    = ["Victory Queen", "Jupiter Ammon","Ridersinthesky", "Gorak"];
+    const kenTips      = ["Mon Na Slieve", "Miss Popalong", "Ishe Worth Agamble", "Kassaya"];
+    const racingPostTips = ["Take a breath", "sir lowry's pass", "Sansanetti", "Wheres The Crumpet"];
+
+    // ==== APPEND MORE TIPSTERS HERE ====
+    // const yourTipsterTips = ["horse1", "horse2"];
+    // ...and so on, just like above!
+
+    // ========== RUNNER DATA ATTACHMENT ==========
+    races.forEach(race => {
+        (race.runners || []).forEach(r => {
+            r.race_class = race.race_class; // Attach for scoring
+            r.score = scoreRunner(r);
+            r.oddsDecimal = fractionToDecimalOdds(r.odds?.[0]?.fractional);
+            r.race = race;
+        });
+    });
 
     function explainPick(r) {
         let reasons = [];
@@ -173,36 +217,8 @@ console.log('tips.js: Script started.');
         if (oddsFrac) mainReason += ` Current odds: ${oddsFrac}.`;
         return mainReason.charAt(0).toUpperCase() + mainReason.slice(1);
     }
-    function fractionToDecimalOdds(fraction) {
-        if (!fraction || typeof fraction !== 'string') return Infinity;
-        const parts = fraction.split('/');
-        if (parts.length === 2) {
-            const numerator = parseFloat(parts[0]);
-            const denominator = parseFloat(parts[1]);
-            if (denominator !== 0 && Number.isFinite(numerator) && Number.isFinite(denominator)) {
-                return (numerator / denominator) + 1;
-            }
-        }
-        const decimalValue = parseFloat(fraction);
-        if (Number.isFinite(decimalValue)) return decimalValue;
-        return Infinity;
-    }
 
-    // Attach scores and odds to all runners
-    races.forEach(race => {
-        (race.runners || []).forEach(r => {
-            r.score = scoreRunner(r);
-            r.oddsDecimal = fractionToDecimalOdds(r.odds?.[0]?.fractional);
-            r.race = race;
-        });
-    });
-
-    // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
-    const michaelsTips = ["windlord", "term of endearment", "homeland", "sword"];
-    const chrisTips    = ["Barranco", "Perfidia", "Hostelry", "Triple Force"];
-    const peterTips    = ["Victory Queen", "Jupiter Ammon","Ridersinthesky", "Gorak"];
-    const kenTips      = ["Mon Na Slieve", "Miss Popalong", "Ishe Worth Agamble", "Kassaya"];
-    const racingPostTips = ["Take a breath", "sir lowry's pass", "Sansanetti", "Wheres The Crumpet"]; // <--- EDIT
+    // ========== TIPSTER LOGIC ==========
 
     // Helper to find a runner object by horse name
     function getRunnerByHorseName(horseName, races) {
@@ -251,6 +267,12 @@ console.log('tips.js: Script started.');
         racingPostTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
     );
 
+    // ==== APPEND MORE TIPSTERS HERE ====
+    // const yourFeatured = sortByOffTime(
+    //   yourTipsterTips.map(name => getRunnerByHorseName(name, races)).filter(Boolean)
+    // );
+    // ...repeat for any other tipster!
+
     // === CAL'S PICKS: HIGHEST SCORING 4 RUNNERS OF THE DAY (NO DUPLICATE RACES), SKIP NRs ===
     const allRunners = races.flatMap(race => (race.runners || []).map(r => ({...r, race})));
     const sortedByScore = allRunners.filter(r => r.score > 0).sort((a, b) => b.score - a.score);
@@ -258,7 +280,7 @@ console.log('tips.js: Script started.');
     let calsPicks = [];
     for (const r of sortedByScore) {
         const raceId = r.race._id || r.race.race_id;
-        if (isNonRunner(r)) continue; // Skip NR!
+        if (isNonRunner(r)) continue;
         if (!usedRaceIds.has(raceId)) {
             calsPicks.push(r);
             usedRaceIds.add(raceId);
@@ -348,6 +370,16 @@ console.log('tips.js: Script started.');
         </section>
       `;
     }
+    // ==== APPEND MORE TIPSTER SECTIONS HERE ====
+    // if (yourFeatured.length) {
+    //   sections += `
+    //     <section class="tips-section featured-section">
+    //       <h2 class="section-title">YOUR TIPSTER'S NAME Tips</h2>
+    //       ${yourFeatured.map((r, i) => renderTipCard(r, i, "Your Tipster's Pick")).join('')}
+    //     </section>
+    //   `;
+    // }
+
     if (calsPicks.length) {
       sections += `
         <section class="tips-section featured-section">

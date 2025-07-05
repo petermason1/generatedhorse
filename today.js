@@ -162,6 +162,7 @@ function mainRenderNextRaces() {
   renderCourseListing(races);
 }
 
+
 window.addEventListener('resize', mainRenderNextRaces);
 setInterval(mainRenderNextRaces, 30 * 1000);
 window.addEventListener('DOMContentLoaded', mainRenderNextRaces);
