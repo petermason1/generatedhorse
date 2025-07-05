@@ -108,12 +108,42 @@ function scoreLogicV3_TrainerHot(r) {
 
 // ========== [3] MAIN SCORE RUNNER ==========
 
-// -- Set your preferred logic here --
+// --- JS-style (aggressive) for Class 1 & 2, Combo logic for the rest
 function scoreRunner(r) {
-  return scoreLogicV1_Combo(r); // Combo of V2 + V4
-  // return scoreLogicV2_FormWeighted(r); // Or use V2 only
-  // return scoreLogicV3_TrainerHot(r); // Or V3
-  // return scoreLogicV4_Conservative(r); // Or V4 only
+  let raceClass = r.race_class || r.pattern || "";
+  let classNum = null;
+  if (typeof raceClass === "string" && raceClass.toLowerCase().startsWith("class ")) {
+    classNum = parseInt(raceClass.split(" ")[1]);
+  }
+  // JS-style for Class 1 and 2
+  if (classNum === 1 || classNum === 2) {
+    const rpr = safeInt(r.rpr);
+    const ts = safeInt(r.ts);
+    const orating = safeInt(r.ofr);
+    const last_run = safeInt(r.last_run, 99);
+    let wins = 0, places = 0;
+    if (typeof r.form === 'string') {
+      wins = (r.form.match(/1/g) || []).length;
+      places = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+    }
+    const trainer = r.trainer_14_days || {};
+    const trainerPercent = safeFloat(trainer.percent);
+    const trainerWins = safeInt(trainer.wins);
+    let score = 0;
+    score += rpr;
+    score += 0.5 * ts;
+    score += 0.3 * orating;
+    score += 3 * wins + 1 * places;
+    if (last_run > 60) score -= (last_run - 60) * 0.4;
+    score += Math.max(0, 60 - last_run) * 0.1;
+    score += 0.7 * trainerPercent;
+    score += 1.1 * trainerWins;
+    if (score < -15) score = -15 + (score + 15) * 0.3;
+    if (!Number.isFinite(score)) score = 0;
+    return Math.round(score * 10) / 10;
+  }
+  // Everything else
+  return scoreLogicV1_Combo(r);
 }
 
 function isNonRunner(r) {
