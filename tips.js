@@ -40,44 +40,95 @@ console.log('tips.js: Script started.');
         return;
     }
 
-    // === SCORING (keep your system as-is) ===
-    const TIPS_WEIGHTS = {
-        rprWeight: 1.8, tsWeight: 1.0, orWeight: 0.7, winsWeight: 3.5, placesWeight: 2.0,
-        lastRunPenaltyWeight: -0.3, lastRunBonusWeight: 0.15,
-        trainerPercentWeight: 1.8, trainerWinsWeight: 1.5,
-        trainerBonusValue: 0.8, layoffPenaltyValue: -3.0, courseFormWeight: 1.0
-    };
-    function scoreRunner(r) {
-        const rpr = Number.parseInt(r.rpr) || 0;
-        const ts = Number.parseInt(r.ts) || 0;
-        const or = Number.parseInt(r.ofr) || 0;
-        const lastRun = Number.parseInt(r.last_run);
-        const lastRunVal = Number.isFinite(lastRun) ? lastRun : 99;
-        let wins = 0, places = 0;
-        if (typeof r.form === 'string') {
-            wins = (r.form.match(/1/g) || []).length;
-            places = (r.form.match(/[23]/g) || []).length;
-        }
-        const trainerPercent = Number.parseFloat(r.trainer_14_days?.percent) || 0;
-        const trainerWins = Number.parseInt(r.trainer_14_days?.wins) || 0;
-        const courseFormWins = (r.course_form?.match(/1/g) || []).length;
-        let score = 0;
-        score += TIPS_WEIGHTS.rprWeight * rpr;
-        score += TIPS_WEIGHTS.tsWeight * ts;
-        score += TIPS_WEIGHTS.orWeight * or;
-        score += TIPS_WEIGHTS.winsWeight * wins;
-        score += TIPS_WEIGHTS.placesWeight * places;
-        if (lastRunVal > 50) score += (lastRunVal - 50) * TIPS_WEIGHTS.lastRunPenaltyWeight;
-        else if (lastRunVal <= 30) score += (30 - lastRunVal) * TIPS_WEIGHTS.lastRunBonusWeight;
-        score += TIPS_WEIGHTS.trainerPercentWeight * trainerPercent;
-        score += TIPS_WEIGHTS.trainerWinsWeight * trainerWins;
-        score += (trainerPercent >= 20 ? TIPS_WEIGHTS.trainerBonusValue : 0);
-        score += (wins === 0 && lastRunVal > 50) ? TIPS_WEIGHTS.layoffPenaltyValue : 0;
-        score += TIPS_WEIGHTS.courseFormWeight * courseFormWins;
-        if (score < -12) score = -12 + (score + 12) * 0.4;
-        if (!Number.isFinite(score)) score = 0;
-        return Math.round(score * 100) / 100;
+    // ========== SCORING LOGICS ==========
+
+    function scoreLogicV2_FormWeighted(r) {
+      const rpr = parseInt(r.rpr) || 0;
+      const ts = parseInt(r.ts) || 0;
+      const orating = parseInt(r.ofr) || 0;
+      const last_run = parseInt(r.last_run) || 99;
+      let wins = 0, placed = 0;
+      if (typeof r.form === 'string') {
+        wins = (r.form.match(/1/g) || []).length;
+        placed = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+      }
+      const trainer = r.trainer_14_days || {};
+      const trainerPercent = parseFloat(trainer.percent) || 0;
+      const trainerWins = parseInt(trainer.wins) || 0;
+      let score = 0;
+      score += 1.1 * wins + 0.6 * placed;
+      score += 0.15 * rpr + 0.12 * ts + 0.10 * orating;
+      score -= Math.max(0, last_run - 35) * 0.6;
+      score += Math.max(0, 35 - last_run) * 0.09;
+      score += 0.5 * trainerPercent;
+      score += 0.8 * trainerWins;
+      if (!Number.isFinite(score)) score = 0;
+      return Math.round(score * 100) / 100;
     }
+
+    function scoreLogicV4_Conservative(r) {
+      const rpr = parseInt(r.rpr) || 0;
+      const ts = parseInt(r.ts) || 0;
+      const orating = parseInt(r.ofr) || 0;
+      const last_run = parseInt(r.last_run) || 99;
+      let wins = 0, placed = 0, runs = 0;
+      if (typeof r.form === 'string') {
+        wins = (r.form.match(/1/g) || []).length;
+        placed = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+        runs = r.form.trim().length;
+      }
+      const trainer = r.trainer_14_days || {};
+      const trainerPercent = parseFloat(trainer.percent) || 0;
+      let score = 0;
+      score += 0.35 * rpr + 0.25 * ts + 0.22 * orating;
+      score += 1.3 * wins + 0.7 * placed;
+      score -= Math.max(0, last_run - 30) * 1.5;
+      if (runs < 3) score -= 3;
+      if (wins === 0 && placed === 0) score -= 2;
+      score += 0.7 * trainerPercent;
+      if (rpr === 0 || orating === 0) score -= 1.7;
+      if (!Number.isFinite(score)) score = 0;
+      return Math.round(score * 100) / 100;
+    }
+
+    function scoreLogicV1_Combo(r) {
+      const s2 = scoreLogicV2_FormWeighted(r);
+      const s4 = scoreLogicV4_Conservative(r);
+      return Math.round(((s2 + s4) / 2) * 1000) / 1000;
+    }
+
+    function scoreLogicV3_TrainerHot(r) {
+      const rpr = parseInt(r.rpr) || 0;
+      const ts = parseInt(r.ts) || 0;
+      const orating = parseInt(r.ofr) || 0;
+      const last_run = parseInt(r.last_run) || 99;
+      let wins = 0, placed = 0;
+      if (typeof r.form === 'string') {
+        wins = (r.form.match(/1/g) || []).length;
+        placed = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+      }
+      const trainer = r.trainer_14_days || {};
+      const trainerPercent = parseFloat(trainer.percent) || 0;
+      const trainerWins = parseInt(trainer.wins) || 0;
+      const jockey = r.jockey_14_days || {};
+      const jockeyPercent = parseFloat(jockey.percent) || 0;
+      const jockeyWins = parseInt(jockey.wins) || 0;
+      let score = 0;
+      score += 0.7 * rpr + 0.6 * ts + 0.4 * orating;
+      score += 2.5 * wins + 0.7 * placed;
+      score += 1.2 * trainerPercent + 1.2 * trainerWins;
+      score += 1.1 * jockeyPercent + 1.1 * jockeyWins;
+      score -= Math.max(0, last_run - 50) * 0.3;
+      score += Math.max(0, 50 - last_run) * 0.08;
+      if (!Number.isFinite(score)) score = 0;
+      return Math.round(score * 100) / 100;
+    }
+
+    // ==== CHOOSE YOUR SCORING FUNCTION ====
+    function scoreRunner(r) {
+      return scoreLogicV1_Combo(r);   // <-- Combo logic. Swap for V2/V3/V4 if desired
+    }
+
     function explainPick(r) {
         let reasons = [];
         const rpr = Number.parseInt(r.rpr) || 0;
@@ -136,6 +187,7 @@ console.log('tips.js: Script started.');
         if (Number.isFinite(decimalValue)) return decimalValue;
         return Infinity;
     }
+
     // Attach scores and odds to all runners
     races.forEach(race => {
         (race.runners || []).forEach(r => {
@@ -148,9 +200,9 @@ console.log('tips.js: Script started.');
     // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
     const michaelsTips = ["windlord", "term of endearment", "homeland", "sword"];
     const chrisTips    = ["Barranco", "Perfidia", "Hostelry", "Triple Force"];
-    const peterTips    = ["Harsh", "kassaya", "grey jaguar", "Percy's Daydream"];
+    const peterTips    = ["Victory Queen", "Jupiter Ammon","Ridersinthesky", "Gorak"];
     const kenTips      = ["Mon Na Slieve", "Miss Popalong", "Ishe Worth Agamble", "Kassaya"];
-    const racingPostTips = ["a major payne", "elsass", "guernsey lady", "tara iti"]; // <--- EDIT
+    const racingPostTips = ["Take a breath", "sir lowry's pass", "Sansanetti", "Wheres The Crumpet"]; // <--- EDIT
 
     // Helper to find a runner object by horse name
     function getRunnerByHorseName(horseName, races) {

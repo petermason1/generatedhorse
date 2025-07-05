@@ -17,33 +17,105 @@ function safeFloat(x, def = 0.0) {
   let v = parseFloat(x);
   return Number.isFinite(v) ? v : def;
 }
-function scoreRunner(r) {
-  // --- scoring logic, tweak as needed
+
+// ========== [2] SCORING LOGICS ==========
+
+// -- V2: Form Weighted (Best Performer) --
+function scoreLogicV2_FormWeighted(r) {
   const rpr = safeInt(r.rpr);
   const ts = safeInt(r.ts);
   const orating = safeInt(r.ofr);
   const last_run = safeInt(r.last_run, 99);
-  let wins = 0, places = 0;
+  let wins = 0, placed = 0;
   if (typeof r.form === 'string') {
     wins = (r.form.match(/1/g) || []).length;
-    places = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+    placed = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
   }
   const trainer = r.trainer_14_days || {};
   const trainerPercent = safeFloat(trainer.percent);
   const trainerWins = safeInt(trainer.wins);
   let score = 0;
-  score += rpr;
-  score += 0.5 * ts;
-  score += 0.3 * orating;
-  score += 3 * wins + 1 * places;
-  if (last_run > 60) score -= (last_run - 60) * 0.4;
-  score += Math.max(0, 60 - last_run) * 0.1;
-  score += 0.7 * trainerPercent;
-  score += 1.1 * trainerWins;
-  if (score < -15) score = -15 + (score + 15) * 0.3;
+  score += 1.1 * wins + 0.6 * placed;
+  score += 0.15 * rpr + 0.12 * ts + 0.10 * orating;
+  score -= Math.max(0, last_run - 35) * 0.6;
+  score += Math.max(0, 35 - last_run) * 0.09;
+  score += 0.5 * trainerPercent;
+  score += 0.8 * trainerWins;
   if (!Number.isFinite(score)) score = 0;
-  return Math.round(score * 10) / 10;
+  return Math.round(score * 100) / 100;
 }
+
+// -- V4: Conservative (Best Performer) --
+function scoreLogicV4_Conservative(r) {
+  const rpr = safeInt(r.rpr);
+  const ts = safeInt(r.ts);
+  const orating = safeInt(r.ofr);
+  const last_run = safeInt(r.last_run, 99);
+  let wins = 0, placed = 0, runs = 0;
+  if (typeof r.form === 'string') {
+    wins = (r.form.match(/1/g) || []).length;
+    placed = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+    runs = r.form.trim().length;
+  }
+  const trainer = r.trainer_14_days || {};
+  const trainerPercent = safeFloat(trainer.percent);
+  let score = 0;
+  score += 0.35 * rpr + 0.25 * ts + 0.22 * orating;
+  score += 1.3 * wins + 0.7 * placed;
+  score -= Math.max(0, last_run - 30) * 1.5;
+  if (runs < 3) score -= 3;
+  if (wins === 0 && placed === 0) score -= 2;
+  score += 0.7 * trainerPercent;
+  if (rpr === 0 || orating === 0) score -= 1.7;
+  if (!Number.isFinite(score)) score = 0;
+  return Math.round(score * 100) / 100;
+}
+
+// -- V1: Combo (average of V2 and V4) --
+function scoreLogicV1_Combo(r) {
+  const s2 = scoreLogicV2_FormWeighted(r);
+  const s4 = scoreLogicV4_Conservative(r);
+  return Math.round(((s2 + s4) / 2) * 1000) / 1000;
+}
+
+// -- V3: Trainer Hot Streak --
+function scoreLogicV3_TrainerHot(r) {
+  const rpr = safeInt(r.rpr);
+  const ts = safeInt(r.ts);
+  const orating = safeInt(r.ofr);
+  const last_run = safeInt(r.last_run, 99);
+  let wins = 0, placed = 0;
+  if (typeof r.form === 'string') {
+    wins = (r.form.match(/1/g) || []).length;
+    placed = (r.form.match(/2/g) || []).length + (r.form.match(/3/g) || []).length;
+  }
+  const trainer = r.trainer_14_days || {};
+  const trainerPercent = safeFloat(trainer.percent);
+  const trainerWins = safeInt(trainer.wins);
+  const jockey = r.jockey_14_days || {};
+  const jockeyPercent = safeFloat(jockey.percent);
+  const jockeyWins = safeInt(jockey.wins);
+  let score = 0;
+  score += 0.7 * rpr + 0.6 * ts + 0.4 * orating;
+  score += 2.5 * wins + 0.7 * placed;
+  score += 1.2 * trainerPercent + 1.2 * trainerWins;
+  score += 1.1 * jockeyPercent + 1.1 * jockeyWins;
+  score -= Math.max(0, last_run - 50) * 0.3;
+  score += Math.max(0, 50 - last_run) * 0.08;
+  if (!Number.isFinite(score)) score = 0;
+  return Math.round(score * 100) / 100;
+}
+
+// ========== [3] MAIN SCORE RUNNER ==========
+
+// -- Set your preferred logic here --
+function scoreRunner(r) {
+  return scoreLogicV1_Combo(r); // Combo of V2 + V4
+  // return scoreLogicV2_FormWeighted(r); // Or use V2 only
+  // return scoreLogicV3_TrainerHot(r); // Or V3
+  // return scoreLogicV4_Conservative(r); // Or V4 only
+}
+
 function isNonRunner(r) {
   if (typeof r.form === 'string' && r.form.match(/\bNR\b/i)) return true;
   if (r.status && r.status.toUpperCase() === 'NR') return true;
@@ -51,7 +123,7 @@ function isNonRunner(r) {
   return false;
 }
 
-// ========== [2] URL PARAM HELPERS ==========
+// ========== [4] URL PARAM HELPERS ==========
 function getRaceIdFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get('race_id');
@@ -66,7 +138,7 @@ function getAllRaces(day) {
     : window.racecardsData.racecards;
 }
 
-// [3] RENDER "NEXT 6 RACES" BAR - Only outputs links/messages, no label, no extra div
+// [5] RENDER "NEXT 6 RACES" BAR
 function renderNext6Bar(allRaces, activeRaceId, day) {
   const now = new Date();
   const next6 = allRaces
@@ -75,11 +147,8 @@ function renderNext6Bar(allRaces, activeRaceId, day) {
     .slice(0, 6);
 
   if (!next6.length) {
-    // If no races left, show a message in the bar area
     return `<span class="next6-empty" style="color:#b7b7b7;opacity:0.8;">No races left today</span>`;
   }
-
-  // Just return the links (the HTML already has the Next 6 label)
   return next6.map(r => `
     <a href="racecard.html?date=${day}&race_id=${r._id}" class="next6-link${r._id === activeRaceId ? ' active' : ''}" title="${r.course} ${r.off_time}">
       <span class="next6-time">${r.off_time}</span>
@@ -88,7 +157,7 @@ function renderNext6Bar(allRaces, activeRaceId, day) {
   `).join('');
 }
 
-// [4] RENDER COURSE NAVIGATION ("MEETING PILLS")
+// [6] RENDER COURSE NAVIGATION
 function renderCourseNavigation(allRaces, currentRaceId, whichDay) {
   const uniqueCourses = [...new Set(allRaces.map(r => r.course))].sort();
   const currentActiveCourse = allRaces.find(r => r._id === currentRaceId)?.course;
@@ -107,8 +176,7 @@ function renderCourseNavigation(allRaces, currentRaceId, whichDay) {
   }).join('');
 }
 
-
-// ========== [5] RENDER RACE TIMES AT COURSE ==========
+// [7] RENDER RACE TIMES AT COURSE
 function renderCourseLinks(race, allRaces, whichDay) {
   const courseRaces = allRaces.filter(r => r.course === race.course)
     .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
@@ -121,8 +189,7 @@ function renderCourseLinks(race, allRaces, whichDay) {
   `).join('');
 }
 
-
-// ========== [6] RENDER TOP PICKS ==========
+// [8] RENDER TOP PICKS
 function renderTopPicks(race) {
   let top = race.runners.filter(r => !isNonRunner(r)).slice(0, 3);
   if (!top.length) return '';
@@ -143,7 +210,7 @@ function renderTopPicks(race) {
   `;
 }
 
-// ========== [7] RENDER "MORE" PANEL FOR RUNNER ==========
+// [9] RENDER "MORE" PANEL FOR RUNNER
 function renderRunnerMore(r) {
   return `
     <div class="runner-more-content">
@@ -177,7 +244,7 @@ function renderRunnerMore(r) {
   `;
 }
 
-// ========== [8] MAIN RACE DISPLAY ==========
+// [10] MAIN RACE DISPLAY
 function renderRace(race, allRaces, whichDay) {
   const main = document.getElementById('mainRacecard');
   if (!main) return;
@@ -245,7 +312,7 @@ function renderRace(race, allRaces, whichDay) {
   `;
 }
 
-// ========== [9] MAIN APP SPA LOGIC ==========
+// ========== [11] MAIN APP SPA LOGIC ==========
 let whichDay = getDayFromURL();
 let allRaces = getAllRaces(whichDay);
 let raceId = getRaceIdFromURL();
@@ -277,7 +344,7 @@ function loadAndRender(raceId, day, pushState = true, courseName) {
   renderRace(race, allRaces, day);
 }
 
-// ========== [10] SPA EVENT HANDLERS ==========
+// ========== [12] SPA EVENT HANDLERS ==========
 document.addEventListener('click', function(e) {
   // Next 6 nav
   if (e.target.closest('.next6-link')) {
@@ -328,7 +395,7 @@ window.addEventListener('popstate', function(e) {
   loadAndRender(state.raceId, state.day, false);
 });
 
-// ========== [11] INITIAL LOAD ==========
+// ========== [13] INITIAL LOAD ==========
 loadAndRender(raceId, whichDay, false);
 
 console.log('racecard.js finished.');
