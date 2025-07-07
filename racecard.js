@@ -232,7 +232,10 @@ function renderCourseLinks(race, allRaces, whichDay) {
 
 // [8] RENDER TOP PICKS
 function renderTopPicks(race) {
-  let top = race.runners.filter(r => !isNonRunner(r)).slice(0, 3);
+  let top = race.runners
+    .filter(r => !isNonRunner(r) && typeof r.score === 'number')  // filter non-runners & ensure score exists
+    .sort((a, b) => b.score - a.score)                            // sort descending by score
+    .slice(0, 3);                                                 // take top 3
   if (!top.length) return '';
   return `
     <div class="race-top-picks">
@@ -250,6 +253,7 @@ function renderTopPicks(race) {
     </div>
   `;
 }
+
 
 // [9] RENDER "MORE" PANEL FOR RUNNER
 function renderRunnerMore(r) {
