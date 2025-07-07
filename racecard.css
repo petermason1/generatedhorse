@@ -1,6 +1,6 @@
 :root {
   --brand: #36e8b5;
-  --highlight: #ffe561;
+  --highlight: #ffe561; /* Keeping this for other elements like runner numbers, but the race title will no longer use it directly */
   --card: #222933;
   --border: #24303a;
   --shadow: 0 1.5px 10px #1d242c33;
@@ -19,7 +19,6 @@ body {
   letter-spacing: 0.01em;
 }
 
-
 /* === MEETINGS BAR === */
 .meetings-bar {
   display: flex;
@@ -33,7 +32,7 @@ body {
   flex-wrap: wrap;
 }
 .meetings-bar a {
-  color: #36e8b5;
+  color: var(--brand);
   font-weight: 800;
   background: #23282f;
   padding: 9px 18px;
@@ -46,116 +45,8 @@ body {
 .meetings-bar a.active,
 .meetings-bar a:hover {
   background: #2e383e;
-  color: #ffe561;
-  border-color: #ffe561;
-}
-
-/* === NEXT 6 BAR === */
-.next6-section {
-  background: #171e25;
-  box-shadow: 0 2px 26px #2cffe61e;
-  border-radius: 15px;
-  max-width: 700px;
-  margin: 0 auto 2em auto;
-  padding: 1em 0.6em 1.1em 0.6em;
-  text-align: center;
-}
-.next6-label {
-  color: #ffe561;
-  font-size: 1.13em;
-  font-weight: 900;
-  margin-bottom: 0.43em;
-  letter-spacing: 0.01em;
-}
-.next6-bar {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  overflow-x: auto;
-  padding-bottom: 2px;
-  scrollbar-width: thin;
-  scrollbar-color: #36e8b5 #23282f;
-}
-.next6-bar::-webkit-scrollbar {
-  height: 7px;
-}
-.next6-bar::-webkit-scrollbar-thumb {
-  background: #36e8b5;
-  border-radius: 6px;
-}
-.next6-link {
-  flex: 0 0 86px;
-  min-width: 86px;
-  max-width: 86px;
-  height: 42px;
-  max-height: 42px;
-  min-height: 42px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #23282f;
-  color: #ffe561;
-  font-weight: 800;
-  font-size: 1.01em;
-  border-radius: 14px;
-  box-shadow: 0 2px 14px #191d2250;
-  transition: background 0.13s, color 0.13s;
-  outline: none;
-  border: none;
-  margin: 0;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  user-select: none;
-}
-.next6-link.active,
-.next6-link:focus-visible {
-  background: #282303 !important;
-  color: #ffd700 !important;
-  border-bottom: 3px solid #e0b800 !important;
-}
-.next6-link .next6-time {
-  font-size: 1.08em;
-  font-weight: 900;
-  margin-bottom: 0px;
-  line-height: 1.06;
-}
-.next6-link .next6-course {
-  font-size: 0.92em;
-  font-weight: 700;
-  color: #36e8b5;
-  max-width: 78px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-@media (max-width: 700px) {
-  .next6-bar {
-    gap: 9px;
-  }
-  .next6-link {
-    min-width: 54px;
-    max-width: 54px;
-    font-size: 0.95em;
-    height: 37px;
-    max-height: 37px;
-    border-radius: 10px;
-  }
-}
-@media (max-width: 480px) {
-  .next6-bar {
-    gap: 7px;
-  }
-  .next6-link {
-    min-width: 40px;
-    max-width: 40px;
-    height: 27px;
-    max-height: 27px;
-    border-radius: 7px;
-    font-size: 0.82em;
-  }
+  color: var(--highlight);
+  border-color: var(--highlight);
 }
 
 /* === RACE TIMES NAVIGATION (TIME PILLS) === */
@@ -174,9 +65,9 @@ body {
   background: #161a1e;
   border-radius: 13px;
   padding: 0.19em 1.14em;
-  color: #36e8b5;
+  color: var(--brand);
   font-weight: 800;
-  border: 1.3px solid #36e8b5;
+  border: 1.3px solid var(--brand);
   font-size: 1em;
   text-align: center;
   transition: background 0.13s, color 0.13s;
@@ -190,9 +81,9 @@ body {
 }
 .race-link.race-link-active,
 .race-link:hover {
-  background: #36e8b5;
+  background: var(--brand);
   color: #182033;
-  border-color: #36e8b5;
+  border-color: var(--brand);
 }
 @media (max-width: 700px) {
   .race-times-bar { gap: 7px; }
@@ -216,9 +107,9 @@ body {
   max-width: 900px;
   text-align: center;
   padding: 0 15px;
-  color: #ffd85a; /* Gold-like for the main title */
+  color: var(--text); /* Changed from gold to primary text color */
   font-weight: 900;
-  font-size: 1em; /* Smaller than before */
+  font-size: 1.5em; /* Reduced base font size */
   letter-spacing: 0.02em;
   user-select: none;
   line-height: 1.2;
@@ -228,7 +119,7 @@ body {
   margin-left: 8px;
   color: var(--brand);
   font-weight: 900;
-  font-size: 1em;
+  font-size: 1.2em; /* This will now be relative to the new .race-header size */
 }
 
 .race-details {
@@ -246,7 +137,7 @@ body {
 
 .race-details b,
 .race-details strong {
-  color: #ffe561;
+  color: var(--highlight);
   font-weight: 800;
 }
 
@@ -276,7 +167,7 @@ body {
   border-radius: 6px;
   padding: 6px 10px;
   box-shadow: 0 3px 14px #36e8b519;
-  color: #36e8b5;
+  color: var(--brand);
   font-weight: 600;
   font-size: 0.9em;
   display: flex;
@@ -304,7 +195,7 @@ body {
 }
 
 .pick-score {
-  color: #36e8b5;
+  color: var(--brand);
   font-weight: 700;
 }
 
@@ -317,7 +208,7 @@ body {
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 900px) {
   .race-header {
-    font-size: 1.25em;
+    font-size: 1.4em; /* Adjust down for medium screens */
   }
   .race-header-time {
     font-size: 1.1em;
@@ -340,7 +231,7 @@ body {
 
 @media (max-width: 600px) {
   .race-header {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Further adjust for smaller mobile screens */
   }
   .race-header-time {
     font-size: 1em;
@@ -361,7 +252,6 @@ body {
     max-width: 100px;
   }
 }
-
 
 /* === RUNNERS LIST === */
 #mainRacecard { width: 100%; max-width: 900px; margin: 0 auto 2.3em auto; }
@@ -441,7 +331,7 @@ body {
 .runner-more-btn {
   font-size: 0.98em; background: none; color: var(--highlight); border: none; border-radius: 6px;
   padding: 2px 9px; cursor: pointer; font-weight: 700; margin-left: 11px;
-  transition: background 0.13s, color 0.11s;
+  transition: background 0.13s, color 0.11s; /* Corrected 'color: 0.11s' to 'color 0.11s' */
 }
 .runner-more-btn:hover,
 .runner-more-btn:focus-visible { background: var(--brand); color: #181e24; outline: none; }

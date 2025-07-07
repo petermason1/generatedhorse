@@ -20,9 +20,9 @@ function safeFloat(x, def = 0.0) {
 function truncate(str, max) {
   return str && str.length > max ? str.slice(0, max - 1) + '…' : str;
 }
-function pad6(arr) {
-  return [...arr, ...Array(6)].slice(0, 6);
-}
+// function pad6(arr) { // This function is only used by renderNext6Bar, can be removed too
+//   return [...arr, ...Array(6)].slice(0, 6);
+// }
 
 // ========== [2] SCORING LOGICS ==========
 
@@ -174,27 +174,27 @@ function getAllRaces(day) {
     : window.racecardsData.racecards;
 }
 
-// [5] RENDER "NEXT 6 RACES" BAR
-function getNext6Races(allRaces) {
-  const now = new Date();
-  return allRaces
-    .filter(r => new Date(r.off_dt) > now)
-    .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
-    .slice(0, 6);
-}
-function renderNext6Bar(allRaces, activeRaceId, day) {
-  const races6 = pad6(getNext6Races(allRaces));
-  return races6.map(r =>
-    r
-      ? `<a href="racecard.html?date=${day}&race_id=${r._id}"
-             class="next6-link${r._id === activeRaceId ? ' active' : ''}"
-             title="${r.course} ${r.off_time}">
-            <span class="next6-time">${r.off_time}</span>
-            <span class="next6-course">${truncate(r.course, 10)}</span>
-         </a>`
-      : `<span class="next6-link next6-empty"></span>`
-  ).join('');
-}
+// [5] RENDER "NEXT 6 RACES" BAR - REMOVED
+// function getNext6Races(allRaces) {
+//   const now = new Date();
+//   return allRaces
+//     .filter(r => new Date(r.off_dt) > now)
+//     .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
+//     .slice(0, 6);
+// }
+// function renderNext6Bar(allRaces, activeRaceId, day) {
+//   const races6 = pad6(getNext6Races(allRaces));
+//   return races6.map(r =>
+//     r
+//       ? `<a href="racecard.html?date=${day}&race_id=${r._id}"
+//              class="next6-link${r._id === activeRaceId ? ' active' : ''}"
+//              title="${r.course} ${r.off_time}">
+//             <span class="next6-time">${r.off_time}</span>
+//             <span class="next6-course">${truncate(r.course, 10)}</span>
+//          </a>`
+//       : `<span class="next6-link next6-empty"></span>`
+//   ).join('');
+// }
 
 // [6] RENDER COURSE NAVIGATION
 function renderCourseNavigation(allRaces, currentRaceId, whichDay) {
@@ -206,8 +206,8 @@ function renderCourseNavigation(allRaces, currentRaceId, whichDay) {
     const firstRace = courseRaces[0];
     const isActive = courseName === currentActiveCourse;
     return `
-      <a class="course-link${isActive ? ' active' : ''}" 
-         href="racecard.html?date=${whichDay}&race_id=${firstRace._id}" 
+      <a class="course-link${isActive ? ' active' : ''}"
+         href="racecard.html?date=${whichDay}&race_id=${firstRace._id}"
          data-race-id="${firstRace._id}" data-date="${whichDay}" data-course="${courseName}">
         ${courseName}
       </a>
@@ -220,8 +220,8 @@ function renderCourseLinks(race, allRaces, whichDay) {
   const courseRaces = allRaces.filter(r => r.course === race.course)
     .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
   return courseRaces.map(rc => `
-    <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}" 
-       href="racecard.html?date=${whichDay}&race_id=${rc._id}" 
+    <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}"
+       href="racecard.html?date=${whichDay}&race_id=${rc._id}"
        data-race-id="${rc._id}" data-date="${whichDay}">
       ${rc.off_time}
     </a>
@@ -377,7 +377,7 @@ function loadAndRender(raceId, day, pushState = true, courseName) {
     history.pushState({ raceId: race._id, day }, '', `racecard.html?date=${day}&race_id=${race._id}`);
   }
   // IDs below must match your HTML!
-  document.getElementById('next6Bar').innerHTML = renderNext6Bar(allRaces, race._id, whichDay);
+  // document.getElementById('next6Bar').innerHTML = renderNext6Bar(allRaces, race._id, whichDay); // REMOVED
   document.getElementById('racecardCourses').innerHTML = renderCourseNavigation(allRaces, race._id, whichDay);
   document.getElementById('courseTimesNav').innerHTML = renderCourseLinks(race, allRaces, whichDay);
   renderRace(race, allRaces, day);
@@ -385,15 +385,16 @@ function loadAndRender(raceId, day, pushState = true, courseName) {
 
 // ========== [12] SPA EVENT HANDLERS ==========
 document.addEventListener('click', function(e) {
-  if (e.target.closest('.next6-link')) {
-    e.preventDefault();
-    const el = e.target.closest('.next6-link');
-    const url = new URL(el.href, window.location.origin);
-    const newDay = url.searchParams.get('date') || whichDay;
-    const newRaceId = url.searchParams.get('race_id');
-    loadAndRender(newRaceId, newDay);
-    return;
-  }
+  // REMOVED event listener for .next6-link as the element is gone
+  // if (e.target.closest('.next6-link')) {
+  //   e.preventDefault();
+  //   const el = e.target.closest('.next6-link');
+  //   const url = new URL(el.href, window.location.origin);
+  //   const newDay = url.searchParams.get('date') || whichDay;
+  //   const newRaceId = url.searchParams.get('race_id');
+  //   loadAndRender(newRaceId, newDay);
+  //   return;
+  // }
   if (e.target.classList.contains('course-link')) {
     e.preventDefault();
     const newRaceId = e.target.getAttribute('data-race-id');
