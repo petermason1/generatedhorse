@@ -156,7 +156,7 @@ console.log('tips.js: Script started.');
     const michaelsTips = ["stash the cash", "yorkshire glory", "Piecederesistance", "Yccs Portocervo"];
     const chrisTips    = ["stash the cash", "Jumeira Vision", "Traveling Soldier", "yccs portocervo"];
     const peterTips    = ["the outlaw", "sneddy eddie","glengouly", "top of the bay"];
-    const kenTips      = ["clear storm", "due respect", "theoryofeverything", "nickelforce"];
+    const kenTips      = ["", "", "", ""];
     const racingPostTips = ["Conquer The Breeze", "Magellan Cloud", "Asteverdi", "usyk"];
 
     // ==== APPEND MORE TIPSTERS HERE ====
@@ -384,7 +384,7 @@ console.log('tips.js: Script started.');
       sections += `
         <section class="tips-section featured-section">
           <h2 class="section-title">Calc’s Picks of the Day <span class="section-subtitle">(Top Data-Rated)</span></h2>
-          ${calsPicks.map((r, i) => renderTipCard(r, i, "Cal's Pick")).join('')}
+          ${calsPicks.map((r, i) => renderTipCard(r, i, "Calc's Pick")).join('')}
         </section>
       `;
     }

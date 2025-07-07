@@ -10,8 +10,8 @@
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
-  <title>UK & Irish Horse Racing Tips, Racecards & Results | Smart Racecards</title>
-  <meta name="description" content="Get free daily UK & Irish horse racing tips, live racecards, fast results and unique data-driven ratings. Find your next winner today with Smart Racecards." />
+  <title>Smart Racecards | Today's UK & Irish Horse Racing Tips</title>
+  <meta name="description" content="Live horse racing tips, today's best value picks, instant racecards, results & unique custom scoring. Free and fast—find your next winner now." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMwM.woff2" as="font" type="font/woff2" crossorigin>
@@ -27,104 +27,165 @@
   <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
-<nav class="main-navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">
-      <img src="logo.png" alt="Smart Racecards Logo" />
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="today.html" class="nav-link">Today's Races</a>
-      <a href="results.html" class="nav-link">Results</a>
-      <a href="tips.html" class="nav-link">Tipster</a>
-      <a href="yesterday.html" class="nav-link">Historical</a>
-      <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About</a>
-    </div>
-    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
-      <span class="icon-dark">🌙</span>
-      <span class="icon-light">☀️</span>
-    </button>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
-  </div>
-  <div class="nav-backdrop" id="navBackdrop"></div>
-</nav>
-
-<main class="container">
-  <header class="hero-section">
-    <h1>UK & Irish Horse Racing Tips, Results & Racecards</h1>
-    <p class="page-desc">
-      <b>Free daily tips, live racecards and fast results for every UK & Irish meeting.</b><br>
-      Our unique data-driven ratings, value picks and expert analysis help you make smarter bets and track winners at a glance.
-    </p>
-    <div class="trustbar" style="margin:14px 0 0 0; font-size:1em; color:#ffc900;">
-      <i class="fas fa-check-circle" style="color:#37e8b5"></i>
-      Trusted by hundreds of UK & Irish racing fans daily • Updated every morning
-    </div>
-  </header>
-
-
-  <section class="quick-access-links">
-    <h2>Quick Navigation</h2>
-    <div class="link-grid">
-      <a href="today.html" class="quick-link">
-        <h3><i class="fas fa-calendar-alt"></i> Today's Racecards</h3>
-        <p>Explore full details for every race meeting today.</p>
+  <nav class="main-navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="Smart Racecards Logo" />
       </a>
-      <a href="custom-score.html" class="quick-link">
-        <h3><i class="fas fa-sliders-h"></i> Custom Score Tool</h3>
-        <p>Craft your own winning strategy with our customizable scoring system.</p>
-      </a>
-      <a href="yesterday.html" class="quick-link">
-        <h3><i class="fas fa-history"></i> Historical Results</h3>
-        <p>Analyze past performance and discover historical ROI for informed decisions.</p>
-      </a>
-      <a href="about.html" class="quick-link">
-        <h3><i class="fas fa-info-circle"></i> About Smart Racecards</h3>
-        <p>Learn how our data-driven approach gives you the ultimate advantage.</p>
-      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="today.html" class="nav-link">Today's Races</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="tips.html" class="nav-link">Tipster</a>
+        <a href="yesterday.html" class="nav-link">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+        <span class="icon-dark">🌙</span>
+        <span class="icon-light">☀️</span>
+      </button>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
-  </section>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+  </nav>
 
-  <div id="main-content-dynamic"></div>
+  <main class="container">
 
-  <section class="cta-bar-bottom">
-    <div class="tips-cta-bar">
-      <span>🎯 <b>Want Even More Free Daily Tips?</b> Get our expert analysis, value picks, and dark horses — updated every morning!</span>
-      <a href="tips.html" class="see-tips-btn">Access All Smart Picks Now &rarr;</a>
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <img src="logo.png" alt="Smart Racecards Logo" style="width:70px;margin-bottom:1.1em;" />
+      <h1>Smarter Horse Racing, Faster Wins</h1>
+      <p class="page-desc">
+        <b>UK & Irish racing tips, live racecards & lightning-fast results — every meeting, every day.</b><br>
+        Unique data-driven picks, value bets and custom score tools that keep you ahead of the bookies.
+      </p>
+      <a href="#today-picks" class="btn-primary hero-cta">See Today's Top Picks <i class="fas fa-arrow-down"></i></a>
+      <div class="trustbar" style="margin:18px 0 0 0; font-size:1em; color:#ffc900;">
+        <i class="fas fa-bolt" style="color:#37e8b5"></i>
+        Trusted by 2,000+ racing fans • No ads • Always free
+      </div>
+    </header>
+
+    <!-- QUICK ACCESS -->
+    <section class="quick-access-links">
+      <h2>Quick Navigation</h2>
+      <div class="link-grid">
+        <a href="today.html" class="quick-link">
+          <h3><i class="fas fa-calendar-alt"></i> Today's Racecards</h3>
+          <p>Full details for every UK & Irish meeting today — runners, form, odds & results.</p>
+        </a>
+        <a href="custom-score.html" class="quick-link">
+          <h3><i class="fas fa-sliders-h"></i> Custom Score Tool</h3>
+          <p>Rate horses your way — build your winning system using our live customizer.</p>
+        </a>
+        <a href="yesterday.html" class="quick-link">
+          <h3><i class="fas fa-history"></i> Historical Results</h3>
+          <p>Deep-dive every past meeting, check ROI and learn what wins — for free.</p>
+        </a>
+        <a href="about.html" class="quick-link">
+          <h3><i class="fas fa-info-circle"></i> About Smart Racecards</h3>
+          <p>How our data & edge can make you smarter than the bookies.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- TODAY'S PICKS (make dynamic if you want, or swap for server-side block) -->
+    <section id="today-picks" class="today-picks-section">
+      <h2>🔥 Today's Smart Picks</h2>
+      <div class="picks-intro">
+        Data-powered value bets you won’t see plastered everywhere else. <b>Click any horse for live card & price.</b>
+      </div>
+      <div class="picks-list">
+        <!-- You can make this dynamic! -->
+        <div class="pick-card pick-best">
+          <div class="pick-label">Value Pick</div>
+          <div class="pick-main">
+            <span class="pick-horse">Offiah's Boy</span>
+            <span class="pick-race">3:10 Newmarket</span>
+          </div>
+          <div class="pick-notes">Strong form, big class drop, proven on going.</div>
+        </div>
+        <div class="pick-card">
+          <span class="pick-horse">Victory Queen</span>
+          <span class="pick-race">2:35 Ascot</span>
+          <div class="pick-notes">Course specialist, price above model odds.</div>
+        </div>
+        <div class="pick-card">
+          <span class="pick-horse">Jupiter Ammon</span>
+          <span class="pick-race">4:50 Ayr</span>
+          <div class="pick-notes">Speed rating standout, positive yard signals.</div>
+        </div>
+      </div>
+      <div style="margin:1.2em 0 0 0;">
+        <a href="tips.html" class="see-tips-btn btn-primary">Full Tips & Value Bets →</a>
+      </div>
+    </section>
+
+    <!-- NEXT 6 RACES BAR (populated by JS) -->
+    <section class="next6-bar">
+      <h2>Next 6 Races</h2>
+      <div class="next6-races" id="next6-dynamic"></div>
+    </section>
+
+    <!-- RACES BY COURSE (populated by JS) -->
+    <section class="races-course-list">
+      <h2>Today's Racecards</h2>
+      <div id="main-content-dynamic"></div>
+    </section>
+
+    <!-- CUSTOM SCORE TOOL CALLOUT -->
+    <section class="custom-score-demo">
+      <div class="score-demo-content">
+        <h3><i class="fas fa-sliders-h"></i> Custom Scoring: Your Edge, Your Way</h3>
+        <p>Try our <b>interactive scoring tool</b> to rate horses on what <i>you</i> care about—form, speed, trainer stats, and more.</p>
+        <a href="custom-score.html" class="btn-secondary">Try Custom Scoring Tool</a>
+      </div>
+      <div class="score-demo-img">
+        <img src="customscore-demo.png" alt="Custom Score Demo" style="max-width:260px;border-radius:0.8em;">
+      </div>
+    </section>
+
+    <!-- CTA BAR -->
+    <section class="cta-bar-bottom">
+      <div class="tips-cta-bar">
+        <span>🎯 <b>Want More Free Daily Tips?</b> Get our expert analysis, value bets, and dark horses — updated every morning!</span>
+        <a href="tips.html" class="see-tips-btn">Access All Smart Picks Now &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="tips.html">Tips</a>
+        <a href="yesterday.html">Historical</a>
+        <a href="custom-score.html">Custom Score</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="footer-meta">
+        <span id="footer-year"></span> Smart Racecards
+        <span>•</span>
+        <a href="mailto:info@smartracecards.com">Contact</a>
+      </div>
+      <div class="footer-disclaimer">
+        <small>
+          For informational purposes only – not betting advice.<br>
+          Please gamble responsibly. 18+
+        </small>
+      </div>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="tips.html">Tips</a>
-      <a href="yesterday.html">Historical</a>
-      <a href="custom-score.html">Custom Score</a>
-      <a href="about.html">About Us</a>
-    </div>
-    <div class="footer-meta">
-      <span id="footer-year"></span> Smart Racecards
-      <span>•</span>
-      <a href="mailto:info@smartracecards.com">Contact</a>
-    </div>
-    <div class="footer-disclaimer">
-      <small>
-        For informational purposes only – not betting advice.<br>
-        Please gamble responsibly. 18+
-      </small>
-    </div>
-  </div>
-</footer>
-
-<script src="data.js"></script>
-<script src="index.js"></script>
-<script src="main.js"></script>
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
