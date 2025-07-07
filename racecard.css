@@ -196,67 +196,76 @@ h1, h2 {
     background: #22282e;
 }
 
-/* 1. Runner Number & Draw Column */
+/* Number & Draw */
 .runner-num-draw {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align numbers to top of card content */
-    width: 45px; /* Fixed width for this column */
-    flex-shrink: 0; /* Prevent shrinking */
-    padding-top: 2px; /* Small adjustment for vertical alignment */
+    justify-content: flex-start;
+    width: 45px;
+    flex-shrink: 0;
+    padding-top: 2px;
 }
+
 .runner-num {
-    background: var(--highlight);
-    color: #191e23;
-    border-radius: 50%; /* Perfect circle */
-    width: 28px; /* Slightly larger number bubble */
-    height: 28px;
+    background: #ffeb3b; /* Bright yellow */
+    color: #222; /* Dark text for contrast */
+    border-radius: 50%;
+    width: 30px; /* Slightly bigger */
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    font-size: 1.05em;
-    margin-bottom: 3px; /* Space between number and draw */
-    box-shadow: 0 2px 10px #ffd9002b; /* Stronger shadow */
-}
-.runner-draw {
-    font-size: 0.8em; /* Slightly smaller for draw */
-    color: var(--brand);
-    font-weight: 600; /* Bolder for readability */
+    font-size: 1.15em;
+    margin-bottom: 4px; /* Space below number */
+    box-shadow: 0 2px 8px rgba(255, 235, 59, 0.6); /* Soft yellow glow */
 }
 
-/* 2. Silk & Form Column (Crucial for "Form Under Silks") */
+.runner-draw {
+    font-size: 0.75em;
+    color: #3aa8d1; /* Bright blue */
+    font-weight: 700;
+    margin-top: -2px; /* Slightly pull up closer to number */
+    white-space: nowrap;
+}
+
+/* Silk & Form */
 .runner-silk-group {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center horizontally within this column */
-    width: 50px; /* Fixed width for this column, adjust if silks are larger */
-    flex-shrink: 0; /* Prevent shrinking */
-    gap: 4px; /* Space between silk image and form string */
-    padding-top: 2px; /* Small adjustment for vertical alignment */
+    flex-direction: column;
+    align-items: center;
+    width: 48px;
+    flex-shrink: 0;
+    gap: 6px; /* More breathing room */
+    padding-top: 4px;
 }
+
 .runner-silk {
-    width: 42px; /* Larger silk image for better visibility */
-    height: 42px;
+    width: 44px;
+    height: 44px;
     object-fit: contain;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    background: #181e24; /* Background for placeholder/loading */
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background: #1a2229;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .runner-form {
-    font-size: 0.75em; /* Clearer font size for form */
+    font-size: 0.8em;
     font-weight: 700;
-    color: #ffdb89; /* Your chosen color */
-    background-color: rgba(255, 215, 0, 0.1); /* Subtle background related to highlight */
-    padding: 2px 5px;
-    border-radius: 4px;
+    color: #ffd54f; /* Soft gold */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark translucent background */
+    padding: 3px 8px;
+    border-radius: 5px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 48px; /* Adjust max-width to fit under 42px silk with padding */
+    max-width: 48px;
     text-align: center;
+    box-shadow: 0 0 6px rgba(255, 213, 79, 0.5);
 }
+
 
 /* 3. Main Runner Content */
 .runner-main {
@@ -724,3 +733,4 @@ h1, h2 {
         font-size: 0.85em;
     }
 }
+
