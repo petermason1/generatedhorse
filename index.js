@@ -8,7 +8,7 @@ if (!races.length) {
   throw new Error('No racecards!');
 }
 
-// ---- NEXT 6 RACES ----
+// Render Next 6 races bar
 function renderNext6Bar(allRaces) {
   const now = new Date();
   const next6 = allRaces
@@ -29,9 +29,8 @@ function renderNext6Bar(allRaces) {
 
 document.getElementById('next6-dynamic').innerHTML = renderNext6Bar(races);
 
-// ---- RACES BY COURSE ----
+// Render races grouped by course
 function renderByCourse(allRaces) {
-  // Group by course
   const byCourse = {};
   allRaces.forEach(rc => {
     let course = rc.course;
@@ -40,7 +39,6 @@ function renderByCourse(allRaces) {
     byCourse[course].push(rc);
   });
 
-  // Sort courses by earliest race off_dt
   const courseRows = Object.entries(byCourse)
     .map(([course, courseRaces]) => {
       const minOffDt = Math.min(...courseRaces.map(r => new Date(r.off_dt)));
@@ -48,7 +46,6 @@ function renderByCourse(allRaces) {
     })
     .sort((a, b) => a.minOffDt - b.minOffDt);
 
-  // Build section
   return courseRows.map(({ course, courseRaces }) => `
     <div class="racecard-course-row">
       <div class="racecard-course-header">${course}</div>
@@ -66,5 +63,50 @@ function renderByCourse(allRaces) {
 }
 
 document.getElementById('main-content-dynamic').innerHTML = renderByCourse(races);
+
+// ==== RENDER TODAY'S SMART PICKS ====
+// Use your existing scoring or fallback to 0 if missing
+function renderTodaySmartPicks(allRaces) {
+  const isNonRunner = r => r.number && r.number.toString().trim().toUpperCase() === 'NR';
+
+  // Flatten runners & score if missing
+  const allRunners = allRaces.flatMap(race => (race.runners || []).map(runner => {
+    // Score from racecard.js scoreRunner if you want, else fallback:
+    const score = typeof runner.score === 'number' ? runner.score : 0;
+    return {
+      ...runner,
+      raceName: race.race_name,
+      course: race.course,
+      offTime: race.off_time,
+      score
+    };
+  }));
+
+  // Filter valid runners only
+  const validRunners = allRunners.filter(r => r.score > 0 && !isNonRunner(r));
+
+  // Sort descending by score and pick top 3 only
+  const topPicks = validRunners.sort((a, b) => b.score - a.score).slice(0, 3);
+
+  if (topPicks.length === 0) {
+    return `<p>No picks available for today.</p>`;
+  }
+
+  return topPicks.map((pick, i) => `
+    <div class="pick-card ${i === 0 ? 'pick-best' : ''}">
+      ${i === 0 ? '<div class="pick-label">Value Pick</div>' : ''}
+      <div class="pick-main">
+        <span class="pick-horse">${pick.horse}</span>
+        <span class="pick-race">${pick.offTime} ${pick.course}</span>
+      </div>
+      <div class="pick-notes">Score: ${pick.score.toFixed(2)}</div>
+    </div>
+  `).join('');
+}
+
+const picksContainer = document.querySelector('.picks-list');
+if (picksContainer) {
+  picksContainer.innerHTML = renderTodaySmartPicks(races);
+}
 
 console.log('index.js finished.');
