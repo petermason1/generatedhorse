@@ -230,9 +230,17 @@ console.log('tips.js: Script started.');
         }
         return null;
     }
+    
+    // Non-runner check (number field or common flags)
     function isNonRunner(runner) {
-        return (typeof runner.number === "string" && runner.number.trim().toUpperCase() === "NR");
+        if (!runner) return false;
+        if (typeof runner.number === "string" && runner.number.trim().toUpperCase() === "NR") return true;
+        if (typeof runner.form === 'string' && runner.form.match(/\bNR\b/i)) return true;
+        if (runner.status && typeof runner.status === 'string' && runner.status.toUpperCase() === 'NR') return true;
+        if (runner.non_runner === true) return true;
+        return false;
     }
+
     // Sort by race off time (works with various date/time fields)
     function sortByOffTime(arr) {
         return arr.slice().sort((a, b) => {
@@ -273,21 +281,32 @@ console.log('tips.js: Script started.');
     // );
     // ...repeat for any other tipster!
 
-    // === CAL'S PICKS: HIGHEST SCORING 4 RUNNERS OF THE DAY (NO DUPLICATE RACES), SKIP NRs ===
+    // === CAL'S PICKS: HIGHEST SCORING 4 RUNNERS OF THE DAY (NO DUPLICATE RACES), SKIP NRs, FLAG IF ANY NR SKIPPED ===
     const allRunners = races.flatMap(race => (race.runners || []).map(r => ({...r, race})));
     const sortedByScore = allRunners.filter(r => r.score > 0).sort((a, b) => b.score - a.score);
     const usedRaceIds = new Set();
     let calsPicks = [];
+    let calsHadNR = false;  // flag for any NR skipped in Calc's picks
+
     for (const r of sortedByScore) {
         const raceId = r.race._id || r.race.race_id;
-        if (isNonRunner(r)) continue;
-        if (!usedRaceIds.has(raceId)) {
-            calsPicks.push(r);
-            usedRaceIds.add(raceId);
+        if (usedRaceIds.has(raceId)) continue;
+
+        if (isNonRunner(r)) {
+            calsHadNR = true; // NR detected and skipped
+            continue;
         }
+
+        calsPicks.push(r);
+        usedRaceIds.add(raceId);
+
         if (calsPicks.length === 4) break;
     }
+
     calsPicks = sortByOffTime(calsPicks);
+
+    // Optionally: log or add UI indicator if any NR skipped in Calc's picks
+    console.log('tips.js: Calc picks skipped non-runners:', calsHadNR);
 
     function renderTipCard(r, i, badge) {
       const silksImageUrl = r.silk_url ? r.silk_url : 'https://placehold.co/40x40/333/fff?text=No+Silk';
@@ -370,20 +389,14 @@ console.log('tips.js: Script started.');
         </section>
       `;
     }
-    // ==== APPEND MORE TIPSTER SECTIONS HERE ====
-    // if (yourFeatured.length) {
-    //   sections += `
-    //     <section class="tips-section featured-section">
-    //       <h2 class="section-title">YOUR TIPSTER'S NAME Tips</h2>
-    //       ${yourFeatured.map((r, i) => renderTipCard(r, i, "Your Tipster's Pick")).join('')}
-    //     </section>
-    //   `;
-    // }
 
     if (calsPicks.length) {
+      // Add an optional warning badge if NR was skipped
+      let calBadgeExtra = calsHadNR ? '<div style="color:#f44336; font-weight:bold; margin-bottom:8px;">⚠️ Some top picks were non-runners and replaced</div>' : '';
       sections += `
         <section class="tips-section featured-section">
           <h2 class="section-title">Calc’s Picks of the Day <span class="section-subtitle">(Top Data-Rated)</span></h2>
+          ${calBadgeExtra}
           ${calsPicks.map((r, i) => renderTipCard(r, i, "Calc's Pick")).join('')}
         </section>
       `;
@@ -396,12 +409,11 @@ console.log('tips.js: Script started.');
           Michael, Chris, Peter, Ken, The Calc, and Racing Post go head-to-head.<br>
           <b>Who lands bragging rights today?</b>
         </p>
-   <div style="text-align:center;">
-  <a href="todays-leaderboard.html" class="cta-btn" style="margin: 18px auto 26px; display:inline-block; font-weight:700; background: linear-gradient(90deg,#37e8b5,#ffc900 95%); color:#232d33; border:none; border-radius:14px; padding:14px 42px; font-size:1.13em; box-shadow:0 4px 18px #0002; letter-spacing:0.01em; text-decoration:none; transition:background 0.2s,box-shadow 0.2s; cursor:pointer;">
-    View Leaderboard &amp; Results
-  </a>
-</div>
-
+        <div style="text-align:center;">
+          <a href="todays-leaderboard.html" class="cta-btn" style="margin: 18px auto 26px; display:inline-block; font-weight:700; background: linear-gradient(90deg,#37e8b5,#ffc900 95%); color:#232d33; border:none; border-radius:14px; padding:14px 42px; font-size:1.13em; box-shadow:0 4px 18px #0002; letter-spacing:0.01em; text-decoration:none; transition:background 0.2s,box-shadow 0.2s; cursor:pointer;">
+            View Leaderboard &amp; Results
+          </a>
+        </div>
         ${sections || `<div class="no-picks" style="color:#f66;font-weight:700;margin:2em 0;">No valid tips for today.</div>`}
         <div class="tips-disclaimer" style="text-align:center;color:var(--color-primary-yellow);font-size:0.98em;margin-top:2em;">
           <b>Disclaimer:</b> All picks are for information only and not betting advice. Please gamble responsibly.
@@ -415,7 +427,8 @@ console.log('tips.js: Script started.');
       peter: peterFeatured.length,
       ken: kenFeatured.length,
       racingPost: racingPostFeatured.length,
-      cal: calsPicks.length
+      cal: calsPicks.length,
+      calHadNR: calsHadNR
     });
     console.log('tips.js: Script finished.');
 })();
