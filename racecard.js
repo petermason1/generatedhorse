@@ -20,9 +20,27 @@ function safeFloat(x, def = 0.0) {
 function truncate(str, max) {
   return str && str.length > max ? str.slice(0, max - 1) + '…' : str;
 }
-// function pad6(arr) { // This function is only used by renderNext6Bar, can be removed too
-//   return [...arr, ...Array(6)].slice(0, 6);
-// }
+
+function convertLbsToStone(lbs) {
+  const totalLbs = safeInt(lbs);
+  if (totalLbs <= 0) return '-';
+
+  const stones = Math.floor(totalLbs / 14);
+  const pounds = totalLbs % 14;
+
+  let result = '';
+  if (stones > 0) {
+    result += `${stones}st`;
+  }
+  if (pounds > 0) {
+    result += `${stones > 0 ? ' ' : ''}${pounds}lb`;
+  } else if (stones === 0 && totalLbs > 0) {
+    result += `${totalLbs}lb`;
+  }
+
+  return result.trim() || '-';
+}
+
 
 // ========== [2] SCORING LOGICS ==========
 
@@ -174,36 +192,18 @@ function getAllRaces(day) {
     : window.racecardsData.racecards;
 }
 
-// [5] RENDER "NEXT 6 RACES" BAR - REMOVED
-// function getNext6Races(allRaces) {
-//   const now = new Date();
-//   return allRaces
-//     .filter(r => new Date(r.off_dt) > now)
-//     .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
-//     .slice(0, 6);
-// }
-// function renderNext6Bar(allRaces, activeRaceId, day) {
-//   const races6 = pad6(getNext6Races(allRaces));
-//   return races6.map(r =>
-//     r
-//       ? `<a href="racecard.html?date=${day}&race_id=${r._id}"
-//              class="next6-link${r._id === activeRaceId ? ' active' : ''}"
-//              title="${r.course} ${r.off_time}">
-//             <span class="next6-time">${r.off_time}</span>
-//             <span class="next6-course">${truncate(r.course, 10)}</span>
-//          </a>`
-//       : `<span class="next6-link next6-empty"></span>`
-//   ).join('');
-// }
+// [5] REMOVED: "Next to Go" bar functions `getNextRacesAllCourses` and `renderNextToGoBar`
 
 // [6] RENDER COURSE NAVIGATION
 function renderCourseNavigation(allRaces, currentRaceId, whichDay) {
   const uniqueCourses = [...new Set(allRaces.map(r => r.course))].sort();
   const currentActiveCourse = allRaces.find(r => r._id === currentRaceId)?.course;
   return uniqueCourses.map(courseName => {
-    const courseRaces = allRaces.filter(r => r.course === courseName)
-      .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
-    const firstRace = courseRaces[0];
+    // Find the first race for this course to link to
+    const firstRace = allRaces.filter(r => r.course === courseName)
+      .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))[0];
+    if (!firstRace) return ''; // Should not happen if uniqueCourses is based on existing races
+
     const isActive = courseName === currentActiveCourse;
     return `
       <a class="course-link${isActive ? ' active' : ''}"
@@ -219,6 +219,8 @@ function renderCourseNavigation(allRaces, currentRaceId, whichDay) {
 function renderCourseLinks(race, allRaces, whichDay) {
   const courseRaces = allRaces.filter(r => r.course === race.course)
     .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
+  if (!courseRaces.length) return ''; // No races for this course
+
   return courseRaces.map(rc => `
     <a class="race-link${rc._id === race._id ? ' race-link-active' : ''}"
        href="racecard.html?date=${whichDay}&race_id=${rc._id}"
@@ -287,12 +289,16 @@ function renderRunnerMore(r) {
 function renderRace(race, allRaces, whichDay) {
   const main = document.getElementById('mainRacecard');
   if (!main) return;
-  // Score, sort, NRs last
+
+  // Score, sort active runners, keep NRs separate
   race.runners.forEach(r => r.score = scoreRunner(r));
-  race.runners.sort((a, b) => (b.score ?? -9999) - (a.score ?? -9999));
-  const nrs = race.runners.filter(isNonRunner);
-  const runners = race.runners.filter(r => !isNonRunner(r));
-  race.runners = [...runners, ...nrs];
+
+  const activeRunners = race.runners.filter(r => !isNonRunner(r));
+  const nonRunners = race.runners.filter(isNonRunner);
+
+  activeRunners.sort((a, b) => (b.score ?? -9999) - (a.score ?? -9999));
+  // Non-runners don't necessarily need a score or specific order, but you could sort by number if desired.
+
   main.innerHTML = `
     <section class="race-header">
       <h1>${race.course} <span class="race-header-time">${race.off_time}</span></h1>
@@ -300,41 +306,47 @@ function renderRace(race, allRaces, whichDay) {
         <strong class="race-name">${race.race_name}</strong>
         <div class="race-details-line-1">
           Prize: <b class="race-prize">${race.prize?.replace(/\u00a3/, '£') || '-'}</b>
-          • Runners: <b class="race-field-size">${race.field_size || '-'}</b>
-          • Age/Sex: <b class="race-age-band">${race.age_band||'-'}</b>
+          • Runners: <b class="race-field-size">${activeRunners.length || '-'}</b> • Age/Sex: <b class="race-age-band">${race.age_band||'-'}</b>
         </div>
         <div class="race-details-line-2">
-          Pattern: <b class="race-pattern">${race.pattern||race.race_class||''}</b>
-          • Region: <b class="race-region">${race.region||'-'}</b>
-          • Class <b class="race-class">${race.race_class?.replace('Class ','') || '-'}</b>
-          • <b class="race-distance">${race.distance || '-'}</b>
-          • <b class="race-going">${race.going || '-'}</b>
+          <span class="race-detail-item">Pattern: <b class="race-pattern">${race.pattern||race.race_class||''}</b></span>
+          <span class="race-detail-item">Region: <b class="race-region">${race.region||'-'}</b></span>
+          <span class="race-detail-item">Class <b class="race-class">${race.race_class?.replace('Class ','') || '-'}</b></span>
+          <span class="race-detail-item">Distance: <b class="race-distance">${race.distance || '-'}</b></span>
+          <span class="race-detail-item">Going: <b class="race-going">${race.going || '-'}</b></span>
         </div>
       </div>
     </section>
     ${renderTopPicks(race)}
+
     <div class="runners-list">
-      ${race.runners.map((r, i) => `
-        <div class="runner-card${isNonRunner(r) ? ' runner-nr' : ''}" data-i="${i}">
+      <h2>Runners</h2>
+      ${activeRunners.map((r, i) => `
+        <div class="runner-card" data-i="${i}">
           <div class="runner-num-draw">
             <span class="runner-num">${r.number || i+1}</span>
             <span class="runner-draw">${(r.draw && r.draw !== r.number) ? `(${r.draw})` : ''}</span>
-            <span class="runner-score">${typeof r.score === 'number' ? r.score : ''}</span>
           </div>
-          <img class="runner-silk" src="${r.silk_url||'https://placehold.co/39x39/161c22/fff?text=S'}" alt="silks" onerror="this.src='https://placehold.co/39x39/161c22/fff?text=S';" />
+          <div class="runner-silk-group">
+            <img class="runner-silk" src="${r.silk_url||'https://placehold.co/39x39/161c22/fff?text=S'}" alt="silks" onerror="this.src='https://placehold.co/39x39/161c22/fff?text=S';" />
+            <span class="runner-form">${r.form || ''}</span>
+          </div>
           <div class="runner-main">
-            <div class="runner-horse">${r.horse || ''}</div>
+            <div class="runner-horse">
+                ${r.horse || ''}
+                <span class="runner-age-weight">
+                    ${r.age ? ` (${r.age}yo)` : ''}
+                    ${r.lbs ? ` ${convertLbsToStone(r.lbs)}` : ''}
+                </span>
+                <span class="runner-score-inline">Score: ${typeof r.score === 'number' ? r.score : ''}</span>
+            </div>
             <div class="runner-meta-line">
               <span class="runner-jockey">${r.jockey || ''}</span>
               <span class="runner-meta-separator">|</span>
               <span class="runner-trainer">${r.trainer || ''}</span>
-              <span class="runner-form">${r.form || ''}</span>
-              ${isNonRunner(r) ? '<span class="runner-nr-tag">NR</span>' : ''}
             </div>
             <div class="runner-info-line">
-              Age <b class="runner-age">${r.age || '-'}</b>
-              • Weight <b class="runner-weight">${r.lbs || '-'}</b>
-              • RPR <b class="runner-rpr">${r.rpr || '-'}</b>
+              RPR <b class="runner-rpr">${r.rpr || '-'}</b>
               • OR <b class="runner-or">${r.ofr || '-'}</b>
               • TS <b class="runner-ts">${r.ts || '-'}</b>
               ${r.headgear ? `• Headgear <b class="runner-headgear">${r.headgear}</b>` : ''}
@@ -347,6 +359,21 @@ function renderRace(race, allRaces, whichDay) {
         </div>
       `).join('')}
     </div>
+
+    ${nonRunners.length > 0 ? `
+      <div class="non-runners-section">
+        <h2>Non-Runners (${nonRunners.length})</h2>
+        <div class="non-runners-list">
+          ${nonRunners.map(nr => `
+            <div class="non-runner-item">
+              <span class="non-runner-num">${nr.number || ''}.</span>
+              <span class="non-runner-horse">${nr.horse || ''}</span>
+              <span class="non-runner-reason">${nr.status_reason || 'Withdrawn'}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    ` : ''}
   `;
 }
 
@@ -371,13 +398,13 @@ function loadAndRender(raceId, day, pushState = true, courseName) {
   let race = findRace(raceId, allRaces, courseName);
   if (!race) {
     document.getElementById('mainRacecard').innerHTML = '<p class="error-message">No race found.</p>';
+    document.getElementById('racecardCourses').innerHTML = '';
+    document.getElementById('courseTimesNav').innerHTML = '';
     return;
   }
   if (pushState) {
     history.pushState({ raceId: race._id, day }, '', `racecard.html?date=${day}&race_id=${race._id}`);
   }
-  // IDs below must match your HTML!
-  // document.getElementById('next6Bar').innerHTML = renderNext6Bar(allRaces, race._id, whichDay); // REMOVED
   document.getElementById('racecardCourses').innerHTML = renderCourseNavigation(allRaces, race._id, whichDay);
   document.getElementById('courseTimesNav').innerHTML = renderCourseLinks(race, allRaces, whichDay);
   renderRace(race, allRaces, day);
@@ -385,16 +412,6 @@ function loadAndRender(raceId, day, pushState = true, courseName) {
 
 // ========== [12] SPA EVENT HANDLERS ==========
 document.addEventListener('click', function(e) {
-  // REMOVED event listener for .next6-link as the element is gone
-  // if (e.target.closest('.next6-link')) {
-  //   e.preventDefault();
-  //   const el = e.target.closest('.next6-link');
-  //   const url = new URL(el.href, window.location.origin);
-  //   const newDay = url.searchParams.get('date') || whichDay;
-  //   const newRaceId = url.searchParams.get('race_id');
-  //   loadAndRender(newRaceId, newDay);
-  //   return;
-  // }
   if (e.target.classList.contains('course-link')) {
     e.preventDefault();
     const newRaceId = e.target.getAttribute('data-race-id');
