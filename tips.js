@@ -153,8 +153,8 @@ console.log('tips.js: Script started.');
     }
 
     // === TIPSTER PICKS: ENTER HORSE NAMES FOR EACH TIPSTER (CASE-INSENSITIVE) ===
-    const michaelsTips = ["stash the cash", "yorkshire glory", "Piecederesistance", "Yccs Portocervo"];
-    const chrisTips    = ["stash the cash", "Jumeira Vision", "Traveling Soldier", "yccs portocervo"];
+    const michaelsTips = ["", "yorkshire glory", "Piecederesistance", "Yccs Portocervo"];
+    const chrisTips    = ["betty's tiara", "get the value", "triggerman", "grand harbour"];
     const peterTips    = ["taygar", "masonbrook meadow","brave bob", "redbridge rambler"];
     const kenTips      = ["we still believe", "binhareer", "lion's house", "sabrimento"];
     const racingPostTips = ["Jesmond Dawn", "Astelia", "I'm A Starman", "Captain Hanley"];
