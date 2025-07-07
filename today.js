@@ -1,168 +1,162 @@
-function parseRaceDate(isoStr) {
-  return new Date(isoStr);
-}
+// today.js
 
-function getNext6Races(races) {
-  const now = new Date();
-  const upcoming = races.filter(r => now < new Date(parseRaceDate(r.off_dt).getTime() + 3 * 60000));
-  upcoming.sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt));
-  return upcoming.slice(0, 6);
-}
+console.log('today.js loaded');
+
+// ======== DATA SETUP ========
+const races = (window.racecardsData && window.racecardsData.racecards) || [];
 
 function isMobile() {
   return window.innerWidth <= 650;
 }
 
-// Find the next race with "cooling off" logic
-function getNextRaceIndex(races) {
+// ======== NEXT 6 BAR ========
+function getNext6Races(allRaces) {
   const now = new Date();
-  for (let i = 0; i < races.length; ++i) {
-    const thisOff = parseRaceDate(races[i].off_dt);
-    const thisEnd = new Date(thisOff.getTime() + 6 * 60000);
-    if (now <= thisEnd) {
-      if (i === 0) return 0;
-      const prevOff = parseRaceDate(races[i - 1].off_dt);
-      const prevEnd = new Date(prevOff.getTime() + 6 * 60000);
-      if (now - prevEnd >= 60 * 1000) return i;
-      return -1;
+  return allRaces
+    .filter(r => new Date(r.off_dt) > now)
+    .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
+    .slice(0, 6);
+}
+function pad6(arr) {
+  // Always 6 slots
+  return [...arr, ...Array(6)].slice(0, 6);
+}
+function truncate(str, max) {
+  return str.length > max ? str.slice(0, max-1) + '…' : str;
+}
+function renderNext6Bar(allRaces) {
+  const races6 = pad6(getNext6Races(allRaces));
+  const wrapperCls = isMobile() ? "next6-bar-grid" : "next6-bar";
+  return `<div class="${wrapperCls}">
+    ${races6.map(r =>
+      r
+        ? `<a href="racecard.html?date=today&race_id=${r._id}" class="race-bar-box" title="${r.course} ${r.off_time}">
+            <span class="race-time">${r.off_time}</span>
+            <span class="race-course">${truncate(r.course, 10)}</span>
+          </a>`
+        : `<span class="race-bar-box race-bar-empty"></span>`
+    ).join('')}
+  </div>`;
+}
+
+function updateNext6Bar() {
+  document.getElementById('next-races-bar').innerHTML = renderNext6Bar(races);
+}
+
+// ======== COURSE LISTING ========
+function renderCourseListing(allRaces) {
+  // Group by course
+  const byCourse = {};
+  allRaces.forEach(rc => {
+    let course = rc.course;
+    if (course.startsWith("Lingfield")) course = "Lingfield";
+    if (!byCourse[course]) byCourse[course] = [];
+    byCourse[course].push(rc);
+  });
+
+  // Sort courses by earliest race off_dt
+  const courseRows = Object.entries(byCourse)
+    .map(([course, courseRaces]) => {
+      const minOffDt = Math.min(...courseRaces.map(r => new Date(r.off_dt)));
+      return { course, courseRaces, minOffDt };
+    })
+    .sort((a, b) => a.minOffDt - b.minOffDt);
+
+  // Render
+  return courseRows.map(({ course, courseRaces }) => `
+    <div class="course-block">
+      <div class="course-title">${course}</div>
+      <div class="course-race-bar">
+        ${courseRaces
+          .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
+          .map(rc => `
+            <a class="course-race-box" href="racecard.html?date=today&race_id=${rc._id}">
+              <span class="race-time">${rc.off_time}</span>
+            </a>
+          `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+function updateCourseListing() {
+  document.getElementById('course-listings').innerHTML = renderCourseListing(races);
+}
+
+// ======== HORSE SEARCH ========
+const horseInput = document.getElementById('horseSearch');
+const horseClearBtn = document.getElementById('horseSearchClear');
+const horseResultsDiv = document.getElementById('horseSearchResults');
+
+function searchHorses(query, allRaces) {
+  if (!query || query.length < 2) return [];
+  query = query.toLowerCase();
+  const results = [];
+  for (const race of allRaces) {
+    // Fuzzy match on course or time
+    if (race.course.toLowerCase().includes(query) || race.off_time.includes(query)) {
+      for (const runner of (race.runners || [])) {
+        results.push({ ...runner, course: race.course, off_time: race.off_time, raceId: race._id });
+      }
+      continue;
+    }
+    // Fuzzy match on horse
+    for (const runner of (race.runners || [])) {
+      if (runner.horse && runner.horse.toLowerCase().includes(query)) {
+        results.push({ ...runner, course: race.course, off_time: race.off_time, raceId: race._id });
+      }
     }
   }
-  return -1;
+  return results.slice(0, 16);
 }
-
-function renderNext6Bar(races) {
-  const barDiv = document.getElementById('next-races-bar');
-  if (!races || !races.length) {
-    barDiv.innerHTML = '<div class="no-races">No races available.</div>';
+function renderHorseResults(list) {
+  if (!list.length) {
+    horseResultsDiv.innerHTML = '';
     return;
   }
-  const now = new Date();
-  let nextIndex = getNextRaceIndex(races);
-
-  // Always show 6 boxes (pad with nulls)
-  // IMPORTANT: Ensure you have exactly 6 items for a 3x2 grid to fill correctly
-  while (races.length < 6) {
-      races.push(null);
-  }
-  // If you have more than 6, slice it to ensure only 6 are rendered in this component
-  races = races.slice(0, 6);
-
-  if (isMobile()) {
-    // For mobile (3x2 grid), place all race boxes directly into next6-bar-grid
-    barDiv.innerHTML = `
-      <div class="next6-bar-grid">
-        ${races.map((race, i) =>
-          race ? renderRaceBox(race, i, nextIndex, now, 'race-bar-box') : `<span class="race-bar-box race-bar-empty"></span>`
-        ).join('')}
-      </div>
-    `;
-  } else {
-    // For desktop (flex row), keep the next6-bar container
-    barDiv.innerHTML = `
-      <div class="next6-bar">
-        ${races.map((race, i) =>
-          race ? renderRaceBox(race, i, nextIndex, now, 'race-bar-box') : `<span class="race-bar-box race-bar-empty"></span>`
-        ).join('')}
-      </div>
-    `;
-  }
+  horseResultsDiv.innerHTML = list.map(r =>
+    `<div class="horse-search-result">
+      <a href="racecard.html?date=today&race_id=${r.raceId}">
+        <b>${r.horse}</b> <span style="color:#ffe561;">(${r.course} ${r.off_time})</span>
+      </a>
+    </div>`
+  ).join('');
+}
+function updateSearchClear() {
+  horseClearBtn.style.display = horseInput.value ? 'block' : 'none';
 }
 
-function renderRaceBox(race, idx, nextIndex, now, cls) {
-  const off = parseRaceDate(race.off_dt);
-  const sixMinsAfter = new Date(off.getTime() + 6 * 60000);
-  const finished = now > sixMinsAfter;
-  const localTime = off.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  let badge = '';
-  if (idx === nextIndex) badge = `<span class="badge-next">Next</span>`;
-  else if (finished) badge = `<span class="badge-finished">Finished</span>`;
-  else badge = `<span class="badge-empty"></span>`;
-  return `<a class="${cls}${finished ? ' past' : (idx === nextIndex ? ' next' : '')}"
-    href="racecard.html?date=today&race_id=${race._id}" title="${race.course} – ${race.race_name}">
-    <span class="race-time">${localTime}</span>
-    ${badge}
-  </a>`;
+// ======== EVENTS ========
+function mainRender() {
+  updateNext6Bar();
+  updateCourseListing();
+  renderHorseResults([]);
+  updateSearchClear();
 }
+window.addEventListener('resize', updateNext6Bar);
+window.addEventListener('DOMContentLoaded', () => {
+  mainRender();
 
-// ===== All Meetings: finished meetings at bottom live =====
-function renderCourseListing(races) {
-  const courseDiv = document.getElementById('course-listings');
-  if (!races || !races.length) {
-    courseDiv.innerHTML = '<div class="no-races">No races available.</div>';
-    return;
-  }
-
-  // Group by course
-  const courses = {};
-  races.forEach(r => {
-    if (!courses[r.course]) courses[r.course] = [];
-    courses[r.course].push(r);
+  // Search bar events
+  horseInput.addEventListener('input', e => {
+    updateSearchClear();
+    if (e.target.value.length < 2) return renderHorseResults([]);
+    renderHorseResults(searchHorses(e.target.value, races));
   });
-
-  // Partition courses by all-finished or not
-  const now = new Date();
-  const notFinished = [];
-  const allFinished = [];
-  Object.keys(courses).forEach(courseName => {
-    const courseRaces = courses[courseName];
-    const allDone = courseRaces.every(r => {
-      const off = parseRaceDate(r.off_dt);
-      return now > new Date(off.getTime() + 6 * 60000);
-    });
-    if (allDone) allFinished.push({ courseName, courseRaces });
-    else notFinished.push({ courseName, courseRaces });
+  horseClearBtn.addEventListener('click', () => {
+    horseInput.value = '';
+    updateSearchClear();
+    renderHorseResults([]);
+    horseInput.focus();
   });
-
-  // Sort by first race time then name
-  const courseSort = arr => arr.sort((a, b) => {
-    const tA = parseRaceDate(a.courseRaces[0].off_dt).getTime();
-    const tB = parseRaceDate(b.courseRaces[0].off_dt).getTime();
-    if (tA !== tB) return tA - tB;
-    return a.courseName.localeCompare(b.courseName);
+  horseInput.addEventListener('keydown', e => {
+    if (e.key === "Escape") {
+      horseInput.value = '';
+      updateSearchClear();
+      renderHorseResults([]);
+      horseInput.blur();
+    }
   });
-  const sortedNotFinished = courseSort(notFinished);
-  const sortedAllFinished = courseSort(allFinished);
+  updateSearchClear();
+});
 
-  const renderBlock = ({ courseName, courseRaces }) => `
-      <div class="course-block${courseRaces.every(r => {
-        const off = parseRaceDate(r.off_dt);
-        return now > new Date(off.getTime() + 6 * 60000);
-      }) ? ' course-block-finished' : ''}">
-        <div class="course-title">${courseName}</div>
-        <div class="course-race-bar">
-          ${courseRaces.map(race => {
-            const off = parseRaceDate(race.off_dt);
-            const sixMinsAfter = new Date(off.getTime() + 6 * 60000);
-            const finished = now > sixMinsAfter;
-            const localTime = off.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            let badge = finished ? `<span class="badge-finished">Finished</span>` : `<span class="badge-empty"></span>`;
-            return `<a class="course-race-box${finished ? ' past' : ''}"
-              href="racecard.html?date=today&race_id=${race._id}" title="${race.race_name}">
-              <span class="race-time">${localTime}</span>
-              ${badge}
-            </a>`;
-          }).join('')}
-        </div>
-      </div>
-    `;
-
-  courseDiv.innerHTML =
-    [...sortedNotFinished, ...sortedAllFinished].map(renderBlock).join('');
-}
-
-function mainRenderNextRaces() {
-  if (!window.racecardsData || !Array.isArray(window.racecardsData.racecards)) {
-    document.getElementById('next-races-bar').innerHTML = '<div class="no-races">No races data loaded.</div>';
-    document.getElementById('course-listings').innerHTML = '';
-    return;
-  }
-  const races = window.racecardsData.racecards;
-  const next6 = getNext6Races(races);
-  renderNext6Bar(next6);
-  renderCourseListing(races);
-}
-
-
-window.addEventListener('resize', mainRenderNextRaces);
-setInterval(mainRenderNextRaces, 30 * 1000);
-window.addEventListener('DOMContentLoaded', mainRenderNextRaces);
+console.log('today.js finished');

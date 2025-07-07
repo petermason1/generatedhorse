@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <!-- Google Analytics -->
+  <!-- Google Analytics (do NOT remove) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,149 +10,71 @@
     gtag('config', 'G-NMB0VG2VBB');
   </script>
   <meta charset="UTF-8" />
+  <title>Today's Horse Racing Racecards | UK & Irish Races, Runners & Times | Smart Racecards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- SEO Meta -->
-  <title>Today's Live UK & Irish Horse Racing Racecards & Odds | Smart Racecards</title>
-  <meta name="description" content="View today’s free UK & Irish horse racing racecards with live odds, tips, expert analysis, and instant results. Mobile-friendly, real-time, and updated every day." />
-  <link rel="canonical" href="https://smartracecards.com/racecard.html" />
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="Live UK & Irish Horse Racing Racecards & Odds | Smart Racecards" />
-  <meta property="og:description" content="Today’s latest UK & Irish racecards, live results, tips, and smart data for every meeting. Crush your racing bets with Smart Racecards." />
-  <meta property="og:image" content="https://smartracecards.com/og-racecard.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://smartracecards.com/racecard.html" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Live UK & Irish Horse Racing Racecards & Odds | Smart Racecards" />
-  <meta name="twitter:description" content="Today’s latest UK & Irish racecards, live results, tips, and smart data for every meeting. Crush your racing bets with Smart Racecards." />
-  <!-- Favicon & Preload Font -->
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMwM.woff2" as="font" type="font/woff2" crossorigin>
-  <!-- CSS -->
+  <meta name="description" content="Full UK & Irish horse racing racecards for today: all meetings, race times, runners, and next up races. Get every card, fast updates, and expert data at a glance." />
+  <meta name="keywords" content="today horse racing, racecards, UK horse racing, Irish horse racing, today's runners, race times, live horse racing, meetings" />
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="racecard.css" />
 </head>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How often are racecards updated?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our racecards are updated in real-time every morning and refreshed throughout the day as new data comes in."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you show live odds?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We display the latest available odds, but please check with your bookmaker for live, real-time prices."
-      }
-    }
-    // Add more Q&As...
-  ]
-}
-</script>
-
-
 <body>
-  <!-- 1. NAVBAR -->
-<nav class="main-navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">
-      <img src="logo.png" alt="Smart Racecards Logo">
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="today.html" class="nav-link">Today's Races</a>
-      <a href="results.html" class="nav-link">Results</a>
-      <a href="tips.html" class="nav-link">Tipster</a>
-      <a href="yesterday.html" class="nav-link">Historical</a>
-      <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About</a>
-    </div>
-    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
-      <span class="icon-dark">🌙</span>
-      <span class="icon-light">☀️</span>
-    </button>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
-  </div>
-  <div class="nav-backdrop" id="navBackdrop"></div>
-</nav>
 
-<div id="racecard-main">
-
-  <nav class="course-bar" id="racecardCourses"></nav>  <!-- 👈 TOP OF PAGE -->
-
-  <div class="racecard-topbar">
-    <div class="racecard-topbar-left">
-      <button class="primary-btn back-btn" onclick="window.location.href='today.html'">
-        &larr; Back
-      </button>
-    </div>
-    <div class="racecard-topbar-center">
-      <div id="next6-section">
-        <span class="next6-label">Next 6 Races</span>
-        <div class="next6-bar" id="next6Bar"></div>
+  <nav class="main-navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="Smart Racecards Logo" />
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="today.html" class="nav-link">Today's Races</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="tips.html" class="nav-link">Tipster</a>
+        <a href="yesterday.html" class="nav-link">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link">About</a>
       </div>
+      <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+        <span class="icon-dark">🌙</span>
+        <span class="icon-light">☀️</span>
+      </button>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
-    <div class="racecard-topbar-right"></div>
-  </div>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+  </nav>
 
-  <nav class="course-bar" id="racecardCourses"></nav>
+  <main>
+    <!-- All meetings/courses nav -->
+    <nav class="meetings-bar" id="racecardCourses"></nav>
 
-  <nav class="race-links-bar" id="courseTimesNav"></nav>
+    <!-- Next 6 races bar -->
+    <section class="next6-section">
+      <div class="next6-label">Next to Go</div>
+      <div class="next6-bar" id="next6Bar"></div>
+    </section>
 
-  <main class="container" id="mainRacecard"></main>
-</div>
+    <!-- Race times at this meeting -->
+    <nav class="race-times-bar" id="courseTimesNav"></nav>
 
-<!-- ...your main racecard HTML... -->
+    <!-- Main racecard content (injected by JS) -->
+    <div id="mainRacecard"></div>
+  </main>
 
-<section class="faq-section">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <h3>How often are racecards updated?</h3>
-      <p>Our racecards are updated in real-time every morning and refreshed throughout the day as new data comes in.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Do you show live odds?</h3>
-      <p>We display the latest available odds, but please check with your bookmaker for live, real-time prices.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What makes Smart Racecards different?</h3>
-      <p>We combine data-driven ratings, tipster selections, and fast mobile access to give you a unique edge.</p>
-    </div>
-    <!-- Add more Q&As as you like -->
-  </div>
-</section>
-
-
-
-  <!-- 3. FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-      </div>
-      <div class="footer-meta">Copyright &copy; Smart Racecards 2025</div>
+      <span>&copy; <span id="footer-year"></span> Smart Racecards</span>
     </div>
   </footer>
 
-  <!-- 4. SCRIPTS (ORDER MATTERS: data.js > racecard.js > main.js) -->
   <script src="data.js"></script>
   <script src="racecard.js"></script>
   <script src="main.js"></script>
+  <script>
+    // Set footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

@@ -17,6 +17,12 @@ function safeFloat(x, def = 0.0) {
   let v = parseFloat(x);
   return Number.isFinite(v) ? v : def;
 }
+function truncate(str, max) {
+  return str && str.length > max ? str.slice(0, max - 1) + '…' : str;
+}
+function pad6(arr) {
+  return [...arr, ...Array(6)].slice(0, 6);
+}
 
 // ========== [2] SCORING LOGICS ==========
 
@@ -169,22 +175,25 @@ function getAllRaces(day) {
 }
 
 // [5] RENDER "NEXT 6 RACES" BAR
-function renderNext6Bar(allRaces, activeRaceId, day) {
+function getNext6Races(allRaces) {
   const now = new Date();
-  const next6 = allRaces
+  return allRaces
     .filter(r => new Date(r.off_dt) > now)
     .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
     .slice(0, 6);
-
-  if (!next6.length) {
-    return `<span class="next6-empty" style="color:#b7b7b7;opacity:0.8;">No races left today</span>`;
-  }
-  return next6.map(r => `
-    <a href="racecard.html?date=${day}&race_id=${r._id}" class="next6-link${r._id === activeRaceId ? ' active' : ''}" title="${r.course} ${r.off_time}">
-      <span class="next6-time">${r.off_time}</span>
-      <span class="next6-course">${r.course}</span>
-    </a>
-  `).join('');
+}
+function renderNext6Bar(allRaces, activeRaceId, day) {
+  const races6 = pad6(getNext6Races(allRaces));
+  return races6.map(r =>
+    r
+      ? `<a href="racecard.html?date=${day}&race_id=${r._id}"
+             class="next6-link${r._id === activeRaceId ? ' active' : ''}"
+             title="${r.course} ${r.off_time}">
+            <span class="next6-time">${r.off_time}</span>
+            <span class="next6-course">${truncate(r.course, 10)}</span>
+         </a>`
+      : `<span class="next6-link next6-empty"></span>`
+  ).join('');
 }
 
 // [6] RENDER COURSE NAVIGATION
@@ -284,7 +293,6 @@ function renderRace(race, allRaces, whichDay) {
   const nrs = race.runners.filter(isNonRunner);
   const runners = race.runners.filter(r => !isNonRunner(r));
   race.runners = [...runners, ...nrs];
-  // Render
   main.innerHTML = `
     <section class="race-header">
       <h1>${race.course} <span class="race-header-time">${race.off_time}</span></h1>
@@ -368,6 +376,7 @@ function loadAndRender(raceId, day, pushState = true, courseName) {
   if (pushState) {
     history.pushState({ raceId: race._id, day }, '', `racecard.html?date=${day}&race_id=${race._id}`);
   }
+  // IDs below must match your HTML!
   document.getElementById('next6Bar').innerHTML = renderNext6Bar(allRaces, race._id, whichDay);
   document.getElementById('racecardCourses').innerHTML = renderCourseNavigation(allRaces, race._id, whichDay);
   document.getElementById('courseTimesNav').innerHTML = renderCourseLinks(race, allRaces, whichDay);
@@ -376,7 +385,6 @@ function loadAndRender(raceId, day, pushState = true, courseName) {
 
 // ========== [12] SPA EVENT HANDLERS ==========
 document.addEventListener('click', function(e) {
-  // Next 6 nav
   if (e.target.closest('.next6-link')) {
     e.preventDefault();
     const el = e.target.closest('.next6-link');
@@ -386,7 +394,6 @@ document.addEventListener('click', function(e) {
     loadAndRender(newRaceId, newDay);
     return;
   }
-  // Course nav
   if (e.target.classList.contains('course-link')) {
     e.preventDefault();
     const newRaceId = e.target.getAttribute('data-race-id');
@@ -395,7 +402,6 @@ document.addEventListener('click', function(e) {
     loadAndRender(newRaceId, newDay, true, courseName);
     return;
   }
-  // Race times
   if (e.target.classList.contains('race-link')) {
     e.preventDefault();
     const newRaceId = e.target.getAttribute('data-race-id');
@@ -403,7 +409,6 @@ document.addEventListener('click', function(e) {
     loadAndRender(newRaceId, newDay);
     return;
   }
-  // Runner more info
   if (e.target.classList.contains('runner-more-btn')) {
     const card = e.target.closest('.runner-card');
     const more = card.querySelector('.runner-more');
@@ -418,8 +423,6 @@ document.addEventListener('click', function(e) {
     }
   }
 });
-
-// Popstate nav
 window.addEventListener('popstate', function(e) {
   const state = e.state || {};
   loadAndRender(state.raceId, state.day, false);
