@@ -715,3 +715,12 @@
     font-size: 0.85em;
   }
 }
+.tips-button-container {
+  text-align: center;
+  margin-top: 1.2em; /* optional spacing */
+}
+.see-tips-btn.picks-section-button {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
