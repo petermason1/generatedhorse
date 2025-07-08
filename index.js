@@ -208,7 +208,6 @@ function renderByCourse(allRaces) {
 
 document.getElementById('main-content-dynamic').innerHTML = renderByCourse(races);
 
-// ==== RENDER TODAY'S SMART PICKS ====
 function renderTodaySmartPicks(allRaces) {
   const isNonRunner = r => r.number && r.number.toString().trim().toUpperCase() === 'NR';
 
@@ -256,7 +255,7 @@ function renderTodaySmartPicks(allRaces) {
       topRunner: top1,
       gap
     };
-  }).filter(Boolean) // remove nulls
+  }).filter(Boolean); // remove nulls
 
   // Sort races by score gap (descending) — more confident picks first
   raceTopDiffs.sort((a, b) => b.gap - a.gap);
@@ -279,14 +278,15 @@ function renderTodaySmartPicks(allRaces) {
           <a href="racecard.html?race_id=${pick.raceId}" class="pick-horse-link">
             <span class="pick-horse">${r.horse}</span>
           </a>
-          <span class="pick-race">${pick.offTime} ${pick.course}</span>
-          <span class="pick-odds">Odds: ${odds}</span>
         </div>
+        <div class="pick-race">${pick.offTime} ${pick.course}</div>
+        <div class="pick-odds">Odds: ${odds}</div>
         <div class="pick-notes">Score: ${r.score.toFixed(2)} (Gap: ${pick.gap.toFixed(2)})</div>
       </div>
     `;
   }).join('');
 }
+
 
 const picksContainer = document.querySelector('.picks-list');
 if (picksContainer) {
