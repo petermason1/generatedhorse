@@ -108,20 +108,30 @@
 </head>
 <body>
   <nav class="main-navbar">
-    <div class="navbar-inner" style="display:flex;align-items:center;justify-content:space-between;padding:1rem; background:#17212b;">
-      <a href="index.html" class="nav-brand" style="color:#36e8b5; font-weight:700; font-size:1.3rem; text-decoration:none;">Smart Racecards</a>
-      <div class="nav-links" id="navLinks" style="display:flex;gap:1rem;">
-        <a href="index.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Home</a>
-        <a href="today.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Today's Races</a>
-        <a href="results.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Results</a>
-        <a href="tips.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Tipster</a>
-        <a href="yesterday.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Historical</a>
-        <a href="custom-score.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Custom Score</a>
-        <a href="about.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">About</a>
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="Smart Racecards Logo" />
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="today.html" class="nav-link">Today's Races</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="tips.html" class="nav-link">Tipster</a>
+        <a href="yesterday.html" class="nav-link">Historical</a>
+        <a href="custom-score.html" class="nav-link">Custom Score</a>
+        <a href="about.html" class="nav-link">About</a>
       </div>
+      <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
+        <span class="icon-dark">🌙</span>
+        <span class="icon-light">☀️</span>
+      </button>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
     </div>
+    <div class="nav-backdrop" id="navBackdrop"></div>
   </nav>
-
   <main class="container" role="main" aria-label="Horse racing ROI and winners">
     <h1>Selections, Winners &amp; ROI Breakdown</h1>
 
