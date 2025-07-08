@@ -142,7 +142,7 @@ function isNonRunner(r) {
 
 // ===== END SCORING LOGIC =====
 
-// === MAIN CODE ===
+// ===== MAIN CODE =====
 
 const races = (window.racecardsData && window.racecardsData.racecards) || [];
 
@@ -229,6 +229,25 @@ function renderTodaySmartPicks(allRaces) {
 
     const gap = top1.score - top2.score;
 
+    // Only consider this race if top1 odds fractional is >= 6/1
+    // Convert fractional odds string (like "6/1") to numeric value: 6
+    let oddsValue = 0;
+    if (top1.odds && top1.odds.length > 0 && top1.odds[0].fractional) {
+      const frac = top1.odds[0].fractional;
+      const parts = frac.split('/');
+      if (parts.length === 2) {
+        const numerator = parseFloat(parts[0]);
+        const denominator = parseFloat(parts[1]);
+        if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+          oddsValue = numerator / denominator;
+        }
+      }
+    }
+
+    if (oddsValue < 6) {
+      return null; // skip this race, top pick odds too short
+    }
+
     return {
       raceId: race._id,
       raceName: race.race_name,
@@ -246,7 +265,7 @@ function renderTodaySmartPicks(allRaces) {
   const topPicks = raceTopDiffs.slice(0, 3);
 
   if (topPicks.length === 0) {
-    return `<p>No picks available for today.</p>`;
+    return `<p>No picks available matching the criteria.</p>`;
   }
 
   // Render picks
@@ -257,7 +276,9 @@ function renderTodaySmartPicks(allRaces) {
       <div class="pick-card ${i === 0 ? 'pick-best' : ''}">
         ${i === 0 ? '<div class="pick-label">Value Pick</div>' : ''}
         <div class="pick-main">
-          <span class="pick-horse">${r.horse}</span>
+          <a href="racecard.html?race_id=${pick.raceId}" class="pick-horse-link">
+            <span class="pick-horse">${r.horse}</span>
+          </a>
           <span class="pick-race">${pick.offTime} ${pick.course}</span>
           <span class="pick-odds">Odds: ${odds}</span>
         </div>
@@ -266,8 +287,6 @@ function renderTodaySmartPicks(allRaces) {
     `;
   }).join('');
 }
-
-
 
 const picksContainer = document.querySelector('.picks-list');
 if (picksContainer) {
