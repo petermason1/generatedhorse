@@ -156,7 +156,7 @@ console.log('tips.js: Script started.');
     const michaelsTips = ["bluebella", "ukantango", "wobwobwob", "billy no mates"];
     const chrisTips    = ["amestris", "the vital spark", "voix de bocelli", "semser"];
     const peterTips    = ["good shot", "walk the moon","Ballytechno", "Lambournghini"];
-    const kenTips      = ["we still believe", "binhareer", "lion's house", "sabrimento"];
+    const kenTips      = ["city house", "mono river", "ina mina", "wbee"];
     const racingPostTips = ["Jesmond Dawn", "Astelia", "I'm A Starman", "Captain Hanley"];
 
     // ==== APPEND MORE TIPSTERS HERE ====
