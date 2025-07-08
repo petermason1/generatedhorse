@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+  <!-- === HEAD === -->
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
   <script>
@@ -27,6 +28,7 @@
   <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
+  <!-- === NAVIGATION === -->
   <nav class="main-navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-brand">
@@ -53,6 +55,7 @@
     <div class="nav-backdrop" id="navBackdrop"></div>
   </nav>
 
+  <!-- === MAIN CONTENT === -->
   <main class="container">
 
     <!-- HERO SECTION -->
@@ -70,7 +73,7 @@
       </div>
     </header>
 
-    <!-- QUICK ACCESS -->
+    <!-- QUICK ACCESS LINKS -->
     <section class="quick-access-links">
       <h2>Quick Navigation</h2>
       <div class="link-grid">
@@ -93,18 +96,30 @@
       </div>
     </section>
 
-    
-
-    <!-- NEXT 6 RACES BAR (populated by JS) -->
+    <!-- NEXT 6 RACES BAR -->
     <section class="next6-bar">
       <h2>Next 6 Races</h2>
       <div class="next6-races" id="next6-dynamic"></div>
     </section>
 
-    <!-- RACES BY COURSE (populated by JS) -->
+    <!-- RACES BY COURSE -->
     <section class="races-course-list">
       <h2>Today's Racecards</h2>
       <div id="main-content-dynamic"></div>
+    </section>
+
+    <!-- TODAY'S TOP PICKS -->
+    <section id="today-picks" class="today-picks-section">
+      <h2>🔥 Today's Smart Picks</h2>
+      <div class="picks-intro">
+        Data-powered value bets you won’t see plastered everywhere else. <b>Click any horse for live card & price.</b>
+      </div>
+      <div class="picks-list">
+        <!-- Picks injected by JS -->
+      </div>
+      <div style="margin:1.2em 0 0 0;">
+        <a href="tips.html" class="see-tips-btn btn-primary">Full Tips & Value Bets →</a>
+      </div>
     </section>
 
     <!-- CUSTOM SCORE TOOL CALLOUT -->
@@ -126,8 +141,10 @@
         <a href="tips.html" class="see-tips-btn">Access All Smart Picks Now &rarr;</a>
       </div>
     </section>
+
   </main>
 
+  <!-- === FOOTER === -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-links">
@@ -151,10 +168,12 @@
     </div>
   </footer>
 
+  <!-- === SCRIPTS === -->
   <script src="data.js"></script>
   <script src="index.js"></script>
   <script src="main.js"></script>
   <script>
+    // Footer year update
     document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
 </body>
