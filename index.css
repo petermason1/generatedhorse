@@ -8,7 +8,17 @@
   margin-right: auto;
 }
 .hero-section img {
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 12px; /* soft rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* subtle glow */
+}
+
+/* Optional hover effect for interactivity */
+.hero-section img:hover {
+  transform: scale(1.05) rotate(2deg);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.6));
+  cursor: pointer;
 }
 
 
