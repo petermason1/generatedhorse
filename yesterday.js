@@ -52,6 +52,20 @@ function groupBy(arr, key) {
   }, {});
 }
 
+// Helper to safely parse tip_position as a number
+function getTipPosition(r) {
+  if (!r.tip_position) return null;
+  const posStr = String(r.tip_position).trim();
+  const posNum = parseFloat(posStr);
+  return isNaN(posNum) ? null : posNum;
+}
+
+// Helper to safely parse win_return as float
+function getWinReturn(r) {
+  const val = parseFloat(r.win_return);
+  return isNaN(val) ? 0 : val;
+}
+
 fetch(CSV_PATH)
   .then(resp => resp.text())
   .then(text => {
@@ -71,42 +85,49 @@ fetch(CSV_PATH)
     const totalReturned = data.reduce((a, r) => a + (parseFloat(r['win_return']||'0') || 0), 0);
     const roiAll = totalStaked ? (((totalReturned - totalStaked) / totalStaked) * 100).toFixed(2) : '0.00';
 
-    // Update elements in the new summary-grid structure
+    // --- TOP PICK WIN/PLACE STATS ---
+    const topPickWins = data.filter(r => getTipPosition(r) === 1).length;
+    const topPickPlaces = data.filter(r => {
+      const pos = getTipPosition(r);
+      return pos !== null && pos >= 1 && pos <= 3;
+    }).length;
+
+    const winPercent = totalRaces ? ((topPickWins / totalRaces) * 100).toFixed(1) : '0.0';
+    const placePercent = totalRaces ? ((topPickPlaces / totalRaces) * 100).toFixed(1) : '0.0';
+
+    // Update summary elements in DOM
     document.getElementById('total-races').textContent = totalRaces;
     document.getElementById('total-staked').textContent = '£' + totalStaked.toFixed(2);
     document.getElementById('total-returned').textContent = '£' + totalReturned.toFixed(2);
-    document.getElementById('roi-all').textContent = roiAll; // No '%' here, as it's in the HTML now
+    document.getElementById('roi-all').textContent = roiAll; // '%' in HTML
 
+    document.getElementById('top-pick-wins').textContent = `${topPickWins} (${winPercent}%)`;
+    document.getElementById('top-pick-places').textContent = `${topPickPlaces} (${placePercent}%)`;
 
     // -------- ROI BY COURSE --------
-   let courseData = groupBy(data, 'course');
-let html = `<tr><th>Course</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>`;
+    let courseData = groupBy(data, 'course');
+    let html = `<tr><th>Course</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>`;
 
-// Calculate and collect course rows
-const rowsArr = Object.entries(courseData).map(([course, rows]) => {
-  const races = rows.length;
-  const staked = rows.reduce((a, r) => a + (parseFloat(r['staked']||'1') || 0), 0);
-  const returned = rows.reduce((a, r) => a + (parseFloat(r['win_return']||'0') || 0), 0);
-  const roi = staked ? (((returned - staked) / staked) * 100).toFixed(2) : '0.00';
-  return {
-    course,
-    races,
-    staked,
-    returned,
-    roi: parseFloat(roi), // for sorting
-    html: `<tr${roi > 0 ? ' class="win-row"' : ''}><td>${course}</td><td>${races}</td><td>£${staked.toFixed(2)}</td><td>£${returned.toFixed(2)}</td><td>${roi}</td></tr>`
-  };
-});
+    const rowsArr = Object.entries(courseData).map(([course, rows]) => {
+      const races = rows.length;
+      const staked = rows.reduce((a, r) => a + (parseFloat(r['staked']||'1') || 0), 0);
+      const returned = rows.reduce((a, r) => a + (parseFloat(r['win_return']||'0') || 0), 0);
+      const roi = staked ? (((returned - staked) / staked) * 100).toFixed(2) : '0.00';
+      return {
+        course,
+        races,
+        staked,
+        returned,
+        roi: parseFloat(roi),
+        html: `<tr${roi > 0 ? ' class="win-row"' : ''}><td>${course}</td><td>${races}</td><td>£${staked.toFixed(2)}</td><td>£${returned.toFixed(2)}</td><td>${roi}</td></tr>`
+      };
+    });
 
-// Split into winning and losing, sort each, then concat
-const positive = rowsArr.filter(r => r.roi > 0).sort((a, b) => a.course.localeCompare(b.course));
-const negative = rowsArr.filter(r => r.roi <= 0).sort((a, b) => a.course.localeCompare(b.course));
+    const positive = rowsArr.filter(r => r.roi > 0).sort((a, b) => a.course.localeCompare(b.course));
+    const negative = rowsArr.filter(r => r.roi <= 0).sort((a, b) => a.course.localeCompare(b.course));
 
-// Combine and build HTML
-[...positive, ...negative].forEach(r => { html += r.html; });
-
-document.getElementById('roi-by-course').innerHTML = html;
-
+    [...positive, ...negative].forEach(r => { html += r.html; });
+    document.getElementById('roi-by-course').innerHTML = html;
 
     // -------- ROI BY TYPE --------
     let typeData = groupBy(data, 'type');
@@ -133,7 +154,9 @@ document.getElementById('roi-by-course').innerHTML = html;
     document.getElementById('roi-by-class').innerHTML = html;
 
     // -------- WINNERS TABLE --------
-    const winners = data.filter(r => r.tip_position === '1' || r.tip_position === '1.0' || parseFloat(r.win_return) > 0);
+    const winners = data.filter(r =>
+      getTipPosition(r) === 1 || getWinReturn(r) > 0
+    );
     winners.sort((a, b) => new Date(b.date) - new Date(a.date) || a.course.localeCompare(b.course));
     let winHtml = '';
     winners.forEach(r => {

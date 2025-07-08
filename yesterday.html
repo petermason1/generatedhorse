@@ -1,151 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NMB0VG2VBB');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMB0VG2VBB');
+  </script>
 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horse Racing ROI & Winners | Smart Racecards</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="See our full historic record of horse racing tips, winners, and ROI by course, type, and class. Data-driven results and all-time stats from Smart Racecards.">
- <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <meta name="description" content="See our full historic record of horse racing tips, winners, and ROI by course, type, and class. Data-driven results and all-time stats from Smart Racecards." />
+  <link rel="icon" href="favicon.png" type="image/png" sizes="32x32" />
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="yesterday.css" />
   <style>
-    .table-responsive { overflow-x: auto; width: 100%; }
-    table { min-width: 650px; }
+    body {
+      font-family: "Roboto", sans-serif;
+      background: #11171c;
+      color: #cbd5e1;
+      margin: 0; padding: 0;
+      line-height: 1.45;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1, h2, h3 {
+      color: #ffe561;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .roi-summary p {
+      margin: 0.3rem 0;
+      font-size: 1.05rem;
+    }
+    .roi-summary b {
+      color: #36e8b5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      background: #1e293b;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0 12px #22c78833;
+    }
     th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
       white-space: nowrap;
+      border-bottom: 1px solid #334155;
+      max-width: 140px;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 110px;
-      vertical-align: middle;
     }
-    .winners-table th:nth-child(4),
-    .winners-table td:nth-child(4) {
-      white-space: normal;
-      word-break: break-word;
-      overflow-wrap: anywhere;
-      max-width: 190px;
+    th {
+      background: #253341;
+      font-weight: 700;
+      color: #36e8b5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
+    tr.win-row {
+      background-color: #1a2f23;
+    }
+    tr.win-row:hover {
+      background-color: #22c78833;
+    }
+    .table-responsive {
+      overflow-x: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px #22c78833 inset;
+      margin-bottom: 2rem;
+    }
+    /* Responsive adjustments */
     @media (max-width: 900px) {
-      table { min-width: 500px; }
-      th, td { max-width: 90px; font-size: 0.97em; padding: 8px 6px; }
+      th, td {
+        max-width: 90px;
+        font-size: 0.95rem;
+        padding: 0.6rem 0.8rem;
+      }
     }
     @media (max-width: 600px) {
-      .container { padding: 10px 2vw; }
-      th, td { font-size: 0.92em; padding: 6px 4px; }
-    }
-    @media (max-width: 420px) {
-      /* Hide columns if table is still too wide on tiny screens (add nth-child as needed) */
-      /* Example: Hide 'Course' column: */
-      /* .winners-table th:nth-child(2), .winners-table td:nth-child(2) { display: none; } */
+      .container {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+      }
+      th, td {
+        max-width: 70px;
+        font-size: 0.9rem;
+        padding: 0.5rem 0.6rem;
+      }
+      /* Optional: hide some columns on very small screens */
+      /* Example:
+      th:nth-child(5), td:nth-child(5) {
+        display: none;
+      } */
     }
   </style>
 </head>
 <body>
-<nav class="main-navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="nav-brand">
-      <img src="logo.png" alt="Smart Racecards Logo">
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="today.html" class="nav-link">Today's Races</a>
-      <a href="results.html" class="nav-link">Results</a>
-      <a href="tips.html" class="nav-link">Tipster</a>
-      <a href="yesterday.html" class="nav-link">Historical</a>
-      <a href="custom-score.html" class="nav-link">Custom Score</a>
-      <a href="about.html" class="nav-link">About</a>
+  <nav class="main-navbar">
+    <div class="navbar-inner" style="display:flex;align-items:center;justify-content:space-between;padding:1rem; background:#17212b;">
+      <a href="index.html" class="nav-brand" style="color:#36e8b5; font-weight:700; font-size:1.3rem; text-decoration:none;">Smart Racecards</a>
+      <div class="nav-links" id="navLinks" style="display:flex;gap:1rem;">
+        <a href="index.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Home</a>
+        <a href="today.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Today's Races</a>
+        <a href="results.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Results</a>
+        <a href="tips.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Tipster</a>
+        <a href="yesterday.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Historical</a>
+        <a href="custom-score.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">Custom Score</a>
+        <a href="about.html" class="nav-link" style="color:#cbd5e1; text-decoration:none;">About</a>
+      </div>
     </div>
-    <button id="theme-toggle" aria-label="Toggle light and dark mode" class="theme-toggle">
-      <span class="icon-dark">🌙</span>
-      <span class="icon-light">☀️</span>
-    </button>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
-  </div>
-  <div class="nav-backdrop" id="navBackdrop"></div>
-</nav>
-  <div class="container">
-    <h1>Selections, Winners & ROI Breakdown</h1>
-    <div class="roi-summary summary">
-      <h2>ROI Summary</h2>
-      <p><b>Total races processed:</b> <span id="total-races">...</span></p>
-      <p><b>Total staked:</b> <span id="total-staked">...</span></p>
-      <p><b>Total returned:</b> <span id="total-returned">...</span></p>
-      <p><b>Overall ROI:</b> <span id="roi-all">...</span>%</p>
-    </div>
-    <div class="roi-tables">
+  </nav>
+
+  <main class="container" role="main" aria-label="Horse racing ROI and winners">
+    <h1>Selections, Winners &amp; ROI Breakdown</h1>
+
+    <section class="roi-summary summary" aria-labelledby="roi-summary-title">
+      <h2 id="roi-summary-title">ROI Summary</h2>
+      <p><b>Total races processed:</b> <span id="total-races">Loading...</span></p>
+      <p><b>Total staked:</b> <span id="total-staked">Loading...</span></p>
+      <p><b>Total returned:</b> <span id="total-returned">Loading...</span></p>
+      <p><b>Overall ROI:</b> <span id="roi-all">Loading...</span>%</p>
+      <p><b>Top pick wins:</b> <span id="top-pick-wins">Loading...</span></p>
+      <p><b>Top pick placed (top 3):</b> <span id="top-pick-places">Loading...</span></p>
+    </section>
+
+    <section class="roi-tables" aria-label="ROI detailed tables">
       <h3>ROI by Course</h3>
-      <div class="table-responsive">
-        <table id="roi-by-course" class="roi-table"></table>
+      <div class="table-responsive" role="region" aria-live="polite" aria-relevant="all">
+        <table id="roi-by-course" class="roi-table" aria-describedby="roi-by-course-caption"></table>
       </div>
+
       <h3>ROI by Race Type</h3>
-      <div class="table-responsive">
-        <table id="roi-by-type" class="roi-table"></table>
+      <div class="table-responsive" role="region" aria-live="polite" aria-relevant="all">
+        <table id="roi-by-type" class="roi-table" aria-describedby="roi-by-type-caption"></table>
       </div>
+
       <h3>ROI by Race Class</h3>
-      <div class="table-responsive">
-        <table id="roi-by-class" class="roi-table"></table>
+      <div class="table-responsive" role="region" aria-live="polite" aria-relevant="all">
+        <table id="roi-by-class" class="roi-table" aria-describedby="roi-by-class-caption"></table>
       </div>
-    </div>
-    <div class="winners-table">
-      <h2>All Winners</h2>
-      <div class="table-responsive">
-        <table class="winners-table">
+    </section>
+
+    <section class="winners-table" aria-labelledby="winners-table-title">
+      <h2 id="winners-table-title">All Winners</h2>
+      <div class="table-responsive" role="region" aria-live="polite" aria-relevant="all">
+        <table class="winners-table" role="table">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Course</th>
-              <th>Off</th>
-              <th>Tip</th>
-              <th>Odds</th>
-              <th>SP</th>
-              <th>Win Return</th>
+              <th scope="col">Date</th>
+              <th scope="col">Course</th>
+              <th scope="col">Off</th>
+              <th scope="col">Tip</th>
+              <th scope="col">Odds</th>
+              <th scope="col">SP</th>
+              <th scope="col">Win Return</th>
             </tr>
           </thead>
           <tbody id="winners-rows">
-            <!-- WINNERS ROWS GO HERE -->
+            <!-- Winners rows inserted here by JS -->
           </tbody>
         </table>
       </div>
-    </div>
-  </div>
-  
-  <footer class="site-footer">
+    </section>
+  </main>
+
+  <footer class="site-footer" style="background:#17212b; color:#8693a6; padding:1.5rem 1rem; text-align:center; font-size:0.9rem;">
     <div class="footer-inner">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="tips.html">Tips</a>
-        <a href="yesterday.html">Historical</a>
-        <a href="custom-score.html">Custom Score</a>
-        <a href="about.html">About Us</a>
+      <div class="footer-links" style="margin-bottom:1rem; display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+        <a href="index.html" style="color:#36e8b5; text-decoration:none;">Home</a>
+        <a href="tips.html" style="color:#36e8b5; text-decoration:none;">Tips</a>
+        <a href="yesterday.html" style="color:#36e8b5; text-decoration:none;">Historical</a>
+        <a href="custom-score.html" style="color:#36e8b5; text-decoration:none;">Custom Score</a>
+        <a href="about.html" style="color:#36e8b5; text-decoration:none;">About Us</a>
       </div>
       <div class="footer-meta">
         <span id="footer-year"></span> Smart Racecards
-        <span>•</span>
-        <a href="mailto:info@smartracecards.com">Contact</a>
+        <span> • </span>
+        <a href="mailto:info@smartracecards.com" style="color:#36e8b5;">Contact</a>
       </div>
-      <div class="footer-disclaimer">
-        <small>
-          For informational purposes only – not betting advice.<br>
-          Please gamble responsibly. 18+
-        </small>
+      <div class="footer-disclaimer" style="margin-top:0.6rem;">
+        <small>For informational purposes only – not betting advice.<br> Please gamble responsibly. 18+</small>
       </div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
 
   <script src="yesterday.js"></script>
   <script src="main.js"></script>
