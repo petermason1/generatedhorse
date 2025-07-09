@@ -669,7 +669,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/0/7/314704.svg",
           "last_run": "18",
           "form": "679952",
-          "trainer_rtf": "59",
+          "trainer_rtf": "57",
           "score": 47.59
         },
         {
@@ -962,9 +962,9 @@ window.racecardsData = {
           "trainer_id": "trn_34614",
           "trainer_location": "Pandy, Monmouths",
           "trainer_14_days": {
-            "runs": "17",
-            "wins": "2",
-            "percent": "12"
+            "runs": "18",
+            "wins": "3",
+            "percent": "17"
           },
           "owner": "Mrs T Burns & Emma Evans",
           "owner_id": "own_1167564",
@@ -991,8 +991,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/1/9/291891b.svg",
           "last_run": "16",
           "form": "47429",
-          "trainer_rtf": "44",
-          "score": 46.49
+          "trainer_rtf": "47",
+          "score": 49.89
         },
         {
           "horse_id": "hrs_52862656",
@@ -1017,9 +1017,9 @@ window.racecardsData = {
           "trainer_id": "trn_346887",
           "trainer_location": "Sheriff Hutton, N Yorks",
           "trainer_14_days": {
-            "runs": "39",
+            "runs": "36",
             "wins": "4",
-            "percent": "10"
+            "percent": "11"
           },
           "owner": "G Routledge Racing",
           "owner_id": "own_1342132",
@@ -1047,7 +1047,7 @@ window.racecardsData = {
           "last_run": "21",
           "form": "630",
           "trainer_rtf": "47",
-          "score": 42.8
+          "score": 43.4
         },
         {
           "horse_id": "hrs_51766778",
@@ -1072,9 +1072,9 @@ window.racecardsData = {
           "trainer_id": "trn_291465",
           "trainer_location": "Nawton, N Yorks",
           "trainer_14_days": {
-            "runs": "7",
+            "runs": "6",
             "wins": "1",
-            "percent": "14"
+            "percent": "17"
           },
           "owner": "Harswell Thoroughbred Racing I",
           "owner_id": "own_1372548",
@@ -1102,7 +1102,7 @@ window.racecardsData = {
           "last_run": "29",
           "form": "705",
           "trainer_rtf": "50",
-          "score": 40.17
+          "score": 41.97
         },
         {
           "horse_id": "hrs_51866325",
@@ -1135,8 +1135,8 @@ window.racecardsData = {
           "owner_id": "own_1428592",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Not at best in a claimer last time but earlier efforts offered hope of better; considered",
+          "spotlight": "Disappointing effort dropped into a claimer at Beverley six weeks ago but her first two runs did hint at ability; has the pace to exploit her inside stall and she could take a step forward.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -1182,9 +1182,9 @@ window.racecardsData = {
           "trainer_id": "trn_291465",
           "trainer_location": "Nawton, N Yorks",
           "trainer_14_days": {
-            "runs": "7",
+            "runs": "6",
             "wins": "1",
-            "percent": "14"
+            "percent": "17"
           },
           "owner": "Lucy Cornwell & Roger Fell",
           "owner_id": "own_1428008",
@@ -1212,7 +1212,7 @@ window.racecardsData = {
           "last_run": "30",
           "form": "668",
           "trainer_rtf": "50",
-          "score": 43.58
+          "score": 45.38
         },
         {
           "horse_id": "hrs_52862642",
@@ -1237,9 +1237,9 @@ window.racecardsData = {
           "trainer_id": "trn_45171",
           "trainer_location": "Coverham, North Yorkshire",
           "trainer_14_days": {
-            "runs": "43",
-            "wins": "9",
-            "percent": "21"
+            "runs": "42",
+            "wins": "8",
+            "percent": "19"
           },
           "owner": "Future Champions & E Burke",
           "owner_id": "own_1415820",
@@ -1267,7 +1267,7 @@ window.racecardsData = {
           "last_run": "26",
           "form": "0267",
           "trainer_rtf": "49",
-          "score": 51.825
+          "score": 50.225
         },
         {
           "horse_id": "hrs_49143248",
@@ -1347,9 +1347,9 @@ window.racecardsData = {
           "trainer_id": "trn_178524",
           "trainer_location": "Norton, N Yorks",
           "trainer_14_days": {
-            "runs": "9",
+            "runs": "7",
             "wins": "1",
-            "percent": "11"
+            "percent": "14"
           },
           "owner": "T&t Racing And Ollie Pears",
           "owner_id": "own_1431208",
@@ -1376,8 +1376,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/0/8/357802.svg",
           "last_run": "29",
           "form": "067",
-          "trainer_rtf": "25",
-          "score": 33.445
+          "trainer_rtf": "14",
+          "score": 35.245
         }
       ],
       "big_race": false,
@@ -1488,9 +1488,9 @@ window.racecardsData = {
           "trainer_id": "trn_349425",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "6",
+            "runs": "5",
             "wins": "1",
-            "percent": "17"
+            "percent": "20"
           },
           "owner": "Amo Racing Limited",
           "owner_id": "own_1008936",
@@ -1519,8 +1519,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/4/3/252234b.svg",
           "last_run": "15",
           "form": "250",
-          "trainer_rtf": "83",
-          "score": 61.425
+          "trainer_rtf": "100",
+          "score": 63.225
         },
         {
           "horse_id": "hrs_49142170",
@@ -1545,9 +1545,9 @@ window.racecardsData = {
           "trainer_id": "trn_280692",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "25",
+            "runs": "23",
             "wins": "4",
-            "percent": "16"
+            "percent": "17"
           },
           "owner": "Abdulla Al Mansoori",
           "owner_id": "own_718420",
@@ -1574,8 +1574,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/0/6/179605.svg",
           "last_run": "9",
           "form": "55",
-          "trainer_rtf": "52",
-          "score": 39.195
+          "trainer_rtf": "57",
+          "score": 39.795
         },
         {
           "horse_id": "hrs_52054674",
@@ -1600,7 +1600,7 @@ window.racecardsData = {
           "trainer_id": "trn_259083",
           "trainer_location": "Herridge, Wilts",
           "trainer_14_days": {
-            "runs": "27",
+            "runs": "26",
             "wins": "4",
             "percent": "15"
           },
@@ -1629,7 +1629,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/3/3/240332.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "37",
+          "trainer_rtf": "38",
           "score": -63.7
         },
         {
@@ -1669,8 +1669,8 @@ window.racecardsData = {
               "change_date": "2025-06-18"
             }
           ],
-          "comment": "",
-          "spotlight": "",
+          "comment": "40-1 and always behind on her Redcar debut 18 days ago (5f, good to firm)",
+          "spotlight": "40-1 and always behind on her Redcar debut 18 days ago (5f, good to firm); much more needed to feature.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -1724,8 +1724,8 @@ window.racecardsData = {
           "owner_id": "own_1429276",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Had an excuse on debut and then finished 3rd over C&D in May; can do better but needs to",
+          "spotlight": "Had tack issues when well behind Stardinia on her Leicester debut in April (5f, good); respectable third over C&D in May but she'll need another good step forward to come out on top this time.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -1771,9 +1771,9 @@ window.racecardsData = {
           "trainer_id": "trn_285282",
           "trainer_location": "Stoke Heath, Shropshire",
           "trainer_14_days": {
-            "runs": "19",
+            "runs": "18",
             "wins": "3",
-            "percent": "16"
+            "percent": "17"
           },
           "owner": "Nawaf Almutairi",
           "owner_id": "own_1384048",
@@ -1800,8 +1800,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/1/0/346012.svg",
           "last_run": "13",
           "form": "33",
-          "trainer_rtf": "72",
-          "score": 44.96
+          "trainer_rtf": "61",
+          "score": 45.56
         },
         {
           "horse_id": "hrs_53390288",
@@ -1912,9 +1912,9 @@ window.racecardsData = {
           "trainer_id": "trn_361449",
           "trainer_location": "West Ilsley, Berks",
           "trainer_14_days": {
-            "runs": "22",
-            "wins": "6",
-            "percent": "27"
+            "runs": "20",
+            "wins": "5",
+            "percent": "25"
           },
           "owner": "Garry Gilroy & Partner",
           "owner_id": "own_1438752",
@@ -1966,8 +1966,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/8/6/359688.svg",
           "last_run": "33",
           "form": "61-14",
-          "trainer_rtf": "67",
-          "score": 60.6
+          "trainer_rtf": "65",
+          "score": 59.0
         },
         {
           "horse_id": "hrs_47985700",
@@ -1992,7 +1992,7 @@ window.racecardsData = {
           "trainer_id": "trn_259083",
           "trainer_location": "Herridge, Wilts",
           "trainer_14_days": {
-            "runs": "27",
+            "runs": "26",
             "wins": "4",
             "percent": "15"
           },
@@ -2027,7 +2027,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/4/0/189043.svg",
           "last_run": "16",
           "form": "232822",
-          "trainer_rtf": "37",
+          "trainer_rtf": "38",
           "score": 59.135
         },
         {
@@ -2108,9 +2108,9 @@ window.racecardsData = {
           "trainer_id": "trn_178524",
           "trainer_location": "Norton, N Yorks",
           "trainer_14_days": {
-            "runs": "9",
+            "runs": "7",
             "wins": "1",
-            "percent": "11"
+            "percent": "14"
           },
           "owner": "Crystal Clear Racing 2",
           "owner_id": "own_1359208",
@@ -2139,8 +2139,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/0/8/339802.svg",
           "last_run": "43",
           "form": "97-081",
-          "trainer_rtf": "25",
-          "score": 39.745
+          "trainer_rtf": "14",
+          "score": 41.545
         },
         {
           "horse_id": "hrs_39961040",
@@ -2526,7 +2526,7 @@ window.racecardsData = {
           "trainer_id": "trn_45180",
           "trainer_location": "Middleham, N Yorks",
           "trainer_14_days": {
-            "runs": "9",
+            "runs": "12",
             "wins": "0",
             "percent": "0"
           },
@@ -2569,7 +2569,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/8/6/145684.svg",
           "last_run": "13",
           "form": "49-353",
-          "trainer_rtf": "22",
+          "trainer_rtf": "25",
           "score": 40.1
         },
         {
@@ -2595,9 +2595,9 @@ window.racecardsData = {
           "trainer_id": "trn_138861",
           "trainer_location": "Rock Farm, Worcs",
           "trainer_14_days": {
-            "runs": "11",
+            "runs": "10",
             "wins": "1",
-            "percent": "9"
+            "percent": "10"
           },
           "owner": "Mrs Melissa Anne Cooke",
           "owner_id": "own_1052296",
@@ -2630,8 +2630,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/7/0/263074.svg",
           "last_run": "7",
           "form": "808952",
-          "trainer_rtf": "73",
-          "score": 38.03
+          "trainer_rtf": "70",
+          "score": 38.63
         },
         {
           "horse_id": "hrs_38564862",
@@ -2956,9 +2956,9 @@ window.racecardsData = {
           "trainer_id": "trn_233226",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "18",
+            "runs": "17",
             "wins": "5",
-            "percent": "28"
+            "percent": "29"
           },
           "owner": "A Dale",
           "owner_id": "own_835388",
@@ -2999,7 +2999,7 @@ window.racecardsData = {
           "last_run": "20",
           "form": "214-6",
           "trainer_rtf": "53",
-          "score": 52.575
+          "score": 53.175
         },
         {
           "horse_id": "hrs_41051913",
@@ -3097,9 +3097,9 @@ window.racecardsData = {
           "trainer_id": "trn_34614",
           "trainer_location": "Pandy, Monmouths",
           "trainer_14_days": {
-            "runs": "17",
-            "wins": "2",
-            "percent": "12"
+            "runs": "18",
+            "wins": "3",
+            "percent": "17"
           },
           "owner": "P D Evans",
           "owner_id": "own_144900",
@@ -3140,8 +3140,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/2/2/36225.svg",
           "last_run": "16",
           "form": "811875",
-          "trainer_rtf": "44",
-          "score": 53.31
+          "trainer_rtf": "47",
+          "score": 56.71
         },
         {
           "horse_id": "hrs_47655307",
@@ -3166,7 +3166,7 @@ window.racecardsData = {
           "trainer_id": "trn_259083",
           "trainer_location": "Herridge, Wilts",
           "trainer_14_days": {
-            "runs": "27",
+            "runs": "26",
             "wins": "4",
             "percent": "15"
           },
@@ -3203,7 +3203,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/9/3/352392.svg",
           "last_run": "145",
           "form": "2-21",
-          "trainer_rtf": "37",
+          "trainer_rtf": "38",
           "score": -75.06
         },
         {
@@ -3286,9 +3286,9 @@ window.racecardsData = {
           "trainer_id": "trn_45171",
           "trainer_location": "Coverham, North Yorkshire",
           "trainer_14_days": {
-            "runs": "43",
-            "wins": "9",
-            "percent": "21"
+            "runs": "42",
+            "wins": "8",
+            "percent": "19"
           },
           "owner": "Wolf Pack 6 & Partners",
           "owner_id": "own_1252356",
@@ -3318,7 +3318,7 @@ window.racecardsData = {
           "last_run": "39",
           "form": "211500",
           "trainer_rtf": "49",
-          "score": 53.765
+          "score": 52.165
         },
         {
           "horse_id": "hrs_37576693",
@@ -3415,7 +3415,7 @@ window.racecardsData = {
           "trainer_id": "trn_201609",
           "trainer_location": "Irthington, Cumbria",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "9",
             "wins": "0",
             "percent": "0"
           },
@@ -3473,7 +3473,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/9/3/15395.svg",
           "last_run": "18",
           "form": "527131",
-          "trainer_rtf": "38",
+          "trainer_rtf": "33",
           "score": 45.355
         },
         {
@@ -3616,16 +3616,16 @@ window.racecardsData = {
           "trainer_id": "trn_34614",
           "trainer_location": "Pandy, Monmouths",
           "trainer_14_days": {
-            "runs": "17",
-            "wins": "2",
-            "percent": "12"
+            "runs": "18",
+            "wins": "3",
+            "percent": "17"
           },
           "owner": "Paul Downing",
           "owner_id": "own_630076",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Down the field in three starts (6f/5f); now steps up in trip/switches to handicap company",
+          "spotlight": "Down the field in three maiden/novice events (6f/5f) but she's a half-sister to 7f AW winner God Bless America (RPR 76) so may yet do better now she steps up in trip and switches to handicaps.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -3645,8 +3645,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/1/5/157519.svg",
           "last_run": "25",
           "form": "799",
-          "trainer_rtf": "44",
-          "score": 42.035
+          "trainer_rtf": "47",
+          "score": 45.435
         },
         {
           "horse_id": "hrs_52710385",
@@ -3812,9 +3812,9 @@ window.racecardsData = {
           "trainer_id": "trn_283149",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "18",
+            "runs": "17",
             "wins": "5",
-            "percent": "28"
+            "percent": "29"
           },
           "owner": "Victorious Racing",
           "owner_id": "own_1043444",
@@ -3855,8 +3855,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/6/8/260861.svg",
           "last_run": "21",
           "form": "10",
-          "trainer_rtf": "72",
-          "score": 67.38
+          "trainer_rtf": "71",
+          "score": 67.98
         },
         {
           "horse_id": "hrs_52641386",
@@ -3881,9 +3881,9 @@ window.racecardsData = {
           "trainer_id": "trn_52767",
           "trainer_location": "Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "18",
+            "runs": "17",
             "wins": "3",
-            "percent": "17"
+            "percent": "18"
           },
           "owner": "David W Armstrong",
           "owner_id": "own_506420",
@@ -3910,8 +3910,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/0/6/126605.svg",
           "last_run": "47",
           "form": "65",
-          "trainer_rtf": "61",
-          "score": 23.67
+          "trainer_rtf": "59",
+          "score": 24.27
         },
         {
           "horse_id": "hrs_53689713",
@@ -3991,9 +3991,9 @@ window.racecardsData = {
           "trainer_id": "trn_325899",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "38",
+            "runs": "36",
             "wins": "8",
-            "percent": "21"
+            "percent": "22"
           },
           "owner": "KHK Racing Ltd",
           "owner_id": "own_1177056",
@@ -4021,7 +4021,7 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "50",
-          "score": -58.5
+          "score": -57.9
         },
         {
           "horse_id": "hrs_53928399",
@@ -4046,9 +4046,9 @@ window.racecardsData = {
           "trainer_id": "trn_280692",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "25",
+            "runs": "23",
             "wins": "4",
-            "percent": "16"
+            "percent": "17"
           },
           "owner": "Highclere Thoroughbred Racing - Mulberry",
           "owner_id": "own_1437708",
@@ -4075,8 +4075,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/2/4/359427.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "52",
-          "score": -63.1
+          "trainer_rtf": "57",
+          "score": -62.5
         },
         {
           "horse_id": "hrs_54525625",
@@ -4211,7 +4211,7 @@ window.racecardsData = {
           "trainer_id": "trn_259083",
           "trainer_location": "Herridge, Wilts",
           "trainer_14_days": {
-            "runs": "27",
+            "runs": "26",
             "wins": "4",
             "percent": "15"
           },
@@ -4240,7 +4240,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/2/9/359927.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "37",
+          "trainer_rtf": "38",
           "score": -63.7
         },
         {
@@ -4266,9 +4266,9 @@ window.racecardsData = {
           "trainer_id": "trn_198099",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "16",
+            "runs": "15",
             "wins": "4",
-            "percent": "25"
+            "percent": "27"
           },
           "owner": "Howard Bolly Sutton Molony Weller Cowles",
           "owner_id": "own_1436264",
@@ -4295,8 +4295,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/6/0/359066.svg",
           "last_run": "28",
           "form": "8",
-          "trainer_rtf": "63",
-          "score": 37.28
+          "trainer_rtf": "67",
+          "score": 38.48
         },
         {
           "horse_id": "hrs_53633020",
@@ -4321,9 +4321,9 @@ window.racecardsData = {
           "trainer_id": "trn_40950",
           "trainer_location": "Kentisbeare, Devon",
           "trainer_14_days": {
-            "runs": "20",
+            "runs": "16",
             "wins": "2",
-            "percent": "10"
+            "percent": "13"
           },
           "owner": "Middleham Park Racing XXXIX",
           "owner_id": "own_580688",
@@ -4350,8 +4350,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/7/1/145172.svg",
           "last_run": "15",
           "form": "75",
-          "trainer_rtf": "50",
-          "score": 36.905
+          "trainer_rtf": "56",
+          "score": 38.705
         }
       ],
       "big_race": false,
@@ -4407,9 +4407,9 @@ window.racecardsData = {
           "trainer_id": "trn_147654",
           "trainer_location": "Epsom, Surrey",
           "trainer_14_days": {
-            "runs": "10",
+            "runs": "12",
             "wins": "1",
-            "percent": "10"
+            "percent": "8"
           },
           "owner": "Dare To Dream Racing",
           "owner_id": "own_1002948",
@@ -4484,8 +4484,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/3/7/250737.svg",
           "last_run": "27",
           "form": "536846",
-          "trainer_rtf": "56",
-          "score": 42.265
+          "trainer_rtf": "42",
+          "score": 41.065
         },
         {
           "horse_id": "hrs_40725909",
@@ -4510,9 +4510,9 @@ window.racecardsData = {
           "trainer_id": "trn_87426",
           "trainer_location": "Cropthorne, Worcs",
           "trainer_14_days": {
-            "runs": "41",
+            "runs": "46",
             "wins": "5",
-            "percent": "12"
+            "percent": "11"
           },
           "owner": "A Star Recruitment Ltd",
           "owner_id": "own_879124",
@@ -4543,8 +4543,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/8/7/219781.svg",
           "last_run": "26",
           "form": "538-70",
-          "trainer_rtf": "68",
-          "score": 38.08
+          "trainer_rtf": "61",
+          "score": 37.48
         },
         {
           "horse_id": "hrs_41504106",
@@ -4569,9 +4569,9 @@ window.racecardsData = {
           "trainer_id": "trn_37017",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "23",
+            "runs": "22",
             "wins": "1",
-            "percent": "4"
+            "percent": "5"
           },
           "owner": "David Fish And Partner",
           "owner_id": "own_1223432",
@@ -4598,8 +4598,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/5/8/305858.svg",
           "last_run": "24",
           "form": "8469-6",
-          "trainer_rtf": "57",
-          "score": 33.125
+          "trainer_rtf": "55",
+          "score": 33.725
         },
         {
           "horse_id": "hrs_45314920",
@@ -4624,9 +4624,9 @@ window.racecardsData = {
           "trainer_id": "trn_46089",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "7",
             "wins": "1",
-            "percent": "13"
+            "percent": "14"
           },
           "owner": "Summer Rain Syndicate",
           "owner_id": "own_1397392",
@@ -4653,8 +4653,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/4/3/349348.svg",
           "last_run": "40",
           "form": "-73740",
-          "trainer_rtf": "75",
-          "score": 31.45
+          "trainer_rtf": "71",
+          "score": 32.05
         },
         {
           "horse_id": "hrs_39059972",
@@ -4679,9 +4679,9 @@ window.racecardsData = {
           "trainer_id": "trn_226845",
           "trainer_location": "Shirenewton, Gwent",
           "trainer_14_days": {
-            "runs": "12",
+            "runs": "11",
             "wins": "3",
-            "percent": "25"
+            "percent": "27"
           },
           "owner": "The Maximus Syndicate",
           "owner_id": "own_1439724",
@@ -4740,8 +4740,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/3/9/359931.svg",
           "last_run": "14",
           "form": "758443",
-          "trainer_rtf": "67",
-          "score": 52.88
+          "trainer_rtf": "64",
+          "score": 54.08
         },
         {
           "horse_id": "hrs_40819632",
@@ -4766,9 +4766,9 @@ window.racecardsData = {
           "trainer_id": "trn_345654",
           "trainer_location": "Wotton-Under-Edge, Gloucs",
           "trainer_14_days": {
-            "runs": "3",
+            "runs": "2",
             "wins": "1",
-            "percent": "33"
+            "percent": "50"
           },
           "owner": "P Ponting",
           "owner_id": "own_446880",
@@ -4807,8 +4807,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/2/7/111720.svg",
           "last_run": "33",
           "form": "440920",
-          "trainer_rtf": "67",
-          "score": 48.58
+          "trainer_rtf": "100",
+          "score": 58.78
         },
         {
           "horse_id": "hrs_40353390",
@@ -4833,9 +4833,9 @@ window.racecardsData = {
           "trainer_id": "trn_46089",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "7",
             "wins": "1",
-            "percent": "13"
+            "percent": "14"
           },
           "owner": "H Maye",
           "owner_id": "own_1385000",
@@ -4879,8 +4879,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/5/2/346250.svg",
           "last_run": "14",
           "form": "946455",
-          "trainer_rtf": "75",
-          "score": 41.47
+          "trainer_rtf": "71",
+          "score": 42.07
         }
       ],
       "big_race": false,
@@ -4991,9 +4991,9 @@ window.racecardsData = {
           "trainer_id": "trn_370962",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "4",
+            "runs": "3",
             "wins": "1",
-            "percent": "25"
+            "percent": "33"
           },
           "owner": "Mr & Mrs James Blyth Currie",
           "owner_id": "own_868636",
@@ -5020,8 +5020,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/5/1/217159.svg",
           "last_run": "201",
           "form": "7-",
-          "trainer_rtf": "50",
-          "score": -154.25
+          "trainer_rtf": "33",
+          "score": -149.45
         },
         {
           "horse_id": "hrs_45886477",
@@ -5115,8 +5115,8 @@ window.racecardsData = {
           "owner_id": "own_1325592",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Half-brother to winners including La Rioja (6f 2yo including Group 3); watch the betting",
+          "spotlight": "Mohaather gelding; eighth foal; half-brother to winners La Rioja (6f 2yo including Group 3; RPR 111), Pastoral Girl (6f 2yo; 98), Lilbourne Lass (5f 2yo; 93) and Flirtinaskirt (5f, 76; dam of 5f Group 2 winner Liberty Beach); market can guide.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -5217,9 +5217,9 @@ window.racecardsData = {
           "trainer_id": "trn_338733",
           "trainer_location": "Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "16",
-            "wins": "3",
-            "percent": "19"
+            "runs": "14",
+            "wins": "2",
+            "percent": "14"
           },
           "owner": "Mr & Mrs G Middlebrook",
           "owner_id": "own_320532",
@@ -5246,8 +5246,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/3/1/80133.svg",
           "last_run": "16",
           "form": "7",
-          "trainer_rtf": "53",
-          "score": 31.43
+          "trainer_rtf": "57",
+          "score": 28.03
         },
         {
           "horse_id": "hrs_46975026",
@@ -5272,9 +5272,9 @@ window.racecardsData = {
           "trainer_id": "trn_30735",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "50",
+            "runs": "48",
             "wins": "12",
-            "percent": "24"
+            "percent": "25"
           },
           "owner": "Sheikh Juma Dalmook Al Maktoum",
           "owner_id": "own_804908",
@@ -5302,7 +5302,7 @@ window.racecardsData = {
           "last_run": "33",
           "form": "22",
           "trainer_rtf": "75",
-          "score": 53.3
+          "score": 53.9
         },
         {
           "horse_id": "hrs_54494818",
@@ -5327,9 +5327,9 @@ window.racecardsData = {
           "trainer_id": "trn_361449",
           "trainer_location": "West Ilsley, Berks",
           "trainer_14_days": {
-            "runs": "22",
-            "wins": "6",
-            "percent": "27"
+            "runs": "20",
+            "wins": "5",
+            "percent": "25"
           },
           "owner": "Jon and Julia Aisbitt",
           "owner_id": "own_602672",
@@ -5356,8 +5356,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/g/8/6/150668g.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "67",
-          "score": -55.7
+          "trainer_rtf": "65",
+          "score": -57.3
         },
         {
           "horse_id": "hrs_43003415",
@@ -5498,7 +5498,7 @@ window.racecardsData = {
           "trainer_id": "trn_125253",
           "trainer_location": "Kimpton, Hants",
           "trainer_14_days": {
-            "runs": "29",
+            "runs": "28",
             "wins": "6",
             "percent": "21"
           },
@@ -5506,8 +5506,8 @@ window.racecardsData = {
           "owner_id": "own_1337480",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "300,000gns yearling; shaped well on debut at Leicester, despite looking green; can improve",
+          "spotlight": "300,000gns yearling; half-sister to Listed-placed 7f-1m winner Northern Express (inc luding 2yo; RPR 112); shaped well, despite showing greenness, when third of 11 on debut at Leicester (1m, good to firm; 11-2) in June; open to improvement and has claims.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -5527,7 +5527,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/7/3/334370.svg",
           "last_run": "36",
           "form": "3",
-          "trainer_rtf": "55",
+          "trainer_rtf": "54",
           "score": 35.02
         },
         {
@@ -5553,7 +5553,7 @@ window.racecardsData = {
           "trainer_id": "trn_259083",
           "trainer_location": "Herridge, Wilts",
           "trainer_14_days": {
-            "runs": "27",
+            "runs": "26",
             "wins": "4",
             "percent": "15"
           },
@@ -5582,7 +5582,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/2/8/235824.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "37",
+          "trainer_rtf": "38",
           "score": -63.7
         },
         {
@@ -6002,9 +6002,9 @@ window.racecardsData = {
           "trainer_id": "trn_138861",
           "trainer_location": "Rock Farm, Worcs",
           "trainer_14_days": {
-            "runs": "11",
+            "runs": "10",
             "wins": "1",
-            "percent": "9"
+            "percent": "10"
           },
           "owner": "Precision Facades Ltd",
           "owner_id": "own_1051540",
@@ -6031,8 +6031,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/8/8/262885.svg",
           "last_run": "25",
           "form": "9-6558",
-          "trainer_rtf": "73",
-          "score": 33.395
+          "trainer_rtf": "70",
+          "score": 33.995
         },
         {
           "horse_id": "hrs_47869045",
@@ -6057,9 +6057,9 @@ window.racecardsData = {
           "trainer_id": "trn_46089",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "7",
             "wins": "1",
-            "percent": "13"
+            "percent": "14"
           },
           "owner": "Mrs Wendy Jarrett & J S Moore",
           "owner_id": "own_962952",
@@ -6086,8 +6086,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/7/240738.svg",
           "last_run": "114",
           "form": "0-7570",
-          "trainer_rtf": "75",
-          "score": -57.64
+          "trainer_rtf": "71",
+          "score": -57.04
         }
       ],
       "big_race": false,
@@ -6209,9 +6209,9 @@ window.racecardsData = {
           "trainer_id": "trn_138861",
           "trainer_location": "Rock Farm, Worcs",
           "trainer_14_days": {
-            "runs": "11",
+            "runs": "10",
             "wins": "1",
-            "percent": "9"
+            "percent": "10"
           },
           "owner": "Mike Harris Racing Club",
           "owner_id": "own_782608",
@@ -6267,8 +6267,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/5/6/195652.svg",
           "last_run": "7",
           "form": "194361",
-          "trainer_rtf": "73",
-          "score": 43.615
+          "trainer_rtf": "70",
+          "score": 44.215
         },
         {
           "horse_id": "hrs_11321212",
@@ -6487,9 +6487,9 @@ window.racecardsData = {
           "trainer_id": "trn_345654",
           "trainer_location": "Wotton-Under-Edge, Gloucs",
           "trainer_14_days": {
-            "runs": "3",
+            "runs": "2",
             "wins": "1",
-            "percent": "33"
+            "percent": "50"
           },
           "owner": "P Ponting",
           "owner_id": "own_446880",
@@ -6533,8 +6533,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/2/7/111720.svg",
           "last_run": "56",
           "form": "431-36",
-          "trainer_rtf": "67",
-          "score": 31.435
+          "trainer_rtf": "100",
+          "score": 41.635
         },
         {
           "horse_id": "hrs_22782781",
@@ -6631,9 +6631,9 @@ window.racecardsData = {
           "trainer_id": "trn_327069",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "7",
+            "runs": "6",
             "wins": "3",
-            "percent": "43"
+            "percent": "50"
           },
           "owner": "Greenlands Racing Syndicate",
           "owner_id": "own_1021948",
@@ -6660,8 +6660,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/8/4/255487.svg",
           "last_run": "14",
           "form": "31-667",
-          "trainer_rtf": "71",
-          "score": 59.26
+          "trainer_rtf": "83",
+          "score": 63.46
         }
       ],
       "big_race": false,
@@ -6862,7 +6862,7 @@ window.racecardsData = {
           "trainer_id": "trn_91413",
           "trainer_location": "Nicholashayne, Somerset",
           "trainer_14_days": {
-            "runs": "11",
+            "runs": "9",
             "wins": "0",
             "percent": "0"
           },
@@ -6923,7 +6923,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/6/2/272266.svg",
           "last_run": "15",
           "form": "581143",
-          "trainer_rtf": "20",
+          "trainer_rtf": "11",
           "score": 46.375
         },
         {
@@ -6949,9 +6949,9 @@ window.racecardsData = {
           "trainer_id": "trn_232713",
           "trainer_location": "Whitcombe, Dorset",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "7",
             "wins": "1",
-            "percent": "13"
+            "percent": "14"
           },
           "owner": "Miss Rebecca Dennis",
           "owner_id": "own_1061876",
@@ -6993,8 +6993,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/6/4/265469.svg",
           "last_run": "28",
           "form": "6/65",
-          "trainer_rtf": "38",
-          "score": 50.84
+          "trainer_rtf": "43",
+          "score": 51.44
         },
         {
           "horse_id": "hrs_40553380",
@@ -7019,9 +7019,9 @@ window.racecardsData = {
           "trainer_id": "trn_87426",
           "trainer_location": "Cropthorne, Worcs",
           "trainer_14_days": {
-            "runs": "41",
+            "runs": "46",
             "wins": "5",
-            "percent": "12"
+            "percent": "11"
           },
           "owner": "D Donohoe",
           "owner_id": "own_1367604",
@@ -7075,8 +7075,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/0/9/341901.svg",
           "last_run": "33",
           "form": "095923",
-          "trainer_rtf": "68",
-          "score": 51.12
+          "trainer_rtf": "61",
+          "score": 50.52
         },
         {
           "horse_id": "hrs_21340956",
@@ -7101,7 +7101,7 @@ window.racecardsData = {
           "trainer_id": "trn_74286",
           "trainer_location": "Kinnersley, Worcs",
           "trainer_14_days": {
-            "runs": "4",
+            "runs": "5",
             "wins": "0",
             "percent": "0"
           },
@@ -7464,7 +7464,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/4/6/176640.svg",
           "last_run": "63",
           "form": "-18397",
-          "trainer_rtf": "50",
+          "trainer_rtf": "33",
           "score": 12.84
         },
         {
@@ -7686,7 +7686,7 @@ window.racecardsData = {
           "trainer_id": "trn_368685",
           "trainer_location": "Elmbridge, Worcs",
           "trainer_14_days": {
-            "runs": "25",
+            "runs": "26",
             "wins": "3",
             "percent": "12"
           },
@@ -7731,7 +7731,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/2/9/359926.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "50",
+          "trainer_rtf": "46",
           "score": -65.9
         },
         {
@@ -7820,8 +7820,8 @@ window.racecardsData = {
           "owner_id": "own_580396",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "This expensive daughter of Blue Point is a likely player on her debut",
+          "spotlight": "110,000guineas foal, 600,000guineas yearling; dam, South African 5f-1m winner (Grade 2), is a half-sister to HK 5f Group 3 winner Stolz; daughter of Blue Point is a likely player on her debut.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -7867,9 +7867,9 @@ window.racecardsData = {
           "trainer_id": "trn_233226",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "18",
+            "runs": "17",
             "wins": "5",
-            "percent": "28"
+            "percent": "29"
           },
           "owner": "Saeed Manana",
           "owner_id": "own_68232",
@@ -7897,7 +7897,7 @@ window.racecardsData = {
           "last_run": "56",
           "form": "5",
           "trainer_rtf": "53",
-          "score": 5.9
+          "score": 6.5
         },
         {
           "horse_id": "hrs_54525527",
@@ -7930,8 +7930,8 @@ window.racecardsData = {
           "owner_id": "own_1439700",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Churchill filly is a half-sister to a pair of useful 6f winners; possibilities",
+          "spotlight": "75,000guineas yearling; Churchill filly is a half-sister to winners Coco Jamboo (6.5f/7f Group 3; RPR 113) and Last Surprise (6f AW/UAE dirt; RPR 101); dam, sprint maiden (RPR 65); possibilities.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -7951,7 +7951,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/2/9/359925.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "50",
+          "trainer_rtf": "33",
           "score": -74.3
         },
         {
@@ -8032,9 +8032,9 @@ window.racecardsData = {
           "trainer_id": "trn_325899",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "38",
+            "runs": "36",
             "wins": "8",
-            "percent": "21"
+            "percent": "22"
           },
           "owner": "Highclere Thoroughbred - Sycamore",
           "owner_id": "own_1439020",
@@ -8062,7 +8062,7 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "50",
-          "score": -58.5
+          "score": -57.9
         },
         {
           "horse_id": "hrs_54525555",
@@ -8087,9 +8087,9 @@ window.racecardsData = {
           "trainer_id": "trn_140445",
           "trainer_location": "Kingsclere, Hants",
           "trainer_14_days": {
-            "runs": "66",
-            "wins": "21",
-            "percent": "32"
+            "runs": "64",
+            "wins": "20",
+            "percent": "31"
           },
           "owner": "Helena Springfield Ltd",
           "owner_id": "own_38220",
@@ -8116,8 +8116,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/5/5/9555.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "72",
-          "score": -46.7
+          "trainer_rtf": "73",
+          "score": -47.7
         },
         {
           "horse_id": "hrs_53689643",
@@ -8283,7 +8283,7 @@ window.racecardsData = {
           "trainer_id": "trn_125253",
           "trainer_location": "Kimpton, Hants",
           "trainer_14_days": {
-            "runs": "29",
+            "runs": "28",
             "wins": "6",
             "percent": "21"
           },
@@ -8312,7 +8312,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/4/4/228449.svg",
           "last_run": "(171J)",
           "form": "",
-          "trainer_rtf": "55",
+          "trainer_rtf": "54",
           "score": 27.3
         },
         {
@@ -8338,9 +8338,9 @@ window.racecardsData = {
           "trainer_id": "trn_369216",
           "trainer_location": "Beckhampton, Wilts",
           "trainer_14_days": {
-            "runs": "14",
+            "runs": "13",
             "wins": "2",
-            "percent": "14"
+            "percent": "15"
           },
           "owner": "Juddmonte",
           "owner_id": "own_1206684",
@@ -8368,7 +8368,7 @@ window.racecardsData = {
           "last_run": "74",
           "form": "1",
           "trainer_rtf": "54",
-          "score": 97.4
+          "score": 98.1
         },
         {
           "horse_id": "hrs_45661735",
@@ -8448,9 +8448,9 @@ window.racecardsData = {
           "trainer_id": "trn_369216",
           "trainer_location": "Beckhampton, Wilts",
           "trainer_14_days": {
-            "runs": "14",
+            "runs": "13",
             "wins": "2",
-            "percent": "14"
+            "percent": "15"
           },
           "owner": "Mohammed Jaber",
           "owner_id": "own_247052",
@@ -8478,7 +8478,7 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "54",
-          "score": 18.0
+          "score": 18.7
         },
         {
           "horse_id": "hrs_46975005",
@@ -8503,9 +8503,9 @@ window.racecardsData = {
           "trainer_id": "trn_30735",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "50",
+            "runs": "48",
             "wins": "12",
-            "percent": "24"
+            "percent": "25"
           },
           "owner": "Newsells Park Stud & A Verrier",
           "owner_id": "own_1432944",
@@ -8551,7 +8551,7 @@ window.racecardsData = {
           "last_run": "54",
           "form": "5",
           "trainer_rtf": "75",
-          "score": 105.6
+          "score": 106.3
         },
         {
           "horse_id": "hrs_54525534",
@@ -8576,9 +8576,9 @@ window.racecardsData = {
           "trainer_id": "trn_344619",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "14",
+            "runs": "13",
             "wins": "2",
-            "percent": "14"
+            "percent": "15"
           },
           "owner": "Ms Rachel D S Hood",
           "owner_id": "own_132928",
@@ -8605,8 +8605,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/3/2/33232.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "79",
-          "score": 18.0
+          "trainer_rtf": "85",
+          "score": 18.7
         },
         {
           "horse_id": "hrs_53743424",
@@ -8639,8 +8639,8 @@ window.racecardsData = {
           "owner_id": "own_380412",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Always behind when 11th of 12 on debut at Sandown last month.",
+          "spotlight": "150,000gns yearling by Sottsass; always behind when 11th of 12 on debut at Sandown (1m2f, good to firm; 20-1) last month; may need more time.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -8686,16 +8686,16 @@ window.racecardsData = {
           "trainer_id": "trn_330048",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "10",
+            "runs": "9",
             "wins": "1",
-            "percent": "10"
+            "percent": "11"
           },
           "owner": "K K Ho",
           "owner_id": "own_923312",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Much better when third of 11 in Windsor novice last month; place claims.",
+          "spotlight": "300,000euros yearling by Sea The Stars; dropped right out in novice at Newcastle (1m, AW) last November and gelded in March; much better when third of 11 in Windsor novice (1m2f, good) last month; place claims.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -8716,7 +8716,7 @@ window.racecardsData = {
           "last_run": "30",
           "form": "0-3",
           "trainer_rtf": "56",
-          "score": 12.1
+          "score": 12.8
         },
         {
           "horse_id": "hrs_46295732",
@@ -8798,9 +8798,9 @@ window.racecardsData = {
           "trainer_id": "trn_140445",
           "trainer_location": "Kingsclere, Hants",
           "trainer_14_days": {
-            "runs": "66",
-            "wins": "21",
-            "percent": "32"
+            "runs": "64",
+            "wins": "20",
+            "percent": "31"
           },
           "owner": "Michael Blencowe",
           "owner_id": "own_1121944",
@@ -8827,8 +8827,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/8/4/280486.svg",
           "last_run": "70",
           "form": "63",
-          "trainer_rtf": "72",
-          "score": 124.0
+          "trainer_rtf": "73",
+          "score": 122.2
         },
         {
           "horse_id": "hrs_51735901",
@@ -8853,9 +8853,9 @@ window.racecardsData = {
           "trainer_id": "trn_264699",
           "trainer_location": "Pulborough, W Sussex",
           "trainer_14_days": {
-            "runs": "15",
-            "wins": "3",
-            "percent": "20"
+            "runs": "14",
+            "wins": "2",
+            "percent": "14"
           },
           "owner": "Qatar BS, China Horse Club & D Howden",
           "owner_id": "own_1378600",
@@ -8882,8 +8882,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/0/5/344650c.svg",
           "last_run": "84",
           "form": "9",
-          "trainer_rtf": "53",
-          "score": 27.7
+          "trainer_rtf": "50",
+          "score": 22.4
         },
         {
           "horse_id": "hrs_51650221",
@@ -8908,9 +8908,9 @@ window.racecardsData = {
           "trainer_id": "trn_344736",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "7",
-            "wins": "1",
-            "percent": "14"
+            "runs": "6",
+            "wins": "0",
+            "percent": "0"
           },
           "owner": "Wathnan Racing",
           "owner_id": "own_1300352",
@@ -8922,8 +8922,8 @@ window.racecardsData = {
               "change_date": "2025-05-14"
             }
           ],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Has shaped with promise in maidens on good over 1m2f at Nottingham and Chepstow.",
+          "spotlight": "250,000euros foal by Sea The Stars; has shaped with promise in maidens on good over 1m2f at Nottingham and Chepstow, looking a surefire winner; must go close.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -8945,8 +8945,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/8/0/325088.svg",
           "last_run": "40",
           "form": "23",
-          "trainer_rtf": "29",
-          "score": 100.9
+          "trainer_rtf": "17",
+          "score": 90.0
         },
         {
           "horse_id": "hrs_53211655",
@@ -8971,9 +8971,9 @@ window.racecardsData = {
           "trainer_id": "trn_372564",
           "trainer_location": "Lower Beeding, W Sussex",
           "trainer_14_days": {
-            "runs": "11",
-            "wins": "2",
-            "percent": "18"
+            "runs": "13",
+            "wins": "3",
+            "percent": "23"
           },
           "owner": "Jane Davis And Sara Mould",
           "owner_id": "own_1406700",
@@ -9000,8 +9000,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/5/7/351675b.svg",
           "last_run": "25",
           "form": "5",
-          "trainer_rtf": "73",
-          "score": 94.3
+          "trainer_rtf": "62",
+          "score": 98.9
         },
         {
           "horse_id": "hrs_53211662",
@@ -9026,9 +9026,9 @@ window.racecardsData = {
           "trainer_id": "trn_372564",
           "trainer_location": "Lower Beeding, W Sussex",
           "trainer_14_days": {
-            "runs": "11",
-            "wins": "2",
-            "percent": "18"
+            "runs": "13",
+            "wins": "3",
+            "percent": "23"
           },
           "owner": "Jane Davis And Sara Mould",
           "owner_id": "own_1406700",
@@ -9055,8 +9055,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/7/6/351675.svg",
           "last_run": "16",
           "form": "56",
-          "trainer_rtf": "73",
-          "score": 80.2
+          "trainer_rtf": "62",
+          "score": 84.8
         }
       ],
       "big_race": false,
@@ -9191,7 +9191,7 @@ window.racecardsData = {
           "trainer_id": "trn_360648",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "46",
+            "runs": "48",
             "wins": "7",
             "percent": "15"
           },
@@ -9248,7 +9248,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/5/0/326055.svg",
           "last_run": "34 (8J)",
           "form": "514111",
-          "trainer_rtf": "58",
+          "trainer_rtf": "56",
           "score": -7.755
         },
         {
@@ -9274,9 +9274,9 @@ window.racecardsData = {
           "trainer_id": "trn_330048",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "10",
+            "runs": "9",
             "wins": "1",
-            "percent": "10"
+            "percent": "11"
           },
           "owner": "Ms L Mars",
           "owner_id": "own_1284992",
@@ -9306,7 +9306,7 @@ window.racecardsData = {
           "last_run": "82",
           "form": "5-2134",
           "trainer_rtf": "56",
-          "score": 5.22
+          "score": 5.82
         },
         {
           "horse_id": "hrs_40394403",
@@ -9331,9 +9331,9 @@ window.racecardsData = {
           "trainer_id": "trn_327069",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "7",
+            "runs": "6",
             "wins": "3",
-            "percent": "43"
+            "percent": "50"
           },
           "owner": "White & Partner",
           "owner_id": "own_1432936",
@@ -9366,8 +9366,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/3/2/358234.svg",
           "last_run": "34",
           "form": "98-422",
-          "trainer_rtf": "71",
-          "score": 74.42
+          "trainer_rtf": "83",
+          "score": 78.62
         },
         {
           "horse_id": "hrs_31631334",
@@ -9476,9 +9476,9 @@ window.racecardsData = {
           "trainer_id": "trn_30735",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "50",
+            "runs": "48",
             "wins": "12",
-            "percent": "24"
+            "percent": "25"
           },
           "owner": "Mrs R Philipps",
           "owner_id": "own_186920",
@@ -9521,7 +9521,7 @@ window.racecardsData = {
           "last_run": "25",
           "form": "21-912",
           "trainer_rtf": "75",
-          "score": 57.78
+          "score": 58.38
         },
         {
           "horse_id": "hrs_37932342",
@@ -9546,9 +9546,9 @@ window.racecardsData = {
           "trainer_id": "trn_125874",
           "trainer_location": "Withington, Gloucs",
           "trainer_14_days": {
-            "runs": "13",
+            "runs": "15",
             "wins": "3",
-            "percent": "23"
+            "percent": "20"
           },
           "owner": "The Fob Racing Partnership 11",
           "owner_id": "own_1198036",
@@ -9600,8 +9600,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/0/5/299509.svg",
           "last_run": "82 (22J)",
           "form": "-26425",
-          "trainer_rtf": "42",
-          "score": -5.895
+          "trainer_rtf": "33",
+          "score": -7.695
         },
         {
           "horse_id": "hrs_14616238",
@@ -9626,9 +9626,9 @@ window.racecardsData = {
           "trainer_id": "trn_78147",
           "trainer_location": "Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "5",
-            "wins": "1",
-            "percent": "20"
+            "runs": "4",
+            "wins": "0",
+            "percent": "0"
           },
           "owner": "Maximum Racing And D Ffrench Davis",
           "owner_id": "own_1320468",
@@ -9714,7 +9714,7 @@ window.racecardsData = {
           "last_run": "42",
           "form": "837-2P",
           "trainer_rtf": "50",
-          "score": 44.59
+          "score": 32.19
         },
         {
           "horse_id": "hrs_26767734",
@@ -9841,9 +9841,9 @@ window.racecardsData = {
           "trainer_id": "trn_40950",
           "trainer_location": "Kentisbeare, Devon",
           "trainer_14_days": {
-            "runs": "20",
+            "runs": "16",
             "wins": "2",
-            "percent": "10"
+            "percent": "13"
           },
           "owner": "Great Western Racing III",
           "owner_id": "own_1359288",
@@ -9870,8 +9870,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/2/8/339822.svg",
           "last_run": "77",
           "form": "333",
-          "trainer_rtf": "50",
-          "score": -4.365
+          "trainer_rtf": "56",
+          "score": -2.565
         },
         {
           "horse_id": "hrs_45759546",
@@ -9896,9 +9896,9 @@ window.racecardsData = {
           "trainer_id": "trn_125595",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "20",
-            "wins": "1",
-            "percent": "5"
+            "runs": "19",
+            "wins": "0",
+            "percent": "0"
           },
           "owner": "Seymour Bloodstock Pty Ltd",
           "owner_id": "own_899296",
@@ -9926,7 +9926,7 @@ window.racecardsData = {
           "last_run": "10",
           "form": "8777",
           "trainer_rtf": "58",
-          "score": 40.785
+          "score": 37.385
         },
         {
           "horse_id": "hrs_42680547",
@@ -10017,8 +10017,8 @@ window.racecardsData = {
           "owner_id": "own_879164",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Won at Southwell in February but he's been generally disappointing since; down the list",
+          "spotlight": "Made all to win on handicap debut at Southwell (1m, Tapeta) in February, but he's been generally disappointing since and was a fading sixth at Wolverhampton (8.6f) last time; record now stands at 1-9 and this looks tough from a wide draw.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -10040,7 +10040,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/9/7/219791.svg",
           "last_run": "16",
           "form": "173846",
-          "trainer_rtf": "54",
+          "trainer_rtf": "58",
           "score": 54.795
         },
         {
@@ -10074,8 +10074,8 @@ window.racecardsData = {
           "owner_id": "own_1169700",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Has struggled since her maiden win in January and needs a big turnaround",
+          "spotlight": "Clearcut win in Newcastle maiden (1m, Tapeta) in January but she's struggled in four handicaps since; still lightly raced and mark is tumbling but she needs a big turnaround.",
           "quotes": [
             {
               "date": "2025-01-11",
@@ -10136,9 +10136,9 @@ window.racecardsData = {
           "trainer_id": "trn_264699",
           "trainer_location": "Pulborough, W Sussex",
           "trainer_14_days": {
-            "runs": "15",
-            "wins": "3",
-            "percent": "20"
+            "runs": "14",
+            "wins": "2",
+            "percent": "14"
           },
           "owner": "T G Roddick & W P Churchward",
           "owner_id": "own_1389892",
@@ -10165,8 +10165,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/7/4/347473.svg",
           "last_run": "55",
           "form": "444-99",
-          "trainer_rtf": "53",
-          "score": 27.475
+          "trainer_rtf": "50",
+          "score": 23.475
         },
         {
           "horse_id": "hrs_46602794",
@@ -10191,7 +10191,7 @@ window.racecardsData = {
           "trainer_id": "trn_172044",
           "trainer_location": "Westoning, Bedfords",
           "trainer_14_days": {
-            "runs": "5",
+            "runs": "6",
             "wins": "0",
             "percent": "0"
           },
@@ -10226,7 +10226,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/2/0/351025.svg",
           "last_run": "209",
           "form": "678-",
-          "trainer_rtf": "20",
+          "trainer_rtf": "17",
           "score": -152.295
         },
         {
@@ -10252,9 +10252,9 @@ window.racecardsData = {
           "trainer_id": "trn_338733",
           "trainer_location": "Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "16",
-            "wins": "3",
-            "percent": "19"
+            "runs": "14",
+            "wins": "2",
+            "percent": "14"
           },
           "owner": "Diskovery Xii",
           "owner_id": "own_1400548",
@@ -10283,8 +10283,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/3/1/350137.svg",
           "last_run": "10",
           "form": "078-13",
-          "trainer_rtf": "53",
-          "score": 50.325
+          "trainer_rtf": "57",
+          "score": 46.925
         },
         {
           "horse_id": "hrs_47065046",
@@ -10425,7 +10425,7 @@ window.racecardsData = {
           "trainer_id": "trn_191619",
           "trainer_location": "Royston, Herts",
           "trainer_14_days": {
-            "runs": "3",
+            "runs": "4",
             "wins": "0",
             "percent": "0"
           },
@@ -10559,9 +10559,9 @@ window.racecardsData = {
           "trainer_id": "trn_40860",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "23",
-            "wins": "3",
-            "percent": "13"
+            "runs": "24",
+            "wins": "4",
+            "percent": "17"
           },
           "owner": "Des Thurlby",
           "owner_id": "own_446096",
@@ -10591,8 +10591,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/2/5/111524.svg",
           "last_run": "27",
           "form": "091-24",
-          "trainer_rtf": "48",
-          "score": 51.32
+          "trainer_rtf": "50",
+          "score": 54.12
         },
         {
           "horse_id": "hrs_53181632",
@@ -10617,9 +10617,9 @@ window.racecardsData = {
           "trainer_id": "trn_325899",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "38",
+            "runs": "36",
             "wins": "8",
-            "percent": "21"
+            "percent": "22"
           },
           "owner": "Shylock",
           "owner_id": "own_1319328",
@@ -10647,7 +10647,7 @@ window.racecardsData = {
           "last_run": "11",
           "form": "867",
           "trainer_rtf": "50",
-          "score": 52.885
+          "score": 53.485
         }
       ],
       "big_race": false,
@@ -10732,7 +10732,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/2/6/287624.svg",
           "last_run": "34",
           "form": "3407",
-          "trainer_rtf": "44",
+          "trainer_rtf": "42",
           "score": 55.48
         },
         {
@@ -10777,8 +10777,8 @@ window.racecardsData = {
             }
           ],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "C&D scorer; below-par fifth at Wolver 16 days ago; could bounce back though",
+          "spotlight": "C&D scorer but she came in a below-par fifth of 12 in 9.5f Wolverhampton handicap 16 days ago; she could bounce back though with Oisin Murphy now up.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -10944,7 +10944,7 @@ window.racecardsData = {
           "trainer_id": "trn_92772",
           "trainer_location": "Chastleton, Oxon",
           "trainer_14_days": {
-            "runs": "5",
+            "runs": "3",
             "wins": "0",
             "percent": "0"
           },
@@ -11123,9 +11123,9 @@ window.racecardsData = {
           "trainer_id": "trn_1872",
           "trainer_location": "Letcombe Bassett, Oxon",
           "trainer_14_days": {
-            "runs": "0",
+            "runs": "1",
             "wins": "0",
-            "percent": "None"
+            "percent": "0"
           },
           "owner": "Miss J C Blackwell",
           "owner_id": "own_157508",
@@ -11367,7 +11367,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/6/6/355662.svg",
           "last_run": "27",
           "form": "796",
-          "trainer_rtf": "72",
+          "trainer_rtf": "61",
           "score": 45.7
         },
         {
@@ -11393,9 +11393,9 @@ window.racecardsData = {
           "trainer_id": "trn_232713",
           "trainer_location": "Whitcombe, Dorset",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "7",
             "wins": "1",
-            "percent": "13"
+            "percent": "14"
           },
           "owner": "Mrs Michelle Anne Crook",
           "owner_id": "own_1219400",
@@ -11424,8 +11424,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/5/8/304850.svg",
           "last_run": "32",
           "form": "-55480",
-          "trainer_rtf": "38",
-          "score": 45.92
+          "trainer_rtf": "43",
+          "score": 46.52
         }
       ],
       "big_race": false,
@@ -11450,7 +11450,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "0-65",
       "prize": "£3,140",
-      "field_size": "10",
+      "field_size": "9",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -11481,9 +11481,9 @@ window.racecardsData = {
           "trainer_id": "trn_87426",
           "trainer_location": "Cropthorne, Worcs",
           "trainer_14_days": {
-            "runs": "41",
+            "runs": "46",
             "wins": "5",
-            "percent": "12"
+            "percent": "11"
           },
           "owner": "Eggselltrading Ltd",
           "owner_id": "own_1431656",
@@ -11511,7 +11511,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "1",
+          "number": "NR",
           "draw": "1",
           "headgear": "",
           "headgear_run": "",
@@ -11529,8 +11529,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/1/9/357914.svg",
           "last_run": "33",
           "form": "068235",
-          "trainer_rtf": "68",
-          "score": 51.94
+          "trainer_rtf": "61",
+          "score": 51.34
         },
         {
           "horse_id": "hrs_38449992",
@@ -11627,9 +11627,9 @@ window.racecardsData = {
           "trainer_id": "trn_233226",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "18",
+            "runs": "17",
             "wins": "5",
-            "percent": "28"
+            "percent": "29"
           },
           "owner": "Mrs S E Trivass",
           "owner_id": "own_1010464",
@@ -11663,7 +11663,7 @@ window.racecardsData = {
           "last_run": "15",
           "form": "657",
           "trainer_rtf": "53",
-          "score": 47.69
+          "score": 48.29
         },
         {
           "horse_id": "hrs_41130138",
@@ -12040,7 +12040,7 @@ window.racecardsData = {
           "trainer_id": "trn_121302",
           "trainer_location": "West Ilsley, Berks",
           "trainer_14_days": {
-            "runs": "6",
+            "runs": "5",
             "wins": "0",
             "percent": "0"
           },
@@ -12069,7 +12069,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/9/2/234299.svg",
           "last_run": "33",
           "form": "447-69",
-          "trainer_rtf": "33",
+          "trainer_rtf": "40",
           "score": 24.32
         },
         {
@@ -12272,8 +12272,8 @@ window.racecardsData = {
           "owner_id": "own_1431892",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "Drop to 5f worked against him last time and has possibilities in first-time headgear",
-          "spotlight": "Big prices and well held in three runs at sprint trips; however, the drop to 5f worked against him last time and he has possibilities now handicapping at an ordinary level in first-time headgear.",
+          "comment": "Potential improver now handicapping in headgear; stable 0-56 with 2yos in recent seasons",
+          "spotlight": "Hint of ability in maiden/novice company, keeping on steadily for fifth at Leicester 13 days ago (5f, good to firm); cheekpieces added for his nursery debut and he can do better; stable 0-56 with 2yos in the last five seasons though.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -12293,7 +12293,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/7/9/357973.svg",
           "last_run": "13",
           "form": "975",
-          "trainer_rtf": "40",
+          "trainer_rtf": "33",
           "score": 28.865
         },
         {
@@ -12319,16 +12319,16 @@ window.racecardsData = {
           "trainer_id": "trn_37017",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "23",
+            "runs": "22",
             "wins": "1",
-            "percent": "4"
+            "percent": "5"
           },
           "owner": "Jastar Capital Limited",
           "owner_id": "own_1279616",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "Well related; open to improvement now handicapping in first-time headgear; one to consider",
-          "spotlight": "Brother to a course winner/half-brother to a few useful sorts who didn't see out 7f last time; open to improvement now handicapping on his turf debut in first-time headgear and is one to consider.",
+          "comment": "Three AW runs over further have offered hope of better; visor now added; check betting",
+          "spotlight": "Has shown some ability in three maiden/novice runs over 6f and 7f on Polytrack; drop in trip, switch to turf and addition of a visor could all help; check betting.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -12348,8 +12348,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/0/9/319904.svg",
           "last_run": "14",
           "form": "847",
-          "trainer_rtf": "57",
-          "score": 28.455
+          "trainer_rtf": "55",
+          "score": 29.055
         },
         {
           "horse_id": "hrs_52021473",
@@ -12374,16 +12374,16 @@ window.racecardsData = {
           "trainer_id": "trn_46089",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "7",
             "wins": "1",
-            "percent": "13"
+            "percent": "14"
           },
           "owner": "P Grimes & J S Moore",
           "owner_id": "own_1429192",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "Related to winners but hasn't looked up to much in three 5f runs at big prices",
-          "spotlight": "Related to winners but hasn't looked up to much in three 5f runs at big prices; yard in fair form of late but having a quiet season with 2yos and she needs to improve.",
+          "comment": "Did plenty wrong at Lingfield on nursery debut yesterday; needs more if turned out again",
+          "spotlight": "Modest form in her three runs in maiden company; not unbacked for her nursery debut at Lingfield yesterday and although she was last of the four runners, she did hint at better (played up in the stalls, raced widest and still looked green); needs more if turned out quickly.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -12403,8 +12403,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/2/357298.svg",
           "last_run": "1",
           "form": "3554",
-          "trainer_rtf": "75",
-          "score": 45.845
+          "trainer_rtf": "71",
+          "score": 46.445
         },
         {
           "horse_id": "hrs_50435609",
@@ -12521,9 +12521,9 @@ window.racecardsData = {
           "trainer_id": "trn_46089",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "7",
             "wins": "1",
-            "percent": "13"
+            "percent": "14"
           },
           "owner": "W Hamer",
           "owner_id": "own_1435912",
@@ -12550,8 +12550,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/7/9/358978.svg",
           "last_run": "16",
           "form": "424",
-          "trainer_rtf": "75",
-          "score": 50.185
+          "trainer_rtf": "71",
+          "score": 50.785
         },
         {
           "horse_id": "hrs_53841102",
@@ -12749,9 +12749,9 @@ window.racecardsData = {
           "trainer_id": "trn_170280",
           "trainer_location": "Blewbury, Oxfordshire",
           "trainer_14_days": {
-            "runs": "29",
+            "runs": "26",
             "wins": "2",
-            "percent": "7"
+            "percent": "8"
           },
           "owner": "Mrs Rolline O'Callaghan",
           "owner_id": "own_897872",
@@ -12782,8 +12782,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/6/4/224468.svg",
           "last_run": "35",
           "form": "7",
-          "trainer_rtf": "52",
-          "score": 16.9
+          "trainer_rtf": "50",
+          "score": 17.5
         },
         {
           "horse_id": "hrs_53294528",
@@ -12808,9 +12808,9 @@ window.racecardsData = {
           "trainer_id": "trn_280692",
           "trainer_location": "Upper Lambourn, Berks",
           "trainer_14_days": {
-            "runs": "25",
+            "runs": "23",
             "wins": "4",
-            "percent": "16"
+            "percent": "17"
           },
           "owner": "Lady Caffyn-Parsons",
           "owner_id": "own_631456",
@@ -12837,8 +12837,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/6/8/157864.svg",
           "last_run": "11",
           "form": "62",
-          "trainer_rtf": "52",
-          "score": 45.41
+          "trainer_rtf": "57",
+          "score": 46.01
         },
         {
           "horse_id": "hrs_54178495",
@@ -12863,9 +12863,9 @@ window.racecardsData = {
           "trainer_id": "trn_325899",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "38",
+            "runs": "36",
             "wins": "8",
-            "percent": "21"
+            "percent": "22"
           },
           "owner": "Sheikh Mohammed Obaid Al Maktoum",
           "owner_id": "own_221344",
@@ -12893,7 +12893,7 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "50",
-          "score": -58.5
+          "score": -57.9
         }
       ],
       "big_race": false,
@@ -12949,7 +12949,7 @@ window.racecardsData = {
           "trainer_id": "trn_360648",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "46",
+            "runs": "48",
             "wins": "7",
             "percent": "15"
           },
@@ -12984,7 +12984,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/6/2/309026c.svg",
           "last_run": "(162J)",
           "form": "",
-          "trainer_rtf": "58",
+          "trainer_rtf": "56",
           "score": -62.5
         },
         {
@@ -13175,9 +13175,9 @@ window.racecardsData = {
           "trainer_id": "trn_325899",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "38",
+            "runs": "36",
             "wins": "8",
-            "percent": "21"
+            "percent": "22"
           },
           "owner": "G C Myddelton & V E C Taylor",
           "owner_id": "own_1332324",
@@ -13205,7 +13205,7 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "50",
-          "score": -58.5
+          "score": -57.9
         },
         {
           "horse_id": "hrs_46913279",
@@ -13340,9 +13340,9 @@ window.racecardsData = {
           "trainer_id": "trn_325899",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "38",
+            "runs": "36",
             "wins": "8",
-            "percent": "21"
+            "percent": "22"
           },
           "owner": "Amo Racing Limited",
           "owner_id": "own_1008936",
@@ -13370,7 +13370,7 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "50",
-          "score": -58.5
+          "score": -57.9
         }
       ],
       "big_race": false,
@@ -14011,9 +14011,9 @@ window.racecardsData = {
           "trainer_id": "trn_87426",
           "trainer_location": "Cropthorne, Worcs",
           "trainer_14_days": {
-            "runs": "41",
+            "runs": "46",
             "wins": "5",
-            "percent": "12"
+            "percent": "11"
           },
           "owner": "Mrs P Clark & Partner",
           "owner_id": "own_1419364",
@@ -14046,8 +14046,8 @@ window.racecardsData = {
               "change_date": "2024-04-09"
             }
           ],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Hasn't matched sole win for initial yard & this headgear combination didn't help last time",
+          "spotlight": "Sole win in 7f turf novice (soft) in 2023; has made heavy weather of it since leaving Andrew Balding, including for this yard since February; this headgear combination did not improve matters latest; others preferred.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -14067,8 +14067,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/4/8/354841.svg",
           "last_run": "16",
           "form": "864944",
-          "trainer_rtf": "68",
-          "score": 42.84
+          "trainer_rtf": "61",
+          "score": 42.24
         },
         {
           "horse_id": "hrs_30804543",
@@ -14375,8 +14375,8 @@ window.racecardsData = {
               "change_date": "2023-05-02"
             }
           ],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Made his turf breakthrough, winning well, at Brighton last week; player under the penalty",
+          "spotlight": "Took ten goes to make the breakthrough on turf but he won well at Brighton (1m2f, good to firm) eight days ago, beating three others comfortably; player under the 5lb penalty.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -14499,8 +14499,8 @@ window.racecardsData = {
           "owner_id": "own_509540",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Built on solid comeback when beaten less than 1l at Leicester (1m2f) in May; respected",
+          "spotlight": "Completed back-to-back wins over 1m2f last July/October, including on good to soft; built on a solid comeback at Leicester (good) when beaten less than 1l at that track (also 1m2f, good to firm) in May; two poor runs here raise a question mark but he's respected.",
           "quotes": [
             {
               "date": "2024-07-06",
@@ -14562,9 +14562,9 @@ window.racecardsData = {
           "trainer_id": "trn_87426",
           "trainer_location": "Cropthorne, Worcs",
           "trainer_14_days": {
-            "runs": "41",
+            "runs": "46",
             "wins": "5",
-            "percent": "12"
+            "percent": "11"
           },
           "owner": "The Rebelle Boys",
           "owner_id": "own_1005160",
@@ -14599,8 +14599,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/9/2/251290.svg",
           "last_run": "11",
           "form": "381153",
-          "trainer_rtf": "68",
-          "score": 47.755
+          "trainer_rtf": "61",
+          "score": 47.155
         },
         {
           "horse_id": "hrs_24676218",
@@ -14668,7 +14668,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/9/9/303993.svg",
           "last_run": "30",
           "form": "29-876",
-          "trainer_rtf": "54",
+          "trainer_rtf": "50",
           "score": 48.765
         },
         {
@@ -14702,8 +14702,8 @@ window.racecardsData = {
           "owner_id": "own_1326548",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Best run since December when beaten a neck at Leicester on turf four days ago; same mark",
+          "spotlight": "Best run since winning at Southwell (1m, AW) in December when going down by a neck at Leicester (1m2f, good to firm; 18-1) on his return to turf four days ago; possibly wants the track to dry out a bit but that's not out of the question and he's off the same mark.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -14818,9 +14818,9 @@ window.racecardsData = {
           "trainer_id": "trn_87426",
           "trainer_location": "Cropthorne, Worcs",
           "trainer_14_days": {
-            "runs": "41",
+            "runs": "46",
             "wins": "5",
-            "percent": "12"
+            "percent": "11"
           },
           "owner": "CCCP Syndicate",
           "owner_id": "own_1065720",
@@ -14869,8 +14869,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/3/4/266430.svg",
           "last_run": "13",
           "form": "796604",
-          "trainer_rtf": "68",
-          "score": 43.685
+          "trainer_rtf": "61",
+          "score": 43.085
         }
       ],
       "big_race": false,
@@ -15000,9 +15000,9 @@ window.racecardsData = {
           "trainer_id": "trn_325899",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "38",
+            "runs": "36",
             "wins": "8",
-            "percent": "21"
+            "percent": "22"
           },
           "owner": "Flaxman Stables Ireland Ltd",
           "owner_id": "own_844012",
@@ -15036,7 +15036,7 @@ window.racecardsData = {
           "last_run": "21",
           "form": "47-265",
           "trainer_rtf": "50",
-          "score": 56.795
+          "score": 57.395
         },
         {
           "horse_id": "hrs_44541728",
@@ -15061,9 +15061,9 @@ window.racecardsData = {
           "trainer_id": "trn_40860",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "23",
-            "wins": "3",
-            "percent": "13"
+            "runs": "24",
+            "wins": "4",
+            "percent": "17"
           },
           "owner": "My Racing Manager Friends",
           "owner_id": "own_1134460",
@@ -15092,8 +15092,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/1/6/283615.svg",
           "last_run": "26",
           "form": "64-364",
-          "trainer_rtf": "48",
-          "score": 51.305
+          "trainer_rtf": "50",
+          "score": 54.105
         },
         {
           "horse_id": "hrs_44785874",
@@ -15276,7 +15276,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/8/7/14781.svg",
           "last_run": "43",
           "form": "0-345",
-          "trainer_rtf": "54",
+          "trainer_rtf": "58",
           "score": 35.315
         },
         {
@@ -15357,7 +15357,7 @@ window.racecardsData = {
           "trainer_id": "trn_88164",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "5",
+            "runs": "6",
             "wins": "0",
             "percent": "0"
           },
@@ -15386,7 +15386,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/6/3/186436b.svg",
           "last_run": "18",
           "form": "2656",
-          "trainer_rtf": "40",
+          "trainer_rtf": "33",
           "score": 41.63
         },
         {
@@ -15420,8 +15420,8 @@ window.racecardsData = {
           "owner_id": "own_1366224",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Back on track latest (AW) but percentage call is to look elsewhere on this return to turf",
+          "spotlight": "Ten-race maiden whose best run came when second over 8.5f on AW; tailed off at Newmarket in May after a break but got back on track when fourth of nine at Newcastle (7f, AW) a fortnight ago; percentage call is to look elsewhere on this return to turf.",
           "quotes": [],
           "stable_tour": [],
           "medical": [],
@@ -15608,7 +15608,7 @@ window.racecardsData = {
           "trainer_id": "trn_96318",
           "trainer_location": "Kildare, Co. Kildare",
           "trainer_14_days": {
-            "runs": "10",
+            "runs": "12",
             "wins": "0",
             "percent": "0"
           },
@@ -15649,7 +15649,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/9/338998.svg",
           "last_run": "14",
           "form": "68-769",
-          "trainer_rtf": "44",
+          "trainer_rtf": "42",
           "score": 37.78
         },
         {
@@ -15704,7 +15704,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/0/1/301105.svg",
           "last_run": "7",
           "form": "033-32",
-          "trainer_rtf": "32",
+          "trainer_rtf": "34",
           "score": 48.805
         },
         {
@@ -16196,7 +16196,7 @@ window.racecardsData = {
           "trainer_id": "trn_307287",
           "trainer_location": "Coolaghknock Glebe, Co Kildare",
           "trainer_14_days": {
-            "runs": "5",
+            "runs": "6",
             "wins": "0",
             "percent": "0"
           },
@@ -16225,7 +16225,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/2/9/359924.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "80",
+          "trainer_rtf": "67",
           "score": -74.3
         },
         {
@@ -16361,7 +16361,7 @@ window.racecardsData = {
           "trainer_id": "trn_160524",
           "trainer_location": "Navan, Co. Meath",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "2",
             "percent": "5"
           },
@@ -16390,7 +16390,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/7/1/297176.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "46",
+          "trainer_rtf": "45",
           "score": -70.5
         },
         {
@@ -16697,7 +16697,7 @@ window.racecardsData = {
           "trainer_id": "trn_307287",
           "trainer_location": "Coolaghknock Glebe, Co Kildare",
           "trainer_14_days": {
-            "runs": "5",
+            "runs": "6",
             "wins": "0",
             "percent": "0"
           },
@@ -16726,7 +16726,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/1/8/279814.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "80",
+          "trainer_rtf": "67",
           "score": -74.3
         },
         {
@@ -17654,16 +17654,16 @@ window.racecardsData = {
           "trainer_id": "trn_37566",
           "trainer_location": "Carrick-On-Suir, Co Waterford",
           "trainer_14_days": {
-            "runs": "6",
+            "runs": "7",
             "wins": "1",
-            "percent": "17"
+            "percent": "14"
           },
           "owner": "Mrs Patrick J Flynn",
           "owner_id": "own_94628",
           "prev_trainers": [],
           "prev_owners": [],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Won his fifth race when landing a 1m4f handicap at Leopardstown in May, below best latest",
+          "spotlight": "Won his fifth race when landing a 1m4f handicap at Leopardstown in May; met trouble in running over 1m6f at the Curragh on his next start, and did well in the circumstances to finish just behind fourth-placed Brosna Town; not quite at his best at the same venue last time.",
           "quotes": [
             {
               "date": "2025-05-16",
@@ -17696,8 +17696,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/5/6/23657.svg",
           "last_run": "12",
           "form": "-88157",
-          "trainer_rtf": "67",
-          "score": 62.57
+          "trainer_rtf": "57",
+          "score": 60.77
         },
         {
           "horse_id": "hrs_38173807",
@@ -17808,8 +17808,8 @@ window.racecardsData = {
               "change_date": "2023-12-20"
             }
           ],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Plenty of Flat racing experience in France, every chance now after hurdles win at Listowel",
+          "spotlight": "Plenty of Flat racing experience in France, winning twice (1m4f on soft ground); has run three times over hurdles for this stable; promising introduction when second of 18 at Down Royal; Killarney run may have come too soon, made amends with Listowel win; interesting here, though might not want the ground too quick.",
           "quotes": [
             {
               "date": "2025-06-02",
@@ -17868,7 +17868,7 @@ window.racecardsData = {
           "trainer_id": "trn_160524",
           "trainer_location": "Navan, Co. Meath",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "2",
             "percent": "5"
           },
@@ -17951,7 +17951,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/1/9/320916.svg",
           "last_run": "272 (31J)",
           "form": "4/011-",
-          "trainer_rtf": "46",
+          "trainer_rtf": "45",
           "score": -21.145
         }
       ],
@@ -18238,7 +18238,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/2/2/18220.svg",
           "last_run": "26",
           "form": "0-2223",
-          "trainer_rtf": "50",
+          "trainer_rtf": "47",
           "score": 195.5
         },
         {
@@ -18480,9 +18480,9 @@ window.racecardsData = {
           "trainer_id": "trn_30735",
           "trainer_location": "Newmarket, Suffolk",
           "trainer_14_days": {
-            "runs": "50",
+            "runs": "48",
             "wins": "12",
-            "percent": "24"
+            "percent": "25"
           },
           "owner": "Tony Bloom & Ian McAleavy",
           "owner_id": "own_1341220",
@@ -18525,7 +18525,7 @@ window.racecardsData = {
           "last_run": "17",
           "form": "1-5114",
           "trainer_rtf": "75",
-          "score": 188.8
+          "score": 189.5
         },
         {
           "horse_id": "hrs_43984080",
@@ -18765,7 +18765,7 @@ window.racecardsData = {
           "trainer_id": "trn_160524",
           "trainer_location": "Navan, Co. Meath",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "2",
             "percent": "5"
           },
@@ -18794,7 +18794,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/3/1/292136.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "46",
+          "trainer_rtf": "45",
           "score": -70.5
         },
         {
@@ -19095,7 +19095,7 @@ window.racecardsData = {
           "trainer_id": "trn_160524",
           "trainer_location": "Navan, Co. Meath",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "2",
             "percent": "5"
           },
@@ -19124,7 +19124,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/2/9/359922.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "46",
+          "trainer_rtf": "45",
           "score": -70.5
         },
         {
@@ -19682,7 +19682,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/0/7/317708.svg",
           "last_run": "43",
           "form": "9",
-          "trainer_rtf": "50",
+          "trainer_rtf": "47",
           "score": -0.65
         }
       ],
@@ -20226,7 +20226,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/9/1/302199.svg",
           "last_run": "26",
           "form": "-40111",
-          "trainer_rtf": "50",
+          "trainer_rtf": "44",
           "score": 66.81
         },
         {
@@ -20252,9 +20252,9 @@ window.racecardsData = {
           "trainer_id": "trn_37566",
           "trainer_location": "Carrick-On-Suir, Co Waterford",
           "trainer_14_days": {
-            "runs": "6",
+            "runs": "7",
             "wins": "1",
-            "percent": "17"
+            "percent": "14"
           },
           "owner": "Dream Team Syndicate",
           "owner_id": "own_471588",
@@ -20295,8 +20295,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/7/9/117897b.svg",
           "last_run": "88",
           "form": "2049-7",
-          "trainer_rtf": "67",
-          "score": 2.775
+          "trainer_rtf": "57",
+          "score": 0.975
         }
       ],
       "big_race": false,
@@ -21012,7 +21012,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/2/5/359527.svg",
           "last_run": "8",
           "form": "74-200",
-          "trainer_rtf": "32",
+          "trainer_rtf": "34",
           "score": 38.32
         },
         {
@@ -21128,8 +21128,8 @@ window.racecardsData = {
               "change_date": "2025-01-15"
             }
           ],
-          "comment": "",
-          "spotlight": "",
+          "comment": "Three-time AW winner is 0-14 on turf; okay runs at Leopardstown recently; chance",
+          "spotlight": "No wins on turf following 14 starts but has won three times on AW; beaten 2.75l at Leopardstown in June (7f, soft) and then beaten 4.5l by the same rival back at that track a week later (7f, good); had I'm Spartacus behind him that day; one of the likelier candidates.",
           "quotes": [
             {
               "date": "2023-11-08",
@@ -21482,7 +21482,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/6/2/320264.svg",
           "last_run": "8",
           "form": "7698-0",
-          "trainer_rtf": "",
+          "trainer_rtf": "25",
           "score": 40.15
         },
         {
@@ -21565,7 +21565,7 @@ window.racecardsData = {
           "trainer_id": "trn_95202",
           "trainer_location": "Graiguenamanagh, Co Kilkenny",
           "trainer_14_days": {
-            "runs": "4",
+            "runs": "6",
             "wins": "0",
             "percent": "0"
           },
