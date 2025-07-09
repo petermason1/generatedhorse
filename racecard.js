@@ -24,13 +24,8 @@ function decimalToFractional(decimal) {
 }
 
 function getRunnerOdds(r) {
-  // Use odds_decimal if present, fallback to betfair_odds_decimal, else blank
-  let decimal = r.odds_decimal || r.betfair_odds_decimal;
-  if (decimal && typeof decimal === 'string') decimal = parseFloat(decimal);
-  if (decimal) {
-    return decimalToFractional(decimal);
-  }
-  return '';
+  // Only use the betfair_odds_fractional field if present, else blank
+  return r.betfair_odds_fractional || '';
 }
 
 

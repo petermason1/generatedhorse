@@ -122,7 +122,6 @@ console.log('tips.js: Script started.');
 
   // --- Explain a pick ---
   function explainPick(r) {
-    // You can make this as fancy as you want, but here's a simple version:
     let bits = [];
     if (r.trainer_14_days && r.trainer_14_days.percent > 20) bits.push(`trainer in hot form (${r.trainer_14_days.percent}% 2wks)`);
     if (r.rpr > 110) bits.push(`high RPR (${r.rpr})`);
@@ -130,7 +129,9 @@ console.log('tips.js: Script started.');
     if (r.form && r.form.match(/1/)) bits.push("recent win");
     if (r.form && r.form.match(/2|3/)) bits.push("placed recently");
     if (bits.length === 0) bits.push('solid profile');
-    if (r.odds && r.odds[0] && r.odds[0].fractional) bits.push(`current odds: ${r.odds[0].fractional}`);
+    if (r.betfair_odds_fractional) {
+      bits.push(`odds: ${r.betfair_odds_fractional}`);
+    }
     return bits.join(', ') + '.';
   }
 
@@ -138,6 +139,7 @@ console.log('tips.js: Script started.');
   function renderTipCard(r, i, badge) {
     const silksImageUrl = r.silk_url ? r.silk_url : 'https://placehold.co/40x40/333/fff?text=No+Silk';
     let raceName = r.race.race_name || '';
+    let oddsStr = r.betfair_odds_fractional || '';
     return `
       <div class="tip-card">
         <div class="silks-wrapper">
@@ -146,7 +148,7 @@ console.log('tips.js: Script started.');
         <div class="tip-content">
           <div class="tip-top-row">
             <a href="racecard.html?race_id=${r.race._id || r.race.race_id}" class="tip-horse">${r.horse}</a>
-            <span class="tip-odds">${r.odds?.[0]?.fractional || ''}</span>
+            <span class="tip-odds">${oddsStr}</span>
             <span class="tip-score">(Score: ${typeof r.score === "number" ? r.score : "?"})</span>
           </div>
           <div class="tip-middle-row">

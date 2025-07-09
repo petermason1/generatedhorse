@@ -172,7 +172,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 62.935,
           "odds_decimal": 5.3,
-          "odds_size": 36.0
+          "odds_size": 36.0,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 36.0,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_36164289",
@@ -231,7 +234,10 @@ window.racecardsData = {
           "trainer_rtf": "49",
           "score": 41.245,
           "odds_decimal": 26.0,
-          "odds_size": 13.22
+          "odds_size": 13.22,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 13.22,
+          "betfair_odds_fractional": "25/1"
         },
         {
           "horse_id": "hrs_27153490",
@@ -315,7 +321,10 @@ window.racecardsData = {
           "trainer_rtf": "83",
           "score": 51.63,
           "odds_decimal": 3.1,
-          "odds_size": 65.3
+          "odds_size": 65.3,
+          "betfair_odds_decimal": 3.1,
+          "betfair_size": 65.3,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_13020420",
@@ -401,7 +410,10 @@ window.racecardsData = {
           "trainer_rtf": "36",
           "score": 48.585,
           "odds_decimal": 6.6,
-          "odds_size": 32.37
+          "odds_size": 32.37,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 32.37,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_14142415",
@@ -473,7 +485,10 @@ window.racecardsData = {
           "trainer_rtf": "49",
           "score": 47.085,
           "odds_decimal": 8.6,
-          "odds_size": 28.5
+          "odds_size": 28.5,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 28.5,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_25286478",
@@ -549,7 +564,10 @@ window.racecardsData = {
           "trainer_rtf": "75",
           "score": 47.26,
           "odds_decimal": 30.0,
-          "odds_size": 14.15
+          "odds_size": 14.15,
+          "betfair_odds_decimal": 30.0,
+          "betfair_size": 14.15,
+          "betfair_odds_fractional": "29/1"
         },
         {
           "horse_id": "hrs_18670820",
@@ -688,7 +706,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 47.59,
           "odds_decimal": 8.4,
-          "odds_size": 10.87
+          "odds_size": 10.87,
+          "betfair_odds_decimal": 8.4,
+          "betfair_size": 10.87,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_22616167",
@@ -774,7 +795,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 31.795,
           "odds_decimal": 44.0,
-          "odds_size": 12.31
+          "odds_size": 12.31,
+          "betfair_odds_decimal": 44.0,
+          "betfair_size": 12.31,
+          "betfair_odds_fractional": "43/1"
         },
         {
           "horse_id": "hrs_10303090",
@@ -928,7 +952,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 37.77,
           "odds_decimal": 32.0,
-          "odds_size": 13.6
+          "odds_size": 13.6,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 13.6,
+          "betfair_odds_fractional": "31/1"
         }
       ],
       "big_race": false,
@@ -1016,7 +1043,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": 49.89,
           "odds_decimal": 7.6,
-          "odds_size": 15.93
+          "odds_size": 15.93,
+          "betfair_odds_decimal": 7.6,
+          "betfair_size": 15.93,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_52862656",
@@ -1073,7 +1103,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": 43.4,
           "odds_decimal": 3.55,
-          "odds_size": 31.33
+          "odds_size": 31.33,
+          "betfair_odds_decimal": 3.55,
+          "betfair_size": 31.33,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_51766778",
@@ -1130,7 +1163,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 41.97,
           "odds_decimal": 20.0,
-          "odds_size": 15.08
+          "odds_size": 15.08,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 15.08,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_51866325",
@@ -1187,7 +1223,10 @@ window.racecardsData = {
           "trainer_rtf": "52",
           "score": 25.63,
           "odds_decimal": 6.6,
-          "odds_size": 28.29
+          "odds_size": 28.29,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 28.29,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_51766799",
@@ -1244,7 +1283,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 45.38,
           "odds_decimal": 9.8,
-          "odds_size": 12.69
+          "odds_size": 12.69,
+          "betfair_odds_decimal": 9.8,
+          "betfair_size": 12.69,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_52862642",
@@ -1301,7 +1343,10 @@ window.racecardsData = {
           "trainer_rtf": "49",
           "score": 50.225,
           "odds_decimal": 7.6,
-          "odds_size": 12.95
+          "odds_size": 12.95,
+          "betfair_odds_decimal": 7.6,
+          "betfair_size": 12.95,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_49143248",
@@ -1358,7 +1403,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": 32.86,
           "odds_decimal": 7.0,
-          "odds_size": 24.81
+          "odds_size": 24.81,
+          "betfair_odds_decimal": 7.0,
+          "betfair_size": 24.81,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_52451721",
@@ -1415,7 +1463,10 @@ window.racecardsData = {
           "trainer_rtf": "14",
           "score": 35.245,
           "odds_decimal": 26.0,
-          "odds_size": 12.19
+          "odds_size": 12.19,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 12.19,
+          "betfair_odds_fractional": "25/1"
         }
       ],
       "big_race": false,
@@ -1503,7 +1554,10 @@ window.racecardsData = {
           "trainer_rtf": "29",
           "score": -74.3,
           "odds_decimal": 20.0,
-          "odds_size": 17.97
+          "odds_size": 17.97,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 17.97,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_51866353",
@@ -1562,7 +1616,10 @@ window.racecardsData = {
           "trainer_rtf": "100",
           "score": 63.225,
           "odds_decimal": 2.7,
-          "odds_size": 11.28
+          "odds_size": 11.28,
+          "betfair_odds_decimal": 2.7,
+          "betfair_size": 11.28,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_49142170",
@@ -1619,7 +1676,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 39.795,
           "odds_decimal": 6.2,
-          "odds_size": 11.0
+          "odds_size": 11.0,
+          "betfair_odds_decimal": 6.2,
+          "betfair_size": 11.0,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_52054674",
@@ -1676,7 +1736,10 @@ window.racecardsData = {
           "trainer_rtf": "38",
           "score": -63.7,
           "odds_decimal": 9.4,
-          "odds_size": 13.37
+          "odds_size": 13.37,
+          "betfair_odds_decimal": 9.4,
+          "betfair_size": 13.37,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_53960263",
@@ -1739,7 +1802,10 @@ window.racecardsData = {
           "trainer_rtf": "40",
           "score": 20.695,
           "odds_decimal": 120.0,
-          "odds_size": 14.32
+          "odds_size": 14.32,
+          "betfair_odds_decimal": 120.0,
+          "betfair_size": 14.32,
+          "betfair_odds_fractional": "119/1"
         },
         {
           "horse_id": "hrs_52054926",
@@ -1796,7 +1862,10 @@ window.racecardsData = {
           "trainer_rtf": "49",
           "score": 30.95,
           "odds_decimal": 8.6,
-          "odds_size": 10.92
+          "odds_size": 10.92,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 10.92,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_53539381",
@@ -1853,7 +1922,10 @@ window.racecardsData = {
           "trainer_rtf": "61",
           "score": 45.56,
           "odds_decimal": 5.2,
-          "odds_size": 11.21
+          "odds_size": 11.21,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 11.21,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_53390288",
@@ -1910,7 +1982,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": 27.025,
           "odds_decimal": 27.0,
-          "odds_size": 12.77
+          "odds_size": 12.77,
+          "betfair_odds_decimal": 27.0,
+          "betfair_size": 12.77,
+          "betfair_odds_fractional": "26/1"
         }
       ],
       "big_race": false,
@@ -2023,7 +2098,10 @@ window.racecardsData = {
           "trainer_rtf": "65",
           "score": 59.0,
           "odds_decimal": 5.4,
-          "odds_size": 27.26
+          "odds_size": 27.26,
+          "betfair_odds_decimal": 5.4,
+          "betfair_size": 27.26,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_47985700",
@@ -2086,7 +2164,10 @@ window.racecardsData = {
           "trainer_rtf": "38",
           "score": 59.135,
           "odds_decimal": 6.8,
-          "odds_size": 15.15
+          "odds_size": 15.15,
+          "betfair_odds_decimal": 6.8,
+          "betfair_size": 15.15,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_52087504",
@@ -2143,7 +2224,10 @@ window.racecardsData = {
           "trainer_rtf": "39",
           "score": 52.09,
           "odds_decimal": 5.4,
-          "odds_size": 52.22
+          "odds_size": 52.22,
+          "betfair_odds_decimal": 5.4,
+          "betfair_size": 52.22,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_40918570",
@@ -2202,7 +2286,10 @@ window.racecardsData = {
           "trainer_rtf": "14",
           "score": 41.545,
           "odds_decimal": 8.2,
-          "odds_size": 19.5
+          "odds_size": 19.5,
+          "betfair_odds_decimal": 8.2,
+          "betfair_size": 19.5,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_39961040",
@@ -2261,7 +2348,10 @@ window.racecardsData = {
           "trainer_rtf": "36",
           "score": 54.415,
           "odds_decimal": 6.2,
-          "odds_size": 27.51
+          "odds_size": 27.51,
+          "betfair_odds_decimal": 6.2,
+          "betfair_size": 27.51,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_42521752",
@@ -2318,7 +2408,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": 41.68,
           "odds_decimal": 10.5,
-          "odds_size": 11.96
+          "odds_size": 11.96,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 11.96,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_42521787",
@@ -2391,7 +2484,10 @@ window.racecardsData = {
           "trainer_rtf": "49",
           "score": 47.02,
           "odds_decimal": 11.0,
-          "odds_size": 11.49
+          "odds_size": 11.49,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 11.49,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_40668432",
@@ -2459,7 +2555,10 @@ window.racecardsData = {
           "trainer_rtf": "49",
           "score": 51.17,
           "odds_decimal": 25.0,
-          "odds_size": 13.02
+          "odds_size": 13.02,
+          "betfair_odds_decimal": 25.0,
+          "betfair_size": 13.02,
+          "betfair_odds_fractional": "24/1"
         }
       ],
       "big_race": false,
@@ -2573,7 +2672,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 38.31,
           "odds_decimal": 2.86,
-          "odds_size": 22.77
+          "odds_size": 22.77,
+          "betfair_odds_decimal": 2.86,
+          "betfair_size": 22.77,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_21676781",
@@ -2644,7 +2746,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 40.1,
           "odds_decimal": 4.9,
-          "odds_size": 74.39
+          "odds_size": 74.39,
+          "betfair_odds_decimal": 4.9,
+          "betfair_size": 74.39,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_45568509",
@@ -2707,7 +2812,10 @@ window.racecardsData = {
           "trainer_rtf": "70",
           "score": 38.63,
           "odds_decimal": 12.5,
-          "odds_size": 10.19
+          "odds_size": 10.19,
+          "betfair_odds_decimal": 12.5,
+          "betfair_size": 10.19,
+          "betfair_odds_fractional": "23/2"
         },
         {
           "horse_id": "hrs_38564862",
@@ -2782,7 +2890,10 @@ window.racecardsData = {
           "trainer_rtf": "41",
           "score": 42.925,
           "odds_decimal": 4.4,
-          "odds_size": 17.63
+          "odds_size": 17.63,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 17.63,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_27698370",
@@ -2858,7 +2969,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 30.98,
           "odds_decimal": 80.0,
-          "odds_size": 11.24
+          "odds_size": 11.24,
+          "betfair_odds_decimal": 80.0,
+          "betfair_size": 11.24,
+          "betfair_odds_fractional": "79/1"
         },
         {
           "horse_id": "hrs_37193296",
@@ -2915,7 +3029,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 58.22,
           "odds_decimal": 10.5,
-          "odds_size": 17.8
+          "odds_size": 17.8,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 17.8,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_22731478",
@@ -2984,7 +3101,10 @@ window.racecardsData = {
           "trainer_rtf": "69",
           "score": 57.705,
           "odds_decimal": 13.0,
-          "odds_size": 62.75
+          "odds_size": 62.75,
+          "betfair_odds_decimal": 13.0,
+          "betfair_size": 62.75,
+          "betfair_odds_fractional": "12/1"
         }
       ],
       "big_race": false,
@@ -3085,7 +3205,10 @@ window.racecardsData = {
           "trainer_rtf": "53",
           "score": 53.175,
           "odds_decimal": 17.5,
-          "odds_size": 12.38
+          "odds_size": 12.38,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 12.38,
+          "betfair_odds_fractional": "33/2"
         },
         {
           "horse_id": "hrs_41051913",
@@ -3160,7 +3283,10 @@ window.racecardsData = {
           "trainer_rtf": "65",
           "score": 55.81,
           "odds_decimal": 2.82,
-          "odds_size": 20.76
+          "odds_size": 20.76,
+          "betfair_odds_decimal": 2.82,
+          "betfair_size": 20.76,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_35881132",
@@ -3231,7 +3357,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": 56.71,
           "odds_decimal": 27.0,
-          "odds_size": 11.1
+          "odds_size": 11.1,
+          "betfair_odds_decimal": 27.0,
+          "betfair_size": 11.1,
+          "betfair_odds_fractional": "26/1"
         },
         {
           "horse_id": "hrs_47655307",
@@ -3296,7 +3425,10 @@ window.racecardsData = {
           "trainer_rtf": "38",
           "score": -75.06,
           "odds_decimal": 14.0,
-          "odds_size": 10.64
+          "odds_size": 10.64,
+          "betfair_odds_decimal": 14.0,
+          "betfair_size": 10.64,
+          "betfair_odds_fractional": "13/1"
         },
         {
           "horse_id": "hrs_42520940",
@@ -3355,7 +3487,10 @@ window.racecardsData = {
           "trainer_rtf": "52",
           "score": 53.435,
           "odds_decimal": 4.4,
-          "odds_size": 37.04
+          "odds_size": 37.04,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 37.04,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_39961593",
@@ -3414,7 +3549,10 @@ window.racecardsData = {
           "trainer_rtf": "49",
           "score": 52.165,
           "odds_decimal": 11.0,
-          "odds_size": 14.32
+          "odds_size": 14.32,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 14.32,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_37576693",
@@ -3488,7 +3626,10 @@ window.racecardsData = {
           "trainer_rtf": "49",
           "score": 48.065,
           "odds_decimal": 19.5,
-          "odds_size": 10.8
+          "odds_size": 10.8,
+          "betfair_odds_decimal": 19.5,
+          "betfair_size": 10.8,
+          "betfair_odds_fractional": "37/2"
         },
         {
           "horse_id": "hrs_30175852",
@@ -3574,7 +3715,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": 45.355,
           "odds_decimal": 11.0,
-          "odds_size": 18.26
+          "odds_size": 18.26,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 18.26,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_27846630",
@@ -3662,7 +3806,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 42.99,
           "odds_decimal": 17.5,
-          "odds_size": 23.76
+          "odds_size": 23.76,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 23.76,
+          "betfair_odds_fractional": "33/2"
         }
       ],
       "big_race": false,
@@ -3750,7 +3897,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": 45.435,
           "odds_decimal": 2.64,
-          "odds_size": 13.87
+          "odds_size": 13.87,
+          "betfair_odds_decimal": 2.64,
+          "betfair_size": 13.87,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_52710385",
@@ -3807,7 +3957,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 33.07,
           "odds_decimal": 2.0,
-          "odds_size": 16.21
+          "odds_size": 16.21,
+          "betfair_odds_decimal": 2.0,
+          "betfair_size": 16.21,
+          "betfair_odds_fractional": "1/1"
         },
         {
           "horse_id": "hrs_52897047",
@@ -3864,7 +4017,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 24.9,
           "odds_decimal": 6.2,
-          "odds_size": 12.83
+          "odds_size": 12.83,
+          "betfair_odds_decimal": 6.2,
+          "betfair_size": 12.83,
+          "betfair_odds_fractional": "5/1"
         }
       ],
       "big_race": false,
@@ -3966,7 +4122,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": 67.98,
           "odds_decimal": 2.38,
-          "odds_size": 23.33
+          "odds_size": 23.33,
+          "betfair_odds_decimal": 2.38,
+          "betfair_size": 23.33,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_52641386",
@@ -4023,7 +4182,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 24.27,
           "odds_decimal": 24.0,
-          "odds_size": 13.29
+          "odds_size": 13.29,
+          "betfair_odds_decimal": 24.0,
+          "betfair_size": 13.29,
+          "betfair_odds_fractional": "23/1"
         },
         {
           "horse_id": "hrs_53689713",
@@ -4080,7 +4242,10 @@ window.racecardsData = {
           "trainer_rtf": "40",
           "score": 32.55,
           "odds_decimal": 25.0,
-          "odds_size": 14.06
+          "odds_size": 14.06,
+          "betfair_odds_decimal": 25.0,
+          "betfair_size": 14.06,
+          "betfair_odds_fractional": "24/1"
         },
         {
           "horse_id": "hrs_54432539",
@@ -4137,7 +4302,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": -57.9,
           "odds_decimal": 9.0,
-          "odds_size": 10.73
+          "odds_size": 10.73,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 10.73,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_53928399",
@@ -4194,7 +4362,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": -62.5,
           "odds_decimal": 9.2,
-          "odds_size": 11.86
+          "odds_size": 11.86,
+          "betfair_odds_decimal": 9.2,
+          "betfair_size": 11.86,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_54525625",
@@ -4251,7 +4422,10 @@ window.racecardsData = {
           "trainer_rtf": "46",
           "score": -65.9,
           "odds_decimal": 8.6,
-          "odds_size": 13.66
+          "odds_size": 13.66,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 13.66,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_52021459",
@@ -4308,7 +4482,10 @@ window.racecardsData = {
           "trainer_rtf": "46",
           "score": 33.355,
           "odds_decimal": 19.5,
-          "odds_size": 10.22
+          "odds_size": 10.22,
+          "betfair_odds_decimal": 19.5,
+          "betfair_size": 10.22,
+          "betfair_odds_fractional": "37/2"
         },
         {
           "horse_id": "hrs_54525548",
@@ -4365,7 +4542,10 @@ window.racecardsData = {
           "trainer_rtf": "38",
           "score": -63.7,
           "odds_decimal": 10.5,
-          "odds_size": 18.89
+          "odds_size": 18.89,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 18.89,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_53539514",
@@ -4422,7 +4602,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 38.48,
           "odds_decimal": 32.0,
-          "odds_size": 15.41
+          "odds_size": 15.41,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 15.41,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_53633020",
@@ -4479,7 +4662,10 @@ window.racecardsData = {
           "trainer_rtf": "56",
           "score": 38.705,
           "odds_decimal": 11.5,
-          "odds_size": 17.37
+          "odds_size": 17.37,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 17.37,
+          "betfair_odds_fractional": "21/2"
         }
       ],
       "big_race": false,
@@ -4615,7 +4801,10 @@ window.racecardsData = {
           "trainer_rtf": "42",
           "score": 41.065,
           "odds_decimal": 7.6,
-          "odds_size": 20.02
+          "odds_size": 20.02,
+          "betfair_odds_decimal": 7.6,
+          "betfair_size": 20.02,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_40725909",
@@ -4676,7 +4865,10 @@ window.racecardsData = {
           "trainer_rtf": "61",
           "score": 37.48,
           "odds_decimal": 6.0,
-          "odds_size": 12.7
+          "odds_size": 12.7,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 12.7,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_41504106",
@@ -4733,7 +4925,10 @@ window.racecardsData = {
           "trainer_rtf": "55",
           "score": 33.725,
           "odds_decimal": 6.6,
-          "odds_size": 17.46
+          "odds_size": 17.46,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 17.46,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_45314920",
@@ -4790,7 +4985,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": 32.05,
           "odds_decimal": 7.2,
-          "odds_size": 11.91
+          "odds_size": 11.91,
+          "betfair_odds_decimal": 7.2,
+          "betfair_size": 11.91,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_39059972",
@@ -4879,7 +5077,10 @@ window.racecardsData = {
           "trainer_rtf": "64",
           "score": 54.08,
           "odds_decimal": 3.25,
-          "odds_size": 13.71
+          "odds_size": 13.71,
+          "betfair_odds_decimal": 3.25,
+          "betfair_size": 13.71,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_40819632",
@@ -4948,7 +5149,10 @@ window.racecardsData = {
           "trainer_rtf": "100",
           "score": 58.78,
           "odds_decimal": 12.0,
-          "odds_size": 13.74
+          "odds_size": 13.74,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 13.74,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_40353390",
@@ -5022,7 +5226,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": 42.07,
           "odds_decimal": 9.6,
-          "odds_size": 11.92
+          "odds_size": 11.92,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 11.92,
+          "betfair_odds_fractional": "17/2"
         }
       ],
       "big_race": false,
@@ -5110,7 +5317,10 @@ window.racecardsData = {
           "trainer_rtf": "83",
           "score": -74.3,
           "odds_decimal": 29.0,
-          "odds_size": 12.39
+          "odds_size": 12.39,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 12.39,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_48169814",
@@ -5167,7 +5377,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": -149.45,
           "odds_decimal": 80.0,
-          "odds_size": 13.24
+          "odds_size": 13.24,
+          "betfair_odds_decimal": 80.0,
+          "betfair_size": 13.24,
+          "betfair_odds_fractional": "79/1"
         },
         {
           "horse_id": "hrs_45886477",
@@ -5230,7 +5443,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 27.585,
           "odds_decimal": 36.0,
-          "odds_size": 12.64
+          "odds_size": 12.64,
+          "betfair_odds_decimal": 36.0,
+          "betfair_size": 12.64,
+          "betfair_odds_fractional": "35/1"
         },
         {
           "horse_id": "hrs_54525611",
@@ -5287,7 +5503,10 @@ window.racecardsData = {
           "trainer_rtf": "60",
           "score": -74.3,
           "odds_decimal": 48.0,
-          "odds_size": 10.01
+          "odds_size": 10.01,
+          "betfair_odds_decimal": 48.0,
+          "betfair_size": 10.01,
+          "betfair_odds_fractional": "47/1"
         },
         {
           "horse_id": "hrs_53539500",
@@ -5344,7 +5563,10 @@ window.racecardsData = {
           "trainer_rtf": "46",
           "score": 29.295,
           "odds_decimal": 27.0,
-          "odds_size": 13.3
+          "odds_size": 13.3,
+          "betfair_odds_decimal": 27.0,
+          "betfair_size": 13.3,
+          "betfair_odds_fractional": "26/1"
         },
         {
           "horse_id": "hrs_53993989",
@@ -5401,7 +5623,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 28.03,
           "odds_decimal": 80.0,
-          "odds_size": 10.24
+          "odds_size": 10.24,
+          "betfair_odds_decimal": 80.0,
+          "betfair_size": 10.24,
+          "betfair_odds_fractional": "79/1"
         },
         {
           "horse_id": "hrs_46975026",
@@ -5458,7 +5683,10 @@ window.racecardsData = {
           "trainer_rtf": "75",
           "score": 53.9,
           "odds_decimal": 1.52,
-          "odds_size": 20.28
+          "odds_size": 20.28,
+          "betfair_odds_decimal": 1.52,
+          "betfair_size": 20.28,
+          "betfair_odds_fractional": "1/2"
         },
         {
           "horse_id": "hrs_54494818",
@@ -5515,7 +5743,10 @@ window.racecardsData = {
           "trainer_rtf": "65",
           "score": -57.3,
           "odds_decimal": 50.0,
-          "odds_size": 11.8
+          "odds_size": 11.8,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 11.8,
+          "betfair_odds_fractional": "49/1"
         },
         {
           "horse_id": "hrs_43003415",
@@ -5578,7 +5809,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 33.355,
           "odds_decimal": 75.0,
-          "odds_size": 11.83
+          "odds_size": 11.83,
+          "betfair_odds_decimal": 75.0,
+          "betfair_size": 11.83,
+          "betfair_odds_fractional": "74/1"
         },
         {
           "horse_id": "hrs_44785895",
@@ -5635,7 +5869,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": -12.445,
           "odds_decimal": 13.5,
-          "odds_size": 10.05
+          "odds_size": 10.05,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 10.05,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_50755460",
@@ -5692,7 +5929,10 @@ window.racecardsData = {
           "trainer_rtf": "54",
           "score": 35.02,
           "odds_decimal": 5.6,
-          "odds_size": 10.06
+          "odds_size": 10.06,
+          "betfair_odds_decimal": 5.6,
+          "betfair_size": 10.06,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_54090827",
@@ -5749,7 +5989,10 @@ window.racecardsData = {
           "trainer_rtf": "38",
           "score": -63.7,
           "odds_decimal": 19.5,
-          "odds_size": 13.53
+          "odds_size": 13.53,
+          "betfair_odds_decimal": 19.5,
+          "betfair_size": 13.53,
+          "betfair_odds_fractional": "37/2"
         },
         {
           "horse_id": "hrs_53572631",
@@ -5806,7 +6049,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": -3.08,
           "odds_decimal": 1000.0,
-          "odds_size": 228.51
+          "odds_size": 228.51,
+          "betfair_odds_decimal": 1000.0,
+          "betfair_size": 228.51,
+          "betfair_odds_fractional": "999/1"
         }
       ],
       "big_race": false,
@@ -5911,7 +6157,10 @@ window.racecardsData = {
           "trainer_rtf": "44",
           "score": 48.12,
           "odds_decimal": 7.4,
-          "odds_size": 14.96
+          "odds_size": 14.96,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 14.96,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_18491977",
@@ -6012,7 +6261,10 @@ window.racecardsData = {
           "trainer_rtf": "44",
           "score": 52.12,
           "odds_decimal": 5.3,
-          "odds_size": 17.07
+          "odds_size": 17.07,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 17.07,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_32290930",
@@ -6153,7 +6405,10 @@ window.racecardsData = {
           "trainer_rtf": "52",
           "score": 58.505,
           "odds_decimal": 1.52,
-          "odds_size": 17.89
+          "odds_size": 17.89,
+          "betfair_odds_decimal": 1.52,
+          "betfair_size": 17.89,
+          "betfair_odds_fractional": "1/2"
         },
         {
           "horse_id": "hrs_46547088",
@@ -6210,7 +6465,10 @@ window.racecardsData = {
           "trainer_rtf": "70",
           "score": 33.995,
           "odds_decimal": 23.0,
-          "odds_size": 12.36
+          "odds_size": 12.36,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 12.36,
+          "betfair_odds_fractional": "22/1"
         },
         {
           "horse_id": "hrs_47869045",
@@ -6267,7 +6525,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": -57.04,
           "odds_decimal": 38.0,
-          "odds_size": 11.09
+          "odds_size": 11.09,
+          "betfair_odds_decimal": 38.0,
+          "betfair_size": 11.09,
+          "betfair_odds_fractional": "37/1"
         }
       ],
       "big_race": false,
@@ -6452,7 +6713,10 @@ window.racecardsData = {
           "trainer_rtf": "70",
           "score": 44.215,
           "odds_decimal": 3.2,
-          "odds_size": 20.12
+          "odds_size": 20.12,
+          "betfair_odds_decimal": 3.2,
+          "betfair_size": 20.12,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_11321212",
@@ -6551,7 +6815,10 @@ window.racecardsData = {
           "trainer_rtf": "44",
           "score": -147.08,
           "odds_decimal": 6.8,
-          "odds_size": 17.39
+          "odds_size": 17.39,
+          "betfair_odds_decimal": 6.8,
+          "betfair_size": 17.39,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_8865409",
@@ -6650,7 +6917,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 34.36,
           "odds_decimal": 2.68,
-          "odds_size": 12.04
+          "odds_size": 12.04,
+          "betfair_odds_decimal": 2.68,
+          "betfair_size": 12.04,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_32103365",
@@ -6724,7 +6994,10 @@ window.racecardsData = {
           "trainer_rtf": "100",
           "score": 41.635,
           "odds_decimal": 5.0,
-          "odds_size": 13.33
+          "odds_size": 13.33,
+          "betfair_odds_decimal": 5.0,
+          "betfair_size": 13.33,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_22782781",
@@ -6962,7 +7235,10 @@ window.racecardsData = {
           "trainer_rtf": "41",
           "score": 35.0,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 3.75,
+          "betfair_size": 19.12,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_44939944",
@@ -7035,7 +7311,10 @@ window.racecardsData = {
           "trainer_rtf": "40",
           "score": 30.935,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 5.8,
+          "betfair_size": 15.82,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_24311434",
@@ -7124,7 +7403,10 @@ window.racecardsData = {
           "trainer_rtf": "11",
           "score": 46.375,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 8.2,
+          "betfair_size": 16.37,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_37730336",
@@ -7196,7 +7478,10 @@ window.racecardsData = {
           "trainer_rtf": "43",
           "score": 51.44,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 7.8,
+          "betfair_size": 10.88,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_40553380",
@@ -7280,7 +7565,10 @@ window.racecardsData = {
           "trainer_rtf": "61",
           "score": 50.52,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 5.8,
+          "betfair_size": 20.59,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_21340956",
@@ -7364,7 +7652,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": -18.455,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 11.22,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_36921409",
@@ -7546,7 +7837,10 @@ window.racecardsData = {
           "trainer_rtf": "45",
           "score": 42.3,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 15.5,
+          "betfair_size": 11.75,
+          "betfair_odds_fractional": "29/2"
         },
         {
           "horse_id": "hrs_36739857",
@@ -7620,7 +7914,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 25.42,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 14.91,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_39192006",
@@ -7679,7 +7976,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": 12.84,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 28.0,
+          "betfair_size": 10.43,
+          "betfair_odds_fractional": "27/1"
         },
         {
           "horse_id": "hrs_30344559",
@@ -7755,7 +8055,10 @@ window.racecardsData = {
           "trainer_rtf": "40",
           "score": 42.835,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 16.9,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_26849501",
@@ -7848,7 +8151,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 43.09,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 75.0,
+          "betfair_size": 13.03,
+          "betfair_odds_fractional": "74/1"
         }
       ],
       "big_race": false,
@@ -7952,7 +8258,10 @@ window.racecardsData = {
           "trainer_rtf": "46",
           "score": -65.9,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 18.0,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_53148634",
@@ -8009,7 +8318,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": -8.95,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 90.0,
+          "betfair_size": 10.6,
+          "betfair_odds_fractional": "89/1"
         },
         {
           "horse_id": "hrs_54525541",
@@ -8066,7 +8378,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": -70.9,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 10.05,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_52742116",
@@ -8123,7 +8438,10 @@ window.racecardsData = {
           "trainer_rtf": "53",
           "score": 6.5,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 5.5,
+          "betfair_size": 20.76,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_54525527",
@@ -8180,7 +8498,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": -74.3,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 13.98,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_53539479",
@@ -8237,7 +8558,10 @@ window.racecardsData = {
           "trainer_rtf": "69",
           "score": -69.7,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 17.34,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_54337353",
@@ -8294,7 +8618,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": -57.9,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 4.2,
+          "betfair_size": 13.18,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_54525555",
@@ -8351,7 +8678,10 @@ window.racecardsData = {
           "trainer_rtf": "73",
           "score": -47.7,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 6.4,
+          "betfair_size": 13.91,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_53689643",
@@ -8408,7 +8738,10 @@ window.racecardsData = {
           "trainer_rtf": "46",
           "score": -65.9,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 15.0,
+          "betfair_size": 14.23,
+          "betfair_odds_fractional": "14/1"
         },
         {
           "horse_id": "hrs_54059663",
@@ -8465,7 +8798,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": 16.645,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 65.0,
+          "betfair_size": 11.92,
+          "betfair_odds_fractional": "64/1"
         }
       ],
       "big_race": false,
@@ -8553,7 +8889,10 @@ window.racecardsData = {
           "trainer_rtf": "54",
           "score": 27.3,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 90.0,
+          "betfair_size": 10.64,
+          "betfair_odds_fractional": "89/1"
         },
         {
           "horse_id": "hrs_52205209",
@@ -8610,7 +8949,10 @@ window.racecardsData = {
           "trainer_rtf": "54",
           "score": 98.1,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 1.98,
+          "betfair_size": 17.0,
+          "betfair_odds_fractional": "1/1"
         },
         {
           "horse_id": "hrs_45661735",
@@ -8667,7 +9009,10 @@ window.racecardsData = {
           "trainer_rtf": "46",
           "score": -0.9,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 15.14,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_54525520",
@@ -8724,7 +9069,10 @@ window.racecardsData = {
           "trainer_rtf": "54",
           "score": 18.7,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 180.0,
+          "betfair_size": 11.24,
+          "betfair_odds_fractional": "179/1"
         },
         {
           "horse_id": "hrs_46975005",
@@ -8799,7 +9147,10 @@ window.racecardsData = {
           "trainer_rtf": "75",
           "score": 106.3,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 3.4,
+          "betfair_size": 18.28,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_54525534",
@@ -8856,7 +9207,10 @@ window.racecardsData = {
           "trainer_rtf": "85",
           "score": 18.7,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 38.0,
+          "betfair_size": 16.43,
+          "betfair_odds_fractional": "37/1"
         },
         {
           "horse_id": "hrs_53743424",
@@ -8913,7 +9267,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": 86.1,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 11.46,
+          "betfair_odds_fractional": "49/1"
         },
         {
           "horse_id": "hrs_46384107",
@@ -9029,7 +9386,10 @@ window.racecardsData = {
           "trainer_rtf": "69",
           "score": 79.6,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 10.25,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_51650214",
@@ -9086,7 +9446,10 @@ window.racecardsData = {
           "trainer_rtf": "73",
           "score": 122.2,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 75.0,
+          "betfair_size": 10.78,
+          "betfair_odds_fractional": "74/1"
         },
         {
           "horse_id": "hrs_51735901",
@@ -9143,7 +9506,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 22.4,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 44.0,
+          "betfair_size": 15.19,
+          "betfair_odds_fractional": "43/1"
         },
         {
           "horse_id": "hrs_51650221",
@@ -9208,7 +9574,10 @@ window.racecardsData = {
           "trainer_rtf": "17",
           "score": 90.0,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 11.35,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_53211655",
@@ -9265,7 +9634,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": 98.9,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 13.65,
+          "betfair_odds_fractional": "49/1"
         },
         {
           "horse_id": "hrs_53211662",
@@ -9322,7 +9694,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": 84.8,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 170.0,
+          "betfair_size": 12.95,
+          "betfair_odds_fractional": "169/1"
         }
       ],
       "big_race": false,
@@ -9434,7 +9809,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": 33.13,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 12.5,
+          "betfair_size": 10.81,
+          "betfair_odds_fractional": "23/2"
         },
         {
           "horse_id": "hrs_31356332",
@@ -9519,7 +9897,10 @@ window.racecardsData = {
           "trainer_rtf": "56",
           "score": -7.755,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 11.94,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_45950688",
@@ -9578,7 +9959,10 @@ window.racecardsData = {
           "trainer_rtf": "56",
           "score": 5.82,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 3.7,
+          "betfair_size": 28.06,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_40394403",
@@ -9641,7 +10025,10 @@ window.racecardsData = {
           "trainer_rtf": "83",
           "score": 78.62,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 3.85,
+          "betfair_size": 11.53,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_31631334",
@@ -9727,7 +10114,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": 54.735,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 19.85,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_40859616",
@@ -9799,7 +10189,10 @@ window.racecardsData = {
           "trainer_rtf": "75",
           "score": 58.38,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 26.4,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_37932342",
@@ -9881,7 +10274,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": -7.695,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 10.1,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_14616238",
@@ -9996,7 +10392,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 32.19,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 22.0,
+          "betfair_size": 10.61,
+          "betfair_odds_fractional": "21/1"
         },
         {
           "horse_id": "hrs_26767734",
@@ -10157,7 +10556,10 @@ window.racecardsData = {
           "trainer_rtf": "56",
           "score": -2.565,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 13.99,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_45759546",
@@ -10214,7 +10616,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": 37.385,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 14.0,
+          "betfair_size": 11.65,
+          "betfair_odds_fractional": "13/1"
         },
         {
           "horse_id": "hrs_42680547",
@@ -10274,7 +10679,10 @@ window.racecardsData = {
           "trainer_rtf": "27",
           "score": 52.745,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 3.35,
+          "betfair_size": 32.66,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_39960487",
@@ -10333,7 +10741,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": 54.795,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 30.0,
+          "betfair_size": 13.37,
+          "betfair_odds_fractional": "29/1"
         },
         {
           "horse_id": "hrs_46078102",
@@ -10405,7 +10816,10 @@ window.racecardsData = {
           "trainer_rtf": "65",
           "score": 52.645,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 21.0,
+          "betfair_size": 10.3,
+          "betfair_odds_fractional": "20/1"
         },
         {
           "horse_id": "hrs_43636523",
@@ -10462,7 +10876,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 23.475,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 12.45,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_46602794",
@@ -10525,7 +10942,10 @@ window.racecardsData = {
           "trainer_rtf": "17",
           "score": -152.295,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 46.0,
+          "betfair_size": 10.88,
+          "betfair_odds_fractional": "45/1"
         },
         {
           "horse_id": "hrs_45921701",
@@ -10584,7 +11004,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 46.925,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 13.54,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_47065046",
@@ -10647,7 +11070,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 15.205,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 34.0,
+          "betfair_size": 17.69,
+          "betfair_odds_fractional": "33/1"
         },
         {
           "horse_id": "hrs_44873773",
@@ -10704,7 +11130,10 @@ window.racecardsData = {
           "trainer_rtf": "41",
           "score": 37.81,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 12.79,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_49907025",
@@ -10773,7 +11202,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": -40.045,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 100.0,
+          "betfair_size": 10.69,
+          "betfair_odds_fractional": "99/1"
         },
         {
           "horse_id": "hrs_52388574",
@@ -10842,7 +11274,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": 46.87,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 95.0,
+          "betfair_size": 11.13,
+          "betfair_odds_fractional": "94/1"
         },
         {
           "horse_id": "hrs_39962104",
@@ -10902,7 +11337,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 54.12,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 18.96,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_53181632",
@@ -10959,7 +11397,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 53.485,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 10.21,
+          "betfair_odds_fractional": "59/1"
         }
       ],
       "big_race": false,
@@ -11047,7 +11488,10 @@ window.racecardsData = {
           "trainer_rtf": "42",
           "score": 55.48,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 9.2,
+          "betfair_size": 14.79,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_27279007",
@@ -11117,7 +11561,10 @@ window.racecardsData = {
           "trainer_rtf": "65",
           "score": 53.85,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 2.92,
+          "betfair_size": 25.51,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_27166279",
@@ -11237,7 +11684,10 @@ window.racecardsData = {
           "trainer_rtf": "40",
           "score": 33.995,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 28.0,
+          "betfair_size": 14.79,
+          "betfair_odds_fractional": "27/1"
         },
         {
           "horse_id": "hrs_41441995",
@@ -11306,7 +11756,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": 37.71,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 3.8,
+          "betfair_size": 18.71,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_11373110",
@@ -11420,7 +11873,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 11.505,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 90.0,
+          "betfair_size": 12.97,
+          "betfair_odds_fractional": "89/1"
         },
         {
           "horse_id": "hrs_37790312",
@@ -11494,7 +11950,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 26.94,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 13.98,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_30344804",
@@ -11570,7 +12029,10 @@ window.racecardsData = {
           "trainer_rtf": "40",
           "score": 42.49,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 12.5,
+          "betfair_size": 11.05,
+          "betfair_odds_fractional": "23/2"
         },
         {
           "horse_id": "hrs_22372609",
@@ -11641,7 +12103,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 32.535,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 11.22,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_50622635",
@@ -11698,7 +12163,10 @@ window.racecardsData = {
           "trainer_rtf": "61",
           "score": 45.7,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 13.78,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_38018505",
@@ -11757,7 +12225,10 @@ window.racecardsData = {
           "trainer_rtf": "43",
           "score": 46.52,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 9.8,
+          "betfair_size": 22.03,
+          "betfair_odds_fractional": "9/1"
         }
       ],
       "big_race": false,
@@ -11938,7 +12409,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 26.215,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 14.0,
+          "betfair_size": 11.41,
+          "betfair_odds_fractional": "13/1"
         },
         {
           "horse_id": "hrs_41346340",
@@ -12001,7 +12475,10 @@ window.racecardsData = {
           "trainer_rtf": "53",
           "score": 48.29,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 14.7,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_41130138",
@@ -12087,7 +12564,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 65.155,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 2.74,
+          "betfair_size": 32.76,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_26975004",
@@ -12162,7 +12642,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": 49.955,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 16.0,
+          "betfair_size": 22.24,
+          "betfair_odds_fractional": "15/1"
         },
         {
           "horse_id": "hrs_40225906",
@@ -12221,7 +12704,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": -13.785,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 5.8,
+          "betfair_size": 11.55,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_40165678",
@@ -12297,7 +12783,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 20.795,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 7.2,
+          "betfair_size": 16.01,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_35336273",
@@ -12363,7 +12852,10 @@ window.racecardsData = {
           "trainer_rtf": "40",
           "score": 40.11,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 16.45,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_35336756",
@@ -12420,7 +12912,10 @@ window.racecardsData = {
           "trainer_rtf": "40",
           "score": 24.32,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 11.47,
+          "betfair_odds_fractional": "49/1"
         },
         {
           "horse_id": "hrs_21680379",
@@ -12505,7 +13000,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 44.555,
           "odds_decimal": null,
-          "odds_size": null
+          "odds_size": null,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 11.71,
+          "betfair_odds_fractional": "33/2"
         }
       ],
       "big_race": false,
@@ -12593,7 +13091,10 @@ window.racecardsData = {
           "trainer_rtf": "41",
           "score": 36.41,
           "odds_decimal": 5.8,
-          "odds_size": 61.95
+          "odds_size": 61.95,
+          "betfair_odds_decimal": 5.8,
+          "betfair_size": 61.95,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_52831023",
@@ -12650,7 +13151,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": 28.865,
           "odds_decimal": 4.4,
-          "odds_size": 15.16
+          "odds_size": 15.16,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 15.16,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_52451868",
@@ -12707,7 +13211,10 @@ window.racecardsData = {
           "trainer_rtf": "55",
           "score": 29.055,
           "odds_decimal": 4.8,
-          "odds_size": 19.41
+          "odds_size": 19.41,
+          "betfair_odds_decimal": 4.8,
+          "betfair_size": 19.41,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_52021473",
@@ -12764,7 +13271,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": 46.445,
           "odds_decimal": 3.95,
-          "odds_size": 17.25
+          "odds_size": 17.25,
+          "betfair_odds_decimal": 3.95,
+          "betfair_size": 17.25,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_50435609",
@@ -12827,7 +13337,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 31.39,
           "odds_decimal": 6.4,
-          "odds_size": 12.33
+          "odds_size": 12.33,
+          "betfair_odds_decimal": 6.4,
+          "betfair_size": 12.33,
+          "betfair_odds_fractional": "11/2"
         }
       ],
       "big_race": false,
@@ -12915,7 +13428,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": 50.785,
           "odds_decimal": 25.0,
-          "odds_size": 10.96
+          "odds_size": 10.96,
+          "betfair_odds_decimal": 25.0,
+          "betfair_size": 10.96,
+          "betfair_odds_fractional": "24/1"
         },
         {
           "horse_id": "hrs_53841102",
@@ -13029,7 +13545,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 26.82,
           "odds_decimal": 110.0,
-          "odds_size": 25.48
+          "odds_size": 25.48,
+          "betfair_odds_decimal": 110.0,
+          "betfair_size": 25.48,
+          "betfair_odds_fractional": "109/1"
         },
         {
           "horse_id": "hrs_53390281",
@@ -13094,7 +13613,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": 34.85,
           "odds_decimal": 3.45,
-          "odds_size": 24.78
+          "odds_size": 24.78,
+          "betfair_odds_decimal": 3.45,
+          "betfair_size": 24.78,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_53390316",
@@ -13212,7 +13734,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 46.01,
           "odds_decimal": 7.0,
-          "odds_size": 12.82
+          "odds_size": 12.82,
+          "betfair_odds_decimal": 7.0,
+          "betfair_size": 12.82,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_54178495",
@@ -13269,7 +13794,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": -57.9,
           "odds_decimal": 1.87,
-          "odds_size": 24.77
+          "odds_size": 24.77,
+          "betfair_odds_decimal": 1.87,
+          "betfair_size": 24.77,
+          "betfair_odds_fractional": "1/1"
         }
       ],
       "big_race": false,
@@ -13363,7 +13891,10 @@ window.racecardsData = {
           "trainer_rtf": "56",
           "score": -62.5,
           "odds_decimal": 140.0,
-          "odds_size": 10.19
+          "odds_size": 10.19,
+          "betfair_odds_decimal": 140.0,
+          "betfair_size": 10.19,
+          "betfair_odds_fractional": "139/1"
         },
         {
           "horse_id": "hrs_54525576",
@@ -13420,7 +13951,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": -56.1,
           "odds_decimal": 150.0,
-          "odds_size": 11.76
+          "odds_size": 11.76,
+          "betfair_odds_decimal": 150.0,
+          "betfair_size": 11.76,
+          "betfair_odds_fractional": "149/1"
         },
         {
           "horse_id": "hrs_45346147",
@@ -13477,7 +14011,10 @@ window.racecardsData = {
           "trainer_rtf": "68",
           "score": 51.835,
           "odds_decimal": 8.4,
-          "odds_size": 26.01
+          "odds_size": 26.01,
+          "betfair_odds_decimal": 8.4,
+          "betfair_size": 26.01,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_52641526",
@@ -13534,7 +14071,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 0.5,
           "odds_decimal": 16.5,
-          "odds_size": 13.9
+          "odds_size": 13.9,
+          "betfair_odds_decimal": 16.5,
+          "betfair_size": 13.9,
+          "betfair_odds_fractional": "31/2"
         },
         {
           "horse_id": "hrs_54525583",
@@ -13591,7 +14131,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": -57.9,
           "odds_decimal": 29.0,
-          "odds_size": 10.63
+          "odds_size": 10.63,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.63,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_46913279",
@@ -13648,7 +14191,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": 56.22,
           "odds_decimal": 1.31,
-          "odds_size": 50.51
+          "odds_size": 50.51,
+          "betfair_odds_decimal": 1.31,
+          "betfair_size": 50.51,
+          "betfair_odds_fractional": "1/2"
         },
         {
           "horse_id": "hrs_54273898",
@@ -13705,7 +14251,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 8.465,
           "odds_decimal": 230.0,
-          "odds_size": 12.46
+          "odds_size": 12.46,
+          "betfair_odds_decimal": 230.0,
+          "betfair_size": 12.46,
+          "betfair_odds_fractional": "229/1"
         },
         {
           "horse_id": "hrs_54525590",
@@ -13762,7 +14311,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": -57.9,
           "odds_decimal": 34.0,
-          "odds_size": 14.97
+          "odds_size": 14.97,
+          "betfair_odds_decimal": 34.0,
+          "betfair_size": 14.97,
+          "betfair_odds_fractional": "33/1"
         }
       ],
       "big_race": false,
@@ -13888,7 +14440,10 @@ window.racecardsData = {
           "trainer_rtf": "100",
           "score": 97.605,
           "odds_decimal": 12.0,
-          "odds_size": 14.29
+          "odds_size": 14.29,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 14.29,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_18518003",
@@ -13982,7 +14537,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 38.31,
           "odds_decimal": 13.5,
-          "odds_size": 10.59
+          "odds_size": 10.59,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 10.59,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_24833459",
@@ -14058,7 +14616,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": 49.44,
           "odds_decimal": 5.2,
-          "odds_size": 34.33
+          "odds_size": 34.33,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 34.33,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_34471871",
@@ -14121,7 +14682,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 48.995,
           "odds_decimal": 8.0,
-          "odds_size": 11.9
+          "odds_size": 11.9,
+          "betfair_odds_decimal": 8.0,
+          "betfair_size": 11.9,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_24066763",
@@ -14199,7 +14763,10 @@ window.racecardsData = {
           "trainer_rtf": "30",
           "score": 44.38,
           "odds_decimal": 5.4,
-          "odds_size": 25.11
+          "odds_size": 25.11,
+          "betfair_odds_decimal": 5.4,
+          "betfair_size": 25.11,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_40373830",
@@ -14267,7 +14834,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 34.945,
           "odds_decimal": 29.0,
-          "odds_size": 17.04
+          "odds_size": 17.04,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 17.04,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_35699629",
@@ -14330,7 +14900,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": 42.06,
           "odds_decimal": 6.8,
-          "odds_size": 25.43
+          "odds_size": 25.43,
+          "betfair_odds_decimal": 6.8,
+          "betfair_size": 25.43,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_32653817",
@@ -14394,7 +14967,10 @@ window.racecardsData = {
           "trainer_rtf": "100",
           "score": 34.705,
           "odds_decimal": 18.5,
-          "odds_size": 11.77
+          "odds_size": 11.77,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 11.77,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_31069367",
@@ -14478,7 +15054,10 @@ window.racecardsData = {
           "trainer_rtf": "61",
           "score": 42.24,
           "odds_decimal": 12.0,
-          "odds_size": 29.18
+          "odds_size": 29.18,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 29.18,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_30804543",
@@ -14543,7 +15122,10 @@ window.racecardsData = {
           "trainer_rtf": "80",
           "score": 36.74,
           "odds_decimal": 27.0,
-          "odds_size": 10.42
+          "odds_size": 10.42,
+          "betfair_odds_decimal": 27.0,
+          "betfair_size": 10.42,
+          "betfair_odds_fractional": "26/1"
         },
         {
           "horse_id": "hrs_22523641",
@@ -14652,7 +15234,10 @@ window.racecardsData = {
           "trainer_rtf": "38",
           "score": 35.49,
           "odds_decimal": 24.0,
-          "odds_size": 13.76
+          "odds_size": 13.76,
+          "betfair_odds_decimal": 24.0,
+          "betfair_size": 13.76,
+          "betfair_odds_fractional": "23/1"
         },
         {
           "horse_id": "hrs_31274334",
@@ -14721,7 +15306,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 32.235,
           "odds_decimal": 55.0,
-          "odds_size": 12.55
+          "odds_size": 12.55,
+          "betfair_odds_decimal": 55.0,
+          "betfair_size": 12.55,
+          "betfair_odds_fractional": "54/1"
         }
       ],
       "big_race": false,
@@ -14817,7 +15405,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 53.575,
           "odds_decimal": 5.3,
-          "odds_size": 20.61
+          "odds_size": 20.61,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 20.61,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_39807992",
@@ -14886,7 +15477,10 @@ window.racecardsData = {
           "trainer_rtf": "41",
           "score": -1.355,
           "odds_decimal": 4.4,
-          "odds_size": 19.4
+          "odds_size": 19.4,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 19.4,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_31421656",
@@ -14959,7 +15553,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 28.145,
           "odds_decimal": 4.0,
-          "odds_size": 36.78
+          "odds_size": 36.78,
+          "betfair_odds_decimal": 4.0,
+          "betfair_size": 36.78,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_36454103",
@@ -15024,7 +15621,10 @@ window.racecardsData = {
           "trainer_rtf": "61",
           "score": 47.155,
           "odds_decimal": 19.0,
-          "odds_size": 15.54
+          "odds_size": 15.54,
+          "betfair_odds_decimal": 19.0,
+          "betfair_size": 15.54,
+          "betfair_odds_fractional": "18/1"
         },
         {
           "horse_id": "hrs_24676218",
@@ -15095,7 +15695,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 48.765,
           "odds_decimal": 12.0,
-          "odds_size": 11.7
+          "odds_size": 11.7,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 11.7,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_38131415",
@@ -15152,7 +15755,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": 44.115,
           "odds_decimal": 7.4,
-          "odds_size": 14.95
+          "odds_size": 14.95,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 14.95,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_22450239",
@@ -15223,7 +15829,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 35.35,
           "odds_decimal": 30.0,
-          "odds_size": 13.72
+          "odds_size": 13.72,
+          "betfair_odds_decimal": 30.0,
+          "betfair_size": 13.72,
+          "betfair_odds_fractional": "29/1"
         },
         {
           "horse_id": "hrs_37276106",
@@ -15302,7 +15911,10 @@ window.racecardsData = {
           "trainer_rtf": "61",
           "score": 43.085,
           "odds_decimal": 13.0,
-          "odds_size": 12.08
+          "odds_size": 12.08,
+          "betfair_odds_decimal": 13.0,
+          "betfair_size": 12.08,
+          "betfair_odds_fractional": "12/1"
         }
       ],
       "big_race": false,
@@ -15409,7 +16021,10 @@ window.racecardsData = {
           "trainer_rtf": "63",
           "score": 47.725,
           "odds_decimal": 10.5,
-          "odds_size": 10.68
+          "odds_size": 10.68,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 10.68,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_45095148",
@@ -15472,7 +16087,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 57.395,
           "odds_decimal": 10.0,
-          "odds_size": 23.34
+          "odds_size": 23.34,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 23.34,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_44541728",
@@ -15531,7 +16149,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 54.105,
           "odds_decimal": 4.9,
-          "odds_size": 12.66
+          "odds_size": 12.66,
+          "betfair_odds_decimal": 4.9,
+          "betfair_size": 12.66,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_44785874",
@@ -15588,7 +16209,10 @@ window.racecardsData = {
           "trainer_rtf": "60",
           "score": -166.51,
           "odds_decimal": 38.0,
-          "odds_size": 12.14
+          "odds_size": 12.14,
+          "betfair_odds_decimal": 38.0,
+          "betfair_size": 12.14,
+          "betfair_odds_fractional": "37/1"
         },
         {
           "horse_id": "hrs_47098863",
@@ -15664,7 +16288,10 @@ window.racecardsData = {
           "trainer_rtf": "41",
           "score": 42.3,
           "odds_decimal": 2.82,
-          "odds_size": 43.28
+          "odds_size": 43.28,
+          "betfair_odds_decimal": 2.82,
+          "betfair_size": 43.28,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_40919326",
@@ -15721,7 +16348,10 @@ window.racecardsData = {
           "trainer_rtf": "58",
           "score": 35.315,
           "odds_decimal": 10.5,
-          "odds_size": 10.09
+          "odds_size": 10.09,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 10.09,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_35625625",
@@ -15778,7 +16408,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 35.94,
           "odds_decimal": 32.0,
-          "odds_size": 12.62
+          "odds_size": 12.62,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 12.62,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_39060903",
@@ -15835,7 +16468,10 @@ window.racecardsData = {
           "trainer_rtf": "33",
           "score": 41.63,
           "odds_decimal": 9.2,
-          "odds_size": 19.3
+          "odds_size": 19.3,
+          "betfair_odds_decimal": 9.2,
+          "betfair_size": 19.3,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_39962209",
@@ -15892,7 +16528,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 42.62,
           "odds_decimal": 40.0,
-          "odds_size": 18.5
+          "odds_size": 18.5,
+          "betfair_odds_decimal": 40.0,
+          "betfair_size": 18.5,
+          "betfair_odds_fractional": "39/1"
         },
         {
           "horse_id": "hrs_42846776",
@@ -15949,7 +16588,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 18.44,
           "odds_decimal": 44.0,
-          "odds_size": 13.65
+          "odds_size": 13.65,
+          "betfair_odds_decimal": 44.0,
+          "betfair_size": 13.65,
+          "betfair_odds_fractional": "43/1"
         }
       ],
       "big_race": false,
@@ -16037,7 +16679,10 @@ window.racecardsData = {
           "trainer_rtf": "75",
           "score": 20.77,
           "odds_decimal": 5.9,
-          "odds_size": 13.12
+          "odds_size": 13.12,
+          "betfair_odds_decimal": 5.9,
+          "betfair_size": 13.12,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_44721908",
@@ -16163,7 +16808,10 @@ window.racecardsData = {
           "trainer_rtf": "34",
           "score": 48.805,
           "odds_decimal": 2.06,
-          "odds_size": 13.23
+          "odds_size": 13.23,
+          "betfair_odds_decimal": 2.06,
+          "betfair_size": 13.23,
+          "betfair_odds_fractional": "1/1"
         },
         {
           "horse_id": "hrs_51308348",
@@ -16220,7 +16868,10 @@ window.racecardsData = {
           "trainer_rtf": "60",
           "score": 32.04,
           "odds_decimal": 2.6,
-          "odds_size": 22.17
+          "odds_size": 22.17,
+          "betfair_odds_decimal": 2.6,
+          "betfair_size": 22.17,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_42715337",
@@ -16288,7 +16939,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 8.36,
           "odds_decimal": 26.0,
-          "odds_size": 10.72
+          "odds_size": 10.72,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 10.72,
+          "betfair_odds_fractional": "25/1"
         },
         {
           "horse_id": "hrs_40942048",
@@ -16468,7 +17122,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": -74.3,
           "odds_decimal": 1.3,
-          "odds_size": 11.61
+          "odds_size": 11.61,
+          "betfair_odds_decimal": 1.3,
+          "betfair_size": 11.61,
+          "betfair_odds_fractional": "1/2"
         },
         {
           "horse_id": "hrs_52710280",
@@ -16525,7 +17182,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": 41.75,
           "odds_decimal": 1.34,
-          "odds_size": 11.26
+          "odds_size": 11.26,
+          "betfair_odds_decimal": 1.34,
+          "betfair_size": 11.26,
+          "betfair_odds_fractional": "1/2"
         },
         {
           "horse_id": "hrs_52055073",
@@ -16584,7 +17244,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 35.35,
           "odds_decimal": 4.6,
-          "odds_size": 23.78
+          "odds_size": 23.78,
+          "betfair_odds_decimal": 4.6,
+          "betfair_size": 23.78,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_53116420",
@@ -16643,7 +17306,10 @@ window.racecardsData = {
           "trainer_rtf": "70",
           "score": 24.015,
           "odds_decimal": 4.8,
-          "odds_size": 10.68
+          "odds_size": 10.68,
+          "betfair_odds_decimal": 4.8,
+          "betfair_size": 10.68,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_54525415",
@@ -16700,7 +17366,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": -74.3,
           "odds_decimal": 1.07,
-          "odds_size": 10.0
+          "odds_size": 10.0,
+          "betfair_odds_decimal": 1.07,
+          "betfair_size": 10.0,
+          "betfair_odds_fractional": "0/1"
         },
         {
           "horse_id": "hrs_54463997",
@@ -16757,7 +17426,10 @@ window.racecardsData = {
           "trainer_rtf": "43",
           "score": -74.3,
           "odds_decimal": 18.0,
-          "odds_size": 20.26
+          "odds_size": 20.26,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 20.26,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_53211277",
@@ -16814,7 +17486,10 @@ window.racecardsData = {
           "trainer_rtf": "73",
           "score": -54.5,
           "odds_decimal": 4.1,
-          "odds_size": 12.23
+          "odds_size": 12.23,
+          "betfair_odds_decimal": 4.1,
+          "betfair_size": 12.23,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_53743312",
@@ -16871,7 +17546,10 @@ window.racecardsData = {
           "trainer_rtf": "45",
           "score": -70.5,
           "odds_decimal": 1.02,
-          "odds_size": 11.81
+          "odds_size": 11.81,
+          "betfair_odds_decimal": 1.02,
+          "betfair_size": 11.81,
+          "betfair_odds_fractional": "0/1"
         },
         {
           "horse_id": "hrs_54242727",
@@ -16928,7 +17606,10 @@ window.racecardsData = {
           "trainer_rtf": "86",
           "score": -51.7,
           "odds_decimal": 4.0,
-          "odds_size": 25.94
+          "odds_size": 25.94,
+          "betfair_odds_decimal": 4.0,
+          "betfair_size": 25.94,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_54525436",
@@ -16985,7 +17666,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": -64.7,
           "odds_decimal": 20.0,
-          "odds_size": 33.24
+          "odds_size": 33.24,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 33.24,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_52054835",
@@ -17048,7 +17732,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": -66.3,
           "odds_decimal": 9.6,
-          "odds_size": 45.13
+          "odds_size": 45.13,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 45.13,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_53743333",
@@ -17105,7 +17792,10 @@ window.racecardsData = {
           "trainer_rtf": "60",
           "score": 6.555,
           "odds_decimal": 1.02,
-          "odds_size": 11.38
+          "odds_size": 11.38,
+          "betfair_odds_decimal": 1.02,
+          "betfair_size": 11.38,
+          "betfair_odds_fractional": "0/1"
         },
         {
           "horse_id": "hrs_53960088",
@@ -17162,7 +17852,10 @@ window.racecardsData = {
           "trainer_rtf": "29",
           "score": -70.3,
           "odds_decimal": 1.07,
-          "odds_size": 10.03
+          "odds_size": 10.03,
+          "betfair_odds_decimal": 1.07,
+          "betfair_size": 10.03,
+          "betfair_odds_fractional": "0/1"
         },
         {
           "horse_id": "hrs_54525443",
@@ -17219,7 +17912,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": -74.3,
           "odds_decimal": 25.0,
-          "odds_size": 27.38
+          "odds_size": 27.38,
+          "betfair_odds_decimal": 25.0,
+          "betfair_size": 27.38,
+          "betfair_odds_fractional": "24/1"
         },
         {
           "horse_id": "hrs_54525450",
@@ -17276,7 +17972,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": -74.3,
           "odds_decimal": 50.0,
-          "odds_size": 20.01
+          "odds_size": 20.01,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 20.01,
+          "betfair_odds_fractional": "49/1"
         }
       ],
       "big_race": false,
@@ -17364,7 +18063,10 @@ window.racecardsData = {
           "trainer_rtf": "39",
           "score": 25.505,
           "odds_decimal": 16.0,
-          "odds_size": 11.65
+          "odds_size": 11.65,
+          "betfair_odds_decimal": 16.0,
+          "betfair_size": 11.65,
+          "betfair_odds_fractional": "15/1"
         },
         {
           "horse_id": "hrs_54242678",
@@ -17432,7 +18134,10 @@ window.racecardsData = {
           "trainer_rtf": "73",
           "score": -54.5,
           "odds_decimal": 2.88,
-          "odds_size": 44.8
+          "odds_size": 44.8,
+          "betfair_odds_decimal": 2.88,
+          "betfair_size": 44.8,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_52677394",
@@ -17495,7 +18200,10 @@ window.racecardsData = {
           "trainer_rtf": "63",
           "score": -6.345,
           "odds_decimal": 8.8,
-          "odds_size": 19.84
+          "odds_size": 19.84,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 19.84,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_53390120",
@@ -17552,7 +18260,10 @@ window.racecardsData = {
           "trainer_rtf": "60",
           "score": 16.225,
           "odds_decimal": 29.0,
-          "odds_size": 10.73
+          "odds_size": 10.73,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.73,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_54178397",
@@ -17609,7 +18320,10 @@ window.racecardsData = {
           "trainer_rtf": "86",
           "score": -51.7,
           "odds_decimal": 4.5,
-          "odds_size": 11.63
+          "odds_size": 11.63,
+          "betfair_odds_decimal": 4.5,
+          "betfair_size": 11.63,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_53960053",
@@ -17672,7 +18386,10 @@ window.racecardsData = {
           "trainer_rtf": "29",
           "score": 12.37,
           "odds_decimal": 32.0,
-          "odds_size": 10.42
+          "odds_size": 10.42,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 10.42,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_52897138",
@@ -17729,7 +18446,10 @@ window.racecardsData = {
           "trainer_rtf": "73",
           "score": 36.495,
           "odds_decimal": 5.9,
-          "odds_size": 43.32
+          "odds_size": 43.32,
+          "betfair_odds_decimal": 5.9,
+          "betfair_size": 43.32,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_54525457",
@@ -17786,7 +18506,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": -74.3,
           "odds_decimal": 17.0,
-          "odds_size": 10.78
+          "odds_size": 10.78,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 10.78,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_53960095",
@@ -17843,7 +18566,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 35.88,
           "odds_decimal": 9.2,
-          "odds_size": 13.47
+          "odds_size": 13.47,
+          "betfair_odds_decimal": 9.2,
+          "betfair_size": 13.47,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_54525471",
@@ -17900,7 +18626,10 @@ window.racecardsData = {
           "trainer_rtf": "63",
           "score": -65.3,
           "odds_decimal": 9.8,
-          "odds_size": 11.99
+          "odds_size": 11.99,
+          "betfair_odds_decimal": 9.8,
+          "betfair_size": 11.99,
+          "betfair_odds_fractional": "9/1"
         }
       ],
       "big_race": false,
@@ -17996,7 +18725,10 @@ window.racecardsData = {
           "trainer_rtf": "75",
           "score": 64.015,
           "odds_decimal": 6.6,
-          "odds_size": 13.25
+          "odds_size": 13.25,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 13.25,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_29577163",
@@ -18065,7 +18797,10 @@ window.racecardsData = {
           "trainer_rtf": "100",
           "score": 13.07,
           "odds_decimal": 2.9,
-          "odds_size": 11.7
+          "odds_size": 11.7,
+          "betfair_odds_decimal": 2.9,
+          "betfair_size": 11.7,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_37576525",
@@ -18149,7 +18884,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 51.705,
           "odds_decimal": 4.5,
-          "odds_size": 10.23
+          "odds_size": 10.23,
+          "betfair_odds_decimal": 4.5,
+          "betfair_size": 10.23,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_30096731",
@@ -18219,7 +18957,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 60.77,
           "odds_decimal": 6.8,
-          "odds_size": 10.22
+          "odds_size": 10.22,
+          "betfair_odds_decimal": 6.8,
+          "betfair_size": 10.22,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_38173807",
@@ -18282,7 +19023,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 67.61,
           "odds_decimal": 10.0,
-          "odds_size": 11.25
+          "odds_size": 11.25,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 11.25,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_37589237",
@@ -18480,7 +19224,10 @@ window.racecardsData = {
           "trainer_rtf": "45",
           "score": -21.145,
           "odds_decimal": 3.0,
-          "odds_size": 11.67
+          "odds_size": 11.67,
+          "betfair_odds_decimal": 3.0,
+          "betfair_size": 11.67,
+          "betfair_odds_fractional": "2/1"
         }
       ],
       "big_race": false,
@@ -18572,7 +19319,10 @@ window.racecardsData = {
           "trainer_rtf": "56",
           "score": 192.5,
           "odds_decimal": 21.0,
-          "odds_size": 10.16
+          "odds_size": 10.16,
+          "betfair_odds_decimal": 21.0,
+          "betfair_size": 10.16,
+          "betfair_odds_fractional": "20/1"
         },
         {
           "horse_id": "hrs_32967088",
@@ -18655,7 +19405,10 @@ window.racecardsData = {
           "trainer_rtf": "39",
           "score": 200.0,
           "odds_decimal": 34.0,
-          "odds_size": 11.84
+          "odds_size": 11.84,
+          "betfair_odds_decimal": 34.0,
+          "betfair_size": 11.84,
+          "betfair_odds_fractional": "33/1"
         },
         {
           "horse_id": "hrs_24456236",
@@ -18773,7 +19526,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": 195.5,
           "odds_decimal": 9.2,
-          "odds_size": 11.55
+          "odds_size": 11.55,
+          "betfair_odds_decimal": 9.2,
+          "betfair_size": 11.55,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_31069976",
@@ -18861,7 +19617,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 214.1,
           "odds_decimal": 2.76,
-          "odds_size": 31.43
+          "odds_size": 31.43,
+          "betfair_odds_decimal": 2.76,
+          "betfair_size": 31.43,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_41171417",
@@ -18932,7 +19691,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 200.4,
           "odds_decimal": 6.6,
-          "odds_size": 12.3
+          "odds_size": 12.3,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 12.3,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_41033986",
@@ -18995,7 +19757,10 @@ window.racecardsData = {
           "trainer_rtf": "70",
           "score": 197.5,
           "odds_decimal": 8.8,
-          "odds_size": 12.25
+          "odds_size": 12.25,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 12.25,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_43002512",
@@ -19067,7 +19832,10 @@ window.racecardsData = {
           "trainer_rtf": "75",
           "score": 189.5,
           "odds_decimal": 5.1,
-          "odds_size": 12.12
+          "odds_size": 12.12,
+          "betfair_odds_decimal": 5.1,
+          "betfair_size": 12.12,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_43984080",
@@ -19137,7 +19905,10 @@ window.racecardsData = {
           "trainer_rtf": "73",
           "score": 201.1,
           "odds_decimal": 10.5,
-          "odds_size": 10.95
+          "odds_size": 10.95,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 10.95,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_49512645",
@@ -19200,7 +19971,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 149.8,
           "odds_decimal": 48.0,
-          "odds_size": 11.72
+          "odds_size": 11.72,
+          "betfair_odds_decimal": 48.0,
+          "betfair_size": 11.72,
+          "betfair_odds_fractional": "47/1"
         }
       ],
       "big_race": true,
@@ -19288,7 +20062,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": -3.945,
           "odds_decimal": 1000.0,
-          "odds_size": 14.75
+          "odds_size": 14.75,
+          "betfair_odds_decimal": 1000.0,
+          "betfair_size": 14.75,
+          "betfair_odds_fractional": "999/1"
         },
         {
           "horse_id": "hrs_54525478",
@@ -19345,7 +20122,10 @@ window.racecardsData = {
           "trainer_rtf": "45",
           "score": -70.5,
           "odds_decimal": 7.2,
-          "odds_size": 15.93
+          "odds_size": 15.93,
+          "betfair_odds_decimal": 7.2,
+          "betfair_size": 15.93,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_53602115",
@@ -19402,7 +20182,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": 22.98,
           "odds_decimal": 29.0,
-          "odds_size": 10.12
+          "odds_size": 10.12,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.12,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_53181415",
@@ -19459,7 +20242,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 17.1,
           "odds_decimal": 36.0,
-          "odds_size": 10.17
+          "odds_size": 10.17,
+          "betfair_odds_decimal": 36.0,
+          "betfair_size": 10.17,
+          "betfair_odds_fractional": "35/1"
         },
         {
           "horse_id": "hrs_45824457",
@@ -19516,7 +20302,10 @@ window.racecardsData = {
           "trainer_rtf": "100",
           "score": 19.655,
           "odds_decimal": 29.0,
-          "odds_size": 10.81
+          "odds_size": 10.81,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.81,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_53390190",
@@ -19573,7 +20362,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 3.4,
           "odds_decimal": 21.0,
-          "odds_size": 14.36
+          "odds_size": 14.36,
+          "betfair_odds_decimal": 21.0,
+          "betfair_size": 14.36,
+          "betfair_odds_fractional": "20/1"
         },
         {
           "horse_id": "hrs_42615923",
@@ -19630,7 +20422,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": -74.3,
           "odds_decimal": 21.0,
-          "odds_size": 14.45
+          "odds_size": 14.45,
+          "betfair_odds_decimal": 21.0,
+          "betfair_size": 14.45,
+          "betfair_odds_fractional": "20/1"
         },
         {
           "horse_id": "hrs_54525485",
@@ -19687,7 +20482,10 @@ window.racecardsData = {
           "trainer_rtf": "45",
           "score": -70.5,
           "odds_decimal": 28.0,
-          "odds_size": 10.21
+          "odds_size": 10.21,
+          "betfair_odds_decimal": 28.0,
+          "betfair_size": 10.21,
+          "betfair_odds_fractional": "27/1"
         },
         {
           "horse_id": "hrs_45824513",
@@ -19744,7 +20542,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": -219.055,
           "odds_decimal": 29.0,
-          "odds_size": 10.23
+          "odds_size": 10.23,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.23,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_45255931",
@@ -19801,7 +20602,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": -253.24,
           "odds_decimal": 7.6,
-          "odds_size": 14.14
+          "odds_size": 14.14,
+          "betfair_odds_decimal": 7.6,
+          "betfair_size": 14.14,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_53181359",
@@ -19858,7 +20662,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 5.165,
           "odds_decimal": 1000.0,
-          "odds_size": 14.75
+          "odds_size": 14.75,
+          "betfair_odds_decimal": 1000.0,
+          "betfair_size": 14.75,
+          "betfair_odds_fractional": "999/1"
         },
         {
           "horse_id": "hrs_52526208",
@@ -19915,7 +20722,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": -22.0,
           "odds_decimal": 18.5,
-          "odds_size": 11.28
+          "odds_size": 11.28,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 11.28,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_53359530",
@@ -19972,7 +20782,10 @@ window.racecardsData = {
           "trainer_rtf": "67",
           "score": 23.795,
           "odds_decimal": 23.0,
-          "odds_size": 10.11
+          "odds_size": 10.11,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 10.11,
+          "betfair_odds_fractional": "22/1"
         },
         {
           "horse_id": "hrs_52962812",
@@ -20029,7 +20842,10 @@ window.racecardsData = {
           "trainer_rtf": "42",
           "score": -3.035,
           "odds_decimal": 18.5,
-          "odds_size": 14.87
+          "odds_size": 14.87,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 14.87,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_45701915",
@@ -20094,7 +20910,10 @@ window.racecardsData = {
           "trainer_rtf": "63",
           "score": 44.63,
           "odds_decimal": 1.61,
-          "odds_size": 20.59
+          "odds_size": 20.59,
+          "betfair_odds_decimal": 1.61,
+          "betfair_size": 20.59,
+          "betfair_odds_fractional": "1/2"
         },
         {
           "horse_id": "hrs_54304390",
@@ -20151,7 +20970,10 @@ window.racecardsData = {
           "trainer_rtf": "59",
           "score": 19.575,
           "odds_decimal": 28.0,
-          "odds_size": 10.07
+          "odds_size": 10.07,
+          "betfair_odds_decimal": 28.0,
+          "betfair_size": 10.07,
+          "betfair_odds_fractional": "27/1"
         },
         {
           "horse_id": "hrs_43417969",
@@ -20265,7 +21087,10 @@ window.racecardsData = {
           "trainer_rtf": "47",
           "score": -0.65,
           "odds_decimal": 29.0,
-          "odds_size": 10.46
+          "odds_size": 10.46,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.46,
+          "betfair_odds_fractional": "28/1"
         }
       ],
       "big_race": false,
@@ -20396,7 +21221,10 @@ window.racecardsData = {
           "trainer_rtf": "63",
           "score": 61.56,
           "odds_decimal": 3.95,
-          "odds_size": 11.89
+          "odds_size": 11.89,
+          "betfair_odds_decimal": 3.95,
+          "betfair_size": 11.89,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_24907491",
@@ -20528,7 +21356,10 @@ window.racecardsData = {
           "trainer_rtf": "29",
           "score": 58.37,
           "odds_decimal": 5.4,
-          "odds_size": 10.48
+          "odds_size": 10.48,
+          "betfair_odds_decimal": 5.4,
+          "betfair_size": 10.48,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_36387379",
@@ -20604,7 +21435,10 @@ window.racecardsData = {
           "trainer_rtf": "39",
           "score": 58.825,
           "odds_decimal": 4.7,
-          "odds_size": 24.98
+          "odds_size": 24.98,
+          "betfair_odds_decimal": 4.7,
+          "betfair_size": 24.98,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_13974583",
@@ -20754,7 +21588,10 @@ window.racecardsData = {
           "trainer_rtf": "42",
           "score": 49.845,
           "odds_decimal": 7.8,
-          "odds_size": 24.04
+          "odds_size": 24.04,
+          "betfair_odds_decimal": 7.8,
+          "betfair_size": 24.04,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_37890356",
@@ -20819,7 +21656,10 @@ window.racecardsData = {
           "trainer_rtf": "44",
           "score": 66.81,
           "odds_decimal": 3.4,
-          "odds_size": 19.54
+          "odds_size": 19.54,
+          "betfair_odds_decimal": 3.4,
+          "betfair_size": 19.54,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_31274348",
@@ -20890,7 +21730,10 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 0.975,
           "odds_decimal": 12.0,
-          "odds_size": 23.5
+          "odds_size": 23.5,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 23.5,
+          "betfair_odds_fractional": "11/1"
         }
       ],
       "big_race": false,
@@ -20991,7 +21834,10 @@ window.racecardsData = {
           "trainer_rtf": "62",
           "score": 54.815,
           "odds_decimal": 7.2,
-          "odds_size": 14.76
+          "odds_size": 14.76,
+          "betfair_odds_decimal": 7.2,
+          "betfair_size": 14.76,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_23208948",
@@ -21073,7 +21919,10 @@ window.racecardsData = {
           "trainer_rtf": "42",
           "score": -134.235,
           "odds_decimal": 20.0,
-          "odds_size": 10.15
+          "odds_size": 10.15,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 10.15,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_37014040",
@@ -21141,7 +21990,10 @@ window.racecardsData = {
           "trainer_rtf": "17",
           "score": -24.705,
           "odds_decimal": 27.0,
-          "odds_size": 11.2
+          "odds_size": 11.2,
+          "betfair_odds_decimal": 27.0,
+          "betfair_size": 11.2,
+          "betfair_odds_fractional": "26/1"
         },
         {
           "horse_id": "hrs_25027226",
@@ -21255,7 +22107,10 @@ window.racecardsData = {
           "trainer_rtf": "56",
           "score": 47.235,
           "odds_decimal": 7.8,
-          "odds_size": 12.01
+          "odds_size": 12.01,
+          "betfair_odds_decimal": 7.8,
+          "betfair_size": 12.01,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_37701258",
@@ -21314,7 +22169,10 @@ window.racecardsData = {
           "trainer_rtf": "",
           "score": 35.18,
           "odds_decimal": 26.0,
-          "odds_size": 10.16
+          "odds_size": 10.16,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 10.16,
+          "betfair_odds_fractional": "25/1"
         },
         {
           "horse_id": "hrs_9786623",
@@ -21438,7 +22296,10 @@ window.racecardsData = {
           "trainer_rtf": "20",
           "score": 41.685,
           "odds_decimal": 6.8,
-          "odds_size": 10.32
+          "odds_size": 10.32,
+          "betfair_odds_decimal": 6.8,
+          "betfair_size": 10.32,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_35925561",
@@ -21527,7 +22388,10 @@ window.racecardsData = {
           "trainer_rtf": "29",
           "score": 46.915,
           "odds_decimal": 19.5,
-          "odds_size": 10.83
+          "odds_size": 10.83,
+          "betfair_odds_decimal": 19.5,
+          "betfair_size": 10.83,
+          "betfair_odds_fractional": "37/2"
         },
         {
           "horse_id": "hrs_23616159",
@@ -21623,7 +22487,10 @@ window.racecardsData = {
           "trainer_rtf": "34",
           "score": 38.32,
           "odds_decimal": 32.0,
-          "odds_size": 10.59
+          "odds_size": 10.59,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 10.59,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_42647710",
@@ -21680,7 +22547,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 36.22,
           "odds_decimal": 7.4,
-          "odds_size": 10.52
+          "odds_size": 10.52,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 10.52,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_35513198",
@@ -21779,7 +22649,10 @@ window.racecardsData = {
           "trainer_rtf": "29",
           "score": 46.06,
           "odds_decimal": 10.0,
-          "odds_size": 11.16
+          "odds_size": 11.16,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 11.16,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_44939916",
@@ -21836,7 +22709,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 24.655,
           "odds_decimal": 18.0,
-          "odds_size": 10.25
+          "odds_size": 10.25,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.25,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_30726073",
@@ -21930,7 +22806,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": -12.69,
           "odds_decimal": 23.0,
-          "odds_size": 11.53
+          "odds_size": 11.53,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 11.53,
+          "betfair_odds_fractional": "22/1"
         },
         {
           "horse_id": "hrs_45982335",
@@ -21987,7 +22866,10 @@ window.racecardsData = {
           "trainer_rtf": "50",
           "score": 40.705,
           "odds_decimal": 18.5,
-          "odds_size": 10.47
+          "odds_size": 10.47,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 10.47,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_45007445",
@@ -22044,7 +22926,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 42.86,
           "odds_decimal": 11.5,
-          "odds_size": 18.48
+          "odds_size": 18.48,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 18.48,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_43796480",
@@ -22107,7 +22992,10 @@ window.racecardsData = {
           "trainer_rtf": "25",
           "score": 40.15,
           "odds_decimal": 18.0,
-          "odds_size": 14.33
+          "odds_size": 14.33,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 14.33,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_40942055",
@@ -22166,7 +23054,10 @@ window.racecardsData = {
           "trainer_rtf": "71",
           "score": 55.07,
           "odds_decimal": 5.8,
-          "odds_size": 11.32
+          "odds_size": 11.32,
+          "betfair_odds_decimal": 5.8,
+          "betfair_size": 11.32,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_40225836",
