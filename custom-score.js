@@ -46,7 +46,7 @@ const customRunnersListDiv = document.getElementById('customRunnersList');
 const currentRaceDisplay = document.getElementById('currentRaceDisplay');
 const currentRaceDetails = document.getElementById('currentRaceDetails');
 const raceSelector = document.getElementById('raceSelector');
-const showResultsBtn = document.getElementById('showResultsBtn'); // <- ADD THIS BUTTON IN YOUR HTML
+const showResultsBtn = document.getElementById('showResultsBtn');
 let currentSelectedRace = null;
 let selectedPresetName = "Default";
 
@@ -84,7 +84,6 @@ const weightPresets = {
   }
 };
 
-// --- Helper for current weights ---
 function getCurrentWeights() {
   return {
     rprWeight: parseFloat(rprWeightInput.value),
@@ -102,14 +101,11 @@ function getCurrentWeights() {
   }
 }
 
-// --- Event logging stub (replace with analytics/your own system) ---
 function logEvent(action, details) {
-  // If you want Google Analytics: gtag('event', action, details);
-  // Otherwise POST to your server here
   console.log('EVENT LOGGED:', action, details);
 }
 
-// --- Main render function (same as before) ---
+// --- Main render function ---
 function renderCustomScoredRunners() {
   if (!currentSelectedRace) {
     customRunnersListDiv.innerHTML = '<p class="error-message">No race data available. Please select a race.</p>';
@@ -121,53 +117,53 @@ function renderCustomScoredRunners() {
   currentRaceDetails.textContent = `${currentSelectedRace.race_name} • ${currentSelectedRace.distance} • ${currentSelectedRace.going}`;
 
   const currentWeights = getCurrentWeights();
+  const allZero = areAllWeightsZero();
 
   const runnersToProcess = JSON.parse(JSON.stringify(currentSelectedRace.runners));
   runnersToProcess.forEach(r => {
-    r.customScore = calculateCustomScore(r, currentWeights);
+    if (allZero) {
+      r.customScore = typeof r.score === 'number' ? r.score : 0;
+    } else {
+      r.customScore = calculateCustomScore(r, currentWeights);
+    }
   });
+
   const nonRunners = runnersToProcess.filter(isNonRunner);
   let activeRunners = runnersToProcess.filter(r => !isNonRunner(r));
-  if (areAllWeightsZero()) {
-    activeRunners.sort((a, b) => {
-      const oddsA = fractionToDecimalOdds(a.odds?.[0]?.fractional);
-      const oddsB = fractionToDecimalOdds(b.odds?.[0]?.fractional);
-      return oddsA - oddsB;
-    });
-  } else {
-    activeRunners.sort((a, b) => (b.customScore ?? -Infinity) - (a.customScore ?? -Infinity));
-  }
+
+  activeRunners.sort((a, b) => (b.customScore ?? -Infinity) - (a.customScore ?? -Infinity));
   const sortedRunners = [...activeRunners, ...nonRunners];
+
   customRunnersListDiv.innerHTML = sortedRunners.map((r, i) => `
     <div class="runner-card${isNonRunner(r) ? ' runner-nr' : ''}" data-index="${i}">
       <div class="runner-num-draw">
-          <span class="runner-num">${r.number || i+1}</span>
-          <span class="runner-draw">${(r.draw && r.draw !== r.number) ? `(${r.draw})` : ''}</span>
-          <span class="runner-score">${typeof r.customScore === 'number' ? r.customScore.toFixed(2) : ''}</span>
+        <span class="runner-num">${r.number || i+1}</span>
+        <span class="runner-draw">${(r.draw && r.draw !== r.number) ? `(${r.draw})` : ''}</span>
+        <span class="runner-score">${typeof r.customScore === 'number' ? r.customScore.toFixed(2) : ''}</span>
       </div>
       <img class="runner-silk" src="${r.silk_url||'https://placehold.co/39x39/161c22/fff?text=S'}" alt="silks" onerror="this.src='https://placehold.co/39x39/161c22/fff?text=S';" />
       <div class="runner-main">
-          <div class="runner-horse">${r.horse || ''}</div>
-          <div class="runner-meta-line">
-              <span class="runner-jockey">${r.jockey || ''}</span>
-              <span class="runner-meta-separator">|</span>
-              <span class="runner-trainer">${r.trainer || ''}</span>
-              <span class="runner-form">${r.form || ''}</span>
-              ${isNonRunner(r) ? '<span class="runner-nr-tag">NR</span>' : ''}
-          </div>
-          <div class="runner-info-line">
-              Age <b class="runner-age">${r.age || '-'}</b>
-              • Weight <b class="runner-weight">${r.lbs || '-'}</b>
-              • RPR <b class="runner-rpr">${r.rpr || '-'}</b>
-              • OR <b class="runner-or">${r.ofr || '-'}</b>
-              • TS <b class="runner-ts">${r.ts || '-'}</b>
-              ${r.headgear ? `• Headgear <b class="runner-headgear">${r.headgear}</b>` : ''}
-              ${r.last_run ? `• Last run <b class="runner-last-run">${r.last_run}d</b>` : ''}
-          </div>
-          <button class="runner-more-btn" type="button">More info ▼</button>
-          <div class="runner-more">
-              ${renderRunnerMore(r)}
-          </div>
+        <div class="runner-horse">${r.horse || ''}</div>
+        <div class="runner-meta-line">
+          <span class="runner-jockey">${r.jockey || ''}</span>
+          <span class="runner-meta-separator">|</span>
+          <span class="runner-trainer">${r.trainer || ''}</span>
+          <span class="runner-form">${r.form || ''}</span>
+          ${isNonRunner(r) ? '<span class="runner-nr-tag">NR</span>' : ''}
+        </div>
+        <div class="runner-info-line">
+          Age <b class="runner-age">${r.age || '-'}</b>
+          • Weight <b class="runner-weight">${r.lbs || '-'}</b>
+          • RPR <b class="runner-rpr">${r.rpr || '-'}</b>
+          • OR <b class="runner-or">${r.ofr || '-'}</b>
+          • TS <b class="runner-ts">${r.ts || '-'}</b>
+          ${r.headgear ? `• Headgear <b class="runner-headgear">${r.headgear}</b>` : ''}
+          ${r.last_run ? `• Last run <b class="runner-last-run">${r.last_run}d</b>` : ''}
+        </div>
+        <button class="runner-more-btn" type="button">More info ▼</button>
+        <div class="runner-more">
+          ${renderRunnerMore(r)}
+        </div>
       </div>
       <span class="runner-odds">${r.odds?.[0]?.fractional || ''}</span>
     </div>
@@ -248,8 +244,8 @@ function fractionToDecimalOdds(fraction) {
 }
 
 function renderRunnerMore(r) {
-  // (same as before)
-  // ... [omitted for brevity, copy from your code]
+  // Optional: Expand to show more fields here
+  return '';
 }
 
 function areAllWeightsZero() {
@@ -289,7 +285,7 @@ function updateSliderValues(weights) {
   courseFormWeightValue.textContent = weights.courseFormWeight.toFixed(2);
 }
 
-// --- UI Setup: sliders just update value number, but DO NOT show results immediately ---
+// --- UI Setup ---
 const sliderInputs = [
     rprWeightInput, tsWeightInput, orWeightInput, winsWeightInput, placesWeightInput,
     lastRunPenaltyWeightInput, lastRunBonusWeightInput, trainerPercentWeightInput,
@@ -308,7 +304,6 @@ sliderInputs.forEach(input => {
     if (!input) return;
     input.addEventListener('input', () => {
         sliderValueSpans[input.id].textContent = parseFloat(input.value).toFixed(input.step === '0.1' ? 1 : 2);
-        // NO auto results!
     });
 });
 
@@ -343,8 +338,6 @@ if (raceSelector) {
 if (showResultsBtn) {
   showResultsBtn.addEventListener('click', () => {
       renderCustomScoredRunners();
-
-      // LOG USAGE:
       logEvent('show_results', {
         event_category: 'Custom Scoring',
         event_label: raceSelector.value,
@@ -391,7 +384,7 @@ function populateRaceDropdown() {
 if (window.racecardsData && window.racecardsData.racecards && window.racecardsData.racecards.length > 0) {
     populateRaceDropdown();
     updateSliderValues(weightPresets.Default);
-customRunnersListDiv.innerHTML = '<p class="show-results-helper">Adjust weights and press <b>Show Results</b> to view the sorted runners.</p>';
+    customRunnersListDiv.innerHTML = '<p class="show-results-helper">Adjust weights and press <b>Show Results</b> to view the sorted runners.</p>';
 } else {
     const mainContent = document.querySelector('main.container');
     if (mainContent) {
