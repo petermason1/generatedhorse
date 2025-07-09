@@ -12,28 +12,27 @@ function convertLbsToStone(lbs) {
   const p = v % 14;
   return s > 0 ? `${s}st${p ? ' ' + p + 'lb' : ''}` : `${p}lb`;
 }
-// === Odds Helper ===
+// === Odds Helper (ONLY use betfair_odds_decimal) ===
+function decimalToFractional(decimal) {
+  if (!decimal || typeof decimal !== 'number' || decimal < 1.01) return '';
+  const num = Math.round((decimal - 1) * 100);
+  const denom = 100;
+  function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
+  const d = gcd(num, denom);
+  const numer = num / d, denomr = denom / d;
+  return denomr === 1 ? `${numer}/1` : `${numer}/${denomr}`;
+}
+
 function getRunnerOdds(r) {
-  // Array version: look for Bet365, then latest
-  if (Array.isArray(r.odds) && r.odds.length) {
-    const bet365 = r.odds.find(o =>
-      (o.source && o.source.toLowerCase().includes('bet365')) ||
-      (o.provider && o.provider.toLowerCase().includes('bet365'))
-    );
-    if (bet365 && bet365.fractional) return bet365.fractional;
-    // Otherwise, show latest available
-    const last = r.odds[r.odds.length - 1];
-    if (last && last.fractional) return last.fractional;
-    if (last && last.decimal) return last.decimal;
+  // Use odds_decimal if present, fallback to betfair_odds_decimal, else blank
+  let decimal = r.odds_decimal || r.betfair_odds_decimal;
+  if (decimal && typeof decimal === 'string') decimal = parseFloat(decimal);
+  if (decimal) {
+    return decimalToFractional(decimal);
   }
-  // Object version with .bet365 key
-  if (r.odds && r.odds.bet365 && r.odds.bet365.fractional) return r.odds.bet365.fractional;
-  // Fallbacks
-  if (r.sp_fractional) return r.sp_fractional;
-  if (r.sp) return r.sp;
-  if (r.sp_dec) return r.sp_dec;
   return '';
 }
+
 
 // --- Render course (meeting) pills ---
 function renderCourseNavigation(allRaces, currentCourse) {
