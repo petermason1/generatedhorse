@@ -12,6 +12,28 @@ function convertLbsToStone(lbs) {
   const p = v % 14;
   return s > 0 ? `${s}st${p ? ' ' + p + 'lb' : ''}` : `${p}lb`;
 }
+// === Odds Helper ===
+function getRunnerOdds(r) {
+  // Array version: look for Bet365, then latest
+  if (Array.isArray(r.odds) && r.odds.length) {
+    const bet365 = r.odds.find(o =>
+      (o.source && o.source.toLowerCase().includes('bet365')) ||
+      (o.provider && o.provider.toLowerCase().includes('bet365'))
+    );
+    if (bet365 && bet365.fractional) return bet365.fractional;
+    // Otherwise, show latest available
+    const last = r.odds[r.odds.length - 1];
+    if (last && last.fractional) return last.fractional;
+    if (last && last.decimal) return last.decimal;
+  }
+  // Object version with .bet365 key
+  if (r.odds && r.odds.bet365 && r.odds.bet365.fractional) return r.odds.bet365.fractional;
+  // Fallbacks
+  if (r.sp_fractional) return r.sp_fractional;
+  if (r.sp) return r.sp;
+  if (r.sp_dec) return r.sp_dec;
+  return '';
+}
 
 // --- Render course (meeting) pills ---
 function renderCourseNavigation(allRaces, currentCourse) {
@@ -108,7 +130,7 @@ function renderRace(race, allRaces, whichDay) {
               ${r.last_run ? `• Last run <b class="runner-last-run">${r.last_run}d</b>` : ''}
             </div>
           </div>
-          <span class="runner-odds">${r.odds?.[0]?.fractional || ''}</span>
+          <span class="runner-odds">${getRunnerOdds(r)}</span>
         </div>
       `).join('')}
     </div>
