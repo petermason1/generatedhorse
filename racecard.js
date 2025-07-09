@@ -5,6 +5,7 @@ function isNonRunner(r) {
   if (r.non_runner === true) return true;
   return false;
 }
+
 function convertLbsToStone(lbs) {
   const v = Number(lbs);
   if (!v || isNaN(v)) return '-';
@@ -12,6 +13,7 @@ function convertLbsToStone(lbs) {
   const p = v % 14;
   return s > 0 ? `${s}st${p ? ' ' + p + 'lb' : ''}` : `${p}lb`;
 }
+
 // === Odds Helper (ONLY use betfair_odds_decimal) ===
 function decimalToFractional(decimal) {
   if (!decimal || typeof decimal !== 'number' || decimal < 1.01) return '';
@@ -171,13 +173,40 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// === Find and show first race on page load ===
+// === Find and show race on page load ===
 document.addEventListener('DOMContentLoaded', function () {
   const rcData = window.racecardsData && window.racecardsData.racecards;
-  if (rcData && Array.isArray(rcData) && rcData.length > 0) {
-    renderRace(rcData[0], rcData, "today");
-  } else {
-    const main = document.getElementById('mainRacecard');
+  const main = document.getElementById('mainRacecard');
+
+  if (!rcData || !Array.isArray(rcData) || rcData.length === 0) {
     if (main) main.innerHTML = "<p>No race data found.</p>";
+    return;
+  }
+
+  // Check for race_id in URL
+  const params = new URLSearchParams(window.location.search);
+  const raceIdFromUrl = params.get('race_id');
+
+  let raceToRender;
+  if (raceIdFromUrl) {
+    // Find race by race_id or _id from URL
+    raceToRender = rcData.find(r => (r.race_id || r._id) === raceIdFromUrl);
+  }
+
+  // If no specific race found from URL, or no ID provided, default to the first race
+  if (!raceToRender) {
+    raceToRender = rcData[0];
+    // console.warn("No specific race_id found in URL or match failed. Defaulting to first race:", raceToRender);
+    // Optionally, you might want to clear the URL parameter if defaulting,
+    // though this can cause a flicker if the user expects the URL to persist.
+    // window.history.replaceState({}, document.title, window.location.pathname);
+  }
+
+  if (raceToRender) {
+    renderRace(raceToRender, rcData, "today");
+  } else {
+    // This case should ideally not be reached if rcData is not empty,
+    // as it would default to rcData[0]
+    if (main) main.innerHTML = "<p>No race found to display.</p>";
   }
 });

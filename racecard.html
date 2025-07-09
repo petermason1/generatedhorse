@@ -84,6 +84,25 @@
   <script src="data.js"></script>
   <script src="racecard.js"></script>
   <script src="main.js"></script>
+  <!-- Put this in racecard.html, after data.js is loaded -->
+<script>
+// --- Get race_id from URL
+const params = new URLSearchParams(window.location.search);
+const raceId = params.get('race_id');
+
+// --- Get all races
+const races = (window.racecardsData && window.racecardsData.racecards) || [];
+const race = races.find(r => (r.race_id || r._id) === raceId);
+
+// --- Pretty render
+if (race) {
+  renderRace(race, races, "today");
+} else {
+  document.getElementById('mainRacecard').innerHTML = "<h2>Race not found (broken link or data mismatch)</h2>";
+}
+
+</script>
+
   <script>
     // Set footer year
     document.getElementById('footer-year').textContent = new Date().getFullYear();

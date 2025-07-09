@@ -1,5 +1,3 @@
-// today.js
-
 console.log('today.js loaded');
 
 // ======== DATA SETUP ========
@@ -13,8 +11,8 @@ function isMobile() {
 function getNext6Races(allRaces) {
   const now = new Date();
   return allRaces
-    .filter(r => new Date(r.off_dt) > now)
-    .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
+    .filter(r => new Date(r.off_dt || r.off_time) > now)
+    .sort((a, b) => new Date(a.off_dt || a.off_time) - new Date(b.off_dt || b.off_time))
     .slice(0, 6);
 }
 function pad6(arr) {
@@ -22,7 +20,10 @@ function pad6(arr) {
   return [...arr, ...Array(6)].slice(0, 6);
 }
 function truncate(str, max) {
-  return str.length > max ? str.slice(0, max-1) + '…' : str;
+  return str && str.length > max ? str.slice(0, max-1) + '…' : str;
+}
+function getRaceId(race) {
+  return race.race_id || race._id || '';
 }
 function renderNext6Bar(allRaces) {
   const races6 = pad6(getNext6Races(allRaces));
@@ -30,7 +31,7 @@ function renderNext6Bar(allRaces) {
   return `<div class="${wrapperCls}">
     ${races6.map(r =>
       r
-        ? `<a href="racecard.html?date=today&race_id=${r._id}" class="race-bar-box" title="${r.course} ${r.off_time}">
+        ? `<a href="racecard.html?race_id=${getRaceId(r)}" class="race-bar-box" title="${r.course} ${r.off_time}">
             <span class="race-time">${r.off_time}</span>
             <span class="race-course">${truncate(r.course, 10)}</span>
           </a>`
@@ -40,7 +41,8 @@ function renderNext6Bar(allRaces) {
 }
 
 function updateNext6Bar() {
-  document.getElementById('next-races-bar').innerHTML = renderNext6Bar(races);
+  const el = document.getElementById('next-races-bar');
+  if (el) el.innerHTML = renderNext6Bar(races);
 }
 
 // ======== COURSE LISTING ========
@@ -57,7 +59,7 @@ function renderCourseListing(allRaces) {
   // Sort courses by earliest race off_dt
   const courseRows = Object.entries(byCourse)
     .map(([course, courseRaces]) => {
-      const minOffDt = Math.min(...courseRaces.map(r => new Date(r.off_dt)));
+      const minOffDt = Math.min(...courseRaces.map(r => new Date(r.off_dt || r.off_time)));
       return { course, courseRaces, minOffDt };
     })
     .sort((a, b) => a.minOffDt - b.minOffDt);
@@ -68,9 +70,9 @@ function renderCourseListing(allRaces) {
       <div class="course-title">${course}</div>
       <div class="course-race-bar">
         ${courseRaces
-          .sort((a, b) => new Date(a.off_dt) - new Date(b.off_dt))
+          .sort((a, b) => new Date(a.off_dt || a.off_time) - new Date(b.off_dt || b.off_time))
           .map(rc => `
-            <a class="course-race-box" href="racecard.html?date=today&race_id=${rc._id}">
+            <a class="course-race-box" href="racecard.html?race_id=${getRaceId(rc)}">
               <span class="race-time">${rc.off_time}</span>
             </a>
           `).join('')}
@@ -79,7 +81,8 @@ function renderCourseListing(allRaces) {
   `).join('');
 }
 function updateCourseListing() {
-  document.getElementById('course-listings').innerHTML = renderCourseListing(races);
+  const el = document.getElementById('course-listings');
+  if (el) el.innerHTML = renderCourseListing(races);
 }
 
 // ======== HORSE SEARCH ========
@@ -93,16 +96,16 @@ function searchHorses(query, allRaces) {
   const results = [];
   for (const race of allRaces) {
     // Fuzzy match on course or time
-    if (race.course.toLowerCase().includes(query) || race.off_time.includes(query)) {
+    if ((race.course && race.course.toLowerCase().includes(query)) || (race.off_time && race.off_time.includes(query))) {
       for (const runner of (race.runners || [])) {
-        results.push({ ...runner, course: race.course, off_time: race.off_time, raceId: race._id });
+        results.push({ ...runner, course: race.course, off_time: race.off_time, raceId: getRaceId(race) });
       }
       continue;
     }
     // Fuzzy match on horse
     for (const runner of (race.runners || [])) {
       if (runner.horse && runner.horse.toLowerCase().includes(query)) {
-        results.push({ ...runner, course: race.course, off_time: race.off_time, raceId: race._id });
+        results.push({ ...runner, course: race.course, off_time: race.off_time, raceId: getRaceId(race) });
       }
     }
   }
@@ -115,7 +118,7 @@ function renderHorseResults(list) {
   }
   horseResultsDiv.innerHTML = list.map(r =>
     `<div class="horse-search-result">
-      <a href="racecard.html?date=today&race_id=${r.raceId}">
+      <a href="racecard.html?race_id=${r.raceId}">
         <b>${r.horse}</b> <span style="color:#ffe561;">(${r.course} ${r.off_time})</span>
       </a>
     </div>`
