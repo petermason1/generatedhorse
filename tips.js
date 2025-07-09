@@ -75,10 +75,10 @@ console.log('tips.js: Script started.');
   }
 
   // === Tipster picks ===
-  const michaelsTips = ["francophone", "rohaan", "walsingham", "a girl named ivy"];
+  const michaelsTips = ["wannabeawallaby", "kunaa", "invincible ruby", "hinitsa bay"];
   const chrisTips    = ["langholm", "waiting for love", "santorini star", "kingdom of stars"];
   const peterTips    = ["call me betty", "Palazzo Persico","hardlass", "in a hurry"];
-  const kenTips      = ["city house", "mono river", "ina mina", "wbee"];
+  const kenTips      = ["left over love", "ironist", "beach point", "i follow rivers"];
   const racingPostTips = ["spartan times", "i follow rivers", "ironist", "wonderfulwonderful"];
 
   // --- Build tipster pick cards, skip non-existent picks ---
