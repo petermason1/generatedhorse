@@ -209,4 +209,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // as it would default to rcData[0]
     if (main) main.innerHTML = "<p>No race found to display.</p>";
   }
+  
 });

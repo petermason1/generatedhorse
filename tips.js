@@ -72,6 +72,7 @@ console.log('tips.js: Script started.');
       };
       return t(a.race.off_time) - t(b.race.off_time);
     });
+    
   }
 
   // === Tipster picks ===
