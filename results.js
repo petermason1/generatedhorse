@@ -75,7 +75,6 @@ function getTodaysDateStr() {
 }
 
 // --- Helper: get yesterday's date in YYYY-MM-DD ---
-// (Note: This function is still here but will not be used for the hardcoded static file fetch)
 function getYesterdaysDateStr() {
   const d = new Date();
   d.setDate(d.getDate() - 1);
@@ -135,7 +134,7 @@ function manageLocalStorageDates() {
  * 1. Live API fetch for today's results.
  * 2. Local storage for today's results.
  * 3. Local storage for yesterday's results.
- * 4. Hardcoded static file for 2025-06-30-results.json.
+ * 4. Static file for yesterday's results (e.g. /2025-07-09-results.json).
  */
 async function loadResults() {
   const resultsDiv = document.getElementById('results');
@@ -145,6 +144,8 @@ async function loadResults() {
   let dataToRender = null;
   let isFallbackRender = false;
   const todaysDateStr = getTodaysDateStr(); // Get today's date
+  const yesterdaysDateStr = getYesterdaysDateStr();
+  const staticFilePath = `/${yesterdaysDateStr}-results.json`;
 
   try {
     // 1. Try to fetch today's live results
@@ -177,36 +178,34 @@ async function loadResults() {
           isFallbackRender = true;
           console.log("Rendered cached yesterday's results.");
         } else {
-          // 4. No cached yesterday's. Try fetching the specific hardcoded static file.
-const yesterdaysDateStr = getYesterdaysDateStr();
-const staticFilePath = `/${yesterdaysDateStr}-results.json`;
+          // 4. No cached yesterday's. Try fetching the static file for yesterday.
           console.log(`No cached yesterday's results, trying static file: ${staticFilePath}`);
           try {
-            const responseStatic = await fetch(staticFilePath); // Use the hardcoded path
+            const responseStatic = await fetch(staticFilePath);
             if (responseStatic.ok) {
               const staticData = await responseStatic.json();
               if (staticData && staticData.results && staticData.results.length) {
                 dataToRender = staticData;
                 isFallbackRender = true;
-                console.log("Rendered hardcoded static yesterday's results.");
-                saveToLocalStorage(LOCAL_STORAGE_YESTERDAY_KEY, staticData); // Optionally cache it
+                console.log("Rendered static yesterday's results.");
+                saveToLocalStorage(LOCAL_STORAGE_YESTERDAY_KEY, staticData);
               } else {
                 console.warn(`Static file ${staticFilePath} loaded but contains NO results.`);
-                // Explicit message if file loaded but data is empty
-                resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') + `<span style="color:#ff5858">Fallback file loaded but contains NO results.</span>`;
-                return; // Exit as we've handled display
+                resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') +
+                  `<span style="color:#ff5858">Fallback file loaded but contains NO results.</span>`;
+                return;
               }
             } else {
               console.warn(`Static file fetch failed for ${staticFilePath} with status: ${responseStatic.status}.`);
-              // Explicit message for HTTP errors on static file
-              resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') + `<span style="color:#ff5858">Could not load fallback file: <b>${staticFilePath}</b> (HTTP ${responseStatic.status})</span>`;
-              return; // Exit as we've handled display
+              resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') +
+                `<span style="color:#ff5858">Could not load fallback file: <b>${staticFilePath}</b> (HTTP ${responseStatic.status})</span>`;
+              return;
             }
           } catch (staticFileError) {
             console.error(`Error fetching static file ${staticFilePath}:`, staticFileError);
-            // Explicit message for network/parsing errors on static file
-            resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') + `<span style="color:#ff5858">Error fetching fallback file: ${staticFileError.message || staticFileError}</span>`;
-            return; // Exit as we've handled display
+            resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') +
+              `<span style="color:#ff5858">Error fetching fallback file: ${staticFileError.message || staticFileError}</span>`;
+            return;
           }
         }
       }
@@ -225,8 +224,7 @@ const staticFilePath = `/${yesterdaysDateStr}-results.json`;
         isFallbackRender = true;
         console.log("Rendered cached yesterday's results after critical error.");
       } else {
-        // Last resort: try the hardcoded static file again in case the initial error prevented it.
-        const staticFilePath = '/2025-06-30-results.json';
+        // Last resort: try the static file for yesterday again
         console.log(`No cached yesterday's results, trying static file ${staticFilePath} as last resort after critical error.`);
         try {
           const responseStatic = await fetch(staticFilePath);
@@ -235,21 +233,24 @@ const staticFilePath = `/${yesterdaysDateStr}-results.json`;
             if (staticData && staticData.results && staticData.results.length) {
               dataToRender = staticData;
               isFallbackRender = true;
-              console.log("Rendered hardcoded static yesterday's results after critical error.");
+              console.log("Rendered static yesterday's results after critical error.");
               saveToLocalStorage(LOCAL_STORAGE_YESTERDAY_KEY, staticData);
             } else {
               console.warn(`Static file ${staticFilePath} loaded but contains NO results after critical error.`);
-              resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') + `<span style="color:#ff5858">Fallback file loaded but contains NO results after critical error.</span>`;
+              resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') +
+                `<span style="color:#ff5858">Fallback file loaded but contains NO results after critical error.</span>`;
               return;
             }
           } else {
             console.warn(`Static file fetch failed for ${staticFilePath} with status: ${responseStatic.status} after critical error.`);
-            resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') + `<span style="color:#ff5858">Could not load fallback file: <b>${staticFilePath}</b> (HTTP ${responseStatic.status}) after critical error.</span>`;
+            resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') +
+              `<span style="color:#ff5858">Could not load fallback file: <b>${staticFilePath}</b> (HTTP ${responseStatic.status}) after critical error.</span>`;
             return;
           }
         } catch (staticFileError) {
           console.error(`Error fetching static file ${staticFilePath} during critical fallback:`, staticFileError);
-          resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') + `<span style="color:#ff5858">Error fetching fallback file: ${staticFileError.message || staticFileError} after critical error.</span>`;
+          resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') +
+            `<span style="color:#ff5858">Error fetching fallback file: ${staticFileError.message || staticFileError} after critical error.</span>`;
           return;
         }
       }
@@ -257,14 +258,14 @@ const staticFilePath = `/${yesterdaysDateStr}-results.json`;
   } finally {
     // If no data was found or explicitly rendered by an error path, display default message
     if (!dataToRender || !dataToRender.results || !dataToRender.results.length) {
-        console.log("No data found to render. Displaying generic 'No results yet' message.");
-        resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') + '<p>No results yet. Please check back later.</p>';
+      console.log("No data found to render. Displaying generic 'No results yet' message.");
+      resultsDiv.innerHTML = (isFallbackRender ? `<div class="fallback-banner">Showing <b>yesterday's</b> results (today’s results not yet available).</div>` : '') +
+        '<p>No results yet. Please check back later.</p>';
     } else {
-        // If data was found and not explicitly rendered by an error message, render it now.
-        // This prevents double rendering if an early error path already set innerHTML.
-        if (!resultsDiv.innerHTML.includes('<span style="color:#ff5858">')) { // Simple check to avoid overwriting error messages
-            renderResults(dataToRender, isFallbackRender);
-        }
+      // If data was found and not explicitly rendered by an error message, render it now.
+      if (!resultsDiv.innerHTML.includes('<span style="color:#ff5858">')) {
+        renderResults(dataToRender, isFallbackRender);
+      }
     }
   }
 }
