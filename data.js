@@ -94,7 +94,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/9/8/157890.svg",
           "last_run": "30",
           "form": "27-056",
-          "trainer_rtf": "71"
+          "trainer_rtf": "71",
+          "score": 48.98,
+          "betfair_odds_decimal": 4.7,
+          "betfair_size": 11.19,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_30980803",
@@ -151,7 +155,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/3/6/191663c.svg",
           "last_run": "22",
           "form": "884322",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 46.12,
+          "betfair_odds_decimal": 3.6,
+          "betfair_size": 16.32,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_31451126",
@@ -216,7 +224,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/5/8/218852.svg",
           "last_run": "22",
           "form": "22-044",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 45.89,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 10.55,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_36986278",
@@ -282,7 +294,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/9/8/130890.svg",
           "last_run": "13",
           "form": "1-0570",
-          "trainer_rtf": "80"
+          "trainer_rtf": "80",
+          "score": 50.72,
+          "betfair_odds_decimal": 25.0,
+          "betfair_size": 11.96,
+          "betfair_odds_fractional": "24/1"
         },
         {
           "horse_id": "hrs_24686389",
@@ -363,7 +379,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/1/9/351919.svg",
           "last_run": "41",
           "form": "32-008",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 26.255,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 11.37,
+          "betfair_odds_fractional": "22/1"
         },
         {
           "horse_id": "hrs_44939580",
@@ -425,7 +445,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/0/2/330200.svg",
           "last_run": "49",
           "form": "-61468",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": 27.585,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 10.55,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_32290986",
@@ -498,7 +522,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/7/5/330578.svg",
           "last_run": "73",
           "form": "1866-8",
-          "trainer_rtf": "61"
+          "trainer_rtf": "61",
+          "score": 0.89,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.17,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_44570687",
@@ -569,7 +597,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/1/9/191912.svg",
           "last_run": "12",
           "form": "633359",
-          "trainer_rtf": "20"
+          "trainer_rtf": "20",
+          "score": 43.605,
+          "betfair_odds_decimal": 13.0,
+          "betfair_size": 15.53,
+          "betfair_odds_fractional": "12/1"
         },
         {
           "horse_id": "hrs_26369812",
@@ -636,7 +668,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/6/3/307368.svg",
           "last_run": "41",
           "form": "30-264",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 39.885,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 12.86,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_40786179",
@@ -704,7 +740,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/8/4/291548b.svg",
           "last_run": "23",
           "form": "652047",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 51.125,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 11.08,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_43605611",
@@ -764,7 +804,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/4/9/308946.svg",
           "last_run": "24",
           "form": "-31574",
-          "trainer_rtf": "70"
+          "trainer_rtf": "70",
+          "score": 41.125,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 10.25,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_39190536",
@@ -818,7 +862,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/7/6/10677.svg",
           "last_run": "25",
           "form": "6447",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 44.51,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 12.82,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_40918577",
@@ -877,7 +925,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/1/4/343418.svg",
           "last_run": "342",
           "form": "768-",
-          "trainer_rtf": "61"
+          "trainer_rtf": "61",
+          "score": -286.785,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 10.14,
+          "betfair_odds_fractional": "31/1"
         }
       ],
       "big_race": false,
@@ -975,7 +1027,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/1/343138.svg",
           "last_run": "27",
           "form": "6-2148",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 51.42,
+          "betfair_odds_decimal": 4.7,
+          "betfair_size": 11.07,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_45598637",
@@ -1056,7 +1112,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/5/2/359254.svg",
           "last_run": "25",
           "form": "21-0",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 49.775,
+          "betfair_odds_decimal": 28.0,
+          "betfair_size": 11.15,
+          "betfair_odds_fractional": "27/1"
         },
         {
           "horse_id": "hrs_44076116",
@@ -1118,7 +1178,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/8/4/350488.svg",
           "last_run": "42",
           "form": "113-05",
-          "trainer_rtf": "62"
+          "trainer_rtf": "62",
+          "score": 41.39,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 10.07,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_51735908",
@@ -1174,7 +1238,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/2/7/350722.svg",
           "last_run": "40",
           "form": "235",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 64.22,
+          "betfair_odds_decimal": 5.5,
+          "betfair_size": 13.58,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_46383974",
@@ -1230,7 +1298,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/5/6/179654.svg",
           "last_run": "34",
           "form": "0-161",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 45.2,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 18.96,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_24493896",
@@ -1305,7 +1377,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/6/2/343262.svg",
           "last_run": "31",
           "form": "4-7679",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": 59.88,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 11.06,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_34238120",
@@ -1395,7 +1471,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/1/3/348314.svg",
           "last_run": "103",
           "form": "113328",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": -26.575,
+          "betfair_odds_decimal": 21.0,
+          "betfair_size": 10.4,
+          "betfair_odds_fractional": "20/1"
         },
         {
           "horse_id": "hrs_29856057",
@@ -1491,7 +1571,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/8/7/239787.svg",
           "last_run": "25",
           "form": "5-1370",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 48.655,
+          "betfair_odds_decimal": 24.0,
+          "betfair_size": 10.59,
+          "betfair_odds_fractional": "23/1"
         },
         {
           "horse_id": "hrs_44450819",
@@ -1560,7 +1644,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/3/3/344336.svg",
           "last_run": "259",
           "form": "5214-",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": -186.405,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 11.68,
+          "betfair_odds_fractional": "22/1"
         },
         {
           "horse_id": "hrs_41877661",
@@ -1614,7 +1702,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/1/3/87131b.svg",
           "last_run": "30",
           "form": "25-223",
-          "trainer_rtf": "61"
+          "trainer_rtf": "61",
+          "score": 56.045,
+          "betfair_odds_decimal": 8.4,
+          "betfair_size": 11.84,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_42326522",
@@ -1672,7 +1764,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/4/8/843.svg",
           "last_run": "15",
           "form": "5-0027",
-          "trainer_rtf": "54"
+          "trainer_rtf": "54",
+          "score": 54.61,
+          "betfair_odds_decimal": 40.0,
+          "betfair_size": 10.09,
+          "betfair_odds_fractional": "39/1"
         }
       ],
       "big_race": false,
@@ -1774,7 +1870,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/4/7/328174b.svg",
           "last_run": "10",
           "form": "4-5131",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": 100.29,
+          "betfair_odds_decimal": 2.74,
+          "betfair_size": 10.81,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_38002335",
@@ -1840,7 +1940,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/3/7/296732.svg",
           "last_run": "24",
           "form": "3U8-08",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 35.77,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 11.69,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_30487170",
@@ -1913,7 +2017,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/4/5/357544.svg",
           "last_run": "22",
           "form": "50-565",
-          "trainer_rtf": "46"
+          "trainer_rtf": "46",
+          "score": 39.39,
+          "betfair_odds_decimal": 7.8,
+          "betfair_size": 14.98,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_45413165",
@@ -1967,7 +2075,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/0/1/6102.svg",
           "last_run": "48",
           "form": "65-733",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 30.36,
+          "betfair_odds_decimal": 6.8,
+          "betfair_size": 12.37,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_35938476",
@@ -2043,7 +2155,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/5/2/251254.svg",
           "last_run": "27",
           "form": "2560-9",
-          "trainer_rtf": "20"
+          "trainer_rtf": "20",
+          "score": 12.76
         },
         {
           "horse_id": "hrs_32105227",
@@ -2124,7 +2237,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/8/9/277983.svg",
           "last_run": "12",
           "form": "6-7050",
-          "trainer_rtf": "54"
+          "trainer_rtf": "54",
+          "score": 43.035,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 16.49,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_43352141",
@@ -2178,7 +2295,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/4/7/323741.svg",
           "last_run": "44",
           "form": "80-4",
-          "trainer_rtf": "23"
+          "trainer_rtf": "23",
+          "score": 18.46,
+          "betfair_odds_decimal": 34.0,
+          "betfair_size": 13.43,
+          "betfair_odds_fractional": "33/1"
         },
         {
           "horse_id": "hrs_42041349",
@@ -2238,7 +2359,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/0/5/53501.svg",
           "last_run": "23",
           "form": "759-38",
-          "trainer_rtf": "70"
+          "trainer_rtf": "70",
+          "score": 25.56,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 11.34,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_50339793",
@@ -2292,7 +2417,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/4/4/319446.svg",
           "last_run": "52",
           "form": "9503",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 10.93,
+          "betfair_odds_decimal": 5.5,
+          "betfair_size": 12.8,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_52677240",
@@ -2346,7 +2475,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/1/3/87131b.svg",
           "last_run": "21",
           "form": "808",
-          "trainer_rtf": "61"
+          "trainer_rtf": "61",
+          "score": 38.905,
+          "betfair_odds_decimal": 8.0,
+          "betfair_size": 17.12,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_46295676",
@@ -2400,7 +2533,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/8/1/345182.svg",
           "last_run": "18",
           "form": "00-09",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 24.11,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 11.85,
+          "betfair_odds_fractional": "49/1"
         }
       ],
       "big_race": false,
@@ -2485,7 +2622,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/7/0/7073.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": -52.7,
+          "betfair_odds_decimal": 8.4,
+          "betfair_size": 10.16,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_53689734",
@@ -2539,7 +2680,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/0/347098.svg",
           "last_run": "22",
           "form": "2",
-          "trainer_rtf": "41"
+          "trainer_rtf": "41",
+          "score": 41.59,
+          "betfair_odds_decimal": 2.98,
+          "betfair_size": 10.49,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_54555354",
@@ -2593,7 +2738,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/3/1/343135.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": -63.5,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 14.01,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_54555361",
@@ -2647,7 +2796,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/2/5/352523.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": -63.9,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.55,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_52862684",
@@ -2701,7 +2854,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/5/1/114150.svg",
           "last_run": "20",
           "form": "33",
-          "trainer_rtf": "69"
+          "trainer_rtf": "69",
+          "score": 44.375,
+          "betfair_odds_decimal": 7.2,
+          "betfair_size": 12.74,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_53420304",
@@ -2755,7 +2912,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/9/259699b.svg",
           "last_run": "21",
           "form": "55",
-          "trainer_rtf": "54"
+          "trainer_rtf": "54",
+          "score": 33.645,
+          "betfair_odds_decimal": 34.0,
+          "betfair_size": 10.06,
+          "betfair_odds_fractional": "33/1"
         },
         {
           "horse_id": "hrs_53148767",
@@ -2809,7 +2970,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/f/4/5/163154f.svg",
           "last_run": "44",
           "form": "7",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 15.31,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 10.88,
+          "betfair_odds_fractional": "33/2"
         },
         {
           "horse_id": "hrs_54555368",
@@ -2863,7 +3028,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/0/3/204306.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "41"
+          "trainer_rtf": "41",
+          "score": -62.9,
+          "betfair_odds_decimal": 2.72,
+          "betfair_size": 18.37,
+          "betfair_odds_fractional": "3/2"
         }
       ],
       "big_race": false,
@@ -2948,7 +3117,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/1/4/353410.svg",
           "last_run": "152",
           "form": "7",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": -118.3,
+          "betfair_odds_decimal": 34.0,
+          "betfair_size": 11.82,
+          "betfair_odds_fractional": "33/1"
         },
         {
           "horse_id": "hrs_31394601",
@@ -3014,7 +3187,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/9/7/49791.svg",
           "last_run": "14",
           "form": "0",
-          "trainer_rtf": "20"
+          "trainer_rtf": "20",
+          "score": 4.76,
+          "betfair_odds_decimal": 80.0,
+          "betfair_size": 10.4,
+          "betfair_odds_fractional": "79/1"
         },
         {
           "horse_id": "hrs_53808930",
@@ -3068,7 +3245,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/0/4/14404.svg",
           "last_run": "23",
           "form": "5",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 13.94,
+          "betfair_odds_decimal": 28.0,
+          "betfair_size": 12.3,
+          "betfair_odds_fractional": "27/1"
         },
         {
           "horse_id": "hrs_46046035",
@@ -3122,7 +3303,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/9/9/89992.svg",
           "last_run": "13",
           "form": "5-0",
-          "trainer_rtf": "65"
+          "trainer_rtf": "65",
+          "score": 23.69,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 10.24,
+          "betfair_odds_fractional": "33/2"
         },
         {
           "horse_id": "hrs_54150068",
@@ -3176,7 +3361,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/5/8/153850.svg",
           "last_run": "13",
           "form": "5",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 14.89,
+          "betfair_odds_decimal": 19.5,
+          "betfair_size": 14.9,
+          "betfair_odds_fractional": "37/2"
         },
         {
           "horse_id": "hrs_51273236",
@@ -3230,7 +3419,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/0/4/356402.svg",
           "last_run": "67",
           "form": "34",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": -8.83,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 10.18,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_43826545",
@@ -3286,7 +3479,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/7/4/330479.svg",
           "last_run": "23",
           "form": "34",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 33.945,
+          "betfair_odds_decimal": 3.5,
+          "betfair_size": 10.82,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_41305019",
@@ -3340,7 +3537,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/8/5/344580.svg",
           "last_run": "419",
           "form": "0-",
-          "trainer_rtf": "40"
+          "trainer_rtf": "40",
+          "score": -389.76,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 10.43,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_54555347",
@@ -3394,7 +3595,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/2/1/320128.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -74.3,
+          "betfair_odds_decimal": 34.0,
+          "betfair_size": 12.57,
+          "betfair_odds_fractional": "33/1"
         },
         {
           "horse_id": "hrs_42943894",
@@ -3460,7 +3665,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/2/85029b.svg",
           "last_run": "13",
           "form": "6",
-          "trainer_rtf": "44"
+          "trainer_rtf": "44",
+          "score": 17.14,
+          "betfair_odds_decimal": 13.0,
+          "betfair_size": 15.41,
+          "betfair_odds_fractional": "12/1"
         },
         {
           "horse_id": "hrs_53993996",
@@ -3514,7 +3723,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/2/0/195024.svg",
           "last_run": "17",
           "form": "8",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 6.46,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 10.25,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_49695100",
@@ -3568,7 +3781,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/5/5/354558.svg",
           "last_run": "132",
           "form": "33",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": -71.1,
+          "betfair_odds_decimal": 8.2,
+          "betfair_size": 10.68,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_47098835",
@@ -3628,7 +3845,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/1/2/252211.svg",
           "last_run": "10",
           "form": "6-33",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 45.76,
+          "betfair_odds_decimal": 3.5,
+          "betfair_size": 11.12,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_43667295",
@@ -3682,7 +3903,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/4/0/220043.svg",
           "last_run": "13",
           "form": "9",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 28.99,
+          "betfair_odds_decimal": 25.0,
+          "betfair_size": 11.81,
+          "betfair_odds_fractional": "24/1"
         },
         {
           "horse_id": "hrs_42452067",
@@ -3736,7 +3961,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/2/4/306424.svg",
           "last_run": "14",
           "form": "96",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 27.68,
+          "betfair_odds_decimal": 21.0,
+          "betfair_size": 13.51,
+          "betfair_odds_fractional": "20/1"
         }
       ],
       "big_race": false,
@@ -3821,7 +4050,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/5/8/251185b.svg",
           "last_run": "3",
           "form": "73-844",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 52.825,
+          "betfair_odds_decimal": 5.4,
+          "betfair_size": 12.97,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_25637822",
@@ -3897,7 +4130,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/8/5/160584.svg",
           "last_run": "3",
           "form": "2119-2",
-          "trainer_rtf": "54"
+          "trainer_rtf": "54",
+          "score": 53.92,
+          "betfair_odds_decimal": 5.8,
+          "betfair_size": 15.15,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_29918469",
@@ -3963,7 +4200,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/1/3/87131b.svg",
           "last_run": "8",
           "form": "35-563",
-          "trainer_rtf": "61"
+          "trainer_rtf": "61",
+          "score": 53.675,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 11.1,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_42944048",
@@ -4017,7 +4258,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/2/303298.svg",
           "last_run": "3",
           "form": "-48806",
-          "trainer_rtf": "41"
+          "trainer_rtf": "41",
+          "score": 51.16,
+          "betfair_odds_decimal": 8.4,
+          "betfair_size": 21.52,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_41304753",
@@ -4071,7 +4316,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/8/1/251185.svg",
           "last_run": "3",
           "form": "33-940",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 50.265,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 19.06,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_46077934",
@@ -4137,7 +4386,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/3/7/294739.svg",
           "last_run": "29",
           "form": "058-40",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 31.175,
+          "betfair_odds_decimal": 22.0,
+          "betfair_size": 13.52,
+          "betfair_odds_fractional": "21/1"
         },
         {
           "horse_id": "hrs_40786137",
@@ -4208,7 +4461,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/3/1/343136.svg",
           "last_run": "27",
           "form": "22-780",
-          "trainer_rtf": "70"
+          "trainer_rtf": "70",
+          "score": 30.38,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 17.15,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_42226870",
@@ -4277,7 +4534,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/1/0/344014.svg",
           "last_run": "19",
           "form": "10-573",
-          "trainer_rtf": "39"
+          "trainer_rtf": "39",
+          "score": 45.61,
+          "betfair_odds_decimal": 16.0,
+          "betfair_size": 10.47,
+          "betfair_odds_fractional": "15/1"
         },
         {
           "horse_id": "hrs_40668418",
@@ -4337,7 +4598,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/9/6/286690.svg",
           "last_run": "16",
           "form": "2-9677",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 50.98,
+          "betfair_odds_decimal": 5.7,
+          "betfair_size": 11.17,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_41628916",
@@ -4398,7 +4663,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/0/8/339802.svg",
           "last_run": "24",
           "form": "9-6058",
-          "trainer_rtf": "22"
+          "trainer_rtf": "22",
+          "score": 43.455,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 10.61,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_52056557",
@@ -4452,7 +4721,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/8/2/305283.svg",
           "last_run": "14",
           "form": "3455",
-          "trainer_rtf": "62"
+          "trainer_rtf": "62",
+          "score": 40.64,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 14.85,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_45475640",
@@ -4512,7 +4785,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/5/2/218252.svg",
           "last_run": "19",
           "form": "5-7386",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 45.99,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 10.08,
+          "betfair_odds_fractional": "33/2"
         }
       ],
       "big_race": false,
@@ -4649,7 +4926,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/0/5/331501.svg",
           "last_run": "28",
           "form": "578633",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 30.84,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 11.5,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_25606210",
@@ -4725,7 +5006,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/6/7/357762.svg",
           "last_run": "266 (15J)",
           "form": "/3351-",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": -37.045,
+          "betfair_odds_decimal": 5.4,
+          "betfair_size": 14.54,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_42847469",
@@ -4790,7 +5075,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/8/2/357282.svg",
           "last_run": "12",
           "form": "-59441",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 59.44,
+          "betfair_odds_decimal": 5.8,
+          "betfair_size": 13.49,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_19470563",
@@ -4881,7 +5170,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/6/9/277967.svg",
           "last_run": "16",
           "form": "-V1152",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 47.475,
+          "betfair_odds_decimal": 4.6,
+          "betfair_size": 12.38,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_36712214",
@@ -4957,7 +5250,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/2/7/199772b.svg",
           "last_run": "16",
           "form": "41-V44",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 44.55,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 10.94,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_22327886",
@@ -5040,7 +5337,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/0/7/154708.svg",
           "last_run": "16",
           "form": "421342",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 56.775
         },
         {
           "horse_id": "hrs_29918091",
@@ -5131,7 +5429,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/6/6/329669.svg",
           "last_run": "14",
           "form": "646251",
-          "trainer_rtf": "14"
+          "trainer_rtf": "14",
+          "score": 41.55,
+          "betfair_odds_decimal": 8.4,
+          "betfair_size": 11.46,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_23679705",
@@ -5185,7 +5487,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/9/5/300594.svg",
           "last_run": "16",
           "form": "23-351",
-          "trainer_rtf": "75"
+          "trainer_rtf": "75",
+          "score": 49.13,
+          "betfair_odds_decimal": 4.6,
+          "betfair_size": 15.92,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_36878793",
@@ -5255,7 +5561,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/0/5/341500.svg",
           "last_run": "16",
           "form": "835208",
-          "trainer_rtf": "18"
+          "trainer_rtf": "18",
+          "score": 34.255,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.01,
+          "betfair_odds_fractional": "17/1"
         }
       ],
       "big_race": false,
@@ -5340,7 +5650,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/4/2/112240.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": -67.5,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 11.43,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_52710350",
@@ -5394,7 +5708,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/3/342339b.svg",
           "last_run": "14",
           "form": "00",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 25.495,
+          "betfair_odds_decimal": 200.0,
+          "betfair_size": 17.57,
+          "betfair_odds_fractional": "199/1"
         },
         {
           "horse_id": "hrs_54555438",
@@ -5448,7 +5766,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/7/6/221670.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": -57.5,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 10.56,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_54206278",
@@ -5502,7 +5824,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/8/8/351288b.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": -57.9,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 10.93,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_52995166",
@@ -5560,7 +5886,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/7/4/358479.svg",
           "last_run": "21",
           "form": "20",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 50.08,
+          "betfair_odds_decimal": 2.78,
+          "betfair_size": 11.83,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_52054240",
@@ -5614,7 +5944,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/5/9/204954.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": -68.3,
+          "betfair_odds_decimal": 8.0,
+          "betfair_size": 17.29,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_54555445",
@@ -5668,7 +6002,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/0/3/204306.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": -69.5,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 13.4,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_54432511",
@@ -5722,7 +6060,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/2/8/359822.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -74.3,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 10.82,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_54555480",
@@ -5776,7 +6118,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/5/9/359959.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": -57.9,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 11.98,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_54555473",
@@ -5830,7 +6176,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/4/4/355443.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": -69.5,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.27,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_54555494",
@@ -5884,7 +6234,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/6/9/359962.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "55"
+          "trainer_rtf": "55",
+          "score": -64.7,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 10.95,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_54555452",
@@ -5938,7 +6292,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/6/9/359961.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": -68.3,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 11.37,
+          "betfair_odds_fractional": "25/1"
         },
         {
           "horse_id": "hrs_52995138",
@@ -5992,7 +6350,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/7/195879b.svg",
           "last_run": "22",
           "form": "40",
-          "trainer_rtf": "44"
+          "trainer_rtf": "44",
+          "score": 39.685,
+          "betfair_odds_decimal": 4.3,
+          "betfair_size": 22.63,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_54555466",
@@ -6046,7 +6408,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/8/0/306087.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": -57.9,
+          "betfair_odds_decimal": 40.0,
+          "betfair_size": 10.15,
+          "betfair_odds_fractional": "39/1"
         },
         {
           "horse_id": "hrs_53808993",
@@ -6100,7 +6466,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/2/3/359329.svg",
           "last_run": "14",
           "form": "35",
-          "trainer_rtf": "44"
+          "trainer_rtf": "44",
+          "score": 33.365,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 12.57,
+          "betfair_odds_fractional": "22/1"
         }
       ],
       "big_race": false,
@@ -6191,7 +6561,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/6/698.svg",
           "last_run": "298",
           "form": "33-",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": -249.285,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 10.75,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_42005348",
@@ -6245,7 +6619,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/9/7/2791.svg",
           "last_run": "17",
           "form": "5-1",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 53.13,
+          "betfair_odds_decimal": 1.96,
+          "betfair_size": 15.51,
+          "betfair_odds_fractional": "1/1"
         },
         {
           "horse_id": "hrs_44816478",
@@ -6304,7 +6682,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/2/2/6224.svg",
           "last_run": "49",
           "form": "33-30",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": 44.785,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 13.16,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_39060770",
@@ -6358,7 +6740,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/0/8/339808.svg",
           "last_run": "10",
           "form": "64",
-          "trainer_rtf": "88"
+          "trainer_rtf": "88",
+          "score": 23.475,
+          "betfair_odds_decimal": 22.0,
+          "betfair_size": 11.43,
+          "betfair_odds_fractional": "21/1"
         },
         {
           "horse_id": "hrs_53841123",
@@ -6412,7 +6798,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/2/2/127227.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -74.3,
+          "betfair_odds_decimal": 24.0,
+          "betfair_size": 10.12,
+          "betfair_odds_fractional": "23/1"
         },
         {
           "horse_id": "hrs_44417597",
@@ -6466,7 +6856,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/4/3/348347.svg",
           "last_run": "22",
           "form": "42",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 50.42,
+          "betfair_odds_decimal": 5.1,
+          "betfair_size": 11.04,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_43827021",
@@ -6520,7 +6914,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/6/2/341264.svg",
           "last_run": "299",
           "form": "70-",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": -266.45,
+          "betfair_odds_decimal": 160.0,
+          "betfair_size": 21.94,
+          "betfair_odds_fractional": "159/1"
         },
         {
           "horse_id": "hrs_54150082",
@@ -6574,7 +6972,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/0/3/257303.svg",
           "last_run": "13",
           "form": "9",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 15.34,
+          "betfair_odds_decimal": 38.0,
+          "betfair_size": 10.52,
+          "betfair_odds_fractional": "37/1"
         },
         {
           "horse_id": "hrs_51491559",
@@ -6628,7 +7030,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/9/6/694.svg",
           "last_run": "75",
           "form": "30",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -24.065,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 11.36,
+          "betfair_odds_fractional": "28/1"
         }
       ],
       "big_race": false,
@@ -6754,7 +7160,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/f/7/4/144347f.svg",
           "last_run": "27",
           "form": "653116",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 59.71,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 12.14,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_35336672",
@@ -6817,7 +7227,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/1/8/330814.svg",
           "last_run": "12",
           "form": "-43829",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 47.92,
+          "betfair_odds_decimal": 14.5,
+          "betfair_size": 10.88,
+          "betfair_odds_fractional": "27/2"
         },
         {
           "horse_id": "hrs_36179290",
@@ -6871,7 +7285,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/5/3/215356.svg",
           "last_run": "40",
           "form": "939500",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 39.85,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 11.89,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_18892328",
@@ -6968,7 +7386,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/4/5/342542.svg",
           "last_run": "12",
           "form": "099026",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 58.24,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 10.69,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_30123793",
@@ -7037,7 +7459,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/2/9/208925.svg",
           "last_run": "9",
           "form": "096222",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 61.665,
+          "betfair_odds_decimal": 5.0,
+          "betfair_size": 26.06,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_36454159",
@@ -7132,7 +7558,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/1/4/356411.svg",
           "last_run": "12",
           "form": "-06079",
-          "trainer_rtf": "18"
+          "trainer_rtf": "18",
+          "score": 45.195,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.57,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_37475389",
@@ -7186,7 +7616,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/9/1/138195.svg",
           "last_run": "40",
           "form": "5-3130",
-          "trainer_rtf": "71"
+          "trainer_rtf": "71",
+          "score": 46.35,
+          "betfair_odds_decimal": 12.5,
+          "betfair_size": 17.87,
+          "betfair_odds_fractional": "23/2"
         },
         {
           "horse_id": "hrs_45378333",
@@ -7242,7 +7676,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/1/6/302761b.svg",
           "last_run": "23",
           "form": "53-13",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 45.04,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 10.97,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_35625674",
@@ -7318,7 +7756,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/6/4/326469.svg",
           "last_run": "16",
           "form": "444224",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 47.335,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 11.67,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_31022600",
@@ -7409,7 +7851,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/8/4/270487.svg",
           "last_run": "16",
           "form": "-60000",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 52.4,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 19.2,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_47313749",
@@ -7469,7 +7915,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/9/9/89992.svg",
           "last_run": "15",
           "form": "-22122",
-          "trainer_rtf": "65"
+          "trainer_rtf": "65",
+          "score": 57.62,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 12.59,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_50875146",
@@ -7523,7 +7973,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/9/9/224994.svg",
           "last_run": "41",
           "form": "475",
-          "trainer_rtf": "63"
+          "trainer_rtf": "63",
+          "score": 40.31,
+          "betfair_odds_decimal": 16.5,
+          "betfair_size": 11.72,
+          "betfair_odds_fractional": "31/2"
         }
       ],
       "big_race": false,
@@ -7610,7 +8064,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/f/0/7/154370f.svg",
           "last_run": "43",
           "form": "0-1",
-          "trainer_rtf": "54"
+          "trainer_rtf": "54",
+          "score": 38.215,
+          "betfair_odds_decimal": 1.36,
+          "betfair_size": 21.75,
+          "betfair_odds_fractional": "1/2"
         },
         {
           "horse_id": "hrs_54150075",
@@ -7664,7 +8122,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/2/6/359622.svg",
           "last_run": "13",
           "form": "5",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 30.29,
+          "betfair_odds_decimal": 32.0,
+          "betfair_size": 12.34,
+          "betfair_odds_fractional": "31/1"
         },
         {
           "horse_id": "hrs_46697784",
@@ -7730,7 +8192,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/3/6/301633.svg",
           "last_run": "247",
           "form": "7-",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": -183.145,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 12.81,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_46850951",
@@ -7784,7 +8250,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/8/1/246183.svg",
           "last_run": "44",
           "form": "7-8",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 16.25,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 11.67,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_42103740",
@@ -7850,7 +8320,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/3/0/298003b.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": -74.3,
+          "betfair_odds_decimal": 36.0,
+          "betfair_size": 14.66,
+          "betfair_odds_fractional": "35/1"
         },
         {
           "horse_id": "hrs_54555424",
@@ -7904,7 +8378,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/8/4/303485.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "62"
+          "trainer_rtf": "62",
+          "score": -69.1,
+          "betfair_odds_decimal": 16.0,
+          "betfair_size": 10.14,
+          "betfair_odds_fractional": "15/1"
         },
         {
           "horse_id": "hrs_54555431",
@@ -7958,7 +8436,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/f/9/2/291929f.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": -74.3,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 11.57,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_53476101",
@@ -8014,7 +8496,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/0/8/213809.svg",
           "last_run": "34",
           "form": "1",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": 43.36,
+          "betfair_odds_decimal": 8.0,
+          "betfair_size": 15.67,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_47098856",
@@ -8068,7 +8554,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/4/4/343440.svg",
           "last_run": "90",
           "form": "6",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": -31.88,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 10.89,
+          "betfair_odds_fractional": "10/1"
         }
       ],
       "big_race": false,
@@ -8159,7 +8649,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/8/4/303485.svg",
           "last_run": "33",
           "form": "3-8044",
-          "trainer_rtf": "62"
+          "trainer_rtf": "62",
+          "score": 45.565,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 10.28,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_39392010",
@@ -8225,7 +8719,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/6/4/276460.svg",
           "last_run": "21",
           "form": "11-08",
-          "trainer_rtf": "18"
+          "trainer_rtf": "18",
+          "score": 33.35,
+          "betfair_odds_decimal": 25.0,
+          "betfair_size": 10.08,
+          "betfair_odds_fractional": "24/1"
         },
         {
           "horse_id": "hrs_37123632",
@@ -8282,7 +8780,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/4/9/334948.svg",
           "last_run": "33",
           "form": "64-313",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": 50.925,
+          "betfair_odds_decimal": 5.5,
+          "betfair_size": 16.29,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_40514670",
@@ -8338,7 +8840,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/7/3/159372.svg",
           "last_run": "34",
           "form": "261-65",
-          "trainer_rtf": "88"
+          "trainer_rtf": "88",
+          "score": 50.88,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 11.15,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_26608253",
@@ -8394,7 +8900,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/3/8/40831.svg",
           "last_run": "25",
           "form": "0-0557",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 42.81,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 10.09,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_40918976",
@@ -8450,7 +8960,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/3/3/10332.svg",
           "last_run": "21",
           "form": "7-761",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 51.25,
+          "betfair_odds_decimal": 3.5,
+          "betfair_size": 21.0,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_43352022",
@@ -8508,7 +9022,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/5/0/347051.svg",
           "last_run": "27",
           "form": "43-268",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 47.33,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 14.08,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_42912422",
@@ -8574,7 +9092,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/8/0/179208b.svg",
           "last_run": "40",
           "form": "452-25",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": 53.575,
+          "betfair_odds_decimal": 9.4,
+          "betfair_size": 12.37,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_46759167",
@@ -8628,7 +9150,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/8/2/351289.svg",
           "last_run": "21",
           "form": "5-3336",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 56.15,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 14.27,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_46078123",
@@ -8682,7 +9208,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/2/0/309025.svg",
           "last_run": "28",
           "form": "45-100",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 52.515,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 10.44,
+          "betfair_odds_fractional": "35/2"
         }
       ],
       "big_race": false,
@@ -8767,7 +9297,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/2/1/316122.svg",
           "last_run": "10",
           "form": "211223",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 64.065,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 11.45,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_25810869",
@@ -8860,7 +9394,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/f/7/4/144347f.svg",
           "last_run": "8",
           "form": "671212",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 57.355,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 10.07,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_36515164",
@@ -8920,7 +9458,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/7/8/332871.svg",
           "last_run": "14",
           "form": "76-322",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": 62.125,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 10.32,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_20976032",
@@ -9025,7 +9567,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/8/1/252188.svg",
           "last_run": "23",
           "form": "-76616",
-          "trainer_rtf": "18"
+          "trainer_rtf": "18",
+          "score": 43.195,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 11.15,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_42748678",
@@ -9086,7 +9632,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/9/3/252392.svg",
           "last_run": "14",
           "form": "-22405",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 49.48,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 11.24,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_40919235",
@@ -9159,7 +9709,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/1/3/304312.svg",
           "last_run": "19",
           "form": "4-3767",
-          "trainer_rtf": "40"
+          "trainer_rtf": "40",
+          "score": 43.78,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 11.9,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_412693169",
@@ -9237,7 +9791,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/9/0/347093.svg",
           "last_run": "13",
           "form": "933151",
-          "trainer_rtf": "69"
+          "trainer_rtf": "69",
+          "score": 31.64
         },
         {
           "horse_id": "hrs_42554176",
@@ -9291,7 +9846,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/1/0/322013.svg",
           "last_run": "19",
           "form": "7-5075",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 49.16,
+          "betfair_odds_decimal": 8.0,
+          "betfair_size": 21.8,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_20976088",
@@ -9359,7 +9918,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/9/6/694.svg",
           "last_run": "36",
           "form": "5-6664",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 34.165,
+          "betfair_odds_decimal": 9.2,
+          "betfair_size": 14.45,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_31697974",
@@ -9426,7 +9989,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/9/2/235292.svg",
           "last_run": "7",
           "form": "953481",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 49.465,
+          "betfair_odds_decimal": 5.9,
+          "betfair_size": 11.39,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_7923125",
@@ -9617,7 +10184,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/4/2/343824b.svg",
           "last_run": "21",
           "form": "833128",
-          "trainer_rtf": "14"
+          "trainer_rtf": "14",
+          "score": 51.335,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 10.63,
+          "betfair_odds_fractional": "21/2"
         }
       ],
       "big_race": false,
@@ -9718,7 +10289,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/9/6/143695.svg",
           "last_run": "27",
           "form": "311-17",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 51.4,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 10.9,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_25386928",
@@ -9821,7 +10396,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/8/6/319685.svg",
           "last_run": "21",
           "form": "262538",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 59.205,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 11.69,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_29906198",
@@ -9904,7 +10483,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/3/6/357639.svg",
           "last_run": "19",
           "form": "5-5371",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 57.36,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 10.04,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_30804480",
@@ -9980,7 +10563,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/0/8/223801.svg",
           "last_run": "24",
           "form": "7-4383",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 45.265,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 12.69,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_37489732",
@@ -10042,7 +10629,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/3/0/217035.svg",
           "last_run": "11",
           "form": "7-2111",
-          "trainer_rtf": "63"
+          "trainer_rtf": "63",
+          "score": 57.225,
+          "betfair_odds_decimal": 2.86,
+          "betfair_size": 26.57,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_42005474",
@@ -10115,7 +10706,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/3/0/298003b.svg",
           "last_run": "11",
           "form": "-07614",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": 43.99,
+          "betfair_odds_decimal": 6.4,
+          "betfair_size": 12.61,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_18654783",
@@ -10171,7 +10766,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/5/3/221353.svg",
           "last_run": "19",
           "form": "659750",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 50.485,
+          "betfair_odds_decimal": 24.0,
+          "betfair_size": 11.46,
+          "betfair_odds_fractional": "23/1"
         },
         {
           "horse_id": "hrs_39960312",
@@ -10230,7 +10829,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/7/2/11279.svg",
           "last_run": "21",
           "form": "0-05",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 48.64,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 14.37,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_52830967",
@@ -10284,7 +10887,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/6/2/358265.svg",
           "last_run": "31",
           "form": "868",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 53.135,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 12.29,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_45662176",
@@ -10345,7 +10952,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/5/0/347054.svg",
           "last_run": "25",
           "form": "08-72",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 47.68,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 12.12,
+          "betfair_odds_fractional": "11/2"
         }
       ],
       "big_race": false,
@@ -10430,7 +11041,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/8/5/221584.svg",
           "last_run": "15",
           "form": "2-42",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 49.215,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 10.25,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_47898872",
@@ -10486,7 +11101,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/8/5/164585.svg",
           "last_run": "20",
           "form": "-22144",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 72.815,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 17.56,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_45792054",
@@ -10540,7 +11159,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/8/349898.svg",
           "last_run": "21",
           "form": "333-13",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 73.115,
+          "betfair_odds_decimal": 4.1,
+          "betfair_size": 20.79,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_43892443",
@@ -10596,7 +11219,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/6/8/146868.svg",
           "last_run": "28",
           "form": "91-038",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 57.615,
+          "betfair_odds_decimal": 8.2,
+          "betfair_size": 10.86,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_44659853",
@@ -10650,7 +11277,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/8/1/180188.svg",
           "last_run": "20",
           "form": "53-362",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 56.415,
+          "betfair_odds_decimal": 4.9,
+          "betfair_size": 12.87,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_52995257",
@@ -10704,7 +11335,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/g/8/6/150668g.svg",
           "last_run": "15",
           "form": "074",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 57.845,
+          "betfair_odds_decimal": 24.0,
+          "betfair_size": 10.57,
+          "betfair_odds_fractional": "23/1"
         },
         {
           "horse_id": "hrs_48169856",
@@ -10758,7 +11393,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/4/8/352843.svg",
           "last_run": "27",
           "form": "6-358",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 42.77,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 13.2,
+          "betfair_odds_fractional": "22/1"
         },
         {
           "horse_id": "hrs_45256001",
@@ -10814,7 +11453,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/7/2/349275.svg",
           "last_run": "29",
           "form": "066-65",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 57.895,
+          "betfair_odds_decimal": 4.5,
+          "betfair_size": 11.99,
+          "betfair_odds_fractional": "7/2"
         }
       ],
       "big_race": false,
@@ -10899,7 +11542,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/9/7/358790.svg",
           "last_run": "19",
           "form": "40",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 36.02,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 11.46,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_53148788",
@@ -10953,7 +11600,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/4/4/355447.svg",
           "last_run": "2",
           "form": "42",
-          "trainer_rtf": "78"
+          "trainer_rtf": "78",
+          "score": 28.085,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 11.82,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_54555403",
@@ -11007,7 +11658,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/5/9/359956.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": -70.9,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 10.8,
+          "betfair_odds_fractional": "25/1"
         },
         {
           "horse_id": "hrs_49141190",
@@ -11065,7 +11720,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/9/6/344694.svg",
           "last_run": "16",
           "form": "222",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 59.315,
+          "betfair_odds_decimal": 1.99,
+          "betfair_size": 16.17,
+          "betfair_odds_fractional": "1/1"
         },
         {
           "horse_id": "hrs_54555382",
@@ -11119,7 +11778,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/3/2/254233.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "64"
+          "trainer_rtf": "64",
+          "score": -62.7,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 12.19,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_52896851",
@@ -11173,7 +11836,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/6/3/358360.svg",
           "last_run": "35",
           "form": "33",
-          "trainer_rtf": "41"
+          "trainer_rtf": "41",
+          "score": 37.775,
+          "betfair_odds_decimal": 7.8,
+          "betfair_size": 10.84,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_54027169",
@@ -11227,7 +11894,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/1/6/325461b.svg",
           "last_run": "15",
           "form": "0",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": -2.45,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 11.84,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_49142240",
@@ -11287,7 +11958,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/5/9/359955.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "39"
+          "trainer_rtf": "39",
+          "score": -71.5,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 10.73,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_54555396",
@@ -11341,7 +12016,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/0/9/319904.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": -65.7,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 17.02,
+          "betfair_odds_fractional": "11/1"
         }
       ],
       "big_race": false,
@@ -11443,7 +12122,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/3/7/304739.svg",
           "last_run": "9",
           "form": "6-5431",
-          "trainer_rtf": "61"
+          "trainer_rtf": "61",
+          "score": 56.11,
+          "betfair_odds_decimal": 4.0,
+          "betfair_size": 10.29,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_21649110",
@@ -11499,7 +12182,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/0/7/283706.svg",
           "last_run": "9",
           "form": "624633",
-          "trainer_rtf": "27"
+          "trainer_rtf": "27",
+          "score": 47.085,
+          "betfair_odds_decimal": 7.0,
+          "betfair_size": 10.48,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_21955493",
@@ -11574,7 +12261,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/1/5/6518.svg",
           "last_run": "25",
           "form": "5-3625",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 44.89,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 13.18,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_31950765",
@@ -11642,7 +12333,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/3/0/360032.svg",
           "last_run": "29",
           "form": "9-2421",
-          "trainer_rtf": "55"
+          "trainer_rtf": "55",
+          "score": 44.235,
+          "betfair_odds_decimal": 6.4,
+          "betfair_size": 12.68,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_32936610",
@@ -11699,7 +12394,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/8/6/240687.svg",
           "last_run": "41",
           "form": "06-622",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 48.375,
+          "betfair_odds_decimal": 8.2,
+          "betfair_size": 10.9,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_33615946",
@@ -11761,7 +12460,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/d/4/2/924d.svg",
           "last_run": "35",
           "form": "38-183",
-          "trainer_rtf": "17"
+          "trainer_rtf": "17",
+          "score": 41.005,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 12.14,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_36207507",
@@ -11847,7 +12550,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/3/7/250737.svg",
           "last_run": "35",
           "form": "-58082",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 40.545,
+          "betfair_odds_decimal": 22.0,
+          "betfair_size": 10.36,
+          "betfair_odds_fractional": "21/1"
         },
         {
           "horse_id": "hrs_37052274",
@@ -11920,7 +12627,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/2/6/302622.svg",
           "last_run": "50",
           "form": "703-50",
-          "trainer_rtf": "44"
+          "trainer_rtf": "44",
+          "score": 21.68,
+          "betfair_odds_decimal": 24.0,
+          "betfair_size": 10.2,
+          "betfair_odds_fractional": "23/1"
         },
         {
           "horse_id": "hrs_35580545",
@@ -11976,7 +12687,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/5/2/331257.svg",
           "last_run": "41",
           "form": "6-2118",
-          "trainer_rtf": "25"
+          "trainer_rtf": "25",
+          "score": 35.38,
+          "betfair_odds_decimal": 9.8,
+          "betfair_size": 10.06,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_35896000",
@@ -12038,7 +12753,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/3/9/170936.svg",
           "last_run": "19",
           "form": "-75754",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 57.655,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 10.94,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_36529059",
@@ -12106,7 +12825,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/7/3/250737c.svg",
           "last_run": "12",
           "form": "066486",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 48.31,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 11.51,
+          "betfair_odds_fractional": "17/1"
         }
       ],
       "big_race": false,
@@ -12193,7 +12916,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/9/9/209994.svg",
           "last_run": "10",
           "form": "12-343",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 67.22,
+          "betfair_odds_decimal": 3.2,
+          "betfair_size": 13.15,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_31550428",
@@ -12268,7 +12995,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/6/4/357468.svg",
           "last_run": "34",
           "form": "658579",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 45.995,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 68.85,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_30357551",
@@ -12368,7 +13099,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/5/3/337359.svg",
           "last_run": "40",
           "form": "28-844",
-          "trainer_rtf": "44"
+          "trainer_rtf": "44",
+          "score": 32.605,
+          "betfair_odds_decimal": 4.6,
+          "betfair_size": 69.18,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_43667190",
@@ -12424,7 +13159,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/4/3/252234b.svg",
           "last_run": "17",
           "form": "61-2",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 42.53,
+          "betfair_odds_decimal": 5.5,
+          "betfair_size": 13.88,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_10504662",
@@ -12518,7 +13257,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/8/5/251580.svg",
           "last_run": "16",
           "form": "8-6531",
-          "trainer_rtf": "71"
+          "trainer_rtf": "71",
+          "score": 49.625,
+          "betfair_odds_decimal": 5.1,
+          "betfair_size": 16.16,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_7313033",
@@ -12666,7 +13409,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/4/6/239645.svg",
           "last_run": "23",
           "form": "945196",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 52.705,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 19.0,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_43418088",
@@ -12722,7 +13469,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/6/331638.svg",
           "last_run": "26",
           "form": "-26211",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 50.67,
+          "betfair_odds_decimal": 2.84,
+          "betfair_size": 11.55,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_42005376",
@@ -12788,7 +13539,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/8/0/346608b.svg",
           "last_run": "38",
           "form": "20-409",
-          "trainer_rtf": "75"
+          "trainer_rtf": "75",
+          "score": 67.105,
+          "betfair_odds_decimal": 5.7,
+          "betfair_size": 69.19,
+          "betfair_odds_fractional": "9/2"
         }
       ],
       "big_race": false,
@@ -12947,7 +13702,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/2/9/193892c.svg",
           "last_run": "6",
           "form": "273231",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 54.385,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 19.37,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_35650167",
@@ -13048,7 +13807,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/7/2/359727c.svg",
           "last_run": "7",
           "form": "-51233",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 49.11,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 11.32,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_31741045",
@@ -13126,7 +13889,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/8/5/359758b.svg",
           "last_run": "43",
           "form": "2121-0",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 32.225,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 10.85,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_31022586",
@@ -13199,7 +13966,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/0/5/319501.svg",
           "last_run": "24",
           "form": "511-55",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 57.47,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 12.93,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_24854599",
@@ -13261,7 +14032,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/8/8/303885.svg",
           "last_run": "31",
           "form": "-65166",
-          "trainer_rtf": "44"
+          "trainer_rtf": "44",
+          "score": 43.46,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 10.86,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_35625037",
@@ -13315,7 +14090,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/3/4/324435.svg",
           "last_run": "28",
           "form": "0485-4",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 42.765,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 10.07,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_39060686",
@@ -13380,7 +14159,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/0/8/339805.svg",
           "last_run": "28",
           "form": "0-1203",
-          "trainer_rtf": "75"
+          "trainer_rtf": "75",
+          "score": 74.585,
+          "betfair_odds_decimal": 3.9,
+          "betfair_size": 15.98,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_39961873",
@@ -13466,7 +14249,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/4/3/252234b.svg",
           "last_run": "20",
           "form": "242791",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": 66.525,
+          "betfair_odds_decimal": 9.4,
+          "betfair_size": 10.83,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_30908556",
@@ -13528,7 +14315,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/5/5/333553.svg",
           "last_run": "9",
           "form": "-62212",
-          "trainer_rtf": "55"
+          "trainer_rtf": "55",
+          "score": 48.1,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 11.84,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_43951138",
@@ -13582,7 +14373,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/3/8/347839.svg",
           "last_run": "20",
           "form": "153076",
-          "trainer_rtf": "40"
+          "trainer_rtf": "40",
+          "score": 61.225,
+          "betfair_odds_decimal": 6.8,
+          "betfair_size": 10.02,
+          "betfair_odds_fractional": "6/1"
         }
       ],
       "big_race": false,
@@ -13675,7 +14470,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/0/1/16105.svg",
           "last_run": "7",
           "form": "-95211",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": 58.34,
+          "betfair_odds_decimal": 1.77,
+          "betfair_size": 10.42,
+          "betfair_odds_fractional": "1/1"
         },
         {
           "horse_id": "hrs_52388567",
@@ -13729,7 +14528,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/0/7/357700.svg",
           "last_run": "29",
           "form": "526",
-          "trainer_rtf": "71"
+          "trainer_rtf": "71",
+          "score": 63.275,
+          "betfair_odds_decimal": 4.5,
+          "betfair_size": 11.62,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_45950674",
@@ -13796,7 +14599,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/2/9/358929.svg",
           "last_run": "39",
           "form": "8-37",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 42.295,
+          "betfair_odds_decimal": 6.4,
+          "betfair_size": 11.55,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_47621539",
@@ -13862,7 +14669,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/3/4/359430.svg",
           "last_run": "14",
           "form": "53-677",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 51.6,
+          "betfair_odds_decimal": 6.4,
+          "betfair_size": 10.95,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_43507429",
@@ -13916,7 +14727,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/9/0/96090.svg",
           "last_run": "28",
           "form": "47-356",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 42.3,
+          "betfair_odds_decimal": 12.0,
+          "betfair_size": 10.07,
+          "betfair_odds_fractional": "11/1"
         },
         {
           "horse_id": "hrs_52418233",
@@ -13970,7 +14785,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/6/7/357767.svg",
           "last_run": "17",
           "form": "000",
-          "trainer_rtf": "44"
+          "trainer_rtf": "44",
+          "score": 35.46,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.23,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_43572858",
@@ -14024,7 +14843,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/3/2/191236.svg",
           "last_run": "34",
           "form": "4-9008",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 45.97,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 10.11,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_42846741",
@@ -14084,7 +14907,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/0/1/313102.svg",
           "last_run": "47",
           "form": "145-47",
-          "trainer_rtf": "40"
+          "trainer_rtf": "40",
+          "score": 40.93,
+          "betfair_odds_decimal": 21.0,
+          "betfair_size": 11.01,
+          "betfair_odds_fractional": "20/1"
         },
         {
           "horse_id": "hrs_44481283",
@@ -14138,7 +14965,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/5/7/41756.svg",
           "last_run": "72",
           "form": "657-9",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": -8.575,
+          "betfair_odds_decimal": 6.2,
+          "betfair_size": 17.44,
+          "betfair_odds_fractional": "5/1"
         }
       ],
       "big_race": false,
@@ -14225,7 +15056,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/9/7/2791.svg",
           "last_run": "28",
           "form": "1",
-          "trainer_rtf": "64"
+          "trainer_rtf": "64",
+          "score": 31.015,
+          "betfair_odds_decimal": 2.44,
+          "betfair_size": 14.71,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_54555522",
@@ -14279,7 +15114,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/6/9/359964.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": -67.5,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 21.33,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_53993954",
@@ -14333,7 +15172,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/5/1/118151.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "64"
+          "trainer_rtf": "64",
+          "score": -65.7,
+          "betfair_odds_decimal": 30.0,
+          "betfair_size": 10.62,
+          "betfair_odds_fractional": "29/1"
         },
         {
           "horse_id": "hrs_54555543",
@@ -14387,7 +15230,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/0/7/228370b.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": -66.5,
+          "betfair_odds_decimal": 9.2,
+          "betfair_size": 10.17,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_53476038",
@@ -14441,7 +15288,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/4/4/355447.svg",
           "last_run": "17",
           "form": "53",
-          "trainer_rtf": "78"
+          "trainer_rtf": "78",
+          "score": 30.275,
+          "betfair_odds_decimal": 5.8,
+          "betfair_size": 14.02,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_54555529",
@@ -14495,7 +15346,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/6/9/359963.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "62"
+          "trainer_rtf": "62",
+          "score": -69.7,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 11.01,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_49142415",
@@ -14549,7 +15404,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/1/0/354015.svg",
           "last_run": "16",
           "form": "0",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 36.805,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.39,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_53743515",
@@ -14603,7 +15462,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/5/2/359256.svg",
           "last_run": "17",
           "form": "4",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 57.055,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 11.09,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_49141624",
@@ -14657,7 +15520,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/6/9/353965.svg",
           "last_run": "14",
           "form": "73",
-          "trainer_rtf": "80"
+          "trainer_rtf": "80",
+          "score": 63.315,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 10.24,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_54555515",
@@ -14711,7 +15578,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/8/6/42686.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": -65.1,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 10.27,
+          "betfair_odds_fractional": "22/1"
         },
         {
           "horse_id": "hrs_52709678",
@@ -14765,7 +15636,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/8/2/7281.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": -74.3,
+          "betfair_odds_decimal": 3.95,
+          "betfair_size": 10.35,
+          "betfair_odds_fractional": "3/1"
         }
       ],
       "big_race": false,
@@ -14852,7 +15727,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/2/9/212992c.svg",
           "last_run": "14",
           "form": "61",
-          "trainer_rtf": "77"
+          "trainer_rtf": "77",
+          "score": 74.665,
+          "betfair_odds_decimal": 3.9,
+          "betfair_size": 14.5,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_53081371",
@@ -14906,7 +15785,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/7/8/334878.svg",
           "last_run": "17",
           "form": "5",
-          "trainer_rtf": "25"
+          "trainer_rtf": "25",
+          "score": 23.59,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 12.4,
+          "betfair_odds_fractional": "33/2"
         },
         {
           "horse_id": "hrs_53689664",
@@ -14960,7 +15843,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/7/3/286937b.svg",
           "last_run": "16",
           "form": "8",
-          "trainer_rtf": "62"
+          "trainer_rtf": "62",
+          "score": 44.54,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 69.28,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_54150131",
@@ -15014,7 +15901,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/1/5/169519.svg",
           "last_run": "13",
           "form": "6",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": 24.79,
+          "betfair_odds_decimal": 14.5,
+          "betfair_size": 13.77,
+          "betfair_odds_fractional": "27/2"
         },
         {
           "horse_id": "hrs_50434769",
@@ -15068,7 +15959,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/8/3/83381.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": -66.5,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 10.46,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_54555501",
@@ -15122,7 +16017,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/8/6/49680.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "64"
+          "trainer_rtf": "64",
+          "score": -65.7,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 11.23,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_52641491",
@@ -15176,7 +16075,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/6/2/300262.svg",
           "last_run": "24",
           "form": "0",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 14.96,
+          "betfair_odds_decimal": 16.5,
+          "betfair_size": 14.11,
+          "betfair_odds_fractional": "31/2"
         },
         {
           "horse_id": "hrs_54027204",
@@ -15230,7 +16133,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/4/2/254246.svg",
           "last_run": "16",
           "form": "3",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": 31.645,
+          "betfair_odds_decimal": 2.92,
+          "betfair_size": 23.27,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_52641477",
@@ -15284,7 +16191,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/9/9/22991.svg",
           "last_run": "35",
           "form": "8",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 9.65,
+          "betfair_odds_decimal": 36.0,
+          "betfair_size": 12.3,
+          "betfair_odds_fractional": "35/1"
         },
         {
           "horse_id": "hrs_49143717",
@@ -15338,7 +16249,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/9/0/250094.svg",
           "last_run": "27",
           "form": "6",
-          "trainer_rtf": "88"
+          "trainer_rtf": "88",
+          "score": 36.55,
+          "betfair_odds_decimal": 4.5,
+          "betfair_size": 10.42,
+          "betfair_odds_fractional": "7/2"
         }
       ],
       "big_race": false,
@@ -15460,7 +16375,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/5/285659b.svg",
           "last_run": "7",
           "form": "8-2305",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 54.4,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 10.34,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_24064509",
@@ -15570,7 +16489,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/6/7/329976b.svg",
           "last_run": "652",
           "form": "88808/",
-          "trainer_rtf": "78"
+          "trainer_rtf": "78",
+          "score": -642.25,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 11.39,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_22576666",
@@ -15632,7 +16555,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/5/4/318459.svg",
           "last_run": "16",
           "form": "015-33",
-          "trainer_rtf": "75"
+          "trainer_rtf": "75",
+          "score": 46.385,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 15.94,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_35055993",
@@ -15713,7 +16640,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/7/9/357974.svg",
           "last_run": "14",
           "form": "792133",
-          "trainer_rtf": "83"
+          "trainer_rtf": "83",
+          "score": 46.46,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 14.43,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_21686462",
@@ -15795,7 +16726,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/9/7/201793.svg",
           "last_run": "36",
           "form": "0-7712",
-          "trainer_rtf": "83"
+          "trainer_rtf": "83",
+          "score": 38.505,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 14.52,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_42163303",
@@ -15851,7 +16786,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/8/5/340586.svg",
           "last_run": "30",
           "form": "6-3451",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 56.355,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 20.27,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_34471108",
@@ -15917,7 +16856,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/3/6/207633.svg",
           "last_run": "16",
           "form": "-70052",
-          "trainer_rtf": "71"
+          "trainer_rtf": "71",
+          "score": 43.915,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 18.17,
+          "betfair_odds_fractional": "15/2"
         },
         {
           "horse_id": "hrs_36235234",
@@ -15973,7 +16916,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/2/9/212992c.svg",
           "last_run": "14",
           "form": "-11731",
-          "trainer_rtf": "77"
+          "trainer_rtf": "77",
+          "score": 77.475,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 15.68,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_39060105",
@@ -16031,7 +16978,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/2/249238.svg",
           "last_run": "16",
           "form": "630-57",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 40.625,
+          "betfair_odds_decimal": 34.0,
+          "betfair_size": 11.08,
+          "betfair_odds_fractional": "33/1"
         },
         {
           "horse_id": "hrs_21683935",
@@ -16142,7 +17093,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/1/4/231414.svg",
           "last_run": "20",
           "form": "187483",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 40.47,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 10.84,
+          "betfair_odds_fractional": "33/2"
         },
         {
           "horse_id": "hrs_37110794",
@@ -16210,7 +17165,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/3/1/349133.svg",
           "last_run": "17",
           "form": "137553",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 59.025,
+          "betfair_odds_decimal": 8.0,
+          "betfair_size": 10.65,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_35149359",
@@ -16316,7 +17275,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/1/9/345917.svg",
           "last_run": "17",
           "form": "437315",
-          "trainer_rtf": "40"
+          "trainer_rtf": "40",
+          "score": 40.975,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 16.97,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_35297444",
@@ -16382,7 +17345,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/0/6/279603.svg",
           "last_run": "10",
           "form": "836752",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": 56.56,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 11.63,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_25300555",
@@ -16450,7 +17417,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/7/8/122871.svg",
           "last_run": "15",
           "form": "438451",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 57.42,
+          "betfair_odds_decimal": 14.5,
+          "betfair_size": 17.69,
+          "betfair_odds_fractional": "27/2"
         },
         {
           "horse_id": "hrs_39061134",
@@ -16504,7 +17475,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/2/0/101025.svg",
           "last_run": "47",
           "form": "576-0",
-          "trainer_rtf": "40"
+          "trainer_rtf": "40",
+          "score": 16.45,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 11.89,
+          "betfair_odds_fractional": "35/2"
         }
       ],
       "big_race": false,
@@ -16593,7 +17568,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/9/7/2791.svg",
           "last_run": "22",
           "form": "19",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 169.2,
+          "betfair_odds_decimal": 3.95,
+          "betfair_size": 11.08,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_49141589",
@@ -16647,7 +17626,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/7/5/349557b.svg",
           "last_run": "15",
           "form": "87",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 119.2,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 10.29,
+          "betfair_odds_fractional": "25/1"
         },
         {
           "horse_id": "hrs_52297434",
@@ -16703,7 +17686,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/3/2/99233.svg",
           "last_run": "30",
           "form": "72",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 140.5,
+          "betfair_odds_decimal": 3.3,
+          "betfair_size": 19.73,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_52709468",
@@ -16763,7 +17750,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/0/9/319904.svg",
           "last_run": "39",
           "form": "36",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 115.8,
+          "betfair_odds_decimal": 38.0,
+          "betfair_size": 16.2,
+          "betfair_odds_fractional": "37/1"
         },
         {
           "horse_id": "hrs_52451847",
@@ -16817,7 +17808,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/3/5/245531.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 6.0,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 10.8,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_52054387",
@@ -16871,7 +17866,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/1/3/357311.svg",
           "last_run": "15",
           "form": "73",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 172.6,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 18.46,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_50434328",
@@ -16925,7 +17924,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/3/160338.svg",
           "last_run": "15",
           "form": "04",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 132.2,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 10.88,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_54304782",
@@ -16979,7 +17982,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/7/1/189171.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 30.6,
+          "betfair_odds_decimal": 7.2,
+          "betfair_size": 11.05,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_53994010",
@@ -17033,7 +18040,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/1/3/283311.svg",
           "last_run": "17",
           "form": "7",
-          "trainer_rtf": "20"
+          "trainer_rtf": "20",
+          "score": 99.8,
+          "betfair_odds_decimal": 29.0,
+          "betfair_size": 10.35,
+          "betfair_odds_fractional": "28/1"
         },
         {
           "horse_id": "hrs_52995124",
@@ -17087,7 +18098,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/8/4/358481.svg",
           "last_run": "19",
           "form": "27",
-          "trainer_rtf": "86"
+          "trainer_rtf": "86",
+          "score": 129.1,
+          "betfair_odds_decimal": 6.2,
+          "betfair_size": 21.42,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_49144326",
@@ -17141,7 +18156,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/1/0/354014.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 23.4,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 11.84,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_54059712",
@@ -17195,7 +18214,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/2/9/212992c.svg",
           "last_run": "15",
           "form": "5",
-          "trainer_rtf": "77"
+          "trainer_rtf": "77",
+          "score": 144.3,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 11.55,
+          "betfair_odds_fractional": "17/1"
         }
       ],
       "big_race": false,
@@ -17328,7 +18351,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/6/2/262262.svg",
           "last_run": "298 (155J)",
           "form": "35042-",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -22.985,
+          "betfair_odds_decimal": 17.5,
+          "betfair_size": 10.13,
+          "betfair_odds_fractional": "33/2"
         },
         {
           "horse_id": "hrs_45378368",
@@ -17382,7 +18409,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/4/9/293942.svg",
           "last_run": "29",
           "form": "4-331",
-          "trainer_rtf": "77"
+          "trainer_rtf": "77",
+          "score": 78.23,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 15.19,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_35149352",
@@ -17445,7 +18476,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/7/3/328137b.svg",
           "last_run": "16",
           "form": "-37972",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 52.455,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 10.53,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_43131634",
@@ -17501,7 +18536,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/0/6/179605.svg",
           "last_run": "40",
           "form": "057-14",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 43.985,
+          "betfair_odds_decimal": 4.3,
+          "betfair_size": 10.03,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_32197207",
@@ -17561,7 +18600,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/2/8/92820.svg",
           "last_run": "29",
           "form": "38-093",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 51.97,
+          "betfair_odds_decimal": 7.0,
+          "betfair_size": 16.43,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_39060777",
@@ -17628,7 +18671,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/3/0/359037.svg",
           "last_run": "33",
           "form": "42-320",
-          "trainer_rtf": "75"
+          "trainer_rtf": "75",
+          "score": 77.26,
+          "betfair_odds_decimal": 7.2,
+          "betfair_size": 10.74,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_36484994",
@@ -17698,7 +18745,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/5/4/159453.svg",
           "last_run": "25",
           "form": "57-436",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 43.21,
+          "betfair_odds_decimal": 8.0,
+          "betfair_size": 12.48,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_44199183",
@@ -17754,7 +18805,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/p/1/7/301671p.svg",
           "last_run": "26",
           "form": "816",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 55.38,
+          "betfair_odds_decimal": 8.4,
+          "betfair_size": 10.1,
+          "betfair_odds_fractional": "15/2"
         }
       ],
       "big_race": false,
@@ -17882,7 +18937,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/5/8/83855.svg",
           "last_run": "19",
           "form": "28-733",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 56.325,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 10.63,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_37316139",
@@ -17942,7 +19001,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/7/3/159372.svg",
           "last_run": "20",
           "form": "254",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 59.29,
+          "betfair_odds_decimal": 4.0,
+          "betfair_size": 16.94,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_33081713",
@@ -18033,7 +19096,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/5/6/357654.svg",
           "last_run": "34",
           "form": "5-5424",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 42.645,
+          "betfair_odds_decimal": 4.6,
+          "betfair_size": 19.39,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_33789805",
@@ -18089,7 +19156,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/9/1/8194.svg",
           "last_run": "72",
           "form": "283-11",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 2.385,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 13.36,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_30865954",
@@ -18157,7 +19228,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/2/5/43352b.svg",
           "last_run": "26",
           "form": "0-7332",
-          "trainer_rtf": "53"
+          "trainer_rtf": "53",
+          "score": 52.99,
+          "betfair_odds_decimal": 5.1,
+          "betfair_size": 17.53,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_32599525",
@@ -18268,7 +19343,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/4/1/345144.svg",
           "last_run": "52",
           "form": "4-9750",
-          "trainer_rtf": "25"
+          "trainer_rtf": "25",
+          "score": 17.72,
+          "betfair_odds_decimal": 6.2,
+          "betfair_size": 21.1,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_30123366",
@@ -18330,7 +19409,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/8/5/322581.svg",
           "last_run": "25",
           "form": "34-231",
-          "trainer_rtf": "40"
+          "trainer_rtf": "40",
+          "score": 42.145,
+          "betfair_odds_decimal": 7.6,
+          "betfair_size": 10.65,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_30709903",
@@ -18404,7 +19487,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/2/6/125462b.svg",
           "last_run": "9",
           "form": "-70832",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 41.32,
+          "betfair_odds_decimal": 6.2,
+          "betfair_size": 19.35,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_47192257",
@@ -18464,7 +19551,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/7/8/207879.svg",
           "last_run": "31",
           "form": "5-09",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 34.1,
+          "betfair_odds_decimal": 8.6,
+          "betfair_size": 10.76,
+          "betfair_odds_fractional": "15/2"
         }
       ],
       "big_race": false,
@@ -18589,7 +19680,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/9/2/210299.svg",
           "last_run": "31",
           "form": "15-096",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": 35.045,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.95,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_21725151",
@@ -18684,7 +19779,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/5/7/351753.svg",
           "last_run": "20",
           "form": "/0/5/7",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 34.345,
+          "betfair_odds_decimal": 18.5,
+          "betfair_size": 10.33,
+          "betfair_odds_fractional": "35/2"
         },
         {
           "horse_id": "hrs_20050667",
@@ -18749,7 +19848,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/7/8/34870.svg",
           "last_run": "26",
           "form": "2-5311",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 46.185,
+          "betfair_odds_decimal": 5.7,
+          "betfair_size": 10.86,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_43352127",
@@ -18803,7 +19906,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/6/0/347068.svg",
           "last_run": "28",
           "form": "4-8211",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 44.095,
+          "betfair_odds_decimal": 2.6,
+          "betfair_size": 23.23,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_39962482",
@@ -18863,7 +19970,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/0/0/354009.svg",
           "last_run": "33",
           "form": "54-093",
-          "trainer_rtf": "44"
+          "trainer_rtf": "44",
+          "score": 44.565,
+          "betfair_odds_decimal": 5.7,
+          "betfair_size": 10.02,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_30850428",
@@ -18930,7 +20041,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/6/0/319068.svg",
           "last_run": "18",
           "form": "4-1222",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 42.28,
+          "betfair_odds_decimal": 4.7,
+          "betfair_size": 12.6,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_41597052",
@@ -18984,7 +20099,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/0/7/223707.svg",
           "last_run": "27",
           "form": "04-127",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 52.105,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 10.44,
+          "betfair_odds_fractional": "19/2"
         }
       ],
       "big_race": false,
@@ -19082,7 +20201,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/9/8/349896.svg",
           "last_run": "22",
           "form": "72-152",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 262.4,
+          "betfair_odds_decimal": 3.4,
+          "betfair_size": 22.38,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_45475577",
@@ -19136,7 +20259,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/9/2/302299.svg",
           "last_run": "22",
           "form": "1-3416",
-          "trainer_rtf": "55"
+          "trainer_rtf": "55",
+          "score": 229.9,
+          "betfair_odds_decimal": 12.5,
+          "betfair_size": 11.07,
+          "betfair_odds_fractional": "23/2"
         },
         {
           "horse_id": "hrs_44786588",
@@ -19194,7 +20321,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/0/319309b.svg",
           "last_run": "33",
           "form": "3-138",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 214.6,
+          "betfair_odds_decimal": 5.5,
+          "betfair_size": 14.43,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_42715330",
@@ -19248,7 +20379,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/m/1/6/143761m.svg",
           "last_run": "22",
           "form": "327-15",
-          "trainer_rtf": "74"
+          "trainer_rtf": "74",
+          "score": 243.3,
+          "betfair_odds_decimal": 2.28,
+          "betfair_size": 27.16,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_50590372",
@@ -19308,7 +20443,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/2/2/315224.svg",
           "last_run": "22",
           "form": "15647",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 205.8,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 12.48,
+          "betfair_odds_fractional": "25/1"
         }
       ],
       "big_race": false,
@@ -19419,7 +20558,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/2/3/297832b.svg",
           "last_run": "47",
           "form": "1",
-          "trainer_rtf": "74"
+          "trainer_rtf": "74",
+          "score": 187.4,
+          "betfair_odds_decimal": 3.0,
+          "betfair_size": 119.26,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_52772286",
@@ -19473,7 +20616,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/3/0/3033.svg",
           "last_run": "21",
           "form": "15",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 235.0,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 25.41,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_52418163",
@@ -19540,7 +20687,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/9/7/341790.svg",
           "last_run": "23",
           "form": "022",
-          "trainer_rtf": "48"
+          "trainer_rtf": "48",
+          "score": 206.7,
+          "betfair_odds_decimal": 8.8,
+          "betfair_size": 13.91,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_52709454",
@@ -19596,7 +20747,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/6/8/311863.svg",
           "last_run": "32",
           "form": "1",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 155.8,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 50.91,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_52995159",
@@ -19677,7 +20832,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/4/8/49845.svg",
           "last_run": "34",
           "form": "11",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 214.1,
+          "betfair_odds_decimal": 2.68,
+          "betfair_size": 45.55,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_50434783",
@@ -19750,7 +20909,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/3/160338.svg",
           "last_run": "30",
           "form": "1",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 133.7,
+          "betfair_odds_decimal": 28.0,
+          "betfair_size": 10.75,
+          "betfair_odds_fractional": "27/1"
         }
       ],
       "big_race": false,
@@ -19882,7 +21045,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/8/3/347382.svg",
           "last_run": "68",
           "form": "115-31",
-          "trainer_rtf": "88"
+          "trainer_rtf": "88",
+          "score": 209.2,
+          "betfair_odds_decimal": 16.0,
+          "betfair_size": 41.04,
+          "betfair_odds_fractional": "15/1"
         },
         {
           "horse_id": "hrs_42226331",
@@ -19963,7 +21130,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/d/8/8/325088d.svg",
           "last_run": "87",
           "form": "2297-8",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": 178.6,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 11.94,
+          "betfair_odds_fractional": "49/1"
         },
         {
           "horse_id": "hrs_39960270",
@@ -20044,7 +21215,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/4/8/49845.svg",
           "last_run": "34",
           "form": "-21674",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 213.2,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 27.59,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_42912492",
@@ -20098,7 +21273,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/5/6/262656.svg",
           "last_run": "20",
           "form": "56-474",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 214.2,
+          "betfair_odds_decimal": 23.0,
+          "betfair_size": 30.63,
+          "betfair_odds_fractional": "22/1"
         },
         {
           "horse_id": "hrs_41503966",
@@ -20167,7 +21346,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/3/4/287437.svg",
           "last_run": "26",
           "form": "21-511",
-          "trainer_rtf": "36"
+          "trainer_rtf": "36",
+          "score": 207.2,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 85.76,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_39961509",
@@ -20248,7 +21431,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/5/147598.svg",
           "last_run": "20",
           "form": "11-670",
-          "trainer_rtf": "18"
+          "trainer_rtf": "18",
+          "score": 195.0,
+          "betfair_odds_decimal": 80.0,
+          "betfair_size": 10.96,
+          "betfair_odds_fractional": "79/1"
         },
         {
           "horse_id": "hrs_41305012",
@@ -20308,7 +21495,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/6/4/248466.svg",
           "last_run": "24",
           "form": "217-81",
-          "trainer_rtf": "59"
+          "trainer_rtf": "59",
+          "score": 230.0,
+          "betfair_odds_decimal": 14.5,
+          "betfair_size": 12.13,
+          "betfair_odds_fractional": "27/2"
         },
         {
           "horse_id": "hrs_41442128",
@@ -20364,7 +21555,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/8/8/325088b.svg",
           "last_run": "26",
           "form": "43-870",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 191.6,
+          "betfair_odds_decimal": 60.0,
+          "betfair_size": 19.38,
+          "betfair_odds_fractional": "59/1"
         },
         {
           "horse_id": "hrs_44417569",
@@ -20425,7 +21620,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/8/7/14781.svg",
           "last_run": "54",
           "form": "02-211",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 212.0,
+          "betfair_odds_decimal": 9.4,
+          "betfair_size": 18.46,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_43163911",
@@ -20482,7 +21681,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/8/0/325088.svg",
           "last_run": "20",
           "form": "23-19",
-          "trainer_rtf": "71"
+          "trainer_rtf": "71",
+          "score": 221.6,
+          "betfair_odds_decimal": 9.2,
+          "betfair_size": 79.74,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_43287685",
@@ -20539,7 +21742,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/6/3/292360.svg",
           "last_run": "26",
           "form": "913710",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 250.6,
+          "betfair_odds_decimal": 19.5,
+          "betfair_size": 15.51,
+          "betfair_odds_fractional": "37/2"
         },
         {
           "horse_id": "hrs_41304711",
@@ -20599,7 +21806,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/r/2/6/157362r.svg",
           "last_run": "54",
           "form": "17-48",
-          "trainer_rtf": "41"
+          "trainer_rtf": "41",
+          "score": 207.0,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 11.34,
+          "betfair_odds_fractional": "49/1"
         },
         {
           "horse_id": "hrs_42943852",
@@ -20672,7 +21883,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/2/6/346620.svg",
           "last_run": "10",
           "form": "32-151",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 238.6,
+          "betfair_odds_decimal": 9.8,
+          "betfair_size": 15.27,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_44417534",
@@ -20742,7 +21957,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/j/9/3/205339j.svg",
           "last_run": "26",
           "form": "45-113",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 217.6,
+          "betfair_odds_decimal": 7.6,
+          "betfair_size": 18.43,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_44786574",
@@ -20796,7 +22015,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/7/0/337207b.svg",
           "last_run": "45",
           "form": "4-1212",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 204.1,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 13.05,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_43951054",
@@ -20852,7 +22075,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/9/2/302299.svg",
           "last_run": "29",
           "form": "159831",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": 193.3,
+          "betfair_odds_decimal": 85.0,
+          "betfair_size": 10.85,
+          "betfair_odds_fractional": "84/1"
         },
         {
           "horse_id": "hrs_52418205",
@@ -20908,7 +22135,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/2/9/159921.svg",
           "last_run": "30",
           "form": "341",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 181.0,
+          "betfair_odds_decimal": 55.0,
+          "betfair_size": 14.51,
+          "betfair_odds_fractional": "54/1"
         },
         {
           "horse_id": "hrs_40919753",
@@ -20969,7 +22200,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/0/0/225008.svg",
           "last_run": "26",
           "form": "9-1225",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 211.3,
+          "betfair_odds_decimal": 27.0,
+          "betfair_size": 19.96,
+          "betfair_odds_fractional": "26/1"
         }
       ],
       "big_race": true,
@@ -21103,7 +22338,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/4/8/49845.svg",
           "last_run": "76",
           "form": "1/1-46",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 216.8,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 21.71,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_36035601",
@@ -21172,7 +22411,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/5/4/49845b.svg",
           "last_run": "26",
           "form": "-22133",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 230.5,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 13.08,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_36665104",
@@ -21299,7 +22542,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/4/3/252234b.svg",
           "last_run": "19",
           "form": "35-463",
-          "trainer_rtf": "59"
+          "trainer_rtf": "59",
+          "score": 244.2,
+          "betfair_odds_decimal": 2.58,
+          "betfair_size": 44.05,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_36855294",
@@ -21389,7 +22636,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/4/1/46148.svg",
           "last_run": "19",
           "form": "416-34",
-          "trainer_rtf": "85"
+          "trainer_rtf": "85",
+          "score": 230.5,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 29.63,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_41597024",
@@ -21496,7 +22747,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/9/2/302299.svg",
           "last_run": "20",
           "form": "3-2534",
-          "trainer_rtf": "55"
+          "trainer_rtf": "55",
+          "score": 221.2,
+          "betfair_odds_decimal": 5.6,
+          "betfair_size": 30.86,
+          "betfair_odds_fractional": "9/2"
         }
       ],
       "big_race": true,
@@ -21581,7 +22836,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/3/1/12139.svg",
           "last_run": "34",
           "form": "384",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 145.4,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 13.44,
+          "betfair_odds_fractional": "25/1"
         },
         {
           "horse_id": "hrs_49141827",
@@ -21635,7 +22894,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/8/290789b.svg",
           "last_run": "16",
           "form": "72",
-          "trainer_rtf": "59"
+          "trainer_rtf": "59",
+          "score": 153.1,
+          "betfair_odds_decimal": 4.1,
+          "betfair_size": 12.42,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_53539486",
@@ -21689,7 +22952,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/4/8/49845.svg",
           "last_run": "21",
           "form": "3",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 114.6,
+          "betfair_odds_decimal": 3.7,
+          "betfair_size": 17.32,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_52709503",
@@ -21743,7 +23010,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/7/0/358077.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 10.6,
+          "betfair_odds_decimal": 7.6,
+          "betfair_size": 18.65,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_49142660",
@@ -21797,7 +23068,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/7/2/218278.svg",
           "last_run": "21",
           "form": "02",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 109.4,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 18.5,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_52862810",
@@ -21851,7 +23126,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/8/8/338883.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "39"
+          "trainer_rtf": "39",
+          "score": 9.9,
+          "betfair_odds_decimal": 16.0,
+          "betfair_size": 10.06,
+          "betfair_odds_fractional": "15/1"
         },
         {
           "horse_id": "hrs_54555564",
@@ -21905,7 +23184,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/4/1/46148.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "57"
+          "trainer_rtf": "57",
+          "score": 30.6,
+          "betfair_odds_decimal": 4.7,
+          "betfair_size": 12.17,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_52862775",
@@ -21959,7 +23242,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/7/3/16375.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 17.0,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 10.75,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_53808958",
@@ -22013,7 +23300,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/9/2/302299.svg",
           "last_run": "13",
           "form": "53",
-          "trainer_rtf": "55"
+          "trainer_rtf": "55",
+          "score": 123.2,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 10.81,
+          "betfair_odds_fractional": "16/1"
         }
       ],
       "big_race": false,
@@ -22137,7 +23428,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/4/8/49845.svg",
           "last_run": "42",
           "form": "1161",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 237.5,
+          "betfair_odds_decimal": 2.34,
+          "betfair_size": 42.29,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_48667276",
@@ -22206,7 +23501,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/5/4/49845b.svg",
           "last_run": "21",
           "form": "6011",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 199.3,
+          "betfair_odds_decimal": 8.2,
+          "betfair_size": 15.39,
+          "betfair_odds_fractional": "7/1"
         },
         {
           "horse_id": "hrs_412693176",
@@ -22287,7 +23586,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/9/6/344693.svg",
           "last_run": "19",
           "form": "135-40",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 191.4,
+          "betfair_odds_decimal": 26.0,
+          "betfair_size": 10.01,
+          "betfair_odds_fractional": "25/1"
         },
         {
           "horse_id": "hrs_45157175",
@@ -22343,7 +23646,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/4/302438.svg",
           "last_run": "19",
           "form": "6-11",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 203.2,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 18.02,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_44166213",
@@ -22401,7 +23708,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/3/3/55336.svg",
           "last_run": "39",
           "form": "312-29",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 225.4,
+          "betfair_odds_decimal": 5.0,
+          "betfair_size": 49.21,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_41629609",
@@ -22455,7 +23766,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/2/5/16523.svg",
           "last_run": "33",
           "form": "28-394",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 246.8,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 22.64,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_39962468",
@@ -22513,7 +23828,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/4/341549b.svg",
           "last_run": "19",
           "form": "340-06",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 200.7,
+          "betfair_odds_decimal": 28.0,
+          "betfair_size": 10.09,
+          "betfair_odds_fractional": "27/1"
         },
         {
           "horse_id": "hrs_43951124",
@@ -22567,7 +23886,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/5/4/49845c.svg",
           "last_run": "69",
           "form": "512-3",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 208.4,
+          "betfair_odds_decimal": 30.0,
+          "betfair_size": 12.94,
+          "betfair_odds_fractional": "29/1"
         }
       ],
       "big_race": false,
@@ -22663,7 +23986,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/1/0/307016.svg",
           "last_run": "14",
           "form": "-14102",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 66.975,
+          "betfair_odds_decimal": 9.4,
+          "betfair_size": 11.38,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_35336434",
@@ -22723,7 +24050,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/2/9/279922.svg",
           "last_run": "14",
           "form": "0-0842",
-          "trainer_rtf": "43"
+          "trainer_rtf": "43",
+          "score": 61.105,
+          "betfair_odds_decimal": 15.0,
+          "betfair_size": 10.4,
+          "betfair_odds_fractional": "14/1"
         },
         {
           "horse_id": "hrs_36022721",
@@ -22799,7 +24130,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/7/8/277874.svg",
           "last_run": "14",
           "form": "4-7715",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 63.16,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 18.28,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_34471094",
@@ -22870,7 +24205,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/1/0/43901b.svg",
           "last_run": "27",
           "form": "07-067",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 59.635,
+          "betfair_odds_decimal": 22.0,
+          "betfair_size": 17.05,
+          "betfair_odds_fractional": "21/1"
         },
         {
           "horse_id": "hrs_34472088",
@@ -22924,7 +24263,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/0/9/43901.svg",
           "last_run": "36",
           "form": "/73-21",
-          "trainer_rtf": "29"
+          "trainer_rtf": "29",
+          "score": 54.45,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 15.95,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_40918913",
@@ -22988,7 +24331,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/6/5/341566.svg",
           "last_run": "21",
           "form": "157-20",
-          "trainer_rtf": "88"
+          "trainer_rtf": "88",
+          "score": 63.53,
+          "betfair_odds_decimal": 15.5,
+          "betfair_size": 10.06,
+          "betfair_odds_fractional": "29/2"
         },
         {
           "horse_id": "hrs_39960417",
@@ -23046,7 +24393,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/9/4/341549b.svg",
           "last_run": "21",
           "form": "1742-0",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 60.275,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.82,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_31799138",
@@ -23129,7 +24480,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/3/6/333633.svg",
           "last_run": "84",
           "form": "/16234",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": -40.11,
+          "betfair_odds_decimal": 50.0,
+          "betfair_size": 17.69,
+          "betfair_odds_fractional": "49/1"
         },
         {
           "horse_id": "hrs_35015435",
@@ -23185,7 +24540,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/0/6/187604.svg",
           "last_run": "20",
           "form": "-14201",
-          "trainer_rtf": "40"
+          "trainer_rtf": "40",
+          "score": 75.655,
+          "betfair_odds_decimal": 13.5,
+          "betfair_size": 11.5,
+          "betfair_odds_fractional": "25/2"
         },
         {
           "horse_id": "hrs_41597038",
@@ -23243,7 +24602,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/1/1/323117.svg",
           "last_run": "21",
           "form": "21-28",
-          "trainer_rtf": "55"
+          "trainer_rtf": "55",
+          "score": 64.34,
+          "betfair_odds_decimal": 3.9,
+          "betfair_size": 15.72,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_29228794",
@@ -23312,7 +24675,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/5/147598.svg",
           "last_run": "53",
           "form": "-65057",
-          "trainer_rtf": "18"
+          "trainer_rtf": "18",
+          "score": 29.43,
+          "betfair_odds_decimal": 12.5,
+          "betfair_size": 17.83,
+          "betfair_odds_fractional": "23/2"
         },
         {
           "horse_id": "hrs_18529931",
@@ -23440,7 +24807,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/3/2/293235.svg",
           "last_run": "25",
           "form": "587394",
-          "trainer_rtf": "64"
+          "trainer_rtf": "64",
+          "score": 65.085,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 11.9,
+          "betfair_odds_fractional": "9/1"
         }
       ],
       "big_race": false,
@@ -23525,7 +24896,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/g/1/2/143821g.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "74"
+          "trainer_rtf": "74",
+          "score": -55.1,
+          "betfair_odds_decimal": 1.83,
+          "betfair_size": 67.74,
+          "betfair_odds_fractional": "1/1"
         },
         {
           "horse_id": "hrs_54554983",
@@ -23579,7 +24954,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/3/9/359932.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": -52.7,
+          "betfair_odds_decimal": 4.0,
+          "betfair_size": 10.37,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_53841060",
@@ -23633,7 +25012,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/6/0/317706b.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "25"
+          "trainer_rtf": "25",
+          "score": -69.1,
+          "betfair_odds_decimal": 17.0,
+          "betfair_size": 14.57,
+          "betfair_odds_fractional": "16/1"
         },
         {
           "horse_id": "hrs_52054716",
@@ -23687,7 +25070,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/2/9/291929.svg",
           "last_run": "13",
           "form": "5",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 37.115,
+          "betfair_odds_decimal": 3.25,
+          "betfair_size": 16.38,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_54555004",
@@ -23741,7 +25128,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/0/5/303508.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "74"
+          "trainer_rtf": "74",
+          "score": -55.1,
+          "betfair_odds_decimal": 4.2,
+          "betfair_size": 69.67,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_53602241",
@@ -23795,7 +25186,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/2/8/325827.svg",
           "last_run": "28",
           "form": "0",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 1.715,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 13.76,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_54149928",
@@ -23849,7 +25244,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/7/8/359872.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": -74.3,
+          "betfair_odds_decimal": 13.0,
+          "betfair_size": 17.67,
+          "betfair_odds_fractional": "12/1"
         },
         {
           "horse_id": "hrs_53390253",
@@ -23903,7 +25302,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/3/0/211003c.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": -69.9,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 68.47,
+          "betfair_odds_fractional": "4/1"
         }
       ],
       "big_race": false,
@@ -24005,7 +25408,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/2/9/291929.svg",
           "last_run": "48",
           "form": "21",
-          "trainer_rtf": "73"
+          "trainer_rtf": "73",
+          "score": 37.57,
+          "betfair_odds_decimal": 2.38,
+          "betfair_size": 23.86,
+          "betfair_odds_fractional": "3/2"
         },
         {
           "horse_id": "hrs_412692756",
@@ -24074,7 +25481,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/8/3/189389.svg",
           "last_run": "15",
           "form": "12-24",
-          "trainer_rtf": "62"
+          "trainer_rtf": "62",
+          "score": 56.44,
+          "betfair_odds_decimal": 3.4,
+          "betfair_size": 64.17,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_40918731",
@@ -24152,7 +25563,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/0/5/350501.svg",
           "last_run": "21",
           "form": "6-2086",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 49.88,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 17.63,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_40745887",
@@ -24206,7 +25621,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/1/1/316116.svg",
           "last_run": "19",
           "form": "0221-2",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 58.715,
+          "betfair_odds_decimal": 5.6,
+          "betfair_size": 10.33,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_42615846",
@@ -24260,7 +25679,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/f/9/3/205339f.svg",
           "last_run": "21",
           "form": "22-342",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 57.145,
+          "betfair_odds_decimal": 4.2,
+          "betfair_size": 69.0,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_45226314",
@@ -24329,7 +25752,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/h/8/2/159428h.svg",
           "last_run": "19",
           "form": "61-022",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 74.28,
+          "betfair_odds_decimal": 3.1,
+          "betfair_size": 64.22,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_43228045",
@@ -24389,7 +25816,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/e/9/1/355319e.svg",
           "last_run": "272",
           "form": "452-",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": -190.4,
+          "betfair_odds_decimal": 5.1,
+          "betfair_size": 65.12,
+          "betfair_odds_fractional": "4/1"
         }
       ],
       "big_race": false,
@@ -24501,7 +25932,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/3/3/17337.svg",
           "last_run": "46",
           "form": "015-14",
-          "trainer_rtf": "20"
+          "trainer_rtf": "20",
+          "score": 212.5,
+          "betfair_odds_decimal": 3.1,
+          "betfair_size": 11.44,
+          "betfair_odds_fractional": "2/1"
         },
         {
           "horse_id": "hrs_31188192",
@@ -24570,7 +26005,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/7/7/319775.svg",
           "last_run": "11",
           "form": "84-341",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 212.8,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 68.54,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_37110696",
@@ -24630,7 +26069,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/7/3/45537c.svg",
           "last_run": "28",
           "form": "324-58",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 176.0,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 16.55,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_35729708",
@@ -24724,7 +26167,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/1/9/15691c.svg",
           "last_run": "11",
           "form": "18-452",
-          "trainer_rtf": "42"
+          "trainer_rtf": "42",
+          "score": 198.0,
+          "betfair_odds_decimal": 4.3,
+          "betfair_size": 17.48,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_40225850",
@@ -24786,7 +26233,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/7/2/359273.svg",
           "last_run": "27",
           "form": "1-1",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 161.3,
+          "betfair_odds_decimal": 5.1,
+          "betfair_size": 11.66,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_42973700",
@@ -24855,7 +26306,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/h/8/2/159428h.svg",
           "last_run": "60",
           "form": "211-76",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 195.7,
+          "betfair_odds_decimal": 3.95,
+          "betfair_size": 18.46,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_41661452",
@@ -24909,7 +26364,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/k/1/6/145061k.svg",
           "last_run": "60",
           "form": "843-98",
-          "trainer_rtf": "74"
+          "trainer_rtf": "74",
+          "score": 180.2,
+          "betfair_odds_decimal": 11.0,
+          "betfair_size": 16.89,
+          "betfair_odds_fractional": "10/1"
         },
         {
           "horse_id": "hrs_44721971",
@@ -24976,7 +26435,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/1/6/348612.svg",
           "last_run": "15",
           "form": "242155",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 159.1,
+          "betfair_odds_decimal": 15.5,
+          "betfair_size": 11.99,
+          "betfair_odds_fractional": "29/2"
         }
       ],
       "big_race": true,
@@ -25082,7 +26545,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/6/5/253563.svg",
           "last_run": "28",
           "form": "653-17",
-          "trainer_rtf": "74"
+          "trainer_rtf": "74",
+          "score": 61.11,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 65.21,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_19324270",
@@ -25198,7 +26665,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/6/7/185761.svg",
           "last_run": "20",
           "form": "1300-0",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 49.155,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 12.7,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_36427090",
@@ -25303,7 +26774,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/0/346098.svg",
           "last_run": "21",
           "form": "632911",
-          "trainer_rtf": "75"
+          "trainer_rtf": "75",
+          "score": 65.835,
+          "betfair_odds_decimal": 3.8,
+          "betfair_size": 68.91,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_32808748",
@@ -25393,7 +26868,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/0/9/357907.svg",
           "last_run": "19",
           "form": "1-3306",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 52.25,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 18.15,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_31880737",
@@ -25468,7 +26947,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/9/2/47295.svg",
           "last_run": "20",
           "form": "-74662",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 72.085,
+          "betfair_odds_decimal": 4.6,
+          "betfair_size": 67.22,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_37354065",
@@ -25536,7 +27019,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/3/0/176032.svg",
           "last_run": "19",
           "form": "30-175",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 70.41,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 62.66,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_38855775",
@@ -25619,7 +27106,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/8/9/205986.svg",
           "last_run": "12",
           "form": "000019",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 66.88,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 17.84,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_37110738",
@@ -25681,7 +27172,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/6/7/346766.svg",
           "last_run": "92",
           "form": "2-0069",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -15.65,
+          "betfair_odds_decimal": 14.0,
+          "betfair_size": 13.06,
+          "betfair_odds_fractional": "13/1"
         },
         {
           "horse_id": "hrs_20041406",
@@ -25799,7 +27294,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/1/6/328613.svg",
           "last_run": "50",
           "form": "221386",
-          "trainer_rtf": "36"
+          "trainer_rtf": "36",
+          "score": 35.495,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 18.15,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_42615818",
@@ -25866,7 +27365,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/5/2/187253.svg",
           "last_run": "19",
           "form": "1-8035",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 69.615,
+          "betfair_odds_decimal": 4.6,
+          "betfair_size": 66.78,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_40746020",
@@ -25920,7 +27423,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/5/0/239059.svg",
           "last_run": "153",
           "form": "045-35",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -86.605,
+          "betfair_odds_decimal": 14.0,
+          "betfair_size": 13.06,
+          "betfair_odds_fractional": "13/1"
         },
         {
           "horse_id": "hrs_22006775",
@@ -26013,7 +27520,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/2/0/37025.svg",
           "last_run": "21",
           "form": "499-73",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 46.87,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 64.26,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_33789553",
@@ -26090,7 +27601,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/1/7/282714.svg",
           "last_run": "20",
           "form": "5-2100",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 43.85,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 16.15,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_42521829",
@@ -26156,7 +27671,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/6/9/235965.svg",
           "last_run": "13",
           "form": "0-5070",
-          "trainer_rtf": "15"
+          "trainer_rtf": "15",
+          "score": 51.02,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 18.15,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_40260668",
@@ -26242,7 +27761,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/2/1/248612b.svg",
           "last_run": "29",
           "form": "-66009",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 38.69,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 13.1,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_41661333",
@@ -26304,7 +27827,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/0/7/150705.svg",
           "last_run": "8",
           "form": "-46215",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 64.04,
+          "betfair_odds_decimal": 6.8,
+          "betfair_size": 11.51,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_41346235",
@@ -26358,7 +27885,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/7/6/344676.svg",
           "last_run": "25",
           "form": "0-5917",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": 45.585,
+          "betfair_odds_decimal": 10.5,
+          "betfair_size": 17.6,
+          "betfair_odds_fractional": "19/2"
         },
         {
           "horse_id": "hrs_22487906",
@@ -26460,7 +27991,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/8/9/205986.svg",
           "last_run": "28",
           "form": "0-6553",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 66.34,
+          "betfair_odds_decimal": 4.4,
+          "betfair_size": 69.47,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_30643326",
@@ -26528,7 +28063,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/6/310638.svg",
           "last_run": "21",
           "form": "7155/6",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 39.725,
+          "betfair_odds_decimal": 14.0,
+          "betfair_size": 13.06,
+          "betfair_odds_fractional": "13/1"
         },
         {
           "horse_id": "hrs_41051871",
@@ -26609,7 +28148,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/9/2/357290.svg",
           "last_run": "9",
           "form": "01-069",
-          "trainer_rtf": "58"
+          "trainer_rtf": "58",
+          "score": 53.88,
+          "betfair_odds_decimal": 9.6,
+          "betfair_size": 13.39,
+          "betfair_odds_fractional": "17/2"
         },
         {
           "horse_id": "hrs_41051815",
@@ -26669,7 +28212,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/1/9/320919.svg",
           "last_run": "9",
           "form": "028041",
-          "trainer_rtf": "64"
+          "trainer_rtf": "64",
+          "score": 57.385,
+          "betfair_odds_decimal": 7.0,
+          "betfair_size": 67.24,
+          "betfair_odds_fractional": "6/1"
         }
       ],
       "big_race": false,
@@ -26811,7 +28358,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/5/7/297757.svg",
           "last_run": "11",
           "form": "044-45",
-          "trainer_rtf": "74"
+          "trainer_rtf": "74",
+          "score": 74.22,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 10.08,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_33875541",
@@ -26879,7 +28430,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/9/338998.svg",
           "last_run": "11",
           "form": "-26112",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 63.4,
+          "betfair_odds_decimal": 5.7,
+          "betfair_size": 25.91,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_40686527",
@@ -26961,7 +28516,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/0/3/45302.svg",
           "last_run": "47",
           "form": "304-19",
-          "trainer_rtf": "89"
+          "trainer_rtf": "89",
+          "score": 61.29,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 10.32,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_38532214",
@@ -27028,7 +28587,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/7/6/241670.svg",
           "last_run": "11",
           "form": "420-03",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": 61.64,
+          "betfair_odds_decimal": 6.4,
+          "betfair_size": 26.7,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_21678993",
@@ -27110,7 +28673,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/1/1/224811c.svg",
           "last_run": "12",
           "form": "287033",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 69.07,
+          "betfair_odds_decimal": 15.5,
+          "betfair_size": 10.91,
+          "betfair_odds_fractional": "29/2"
         },
         {
           "horse_id": "hrs_34874343",
@@ -27185,7 +28752,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/9/9/3/243399.svg",
           "last_run": "11",
           "form": "050-50",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": 56.64,
+          "betfair_odds_decimal": 20.0,
+          "betfair_size": 10.75,
+          "betfair_odds_fractional": "19/1"
         },
         {
           "horse_id": "hrs_35068726",
@@ -27254,7 +28825,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/3/4/294432.svg",
           "last_run": "19",
           "form": "3-0362",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": 57.05,
+          "betfair_odds_decimal": 19.5,
+          "betfair_size": 12.31,
+          "betfair_odds_fractional": "37/2"
         },
         {
           "horse_id": "hrs_42781067",
@@ -27311,7 +28886,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/9/4/293496.svg",
           "last_run": "11",
           "form": "312212",
-          "trainer_rtf": "74"
+          "trainer_rtf": "74",
+          "score": 82.63,
+          "betfair_odds_decimal": 4.5,
+          "betfair_size": 13.56,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_31083122",
@@ -27413,7 +28992,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/4/5/101543.svg",
           "last_run": "11",
           "form": "4-7331",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": 67.57,
+          "betfair_odds_decimal": 7.4,
+          "betfair_size": 18.76,
+          "betfair_odds_fractional": "13/2"
         },
         {
           "horse_id": "hrs_29636698",
@@ -27499,7 +29082,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/9/9/338998.svg",
           "last_run": "12",
           "form": "3-2812",
-          "trainer_rtf": "45"
+          "trainer_rtf": "45",
+          "score": 57.655,
+          "betfair_odds_decimal": 10.0,
+          "betfair_size": 14.57,
+          "betfair_odds_fractional": "9/1"
         },
         {
           "horse_id": "hrs_36823983",
@@ -27555,7 +29142,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/7/4/91347c.svg",
           "last_run": "53",
           "form": "238-08",
-          "trainer_rtf": "59"
+          "trainer_rtf": "59",
+          "score": 39.825,
+          "betfair_odds_decimal": 19.0,
+          "betfair_size": 10.83,
+          "betfair_odds_fractional": "18/1"
         },
         {
           "horse_id": "hrs_34859636",
@@ -27609,7 +29200,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/9/9/315997.svg",
           "last_run": "47",
           "form": "515-70",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 37.465,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 13.11,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_36302924",
@@ -27675,7 +29270,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/4/8/248841.svg",
           "last_run": "35",
           "form": "34-262",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 52.11,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 14.32,
+          "betfair_odds_fractional": "8/1"
         },
         {
           "horse_id": "hrs_33080537",
@@ -27746,7 +29345,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/7/3/358371.svg",
           "last_run": "28",
           "form": "70-605",
-          "trainer_rtf": "20"
+          "trainer_rtf": "20",
+          "score": 62.61,
+          "betfair_odds_decimal": 6.2,
+          "betfair_size": 11.47,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_35337582",
@@ -27817,7 +29420,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/3/0/30003b.svg",
           "last_run": "13",
           "form": "1/0334",
-          "trainer_rtf": "52"
+          "trainer_rtf": "52",
+          "score": 62.14,
+          "betfair_odds_decimal": 9.0,
+          "betfair_size": 15.27,
+          "betfair_odds_fractional": "8/1"
         }
       ],
       "big_race": true,
@@ -27940,7 +29547,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/8/0/316808b.svg",
           "last_run": "75",
           "form": "770-00",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -17.885,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 11.93,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_30300004",
@@ -28019,7 +29630,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/8/5/331582.svg",
           "last_run": "15",
           "form": "0-0274",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": 37.27,
+          "betfair_odds_decimal": 5.7,
+          "betfair_size": 65.11,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_35149513",
@@ -28102,7 +29717,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/9/6/358693.svg",
           "last_run": "7",
           "form": "673335",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 37.765,
+          "betfair_odds_decimal": 4.9,
+          "betfair_size": 68.11,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_27166426",
@@ -28167,7 +29786,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/3/0/352031.svg",
           "last_run": "21",
           "form": "-57102",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 35.69,
+          "betfair_odds_decimal": 4.2,
+          "betfair_size": 68.46,
+          "betfair_odds_fractional": "3/1"
         },
         {
           "horse_id": "hrs_37395071",
@@ -28223,7 +29846,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/3/9/315936.svg",
           "last_run": "21",
           "form": "2-9651",
-          "trainer_rtf": "56"
+          "trainer_rtf": "56",
+          "score": 48.395,
+          "betfair_odds_decimal": 3.65,
+          "betfair_size": 68.76,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_36986180",
@@ -28277,7 +29904,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/3/5/334537.svg",
           "last_run": "209",
           "form": "57070-",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": -139.105,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 68.32,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_37890349",
@@ -28353,7 +29984,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/1/0/292011.svg",
           "last_run": "258 (44J)",
           "form": "09794-",
-          "trainer_rtf": "35"
+          "trainer_rtf": "35",
+          "score": -32.85,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 68.31,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_32909968",
@@ -28424,7 +30059,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/f/6/8/40286f.svg",
           "last_run": "64",
           "form": "069-05",
-          "trainer_rtf": "35"
+          "trainer_rtf": "35",
+          "score": -5.325,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 69.53,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_24770564",
@@ -28515,7 +30154,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/3/7/150736.svg",
           "last_run": "7",
           "form": "0-6652",
-          "trainer_rtf": "20"
+          "trainer_rtf": "20",
+          "score": 32.69,
+          "betfair_odds_decimal": 4.6,
+          "betfair_size": 66.0,
+          "betfair_odds_fractional": "7/2"
         },
         {
           "horse_id": "hrs_21837613",
@@ -28596,7 +30239,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/0/8/316808.svg",
           "last_run": "461",
           "form": "/95/0-",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -429.05,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 11.88,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_24921820",
@@ -28650,7 +30297,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/6/0/304063.svg",
           "last_run": "6",
           "form": "417806",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 27.54,
+          "betfair_odds_decimal": 14.5,
+          "betfair_size": 10.91,
+          "betfair_odds_fractional": "27/2"
         },
         {
           "horse_id": "hrs_40646725",
@@ -28710,7 +30361,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/4/9/340942.svg",
           "last_run": "64",
           "form": "99-690",
-          "trainer_rtf": "38"
+          "trainer_rtf": "38",
+          "score": -4.555,
+          "betfair_odds_decimal": 6.6,
+          "betfair_size": 69.28,
+          "betfair_odds_fractional": "11/2"
         },
         {
           "horse_id": "hrs_26460056",
@@ -28783,7 +30438,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/0/6/1/359160.svg",
           "last_run": "8",
           "form": "48-032",
-          "trainer_rtf": "25"
+          "trainer_rtf": "25",
+          "score": 34.51,
+          "betfair_odds_decimal": 7.2,
+          "betfair_size": 12.31,
+          "betfair_odds_fractional": "6/1"
         },
         {
           "horse_id": "hrs_20713014",
@@ -28899,7 +30558,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/4/9/350945.svg",
           "last_run": "21",
           "form": "8/0416",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": 33.0,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 65.11,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_21794591",
@@ -28992,7 +30655,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/8/3/0/22038.svg",
           "last_run": "363 (66J)",
           "form": "2/540-",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -46.78,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 12.24,
+          "betfair_odds_fractional": "21/2"
         },
         {
           "horse_id": "hrs_30926175",
@@ -29078,7 +30745,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/7/0/351074.svg",
           "last_run": "28",
           "form": "174806",
-          "trainer_rtf": "67"
+          "trainer_rtf": "67",
+          "score": 51.405,
+          "betfair_odds_decimal": 6.0,
+          "betfair_size": 65.56,
+          "betfair_odds_fractional": "5/1"
         },
         {
           "horse_id": "hrs_35729715",
@@ -29151,7 +30822,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/1/2/119217.svg",
           "last_run": "50",
           "form": "593-45",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 14.035,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 68.64,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_18591832",
@@ -29237,7 +30912,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/8/3/201383.svg",
           "last_run": "20",
           "form": "507257",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 34.615,
+          "betfair_odds_decimal": 5.2,
+          "betfair_size": 65.65,
+          "betfair_odds_fractional": "4/1"
         },
         {
           "horse_id": "hrs_37505069",
@@ -29302,7 +30981,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/6/2/41265.svg",
           "last_run": "19",
           "form": "540756",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 31.64,
+          "betfair_odds_decimal": 5.7,
+          "betfair_size": 65.4,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_35068691",
@@ -29364,7 +31047,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/6/0/2/21206.svg",
           "last_run": "28",
           "form": "00/537",
-          "trainer_rtf": "33"
+          "trainer_rtf": "33",
+          "score": 30.865,
+          "betfair_odds_decimal": 14.5,
+          "betfair_size": 11.37,
+          "betfair_odds_fractional": "27/2"
         },
         {
           "horse_id": "hrs_31982440",
@@ -29450,7 +31137,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/4/8/6/339684.svg",
           "last_run": "21",
           "form": "50-200",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 29.47,
+          "betfair_odds_decimal": 11.5,
+          "betfair_size": 12.24,
+          "betfair_odds_fractional": "21/2"
         }
       ],
       "big_race": false,
@@ -29558,7 +31249,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/7/2/275327c.svg",
           "last_run": "284",
           "form": "/1732-",
-          "trainer_rtf": "58"
+          "trainer_rtf": "58",
+          "score": -204.225,
+          "betfair_odds_decimal": 1.36,
+          "betfair_size": 12.0,
+          "betfair_odds_fractional": "1/2"
         },
         {
           "horse_id": "hrs_23055914",
@@ -29642,7 +31337,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/e/0/2/274520e.svg",
           "last_run": "11",
           "form": "250-10",
-          "trainer_rtf": "50"
+          "trainer_rtf": "50",
+          "score": 49.255,
+          "betfair_odds_decimal": 5.3,
+          "betfair_size": 11.4,
+          "betfair_odds_fractional": "9/2"
         },
         {
           "horse_id": "hrs_17975041",
@@ -29780,7 +31479,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/5/9/5/348595.svg",
           "last_run": "41",
           "form": "6/50-6",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": 36.905,
+          "betfair_odds_decimal": 3.65,
+          "betfair_size": 67.47,
+          "betfair_odds_fractional": "5/2"
         },
         {
           "horse_id": "hrs_38433234",
@@ -29856,7 +31559,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/1/8/100817.svg",
           "last_run": "(55J)",
           "form": "",
-          "trainer_rtf": "100"
+          "trainer_rtf": "100",
+          "score": -13.9,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.52,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_31117870",
@@ -29927,7 +31634,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/7/7/3/278377.svg",
           "last_run": "647 (77J)",
           "form": "30783/",
-          "trainer_rtf": "60"
+          "trainer_rtf": "60",
+          "score": -57.0,
+          "betfair_odds_decimal": 18.0,
+          "betfair_size": 10.44,
+          "betfair_odds_fractional": "17/1"
         },
         {
           "horse_id": "hrs_29735685",
@@ -29981,7 +31692,11 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/2/6/4/270462.svg",
           "last_run": "(41J)",
           "form": "",
-          "trainer_rtf": ""
+          "trainer_rtf": "",
+          "score": -74.3,
+          "betfair_odds_decimal": 25.0,
+          "betfair_size": 21.22,
+          "betfair_odds_fractional": "24/1"
         }
       ],
       "big_race": false,
