@@ -178,7 +178,8 @@ async function loadResults() {
           console.log("Rendered cached yesterday's results.");
         } else {
           // 4. No cached yesterday's. Try fetching the specific hardcoded static file.
-          const staticFilePath = '/2025-06-30-results.json'; // Hardcoded path
+const yesterdaysDateStr = getYesterdaysDateStr();
+const staticFilePath = `/${yesterdaysDateStr}-results.json`;
           console.log(`No cached yesterday's results, trying static file: ${staticFilePath}`);
           try {
             const responseStatic = await fetch(staticFilePath); // Use the hardcoded path
