@@ -76,11 +76,11 @@ console.log('tips.js: Script started.');
   }
 
   // === Tipster picks ===
-  const michaelsTips = ["wannabeawallaby", "kunaa", "invincible ruby", "hinitsa bay"];
-  const chrisTips    = ["langholm", "waiting for love", "santorini star", "kingdom of stars"];
-  const peterTips    = ["Galileo's Compass", "Palazzo Persico","hardlass", "in a hurry"];
+  const michaelsTips = ["maximized", "El Cordobes", "Opera Ballo", "Cogitate"];
+  const chrisTips    = ["throne hall", "jedhi knight", "clermont ferrand", "pergola"];
+  const peterTips    = ["war supremo", "comical point","Spectacular View", "Silver Trumpet"];
   const kenTips      = ["left over love", "ironist", "beach point", "i follow rivers"];
-  const racingPostTips = ["spartan times", "i follow rivers", "ironist", "wonderfulwonderful"];
+  const racingPostTips = ["Brussels", "Tawasol", "Elarak", "Boyfriend", "left over love", "ironist", "beach point", "i follow rivers"];
 
   // --- Build tipster pick cards, skip non-existent picks ---
   const michaelsFeatured = sortByOffTime(
