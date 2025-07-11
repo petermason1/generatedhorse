@@ -77,7 +77,7 @@ console.log('tips.js: Script started.');
 
   // === Tipster picks ===
   const michaelsTips = ["maximized", "El Cordobes", "Opera Ballo", "Cogitate"];
-  const chrisTips    = ["throne hall", "jedhi knight", "clermont ferrand", "pergola"];
+  const chrisTips    = ["shine on me", "londoner", "white crown star", "gogo yubari"];
   const peterTips    = ["war supremo", "comical point","Spectacular View", "Silver Trumpet"];
   const kenTips      = ["maximized", "arabian sun", "gallus norman", "luminous warrior"];
   const racingPostTips = ["Sayidah Dariyan", "Crepe Suzette", "up the pace", "happy jacky"];
