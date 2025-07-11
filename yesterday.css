@@ -384,7 +384,6 @@ html[data-theme="light"] .win-row td {
   color: var(--color-text-inverted) !important;
 }
 
-p:has(#top-pick-wins),
 p:has(#top-pick-places) {
   display: none;
 }

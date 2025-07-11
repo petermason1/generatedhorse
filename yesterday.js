@@ -1,6 +1,6 @@
 const CSV_PATH = 'data/roi_full_breakdown.csv';
 
-// Auto-detect delimiter (comma or tab)
+// === Detect and Parse CSV, same as before ===
 function detectDelimiter(text) {
   const firstLine = text.split(/\r?\n/)[0];
   const commaCount = firstLine.split(',').length;
@@ -8,7 +8,6 @@ function detectDelimiter(text) {
   return tabCount > commaCount ? '\t' : ',';
 }
 
-// Robust CSV parser: handles quoted commas (so "race" fields don't break things!)
 function splitCSVRow(row, delim) {
   const cells = [];
   let curr = '';
@@ -17,17 +16,11 @@ function splitCSVRow(row, delim) {
     const char = row[i];
     if (char === '"') {
       if (inQuotes && row[i + 1] === '"') {
-        curr += '"'; // double quote inside quotes
-        i++;
-      } else {
-        inQuotes = !inQuotes;
-      }
+        curr += '"'; i++;
+      } else { inQuotes = !inQuotes; }
     } else if (char === delim && !inQuotes) {
-      cells.push(curr);
-      curr = '';
-    } else {
-      curr += char;
-    }
+      cells.push(curr); curr = '';
+    } else { curr += char; }
   }
   cells.push(curr);
   return cells;
@@ -52,7 +45,6 @@ function groupBy(arr, key) {
   }, {});
 }
 
-// Helper to safely parse tip_position as a number
 function getTipPosition(r) {
   if (!r.tip_position) return null;
   const posStr = String(r.tip_position).trim();
@@ -60,10 +52,16 @@ function getTipPosition(r) {
   return isNaN(posNum) ? null : posNum;
 }
 
-// Helper to safely parse win_return as float
 function getWinReturn(r) {
   const val = parseFloat(r.win_return);
   return isNaN(val) ? 0 : val;
+}
+
+// --- Get yesterday's date in your local time (UK BST/GMT safe) ---
+function getYesterday() {
+  const now = new Date();
+  now.setDate(now.getDate() - 1);
+  return now.toISOString().slice(0, 10);
 }
 
 fetch(CSV_PATH)
@@ -71,7 +69,7 @@ fetch(CSV_PATH)
   .then(text => {
     const data = parseCSV(text);
 
-    // Normalize class for grouping (removes weird labels)
+    // Normalize class for grouping
     data.forEach(row => {
       if (row['class']) {
         const c = String(row['class']).toLowerCase().replace(/[^\d]/g, '');
@@ -79,14 +77,16 @@ fetch(CSV_PATH)
       }
     });
 
-    // -------- ROI SUMMARY --------
+    // --------- ALL-TIME SUMMARY ---------
     const totalRaces = data.length;
     const totalStaked = data.reduce((a, r) => a + (parseFloat(r['staked']||'1') || 0), 0);
     const totalReturned = data.reduce((a, r) => a + (parseFloat(r['win_return']||'0') || 0), 0);
     const roiAll = totalStaked ? (((totalReturned - totalStaked) / totalStaked) * 100).toFixed(2) : '0.00';
 
-    // --- TOP PICK WIN/PLACE STATS ---
-    const topPickWins = data.filter(r => getTipPosition(r) === 1).length;
+const topPickWins = data.filter(r =>
+  getTipPosition(r) === 1 ||
+  getWinReturn(r) > 0
+).length;
     const topPickPlaces = data.filter(r => {
       const pos = getTipPosition(r);
       return pos !== null && pos >= 1 && pos <= 3;
@@ -95,16 +95,38 @@ fetch(CSV_PATH)
     const winPercent = totalRaces ? ((topPickWins / totalRaces) * 100).toFixed(1) : '0.0';
     const placePercent = totalRaces ? ((topPickPlaces / totalRaces) * 100).toFixed(1) : '0.0';
 
-    // Update summary elements in DOM
+    // --- Add ALL-TIME to DOM ---
     document.getElementById('total-races').textContent = totalRaces;
     document.getElementById('total-staked').textContent = '£' + totalStaked.toFixed(2);
     document.getElementById('total-returned').textContent = '£' + totalReturned.toFixed(2);
-    document.getElementById('roi-all').textContent = roiAll; // '%' in HTML
-
+    document.getElementById('roi-all').textContent = roiAll;
     document.getElementById('top-pick-wins').textContent = `${topPickWins} (${winPercent}%)`;
     document.getElementById('top-pick-places').textContent = `${topPickPlaces} (${placePercent}%)`;
 
-    // -------- ROI BY COURSE --------
+    // ========= YESTERDAY'S ROI =========
+    const yestStr = getYesterday();
+    const yestRows = data.filter(r => (r.date||'').startsWith(yestStr));
+    const yestRaces = yestRows.length;
+    const yestStaked = yestRows.reduce((a, r) => a + (parseFloat(r['staked']||'1') || 0), 0);
+    const yestReturned = yestRows.reduce((a, r) => a + (parseFloat(r['win_return']||'0') || 0), 0);
+    const yestROI = yestStaked ? (((yestReturned - yestStaked) / yestStaked) * 100).toFixed(2) : '0.00';
+    const yestWins = yestRows.filter(r => getTipPosition(r) === 1 || getWinReturn(r) > 0).length;
+    const yestPlaces = yestRows.filter(r => {
+      const pos = getTipPosition(r);
+      return pos !== null && pos >= 1 && pos <= 3;
+    }).length;
+    const yestWinPct = yestRaces ? ((yestWins / yestRaces) * 100).toFixed(1) : '0.0';
+    const yestPlacePct = yestRaces ? ((yestPlaces / yestRaces) * 100).toFixed(1) : '0.0';
+
+    // --- You need to add these <span> IDs in your HTML for yesterday's summary! ---
+    document.getElementById('yest-races').textContent = yestRaces;
+    document.getElementById('yest-staked').textContent = '£' + yestStaked.toFixed(2);
+    document.getElementById('yest-returned').textContent = '£' + yestReturned.toFixed(2);
+    document.getElementById('yest-roi').textContent = yestROI;
+    document.getElementById('yest-wins').textContent = `${yestWins} (${yestWinPct}%)`;
+    document.getElementById('yest-places').textContent = `${yestPlaces} (${yestPlacePct}%)`;
+
+    // ========= ROI BY COURSE (sort by returned DESC) =========
     let courseData = groupBy(data, 'course');
     let html = `<tr><th>Course</th><th>Races</th><th>Staked</th><th>Returned</th><th>ROI (%)</th></tr>`;
 
@@ -123,10 +145,10 @@ fetch(CSV_PATH)
       };
     });
 
-    const positive = rowsArr.filter(r => r.roi > 0).sort((a, b) => a.course.localeCompare(b.course));
-    const negative = rowsArr.filter(r => r.roi <= 0).sort((a, b) => a.course.localeCompare(b.course));
+    // SORT BY "RETURNED" (DESC)
+    rowsArr.sort((a, b) => b.returned - a.returned);
 
-    [...positive, ...negative].forEach(r => { html += r.html; });
+    rowsArr.forEach(r => { html += r.html; });
     document.getElementById('roi-by-course').innerHTML = html;
 
     // -------- ROI BY TYPE --------
