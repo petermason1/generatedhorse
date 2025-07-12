@@ -9,19 +9,29 @@ function isMobile() {
 
 // ======== NEXT 6 BAR ========
 
-// Return races at least 4 mins from now (not just after now)
+// ======== NEXT 6 BAR ========
+
+// Return races that have started within the last X minutes
 function getNext6Races(allRaces) {
   const now = new Date();
-  // Add 4 minutes (240,000 ms)
-  const minTime = new Date(now.getTime() + 4 * 60000);
+  const ONE_MINUTE_MS = 60000;
+
+  // Option 1: Show races that started up to 10 minutes ago, but are not too far in the future
+  // This will show races that are currently running or just finished.
+  const maxPastTime = new Date(now.getTime() - 3 * ONE_MINUTE_MS); // Races that started up to 10 minutes ago
+  const maxFutureTime = new Date(now.getTime() + 60 * ONE_MINUTE_MS); // Don't show races too far in the future (e.g., more than an hour away)
+
   return allRaces
     .filter(r => {
-      const dt = new Date(r.off_dt || r.off_time);
-      return dt > minTime;
+      const raceOffTime = new Date(r.off_dt || r.off_time);
+      // Include races that started within the last 10 minutes AND are not more than an hour in the future
+      return raceOffTime >= maxPastTime && raceOffTime <= maxFutureTime;
     })
     .sort((a, b) => new Date(a.off_dt || a.off_time) - new Date(b.off_dt || b.off_time))
     .slice(0, 6);
 }
+
+// ... rest of your code remains the same ...
 
 function pad6(arr) {
   // Always 6 slots

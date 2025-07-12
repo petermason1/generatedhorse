@@ -109,12 +109,13 @@ function renderRace(race, allRaces, whichDay) {
             <span class="runner-form">${r.form || ''}</span>
           </div>
           <div class="runner-main">
-            <div class="runner-horse">
+   <div class="runner-horse">
                 ${r.horse || ''}
                 <span class="runner-age-weight">
                     ${r.age ? ` (${r.age}yo)` : ''}
                     ${r.lbs ? ` ${convertLbsToStone(r.lbs)}` : ''}
                 </span>
+                ${r.score !== undefined && r.score !== null ? `<span class="runner-score-inline">${r.score}</span>` : ''}
             </div>
             <div class="runner-meta-line">
               <span class="runner-jockey">${r.jockey || ''}</span>
