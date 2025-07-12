@@ -18,6 +18,8 @@
   --font-weight-bold: 800;
   --font-weight-medium: 600;
   --border-radius-pill: 999px;
+
+  /* Removed previous card variables */
 }
 
 /* === Reset === */
@@ -95,6 +97,12 @@ main {
   flex-wrap: wrap;
   animation: slideUpFadeIn 0.85s 0.8s both;
 }
+.btn-wrapper { /* New wrapper for button sizing control */
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    width: 100%; /* Ensure wrapper takes full width to center buttons */
+}
 .btn, .btn-primary, .btn-secondary {
   border: none;
   outline: none;
@@ -104,11 +112,15 @@ main {
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   cursor: pointer;
-  display: inline-flex;
+  display: flex; /* Changed from inline-flex to flex for width control */
   align-items: center;
+  justify-content: center; /* Center content within button */
   gap: 0.7em;
   transition: background 0.22s, box-shadow 0.2s, transform 0.17s, color 0.22s;
   background: none;
+  /* Control width via flex-basis or explicit width for equal size */
+  flex-basis: 250px; /* Adjust this value to set target width */
+  max-width: 50%; /* Prevent buttons from becoming too wide in a row */
 }
 .btn-primary {
   background: var(--gradient-cta-primary);
@@ -157,15 +169,21 @@ main {
   margin-top: 1.7rem;
 }
 .feature-card {
-  background: transparent;
+  background: transparent; /* No background */
   border-radius: 0.8em;
   padding: 2em 1.1em 1.2em;
-  box-shadow: none;
+  box-shadow: none; /* No shadow */
+  border: none; /* No border */
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.2s ease-in-out; /* Only transform for subtle lift */
 }
+.feature-card:hover {
+  transform: translateY(-5px); /* Just a subtle lift on hover */
+}
+
 .feature-icon {
   font-size: 2.3em;
   margin-bottom: 0.5em;
@@ -204,7 +222,7 @@ main {
   margin-top: 1.7em;
 }
 .testimonial-card {
-  background: transparent;
+  background: transparent; /* No background */
   border-radius: 0.8em;
   padding: 1.7em 1em;
   font-style: italic;
@@ -213,9 +231,37 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: none;
-  box-shadow: none;
+  border: none; /* No border */
+  box-shadow: none; /* No shadow */
+  transition: none; /* No transition on hover if no visual change */
+  text-align: center; /* Testimonials often look good centered */
+
+  /* To make testimonials stand out subtly without "cards": */
+  position: relative;
+  overflow: hidden; /* Important for gradient line */
+  padding-bottom: 2em; /* Add space for the bottom line */
 }
+
+/* Subtle line at the bottom for testimonials */
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start from center */
+  transform: translateX(-50%); /* Center the line */
+  width: 60%; /* Width of the line */
+  height: 2px; /* Thickness of the line */
+  background: linear-gradient(90deg, transparent, var(--color-brand) 10%, var(--color-highlight) 90%, transparent); /* Gradient line */
+  opacity: 0.7; /* Make it subtle */
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.testimonial-card:hover::after {
+  width: 80%; /* Expand width on hover */
+  opacity: 1; /* Make more visible on hover */
+}
+
+
 .testimonial-author {
   font-weight: 800;
   color: var(--color-highlight);
@@ -322,7 +368,20 @@ main {
   .features-section h2,
   .testimonials-section h2,
   .cta-final-section h2 { font-size: 1em; }
-  .feature-grid, .testimonials-grid { grid-template-columns: 1fr; gap: 0.8em; }
+  .feature-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+  }
+  .hero-cta-group {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+  /* Buttons on small screens */
+  .btn, .btn-primary, .btn-secondary {
+    flex-basis: auto; /* Revert flex-basis */
+    width: 100%; /* Take full width */
+    max-width: 300px; /* Max width to prevent them from becoming too wide */
+  }
 }
 @media (max-width: 540px) {
   .hero-title { font-size: 1.05em; }
