@@ -41,7 +41,7 @@ console.log('tips.js: Script started.');
     return;
   }
 
-  // --- Helper: find a runner by horse name, ignore case ---
+  // --- Helper: find   a runner by horse name, ignore case ---
   function getRunnerByHorseName(horseName, races) {
     for (const race of races) {
       const runner = (race.runners || []).find(r =>
@@ -73,6 +73,7 @@ console.log('tips.js: Script started.');
       return t(a.race.off_time) - t(b.race.off_time);
     });
     
+
   }
 
   // === Tipster picks ===
