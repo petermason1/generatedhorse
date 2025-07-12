@@ -98,7 +98,11 @@ function renderRace(race, allRaces, whichDay) {
         <div class="runner-card" data-i="${i}">
           <div class="runner-num-draw">
             <span class="runner-num">${r.number || i+1}</span>
-            <span class="runner-draw">${(r.draw && r.draw !== r.number) ? `(${r.draw})` : ''}</span>
+            <span class="runner-draw">${
+              (r.draw !== undefined && r.draw !== null && r.draw !== '') 
+                ? `(${r.draw})` 
+                : ''
+            }</span>
           </div>
           <div class="runner-silk-group">
             <img class="runner-silk" src="${r.silk_url||'https://placehold.co/39x39/161c22/fff?text=S'}" alt="silks" onerror="this.src='https://placehold.co/39x39/161c22/fff?text=S';" />
@@ -111,7 +115,6 @@ function renderRace(race, allRaces, whichDay) {
                     ${r.age ? ` (${r.age}yo)` : ''}
                     ${r.lbs ? ` ${convertLbsToStone(r.lbs)}` : ''}
                 </span>
-                <span class="runner-score-inline">Score: ${typeof r.score === 'number' ? r.score : ''}</span>
             </div>
             <div class="runner-meta-line">
               <span class="runner-jockey">${r.jockey || ''}</span>
@@ -209,5 +212,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // as it would default to rcData[0]
     if (main) main.innerHTML = "<p>No race found to display.</p>";
   }
-  
 });

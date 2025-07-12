@@ -172,18 +172,19 @@ h1, h2 {
 
 .runner-card {
     display: flex;
-    align-items: flex-start; /* Aligns items to the top of the card */
+    align-items: flex-start;
     background: var(--card);
     border-radius: 8px;
     box-shadow: var(--shadow);
     border: 1.6px solid var(--border);
-    padding: 0.8em 1em; /* Increased padding for more breathing room */
-    margin-bottom: 0.7em; /* More space between cards */
-    min-height: 55px; /* Slightly taller for better content fit */
+    padding: 1.3em 1.7em;      /* More space inside the card */
+    margin-bottom: 1.2em;      /* More space between cards */
+    min-height: 76px;          /* Taller cards for desktop */
     position: relative;
-    gap: 12px; /* Consistent spacing between columns */
+    gap: 22px;                 /* Bigger space between columns */
     transition: border 0.14s, background 0.13s;
 }
+
 
 .runner-card:hover,
 .runner-card.expanded {
@@ -233,146 +234,161 @@ h1, h2 {
 .runner-silk-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Move contents to top left */
-    width: 48px;
+    align-items: center;     /* Center for symmetry */
+    width: 58px;             /* More breathing room */
     flex-shrink: 0;
-    gap: 2px;         /* Smaller gap, or set to 0 if you want form glued to silk */
-    padding-top: 0;   /* No space at top */
+    gap: 4px;                /* Spacing between silk and form */
+    padding-top: 0;
 }
 
 .runner-silk {
-    width: 50px;
-    height: 50px;
+    width: 54px;
+    height: 54px;
     object-fit: contain;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32);
     background: #1a2229;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 0; /* No extra margin at top */
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    margin: 0;
+    display: block;
 }
 
 .runner-form {
-    font-size: 0.8em;
+    font-size: 0.9em;                            /* Easier to read on desktop */
     font-weight: 700;
-    color: #ffd54f; /* Soft gold */
-    background-color: rgba(0, 0, 0, 0.6); /* Dark translucent background */
-    padding: 3px 8px;
+    color: #ffe561;
+    background: rgba(0, 0, 0, 0.58);             /* Softer background */
+    padding: 2.5px 12px;                         /* Wider badge, less height */
     border-radius: 5px;
-    white-space: nowrap;       /* Always keep on one line, never wrap */
-    overflow: visible;         /* Never hide overflow */
-    text-overflow: unset;      /* Never show ... */
-    max-width: none;           /* No width limit */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;                             /* Prevent overflow */
     text-align: center;
-    box-shadow: 0 0 6px rgba(255, 213, 79, 0.5);
-    margin-top:10px ;
+    box-shadow: 0 0 4px rgba(255, 213, 79, 0.35);
+    margin: 0;                                   /* Remove big top margin */
+    margin-top: 5px;                             /* Small gap under silk */
+    letter-spacing: 0.03em;                      /* For clarity */
+    transition: background 0.18s, color 0.18s;
 }
 
 
 
 
-/* 3. Main Runner Content */
 .runner-main {
-    flex: 1 1 0%; /* Allows this section to take up remaining space */
-    min-width: 0; /* Prevents overflow with long names */
+    flex: 1 1 0%;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 0.2em; /* Reduced gap for tighter info grouping */
+    gap: 0.34em;                    /* A bit more gap for comfort */
+    padding-top: 1px;               /* Small top buffer for visual lift */
 }
 
 .runner-horse {
-    font-size: 1.08em; /* Slightly larger horse name */
+    font-size: 1.18em;              /* Larger, bolder */
     font-weight: 900;
-    color: var(--brand); /* Brand color for horse name */
-    letter-spacing: 0.01em;
+    color: var(--brand);
+    letter-spacing: 0.012em;
     white-space: normal;
     word-break: break-word;
-    line-height: 1.2;
-    display: flex; /* Make horse name line a flex container */
-    align-items: baseline; /* Align items to their baseline */
-    gap: 0.6em; /* Space between horse name and age/weight/score */
-    flex-wrap: wrap; /* Allow wrapping if items are too long */
+    line-height: 1.22;
+    display: flex;
+    align-items: baseline;
+    gap: 0.8em;                     /* More room between items */
+    flex-wrap: wrap;
+    margin-bottom: 1px;             /* Tiny bottom buffer */
 }
 
-/* --- AGE AND WEIGHT COLOR (UX Improvement) --- */
 .runner-age-weight {
-    font-size: 0.88em; /* Adjusted size */
-    color: var(--text-color-secondary); /* DIFFERENT COLOR! */
-    font-weight: 500; /* Muted weight */
+    font-size: 0.93em;              /* Slightly larger for clarity */
+    color: var(--text-color-secondary);
+    font-weight: 500;
     white-space: nowrap;
 }
 
 .runner-score-inline {
-    font-size: 0.88em; /* Consistent with age/weight */
-    color: #92e092; /* Specific green for score inline */
-    font-weight: 600;
+    font-size: 0.93em;
+    color: #92e092;
+    font-weight: 700;
     white-space: nowrap;
+    margin-left: 0.5em;             /* Space from age/weight */
 }
 
 .runner-meta-line {
-    font-size: 0.9em; /* Slightly smaller for meta line */
+    font-size: 0.96em;
     color: var(--text-color-secondary);
     display: flex;
-    gap: 6px; /* Increased gap for better separation */
+    gap: 8px;                       /* A bit wider */
     align-items: center;
     white-space: nowrap;
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.92;                  /* Slight fade for secondary info */
+    margin-bottom: 2px;
 }
+
 .runner-meta-separator {
-    color: #4a5d73; /* Muted separator color */
+    color: #415269;
+    font-size: 0.94em;
+    font-weight: 600;
+    margin: 0 2px;
 }
 
 .runner-info-line {
-    font-size: 0.88em; /* Consistent small text for info line */
+    font-size: 0.93em;
     color: var(--text-color-secondary);
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    gap: 0.8em 1.2em; /* Vertical and horizontal gap */
-    margin-top: 0.2em; /* Small space from meta line */
+    flex-wrap: wrap;
+    gap: 0.7em 1.1em;
+    margin-top: 0.18em;
 }
 .runner-info-line b {
-    color: var(--text-color-primary); /* Bold values stand out */
-    font-weight: 600;
+    color: var(--text-color-primary);
+    font-weight: 700;
 }
 
-
-/* 4. Odds Column */
 .runner-odds {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 65px; /* Wider for odds */
+    width: 70px;
     flex-shrink: 0;
-    font-size: 1.2em; /* Larger odds for prominence */
-    color: #adffa2; /* Green for odds */
-    font-weight: 800;
+    font-size: 1.23em;
+    color: #adffa2;
+    font-weight: 900;
     letter-spacing: 0.01em;
     text-align: right;
-    padding-top: 2px; /* Adjust vertical alignment */
+    padding-top: 2px;
 }
 
-/* == MORE INFO BTN (UX improvements) == */
 .runner-more-btn {
-    font-size: 0.88em; /* Slightly smaller button text */
+    font-size: 0.92em;
     background: none;
     color: var(--highlight);
-    border: 1px solid var(--highlight); /* Outline for clarity */
-    border-radius: 6px;
-    padding: 4px 10px; /* More padding for clickability */
+    border: 1.2px solid var(--highlight);
+    border-radius: 7px;
+    padding: 4px 13px;
     cursor: pointer;
     font-weight: 700;
-    margin-top: 0.5em; /* Space from info line */
-    align-self: flex-start; /* Align button to the left */
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    margin-top: 0.5em;
+    align-self: flex-start;
+    box-shadow: 0 2px 8px #ffe56117;
+    transition: 
+      background 0.15s, 
+      color 0.15s, 
+      border-color 0.15s,
+      box-shadow 0.18s;
 }
 .runner-more-btn:hover,
 .runner-more-btn:focus-visible {
     background: var(--highlight);
-    color: #181e24; /* Dark text on highlight */
+    color: #181e24;
+    border-color: var(--highlight);
     outline: none;
-    border-color: var(--highlight); /* No border change on hover */
+    box-shadow: 0 2px 14px #ffe56146;
 }
+
 
 .runner-more {
     display: none;
@@ -737,4 +753,14 @@ h1, h2 {
   border-radius: 2em;
   box-shadow: 0 2px 8px #0002;
   padding: 0.25em 1.2em;
+}
+@media (max-width: 600px) {
+  .runner-form {
+    max-width: 70px;            /* Shrinks to fit card, tweak to fit your UI */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 0.74em !important;
+    padding: 2px 4px !important;
+  }
 }
