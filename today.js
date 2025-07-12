@@ -8,23 +8,33 @@ function isMobile() {
 }
 
 // ======== NEXT 6 BAR ========
+
+// Return races at least 4 mins from now (not just after now)
 function getNext6Races(allRaces) {
   const now = new Date();
+  // Add 4 minutes (240,000 ms)
+  const minTime = new Date(now.getTime() + 4 * 60000);
   return allRaces
-    .filter(r => new Date(r.off_dt || r.off_time) > now)
+    .filter(r => {
+      const dt = new Date(r.off_dt || r.off_time);
+      return dt > minTime;
+    })
     .sort((a, b) => new Date(a.off_dt || a.off_time) - new Date(b.off_dt || b.off_time))
     .slice(0, 6);
 }
+
 function pad6(arr) {
   // Always 6 slots
   return [...arr, ...Array(6)].slice(0, 6);
 }
 function truncate(str, max) {
-  return str && str.length > max ? str.slice(0, max-1) + '…' : str;
+  return str ? str.slice(0, max) : '';
 }
+
 function getRaceId(race) {
   return race.race_id || race._id || '';
 }
+
 function renderNext6Bar(allRaces) {
   const races6 = pad6(getNext6Races(allRaces));
   const wrapperCls = isMobile() ? "next6-bar-grid" : "next6-bar";
@@ -33,7 +43,7 @@ function renderNext6Bar(allRaces) {
       r
         ? `<a href="racecard.html?race_id=${getRaceId(r)}" class="race-bar-box" title="${r.course} ${r.off_time}">
             <span class="race-time">${r.off_time}</span>
-            <span class="race-course">${truncate(r.course, 10)}</span>
+            <span class="race-course">${truncate(r.course, 5)}</span>
           </a>`
         : `<span class="race-bar-box race-bar-empty"></span>`
     ).join('')}
@@ -161,5 +171,8 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   updateSearchClear();
 });
+
+// Optionally, auto-update every minute for “live” bar
+setInterval(updateNext6Bar, 60000);
 
 console.log('today.js finished');
