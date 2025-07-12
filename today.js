@@ -18,7 +18,7 @@ function getNext6Races(allRaces) {
 
   // Option 1: Show races that started up to 10 minutes ago, but are not too far in the future
   // This will show races that are currently running or just finished.
-  const maxPastTime = new Date(now.getTime() - 3 * ONE_MINUTE_MS); // Races that started up to 10 minutes ago
+  const maxPastTime = new Date(now.getTime() - 3  * ONE_MINUTE_MS); // Races that started up to 10 minutes ago
   const maxFutureTime = new Date(now.getTime() + 60 * ONE_MINUTE_MS); // Don't show races too far in the future (e.g., more than an hour away)
 
   return allRaces
