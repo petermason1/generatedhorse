@@ -14,7 +14,7 @@ function convertLbsToStone(lbs) {
   return s > 0 ? `${s}st${p ? ' ' + p + 'lb' : ''}` : `${p}lb`;
 }
 
-// === Odds Helper (ONLY use betfair_odds_decimal) ===
+// === Odds Helper (ONLY use betfair_odds_fractional) ===
 function decimalToFractional(decimal) {
   if (!decimal || typeof decimal !== 'number' || decimal < 1.01) return '';
   const num = Math.round((decimal - 1) * 100);
@@ -54,7 +54,7 @@ function renderCourseTimes(allRaces, currentCourse, currentRaceId) {
   ).join('');
 }
 
-// --- Render main racecard ---
+// --- Render main racecard (WITH More Info button/drawer) ---
 function renderRace(race, allRaces, whichDay) {
   const main = document.getElementById('mainRacecard');
   if (!main || !race || !race.runners) {
@@ -128,6 +128,16 @@ function renderRace(race, allRaces, whichDay) {
               ${r.headgear ? `• Headgear <b class="runner-headgear">${r.headgear}</b>` : ''}
               ${r.last_run ? `• Last run <b class="runner-last-run">${r.last_run}d</b>` : ''}
             </div>
+            <button class="runner-more-btn" type="button" aria-expanded="false">More Info</button>
+            <div class="runner-more" tabindex="-1">
+              <div class="runner-more-content">
+                <p><b>Sire:</b> ${r.sire || '—'}<br><b>Dam:</b> ${r.dam || '—'}</p>
+                <p><b>Owner:</b> ${r.owner || '—'}</p>
+                <p><b>Trainer Form (14 days):</b> ${r.trainer_14_days || '—'}</p>
+                <p><b>Comment:</b> ${r.comment || 'No additional info.'}</p>
+                <p><b>Spotlight:</b> ${r.spotlight || 'No spotlight available.'}</p>
+              </div>
+            </div>
           </div>
           <span class="runner-odds">${getRunnerOdds(r)}</span>
         </div>
@@ -148,6 +158,28 @@ function renderRace(race, allRaces, whichDay) {
       </div>
     ` : ''}
   `;
+
+  // === Add More Info toggle handlers ===
+  setTimeout(() => { // let DOM update
+    document.querySelectorAll('.runner-more-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const card = btn.closest('.runner-card');
+        // Close others:
+        document.querySelectorAll('.runner-card.expanded').forEach(el => {
+          if (el !== card) el.classList.remove('expanded');
+        });
+        card.classList.toggle('expanded');
+        btn.setAttribute('aria-expanded', card.classList.contains('expanded'));
+      });
+    });
+    // Optional: close drawer when clicking outside
+    document.addEventListener('click', function(ev) {
+      document.querySelectorAll('.runner-card.expanded').forEach(card => {
+        if (!card.contains(ev.target)) card.classList.remove('expanded');
+      });
+    });
+  }, 0);
 }
 
 // === SPA navigation handling ===
@@ -199,17 +231,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // If no specific race found from URL, or no ID provided, default to the first race
   if (!raceToRender) {
     raceToRender = rcData[0];
-    // console.warn("No specific race_id found in URL or match failed. Defaulting to first race:", raceToRender);
-    // Optionally, you might want to clear the URL parameter if defaulting,
-    // though this can cause a flicker if the user expects the URL to persist.
-    // window.history.replaceState({}, document.title, window.location.pathname);
   }
 
   if (raceToRender) {
     renderRace(raceToRender, rcData, "today");
   } else {
-    // This case should ideally not be reached if rcData is not empty,
-    // as it would default to rcData[0]
     if (main) main.innerHTML = "<p>No race found to display.</p>";
   }
 });
