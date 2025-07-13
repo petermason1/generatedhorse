@@ -80,7 +80,7 @@ console.log('tips.js: Script started.');
   const michaelsTips = ["send harry", "only spoofing", "getthepot", "salamanca bay"];
   const chrisTips    = ["el fontenaro", "stateira", "pure gold", "getuptheyard"];
   const peterTips    = ["moonbow", "Takt De Touques","Sunshine And Roses", "Appleblossomwhite"];
-  const kenTips      = ["Frank The Spark", "Emily Rebecca", "makeen", "percy shelley"];
+  const kenTips      = ["salamanca bay", "whistleinthedark", "warazam", "mr lightside"];
   const racingPostTips = ["Spick And Span", "Wasdell Dundalk", "Wisper", "Quebella"];
 
 
