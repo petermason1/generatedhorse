@@ -104,8 +104,8 @@ window.racecardsData = {
           "form": "219-31",
           "trainer_rtf": "33",
           "score": 65.6,
-          "odds_fractional": "9/4",
-          "odds_decimal": 3.25
+          "odds_fractional": "13/2",
+          "odds_decimal": 7.5
         },
         {
           "horse_id": "hrs_34665288",
@@ -163,8 +163,8 @@ window.racecardsData = {
           "form": "/3111/",
           "trainer_rtf": "",
           "score": -670.25,
-          "odds_fractional": "5/2",
-          "odds_decimal": 3.5
+          "odds_fractional": "7/2",
+          "odds_decimal": 4.5
         },
         {
           "horse_id": "hrs_48259155",
@@ -226,8 +226,8 @@ window.racecardsData = {
           "form": "O6B-38",
           "trainer_rtf": "25",
           "score": 4.925,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         },
         {
           "horse_id": "hrs_47621070",
@@ -289,8 +289,8 @@ window.racecardsData = {
           "form": "1-711",
           "trainer_rtf": "46",
           "score": 62.535,
-          "odds_fractional": "6/1",
-          "odds_decimal": 7.0
+          "odds_fractional": "8/15",
+          "odds_decimal": 1.533
         },
         {
           "horse_id": "hrs_54644772",
@@ -346,8 +346,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "",
           "score": -74.3,
-          "odds_fractional": "17/2",
-          "odds_decimal": 9.5
+          "odds_fractional": "80/1",
+          "odds_decimal": 81.0
         },
         {
           "horse_id": "hrs_412693071",
@@ -415,8 +415,8 @@ window.racecardsData = {
           "form": "F6-7",
           "trainer_rtf": "67",
           "score": 62.875,
-          "odds_fractional": "20/1",
-          "odds_decimal": 21.0
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_52267201",
@@ -472,8 +472,8 @@ window.racecardsData = {
           "form": "63",
           "trainer_rtf": "25",
           "score": -68.65,
-          "odds_fractional": "16/1",
-          "odds_decimal": 17.0
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         }
       ],
       "big_race": false,
@@ -616,8 +616,8 @@ window.racecardsData = {
           "form": "P73-2F",
           "trainer_rtf": "33",
           "score": 77.055,
-          "odds_fractional": "15/8",
-          "odds_decimal": 2.875
+          "odds_fractional": "6/4",
+          "odds_decimal": 2.5
         },
         {
           "horse_id": "hrs_21327824",
@@ -711,8 +711,8 @@ window.racecardsData = {
           "form": "F2-384",
           "trainer_rtf": "58",
           "score": 88.965,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_24372978",
@@ -780,8 +780,8 @@ window.racecardsData = {
           "form": "22P/45",
           "trainer_rtf": "50",
           "score": 57.585,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_15800526",
@@ -874,8 +874,8 @@ window.racecardsData = {
           "form": "/344-4",
           "trainer_rtf": "",
           "score": 64.845,
-          "odds_fractional": "7/1",
-          "odds_decimal": 8.0
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_34788824",
@@ -945,8 +945,8 @@ window.racecardsData = {
           "form": "P-2436",
           "trainer_rtf": "",
           "score": 66.385,
-          "odds_fractional": "15/2",
-          "odds_decimal": 8.5
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_9396618",
@@ -1063,8 +1063,8 @@ window.racecardsData = {
           "form": "76-746",
           "trainer_rtf": "50",
           "score": 56.505,
-          "odds_fractional": "12/1",
-          "odds_decimal": 13.0
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_26961298",
@@ -1139,8 +1139,8 @@ window.racecardsData = {
           "form": "32-321",
           "trainer_rtf": "",
           "score": 63.655,
-          "odds_fractional": "28/1",
-          "odds_decimal": 29.0
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         }
       ],
       "big_race": false,
@@ -1283,8 +1283,8 @@ window.racecardsData = {
           "form": "43-111",
           "trainer_rtf": "54",
           "score": 98.69,
-          "odds_fractional": "9/4",
-          "odds_decimal": 3.25
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_32598468",
@@ -1366,8 +1366,8 @@ window.racecardsData = {
           "form": "2/113-",
           "trainer_rtf": "",
           "score": -153.09,
-          "odds_fractional": "5/2",
-          "odds_decimal": 3.5
+          "odds_fractional": "11/4",
+          "odds_decimal": 3.75
         },
         {
           "horse_id": "hrs_31287830",
@@ -1442,8 +1442,8 @@ window.racecardsData = {
           "form": "/3F7-P",
           "trainer_rtf": "",
           "score": 62.93,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "15/2",
+          "odds_decimal": 8.5
         },
         {
           "horse_id": "hrs_35891114",
@@ -1513,8 +1513,8 @@ window.racecardsData = {
           "form": "1505-2",
           "trainer_rtf": "50",
           "score": 66.33,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_34470688",
@@ -1602,8 +1602,8 @@ window.racecardsData = {
           "form": "4PPP-3",
           "trainer_rtf": "",
           "score": 70.835,
-          "odds_fractional": "18/1",
-          "odds_decimal": 19.0
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_16762907",
@@ -1728,8 +1728,8 @@ window.racecardsData = {
           "form": "6268-7",
           "trainer_rtf": "50",
           "score": 81.545,
-          "odds_fractional": "7/1",
-          "odds_decimal": 8.0
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_26554717",
@@ -1804,8 +1804,8 @@ window.racecardsData = {
           "form": "312-34",
           "trainer_rtf": "67",
           "score": 84.735,
-          "odds_fractional": "9/1",
-          "odds_decimal": 10.0
+          "odds_fractional": "5/1",
+          "odds_decimal": 6.0
         }
       ],
       "big_race": false,
@@ -1955,8 +1955,8 @@ window.racecardsData = {
           "form": "426-14",
           "trainer_rtf": "33",
           "score": 99.68,
-          "odds_fractional": "8/11",
-          "odds_decimal": 1.727
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_33081678",
@@ -2030,8 +2030,8 @@ window.racecardsData = {
           "form": "15PP-3",
           "trainer_rtf": "50",
           "score": 74.36,
-          "odds_fractional": "7/2",
-          "odds_decimal": 4.5
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_17274110",
@@ -2127,8 +2127,8 @@ window.racecardsData = {
           "form": "371-53",
           "trainer_rtf": "48",
           "score": 80.365,
-          "odds_fractional": "7/1",
-          "odds_decimal": 8.0
+          "odds_fractional": "11/2",
+          "odds_decimal": 6.5
         },
         {
           "horse_id": "hrs_35812364",
@@ -2190,8 +2190,8 @@ window.racecardsData = {
           "form": "41U-58",
           "trainer_rtf": "46",
           "score": 65.0,
-          "odds_fractional": "12/1",
-          "odds_decimal": 13.0
+          "odds_fractional": "13/2",
+          "odds_decimal": 7.5
         },
         {
           "horse_id": "hrs_18602626",
@@ -2279,8 +2279,8 @@ window.racecardsData = {
           "form": "PP2-82",
           "trainer_rtf": "50",
           "score": 91.495,
-          "odds_fractional": "20/1",
-          "odds_decimal": 21.0
+          "odds_fractional": "15/8",
+          "odds_decimal": 2.875
         },
         {
           "horse_id": "hrs_17808826",
@@ -2360,8 +2360,8 @@ window.racecardsData = {
           "form": "4338-2",
           "trainer_rtf": "",
           "score": 46.61,
-          "odds_fractional": "22/1",
-          "odds_decimal": 23.0
+          "odds_fractional": "11/1",
+          "odds_decimal": 12.0
         },
         {
           "horse_id": "hrs_18311041",
@@ -2439,8 +2439,8 @@ window.racecardsData = {
           "form": "34F2-5",
           "trainer_rtf": "",
           "score": 71.305,
-          "odds_fractional": "28/1",
-          "odds_decimal": 29.0
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         }
       ],
       "big_race": false,
@@ -2542,8 +2542,8 @@ window.racecardsData = {
           "form": "11215-",
           "trainer_rtf": "",
           "score": -111.64,
-          "odds_fractional": "8/13",
-          "odds_decimal": 1.615
+          "odds_fractional": "15/8",
+          "odds_decimal": 2.875
         },
         {
           "horse_id": "hrs_33774489",
@@ -2631,8 +2631,8 @@ window.racecardsData = {
           "form": "72-167",
           "trainer_rtf": "25",
           "score": 71.11,
-          "odds_fractional": "3/1",
-          "odds_decimal": 4.0
+          "odds_fractional": "11/2",
+          "odds_decimal": 6.5
         },
         {
           "horse_id": "hrs_29622040",
@@ -2699,8 +2699,8 @@ window.racecardsData = {
           "form": "162-3F",
           "trainer_rtf": "54",
           "score": 67.88,
-          "odds_fractional": "11/2",
-          "odds_decimal": 6.5
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_26008318",
@@ -2786,8 +2786,8 @@ window.racecardsData = {
           "form": "7/3-0B",
           "trainer_rtf": "67",
           "score": 54.975,
-          "odds_fractional": "18/1",
-          "odds_decimal": 19.0
+          "odds_fractional": "10/3",
+          "odds_decimal": 4.333
         },
         {
           "horse_id": "hrs_8865675",
@@ -2892,8 +2892,8 @@ window.racecardsData = {
           "form": "796-61",
           "trainer_rtf": "50",
           "score": 81.005,
-          "odds_fractional": "300/1",
-          "odds_decimal": 301.0
+          "odds_fractional": "6/1",
+          "odds_decimal": 7.0
         }
       ],
       "big_race": false,
@@ -3001,8 +3001,8 @@ window.racecardsData = {
           "form": "2555-9",
           "trainer_rtf": "48",
           "score": -0.54,
-          "odds_fractional": "13/8",
-          "odds_decimal": 2.625
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_21342069",
@@ -3110,8 +3110,8 @@ window.racecardsData = {
           "form": "747-56",
           "trainer_rtf": "58",
           "score": 72.855,
-          "odds_fractional": "5/2",
-          "odds_decimal": 3.5
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_30865618",
@@ -3189,8 +3189,8 @@ window.racecardsData = {
           "form": "253-P4",
           "trainer_rtf": "50",
           "score": 80.96,
-          "odds_fractional": "15/4",
-          "odds_decimal": 4.75
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_22005970",
@@ -3288,8 +3288,8 @@ window.racecardsData = {
           "form": "0/08-5",
           "trainer_rtf": "33",
           "score": 34.605,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "11/1",
+          "odds_decimal": 12.0
         },
         {
           "horse_id": "hrs_17950191",
@@ -3380,8 +3380,8 @@ window.racecardsData = {
           "form": "05-3UP",
           "trainer_rtf": "",
           "score": 42.035,
-          "odds_fractional": "30/1",
-          "odds_decimal": 31.0
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         },
         {
           "horse_id": "hrs_32709782",
@@ -3463,8 +3463,8 @@ window.racecardsData = {
           "form": "506-5",
           "trainer_rtf": "",
           "score": -15.185,
-          "odds_fractional": "11/1",
-          "odds_decimal": 12.0
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_37889866",
@@ -3528,8 +3528,8 @@ window.racecardsData = {
           "form": "74-851",
           "trainer_rtf": "67",
           "score": 76.715,
-          "odds_fractional": "11/1",
-          "odds_decimal": 12.0
+          "odds_fractional": "2/1",
+          "odds_decimal": 3.0
         },
         {
           "horse_id": "hrs_18581766",
@@ -3629,8 +3629,8 @@ window.racecardsData = {
           "form": "523-5P",
           "trainer_rtf": "",
           "score": 40.315,
-          "odds_fractional": "14/1",
-          "odds_decimal": 15.0
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         }
       ],
       "big_race": false,
@@ -3717,8 +3717,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "55",
           "score": -67.5,
-          "odds_fractional": "10/11",
-          "odds_decimal": 1.909
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         },
         {
           "horse_id": "hrs_49143353",
@@ -3776,8 +3776,8 @@ window.racecardsData = {
           "form": "2552",
           "trainer_rtf": "",
           "score": 34.72,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "11/4",
+          "odds_decimal": 3.75
         },
         {
           "horse_id": "hrs_52742165",
@@ -3833,8 +3833,8 @@ window.racecardsData = {
           "form": "53",
           "trainer_rtf": "25",
           "score": 19.515,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "11/2",
+          "odds_decimal": 6.5
         },
         {
           "horse_id": "hrs_54090848",
@@ -3947,8 +3947,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "42",
           "score": -69.1,
-          "odds_fractional": "10/1",
-          "odds_decimal": 11.0
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_52709671",
@@ -4010,8 +4010,8 @@ window.racecardsData = {
           "form": "5",
           "trainer_rtf": "33",
           "score": 34.74,
-          "odds_fractional": "66/1",
-          "odds_decimal": 67.0
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_53808979",
@@ -4067,8 +4067,8 @@ window.racecardsData = {
           "form": "4",
           "trainer_rtf": "50",
           "score": 16.805,
-          "odds_fractional": "80/1",
-          "odds_decimal": 81.0
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         },
         {
           "horse_id": "hrs_54090729",
@@ -4124,8 +4124,8 @@ window.racecardsData = {
           "form": "8",
           "trainer_rtf": "54",
           "score": 16.11,
-          "odds_fractional": "14/1",
-          "odds_decimal": 15.0
+          "odds_fractional": "100/1",
+          "odds_decimal": 101.0
         },
         {
           "horse_id": "hrs_54090757",
@@ -4181,8 +4181,8 @@ window.racecardsData = {
           "form": "9",
           "trainer_rtf": "44",
           "score": 19.255,
-          "odds_fractional": "16/1",
-          "odds_decimal": 17.0
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_53420367",
@@ -4244,8 +4244,8 @@ window.racecardsData = {
           "form": "55",
           "trainer_rtf": "44",
           "score": 38.26,
-          "odds_fractional": "50/1",
-          "odds_decimal": 51.0
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_54644800",
@@ -4301,8 +4301,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "43",
           "score": -66.9,
-          "odds_fractional": "50/1",
-          "odds_decimal": 51.0
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         }
       ],
       "big_race": false,
@@ -4389,8 +4389,8 @@ window.racecardsData = {
           "form": "7",
           "trainer_rtf": "44",
           "score": 13.96,
-          "odds_fractional": "11/4",
-          "odds_decimal": 3.75
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_53420360",
@@ -4446,8 +4446,8 @@ window.racecardsData = {
           "form": "22",
           "trainer_rtf": "37",
           "score": 42.19,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "7/2",
+          "odds_decimal": 4.5
         },
         {
           "horse_id": "hrs_54178523",
@@ -4560,8 +4560,8 @@ window.racecardsData = {
           "form": "033",
           "trainer_rtf": "44",
           "score": 27.945,
-          "odds_fractional": "7/1",
-          "odds_decimal": 8.0
+          "odds_fractional": "13/2",
+          "odds_decimal": 7.5
         },
         {
           "horse_id": "hrs_53420374",
@@ -4617,8 +4617,8 @@ window.racecardsData = {
           "form": "00",
           "trainer_rtf": "20",
           "score": 29.035,
-          "odds_fractional": "8/1",
-          "odds_decimal": 9.0
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         },
         {
           "horse_id": "hrs_52862796",
@@ -4674,8 +4674,8 @@ window.racecardsData = {
           "form": "57",
           "trainer_rtf": "15",
           "score": 12.645,
-          "odds_fractional": "10/1",
-          "odds_decimal": 11.0
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         },
         {
           "horse_id": "hrs_54644779",
@@ -4731,8 +4731,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "28",
           "score": -66.7,
-          "odds_fractional": "12/1",
-          "odds_decimal": 13.0
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_54273870",
@@ -4788,8 +4788,8 @@ window.racecardsData = {
           "form": "2",
           "trainer_rtf": "50",
           "score": 27.785,
-          "odds_fractional": "14/1",
-          "odds_decimal": 15.0
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_53420311",
@@ -4851,8 +4851,8 @@ window.racecardsData = {
           "form": "62",
           "trainer_rtf": "49",
           "score": 44.475,
-          "odds_fractional": "25/1",
-          "odds_decimal": 26.0
+          "odds_fractional": "2/1",
+          "odds_decimal": 3.0
         },
         {
           "horse_id": "hrs_54464081",
@@ -4908,8 +4908,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "59",
           "score": -63.9,
-          "odds_fractional": "28/1",
-          "odds_decimal": 29.0
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_54242755",
@@ -4965,8 +4965,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "63",
           "score": -74.3,
-          "odds_fractional": "100/1",
-          "odds_decimal": 101.0
+          "odds_fractional": "66/1",
+          "odds_decimal": 67.0
         }
       ],
       "big_race": false,
@@ -5059,8 +5059,8 @@ window.racecardsData = {
           "form": "4-3721",
           "trainer_rtf": "44",
           "score": 58.135,
-          "odds_fractional": "2/1",
-          "odds_decimal": 3.0
+          "odds_fractional": "6/1",
+          "odds_decimal": 7.0
         },
         {
           "horse_id": "hrs_45568467",
@@ -5118,8 +5118,8 @@ window.racecardsData = {
           "form": "12-21",
           "trainer_rtf": "83",
           "score": 77.62,
-          "odds_fractional": "7/2",
-          "odds_decimal": 4.5
+          "odds_fractional": "10/3",
+          "odds_decimal": 4.333
         },
         {
           "horse_id": "hrs_42163282",
@@ -5175,8 +5175,8 @@ window.racecardsData = {
           "form": "-25420",
           "trainer_rtf": "44",
           "score": 61.845,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_47621553",
@@ -5297,8 +5297,8 @@ window.racecardsData = {
           "form": "31-591",
           "trainer_rtf": "44",
           "score": 54.72,
-          "odds_fractional": "11/2",
-          "odds_decimal": 6.5
+          "odds_fractional": "15/2",
+          "odds_decimal": 8.5
         },
         {
           "horse_id": "hrs_47985693",
@@ -5356,8 +5356,8 @@ window.racecardsData = {
           "form": "2-210",
           "trainer_rtf": "59",
           "score": 46.34,
-          "odds_fractional": "16/1",
-          "odds_decimal": 17.0
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         },
         {
           "horse_id": "hrs_45887632",
@@ -5415,8 +5415,8 @@ window.racecardsData = {
           "form": "-11253",
           "trainer_rtf": "38",
           "score": 72.19,
-          "odds_fractional": "25/1",
-          "odds_decimal": 26.0
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_42912499",
@@ -5474,8 +5474,8 @@ window.racecardsData = {
           "form": "5-1119",
           "trainer_rtf": "100",
           "score": 71.78,
-          "odds_fractional": "33/1",
-          "odds_decimal": 34.0
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_41305005",
@@ -5546,8 +5546,8 @@ window.racecardsData = {
           "form": "6-5328",
           "trainer_rtf": "55",
           "score": 60.89,
-          "odds_fractional": "40/1",
-          "odds_decimal": 41.0
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_50339765",
@@ -5618,8 +5618,8 @@ window.racecardsData = {
           "form": "1304",
           "trainer_rtf": "60",
           "score": 72.905,
-          "odds_fractional": "50/1",
-          "odds_decimal": 51.0
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         },
         {
           "horse_id": "hrs_41441911",
@@ -5675,8 +5675,8 @@ window.racecardsData = {
           "form": "2841-2",
           "trainer_rtf": "78",
           "score": 55.4,
-          "odds_fractional": "66/1",
-          "odds_decimal": 67.0
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_39960361",
@@ -5737,7 +5737,9 @@ window.racecardsData = {
           "last_run": "63",
           "form": "106-5",
           "trainer_rtf": "48",
-          "score": 25.435
+          "score": 25.435,
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         },
         {
           "horse_id": "hrs_43827007",
@@ -5792,7 +5794,9 @@ window.racecardsData = {
           "last_run": "71",
           "form": "310-30",
           "trainer_rtf": "20",
-          "score": 24.58
+          "score": 24.58,
+          "odds_fractional": "22/1",
+          "odds_decimal": 23.0
         },
         {
           "horse_id": "hrs_41628895",
@@ -5853,7 +5857,9 @@ window.racecardsData = {
           "last_run": "268",
           "form": "32122-",
           "trainer_rtf": "41",
-          "score": -201.11
+          "score": -201.11,
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         }
       ],
       "big_race": false,
@@ -5942,8 +5948,8 @@ window.racecardsData = {
           "form": "2-2614",
           "trainer_rtf": "59",
           "score": 68.125,
-          "odds_fractional": "10/3",
-          "odds_decimal": 4.333
+          "odds_fractional": "13/2",
+          "odds_decimal": 7.5
         },
         {
           "horse_id": "hrs_22006663",
@@ -6028,8 +6034,8 @@ window.racecardsData = {
           "form": "73-521",
           "trainer_rtf": "57",
           "score": 73.28,
-          "odds_fractional": "6/1",
-          "odds_decimal": 7.0
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_37096717",
@@ -6098,8 +6104,8 @@ window.racecardsData = {
           "form": "17-476",
           "trainer_rtf": "58",
           "score": 53.06,
-          "odds_fractional": "7/1",
-          "odds_decimal": 8.0
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_33830272",
@@ -6155,8 +6161,8 @@ window.racecardsData = {
           "form": "9320-0",
           "trainer_rtf": "44",
           "score": 60.165,
-          "odds_fractional": "15/2",
-          "odds_decimal": 8.5
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         },
         {
           "horse_id": "hrs_31550491",
@@ -6237,8 +6243,8 @@ window.racecardsData = {
           "form": "0-4209",
           "trainer_rtf": "67",
           "score": 53.76,
-          "odds_fractional": "8/1",
-          "odds_decimal": 9.0
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_31880793",
@@ -6300,8 +6306,8 @@ window.racecardsData = {
           "form": "64-301",
           "trainer_rtf": "53",
           "score": 61.02,
-          "odds_fractional": "10/1",
-          "odds_decimal": 11.0
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_51523815",
@@ -6357,8 +6363,8 @@ window.racecardsData = {
           "form": "125",
           "trainer_rtf": "43",
           "score": 55.75,
-          "odds_fractional": "12/1",
-          "odds_decimal": 13.0
+          "odds_fractional": "11/2",
+          "odds_decimal": 6.5
         },
         {
           "horse_id": "hrs_43131648",
@@ -6433,8 +6439,8 @@ window.racecardsData = {
           "form": "1-154",
           "trainer_rtf": "52",
           "score": 32.415,
-          "odds_fractional": "12/1",
-          "odds_decimal": 13.0
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_44043720",
@@ -6490,8 +6496,8 @@ window.racecardsData = {
           "form": "1-8217",
           "trainer_rtf": "56",
           "score": 62.73,
-          "odds_fractional": "16/1",
-          "odds_decimal": 17.0
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_49695107",
@@ -6553,8 +6559,8 @@ window.racecardsData = {
           "form": "163",
           "trainer_rtf": "60",
           "score": 50.325,
-          "odds_fractional": "22/1",
-          "odds_decimal": 23.0
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_43003331",
@@ -6610,8 +6616,8 @@ window.racecardsData = {
           "form": "-15292",
           "trainer_rtf": "49",
           "score": 64.515,
-          "odds_fractional": "25/1",
-          "odds_decimal": 26.0
+          "odds_fractional": "22/1",
+          "odds_decimal": 23.0
         },
         {
           "horse_id": "hrs_45193477",
@@ -6673,8 +6679,8 @@ window.racecardsData = {
           "form": "3-1112",
           "trainer_rtf": "54",
           "score": 55.815,
-          "odds_fractional": "33/1",
-          "odds_decimal": 34.0
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         }
       ],
       "big_race": false,
@@ -6763,8 +6769,8 @@ window.racecardsData = {
           "form": "4-222",
           "trainer_rtf": "63",
           "score": 60.57,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "5/6",
+          "odds_decimal": 1.833
         },
         {
           "horse_id": "hrs_51832270",
@@ -6820,8 +6826,8 @@ window.racecardsData = {
           "form": "12",
           "trainer_rtf": "67",
           "score": 13.99,
-          "odds_fractional": "11/2",
-          "odds_decimal": 6.5
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_52772237",
@@ -6877,8 +6883,8 @@ window.racecardsData = {
           "form": "93",
           "trainer_rtf": "72",
           "score": 35.585,
-          "odds_fractional": "13/2",
-          "odds_decimal": 7.5
+          "odds_fractional": "11/4",
+          "odds_decimal": 3.75
         },
         {
           "horse_id": "hrs_53269258",
@@ -6940,8 +6946,8 @@ window.racecardsData = {
           "form": "88",
           "trainer_rtf": "55",
           "score": 16.31,
-          "odds_fractional": "9/1",
-          "odds_decimal": 10.0
+          "odds_fractional": "100/1",
+          "odds_decimal": 101.0
         },
         {
           "horse_id": "hrs_54090862",
@@ -6997,8 +7003,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "52",
           "score": -62.5,
-          "odds_fractional": "9/1",
-          "odds_decimal": 10.0
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_52176621",
@@ -7054,8 +7060,8 @@ window.racecardsData = {
           "form": "67",
           "trainer_rtf": "20",
           "score": 13.905,
-          "odds_fractional": "9/1",
-          "odds_decimal": 10.0
+          "odds_fractional": "125/1",
+          "odds_decimal": 126.0
         }
       ],
       "big_race": false,
@@ -7146,8 +7152,8 @@ window.racecardsData = {
           "form": "3-61",
           "trainer_rtf": "54",
           "score": 58.585,
-          "odds_fractional": "5/6",
-          "odds_decimal": 1.833
+          "odds_fractional": "10/11",
+          "odds_decimal": 1.909
         },
         {
           "horse_id": "hrs_52329585",
@@ -7205,8 +7211,8 @@ window.racecardsData = {
           "form": "921",
           "trainer_rtf": "72",
           "score": 57.94,
-          "odds_fractional": "11/4",
-          "odds_decimal": 3.75
+          "odds_fractional": "7/2",
+          "odds_decimal": 4.5
         },
         {
           "horse_id": "hrs_52418030",
@@ -7264,8 +7270,8 @@ window.racecardsData = {
           "form": "421",
           "trainer_rtf": "49",
           "score": 50.625,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_44873745",
@@ -7323,8 +7329,8 @@ window.racecardsData = {
           "form": "-11137",
           "trainer_rtf": "58",
           "score": 45.925,
-          "odds_fractional": "12/1",
-          "odds_decimal": 13.0
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_46295767",
@@ -7380,8 +7386,8 @@ window.racecardsData = {
           "form": "92-238",
           "trainer_rtf": "67",
           "score": 53.61,
-          "odds_fractional": "100/1",
-          "odds_decimal": 101.0
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_51866374",
@@ -7437,8 +7443,8 @@ window.racecardsData = {
           "form": "433",
           "trainer_rtf": "56",
           "score": 52.12,
-          "odds_fractional": "125/1",
-          "odds_decimal": 126.0
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         }
       ],
       "big_race": false,
@@ -7527,8 +7533,8 @@ window.racecardsData = {
           "form": "70-250",
           "trainer_rtf": "50",
           "score": 185.1,
-          "odds_fractional": "10/11",
-          "odds_decimal": 1.909
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_42326515",
@@ -7611,8 +7617,8 @@ window.racecardsData = {
           "form": "171-96",
           "trainer_rtf": "55",
           "score": 109.3,
-          "odds_fractional": "7/2",
-          "odds_decimal": 4.5
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_44481318",
@@ -7687,8 +7693,8 @@ window.racecardsData = {
           "form": "313-9",
           "trainer_rtf": "45",
           "score": 160.5,
-          "odds_fractional": "9/1",
-          "odds_decimal": 10.0
+          "odds_fractional": "11/1",
+          "odds_decimal": 12.0
         },
         {
           "horse_id": "hrs_39190424",
@@ -7765,8 +7771,8 @@ window.racecardsData = {
           "form": "50-130",
           "trainer_rtf": "28",
           "score": 152.7,
-          "odds_fractional": "10/1",
-          "odds_decimal": 11.0
+          "odds_fractional": "17/2",
+          "odds_decimal": 9.5
         },
         {
           "horse_id": "hrs_412694856",
@@ -7837,8 +7843,8 @@ window.racecardsData = {
           "form": "7-5260",
           "trainer_rtf": "43",
           "score": 152.2,
-          "odds_fractional": "12/1",
-          "odds_decimal": 13.0
+          "odds_fractional": "7/2",
+          "odds_decimal": 4.5
         },
         {
           "horse_id": "hrs_47065004",
@@ -7894,8 +7900,8 @@ window.racecardsData = {
           "form": "12-19",
           "trainer_rtf": "72",
           "score": 214.2,
-          "odds_fractional": "28/1",
-          "odds_decimal": 29.0
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_40225717",
@@ -7969,7 +7975,9 @@ window.racecardsData = {
           "last_run": "23",
           "form": "-26220",
           "trainer_rtf": "67",
-          "score": 203.1
+          "score": 203.1,
+          "odds_fractional": "17/2",
+          "odds_decimal": 9.5
         },
         {
           "horse_id": "hrs_46109406",
@@ -8044,7 +8052,9 @@ window.racecardsData = {
           "last_run": "56",
           "form": "1-12",
           "trainer_rtf": "41",
-          "score": 186.3
+          "score": 186.3,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_43228213",
@@ -8114,7 +8124,9 @@ window.racecardsData = {
           "last_run": "9",
           "form": "0-0205",
           "trainer_rtf": "36",
-          "score": 139.6
+          "score": 139.6,
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_40819702",
@@ -8176,7 +8188,9 @@ window.racecardsData = {
           "last_run": "22",
           "form": "823-02",
           "trainer_rtf": "54",
-          "score": 142.9
+          "score": 142.9,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_40786130",
@@ -8245,7 +8259,9 @@ window.racecardsData = {
           "last_run": "9",
           "form": "29-085",
           "trainer_rtf": "54",
-          "score": 150.1
+          "score": 150.1,
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         }
       ],
       "big_race": false,
@@ -8346,8 +8362,8 @@ window.racecardsData = {
           "form": "455-22",
           "trainer_rtf": "59",
           "score": 51.055,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         },
         {
           "horse_id": "hrs_35742434",
@@ -8427,8 +8443,8 @@ window.racecardsData = {
           "form": "331/25",
           "trainer_rtf": "67",
           "score": 44.075,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "11/1",
+          "odds_decimal": 12.0
         },
         {
           "horse_id": "hrs_33036024",
@@ -8501,8 +8517,8 @@ window.racecardsData = {
           "form": "353",
           "trainer_rtf": "38",
           "score": 34.605,
-          "odds_fractional": "7/2",
-          "odds_decimal": 4.5
+          "odds_fractional": "6/1",
+          "odds_decimal": 7.0
         },
         {
           "horse_id": "hrs_21678881",
@@ -8598,8 +8614,8 @@ window.racecardsData = {
           "form": "423368",
           "trainer_rtf": "100",
           "score": 45.315,
-          "odds_fractional": "17/2",
-          "odds_decimal": 9.5
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_34845923",
@@ -8681,8 +8697,8 @@ window.racecardsData = {
           "form": "-42421",
           "trainer_rtf": "50",
           "score": 50.85,
-          "odds_fractional": "17/2",
-          "odds_decimal": 9.5
+          "odds_fractional": "5/1",
+          "odds_decimal": 6.0
         },
         {
           "horse_id": "hrs_36023456",
@@ -8756,8 +8772,8 @@ window.racecardsData = {
           "form": "25-811",
           "trainer_rtf": "43",
           "score": 44.805,
-          "odds_fractional": "9/1",
-          "odds_decimal": 10.0
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_18981620",
@@ -8853,8 +8869,8 @@ window.racecardsData = {
           "form": "875230",
           "trainer_rtf": "57",
           "score": 49.965,
-          "odds_fractional": "9/1",
-          "odds_decimal": 10.0
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_41228866",
@@ -8931,8 +8947,8 @@ window.racecardsData = {
           "form": "942488",
           "trainer_rtf": "38",
           "score": 61.42,
-          "odds_fractional": "11/1",
-          "odds_decimal": 12.0
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_34360753",
@@ -9007,8 +9023,8 @@ window.racecardsData = {
           "form": "253123",
           "trainer_rtf": "33",
           "score": 53.705,
-          "odds_fractional": "14/1",
-          "odds_decimal": 15.0
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_35257936",
@@ -9067,8 +9083,8 @@ window.racecardsData = {
           "form": "06-117",
           "trainer_rtf": "57",
           "score": 53.105,
-          "odds_fractional": "25/1",
-          "odds_decimal": 26.0
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_22634024",
@@ -9165,8 +9181,8 @@ window.racecardsData = {
           "form": "5/65/1",
           "trainer_rtf": "50",
           "score": 41.91,
-          "odds_fractional": "33/1",
-          "odds_decimal": 34.0
+          "odds_fractional": "11/1",
+          "odds_decimal": 12.0
         },
         {
           "horse_id": "hrs_30487184",
@@ -9245,7 +9261,9 @@ window.racecardsData = {
           "last_run": "17",
           "form": "P23416",
           "trainer_rtf": "67",
-          "score": 42.465
+          "score": 42.465,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_41441897",
@@ -9306,7 +9324,9 @@ window.racecardsData = {
           "last_run": "15",
           "form": "414536",
           "trainer_rtf": "50",
-          "score": 39.39
+          "score": 39.39,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_30656836",
@@ -9382,7 +9402,9 @@ window.racecardsData = {
           "last_run": "8",
           "form": "974325",
           "trainer_rtf": "51",
-          "score": 57.805
+          "score": 57.805,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         }
       ],
       "big_race": false,
@@ -9528,8 +9550,8 @@ window.racecardsData = {
           "form": "74-224",
           "trainer_rtf": "50",
           "score": 78.51,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "6/1",
+          "odds_decimal": 7.0
         },
         {
           "horse_id": "hrs_21395059",
@@ -9613,8 +9635,8 @@ window.racecardsData = {
           "form": "4321PF",
           "trainer_rtf": "52",
           "score": 73.895,
-          "odds_fractional": "5/1",
-          "odds_decimal": 6.0
+          "odds_fractional": "5/2",
+          "odds_decimal": 3.5
         },
         {
           "horse_id": "hrs_35336021",
@@ -9677,8 +9699,8 @@ window.racecardsData = {
           "form": "3-1582",
           "trainer_rtf": "25",
           "score": 53.645,
-          "odds_fractional": "6/1",
-          "odds_decimal": 7.0
+          "odds_fractional": "17/2",
+          "odds_decimal": 9.5
         },
         {
           "horse_id": "hrs_28875301",
@@ -9757,8 +9779,8 @@ window.racecardsData = {
           "form": "PFP-31",
           "trainer_rtf": "",
           "score": 53.18,
-          "odds_fractional": "8/1",
-          "odds_decimal": 9.0
+          "odds_fractional": "9/4",
+          "odds_decimal": 3.25
         },
         {
           "horse_id": "hrs_21212513",
@@ -9826,8 +9848,8 @@ window.racecardsData = {
           "form": "F734-3",
           "trainer_rtf": "",
           "score": 19.11,
-          "odds_fractional": "11/1",
-          "odds_decimal": 12.0
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_29312843",
@@ -9899,8 +9921,8 @@ window.racecardsData = {
           "form": "/12-24",
           "trainer_rtf": "",
           "score": 47.015,
-          "odds_fractional": "11/1",
-          "odds_decimal": 12.0
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         }
       ],
       "big_race": false,
@@ -10000,7 +10022,9 @@ window.racecardsData = {
           "last_run": "18",
           "form": "3F7-14",
           "trainer_rtf": "100",
-          "score": 96.44
+          "score": 96.44,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_35150591",
@@ -10059,7 +10083,9 @@ window.racecardsData = {
           "last_run": "43",
           "form": "12P-54",
           "trainer_rtf": "42",
-          "score": 32.68
+          "score": 32.68,
+          "odds_fractional": "15/2",
+          "odds_decimal": 8.5
         },
         {
           "horse_id": "hrs_6258686",
@@ -10182,7 +10208,9 @@ window.racecardsData = {
           "last_run": "9",
           "form": "454-11",
           "trainer_rtf": "67",
-          "score": 101.45
+          "score": 101.45,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_37052330",
@@ -10273,7 +10301,9 @@ window.racecardsData = {
           "last_run": "30",
           "form": "P43-33",
           "trainer_rtf": "",
-          "score": 59.865
+          "score": 59.865,
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         },
         {
           "horse_id": "hrs_36062061",
@@ -10342,7 +10372,9 @@ window.racecardsData = {
           "last_run": "26",
           "form": "69-421",
           "trainer_rtf": "",
-          "score": 61.255
+          "score": 61.255,
+          "odds_fractional": "15/8",
+          "odds_decimal": 2.875
         },
         {
           "horse_id": "hrs_17310629",
@@ -10453,7 +10485,9 @@ window.racecardsData = {
           "last_run": "389",
           "form": "6/P3P-",
           "trainer_rtf": "",
-          "score": -319.905
+          "score": -319.905,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_25251947",
@@ -10545,7 +10579,9 @@ window.racecardsData = {
           "last_run": "31 (13F)",
           "form": "3906-4",
           "trainer_rtf": "47",
-          "score": -6.48
+          "score": -6.48,
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         }
       ],
       "big_race": false,
@@ -10670,7 +10706,9 @@ window.racecardsData = {
           "last_run": "12",
           "form": "2-4324",
           "trainer_rtf": "43",
-          "score": 71.81
+          "score": 71.81,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_38855698",
@@ -10752,7 +10790,9 @@ window.racecardsData = {
           "last_run": "83",
           "form": "702P4-",
           "trainer_rtf": "",
-          "score": -38.35
+          "score": -38.35,
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_21276087",
@@ -10898,7 +10938,9 @@ window.racecardsData = {
           "last_run": "19",
           "form": "2PP-23",
           "trainer_rtf": "100",
-          "score": 73.95
+          "score": 73.95,
+          "odds_fractional": "5/2",
+          "odds_decimal": 3.5
         },
         {
           "horse_id": "hrs_37701545",
@@ -10965,7 +11007,9 @@ window.racecardsData = {
           "last_run": "9",
           "form": "PU9-27",
           "trainer_rtf": "33",
-          "score": 59.845
+          "score": 59.845,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_17757558",
@@ -11050,7 +11094,9 @@ window.racecardsData = {
           "last_run": "34",
           "form": "1022-2",
           "trainer_rtf": "",
-          "score": 60.145
+          "score": 60.145,
+          "odds_fractional": "9/4",
+          "odds_decimal": 3.25
         }
       ],
       "big_race": false,
@@ -11150,7 +11196,9 @@ window.racecardsData = {
           "last_run": "36",
           "form": "1",
           "trainer_rtf": "",
-          "score": 29.365
+          "score": 29.365,
+          "odds_fractional": "8/11",
+          "odds_decimal": 1.727
         },
         {
           "horse_id": "hrs_44384578",
@@ -11205,7 +11253,9 @@ window.racecardsData = {
           "last_run": "19",
           "form": "2",
           "trainer_rtf": "57",
-          "score": 51.025
+          "score": 51.025,
+          "odds_fractional": "7/2",
+          "odds_decimal": 4.5
         },
         {
           "horse_id": "hrs_39059797",
@@ -11260,7 +11310,9 @@ window.racecardsData = {
           "last_run": "(13F)",
           "form": "",
           "trainer_rtf": "43",
-          "score": -65.3
+          "score": -65.3,
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_43508521",
@@ -11315,7 +11367,9 @@ window.racecardsData = {
           "last_run": "(76F)",
           "form": "",
           "trainer_rtf": "38",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "22/1",
+          "odds_decimal": 23.0
         },
         {
           "horse_id": "hrs_51491398",
@@ -11387,7 +11441,9 @@ window.racecardsData = {
           "last_run": "21",
           "form": "22-P52",
           "trainer_rtf": "",
-          "score": 43.52
+          "score": 43.52,
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         },
         {
           "horse_id": "hrs_45568474",
@@ -11454,7 +11510,9 @@ window.racecardsData = {
           "last_run": "(23F)",
           "form": "",
           "trainer_rtf": "67",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_412692931",
@@ -11509,7 +11567,9 @@ window.racecardsData = {
           "last_run": "(13F)",
           "form": "",
           "trainer_rtf": "33",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_45534811",
@@ -11576,7 +11636,9 @@ window.racecardsData = {
           "last_run": "30",
           "form": "U",
           "trainer_rtf": "",
-          "score": -3.125
+          "score": -3.125,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         }
       ],
       "big_race": false,
@@ -11668,7 +11730,9 @@ window.racecardsData = {
           "last_run": "18",
           "form": "8-P7",
           "trainer_rtf": "",
-          "score": -1.085
+          "score": -1.085,
+          "odds_fractional": "300/1",
+          "odds_decimal": 301.0
         },
         {
           "horse_id": "hrs_39826850",
@@ -11728,7 +11792,9 @@ window.racecardsData = {
           "last_run": "29",
           "form": "2/7-35",
           "trainer_rtf": "38",
-          "score": 43.53
+          "score": 43.53,
+          "odds_fractional": "11/2",
+          "odds_decimal": 6.5
         },
         {
           "horse_id": "hrs_41052410",
@@ -11790,7 +11856,9 @@ window.racecardsData = {
           "last_run": "64",
           "form": "3-5",
           "trainer_rtf": "42",
-          "score": -34.4
+          "score": -34.4,
+          "odds_fractional": "3/1",
+          "odds_decimal": 4.0
         },
         {
           "horse_id": "hrs_41189946",
@@ -11845,7 +11913,9 @@ window.racecardsData = {
           "last_run": "(65P)",
           "form": "PUP0-3",
           "trainer_rtf": "",
-          "score": -71.15
+          "score": -71.15,
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_46046014",
@@ -11906,7 +11976,9 @@ window.racecardsData = {
           "last_run": "12",
           "form": "6-432",
           "trainer_rtf": "100",
-          "score": 76.985
+          "score": 76.985,
+          "odds_fractional": "8/13",
+          "odds_decimal": 1.615
         }
       ],
       "big_race": false,
@@ -12005,7 +12077,9 @@ window.racecardsData = {
           "last_run": "14",
           "form": "15-211",
           "trainer_rtf": "52",
-          "score": 83.055
+          "score": 83.055,
+          "odds_fractional": "13/8",
+          "odds_decimal": 2.625
         },
         {
           "horse_id": "hrs_21938441",
@@ -12094,7 +12168,9 @@ window.racecardsData = {
           "last_run": "14",
           "form": "25-112",
           "trainer_rtf": "100",
-          "score": 75.005
+          "score": 75.005,
+          "odds_fractional": "5/2",
+          "odds_decimal": 3.5
         },
         {
           "horse_id": "hrs_31451133",
@@ -12168,7 +12244,9 @@ window.racecardsData = {
           "last_run": "39",
           "form": "271-14",
           "trainer_rtf": "67",
-          "score": 60.99
+          "score": 60.99,
+          "odds_fractional": "15/4",
+          "odds_decimal": 4.75
         },
         {
           "horse_id": "hrs_8865976",
@@ -12277,7 +12355,9 @@ window.racecardsData = {
           "last_run": "211 (21F)",
           "form": "43656-",
           "trainer_rtf": "27",
-          "score": 2.55
+          "score": 2.55,
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         }
       ],
       "big_race": false,
@@ -12394,7 +12474,9 @@ window.racecardsData = {
           "last_run": "11",
           "form": "P-2321",
           "trainer_rtf": "51",
-          "score": 71.095
+          "score": 71.095,
+          "odds_fractional": "10/11",
+          "odds_decimal": 1.909
         },
         {
           "horse_id": "hrs_34456562",
@@ -12460,7 +12542,9 @@ window.racecardsData = {
           "last_run": "49",
           "form": "772-22",
           "trainer_rtf": "33",
-          "score": 34.495
+          "score": 34.495,
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_32982411",
@@ -12537,7 +12621,9 @@ window.racecardsData = {
           "last_run": "54",
           "form": "344P-2",
           "trainer_rtf": "75",
-          "score": 31.19
+          "score": 31.19,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_37520959",
@@ -12623,7 +12709,9 @@ window.racecardsData = {
           "last_run": "80",
           "form": "7663P-",
           "trainer_rtf": "42",
-          "score": 0.845
+          "score": 0.845,
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_21673974",
@@ -12720,7 +12808,9 @@ window.racecardsData = {
           "last_run": "49",
           "form": "0/26-P",
           "trainer_rtf": "",
-          "score": 8.74
+          "score": 8.74,
+          "odds_fractional": "66/1",
+          "odds_decimal": 67.0
         },
         {
           "horse_id": "hrs_22856365",
@@ -12775,7 +12865,9 @@ window.racecardsData = {
           "last_run": "357",
           "form": "P6/6P-",
           "trainer_rtf": "",
-          "score": -306.46
+          "score": -306.46,
+          "odds_fractional": "80/1",
+          "odds_decimal": 81.0
         },
         {
           "horse_id": "hrs_38002496",
@@ -12830,7 +12922,9 @@ window.racecardsData = {
           "last_run": "235",
           "form": "5P7FP-",
           "trainer_rtf": "100",
-          "score": -203.76
+          "score": -203.76,
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         }
       ],
       "big_race": false,
@@ -12916,7 +13010,9 @@ window.racecardsData = {
           "last_run": "64",
           "form": "6",
           "trainer_rtf": "33",
-          "score": -18.635
+          "score": -18.635,
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         },
         {
           "horse_id": "hrs_54432392",
@@ -12977,7 +13073,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "33",
-          "score": -69.1
+          "score": -69.1,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_54712413",
@@ -13032,7 +13130,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "58",
-          "score": -63.5
+          "score": -63.5,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_54712385",
@@ -13087,7 +13187,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "50",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "35/1",
+          "odds_decimal": 36.0
         },
         {
           "horse_id": "hrs_54149907",
@@ -13142,7 +13244,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "49",
-          "score": -67.3
+          "score": -67.3,
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         },
         {
           "horse_id": "hrs_53081217",
@@ -13203,7 +13307,9 @@ window.racecardsData = {
           "last_run": "15",
           "form": "08",
           "trainer_rtf": "70",
-          "score": 42.82
+          "score": 42.82,
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         },
         {
           "horse_id": "hrs_54712350",
@@ -13258,7 +13364,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "50",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_54304607",
@@ -13313,7 +13421,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "33",
-          "score": -66.9
+          "score": -66.9,
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_54432420",
@@ -13429,7 +13539,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "49",
-          "score": -67.3
+          "score": -67.3,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_54712406",
@@ -13484,7 +13596,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "25",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "35/1",
+          "odds_decimal": 36.0
         },
         {
           "horse_id": "hrs_51557842",
@@ -13539,7 +13653,9 @@ window.racecardsData = {
           "last_run": "76",
           "form": "64",
           "trainer_rtf": "33",
-          "score": -24.435
+          "score": -24.435,
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_54712378",
@@ -13594,7 +13710,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "42",
-          "score": -62.5
+          "score": -62.5,
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_54304621",
@@ -13649,7 +13767,9 @@ window.racecardsData = {
           "last_run": "10",
           "form": "2",
           "trainer_rtf": "42",
-          "score": 52.19
+          "score": 52.19,
+          "odds_fractional": "11/8",
+          "odds_decimal": 2.375
         },
         {
           "horse_id": "hrs_54712371",
@@ -13704,7 +13824,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "71",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         },
         {
           "horse_id": "hrs_53081266",
@@ -13759,7 +13881,9 @@ window.racecardsData = {
           "last_run": "30",
           "form": "06",
           "trainer_rtf": "22",
-          "score": 28.835
+          "score": 28.835,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_54712420",
@@ -13814,7 +13938,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "50",
-          "score": -66.1
+          "score": -66.1,
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         },
         {
           "horse_id": "hrs_52962742",
@@ -13869,7 +13995,9 @@ window.racecardsData = {
           "last_run": "23",
           "form": "25",
           "trainer_rtf": "25",
-          "score": 32.245
+          "score": 32.245,
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         }
       ],
       "big_race": false,
@@ -14013,8 +14141,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "33",
           "score": -74.3,
-          "odds_fractional": "40/1",
-          "odds_decimal": 41.0
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         },
         {
           "horse_id": "hrs_54712427",
@@ -14070,8 +14198,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "33",
           "score": -74.3,
-          "odds_fractional": "12/1",
-          "odds_decimal": 13.0
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_52677331",
@@ -14127,8 +14255,8 @@ window.racecardsData = {
           "form": "520",
           "trainer_rtf": "61",
           "score": 42.63,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         },
         {
           "horse_id": "hrs_52897159",
@@ -14190,8 +14318,8 @@ window.racecardsData = {
           "form": "23",
           "trainer_rtf": "70",
           "score": 56.245,
-          "odds_fractional": "5/2",
-          "odds_decimal": 3.5
+          "odds_fractional": "11/4",
+          "odds_decimal": 3.75
         },
         {
           "horse_id": "hrs_42005383",
@@ -14253,8 +14381,8 @@ window.racecardsData = {
           "form": "22-764",
           "trainer_rtf": "46",
           "score": 49.1,
-          "odds_fractional": "7/1",
-          "odds_decimal": 8.0
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_44721936",
@@ -14367,8 +14495,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "70",
           "score": -61.5,
-          "odds_fractional": "16/1",
-          "odds_decimal": 17.0
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_46944639",
@@ -14595,8 +14723,8 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "57",
           "score": -59.3,
-          "odds_fractional": "10/1",
-          "odds_decimal": 11.0
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         }
       ],
       "big_race": false,
@@ -14695,8 +14823,8 @@ window.racecardsData = {
           "form": "214929",
           "trainer_rtf": "50",
           "score": 16.47,
-          "odds_fractional": "15/2",
-          "odds_decimal": 8.5
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_42615965",
@@ -14752,8 +14880,8 @@ window.racecardsData = {
           "form": "36-851",
           "trainer_rtf": "49",
           "score": 51.015,
-          "odds_fractional": "7/2",
-          "odds_decimal": 4.5
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_41346249",
@@ -14809,8 +14937,8 @@ window.racecardsData = {
           "form": "46-454",
           "trainer_rtf": "58",
           "score": 51.9,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_44232727",
@@ -14923,8 +15051,8 @@ window.racecardsData = {
           "form": "040-00",
           "trainer_rtf": "50",
           "score": 2.475,
-          "odds_fractional": "40/1",
-          "odds_decimal": 41.0
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         },
         {
           "horse_id": "hrs_46013667",
@@ -14980,8 +15108,8 @@ window.racecardsData = {
           "form": "8-6043",
           "trainer_rtf": "",
           "score": 37.44,
-          "odds_fractional": "5/1",
-          "odds_decimal": 6.0
+          "odds_fractional": "11/2",
+          "odds_decimal": 6.5
         },
         {
           "horse_id": "hrs_412692735",
@@ -15043,8 +15171,8 @@ window.racecardsData = {
           "form": "720-34",
           "trainer_rtf": "25",
           "score": 41.385,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "5/1",
+          "odds_decimal": 6.0
         },
         {
           "horse_id": "hrs_43447831",
@@ -15102,8 +15230,8 @@ window.racecardsData = {
           "form": "960-6",
           "trainer_rtf": "50",
           "score": -14.19,
-          "odds_fractional": "11/2",
-          "odds_decimal": 6.5
+          "odds_fractional": "6/1",
+          "odds_decimal": 7.0
         },
         {
           "horse_id": "hrs_43984059",
@@ -15165,8 +15293,8 @@ window.racecardsData = {
           "form": "00-000",
           "trainer_rtf": "100",
           "score": 37.375,
-          "odds_fractional": "40/1",
-          "odds_decimal": 41.0
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         }
       ],
       "big_race": false,
@@ -15256,8 +15384,8 @@ window.racecardsData = {
           "form": "1-2253",
           "trainer_rtf": "",
           "score": 45.85,
-          "odds_fractional": "10/3",
-          "odds_decimal": 4.33
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_52451700",
@@ -15313,8 +15441,8 @@ window.racecardsData = {
           "form": "368",
           "trainer_rtf": "70",
           "score": 53.445,
-          "odds_fractional": "11/2",
-          "odds_decimal": 6.5
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_47985770",
@@ -15372,8 +15500,8 @@ window.racecardsData = {
           "form": "335352",
           "trainer_rtf": "75",
           "score": 62.22,
-          "odds_fractional": "4/1",
-          "odds_decimal": 5.0
+          "odds_fractional": "11/2",
+          "odds_decimal": 6.5
         },
         {
           "horse_id": "hrs_31851414",
@@ -15556,8 +15684,8 @@ window.racecardsData = {
           "form": "590140",
           "trainer_rtf": "21",
           "score": 48.56,
-          "odds_fractional": "15/2",
-          "odds_decimal": 8.5
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_7661822",
@@ -15775,8 +15903,8 @@ window.racecardsData = {
           "form": "336-70",
           "trainer_rtf": "67",
           "score": 36.93,
-          "odds_fractional": "16/1",
-          "odds_decimal": 17.0
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_37275329",
@@ -15848,8 +15976,8 @@ window.racecardsData = {
           "form": "098100",
           "trainer_rtf": "36",
           "score": 44.185,
-          "odds_fractional": "14/1",
-          "odds_decimal": 15.0
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_412692777",
@@ -15905,8 +16033,8 @@ window.racecardsData = {
           "form": "3990-7",
           "trainer_rtf": "",
           "score": 38.615,
-          "odds_fractional": "14/1",
-          "odds_decimal": 15.0
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_24854277",
@@ -15991,8 +16119,8 @@ window.racecardsData = {
           "form": "0-6089",
           "trainer_rtf": "31",
           "score": 38.455,
-          "odds_fractional": "33/1",
-          "odds_decimal": 34.0
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_39259892",
@@ -16119,8 +16247,8 @@ window.racecardsData = {
           "form": "5-4407",
           "trainer_rtf": "",
           "score": 35.38,
-          "odds_fractional": "33/1",
-          "odds_decimal": 34.0
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         }
       ],
       "big_race": false,
@@ -16220,7 +16348,7 @@ window.racecardsData = {
           "trainer_rtf": "57",
           "score": 77.91,
           "odds_fractional": "8/13",
-          "odds_decimal": 1.62
+          "odds_decimal": 1.615
         },
         {
           "horse_id": "hrs_51766666",
@@ -16334,7 +16462,7 @@ window.racecardsData = {
           "trainer_rtf": "65",
           "score": 70.905,
           "odds_fractional": "15/8",
-          "odds_decimal": 2.88
+          "odds_decimal": 2.875
         },
         {
           "horse_id": "hrs_45413151",
@@ -16390,8 +16518,8 @@ window.racecardsData = {
           "form": "000-08",
           "trainer_rtf": "17",
           "score": 35.165,
-          "odds_fractional": "66/1",
-          "odds_decimal": 67.0
+          "odds_fractional": "80/1",
+          "odds_decimal": 81.0
         }
       ],
       "big_race": false,
@@ -16484,8 +16612,8 @@ window.racecardsData = {
           "form": "21-121",
           "trainer_rtf": "55",
           "score": 60.325,
-          "odds_fractional": "6/4",
-          "odds_decimal": 2.5
+          "odds_fractional": "15/8",
+          "odds_decimal": 2.875
         },
         {
           "horse_id": "hrs_44540741",
@@ -16541,8 +16669,8 @@ window.racecardsData = {
           "form": "26-552",
           "trainer_rtf": "70",
           "score": 54.47,
-          "odds_fractional": "9/4",
-          "odds_decimal": 3.25
+          "odds_fractional": "2/1",
+          "odds_decimal": 3.0
         },
         {
           "horse_id": "hrs_29621578",
@@ -16610,8 +16738,8 @@ window.racecardsData = {
           "form": "-32502",
           "trainer_rtf": "29",
           "score": 46.18,
-          "odds_fractional": "11/2",
-          "odds_decimal": 6.5
+          "odds_fractional": "5/1",
+          "odds_decimal": 6.0
         },
         {
           "horse_id": "hrs_412712174",
@@ -16667,8 +16795,8 @@ window.racecardsData = {
           "form": "0-8922",
           "trainer_rtf": "33",
           "score": 48.685,
-          "odds_fractional": "5/1",
-          "odds_decimal": 6.0
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_26036997",
@@ -16765,8 +16893,8 @@ window.racecardsData = {
           "form": "5-0510",
           "trainer_rtf": "56",
           "score": 43.07,
-          "odds_fractional": "10/1",
-          "odds_decimal": 11.0
+          "odds_fractional": "30/1",
+          "odds_decimal": 31.0
         }
       ],
       "big_race": false,
@@ -16866,8 +16994,8 @@ window.racecardsData = {
           "form": "129006",
           "trainer_rtf": "61",
           "score": 46.565,
-          "odds_fractional": "9/1",
-          "odds_decimal": 10.0
+          "odds_fractional": "11/2",
+          "odds_decimal": 6.5
         },
         {
           "horse_id": "hrs_35979475",
@@ -17014,8 +17142,8 @@ window.racecardsData = {
           "form": "-32224",
           "trainer_rtf": "31",
           "score": 28.7,
-          "odds_fractional": "9/2",
-          "odds_decimal": 5.5
+          "odds_fractional": "5/1",
+          "odds_decimal": 6.0
         },
         {
           "horse_id": "hrs_51273215",
@@ -17128,8 +17256,8 @@ window.racecardsData = {
           "form": "22523-",
           "trainer_rtf": "25",
           "score": -168.42,
-          "odds_fractional": "7/1",
-          "odds_decimal": 8.0
+          "odds_fractional": "13/2",
+          "odds_decimal": 7.5
         },
         {
           "horse_id": "hrs_41051815",
@@ -17191,8 +17319,8 @@ window.racecardsData = {
           "form": "028041",
           "trainer_rtf": "86",
           "score": 54.58,
-          "odds_fractional": "6/1",
-          "odds_decimal": 7.0
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_47282347",
@@ -17256,8 +17384,8 @@ window.racecardsData = {
           "form": "8-7032",
           "trainer_rtf": "70",
           "score": 43.88,
-          "odds_fractional": "5/2",
-          "odds_decimal": 3.5
+          "odds_fractional": "11/4",
+          "odds_decimal": 3.75
         },
         {
           "horse_id": "hrs_29509788",
@@ -17597,7 +17725,9 @@ window.racecardsData = {
           "last_run": "9",
           "form": "-53483",
           "trainer_rtf": "17",
-          "score": 32.965
+          "score": 32.965,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_36738583",
@@ -17765,7 +17895,9 @@ window.racecardsData = {
           "last_run": "64 (38F)",
           "form": "2",
           "trainer_rtf": "61",
-          "score": -12.48
+          "score": -12.48,
+          "odds_fractional": "11/8",
+          "odds_decimal": 2.375
         },
         {
           "horse_id": "hrs_36614963",
@@ -17832,7 +17964,9 @@ window.racecardsData = {
           "last_run": "35 (15F)",
           "form": "03",
           "trainer_rtf": "25",
-          "score": -19.215
+          "score": -19.215,
+          "odds_fractional": "11/4",
+          "odds_decimal": 3.75
         },
         {
           "horse_id": "hrs_36665132",
@@ -17904,7 +18038,9 @@ window.racecardsData = {
           "last_run": "(20F)",
           "form": "",
           "trainer_rtf": "71",
-          "score": -65.5
+          "score": -65.5,
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         },
         {
           "horse_id": "hrs_50433075",
@@ -17959,7 +18095,9 @@ window.racecardsData = {
           "last_run": "37",
           "form": "5P3-7",
           "trainer_rtf": "15",
-          "score": 44.345
+          "score": 44.345,
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_50875328",
@@ -18020,7 +18158,9 @@ window.racecardsData = {
           "last_run": "(32F)",
           "form": "",
           "trainer_rtf": "25",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_50906268",
@@ -18075,7 +18215,9 @@ window.racecardsData = {
           "last_run": "6",
           "form": "U4-250",
           "trainer_rtf": "33",
-          "score": 19.685
+          "score": 19.685,
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_51124129",
@@ -18130,7 +18272,9 @@ window.racecardsData = {
           "last_run": "(91P)",
           "form": "U3-",
           "trainer_rtf": "25",
-          "score": -67.15
+          "score": -67.15,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_53504017",
@@ -18185,7 +18329,9 @@ window.racecardsData = {
           "last_run": "35",
           "form": "P",
           "trainer_rtf": "60",
-          "score": 5.3
+          "score": 5.3,
+          "odds_fractional": "66/1",
+          "odds_decimal": 67.0
         },
         {
           "horse_id": "hrs_51124262",
@@ -18240,7 +18386,9 @@ window.racecardsData = {
           "last_run": "(50P)",
           "form": "P-4",
           "trainer_rtf": "",
-          "score": -72.8
+          "score": -72.8,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_53539668",
@@ -18295,7 +18443,9 @@ window.racecardsData = {
           "last_run": "35",
           "form": "9",
           "trainer_rtf": "46",
-          "score": 38.15
+          "score": 38.15,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_45856020",
@@ -18362,7 +18512,9 @@ window.racecardsData = {
           "last_run": "255",
           "form": "27-",
           "trainer_rtf": "50",
-          "score": -234.95
+          "score": -234.95,
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         },
         {
           "horse_id": "hrs_42041496",
@@ -18417,7 +18569,9 @@ window.racecardsData = {
           "last_run": "42",
           "form": "8",
           "trainer_rtf": "38",
-          "score": 24.39
+          "score": 24.39,
+          "odds_fractional": "80/1",
+          "odds_decimal": 81.0
         },
         {
           "horse_id": "hrs_52677149",
@@ -18478,7 +18632,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "87O",
           "trainer_rtf": "25",
-          "score": 38.085
+          "score": 38.085,
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_53602108",
@@ -18545,7 +18701,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "0",
           "trainer_rtf": "25",
-          "score": -5.51
+          "score": -5.51,
+          "odds_fractional": "66/1",
+          "odds_decimal": 67.0
         }
       ],
       "big_race": false,
@@ -18631,7 +18789,9 @@ window.racecardsData = {
           "last_run": "61",
           "form": "00PP-P",
           "trainer_rtf": "50",
-          "score": 8.565
+          "score": 8.565,
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         },
         {
           "horse_id": "hrs_43227954",
@@ -18686,7 +18846,9 @@ window.racecardsData = {
           "last_run": "6",
           "form": "0-F",
           "trainer_rtf": "",
-          "score": -0.545
+          "score": -0.545,
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         },
         {
           "horse_id": "hrs_43227975",
@@ -18741,7 +18903,9 @@ window.racecardsData = {
           "last_run": "60",
           "form": "0-6",
           "trainer_rtf": "",
-          "score": -31.85
+          "score": -31.85,
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         },
         {
           "horse_id": "hrs_52205041",
@@ -18796,7 +18960,9 @@ window.racecardsData = {
           "last_run": "9",
           "form": "0-868",
           "trainer_rtf": "44",
-          "score": 39.86
+          "score": 39.86,
+          "odds_fractional": "15/2",
+          "odds_decimal": 8.5
         },
         {
           "horse_id": "hrs_47345277",
@@ -18863,7 +19029,9 @@ window.racecardsData = {
           "last_run": "101",
           "form": "PP77-",
           "trainer_rtf": "33",
-          "score": -74.9
+          "score": -74.9,
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_44015720",
@@ -18918,7 +19086,9 @@ window.racecardsData = {
           "last_run": "310",
           "form": "060-",
           "trainer_rtf": "46",
-          "score": -252.72
+          "score": -252.72,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_51373602",
@@ -18973,7 +19143,9 @@ window.racecardsData = {
           "last_run": "8",
           "form": "70-P7",
           "trainer_rtf": "50",
-          "score": 27.485
+          "score": 27.485,
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_49609084",
@@ -19028,7 +19200,9 @@ window.racecardsData = {
           "last_run": "93",
           "form": "0P07-",
           "trainer_rtf": "",
-          "score": -11.615
+          "score": -11.615,
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         },
         {
           "horse_id": "hrs_53539577",
@@ -19083,7 +19257,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "U7",
           "trainer_rtf": "49",
-          "score": 38.895
+          "score": 38.895,
+          "odds_fractional": "9/4",
+          "odds_decimal": 3.25
         },
         {
           "horse_id": "hrs_45568390",
@@ -19144,7 +19320,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "960-5",
           "trainer_rtf": "",
-          "score": 29.535
+          "score": 29.535,
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_30123051",
@@ -19199,7 +19377,9 @@ window.racecardsData = {
           "last_run": "9",
           "form": "P31/57",
           "trainer_rtf": "57",
-          "score": 65.74
+          "score": 65.74,
+          "odds_fractional": "7/4",
+          "odds_decimal": 2.75
         },
         {
           "horse_id": "hrs_35513016",
@@ -19254,7 +19434,9 @@ window.racecardsData = {
           "last_run": "196",
           "form": "/075P-",
           "trainer_rtf": "",
-          "score": -137.975
+          "score": -137.975,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         }
       ],
       "big_race": false,
@@ -19400,7 +19582,9 @@ window.racecardsData = {
           "last_run": "28 (20F)",
           "form": "426-33",
           "trainer_rtf": "",
-          "score": -3.065
+          "score": -3.065,
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         },
         {
           "horse_id": "hrs_35151179",
@@ -19468,7 +19652,9 @@ window.racecardsData = {
           "last_run": "72 (15F)",
           "form": "137-",
           "trainer_rtf": "",
-          "score": -9.305
+          "score": -9.305,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_32277280",
@@ -19529,7 +19715,9 @@ window.racecardsData = {
           "last_run": "45",
           "form": "6/55-6",
           "trainer_rtf": "33",
-          "score": 43.345
+          "score": 43.345,
+          "odds_fractional": "11/1",
+          "odds_decimal": 12.0
         },
         {
           "horse_id": "hrs_25664716",
@@ -19605,7 +19793,9 @@ window.racecardsData = {
           "last_run": "34",
           "form": "4/P-54",
           "trainer_rtf": "",
-          "score": 50.84
+          "score": 50.84,
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_33660193",
@@ -19675,7 +19865,9 @@ window.racecardsData = {
           "last_run": "47",
           "form": "8148-6",
           "trainer_rtf": "50",
-          "score": 50.665
+          "score": 50.665,
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_35068705",
@@ -19738,7 +19930,9 @@ window.racecardsData = {
           "last_run": "84 (57F)",
           "form": "1463P-",
           "trainer_rtf": "",
-          "score": -8.24
+          "score": -8.24,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_25121383",
@@ -19805,7 +19999,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "4434-2",
           "trainer_rtf": "100",
-          "score": 65.495
+          "score": 65.495,
+          "odds_fractional": "3/1",
+          "odds_decimal": 4.0
         },
         {
           "horse_id": "hrs_29184862",
@@ -19882,7 +20078,9 @@ window.racecardsData = {
           "last_run": "226",
           "form": "96666-",
           "trainer_rtf": "",
-          "score": -137.335
+          "score": -137.335,
+          "odds_fractional": "22/1",
+          "odds_decimal": 23.0
         },
         {
           "horse_id": "hrs_37207828",
@@ -19969,7 +20167,9 @@ window.racecardsData = {
           "last_run": "47 (9F)",
           "form": "47-2",
           "trainer_rtf": "56",
-          "score": 6.01
+          "score": 6.01,
+          "odds_fractional": "10/3",
+          "odds_decimal": 4.333
         }
       ],
       "big_race": false,
@@ -20076,7 +20276,9 @@ window.racecardsData = {
           "last_run": "29",
           "form": "/084-4",
           "trainer_rtf": "31",
-          "score": 70.325
+          "score": 70.325,
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_26445909",
@@ -20144,7 +20346,9 @@ window.racecardsData = {
           "last_run": "8",
           "form": "287-07",
           "trainer_rtf": "36",
-          "score": 67.005
+          "score": 67.005,
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_20085632",
@@ -20228,7 +20432,9 @@ window.racecardsData = {
           "last_run": "48",
           "form": "7287-2",
           "trainer_rtf": "33",
-          "score": 58.135
+          "score": 58.135,
+          "odds_fractional": "7/1",
+          "odds_decimal": 8.0
         },
         {
           "horse_id": "hrs_51865989",
@@ -20285,7 +20491,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "6-21",
           "trainer_rtf": "100",
-          "score": 64.375
+          "score": 64.375,
+          "odds_fractional": "8/1",
+          "odds_decimal": 9.0
         },
         {
           "horse_id": "hrs_14973049",
@@ -20384,7 +20592,9 @@ window.racecardsData = {
           "last_run": "411",
           "form": "4/P/0-",
           "trainer_rtf": "",
-          "score": -369.145
+          "score": -369.145,
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_47345193",
@@ -20439,7 +20649,9 @@ window.racecardsData = {
           "last_run": "27",
           "form": "685-1",
           "trainer_rtf": "50",
-          "score": 70.63
+          "score": 70.63,
+          "odds_fractional": "6/1",
+          "odds_decimal": 7.0
         },
         {
           "horse_id": "hrs_29691263",
@@ -20506,7 +20718,9 @@ window.racecardsData = {
           "last_run": "10",
           "form": "307-87",
           "trainer_rtf": "15",
-          "score": 76.165
+          "score": 76.165,
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_30967790",
@@ -20674,7 +20888,9 @@ window.racecardsData = {
           "last_run": "48",
           "form": "61P-F8",
           "trainer_rtf": "",
-          "score": 31.39
+          "score": 31.39,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_31083213",
@@ -20743,7 +20959,9 @@ window.racecardsData = {
           "last_run": "12",
           "form": "U-741U",
           "trainer_rtf": "50",
-          "score": 69.915
+          "score": 69.915,
+          "odds_fractional": "5/4",
+          "odds_decimal": 2.25
         }
       ],
       "big_race": false,
@@ -20841,7 +21059,9 @@ window.racecardsData = {
           "last_run": "41",
           "form": "660-28",
           "trainer_rtf": "50",
-          "score": 48.335
+          "score": 48.335,
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_29801849",
@@ -20910,7 +21130,9 @@ window.racecardsData = {
           "last_run": "9",
           "form": "908-17",
           "trainer_rtf": "",
-          "score": 55.045
+          "score": 55.045,
+          "odds_fractional": "9/1",
+          "odds_decimal": 10.0
         },
         {
           "horse_id": "hrs_26622568",
@@ -20967,7 +21189,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "3U5-21",
           "trainer_rtf": "",
-          "score": 52.515
+          "score": 52.515,
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_26219452",
@@ -21024,7 +21248,9 @@ window.racecardsData = {
           "last_run": "37",
           "form": "5150-0",
           "trainer_rtf": "100",
-          "score": 51.905
+          "score": 51.905,
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_49757757",
@@ -21079,7 +21305,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "PP-678",
           "trainer_rtf": "",
-          "score": 51.255
+          "score": 51.255,
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_38173870",
@@ -21151,7 +21379,9 @@ window.racecardsData = {
           "last_run": "57",
           "form": "5/70-6",
           "trainer_rtf": "38",
-          "score": 26.8
+          "score": 26.8,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_49110488",
@@ -21206,7 +21436,9 @@ window.racecardsData = {
           "last_run": "133",
           "form": "500-",
           "trainer_rtf": "57",
-          "score": -48.01
+          "score": -48.01,
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_40260584",
@@ -21267,7 +21499,9 @@ window.racecardsData = {
           "last_run": "45",
           "form": "052-88",
           "trainer_rtf": "15",
-          "score": 40.15
+          "score": 40.15,
+          "odds_fractional": "12/1",
+          "odds_decimal": 13.0
         },
         {
           "horse_id": "hrs_30330027",
@@ -21336,7 +21570,9 @@ window.racecardsData = {
           "last_run": "61",
           "form": "P/0P-1",
           "trainer_rtf": "",
-          "score": 26.3
+          "score": 26.3,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_42780878",
@@ -21391,7 +21627,9 @@ window.racecardsData = {
           "last_run": "27",
           "form": "0-980",
           "trainer_rtf": "33",
-          "score": 46.755
+          "score": 46.755,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_26874771",
@@ -21463,7 +21701,9 @@ window.racecardsData = {
           "last_run": "57",
           "form": "53F8-P",
           "trainer_rtf": "38",
-          "score": 30.855
+          "score": 30.855,
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_38666397",
@@ -21524,7 +21764,9 @@ window.racecardsData = {
           "last_run": "233",
           "form": "6P500-",
           "trainer_rtf": "",
-          "score": -158.12
+          "score": -158.12,
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_12573421",
@@ -21646,7 +21888,9 @@ window.racecardsData = {
           "last_run": "283",
           "form": "344/0-",
           "trainer_rtf": "15",
-          "score": -219.33
+          "score": -219.33,
+          "odds_fractional": "33/1",
+          "odds_decimal": 34.0
         },
         {
           "horse_id": "hrs_36627486",
@@ -21718,7 +21962,9 @@ window.racecardsData = {
           "last_run": "44",
           "form": "0748-P",
           "trainer_rtf": "30",
-          "score": 30.69
+          "score": 30.69,
+          "odds_fractional": "22/1",
+          "odds_decimal": 23.0
         },
         {
           "horse_id": "hrs_17486014",
@@ -21788,7 +22034,9 @@ window.racecardsData = {
           "last_run": "284",
           "form": "7771F-",
           "trainer_rtf": "100",
-          "score": -225.45
+          "score": -225.45,
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         },
         {
           "horse_id": "hrs_32277217",
@@ -21843,7 +22091,9 @@ window.racecardsData = {
           "last_run": "261",
           "form": "/0700-",
           "trainer_rtf": "",
-          "score": -196.545
+          "score": -196.545,
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_29409464",
@@ -21909,7 +22159,9 @@ window.racecardsData = {
           "last_run": "105",
           "form": "5023U-",
           "trainer_rtf": "",
-          "score": -33.845
+          "score": -33.845,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_37381596",
@@ -21996,7 +22248,9 @@ window.racecardsData = {
           "last_run": "64 (36F)",
           "form": "20F0-9",
           "trainer_rtf": "",
-          "score": -12.78
+          "score": -12.78,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_34253730",
@@ -22051,7 +22305,9 @@ window.racecardsData = {
           "last_run": "52",
           "form": "75F-6P",
           "trainer_rtf": "50",
-          "score": 25.895
+          "score": 25.895,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         }
       ],
       "big_race": false,
@@ -22150,7 +22406,9 @@ window.racecardsData = {
           "last_run": "47 (5F)",
           "form": "211P-5",
           "trainer_rtf": "100",
-          "score": -6.205
+          "score": -6.205,
+          "odds_fractional": "4/1",
+          "odds_decimal": 5.0
         },
         {
           "horse_id": "hrs_20260786",
@@ -22234,7 +22492,9 @@ window.racecardsData = {
           "last_run": "43 (14F)",
           "form": "1305-0",
           "trainer_rtf": "15",
-          "score": 3.705
+          "score": 3.705,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_34253338",
@@ -22301,7 +22561,9 @@ window.racecardsData = {
           "last_run": "2",
           "form": "72P-47",
           "trainer_rtf": "46",
-          "score": 67.9
+          "score": 67.9,
+          "odds_fractional": "22/1",
+          "odds_decimal": 23.0
         },
         {
           "horse_id": "hrs_28110383",
@@ -22405,7 +22667,9 @@ window.racecardsData = {
           "last_run": "35",
           "form": "713P/0",
           "trainer_rtf": "60",
-          "score": 63.835
+          "score": 63.835,
+          "odds_fractional": "25/1",
+          "odds_decimal": 26.0
         },
         {
           "horse_id": "hrs_19645780",
@@ -22481,7 +22745,9 @@ window.racecardsData = {
           "last_run": "12",
           "form": "2-4713",
           "trainer_rtf": "50",
-          "score": 53.485
+          "score": 53.485,
+          "odds_fractional": "11/1",
+          "odds_decimal": 12.0
         },
         {
           "horse_id": "hrs_29842449",
@@ -22551,7 +22817,9 @@ window.racecardsData = {
           "last_run": "10",
           "form": "225-42",
           "trainer_rtf": "50",
-          "score": 57.015
+          "score": 57.015,
+          "odds_fractional": "9/2",
+          "odds_decimal": 5.5
         },
         {
           "horse_id": "hrs_40920208",
@@ -22606,7 +22874,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "90-513",
           "trainer_rtf": "50",
-          "score": 71.735
+          "score": 71.735,
+          "odds_fractional": "5/1",
+          "odds_decimal": 6.0
         },
         {
           "horse_id": "hrs_19470066",
@@ -22707,7 +22977,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "27BP-6",
           "trainer_rtf": "31",
-          "score": 65.675
+          "score": 65.675,
+          "odds_fractional": "20/1",
+          "odds_decimal": 21.0
         },
         {
           "horse_id": "hrs_44015769",
@@ -22768,7 +23040,9 @@ window.racecardsData = {
           "last_run": "21",
           "form": "09-7U2",
           "trainer_rtf": "31",
-          "score": 59.15
+          "score": 59.15,
+          "odds_fractional": "17/2",
+          "odds_decimal": 9.5
         },
         {
           "horse_id": "hrs_37576644",
@@ -22823,7 +23097,9 @@ window.racecardsData = {
           "last_run": "48",
           "form": "544U-7",
           "trainer_rtf": "",
-          "score": 43.3
+          "score": 43.3,
+          "odds_fractional": "22/1",
+          "odds_decimal": 23.0
         },
         {
           "horse_id": "hrs_46483150",
@@ -22878,7 +23154,9 @@ window.racecardsData = {
           "last_run": "65",
           "form": "5100-5",
           "trainer_rtf": "28",
-          "score": 25.745
+          "score": 25.745,
+          "odds_fractional": "14/1",
+          "odds_decimal": 15.0
         },
         {
           "horse_id": "hrs_30257892",
@@ -22935,7 +23213,9 @@ window.racecardsData = {
           "last_run": "47",
           "form": "356-30",
           "trainer_rtf": "",
-          "score": 47.65
+          "score": 47.65,
+          "odds_fractional": "11/1",
+          "odds_decimal": 12.0
         },
         {
           "horse_id": "hrs_46484298",
@@ -23057,7 +23337,9 @@ window.racecardsData = {
           "last_run": "6",
           "form": "2P-462",
           "trainer_rtf": "43",
-          "score": 60.9
+          "score": 60.9,
+          "odds_fractional": "6/1",
+          "odds_decimal": 7.0
         },
         {
           "horse_id": "hrs_7149338",
@@ -23128,7 +23410,9 @@ window.racecardsData = {
           "last_run": "239",
           "form": "P400P-",
           "trainer_rtf": "",
-          "score": -162.71
+          "score": -162.71,
+          "odds_fractional": "100/1",
+          "odds_decimal": 101.0
         }
       ],
       "big_race": false,
@@ -23214,7 +23498,9 @@ window.racecardsData = {
           "last_run": "45",
           "form": "0-69",
           "trainer_rtf": "",
-          "score": -0.35
+          "score": -0.35,
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_53808853",
@@ -23269,7 +23555,9 @@ window.racecardsData = {
           "last_run": "22",
           "form": "0",
           "trainer_rtf": "",
-          "score": 16.095
+          "score": 16.095,
+          "odds_fractional": "28/1",
+          "odds_decimal": 29.0
         },
         {
           "horse_id": "hrs_50667379",
@@ -23324,7 +23612,9 @@ window.racecardsData = {
           "last_run": "8",
           "form": "PPF-60",
           "trainer_rtf": "",
-          "score": -0.635
+          "score": -0.635,
+          "odds_fractional": "50/1",
+          "odds_decimal": 51.0
         },
         {
           "horse_id": "hrs_54712231",
@@ -23379,7 +23669,9 @@ window.racecardsData = {
           "last_run": "",
           "form": "",
           "trainer_rtf": "100",
-          "score": -74.3
+          "score": -74.3,
+          "odds_fractional": "16/1",
+          "odds_decimal": 17.0
         },
         {
           "horse_id": "hrs_34571313",
@@ -23440,7 +23732,9 @@ window.racecardsData = {
           "last_run": "(50P)",
           "form": "FU3P-2",
           "trainer_rtf": "50",
-          "score": -40.1
+          "score": -40.1,
+          "odds_fractional": "10/1",
+          "odds_decimal": 11.0
         },
         {
           "horse_id": "hrs_53539591",
@@ -23495,7 +23789,9 @@ window.racecardsData = {
           "last_run": "35",
           "form": "0",
           "trainer_rtf": "40",
-          "score": 6.65
+          "score": 6.65,
+          "odds_fractional": "40/1",
+          "odds_decimal": 41.0
         },
         {
           "horse_id": "hrs_45445379",
@@ -23564,7 +23860,9 @@ window.racecardsData = {
           "last_run": "280",
           "form": "2-",
           "trainer_rtf": "57",
-          "score": -204.525
+          "score": -204.525,
+          "odds_fractional": "2/5",
+          "odds_decimal": 1.4
         },
         {
           "horse_id": "hrs_36515668",
@@ -23636,7 +23934,9 @@ window.racecardsData = {
           "last_run": "33",
           "form": "44-845",
           "trainer_rtf": "50",
-          "score": 27.27
+          "score": 27.27,
+          "odds_fractional": "13/2",
+          "odds_decimal": 7.5
         },
         {
           "horse_id": "hrs_51650109",
@@ -23697,7 +23997,9 @@ window.racecardsData = {
           "last_run": "45",
           "form": "6",
           "trainer_rtf": "",
-          "score": 1.15
+          "score": 1.15,
+          "odds_fractional": "18/1",
+          "odds_decimal": 19.0
         }
       ],
       "big_race": false,

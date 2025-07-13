@@ -590,3 +590,10 @@ body {
     font-size: 0.85rem;
   }
 }
+@media (max-width: 700px) {
+  /* let cards fill the container instead of being capped at 900px */
+  .runner-card {
+    max-width: 100%;
+    margin: 0.6em 0.4em; /* optional: add side margin for breathing room */
+  }
+}
