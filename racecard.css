@@ -23,13 +23,22 @@ body {
   margin: 0;
   min-height: 100vh;
   line-height: 1.52;
+  padding: 0 1rem; /* Added global horizontal padding for mobile spacing */
 }
+
+/* Main content area wrapper */
+main {
+  max-width: var(--max-width-content); /* Constrain main content width */
+  margin: 0 auto; /* Center main content */
+  padding-top: 1em; /* Add some top padding to main content */
+  padding-bottom: 2em; /* Add some bottom padding to main content */
+}
+
 
 /* ===== Hero Section ===== */
 .hero-section {
   width: 100%;
-  max-width: var(--max-width-content);
-  margin: 0 auto 1.6em auto;
+  /* Removed max-width and margin: auto here, main will handle it */
   padding: 2.2rem 0 1.4rem 0;
   text-align: center;
 }
@@ -140,19 +149,103 @@ body {
   font-weight: 700;
 }
 
+/* ====== Next 6 Pills Bar ====== */
+.next6-section {
+  margin: 0 auto 2em auto;
+  max-width: 700px;
+  text-align: center;
+}
+.next6-label {
+  color: var(--color-highlight);
+  font-weight: 800;
+  font-size: 1.11em;
+  margin-bottom: 0.72em;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-left: 6px;
+}
+.next6-bar, .next6-bar-grid {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.next6-bar {
+  display: flex;
+  gap: 0.64em;
+}
+.next6-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.7em;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
 
+.race-bar-box, .race-bar-empty {
+  /* Removed min/max width/height, will rely on flex/grid for sizing */
+  width: 104px; /* Base width */
+  height: 56px; /* Base height */
+  background: var(--color-card-bg);
+  color: var(--color-brand);
+  font-weight: 900;
+  font-size: 1.07em;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-pill);
+  margin: 0;
+  box-shadow: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.13s, color 0.13s, background 0.13s;
+  letter-spacing: 0.01em;
+  outline: none;
+  text-align: center;
+  gap: 2px;
+  overflow: hidden;
+}
+.race-bar-box .race-time {
+  font-size: 1.22em;
+  font-weight: 800;
+  line-height: 1.13;
+  margin-bottom: 0;
+}
+.race-bar-box .race-course {
+  font-size: 0.99em;
+  color: var(--color-main-text);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-top: 2px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.race-bar-box:hover, .race-bar-box:focus {
+  color: var(--color-highlight);
+  border-color: var(--color-highlight);
+  background: #202632;
+}
+.race-bar-empty {
+  background: #181a1e !important;
+  border: 2px dashed #23272d !important;
+  color: #232a32 !important;
+  pointer-events: none;
+}
 
 /* ====== Racecard Header ====== */
 .race-header {
   background: var(--color-card-bg);
   border-radius: var(--border-radius-card);
   padding: 2.1em 1.4em 1.2em 1.4em;
-  margin: auto;
+  margin-top: 2em; /* Keep top margin */
+  margin-bottom: 2.4em; /* Keep bottom margin */
+  /* Removed max-width and margin: auto; main will handle this */
   box-shadow: var(--shadow-card);
   border: 1.5px solid var(--color-border);
   text-align: center;
   transition: box-shadow 0.15s;
-  max-width: 900px;
 }
 .race-header h1 {
   font-size: 1.6em;
@@ -207,9 +300,10 @@ body {
   box-shadow: var(--shadow-card);
   border: 1.8px solid var(--color-border);
   padding: 1.12em 1.34em;
-  max-width: var(--max-width-content); /* constrain to page width */
-  margin: 0 auto;                      /* center horizontally */
+  width: 100%; /* Ensure it takes full width of its parent */
+  margin-bottom: 1.36em; /* Re-added margin-bottom */
   min-height: 82px;
+  position: relative;
   gap: 22px;
   transition: box-shadow 0.19s, border-color 0.13s, background 0.13s;
   outline: none;
@@ -455,6 +549,9 @@ body {
 
 
 @media (max-width: 700px) {
+  body {
+    padding: 0 0.8rem; /* Slightly less padding on smaller screens */
+  }
   .runner-card { gap: 7px; padding: 0.78em 0.32em; }
   .runner-silk-group { width: 30px; }
   .runner-silk { width: 26px; height: 26px; }
@@ -466,6 +563,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 0 0.5rem; /* Even less padding on very small screens */
+  }
   .runner-card { gap: 3px; padding: 0.41em 0.11em; }
   .runner-silk-group { width: 19px; }
   .runner-silk { width: 16px; height: 16px; }
@@ -476,12 +576,13 @@ body {
 
 
 
-/* ====== Full‐Width Course Bar ====== */
+/* ====== Full‐Width Course Bar (Adjusted for body padding) ====== */
 .meetings-bar {
   position: relative;
-  left: 50%;                     /* shift left by half its width */
-  margin-left: -50vw;            /* pull back to full viewport width */
-  width: 100vw;                  /* span the entire viewport */
+  /* To break out of body padding and span full viewport width */
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
   
   display: flex;                 /* flex layout */
   flex-wrap: nowrap;             /* one row, scroll if needed */
@@ -498,11 +599,13 @@ body {
   scrollbar-color: var(--color-border) var(--color-bg-dark);
 }
 
-/* ====== Full‐Width Time Bar ====== */
+/* ====== Full‐Width Time Bar (Adjusted for body padding) ====== */
 .race-times-bar {
   position: relative;
-  margin:auto;
-  max-width: 900px;
+  /* To break out of body padding and span full viewport width */
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
   
   display: flex;
   flex-wrap: nowrap;
@@ -590,10 +693,8 @@ body {
     font-size: 0.85rem;
   }
 }
-@media (max-width: 700px) {
-  /* let cards fill the container instead of being capped at 900px */
-  .runner-card {
-    max-width: 100%;
-    margin: 0.6em 0.4em; /* optional: add side margin for breathing room */
-  }
+
+@keyframes slideUpFadeIn {
+  from { opacity: 0; transform: translateY(32px);}
+  to   { opacity: 1; transform: translateY(0);}
 }
