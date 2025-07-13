@@ -23,22 +23,19 @@ body {
   margin: 0;
   min-height: 100vh;
   line-height: 1.52;
-  padding: 0 1rem; /* Added global horizontal padding for mobile spacing */
 }
 
 /* Main content area wrapper */
 main {
   max-width: var(--max-width-content); /* Constrain main content width */
   margin: 0 auto; /* Center main content */
-  padding-top: 1em; /* Add some top padding to main content */
-  padding-bottom: 2em; /* Add some bottom padding to main content */
+  padding: 1em 1rem 2em 1rem; /* Responsive padding for main content */
 }
 
 
 /* ===== Hero Section ===== */
 .hero-section {
   width: 100%;
-  /* Removed max-width and margin: auto here, main will handle it */
   padding: 2.2rem 0 1.4rem 0;
   text-align: center;
 }
@@ -184,9 +181,8 @@ main {
 }
 
 .race-bar-box, .race-bar-empty {
-  /* Removed min/max width/height, will rely on flex/grid for sizing */
-  width: 104px; /* Base width */
-  height: 56px; /* Base height */
+  width: 104px; /* Re-added fixed width for larger screens */
+  height: 56px; /* Re-added fixed height for larger screens */
   background: var(--color-card-bg);
   color: var(--color-brand);
   font-weight: 900;
@@ -238,10 +234,9 @@ main {
 .race-header {
   background: var(--color-card-bg);
   border-radius: var(--border-radius-card);
-  padding: 2.1em 1.4em 1.2em 1.4em;
-  margin-top: 2em; /* Keep top margin */
-  margin-bottom: 2.4em; /* Keep bottom margin */
-  /* Removed max-width and margin: auto; main will handle this */
+  padding: 2.1em 1.4em 1.2em 1.4em; /* Base padding */
+  margin-top: 2em;
+  margin-bottom: 2.4em;
   box-shadow: var(--shadow-card);
   border: 1.5px solid var(--color-border);
   text-align: center;
@@ -301,7 +296,7 @@ main {
   border: 1.8px solid var(--color-border);
   padding: 1.12em 1.34em;
   width: 100%; /* Ensure it takes full width of its parent */
-  margin-bottom: 1.36em; /* Re-added margin-bottom */
+  margin-bottom: 1.36em;
   min-height: 82px;
   position: relative;
   gap: 22px;
@@ -387,7 +382,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.17em;
-  padding-left: 0.8em; /* Increased padding here */
+  padding-left: 0.8em;
   border-left: 3.5px solid var(--color-brand);
   margin-left: 0.3em;
 }
@@ -411,16 +406,6 @@ main {
   color: var(--color-muted);
   font-weight: 600;
   margin-left: 0.07em;
-}
-.runner-score-inline {
-  font-size: 1em;
-  color: #aaffbb;
-  font-weight: 700;
-  margin-left: 0.4em;
-  background: #193221;
-  border-radius: 7px;
-  padding: 2px 8px;
-  letter-spacing: 0.01em;
 }
 
 .runner-meta-line {
@@ -447,23 +432,38 @@ main {
   font-weight: 700;
 }
 
-.runner-odds {
+/* New styles for score and odds inside runner-main */
+.runner-key-stats {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-width: 62px;
-  font-size: 1.14em;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 0.8em 1.2em; /* Spacing between score and odds */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.runner-score-inline {
+  font-size: 1em;
+  color: #aaffbb;
+  font-weight: 700;
+  background: #193221;
+  border-radius: 7px;
+  padding: 2px 8px;
+  letter-spacing: 0.01em;
+  white-space: nowrap; /* Prevent breaking */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.runner-odds-inline {
+  font-size: 1.14em; /* Slightly larger for prominence */
   color: #adffa2;
   font-weight: 900;
   letter-spacing: 0.01em;
-  text-align: right;
-  padding-top: 2px;
   background: #222f24;
   border-radius: 11px;
-  padding-left: 9px;
-  padding-right: 9px;
+  padding: 2px 9px;
   box-shadow: 0 2px 8px #44d63313;
-  margin-left: 12px;
+  white-space: nowrap; /* Prevent breaking */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .runner-form {
@@ -501,27 +501,27 @@ main {
 
 /* More Info Toggle Styles */
 .runner-more-btn {
-  background: var(--color-card-bg); /* Added background */
-  border: 1.5px solid var(--color-border); /* Added border */
-  border-radius: 8px; /* Added border-radius */
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
   color: var(--color-accent-blue);
   font-size: 0.88em;
   font-weight: 700;
   cursor: pointer;
-  padding: 0.4em 0.8em; /* Adjusted padding */
+  padding: 0.4em 0.8em;
   margin-top: 0.5em;
-  text-align: center; /* Centered text */
+  text-align: center;
   width: fit-content;
-  transition: color 0.15s ease-in-out, background 0.15s ease-in-out, border-color 0.15s ease-in-out; /* Added transitions */
-  box-shadow: var(--shadow-soft); /* Added subtle shadow */
+  transition: color 0.15s ease-in-out, background 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  box-shadow: var(--shadow-soft);
 }
 
 .runner-more-btn:hover,
-.runner-more-btn:focus { /* Added focus state */
+.runner-more-btn:focus {
   color: var(--color-highlight);
-  background: #202632; /* Darker background on hover/focus */
-  border-color: var(--color-highlight); /* Highlight border on hover/focus */
-  outline: none; /* Removed default outline, relying on border/background change */
+  background: #202632;
+  border-color: var(--color-highlight);
+  outline: none;
 }
 
 .runner-more {
@@ -548,53 +548,137 @@ main {
 }
 
 
-@media (max-width: 700px) {
-  body {
-    padding: 0 0.8rem; /* Slightly less padding on smaller screens */
+/* ====== Responsive Adjustments ====== */
+@media (max-width: 800px) {
+  /* Main content padding for medium screens */
+  main {
+    padding: 1em 0.8rem 2em 0.8rem;
   }
-  .runner-card { gap: 7px; padding: 0.78em 0.32em; }
+  .race-header {
+    padding: 1.5em 1em 1em 1em; /* Adjusted padding for header */
+  }
+  .next6-section {
+    max-width: 90%; /* Allow next6-section to be more fluid */
+  }
+  /* .race-bar-box, .race-bar-empty will inherit from base */
+  .runner-card {
+    gap: 7px;
+    padding: 0.78em 0.32em;
+  }
   .runner-silk-group { width: 30px; }
   .runner-silk { width: 26px; height: 26px; }
   .runner-num-draw { width: 24px; }
   .runner-num { width: 17px; height: 17px; font-size: 0.81em; }
-  .runner-main { padding-left: 0.4em; border-left: 2.5px solid var(--color-brand); } /* Adjusted padding */
+  .runner-main { padding-left: 0.4em; border-left: 2.5px solid var(--color-brand); }
   .runner-horse { font-size: 0.97em; }
-  .runner-odds { font-size: 0.91em; min-width: 45px; padding-left: 4px; padding-right: 4px; }
+
+  /* Adjustments for .runner-form on medium screens */
+  .runner-form {
+    font-size: 0.85em; /* Smaller font */
+    padding: 1px 8px; /* Reduced padding */
+    max-width: none; /* Allow it to shrink naturally */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Main content padding for small screens */
+  main {
+    padding: 0.8em 0.5rem 1.5em 0.5rem;
+  }
+  .race-header {
+    padding: 1em 0.8em 0.8em 0.8em; /* Further adjusted padding for header */
+  }
+  .next6-bar, .next6-bar-grid {
+    max-width: 100%; /* Allow full width for pills container */
+  }
+  .race-bar-box, .race-bar-empty {
+    width: 30vw; /* Use viewport width for better scaling */
+    height: 16vw; /* Maintain aspect ratio */
+    font-size: 0.85em;
+  }
+  .runner-card {
+    gap: 4px;
+    padding: 0.6em 0.4em; /* Increased padding slightly for better spacing */
+  }
+  .runner-silk-group { width: 25px; } /* Slightly smaller */
+  .runner-silk { width: 22px; height: 22px; } /* Slightly smaller */
+  .runner-num-draw { width: 20px; } /* Adjusted */
+  .runner-num { width: 15px; height: 15px; font-size: 0.75em; } /* Adjusted */
+  .runner-main { padding-left: 0.3em; border-left: 2px solid var(--color-brand); }
+
+  /* Adjustments for .runner-form on small screens */
+  .runner-form {
+    font-size: 0.75em; /* Even smaller font */
+    padding: 1px 6px; /* Further reduced padding */
+  }
+  .runner-key-stats {
+    gap: 0.6em 1em; /* Reduce gap on smaller screens */
+  }
+  .runner-score-inline {
+    font-size: 0.9em; /* Smaller score font */
+    padding: 1px 6px;
+  }
+  .runner-odds-inline {
+    font-size: 1em; /* Smaller odds font */
+    padding: 1px 7px;
+  }
 }
 
 @media (max-width: 480px) {
-  body {
-    padding: 0 0.5rem; /* Even less padding on very small screens */
+  /* Main content padding for very small screens */
+  main {
+    padding: 0.5em 0.3rem 1em 0.3rem;
   }
-  .runner-card { gap: 3px; padding: 0.41em 0.11em; }
-  .runner-silk-group { width: 19px; }
-  .runner-silk { width: 16px; height: 16px; }
-  .runner-num-draw { width: 13px; }
-  .runner-num { width: 10px; height: 10px; font-size: 0.65em; }
-  .runner-main { padding-left: 0.3em; border-left: 2px solid var(--color-brand); } /* Adjusted padding */
+  .race-header {
+    padding: 0.8em 0.5em 0.6em 0.5em; /* Smallest padding for header */
+  }
+  .runner-card {
+    gap: 3px;
+    padding: 0.5em 0.2em; /* Ensure minimum padding */
+  }
+  .runner-silk-group { width: 20px; }
+  .runner-silk { width: 18px; height: 18px; }
+  .runner-num-draw { width: 15px; }
+  .runner-num { width: 12px; height: 12px; font-size: 0.6em; }
+  .runner-main { padding-left: 0.2em; border-left: 1.5px solid var(--color-brand); } /* Thinner border */
+  .runner-horse { font-size: 0.9em; } /* Smaller horse name */
+
+  /* Adjustments for .runner-form on very small screens */
+  .runner-form {
+    font-size: 0.7em; /* Smallest font */
+    padding: 0px 4px; /* Minimal padding */
+  }
+  .runner-key-stats {
+    gap: 0.4em 0.8em; /* Even smaller gap */
+  }
+  .runner-score-inline {
+    font-size: 0.8em; /* Smallest score font */
+    padding: 0px 5px;
+  }
+  .runner-odds-inline {
+    font-size: 0.9em; /* Smallest odds font */
+    padding: 0px 6px;
+  }
 }
-
-
 
 /* ====== Full‐Width Course Bar (Adjusted for body padding) ====== */
 .meetings-bar {
   position: relative;
-  /* To break out of body padding and span full viewport width */
   left: 50%;
   margin-left: -50vw;
   width: 100vw;
-  
-  display: flex;                 /* flex layout */
-  flex-wrap: nowrap;             /* one row, scroll if needed */
-  justify-content: center;       /* centre pills */
-  gap: 0.5rem;                   /* spacing between pills */
-  
-  padding: 0.75rem 1rem;         /* vertical + horizontal padding */
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start; /* Align pills to start, they will scroll */
+  gap: 0.5rem;
+
+  padding: 0.75rem 1rem;
   background: var(--color-card-bg);
   border-bottom: 1px solid var(--color-border);
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
-  
-  overflow-x: auto;              /* scroll on overflow */
+
+  overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) var(--color-bg-dark);
 }
@@ -602,16 +686,15 @@ main {
 /* ====== Full‐Width Time Bar (Adjusted for body padding) ====== */
 .race-times-bar {
   position: relative;
-  /* To break out of body padding and span full viewport width */
   left: 50%;
   margin-left: -50vw;
   width: 100vw;
-  
+
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   gap: 0.5rem;
-  
+
   padding: 0.65rem 1rem;
   background: var(--color-bg-dark);
   border-bottom: 1px solid var(--color-border);
@@ -668,7 +751,7 @@ main {
   border-color: var(--color-highlight);
 }
 
-/* ====== Responsive ====== */
+/* Responsive for pills */
 @media (max-width: 800px) {
   .meetings-bar,
   .race-times-bar {

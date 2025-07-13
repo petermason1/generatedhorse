@@ -93,13 +93,13 @@ function renderRace(race, allRaces, whichDay) {
       </div>
     </section>
     <div class="runners-list">
-          ${activeRunners.map((r, i) => `
+      ${activeRunners.map((r, i) => `
         <div class="runner-card" data-i="${i}">
           <div class="runner-num-draw">
             <span class="runner-num">${r.number || i+1}</span>
             <span class="runner-draw">${
-              (r.draw !== undefined && r.draw !== null && r.draw !== '') 
-                ? `(${r.draw})` 
+              (r.draw !== undefined && r.draw !== null && r.draw !== '')
+                ? `(${r.draw})`
                 : ''
             }</span>
           </div>
@@ -108,13 +108,12 @@ function renderRace(race, allRaces, whichDay) {
             <span class="runner-form">${r.form || ''}</span>
           </div>
           <div class="runner-main">
-   <div class="runner-horse">
+            <div class="runner-horse">
                 ${r.horse || ''}
                 <span class="runner-age-weight">
                     ${r.age ? ` (${r.age}yo)` : ''}
                     ${r.lbs ? ` ${convertLbsToStone(r.lbs)}` : ''}
                 </span>
-                ${r.score !== undefined && r.score !== null ? `<span class="runner-score-inline">${r.score}</span>` : ''}
             </div>
             <div class="runner-meta-line">
               <span class="runner-jockey">${r.jockey || ''}</span>
@@ -128,13 +127,17 @@ function renderRace(race, allRaces, whichDay) {
               ${r.headgear ? `• Headgear <b class="runner-headgear">${r.headgear}</b>` : ''}
               ${r.last_run ? `• Last run <b class="runner-last-run">${r.last_run}d</b>` : ''}
             </div>
+            <div class="runner-key-stats">
+                ${r.score !== undefined && r.score !== null ? `<span class="runner-score-inline">Score: ${r.score}</span>` : ''}
+                ${getRunnerOdds(r) ? `<span class="runner-odds-inline">Odds: ${getRunnerOdds(r)}</span>` : ''}
+            </div>
             <button class="runner-more-btn" type="button" aria-expanded="false">More Info</button>
             <div class="runner-more" tabindex="-1">
               <div class="runner-more-content">
                 <p><b>Sire:</b> ${r.sire || '—'}<br><b>Dam:</b> ${r.dam || '—'}</p>
                 <p><b>Owner:</b> ${r.owner || '—'}</p>
-               <p><b>Trainer Form (14 days):</b> ${r.trainer_14_days 
-    ? `${r.trainer_14_days.wins}/${r.trainer_14_days.runs} wins (${r.trainer_14_days.percent}%)` 
+                <p><b>Trainer Form (14 days):</b> ${r.trainer_14_days
+    ? `${r.trainer_14_days.wins}/${r.trainer_14_days.runs} wins (${r.trainer_14_days.percent}%)`
     : '—'}</p>
 
                 <p><b>Comment:</b> ${r.comment || 'No additional info.'}</p>
@@ -142,7 +145,6 @@ function renderRace(race, allRaces, whichDay) {
               </div>
             </div>
           </div>
-          <span class="runner-odds">${getRunnerOdds(r)}</span>
         </div>
       `).join('')}
     </div>
