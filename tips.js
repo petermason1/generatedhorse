@@ -131,8 +131,8 @@ console.log('tips.js: Script started.');
     if (r.form && r.form.match(/1/)) bits.push("recent win");
     if (r.form && r.form.match(/2|3/)) bits.push("placed recently");
     if (bits.length === 0) bits.push('solid profile');
-    if (r.betfair_odds_fractional) {
-      bits.push(`odds: ${r.betfair_odds_fractional}`);
+    if (r.odds_fractional) {
+      bits.push(`odds: ${r.odds_fractional}`);
     }
     return bits.join(', ') + '.';
   }
@@ -141,7 +141,7 @@ console.log('tips.js: Script started.');
   function renderTipCard(r, i, badge) {
     const silksImageUrl = r.silk_url ? r.silk_url : 'https://placehold.co/40x40/333/fff?text=No+Silk';
     let raceName = r.race.race_name || '';
-    let oddsStr = r.betfair_odds_fractional || '';
+    let oddsStr = r.odds_fractional || '';
     return `
       <div class="tip-card">
         <div class="silks-wrapper">

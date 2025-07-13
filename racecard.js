@@ -14,7 +14,7 @@ function convertLbsToStone(lbs) {
   return s > 0 ? `${s}st${p ? ' ' + p + 'lb' : ''}` : `${p}lb`;
 }
 
-// === Odds Helper (ONLY use betfair_odds_fractional) ===
+// === Odds Helper (ONLY use odds_fractional) ===
 function decimalToFractional(decimal) {
   if (!decimal || typeof decimal !== 'number' || decimal < 1.01) return '';
   const num = Math.round((decimal - 1) * 100);
@@ -26,8 +26,8 @@ function decimalToFractional(decimal) {
 }
 
 function getRunnerOdds(r) {
-  // Only use the betfair_odds_fractional field if present, else blank
-  return r.betfair_odds_fractional || '';
+  // Only use the odds_fractional field if present, else blank
+  return r.odds_fractional || '';
 }
 
 
@@ -93,8 +93,7 @@ function renderRace(race, allRaces, whichDay) {
       </div>
     </section>
     <div class="runners-list">
-      <h2>Runners</h2>
-      ${activeRunners.map((r, i) => `
+          ${activeRunners.map((r, i) => `
         <div class="runner-card" data-i="${i}">
           <div class="runner-num-draw">
             <span class="runner-num">${r.number || i+1}</span>
@@ -134,7 +133,10 @@ function renderRace(race, allRaces, whichDay) {
               <div class="runner-more-content">
                 <p><b>Sire:</b> ${r.sire || '—'}<br><b>Dam:</b> ${r.dam || '—'}</p>
                 <p><b>Owner:</b> ${r.owner || '—'}</p>
-                <p><b>Trainer Form (14 days):</b> ${r.trainer_14_days || '—'}</p>
+               <p><b>Trainer Form (14 days):</b> ${r.trainer_14_days 
+    ? `${r.trainer_14_days.wins}/${r.trainer_14_days.runs} wins (${r.trainer_14_days.percent}%)` 
+    : '—'}</p>
+
                 <p><b>Comment:</b> ${r.comment || 'No additional info.'}</p>
                 <p><b>Spotlight:</b> ${r.spotlight || 'No spotlight available.'}</p>
               </div>

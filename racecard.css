@@ -142,85 +142,105 @@ body {
 
 /* ====== Next 6 Pills Bar ====== */
 .next6-section {
-  margin: 0 auto 2em auto;
+  margin: 0 auto 2em;      /* center section & add bottom gap */
   max-width: 700px;
   text-align: center;
-}
-.next6-label {
-  color: var(--color-highlight);
-  font-weight: 800;
-  font-size: 1.11em;
-  margin-bottom: 0.72em;
-  letter-spacing: 0.01em;
-  text-align: left;
-  margin-left: 6px;
-}
-.next6-bar, .next6-bar-grid {
-  width: 100%;
-  margin: 0 auto;
-  justify-content: center;
-}
-.next6-bar {
-  display: flex;
-  gap: 0.64em;
-}
-.next6-bar-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 0.7em;
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
+  background-color: pink;
 }
 
-.race-bar-box, .race-bar-empty {
-  min-width: 104px;
-  max-width: 104px;
-  width: 104px;
-  min-height: 56px;
-  max-height: 56px;
-  height: 56px;
-  background: var(--color-card-bg);
-  color: var(--color-brand);
-  font-weight: 900;
-  font-size: 1.07em;
-  border: 2px solid var(--color-border);
-  border-radius: var(--border-radius-pill);
-  margin: 0;
-  box-shadow: none;
-  text-decoration: none;
+.next6-label {
+  margin: 0 0 0.72em 6px;   /* bottom gap + slight left indent */
+  font-size: 1.11em;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--color-highlight);
+  text-align: left;
+}
+
+/* Container for the pills */
+.next6-bar {
+  display: flex;            /* horizontal layout */
+  flex-wrap: wrap;          /* wrap on narrow screens */
+  justify-content: center;  /* center pills */
+  gap: 0.64em;              /* space between pills */
+  margin: 0.5em auto;       /* vertical gap + auto-center */
+  padding: 0;               /* reset any default padding */
+}
+
+/* Optional alternative grid layout */
+.next6-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-auto-rows: min-content;
+  justify-content: center;  /* center the entire grid */
+  gap: 0.7em;
+  margin: 0.5em auto;
+  max-width: 420px;
+}
+
+/* The pills themselves: consistent size & styling */
+.race-bar-box,
+.race-bar-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.13s, color 0.13s, background 0.13s;
+  width: 104px;
+  height: 56px;
+  min-width: 104px;
+  min-height: 56px;
+  max-width: 104px;
+  max-height: 56px;
+  margin: 0;                  /* no extra margins */
+  padding: 0;                 /* we control inner spacing via flex */
+  font-size: 1.07em;
+  font-weight: 900;
   letter-spacing: 0.01em;
-  outline: none;
   text-align: center;
+  line-height: 1.2;
+  border-radius: var(--border-radius-pill);
+  border: 2px solid var(--color-border);
+  background: var(--color-card-bg);
+  color: var(--color-brand);
   gap: 2px;
-  overflow: hidden;
+  transition: background 0.13s, border-color 0.13s, color 0.13s;
 }
+
+/* Larger time text */
 .race-bar-box .race-time {
   font-size: 1.22em;
   font-weight: 800;
-  line-height: 1.13;
-  margin-bottom: 0;
 }
+
+/* Time text inside pill */
+.race-bar-box .race-time {
+  width: 100%;          /* take full width of container */
+  text-align: center;   /* center the time */
+  font-size: 1.22em;
+  font-weight: 800;
+}
+
+/* Course name text */
 .race-bar-box .race-course {
-  font-size: 0.99em;
-  color: var(--color-main-text);
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  width: 100%;             /* take full width of container */
+  text-align: center;      /* center the course name */
   margin-top: 2px;
-  margin-bottom: 0;
+  font-size: 0.99em;
+  font-weight: 700;
+  color: var(--color-main-text);
+  letter-spacing: 0.03em;
   text-transform: none;
 }
-.race-bar-box:hover, .race-bar-box:focus {
-  color: var(--color-highlight);
-  border-color: var(--color-highlight);
+
+/* Hover/focus highlight for active pills */
+.race-bar-box:hover,
+.race-bar-box:focus {
   background: #202632;
+  border-color: var(--color-highlight);
+  color: var(--color-highlight);
 }
+
+/* Dashed style for empty slots */
 .race-bar-empty {
   background: #181a1e !important;
   border: 2px dashed #23272d !important;
@@ -228,16 +248,18 @@ body {
   pointer-events: none;
 }
 
+
 /* ====== Racecard Header ====== */
 .race-header {
   background: var(--color-card-bg);
   border-radius: var(--border-radius-card);
   padding: 2.1em 1.4em 1.2em 1.4em;
-  margin: 2em 0 2.4em 0;
+  margin: auto;
   box-shadow: var(--shadow-card);
   border: 1.5px solid var(--color-border);
   text-align: center;
   transition: box-shadow 0.15s;
+  max-width: 900px;
 }
 .race-header h1 {
   font-size: 1.6em;
@@ -289,14 +311,14 @@ body {
   align-items: flex-start;
   background: linear-gradient(110deg, #181e25 85%, #20262e 100%);
   border-radius: var(--border-radius-card);
-  box-shadow: 0 4px 22px #0b141d33, 0 0px 1.5px #1118;
+  box-shadow: var(--shadow-card);
   border: 1.8px solid var(--color-border);
   padding: 1.12em 1.34em;
-  margin-bottom: 1.36em;
+  max-width: var(--max-width-content); /* constrain to page width */
+  margin: 0 auto;                      /* center horizontally */
   min-height: 82px;
-  position: relative;
   gap: 22px;
-  transition: box-shadow 0.19s, border 0.13s, background 0.13s;
+  transition: box-shadow 0.19s, border-color 0.13s, background 0.13s;
   outline: none;
 }
 .runner-card:hover, .runner-card.expanded {
@@ -561,75 +583,102 @@ body {
 
 
 
-/* Pills & Nav (courses/races) */
-.meetings-bar, .race-times-bar {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+/* ====== Pills & Nav (courses/races) ====== */
+.meetings-bar,
+.race-times-bar {
+  display: flex;                    /* use flex layout */
+  flex-wrap: nowrap;                /* keep all pills on one line */
+  justify-content: center;          /* centre the pills horizontally */
+  gap: 4px;                         /* space between pills */
+  overflow-x: auto;                 /* allow horizontal scroll if needed */
+  padding: 10px;                    /* uniform padding inside container */
+  margin: 0 auto 1.22em;            /* centre the bar and add bottom margin */
+  max-width: var(--max-width-content); /* constrain to your content width */
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-card);
   scrollbar-width: thin;
   scrollbar-color: var(--color-brand) var(--color-bg-dark);
-  gap: 8px;
-  margin-bottom: 1.22em;
-  padding: 0 10px 10px 10px;
-  justify-content: flex-start;
-  background: var(--color-card-bg);
-  border-radius: var(--border-radius-card);
-  padding-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-bottom: 0;  /* remove the default 1.22em gap */
+  padding-bottom: 0; /* if you want to kill the bottom padding too */
+
 }
+
+/* WebKit scrollbar styling */
 .meetings-bar::-webkit-scrollbar-track,
 .race-times-bar::-webkit-scrollbar-track {
   background: var(--color-bg-dark);
   border-radius: 10px;
 }
+
 .meetings-bar::-webkit-scrollbar-thumb,
 .race-times-bar::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: 10px;
   border: 2px solid var(--color-bg-dark);
 }
-.course-link, .race-link {
-  background: var(--color-card-bg);
-  color: var(--color-muted);
+
+/* Individual pill links */
+.course-link,
+.race-link {
+  flex-shrink: 0;                   /* prevent pills from shrinking */
   padding: 8px 14px;
-  border-radius: var(--border-radius-pill);
-  text-decoration: none;
   font-size: 1.01em;
   font-weight: 700;
-  transition: background 0.22s, color 0.18s, border-color 0.18s;
+  color: var(--color-muted);
+  background: var(--color-card-bg);
+  text-decoration: none;
   border: 1.4px solid var(--color-border);
-  flex-shrink: 0;
+  border-radius: var(--border-radius-pill);
+  transition: background 0.22s, color 0.18s, border-color 0.18s;
 }
-.course-link:hover, .race-link:hover,
-.course-link.active, .race-link.active {
+
+/* Active & hover states */
+.course-link:hover,
+.race-link:hover,
+.course-link.active,
+.race-link.active {
   background: var(--color-highlight);
   color: #181e24;
   border-color: var(--color-highlight);
 }
 
+/* ====== Responsive tweaks ====== */
 @media (max-width: 800px) {
-  .hero-section { padding: 1.1rem 0 1.1rem 0; }
-  .next6-bar-grid { max-width: 340px; }
-  .race-bar-box, .race-bar-empty { min-width: 82px; max-width: 82px; height: 48px; font-size: 0.92em; }
-  .runner-card { gap: 12px; padding: 1em 0.7em; }
-  .runner-num-draw { width: 32px; }
-  .runner-num { width: 21px; height: 21px; font-size: 0.88em; }
-  .runner-silk-group { width: 38px; }
-  .runner-silk { width: 35px; height: 35px; }
+  .meetings-bar,
+  .race-times-bar {
+    max-width: 100%;             /* full width on mid-size screens */
+    gap: 6px;
+    padding: 8px;
+  }
+  .course-link,
+  .race-link {
+    padding: 6px 10px;
+    font-size: 0.95em;
+  }
 }
 
 @media (max-width: 600px) {
-  .hero-section { padding: 0.4rem 0 0.8rem 0; }
-  .next6-bar, .next6-bar-grid { max-width: 97vw; }
-  .race-bar-box, .race-bar-empty { min-width: 30vw; max-width: 33vw; width: 32vw; height: 16vw; font-size: 0.85em; }
-  .runner-card { padding: 0.48em 0.44em; gap: 4px; }
-  .runner-silk-group { width: 30px; }
-  .runner-silk { width: 25px; height: 25px; }
-  .race-header { padding: 1.1em 0.5em 1em 0.5em; }
+  .meetings-bar,
+  .race-times-bar {
+    gap: 4px;
+    padding: 6px;
+  }
+  .course-link,
+  .race-link {
+    padding: 4px 8px;
+    font-size: 0.9em;
+  }
 }
 
+/* Keyframe for initial load animation */
 @keyframes slideUpFadeIn {
-  from { opacity: 0; transform: translateY(32px);}
-  to   { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
