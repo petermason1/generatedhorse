@@ -81,7 +81,8 @@ console.log('tips.js: Script started.');
   const chrisTips    = ["prague", "fifth column", "tabletalk", "zebra star"];
   const peterTips    = ["diamond bay", "fiscal policy","rye", "mister winston"];
   const kenTips      = ["Frank The Spark", "Emily Rebecca", "makeen", "percy shelley"];
-  const racingPostTips = ["Archivist", "Marlborough Place", "Flora Of Bermuda", "Whatsgoingonmarvin"];
+  const racingPostTips = ["Spick And Span", "Wasdell Dundalk", "Wisper", "Quebella"];
+
 
   // --- Build tipster pick cards, skip non-existent picks ---
   const michaelsFeatured = sortByOffTime(
