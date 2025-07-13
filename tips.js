@@ -77,7 +77,7 @@ console.log('tips.js: Script started.');
   }
 
   // === Tipster picks ===
-  const michaelsTips = ["Bedouin Prince", "symbol of honour", "whathappensinvegas", "going commando"];
+  const michaelsTips = ["send harry", "only spoofing", "getthepot", "salamanca bay"];
   const chrisTips    = ["el fontenaro", "stateira", "pure gold", "getuptheyard"];
   const peterTips    = ["moonbow", "Takt De Touques","Sunshine And Roses", "Appleblossomwhite"];
   const kenTips      = ["Frank The Spark", "Emily Rebecca", "makeen", "percy shelley"];
