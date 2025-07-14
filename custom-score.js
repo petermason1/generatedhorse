@@ -13,6 +13,7 @@ const sliders = [
   'trainerWinsWeight', 'trainerBonusValue', 'layoffPenaltyValue', 'courseFormWeight'
 ].reduce((acc, id) => { acc[id] = document.getElementById(id); return acc; }, {});
 
+// Note: For special sliders, the display span IDs are different.
 const sliderValues = [
   'rprWeightValue', 'tsWeightValue', 'orWeightValue', 'winsWeightValue', 'placesWeightValue',
   'lastRunPenaltyWeightValue', 'lastRunBonusWeightValue', 'trainerPercentWeightValue',
@@ -22,34 +23,34 @@ const sliderValues = [
 // --- Preset weights ---
 const weightPresets = {
   "Default": {
-      rprWeight: 0.0, tsWeight: 0.0, orWeight: 0.0, winsWeight: 0.0, placesWeight: 0.0,
-      lastRunPenaltyWeight: 0.0, lastRunBonusWeight: 0.0, trainerPercentWeight: 0.0, trainerWinsWeight: 0.0,
-      trainerBonusValue: 0.0, layoffPenaltyValue: 0.0, courseFormWeight: 0.0
+    rprWeight: 0.0, tsWeight: 0.0, orWeight: 0.0, winsWeight: 0.0, placesWeight: 0.0,
+    lastRunPenaltyWeight: 0.0, lastRunBonusWeight: 0.0, trainerPercentWeight: 0.0, trainerWinsWeight: 0.0,
+    trainerBonusValue: 0.0, layoffPenaltyValue: 0.0, courseFormWeight: 0.0
   },
   "Speed Focus": {
-      rprWeight: 4.0, tsWeight: 2.5, orWeight: 1.0, winsWeight: 2.0, placesWeight: 1.0,
-      lastRunPenaltyWeight: -0.5, lastRunBonusWeight: 0.4, trainerPercentWeight: 0.8, trainerWinsWeight: 1.2,
-      trainerBonusValue: 0.5, layoffPenaltyValue: -2.0, courseFormWeight: 1.0
+    rprWeight: 4.0, tsWeight: 2.5, orWeight: 1.0, winsWeight: 2.0, placesWeight: 1.0,
+    lastRunPenaltyWeight: -0.5, lastRunBonusWeight: 0.4, trainerPercentWeight: 0.8, trainerWinsWeight: 1.2,
+    trainerBonusValue: 0.5, layoffPenaltyValue: -2.0, courseFormWeight: 1.0
   },
   "Form Focus": {
-      rprWeight: 1.5, tsWeight: 0.6, orWeight: 0.4, winsWeight: 8.0, placesWeight: 5.0,
-      lastRunPenaltyWeight: -0.2, lastRunBonusWeight: 0.2, trainerPercentWeight: 3.0, trainerWinsWeight: 4.0,
-      trainerBonusValue: 2.0, layoffPenaltyValue: -8.0, courseFormWeight: 2.0
+    rprWeight: 1.5, tsWeight: 0.6, orWeight: 0.4, winsWeight: 8.0, placesWeight: 5.0,
+    lastRunPenaltyWeight: -0.2, lastRunBonusWeight: 0.2, trainerPercentWeight: 3.0, trainerWinsWeight: 4.0,
+    trainerBonusValue: 2.0, layoffPenaltyValue: -8.0, courseFormWeight: 2.0
   },
   "Trainer Focus": {
-      rprWeight: 1.0, tsWeight: 0.6, orWeight: 0.2, winsWeight: 2.0, placesWeight: 1.0,
-      lastRunPenaltyWeight: -0.2, lastRunBonusWeight: 0.2, trainerPercentWeight: 4.0, trainerWinsWeight: 4.0,
-      trainerBonusValue: 4.0, layoffPenaltyValue: -2.0, courseFormWeight: 0.6
+    rprWeight: 1.0, tsWeight: 0.6, orWeight: 0.2, winsWeight: 2.0, placesWeight: 1.0,
+    lastRunPenaltyWeight: -0.2, lastRunBonusWeight: 0.2, trainerPercentWeight: 4.0, trainerWinsWeight: 4.0,
+    trainerBonusValue: 4.0, layoffPenaltyValue: -2.0, courseFormWeight: 0.6
   },
   "Outsider Value": {
-      rprWeight: 2.5, tsWeight: 2.0, orWeight: 2.0, winsWeight: 1.0, placesWeight: 1.5,
-      lastRunPenaltyWeight: -0.2, lastRunBonusWeight: 0.3, trainerPercentWeight: 1.4, trainerWinsWeight: 1.8,
-      trainerBonusValue: 0.6, layoffPenaltyValue: -1.0, courseFormWeight: 1.4
+    rprWeight: 2.5, tsWeight: 2.0, orWeight: 2.0, winsWeight: 1.0, placesWeight: 1.5,
+    lastRunPenaltyWeight: -0.2, lastRunBonusWeight: 0.3, trainerPercentWeight: 1.4, trainerWinsWeight: 1.8,
+    trainerBonusValue: 0.6, layoffPenaltyValue: -1.0, courseFormWeight: 1.4
   },
   "Consistency Focus": {
-      rprWeight: 1.4, tsWeight: 1.0, orWeight: 0.8, winsWeight: 3.0, placesWeight: 6.0,
-      lastRunPenaltyWeight: -0.3, lastRunBonusWeight: 0.5, trainerPercentWeight: 2.0, trainerWinsWeight: 2.0,
-      trainerBonusValue: 1.5, layoffPenaltyValue: -4.0, courseFormWeight: 2.5
+    rprWeight: 1.4, tsWeight: 1.0, orWeight: 0.8, winsWeight: 3.0, placesWeight: 6.0,
+    lastRunPenaltyWeight: -0.3, lastRunBonusWeight: 0.5, trainerPercentWeight: 2.0, trainerWinsWeight: 2.0,
+    trainerBonusValue: 1.5, layoffPenaltyValue: -4.0, courseFormWeight: 2.5
   }
 };
 
@@ -108,6 +109,7 @@ function calculateCustomScore(r, weights) {
   else score += (50 - lastRunVal) * weights.lastRunBonusWeight;
   score += weights.trainerPercentWeight * trainerPercent;
   score += weights.trainerWinsWeight * trainerWins;
+  // --- The two special bonuses/penalties ---
   score += (trainerPercent >= 20 ? weights.trainerBonusValue : 0);
   score += (wins === 0 && lastRunVal > 50) ? weights.layoffPenaltyValue : 0;
   score += weights.courseFormWeight * courseFormWins;
@@ -201,8 +203,16 @@ function populateRaceDropdown(allRaces) {
 function updateSlidersUI(weights) {
   for (const key in weights) {
     if (sliders[key]) sliders[key].value = weights[key];
-    const spanId = key + 'Value';
-    if (sliderValues[spanId]) sliderValues[spanId].textContent = (typeof weights[key] === 'number' ? weights[key].toFixed(2) : '');
+    // Only the two special sliders use ...Display instead of ...Value
+    const spanId =
+      key === "trainerBonusValue"
+        ? "trainerBonusValueDisplay"
+        : key === "layoffPenaltyValue"
+        ? "layoffPenaltyValueDisplay"
+        : key + "Value";
+    if (sliderValues[spanId])
+      sliderValues[spanId].textContent =
+        typeof weights[key] === "number" ? weights[key].toFixed(2) : "";
   }
 }
 
@@ -211,8 +221,14 @@ function setupSliderEvents() {
   for (const key in sliders) {
     sliders[key].addEventListener('input', () => {
       const val = parseFloat(sliders[key].value);
-      const spanId = key + 'Value';
-      if (sliderValues[spanId]) sliderValues[spanId].textContent = val.toFixed(2);
+      const spanId =
+        key === "trainerBonusValue"
+          ? "trainerBonusValueDisplay"
+          : key === "layoffPenaltyValue"
+          ? "layoffPenaltyValueDisplay"
+          : key + "Value";
+      if (sliderValues[spanId])
+        sliderValues[spanId].textContent = val.toFixed(2);
       // Live update runners:
       if (currentSelectedRace) {
         renderCustomScoredRunners(currentSelectedRace, getCurrentWeights());
