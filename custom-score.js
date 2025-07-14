@@ -257,4 +257,18 @@ if (allRaces.length) {
   customRunnersListDiv.innerHTML = '<p>No race data loaded.</p>';
 }
 
+// --- Show/Hide Instructions Button ---
+const btn = document.getElementById('toggleHowTo');
+const box = document.getElementById('howToSection');
+if (btn && box) {
+  btn.addEventListener('click', function () {
+    box.classList.toggle('hidden');
+    if (box.classList.contains('hidden')) {
+      btn.textContent = 'Show Instructions ▼';
+    } else {
+      btn.textContent = 'Hide Instructions ▲';
+    }
+  });
+}
+
 console.log('custom-score.js finished (score default mode).');

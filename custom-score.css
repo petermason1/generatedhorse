@@ -1051,3 +1051,6 @@ html[data-theme="light"] .show-results-helper {
   font-weight: 800;
   letter-spacing: 0.02em;
 }
+
+.hidden { display: none !important; }
+
