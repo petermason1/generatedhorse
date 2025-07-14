@@ -77,7 +77,7 @@ console.log('tips.js: Script started.');
   }
 
   // === Tipster picks ===
-  const michaelsTips = ["send harry", "only spoofing", "getthepot", "salamanca bay"];
+  const michaelsTips = ["cosmic clarets", "roadshow", "gore point", "penelope's sister"];
   const chrisTips    = ["sixcor", "get the value", "manila thriller", "art patron"];
   const peterTips    = ["Mighty Magnus", "Warning Symbol","Moyola", "Mister Upton"];
   const kenTips      = ["salamanca bay", "whistleinthedark", "warazam", "mr lightside"];
