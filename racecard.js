@@ -1,10 +1,13 @@
 // === Helpers ===
 function isNonRunner(r) {
+  // Detect "NR" in number, form, status, or explicit non_runner field
+  if (typeof r.number === 'string' && r.number.trim().toUpperCase() === 'NR') return true;
   if (typeof r.form === 'string' && /\bNR\b/i.test(r.form)) return true;
   if (r.status && r.status.toUpperCase() === 'NR') return true;
   if (r.non_runner === true) return true;
   return false;
 }
+
 
 function convertLbsToStone(lbs) {
   const v = Number(lbs);
@@ -139,7 +142,6 @@ function renderRace(race, allRaces, whichDay) {
                 <p><b>Trainer Form (14 days):</b> ${r.trainer_14_days
     ? `${r.trainer_14_days.wins}/${r.trainer_14_days.runs} wins (${r.trainer_14_days.percent}%)`
     : '—'}</p>
-
                 <p><b>Comment:</b> ${r.comment || 'No additional info.'}</p>
                 <p><b>Spotlight:</b> ${r.spotlight || 'No spotlight available.'}</p>
               </div>
@@ -162,7 +164,7 @@ function renderRace(race, allRaces, whichDay) {
         </div>
       </div>
     ` : ''}
-  `;
+  `; // <-- CLOSES the template string
 
   // === Add More Info toggle handlers ===
   setTimeout(() => { // let DOM update

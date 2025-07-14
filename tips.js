@@ -79,9 +79,9 @@ console.log('tips.js: Script started.');
   // === Tipster picks ===
   const michaelsTips = ["send harry", "only spoofing", "getthepot", "salamanca bay"];
   const chrisTips    = ["el fontenaro", "stateira", "pure gold", "getuptheyard"];
-  const peterTips    = ["moonbow", "Takt De Touques","Sunshine And Roses", "Appleblossomwhite"];
+  const peterTips    = ["Mighty Magnus", "Warning Symbol","Moyola", "Mister Upton"];
   const kenTips      = ["salamanca bay", "whistleinthedark", "warazam", "mr lightside"];
-  const racingPostTips = ["Spick And Span", "Wasdell Dundalk", "Wisper", "Quebella"];
+  const racingPostTips = ["Spioradalta", "our zebo", "Diamondonthehill", "Magnolia Drive"];
 
 
   // --- Build tipster pick cards, skip non-existent picks ---

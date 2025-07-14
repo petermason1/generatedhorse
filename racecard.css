@@ -781,3 +781,18 @@ main {
   from { opacity: 0; transform: translateY(32px);}
   to   { opacity: 1; transform: translateY(0);}
 }
+.non-runners-section {
+  margin-top: 2em;
+  background: #2a1b25;
+  border-radius: 7px;
+  padding: 1em;
+  color: #fa6;
+}
+.non-runner-item {
+  margin: 0.25em 0;
+  font-size: 1em;
+  font-weight: 500;
+  opacity: 0.75;
+}
+.non-runner-num { color: #fa8; font-weight: bold; margin-right: 0.6em;}
+.non-runner-horse { margin-right: 1em; }
