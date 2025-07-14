@@ -51,8 +51,8 @@ window.racecardsData = {
           "trainer_location": "Upper Lambourn, W Berks",
           "trainer_14_days": {
             "runs": "22",
-            "wins": "2",
-            "percent": "9"
+            "wins": "3",
+            "percent": "14"
           },
           "owner": "Wathnan Racing",
           "owner_id": "own_1300352",
@@ -95,7 +95,7 @@ window.racecardsData = {
           "last_run": "27",
           "form": "10",
           "trainer_rtf": "45",
-          "score": 56.185,
+          "score": 59.585,
           "odds_fractional": "7/4",
           "odds_decimal": null
         },
@@ -179,9 +179,9 @@ window.racecardsData = {
           "trainer_id": "trn_45711",
           "trainer_location": "Piercebridge, Co Durham",
           "trainer_14_days": {
-            "runs": "29",
+            "runs": "31",
             "wins": "4",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "Frank Lowe",
           "owner_id": "own_748444",
@@ -209,7 +209,7 @@ window.racecardsData = {
           "last_run": "8",
           "form": "6",
           "trainer_rtf": "48",
-          "score": 37.485,
+          "score": 36.885,
           "odds_fractional": "12/1",
           "odds_decimal": null
         },
@@ -236,9 +236,9 @@ window.racecardsData = {
           "trainer_id": "trn_369855",
           "trainer_location": "Norton, N Yorks",
           "trainer_14_days": {
-            "runs": "28",
+            "runs": "29",
             "wins": "3",
-            "percent": "11"
+            "percent": "10"
           },
           "owner": "Harmon, Livingston,O'Flynn & Shanahan",
           "owner_id": "own_1437848",
@@ -266,7 +266,7 @@ window.racecardsData = {
           "last_run": "23",
           "form": "2",
           "trainer_rtf": "54",
-          "score": 41.49,
+          "score": 40.89,
           "odds_fractional": "5/2",
           "odds_decimal": null
         },
@@ -293,7 +293,7 @@ window.racecardsData = {
           "trainer_id": "trn_202725",
           "trainer_location": "Hambleton, N Yorks",
           "trainer_14_days": {
-            "runs": "41",
+            "runs": "42",
             "wins": "5",
             "percent": "12"
           },
@@ -381,9 +381,9 @@ window.racecardsData = {
           "trainer_id": "trn_354483",
           "trainer_location": "Maunby, N Yorks",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "9",
             "wins": "1",
-            "percent": "13"
+            "percent": "11"
           },
           "owner": "Laurence O'Kane/Harrowgate BloodstockLtd",
           "owner_id": "own_889324",
@@ -413,7 +413,7 @@ window.racecardsData = {
           "last_run": "29",
           "form": "-20467",
           "trainer_rtf": "50",
-          "score": 53.245,
+          "score": 52.045,
           "odds_fractional": "7/2",
           "odds_decimal": null
         },
@@ -440,9 +440,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "James Callow & J S Goldie",
           "owner_id": "own_1010776",
@@ -477,7 +477,7 @@ window.racecardsData = {
           "last_run": "39",
           "form": "-79334",
           "trainer_rtf": "47",
-          "score": 45.11,
+          "score": 46.71,
           "odds_fractional": "9/4",
           "odds_decimal": null
         },
@@ -504,7 +504,7 @@ window.racecardsData = {
           "trainer_id": "trn_205551",
           "trainer_location": "Upper Helmsley, N Yorks",
           "trainer_14_days": {
-            "runs": "61",
+            "runs": "62",
             "wins": "8",
             "percent": "13"
           },
@@ -563,9 +563,9 @@ window.racecardsData = {
           "trainer_id": "trn_201609",
           "trainer_location": "Irthington, Cumbria",
           "trainer_14_days": {
-            "runs": "7",
+            "runs": "8",
             "wins": "1",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "R W Hislop",
           "owner_id": "own_1284832",
@@ -617,7 +617,7 @@ window.racecardsData = {
           "last_run": "8",
           "form": "377445",
           "trainer_rtf": "57",
-          "score": 55.275,
+          "score": 54.675,
           "odds_fractional": "11/2",
           "odds_decimal": null
         },
@@ -644,9 +644,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "Barraston Racing & J S Goldie",
           "owner_id": "own_1218192",
@@ -680,7 +680,7 @@ window.racecardsData = {
           "last_run": "18",
           "form": "055154",
           "trainer_rtf": "47",
-          "score": 52.345,
+          "score": 53.945,
           "odds_fractional": "12/1",
           "odds_decimal": null
         },
@@ -707,9 +707,9 @@ window.racecardsData = {
           "trainer_id": "trn_45711",
           "trainer_location": "Piercebridge, Co Durham",
           "trainer_14_days": {
-            "runs": "29",
+            "runs": "31",
             "wins": "4",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "J Blackburn & Partner",
           "owner_id": "own_1206756",
@@ -768,7 +768,7 @@ window.racecardsData = {
           "last_run": "17",
           "form": "417147",
           "trainer_rtf": "48",
-          "score": 58.145,
+          "score": 57.545,
           "odds_fractional": "12/1",
           "odds_decimal": null
         },
@@ -795,9 +795,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "Aim Equestrian Ltd",
           "owner_id": "own_1429544",
@@ -839,7 +839,7 @@ window.racecardsData = {
           "last_run": "37",
           "form": "72-507",
           "trainer_rtf": "47",
-          "score": 44.325,
+          "score": 45.925,
           "odds_fractional": "12/1",
           "odds_decimal": null
         },
@@ -866,9 +866,9 @@ window.racecardsData = {
           "trainer_id": "trn_193644",
           "trainer_location": "Carrutherstown, D'fries & G'way",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "5",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "Port Station Syndicate",
           "owner_id": "own_1433428",
@@ -925,7 +925,7 @@ window.racecardsData = {
           "last_run": "8",
           "form": "-09367",
           "trainer_rtf": "46",
-          "score": 55.165,
+          "score": 54.565,
           "odds_fractional": "12/1",
           "odds_decimal": null
         }
@@ -952,7 +952,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "0-65",
       "prize": "£4,187",
-      "field_size": "9",
+      "field_size": "7",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -983,7 +983,7 @@ window.racecardsData = {
           "trainer_id": "trn_205551",
           "trainer_location": "Upper Helmsley, N Yorks",
           "trainer_14_days": {
-            "runs": "61",
+            "runs": "62",
             "wins": "8",
             "percent": "13"
           },
@@ -996,7 +996,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "1",
+          "number": "NR",
           "draw": "4",
           "headgear": "",
           "headgear_run": "",
@@ -1122,9 +1122,9 @@ window.racecardsData = {
           "trainer_id": "trn_45711",
           "trainer_location": "Piercebridge, Co Durham",
           "trainer_14_days": {
-            "runs": "29",
+            "runs": "31",
             "wins": "4",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "Antico Alliance",
           "owner_id": "own_1373808",
@@ -1154,7 +1154,7 @@ window.racecardsData = {
           "last_run": "7",
           "form": "-22271",
           "trainer_rtf": "48",
-          "score": 57.465,
+          "score": 56.865,
           "odds_fractional": "5/4",
           "odds_decimal": null
         },
@@ -1343,9 +1343,9 @@ window.racecardsData = {
           "trainer_id": "trn_193644",
           "trainer_location": "Carrutherstown, D'fries & G'way",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "5",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "G Gibson",
           "owner_id": "own_1429808",
@@ -1397,7 +1397,7 @@ window.racecardsData = {
           "last_run": "7",
           "form": "8-6128",
           "trainer_rtf": "46",
-          "score": 49.795,
+          "score": 49.195,
           "odds_fractional": "7/1",
           "odds_decimal": null
         },
@@ -1424,9 +1424,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "Johnnie Delta Racing",
           "owner_id": "own_714616",
@@ -1477,7 +1477,7 @@ window.racecardsData = {
           "last_run": "13",
           "form": "563009",
           "trainer_rtf": "47",
-          "score": 41.175,
+          "score": 42.775,
           "odds_fractional": "12/1",
           "odds_decimal": null
         },
@@ -1640,7 +1640,7 @@ window.racecardsData = {
               "type": "Wind Surgery"
             }
           ],
-          "number": "9",
+          "number": "NR",
           "draw": "2",
           "headgear": "h",
           "headgear_run": "",
@@ -1684,7 +1684,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "0-65",
       "prize": "£3,664",
-      "field_size": "8",
+      "field_size": "7",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -1801,9 +1801,9 @@ window.racecardsData = {
           "trainer_id": "trn_354483",
           "trainer_location": "Maunby, N Yorks",
           "trainer_14_days": {
-            "runs": "8",
+            "runs": "9",
             "wins": "1",
-            "percent": "13"
+            "percent": "11"
           },
           "owner": "Harrowgate Bloodstock Ltd",
           "owner_id": "own_366256",
@@ -1837,7 +1837,7 @@ window.racecardsData = {
           "last_run": "28",
           "form": "70-672",
           "trainer_rtf": "50",
-          "score": 50.085,
+          "score": 48.885,
           "odds_fractional": "15/2",
           "odds_decimal": null
         },
@@ -2154,9 +2154,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "Ayr Racecourse Club",
           "owner_id": "own_1053624",
@@ -2192,8 +2192,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/6/0/263406b.svg",
           "last_run": "7",
           "form": "371533",
-          "trainer_rtf": "47",
-          "score": 52.665,
+          "trainer_rtf": "53",
+          "score": 54.265,
           "odds_fractional": "3/1",
           "odds_decimal": null
         },
@@ -2310,7 +2310,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/2/4/228442b.svg",
           "last_run": "54",
           "form": "18-760",
-          "trainer_rtf": "26",
+          "trainer_rtf": "32",
           "score": 20.84,
           "odds_fractional": "28/1",
           "odds_decimal": null
@@ -2402,7 +2402,7 @@ window.racecardsData = {
             }
           ],
           "medical": [],
-          "number": "8",
+          "number": "NR",
           "draw": "6",
           "headgear": "",
           "headgear_run": "",
@@ -2420,7 +2420,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/3/2/8/333823.svg",
           "last_run": "2",
           "form": "047326",
-          "trainer_rtf": "26",
+          "trainer_rtf": "32",
           "score": 45.81,
           "odds_fractional": "12/1",
           "odds_decimal": null
@@ -2646,9 +2646,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "Belgate Racing Limited",
           "owner_id": "own_1400508",
@@ -2690,7 +2690,7 @@ window.racecardsData = {
           "last_run": "17",
           "form": "40-070",
           "trainer_rtf": "47",
-          "score": 39.095,
+          "score": 40.695,
           "odds_fractional": "11/2",
           "odds_decimal": null
         },
@@ -2927,9 +2927,9 @@ window.racecardsData = {
           "trainer_id": "trn_193644",
           "trainer_location": "Carrutherstown, D'fries & G'way",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "5",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "S Jones, L Donaldson, K Elliott & I Codd",
           "owner_id": "own_1432852",
@@ -2963,7 +2963,7 @@ window.racecardsData = {
           "last_run": "28",
           "form": "45-097",
           "trainer_rtf": "46",
-          "score": 43.1,
+          "score": 42.5,
           "odds_fractional": "13/2",
           "odds_decimal": null
         },
@@ -2990,9 +2990,9 @@ window.racecardsData = {
           "trainer_id": "trn_201609",
           "trainer_location": "Irthington, Cumbria",
           "trainer_14_days": {
-            "runs": "7",
+            "runs": "8",
             "wins": "1",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "Elliot Graham And Tristan Davidson",
           "owner_id": "own_1419788",
@@ -3054,7 +3054,7 @@ window.racecardsData = {
           "last_run": "8",
           "form": "020768",
           "trainer_rtf": "57",
-          "score": 42.3,
+          "score": 41.7,
           "odds_fractional": "18/1",
           "odds_decimal": null
         },
@@ -3081,7 +3081,7 @@ window.racecardsData = {
           "trainer_id": "trn_202725",
           "trainer_location": "Hambleton, N Yorks",
           "trainer_14_days": {
-            "runs": "41",
+            "runs": "42",
             "wins": "5",
             "percent": "12"
           },
@@ -3234,7 +3234,7 @@ window.racecardsData = {
           "trainer_id": "trn_180405",
           "trainer_location": "Stillington, N Yorks",
           "trainer_14_days": {
-            "runs": "30",
+            "runs": "29",
             "wins": "1",
             "percent": "3"
           },
@@ -3312,9 +3312,9 @@ window.racecardsData = {
           "trainer_id": "trn_193644",
           "trainer_location": "Carrutherstown, D'fries & G'way",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "5",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "I J Jardine",
           "owner_id": "own_864488",
@@ -3367,7 +3367,7 @@ window.racecardsData = {
           "last_run": "250",
           "form": "/9316-",
           "trainer_rtf": "46",
-          "score": -176.645,
+          "score": -177.245,
           "odds_fractional": "14/1",
           "odds_decimal": null
         },
@@ -3616,9 +3616,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "Ayr Racecourse Club",
           "owner_id": "own_1053624",
@@ -3658,7 +3658,7 @@ window.racecardsData = {
           "last_run": "7",
           "form": "59/955",
           "trainer_rtf": "47",
-          "score": 48.955,
+          "score": 50.555,
           "odds_fractional": "13/2",
           "odds_decimal": null
         },
@@ -3841,7 +3841,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "0-75",
       "prize": "£4,187",
-      "field_size": "6",
+      "field_size": "5",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -3872,7 +3872,7 @@ window.racecardsData = {
           "trainer_id": "trn_205551",
           "trainer_location": "Upper Helmsley, N Yorks",
           "trainer_14_days": {
-            "runs": "61",
+            "runs": "62",
             "wins": "8",
             "percent": "13"
           },
@@ -3981,7 +3981,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "2",
+          "number": "NR",
           "draw": "5",
           "headgear": "",
           "headgear_run": "",
@@ -4099,9 +4099,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "Whitestonecliffe Racing Partnership",
           "owner_id": "own_182820",
@@ -4145,7 +4145,7 @@ window.racecardsData = {
           "last_run": "16",
           "form": "256003",
           "trainer_rtf": "47",
-          "score": 52.475,
+          "score": 54.075,
           "odds_fractional": "7/2",
           "odds_decimal": null
         },
@@ -4172,9 +4172,9 @@ window.racecardsData = {
           "trainer_id": "trn_193644",
           "trainer_location": "Carrutherstown, D'fries & G'way",
           "trainer_14_days": {
-            "runs": "37",
+            "runs": "38",
             "wins": "5",
-            "percent": "14"
+            "percent": "13"
           },
           "owner": "The Cricketers",
           "owner_id": "own_1255264",
@@ -4204,7 +4204,7 @@ window.racecardsData = {
           "last_run": "9",
           "form": "688632",
           "trainer_rtf": "46",
-          "score": 51.36,
+          "score": 50.76,
           "odds_fractional": "2/1",
           "odds_decimal": null
         },
@@ -4267,8 +4267,8 @@ window.racecardsData = {
           "ofr": "57",
           "rpr": "82",
           "ts": "70",
-          "jockey": "Cian Horgan",
-          "jockey_id": "jky_303567",
+          "jockey": "Ethan Tindall(5)",
+          "jockey_id": "jky_305664",
           "silk_url": "https://www.rp-assets.com/svg/6/7/9/292976.svg",
           "last_run": "16",
           "form": "6-0427",
@@ -4300,9 +4300,9 @@ window.racecardsData = {
           "trainer_id": "trn_70155",
           "trainer_location": "Uplawmoor, Lanarkshire",
           "trainer_14_days": {
-            "runs": "30",
-            "wins": "3",
-            "percent": "10"
+            "runs": "33",
+            "wins": "4",
+            "percent": "12"
           },
           "owner": "James Callow & J S Goldie",
           "owner_id": "own_1010776",
@@ -4364,7 +4364,7 @@ window.racecardsData = {
           "last_run": "16",
           "form": "111477",
           "trainer_rtf": "47",
-          "score": 49.755,
+          "score": 51.355,
           "odds_fractional": "7/1",
           "odds_decimal": null
         }
@@ -4422,9 +4422,9 @@ window.racecardsData = {
           "trainer_id": "trn_167751",
           "trainer_location": "Mosterton, Dorset",
           "trainer_14_days": {
-            "runs": "0",
-            "wins": "0",
-            "percent": "None"
+            "runs": "1",
+            "wins": "1",
+            "percent": "100"
           },
           "owner": "Cartwright, Langford And Saunders",
           "owner_id": "own_1438912",
@@ -4462,7 +4462,7 @@ window.racecardsData = {
           "last_run": "413",
           "form": "32F/4-",
           "trainer_rtf": "",
-          "score": -354.3,
+          "score": -293.9,
           "odds_fractional": "8/1",
           "odds_decimal": null
         },
@@ -4489,7 +4489,7 @@ window.racecardsData = {
           "trainer_id": "trn_368685",
           "trainer_location": "Elmbridge, Worcs",
           "trainer_14_days": {
-            "runs": "25",
+            "runs": "26",
             "wins": "1",
             "percent": "4"
           },
@@ -4578,7 +4578,7 @@ window.racecardsData = {
           "trainer_id": "trn_312111",
           "trainer_location": "Droitwich Spa, Worcs",
           "trainer_14_days": {
-            "runs": "3",
+            "runs": "4",
             "wins": "0",
             "percent": "0"
           },
@@ -4706,9 +4706,9 @@ window.racecardsData = {
           "trainer_id": "trn_249147",
           "trainer_location": "Abberley, Worcs",
           "trainer_14_days": {
-            "runs": "0",
+            "runs": "1",
             "wins": "0",
-            "percent": "None"
+            "percent": "0"
           },
           "owner": "Nick Shutts",
           "owner_id": "own_240416",
@@ -4777,7 +4777,7 @@ window.racecardsData = {
           "trainer_id": "trn_91413",
           "trainer_location": "Nicholashayne, Somerset",
           "trainer_14_days": {
-            "runs": "7",
+            "runs": "8",
             "wins": "0",
             "percent": "0"
           },
@@ -4846,9 +4846,9 @@ window.racecardsData = {
           "trainer_id": "trn_51903",
           "trainer_location": "Ditcheat, Somerset",
           "trainer_14_days": {
-            "runs": "4",
+            "runs": "5",
             "wins": "1",
-            "percent": "25"
+            "percent": "20"
           },
           "owner": "Old Gold Racing 27",
           "owner_id": "own_1425224",
@@ -4907,7 +4907,7 @@ window.racecardsData = {
           "last_run": "20",
           "form": "34-23U",
           "trainer_rtf": "50",
-          "score": 71.565,
+          "score": 68.565,
           "odds_fractional": "11/2",
           "odds_decimal": null
         }
@@ -4965,9 +4965,9 @@ window.racecardsData = {
           "trainer_id": "trn_51903",
           "trainer_location": "Ditcheat, Somerset",
           "trainer_14_days": {
-            "runs": "4",
+            "runs": "5",
             "wins": "1",
-            "percent": "25"
+            "percent": "20"
           },
           "owner": "Mrs Kathy Stuart",
           "owner_id": "own_380404",
@@ -5005,8 +5005,8 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/0/1/95101.svg",
           "last_run": "31",
           "form": "536-11",
-          "trainer_rtf": "50",
-          "score": 91.335,
+          "trainer_rtf": "75",
+          "score": 88.335,
           "odds_fractional": "11/10",
           "odds_decimal": null
         },
@@ -5360,8 +5360,8 @@ window.racecardsData = {
           "ofr": "107",
           "rpr": "126",
           "ts": "122",
-          "jockey": "David Bass",
-          "jockey_id": "jky_257796",
+          "jockey": "Jack Tudor",
+          "jockey_id": "jky_296019",
           "silk_url": "https://www.rp-assets.com/svg/b/4/7/354274b.svg",
           "last_run": "31",
           "form": "3224-2",
@@ -5930,9 +5930,9 @@ window.racecardsData = {
           "trainer_id": "trn_167751",
           "trainer_location": "Mosterton, Dorset",
           "trainer_14_days": {
-            "runs": "0",
-            "wins": "0",
-            "percent": "None"
+            "runs": "1",
+            "wins": "1",
+            "percent": "100"
           },
           "owner": "M W Pendarves",
           "owner_id": "own_850684",
@@ -5972,7 +5972,7 @@ window.racecardsData = {
           "last_run": "26",
           "form": "8F0-12",
           "trainer_rtf": "",
-          "score": 62.035,
+          "score": 122.435,
           "odds_fractional": "3/1",
           "odds_decimal": null
         },
@@ -6659,7 +6659,7 @@ window.racecardsData = {
           "trainer_id": "trn_368685",
           "trainer_location": "Elmbridge, Worcs",
           "trainer_14_days": {
-            "runs": "25",
+            "runs": "26",
             "wins": "1",
             "percent": "4"
           },
@@ -6733,9 +6733,9 @@ window.racecardsData = {
           "trainer_id": "trn_167751",
           "trainer_location": "Mosterton, Dorset",
           "trainer_14_days": {
-            "runs": "0",
-            "wins": "0",
-            "percent": "None"
+            "runs": "1",
+            "wins": "1",
+            "percent": "100"
           },
           "owner": "Mrs L Finnegan",
           "owner_id": "own_1299852",
@@ -6771,7 +6771,7 @@ window.racecardsData = {
           "last_run": "50",
           "form": "41PP-4",
           "trainer_rtf": "",
-          "score": 41.845,
+          "score": 102.245,
           "odds_fractional": "5/2",
           "odds_decimal": null
         }
@@ -7012,7 +7012,7 @@ window.racecardsData = {
           "trainer_id": "trn_368685",
           "trainer_location": "Elmbridge, Worcs",
           "trainer_14_days": {
-            "runs": "25",
+            "runs": "26",
             "wins": "1",
             "percent": "4"
           },
@@ -7069,7 +7069,7 @@ window.racecardsData = {
           "trainer_id": "trn_312111",
           "trainer_location": "Droitwich Spa, Worcs",
           "trainer_14_days": {
-            "runs": "3",
+            "runs": "4",
             "wins": "0",
             "percent": "0"
           },
@@ -7412,7 +7412,7 @@ window.racecardsData = {
       "age_band": "2yo",
       "rating_band": "",
       "prize": "£3,672",
-      "field_size": "12",
+      "field_size": "11",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -7855,7 +7855,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "8",
+          "number": "NR",
           "draw": "4",
           "headgear": "",
           "headgear_run": "",
@@ -9079,7 +9079,7 @@ window.racecardsData = {
           "trainer_id": "trn_368685",
           "trainer_location": "Elmbridge, Worcs",
           "trainer_14_days": {
-            "runs": "25",
+            "runs": "26",
             "wins": "1",
             "percent": "4"
           },
@@ -9670,9 +9670,9 @@ window.racecardsData = {
           "trainer_id": "trn_139968",
           "trainer_location": "Basford, Staffs",
           "trainer_14_days": {
-            "runs": "24",
+            "runs": "23",
             "wins": "8",
-            "percent": "33"
+            "percent": "35"
           },
           "owner": "White Hart Racing",
           "owner_id": "own_1379836",
@@ -9727,7 +9727,7 @@ window.racecardsData = {
           "last_run": "14",
           "form": "768031",
           "trainer_rtf": "50",
-          "score": 72.61,
+          "score": 73.81,
           "odds_fractional": "11/2",
           "odds_decimal": null
         },
@@ -10292,9 +10292,9 @@ window.racecardsData = {
           "trainer_id": "trn_139968",
           "trainer_location": "Basford, Staffs",
           "trainer_14_days": {
-            "runs": "24",
+            "runs": "23",
             "wins": "8",
-            "percent": "33"
+            "percent": "35"
           },
           "owner": "James Paul Services To Industry Ltd",
           "owner_id": "own_1390336",
@@ -10343,7 +10343,7 @@ window.racecardsData = {
           "last_run": "11",
           "form": "-060P6",
           "trainer_rtf": "50",
-          "score": 74.115,
+          "score": 75.315,
           "odds_fractional": "12/1",
           "odds_decimal": null
         },
@@ -11547,7 +11547,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "",
       "prize": "€5,900",
-      "field_size": "11",
+      "field_size": "9",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -11952,7 +11952,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "6",
+          "number": "NR",
           "draw": "0",
           "headgear": "t",
           "headgear_run": "",
@@ -12300,7 +12300,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "12",
+          "number": "NR",
           "draw": "0",
           "headgear": "",
           "headgear_run": "",
@@ -12344,7 +12344,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "0-100",
       "prize": "€5,900",
-      "field_size": "14",
+      "field_size": "11",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -12601,7 +12601,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "4",
+          "number": "NR",
           "draw": "",
           "headgear": "",
           "headgear_run": "",
@@ -12669,7 +12669,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "5",
+          "number": "NR",
           "draw": "",
           "headgear": "",
           "headgear_run": "",
@@ -12876,7 +12876,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "8",
+          "number": "NR",
           "draw": "",
           "headgear": "p",
           "headgear_run": "",
@@ -16669,7 +16669,7 @@ window.racecardsData = {
       "age_band": "3yo",
       "rating_band": "",
       "prize": "€7,670",
-      "field_size": "14",
+      "field_size": "12",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -16844,7 +16844,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "3",
+          "number": "NR",
           "draw": "11",
           "headgear": "h",
           "headgear_run": "",
@@ -16970,7 +16970,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "5",
+          "number": "NR",
           "draw": "2",
           "headgear": "tp",
           "headgear_run": "1",
@@ -17555,7 +17555,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "",
       "prize": "€11,800",
-      "field_size": "12",
+      "field_size": "11",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -18431,7 +18431,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/b/8/5/119658b.svg",
           "last_run": "301",
           "form": "23165-",
-          "trainer_rtf": "44",
+          "trainer_rtf": "56",
           "score": -229.035,
           "odds_fractional": "40/1",
           "odds_decimal": null
@@ -18568,7 +18568,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "11",
+          "number": "NR",
           "draw": "2",
           "headgear": "t",
           "headgear_run": "",
