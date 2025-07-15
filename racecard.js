@@ -122,6 +122,7 @@ function renderRace(race, allRaces, whichDay) {
               <span class="runner-jockey">${r.jockey || ''}</span>
               <span class="runner-meta-separator">|</span>
               <span class="runner-trainer">${r.trainer || ''}</span>
+              ${r.past_results_flags && r.past_results_flags.length > 0 ? `<span class="runner-meta-separator">•</span><b class="runner-flags">${r.past_results_flags.join(', ')}</b>` : ''}
             </div>
             <div class="runner-info-line">
               RPR <b class="runner-rpr">${r.rpr || '-'}</b>

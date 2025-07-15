@@ -796,3 +796,32 @@ main {
 }
 .non-runner-num { color: #fa8; font-weight: bold; margin-right: 0.6em;}
 .non-runner-horse { margin-right: 1em; }
+
+
+/* Existing CSS for .runner-info-line b */
+.runner-info-line b {
+  color: var(--color-main-text);
+  font-weight: 700;
+}
+
+/* NEW: Specific styling for past_results_flags */
+.runner-flags {
+  /* Using --color-accent-blue or a custom flag color */
+  color: #c0f0ff; /* A lighter, more distinct blue/cyan */
+  background: #25333f; /* Darker background to make text pop */
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-size: 0.9em; /* Slightly smaller than other info line text */
+  font-weight: 800; /* Bolder to stand out */
+  letter-spacing: 0.02em;
+  white-space: nowrap; /* Keep flags on one line */
+  border: 1px solid #3c526a; /* A subtle border */
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3); /* Soft inner shadow */
+}
+
+/* You might want to make sure the gap in .runner-info-line is sufficient
+   if you add many flags or longer flags */
+.runner-info-line {
+  /* ... existing styles ... */
+  gap: 0.57em 0.95em; /* Ensure enough space between items */
+}
