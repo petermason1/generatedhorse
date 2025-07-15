@@ -21433,7 +21433,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "10",
+          "number": "NR",
           "draw": "10",
           "headgear": "t",
           "headgear_run": "",
