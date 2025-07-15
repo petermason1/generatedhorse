@@ -77,7 +77,7 @@ console.log('tips.js: Script started.');
   }
 
   // === Tipster picks ===
-  const michaelsTips = ["cosmic clarets", "roadshow", "gore point", "penelope's sister"];
+  const michaelsTips = ["jack of clubs", "lastchancezouloon", "King Of The Jungle", "Coeur Jaune"];
   const chrisTips    = ["homeland", "spanish temptress", "Elana Osario", "langholm"];
   const peterTips    = ["without flaw", "Park Street","Yes Oui Si", "Glory Fighter"];
   const kenTips      = ["gortmore lady", "this years love", "atmosphere", "daaris"];
