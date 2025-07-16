@@ -79,9 +79,9 @@ console.log('tips.js: Script started.');
   // === Tipster picks ===
   const michaelsTips = ["jack of clubs", "lastchancezouloon", "King Of The Jungle", "Coeur Jaune"];
   const chrisTips    = ["homeland", "spanish temptress", "Elana Osario", "langholm"];
-  const peterTips    = ["without flaw", "Park Street","Yes Oui Si", "Glory Fighter"];
+  const peterTips = ["Sisters In The Sky", "Little Chief", "Crown Of India", "He Bangs The Drums"];
   const kenTips      = ["gortmore lady", "this years love", "atmosphere", "daaris"];
-  const racingPostTips = ["Oiche Rua", "Miss Yorkshire", "Lady Of The Garr", "Kamikaz Du Plessis"];
+  const racingPostTips = ["Jet Smart", "Ancient Times", "Bama Lama", "Jimmy Knocker"];
 
 
   // --- Build tipster pick cards, skip non-existent picks ---
