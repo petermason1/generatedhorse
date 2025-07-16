@@ -133,8 +133,8 @@ window.racecardsData = {
           "ofr": "55",
           "rpr": "66",
           "ts": "35",
-          "jockey": "Ray Dawson",
-          "jockey_id": "jky_266394",
+          "jockey": "Joe Leavy",
+          "jockey_id": "jky_303777",
           "silk_url": "https://www.rp-assets.com/svg/b/6/9/240196b.svg",
           "last_run": "8",
           "form": "4581",
@@ -166,7 +166,7 @@ window.racecardsData = {
       "age_band": "2yo",
       "rating_band": "",
       "prize": "£3,672",
-      "field_size": "11",
+      "field_size": "8",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -381,7 +381,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "4",
+          "number": "NR",
           "draw": "5",
           "headgear": "",
           "headgear_run": "",
@@ -456,7 +456,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/c/2/9/212992c.svg",
           "last_run": "",
           "form": "",
-          "trainer_rtf": "57",
+          "trainer_rtf": "64",
           "score": -50.7,
           "odds_fractional": "40/1",
           "odds_decimal": null
@@ -725,7 +725,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "10",
+          "number": "NR",
           "draw": "9",
           "headgear": "",
           "headgear_run": "",
@@ -782,7 +782,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "11",
+          "number": "NR",
           "draw": "11",
           "headgear": "",
           "headgear_run": "",
@@ -826,7 +826,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "0-55",
       "prize": "£3,454",
-      "field_size": "15",
+      "field_size": "13",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -913,7 +913,7 @@ window.racecardsData = {
           "silk_url": "https://www.rp-assets.com/svg/1/3/1/336131.svg",
           "last_run": "23",
           "form": "429970",
-          "trainer_rtf": "54",
+          "trainer_rtf": "57",
           "score": 41.185,
           "odds_fractional": "5/1",
           "odds_decimal": null
@@ -979,8 +979,8 @@ window.racecardsData = {
           "ofr": "55",
           "rpr": "65",
           "ts": "49",
-          "jockey": "Ray Dawson",
-          "jockey_id": "jky_266394",
+          "jockey": "Joe Leavy",
+          "jockey_id": "jky_303777",
           "silk_url": "https://www.rp-assets.com/svg/1/7/8/122871.svg",
           "last_run": "6",
           "form": "384510",
@@ -1126,7 +1126,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "4",
+          "number": "NR",
           "draw": "14",
           "headgear": "h",
           "headgear_run": "",
@@ -1294,7 +1294,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "6",
+          "number": "NR",
           "draw": "7",
           "headgear": "",
           "headgear_run": "",
@@ -2142,7 +2142,7 @@ window.racecardsData = {
           "form": "4-7442",
           "trainer_rtf": "33",
           "score": 35.935,
-          "odds_fractional": "15/2",
+          "odds_fractional": "6/1",
           "odds_decimal": null
         },
         {
@@ -2199,7 +2199,7 @@ window.racecardsData = {
           "form": "97941",
           "trainer_rtf": "73",
           "score": 48.82,
-          "odds_fractional": "8/11",
+          "odds_fractional": "10/11",
           "odds_decimal": null
         },
         {
@@ -2332,7 +2332,7 @@ window.racecardsData = {
           "form": "-43221",
           "trainer_rtf": "60",
           "score": 46.45,
-          "odds_fractional": "5/2",
+          "odds_fractional": "9/4",
           "odds_decimal": null
         }
       ],
@@ -2431,7 +2431,7 @@ window.racecardsData = {
           "form": "739",
           "trainer_rtf": "",
           "score": 24.235,
-          "odds_fractional": "20/1",
+          "odds_fractional": "40/1",
           "odds_decimal": null
         },
         {
@@ -2499,7 +2499,7 @@ window.racecardsData = {
           "form": "299122",
           "trainer_rtf": "38",
           "score": 38.41,
-          "odds_fractional": "8/1",
+          "odds_fractional": "15/2",
           "odds_decimal": null
         },
         {
@@ -2578,7 +2578,7 @@ window.racecardsData = {
           "form": "78-281",
           "trainer_rtf": "75",
           "score": 37.21,
-          "odds_fractional": "6/1",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -2774,7 +2774,7 @@ window.racecardsData = {
           "form": "-09676",
           "trainer_rtf": "56",
           "score": 34.13,
-          "odds_fractional": "22/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         },
         {
@@ -2907,7 +2907,7 @@ window.racecardsData = {
           "form": "70-501",
           "trainer_rtf": "50",
           "score": 35.465,
-          "odds_fractional": "11/2",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -2981,7 +2981,7 @@ window.racecardsData = {
           "form": "-05251",
           "trainer_rtf": "44",
           "score": 36.94,
-          "odds_fractional": "5/2",
+          "odds_fractional": "57/17",
           "odds_decimal": null
         },
         {
@@ -3042,7 +3042,7 @@ window.racecardsData = {
           "form": "68-606",
           "trainer_rtf": "67",
           "score": 29.025,
-          "odds_fractional": "50/1",
+          "odds_fractional": "66/1",
           "odds_decimal": null
         },
         {
@@ -3105,7 +3105,7 @@ window.racecardsData = {
           "form": "7-8672",
           "trainer_rtf": "57",
           "score": 53.035,
-          "odds_fractional": "10/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -3168,7 +3168,7 @@ window.racecardsData = {
           "form": "6-0062",
           "trainer_rtf": "50",
           "score": 52.27,
-          "odds_fractional": "4/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -3225,7 +3225,7 @@ window.racecardsData = {
           "form": "0098",
           "trainer_rtf": "52",
           "score": 14.965,
-          "odds_fractional": "10/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         }
       ],
@@ -3340,7 +3340,7 @@ window.racecardsData = {
           "form": "356169",
           "trainer_rtf": "44",
           "score": 32.105,
-          "odds_fractional": "15/2",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -3434,7 +3434,7 @@ window.racecardsData = {
           "form": "8-4543",
           "trainer_rtf": "44",
           "score": 36.105,
-          "odds_fractional": "11/4",
+          "odds_fractional": "9/4",
           "odds_decimal": null
         },
         {
@@ -3497,7 +3497,7 @@ window.racecardsData = {
           "form": "380261",
           "trainer_rtf": "67",
           "score": 36.985,
-          "odds_fractional": "5/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -3556,7 +3556,7 @@ window.racecardsData = {
           "form": "06-884",
           "trainer_rtf": "",
           "score": 22.785,
-          "odds_fractional": "NR",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -3618,14 +3618,14 @@ window.racecardsData = {
           "ofr": "54",
           "rpr": "62",
           "ts": "51",
-          "jockey": "Ray Dawson",
-          "jockey_id": "jky_266394",
+          "jockey": "J F Egan",
+          "jockey_id": "jky_7368",
           "silk_url": "https://www.rp-assets.com/svg/0/9/1/358190.svg",
           "last_run": "5",
           "form": "554244",
           "trainer_rtf": "54",
           "score": 50.575,
-          "odds_fractional": "9/2",
+          "odds_fractional": "57/17",
           "odds_decimal": null
         },
         {
@@ -3789,7 +3789,7 @@ window.racecardsData = {
           "form": "-60433",
           "trainer_rtf": "",
           "score": 35.99,
-          "odds_fractional": "11/2",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -3863,7 +3863,7 @@ window.racecardsData = {
           "form": "605435",
           "trainer_rtf": "60",
           "score": 57.325,
-          "odds_fractional": "9/1",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -3932,7 +3932,7 @@ window.racecardsData = {
           "form": "807056",
           "trainer_rtf": "50",
           "score": 20.83,
-          "odds_fractional": "40/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         }
       ],
@@ -3958,12 +3958,12 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "0-70",
       "prize": "£3,974",
-      "field_size": "8",
+      "field_size": "7",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -4037,7 +4037,7 @@ window.racecardsData = {
           "form": "1470-0",
           "trainer_rtf": "50",
           "score": -20.775,
-          "odds_fractional": "20/1",
+          "odds_fractional": "40/1",
           "odds_decimal": null
         },
         {
@@ -4150,7 +4150,7 @@ window.racecardsData = {
           "form": "275350",
           "trainer_rtf": "52",
           "score": 44.235,
-          "odds_fractional": "5/1",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -4221,7 +4221,7 @@ window.racecardsData = {
           "form": "-12416",
           "trainer_rtf": "38",
           "score": 37.805,
-          "odds_fractional": "7/1",
+          "odds_fractional": "5/1",
           "odds_decimal": null
         },
         {
@@ -4292,7 +4292,7 @@ window.racecardsData = {
           "form": "415222",
           "trainer_rtf": "44",
           "score": 42.33,
-          "odds_fractional": "17/8",
+          "odds_fractional": "11/10",
           "odds_decimal": null
         },
         {
@@ -4348,7 +4348,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "5",
+          "number": "NR",
           "draw": "3",
           "headgear": "",
           "headgear_run": "",
@@ -4368,7 +4368,7 @@ window.racecardsData = {
           "form": "4-5721",
           "trainer_rtf": "50",
           "score": 45.27,
-          "odds_fractional": "5/2",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -4446,7 +4446,7 @@ window.racecardsData = {
           "form": "-76476",
           "trainer_rtf": "29",
           "score": 32.07,
-          "odds_fractional": "22/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -4530,7 +4530,7 @@ window.racecardsData = {
           "form": "80-578",
           "trainer_rtf": "52",
           "score": 40.72,
-          "odds_fractional": "14/1",
+          "odds_fractional": "16/1",
           "odds_decimal": null
         },
         {
@@ -4613,7 +4613,7 @@ window.racecardsData = {
           "form": "68-088",
           "trainer_rtf": "38",
           "score": 8.15,
-          "odds_fractional": "28/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         }
       ],
@@ -4639,12 +4639,12 @@ window.racecardsData = {
       "age_band": "2yo",
       "rating_band": "0-55",
       "prize": "£4,004",
-      "field_size": "7",
+      "field_size": "6",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -4701,7 +4701,7 @@ window.racecardsData = {
           "form": "3492",
           "trainer_rtf": "45",
           "score": 42.215,
-          "odds_fractional": "4/1",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -4758,7 +4758,7 @@ window.racecardsData = {
           "form": "4582",
           "trainer_rtf": "61",
           "score": 42.9,
-          "odds_fractional": "13/8",
+          "odds_fractional": "11/10",
           "odds_decimal": null
         },
         {
@@ -4815,7 +4815,7 @@ window.racecardsData = {
           "form": "757",
           "trainer_rtf": "78",
           "score": 20.475,
-          "odds_fractional": "4/1",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -4854,7 +4854,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "4",
+          "number": "NR",
           "draw": "4",
           "headgear": "",
           "headgear_run": "",
@@ -4872,7 +4872,7 @@ window.racecardsData = {
           "form": "026741",
           "trainer_rtf": "49",
           "score": 52.37,
-          "odds_fractional": "7/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -4929,7 +4929,7 @@ window.racecardsData = {
           "form": "964",
           "trainer_rtf": "39",
           "score": 46.01,
-          "odds_fractional": "8/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -4986,7 +4986,7 @@ window.racecardsData = {
           "form": "0676",
           "trainer_rtf": "50",
           "score": 33.895,
-          "odds_fractional": "50/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         },
         {
@@ -5049,7 +5049,7 @@ window.racecardsData = {
           "form": "860",
           "trainer_rtf": "",
           "score": 24.78,
-          "odds_fractional": "10/1",
+          "odds_fractional": "22/1",
           "odds_decimal": null
         }
       ],
@@ -5080,7 +5080,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -5154,7 +5154,7 @@ window.racecardsData = {
           "form": "10",
           "trainer_rtf": "33",
           "score": 45.185,
-          "odds_fractional": "10/11",
+          "odds_fractional": "16/19",
           "odds_decimal": null
         },
         {
@@ -5211,7 +5211,7 @@ window.racecardsData = {
           "form": "90",
           "trainer_rtf": "57",
           "score": 22.9,
-          "odds_fractional": "50/1",
+          "odds_fractional": "66/1",
           "odds_decimal": null
         },
         {
@@ -5268,7 +5268,7 @@ window.racecardsData = {
           "form": "65",
           "trainer_rtf": "82",
           "score": 41.325,
-          "odds_fractional": "18/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         },
         {
@@ -5325,7 +5325,7 @@ window.racecardsData = {
           "form": "99",
           "trainer_rtf": "28",
           "score": 22.915,
-          "odds_fractional": "200/1",
+          "odds_fractional": "250/1",
           "odds_decimal": null
         },
         {
@@ -5388,7 +5388,7 @@ window.racecardsData = {
           "form": "04",
           "trainer_rtf": "28",
           "score": 34.565,
-          "odds_fractional": "33/1",
+          "odds_fractional": "16/1",
           "odds_decimal": null
         },
         {
@@ -5457,7 +5457,7 @@ window.racecardsData = {
           "form": "67",
           "trainer_rtf": "25",
           "score": 36.665,
-          "odds_fractional": "100/1",
+          "odds_fractional": "200/1",
           "odds_decimal": null
         },
         {
@@ -5573,7 +5573,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "41",
           "score": -66.9,
-          "odds_fractional": "18/1",
+          "odds_fractional": "20/1",
           "odds_decimal": null
         },
         {
@@ -5630,7 +5630,7 @@ window.racecardsData = {
           "form": "63",
           "trainer_rtf": "60",
           "score": 29.57,
-          "odds_fractional": "12/1",
+          "odds_fractional": null,
           "odds_decimal": null
         }
       ],
@@ -5661,7 +5661,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -5821,7 +5821,7 @@ window.racecardsData = {
           "form": "466998",
           "trainer_rtf": "29",
           "score": 39.14,
-          "odds_fractional": "28/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -5886,7 +5886,7 @@ window.racecardsData = {
           "form": "447286",
           "trainer_rtf": "50",
           "score": 47.995,
-          "odds_fractional": "8/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -5956,7 +5956,7 @@ window.racecardsData = {
           "form": "7-0968",
           "trainer_rtf": "47",
           "score": 39.07,
-          "odds_fractional": "12/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -6050,7 +6050,7 @@ window.racecardsData = {
           "form": "756146",
           "trainer_rtf": "53",
           "score": 56.445,
-          "odds_fractional": "17/2",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -6182,7 +6182,7 @@ window.racecardsData = {
           "form": "262224",
           "trainer_rtf": "60",
           "score": 41.525,
-          "odds_fractional": "9/2",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -6253,7 +6253,7 @@ window.racecardsData = {
           "form": "714212",
           "trainer_rtf": "82",
           "score": 57.865,
-          "odds_fractional": "10/3",
+          "odds_fractional": "7/1",
           "odds_decimal": null
         },
         {
@@ -6317,7 +6317,7 @@ window.racecardsData = {
           "form": "9-3778",
           "trainer_rtf": "19",
           "score": 40.71,
-          "odds_fractional": "16/1",
+          "odds_fractional": "11/1",
           "odds_decimal": null
         }
       ],
@@ -6343,12 +6343,12 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "0-80",
       "prize": "£5,234",
-      "field_size": "7",
+      "field_size": "6",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -6415,7 +6415,7 @@ window.racecardsData = {
           "form": "122127",
           "trainer_rtf": "57",
           "score": 58.48,
-          "odds_fractional": "11/2",
+          "odds_fractional": "13/5",
           "odds_decimal": null
         },
         {
@@ -6495,7 +6495,7 @@ window.racecardsData = {
           "form": "113067",
           "trainer_rtf": "56",
           "score": 51.9,
-          "odds_fractional": "9/1",
+          "odds_fractional": "14/1",
           "odds_decimal": null
         },
         {
@@ -6628,7 +6628,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "4",
+          "number": "NR",
           "draw": "5",
           "headgear": "t",
           "headgear_run": "",
@@ -6648,7 +6648,7 @@ window.racecardsData = {
           "form": "4-1212",
           "trainer_rtf": "75",
           "score": 53.66,
-          "odds_fractional": "4/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -6719,7 +6719,7 @@ window.racecardsData = {
           "form": "80-908",
           "trainer_rtf": "39",
           "score": 55.03,
-          "odds_fractional": "16/1",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -6780,7 +6780,7 @@ window.racecardsData = {
           "form": "2-1575",
           "trainer_rtf": "67",
           "score": 53.91,
-          "odds_fractional": "11/4",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -6852,7 +6852,7 @@ window.racecardsData = {
           "form": "-28424",
           "trainer_rtf": "49",
           "score": 62.5,
-          "odds_fractional": "6/1",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         }
       ],
@@ -6883,7 +6883,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -6962,7 +6962,7 @@ window.racecardsData = {
           "form": "515464",
           "trainer_rtf": "49",
           "score": 60.475,
-          "odds_fractional": "13/2",
+          "odds_fractional": "5/1",
           "odds_decimal": null
         },
         {
@@ -7050,7 +7050,7 @@ window.racecardsData = {
           "form": "300206",
           "trainer_rtf": "56",
           "score": 49.73,
-          "odds_fractional": "40/1",
+          "odds_fractional": "50/1",
           "odds_decimal": null
         },
         {
@@ -7122,7 +7122,7 @@ window.racecardsData = {
           "form": "962228",
           "trainer_rtf": "39",
           "score": 52.905,
-          "odds_fractional": "5/1",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -7199,7 +7199,7 @@ window.racecardsData = {
           "form": "-18364",
           "trainer_rtf": "50",
           "score": 48.995,
-          "odds_fractional": "14/1",
+          "odds_fractional": "16/1",
           "odds_decimal": null
         },
         {
@@ -7273,7 +7273,7 @@ window.racecardsData = {
           "form": "6-5431",
           "trainer_rtf": "57",
           "score": 52.55,
-          "odds_fractional": "14/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -7334,7 +7334,7 @@ window.racecardsData = {
           "form": "531-73",
           "trainer_rtf": "67",
           "score": 51.37,
-          "odds_fractional": "9/4",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -7399,7 +7399,7 @@ window.racecardsData = {
           "form": "0-9697",
           "trainer_rtf": "41",
           "score": 49.035,
-          "odds_fractional": "3/1",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -7473,7 +7473,7 @@ window.racecardsData = {
           "form": "507564",
           "trainer_rtf": "60",
           "score": 44.8,
-          "odds_fractional": "10/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -7530,7 +7530,7 @@ window.racecardsData = {
           "form": "-62126",
           "trainer_rtf": "82",
           "score": 65.125,
-          "odds_fractional": "28/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -7587,7 +7587,7 @@ window.racecardsData = {
           "form": "5355",
           "trainer_rtf": "61",
           "score": 54.87,
-          "odds_fractional": "16/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         }
       ],
@@ -7675,7 +7675,7 @@ window.racecardsData = {
           "form": "5",
           "trainer_rtf": "67",
           "score": 18.385,
-          "odds_fractional": "20/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -7732,7 +7732,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "38",
           "score": -74.3,
-          "odds_fractional": "125/1",
+          "odds_fractional": "150/1",
           "odds_decimal": null
         },
         {
@@ -7789,7 +7789,7 @@ window.racecardsData = {
           "form": "82",
           "trainer_rtf": "57",
           "score": 47.59,
-          "odds_fractional": "11/10",
+          "odds_fractional": "4/5",
           "odds_decimal": null
         },
         {
@@ -7903,7 +7903,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "45",
           "score": -64.7,
-          "odds_fractional": "13/2",
+          "odds_fractional": "16/1",
           "odds_decimal": null
         },
         {
@@ -7960,7 +7960,7 @@ window.racecardsData = {
           "form": "8",
           "trainer_rtf": "29",
           "score": 10.195,
-          "odds_fractional": "5/1",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -8017,7 +8017,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "50",
           "score": -55.1,
-          "odds_fractional": "10/1",
+          "odds_fractional": "20/1",
           "odds_decimal": null
         },
         {
@@ -8074,7 +8074,7 @@ window.racecardsData = {
           "form": "7",
           "trainer_rtf": "52",
           "score": 15.78,
-          "odds_fractional": "20/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         },
         {
@@ -8131,7 +8131,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "55",
           "score": -61.9,
-          "odds_fractional": "9/1",
+          "odds_fractional": "17/2",
           "odds_decimal": null
         },
         {
@@ -8188,7 +8188,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "63",
           "score": -74.3,
-          "odds_fractional": "8/1",
+          "odds_fractional": "14/1",
           "odds_decimal": null
         },
         {
@@ -8245,7 +8245,7 @@ window.racecardsData = {
           "form": "50",
           "trainer_rtf": "50",
           "score": 16.84,
-          "odds_fractional": "66/1",
+          "odds_fractional": "50/1",
           "odds_decimal": null
         }
       ],
@@ -8271,7 +8271,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "",
       "prize": "£3,888",
-      "field_size": "6",
+      "field_size": "5",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -8333,7 +8333,7 @@ window.racecardsData = {
           "form": "50",
           "trainer_rtf": "50",
           "score": 20.425,
-          "odds_fractional": "200/1",
+          "odds_fractional": "150/1",
           "odds_decimal": null
         },
         {
@@ -8405,7 +8405,7 @@ window.racecardsData = {
           "form": "3-",
           "trainer_rtf": "46",
           "score": -365.445,
-          "odds_fractional": "15/8",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -8462,7 +8462,7 @@ window.racecardsData = {
           "form": "66-335",
           "trainer_rtf": "50",
           "score": 71.79,
-          "odds_fractional": "13/8",
+          "odds_fractional": "16/19",
           "odds_decimal": null
         },
         {
@@ -8519,7 +8519,7 @@ window.racecardsData = {
           "form": "2244-9",
           "trainer_rtf": "45",
           "score": 56.545,
-          "odds_fractional": "4/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -8576,7 +8576,7 @@ window.racecardsData = {
           "form": "8-",
           "trainer_rtf": "70",
           "score": -388.01,
-          "odds_fractional": "8/1",
+          "odds_fractional": "10/3",
           "odds_decimal": null
         },
         {
@@ -8615,7 +8615,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "6",
+          "number": "NR",
           "draw": "6",
           "headgear": "",
           "headgear_run": "",
@@ -8633,7 +8633,7 @@ window.racecardsData = {
           "form": "6",
           "trainer_rtf": "75",
           "score": 2.9,
-          "odds_fractional": "16/1",
+          "odds_fractional": null,
           "odds_decimal": null
         }
       ],
@@ -8659,7 +8659,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "0-60",
       "prize": "£3,454",
-      "field_size": "9",
+      "field_size": "7",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -8723,7 +8723,7 @@ window.racecardsData = {
           "form": "-06742",
           "trainer_rtf": "25",
           "score": 41.26,
-          "odds_fractional": "3/1",
+          "odds_fractional": "5/1",
           "odds_decimal": null
         },
         {
@@ -8783,7 +8783,7 @@ window.racecardsData = {
               "type": "Wind Surgery"
             }
           ],
-          "number": "2",
+          "number": "NR",
           "draw": "1",
           "headgear": "b",
           "headgear_run": "",
@@ -8801,7 +8801,7 @@ window.racecardsData = {
           "form": "4946-2",
           "trainer_rtf": "50",
           "score": 41.13,
-          "odds_fractional": "5/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -8860,7 +8860,7 @@ window.racecardsData = {
           "form": "905285",
           "trainer_rtf": "50",
           "score": 47.385,
-          "odds_fractional": "17/2",
+          "odds_fractional": "5/1",
           "odds_decimal": null
         },
         {
@@ -8935,7 +8935,7 @@ window.racecardsData = {
           "form": "973334",
           "trainer_rtf": "40",
           "score": 54.19,
-          "odds_fractional": "11/4",
+          "odds_fractional": "5/2",
           "odds_decimal": null
         },
         {
@@ -8974,7 +8974,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "5",
+          "number": "NR",
           "draw": "8",
           "headgear": "",
           "headgear_run": "",
@@ -8992,7 +8992,7 @@ window.racecardsData = {
           "form": "40-337",
           "trainer_rtf": "67",
           "score": 41.055,
-          "odds_fractional": "16/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -9055,7 +9055,7 @@ window.racecardsData = {
           "form": "527953",
           "trainer_rtf": "25",
           "score": 39.445,
-          "odds_fractional": "12/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -9118,7 +9118,7 @@ window.racecardsData = {
           "form": "-77063",
           "trainer_rtf": "47",
           "score": 56.08,
-          "odds_fractional": "8/1",
+          "odds_fractional": "17/2",
           "odds_decimal": null
         },
         {
@@ -9175,7 +9175,7 @@ window.racecardsData = {
           "form": "7-9328",
           "trainer_rtf": "67",
           "score": 37.865,
-          "odds_fractional": "8/1",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -9264,7 +9264,7 @@ window.racecardsData = {
           "form": "637-64",
           "trainer_rtf": "60",
           "score": 56.165,
-          "odds_fractional": "16/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         }
       ],
@@ -9371,7 +9371,7 @@ window.racecardsData = {
           "form": "2/05-6",
           "trainer_rtf": "60",
           "score": 43.19,
-          "odds_fractional": "20/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -9452,7 +9452,7 @@ window.racecardsData = {
           "form": "44-591",
           "trainer_rtf": "75",
           "score": 41.12,
-          "odds_fractional": "8/11",
+          "odds_fractional": "1/1",
           "odds_decimal": null
         },
         {
@@ -9526,7 +9526,7 @@ window.racecardsData = {
           "form": "34/0-7",
           "trainer_rtf": "60",
           "score": 58.96,
-          "odds_fractional": "12/1",
+          "odds_fractional": "15/2",
           "odds_decimal": null
         },
         {
@@ -9610,7 +9610,7 @@ window.racecardsData = {
           "form": "0-7342",
           "trainer_rtf": "60",
           "score": 63.075,
-          "odds_fractional": "13/8",
+          "odds_fractional": "15/8",
           "odds_decimal": null
         }
       ],
@@ -9636,7 +9636,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "0-68",
       "prize": "£4,187",
-      "field_size": "9",
+      "field_size": "7",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -9680,7 +9680,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "1",
+          "number": "NR",
           "draw": "1",
           "headgear": "t",
           "headgear_run": "",
@@ -9698,7 +9698,7 @@ window.racecardsData = {
           "form": "991-88",
           "trainer_rtf": "57",
           "score": 34.2,
-          "odds_fractional": "14/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -9749,7 +9749,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "2",
+          "number": "NR",
           "draw": "7",
           "headgear": "",
           "headgear_run": "",
@@ -9767,7 +9767,7 @@ window.racecardsData = {
           "form": "39/0-9",
           "trainer_rtf": "100",
           "score": 39.375,
-          "odds_fractional": "40/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -9824,7 +9824,7 @@ window.racecardsData = {
           "form": "060-11",
           "trainer_rtf": "81",
           "score": 73.35,
-          "odds_fractional": "8/11",
+          "odds_fractional": "7/12",
           "odds_decimal": null
         },
         {
@@ -9887,7 +9887,7 @@ window.racecardsData = {
           "form": "-03057",
           "trainer_rtf": "25",
           "score": 39.325,
-          "odds_fractional": "14/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -9984,7 +9984,7 @@ window.racecardsData = {
           "form": "428-0U",
           "trainer_rtf": "60",
           "score": 55.43,
-          "odds_fractional": "33/1",
+          "odds_fractional": "20/1",
           "odds_decimal": null
         },
         {
@@ -10088,7 +10088,7 @@ window.racecardsData = {
           "form": "98-345",
           "trainer_rtf": "100",
           "score": 101.42,
-          "odds_fractional": "25/1",
+          "odds_fractional": "22/1",
           "odds_decimal": null
         },
         {
@@ -10145,7 +10145,7 @@ window.racecardsData = {
           "form": "30-855",
           "trainer_rtf": "67",
           "score": 37.83,
-          "odds_fractional": "12/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -10202,7 +10202,7 @@ window.racecardsData = {
           "form": "2-4334",
           "trainer_rtf": "64",
           "score": 61.285,
-          "odds_fractional": "14/1",
+          "odds_fractional": "22/1",
           "odds_decimal": null
         },
         {
@@ -10261,7 +10261,7 @@ window.racecardsData = {
           "form": "3-3431",
           "trainer_rtf": "67",
           "score": 40.53,
-          "odds_fractional": "11/4",
+          "odds_fractional": "6/1",
           "odds_decimal": null
         }
       ],
@@ -10287,7 +10287,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "0-60",
       "prize": "£3,454",
-      "field_size": "8",
+      "field_size": "6",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -10361,7 +10361,7 @@ window.racecardsData = {
           "form": "0-6685",
           "trainer_rtf": "38",
           "score": 36.095,
-          "odds_fractional": "10/1",
+          "odds_fractional": "15/2",
           "odds_decimal": null
         },
         {
@@ -10424,7 +10424,7 @@ window.racecardsData = {
           "form": "5-776",
           "trainer_rtf": "60",
           "score": 12.0,
-          "odds_fractional": "10/1",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -10483,7 +10483,7 @@ window.racecardsData = {
           "form": "-80748",
           "trainer_rtf": "29",
           "score": 41.4,
-          "odds_fractional": "9/1",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -10572,7 +10572,7 @@ window.racecardsData = {
           "form": "557873",
           "trainer_rtf": "39",
           "score": 49.34,
-          "odds_fractional": "7/2",
+          "odds_fractional": "5/2",
           "odds_decimal": null
         },
         {
@@ -10653,7 +10653,7 @@ window.racecardsData = {
           "form": "36-575",
           "trainer_rtf": "60",
           "score": 62.915,
-          "odds_fractional": "4/1",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -10717,7 +10717,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "6",
+          "number": "NR",
           "draw": "5",
           "headgear": "",
           "headgear_run": "",
@@ -10737,7 +10737,7 @@ window.racecardsData = {
           "form": "407-90",
           "trainer_rtf": "25",
           "score": 18.57,
-          "odds_fractional": "25/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -10776,7 +10776,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "7",
+          "number": "NR",
           "draw": "8",
           "headgear": "",
           "headgear_run": "",
@@ -10794,7 +10794,7 @@ window.racecardsData = {
           "form": "867544",
           "trainer_rtf": "44",
           "score": 34.93,
-          "odds_fractional": "3/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -10863,7 +10863,7 @@ window.racecardsData = {
           "form": "698536",
           "trainer_rtf": "60",
           "score": 59.895,
-          "odds_fractional": "6/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         }
       ],
@@ -10889,7 +10889,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "0-100",
       "prize": "£3,248",
-      "field_size": "11",
+      "field_size": "10",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -10966,7 +10966,7 @@ window.racecardsData = {
           "form": "312/44",
           "trainer_rtf": "82",
           "score": 76.885,
-          "odds_fractional": "4/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -11029,7 +11029,7 @@ window.racecardsData = {
           "form": "1U7/34",
           "trainer_rtf": "75",
           "score": 30.395,
-          "odds_fractional": "7/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -11166,7 +11166,7 @@ window.racecardsData = {
           "form": "652-31",
           "trainer_rtf": "",
           "score": 61.895,
-          "odds_fractional": "4/1",
+          "odds_fractional": "6/1",
           "odds_decimal": null
         },
         {
@@ -11374,7 +11374,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "6",
+          "number": "NR",
           "draw": "0",
           "headgear": "tp",
           "headgear_run": "1",
@@ -11392,7 +11392,7 @@ window.racecardsData = {
           "form": "41-355",
           "trainer_rtf": "40",
           "score": 68.415,
-          "odds_fractional": "14/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -11531,7 +11531,7 @@ window.racecardsData = {
           "form": "582-14",
           "trainer_rtf": "40",
           "score": 67.835,
-          "odds_fractional": "17/2",
+          "odds_fractional": "15/2",
           "odds_decimal": null
         },
         {
@@ -11615,7 +11615,7 @@ window.racecardsData = {
           "form": "4/0-12",
           "trainer_rtf": "44",
           "score": 54.79,
-          "odds_fractional": "17/2",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -11683,7 +11683,7 @@ window.racecardsData = {
           "form": "9443-4",
           "trainer_rtf": "50",
           "score": 9.755,
-          "odds_fractional": "11/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -11752,7 +11752,7 @@ window.racecardsData = {
           "form": "53/P44",
           "trainer_rtf": "",
           "score": 53.895,
-          "odds_fractional": "18/1",
+          "odds_fractional": "14/1",
           "odds_decimal": null
         }
       ],
@@ -11846,7 +11846,7 @@ window.racecardsData = {
           "form": "2-2",
           "trainer_rtf": "",
           "score": 22.75,
-          "odds_fractional": "7/2",
+          "odds_fractional": "57/17",
           "odds_decimal": null
         },
         {
@@ -11903,7 +11903,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "",
           "score": -74.3,
-          "odds_fractional": "66/1",
+          "odds_fractional": "100/1",
           "odds_decimal": null
         },
         {
@@ -12056,7 +12056,7 @@ window.racecardsData = {
           "form": "83",
           "trainer_rtf": "50",
           "score": 43.45,
-          "odds_fractional": "12/1",
+          "odds_fractional": "17/2",
           "odds_decimal": null
         },
         {
@@ -12118,7 +12118,7 @@ window.racecardsData = {
           "form": "0-F7",
           "trainer_rtf": "80",
           "score": 38.5,
-          "odds_fractional": "33/1",
+          "odds_fractional": "125/1",
           "odds_decimal": null
         },
         {
@@ -12189,7 +12189,7 @@ window.racecardsData = {
           "form": "4223-4",
           "trainer_rtf": "69",
           "score": 50.965,
-          "odds_fractional": "10/11",
+          "odds_fractional": "1/1",
           "odds_decimal": null
         },
         {
@@ -12246,7 +12246,7 @@ window.racecardsData = {
           "form": "24",
           "trainer_rtf": "40",
           "score": 32.77,
-          "odds_fractional": "25/1",
+          "odds_fractional": "80/1",
           "odds_decimal": null
         },
         {
@@ -12330,7 +12330,7 @@ window.racecardsData = {
           "form": "4-",
           "trainer_rtf": "40",
           "score": -82.9,
-          "odds_fractional": "125/1",
+          "odds_fractional": "250/1",
           "odds_decimal": null
         },
         {
@@ -12461,7 +12461,7 @@ window.racecardsData = {
           "form": "78-",
           "trainer_rtf": "30",
           "score": -56.95,
-          "odds_fractional": "11/2",
+          "odds_fractional": "7/1",
           "odds_decimal": null
         },
         {
@@ -12535,7 +12535,7 @@ window.racecardsData = {
           "form": "6/33/4",
           "trainer_rtf": "30",
           "score": 27.16,
-          "odds_fractional": "15/2",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -12604,7 +12604,7 @@ window.racecardsData = {
           "form": "P",
           "trainer_rtf": "",
           "score": -2.72,
-          "odds_fractional": "200/1",
+          "odds_fractional": "150/1",
           "odds_decimal": null
         }
       ],
@@ -12728,7 +12728,7 @@ window.racecardsData = {
           "form": "251-1P",
           "trainer_rtf": "",
           "score": 52.475,
-          "odds_fractional": "14/1",
+          "odds_fractional": "22/1",
           "odds_decimal": null
         },
         {
@@ -12847,7 +12847,7 @@ window.racecardsData = {
           "form": "44P2-1",
           "trainer_rtf": "80",
           "score": 58.15,
-          "odds_fractional": "4/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -12922,7 +12922,7 @@ window.racecardsData = {
           "form": "3F5-13",
           "trainer_rtf": "43",
           "score": 73.585,
-          "odds_fractional": "13/2",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -12985,7 +12985,7 @@ window.racecardsData = {
           "form": "14-134",
           "trainer_rtf": "22",
           "score": 71.075,
-          "odds_fractional": "13/2",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -13061,7 +13061,7 @@ window.racecardsData = {
           "form": "136P-5",
           "trainer_rtf": "25",
           "score": 71.355,
-          "odds_fractional": "9/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -13170,7 +13170,7 @@ window.racecardsData = {
           "form": "1O-111",
           "trainer_rtf": "",
           "score": 71.31,
-          "odds_fractional": "7/2",
+          "odds_fractional": "9/4",
           "odds_decimal": null
         },
         {
@@ -13229,7 +13229,7 @@ window.racecardsData = {
           "form": "75-531",
           "trainer_rtf": "100",
           "score": 128.105,
-          "odds_fractional": "4/1",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -13342,7 +13342,7 @@ window.racecardsData = {
           "form": "22314/",
           "trainer_rtf": "75",
           "score": -593.49,
-          "odds_fractional": "20/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         },
         {
@@ -13456,7 +13456,7 @@ window.racecardsData = {
           "form": "4638-6",
           "trainer_rtf": "100",
           "score": 62.01,
-          "odds_fractional": "22/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         }
       ],
@@ -13568,7 +13568,7 @@ window.racecardsData = {
           "form": "36521-",
           "trainer_rtf": "52",
           "score": -158.76,
-          "odds_fractional": "6/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -13645,7 +13645,7 @@ window.racecardsData = {
           "form": "316-13",
           "trainer_rtf": "75",
           "score": 70.615,
-          "odds_fractional": "15/2",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -13796,7 +13796,7 @@ window.racecardsData = {
           "form": "C119-4",
           "trainer_rtf": "75",
           "score": 79.715,
-          "odds_fractional": "12/1",
+          "odds_fractional": "11/1",
           "odds_decimal": null
         },
         {
@@ -13885,7 +13885,7 @@ window.racecardsData = {
           "form": "0-44P1",
           "trainer_rtf": "",
           "score": 66.33,
-          "odds_fractional": "4/1",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -13954,7 +13954,7 @@ window.racecardsData = {
           "form": "4/277-",
           "trainer_rtf": "30",
           "score": -247.98,
-          "odds_fractional": "13/2",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -14052,7 +14052,7 @@ window.racecardsData = {
           "form": "2P1-21",
           "trainer_rtf": "22",
           "score": 53.685,
-          "odds_fractional": "7/1",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -14124,7 +14124,7 @@ window.racecardsData = {
           "form": "1545-2",
           "trainer_rtf": "36",
           "score": 70.615,
-          "odds_fractional": "5/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -14195,7 +14195,7 @@ window.racecardsData = {
           "form": "7444-1",
           "trainer_rtf": "75",
           "score": 60.775,
-          "odds_fractional": "15/2",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         }
       ],
@@ -14312,7 +14312,7 @@ window.racecardsData = {
           "form": "874-13",
           "trainer_rtf": "52",
           "score": 61.75,
-          "odds_fractional": "10/3",
+          "odds_fractional": "4/1",
           "odds_decimal": null
         },
         {
@@ -14383,7 +14383,7 @@ window.racecardsData = {
           "form": "566-43",
           "trainer_rtf": "75",
           "score": 59.325,
-          "odds_fractional": "13/2",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -14479,7 +14479,7 @@ window.racecardsData = {
           "form": "6432P-",
           "trainer_rtf": "40",
           "score": -0.27,
-          "odds_fractional": "11/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -14558,7 +14558,7 @@ window.racecardsData = {
           "form": "24-5",
           "trainer_rtf": "33",
           "score": -18.055,
-          "odds_fractional": "28/1",
+          "odds_fractional": "66/1",
           "odds_decimal": null
         },
         {
@@ -14702,7 +14702,7 @@ window.racecardsData = {
           "form": "233-25",
           "trainer_rtf": "75",
           "score": 41.175,
-          "odds_fractional": "16/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -14782,7 +14782,7 @@ window.racecardsData = {
           "form": "77233-",
           "trainer_rtf": "",
           "score": -10.945,
-          "odds_fractional": "6/1",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -14839,7 +14839,7 @@ window.racecardsData = {
           "form": "/U4-57",
           "trainer_rtf": "44",
           "score": 29.03,
-          "odds_fractional": "33/1",
+          "odds_fractional": "40/1",
           "odds_decimal": null
         },
         {
@@ -14915,7 +14915,7 @@ window.racecardsData = {
           "form": "7705-1",
           "trainer_rtf": "36",
           "score": 53.86,
-          "odds_fractional": "9/2",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -15004,7 +15004,7 @@ window.racecardsData = {
           "form": "7-2F29",
           "trainer_rtf": "20",
           "score": 46.97,
-          "odds_fractional": "22/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         },
         {
@@ -15091,7 +15091,7 @@ window.racecardsData = {
           "form": "0-3243",
           "trainer_rtf": "40",
           "score": 60.85,
-          "odds_fractional": "11/1",
+          "odds_fractional": "14/1",
           "odds_decimal": null
         },
         {
@@ -15180,7 +15180,7 @@ window.racecardsData = {
           "form": "6/6226",
           "trainer_rtf": "29",
           "score": 60.495,
-          "odds_fractional": "14/1",
+          "odds_fractional": "20/1",
           "odds_decimal": null
         },
         {
@@ -15248,7 +15248,7 @@ window.racecardsData = {
           "form": "964-5",
           "trainer_rtf": "50",
           "score": 1.02,
-          "odds_fractional": "40/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         },
         {
@@ -15305,7 +15305,7 @@ window.racecardsData = {
           "form": "587-64",
           "trainer_rtf": "",
           "score": 38.79,
-          "odds_fractional": "28/1",
+          "odds_fractional": "40/1",
           "odds_decimal": null
         }
       ],
@@ -15405,7 +15405,7 @@ window.racecardsData = {
           "form": "1/243-",
           "trainer_rtf": "75",
           "score": -201.55,
-          "odds_fractional": "6/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -15469,7 +15469,7 @@ window.racecardsData = {
           "form": "62-233",
           "trainer_rtf": "50",
           "score": 80.685,
-          "odds_fractional": "6/1",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         },
         {
@@ -15532,7 +15532,7 @@ window.racecardsData = {
           "form": "54P-46",
           "trainer_rtf": "60",
           "score": 55.01,
-          "odds_fractional": "12/1",
+          "odds_fractional": "16/1",
           "odds_decimal": null
         },
         {
@@ -15589,7 +15589,7 @@ window.racecardsData = {
           "form": "0082-8",
           "trainer_rtf": "",
           "score": 16.785,
-          "odds_fractional": "10/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -15672,7 +15672,7 @@ window.racecardsData = {
           "form": "7P7-21",
           "trainer_rtf": "50",
           "score": 48.28,
-          "odds_fractional": "7/1",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -15801,7 +15801,7 @@ window.racecardsData = {
           "form": "441-U5",
           "trainer_rtf": "56",
           "score": 53.85,
-          "odds_fractional": "16/1",
+          "odds_fractional": "22/1",
           "odds_decimal": null
         },
         {
@@ -15900,7 +15900,7 @@ window.racecardsData = {
           "form": "35/75-",
           "trainer_rtf": "75",
           "score": -287.23,
-          "odds_fractional": "5/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -15969,7 +15969,7 @@ window.racecardsData = {
           "form": "8/73/4",
           "trainer_rtf": "",
           "score": 38.68,
-          "odds_fractional": "12/1",
+          "odds_fractional": "14/1",
           "odds_decimal": null
         },
         {
@@ -16075,7 +16075,7 @@ window.racecardsData = {
           "form": "22-225",
           "trainer_rtf": "75",
           "score": 68.11,
-          "odds_fractional": "16/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -16159,7 +16159,7 @@ window.racecardsData = {
           "form": "0020-1",
           "trainer_rtf": "",
           "score": 41.185,
-          "odds_fractional": "17/2",
+          "odds_fractional": "11/1",
           "odds_decimal": null
         },
         {
@@ -16295,7 +16295,7 @@ window.racecardsData = {
           "form": "B27-64",
           "trainer_rtf": "75",
           "score": 59.615,
-          "odds_fractional": "12/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -16352,7 +16352,7 @@ window.racecardsData = {
           "form": "5990-4",
           "trainer_rtf": "75",
           "score": 42.905,
-          "odds_fractional": "33/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         },
         {
@@ -16409,7 +16409,7 @@ window.racecardsData = {
           "form": "94-085",
           "trainer_rtf": "",
           "score": 45.84,
-          "odds_fractional": "33/1",
+          "odds_fractional": "50/1",
           "odds_decimal": null
         },
         {
@@ -16483,7 +16483,7 @@ window.racecardsData = {
           "form": "456-86",
           "trainer_rtf": "",
           "score": 32.535,
-          "odds_fractional": "100/1",
+          "odds_fractional": "200/1",
           "odds_decimal": null
         }
       ],
@@ -16514,7 +16514,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good To Firm",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -16577,7 +16577,7 @@ window.racecardsData = {
           "form": "61-906",
           "trainer_rtf": "47",
           "score": 48.585,
-          "odds_fractional": "9/1",
+          "odds_fractional": "15/2",
           "odds_decimal": null
         },
         {
@@ -16648,7 +16648,7 @@ window.racecardsData = {
           "form": "492537",
           "trainer_rtf": "50",
           "score": 47.93,
-          "odds_fractional": "5/1",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -16731,7 +16731,7 @@ window.racecardsData = {
           "form": "933151",
           "trainer_rtf": "63",
           "score": 60.745,
-          "odds_fractional": "2/1",
+          "odds_fractional": "7/2",
           "odds_decimal": null
         },
         {
@@ -16796,7 +16796,7 @@ window.racecardsData = {
           "form": "02-816",
           "trainer_rtf": "44",
           "score": 47.355,
-          "odds_fractional": "10/3",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -16865,7 +16865,7 @@ window.racecardsData = {
           "form": "052-34",
           "trainer_rtf": "44",
           "score": 37.36,
-          "odds_fractional": "12/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -16922,7 +16922,7 @@ window.racecardsData = {
           "form": "539353",
           "trainer_rtf": "60",
           "score": 46.115,
-          "odds_fractional": "4/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         }
       ],
@@ -16953,7 +16953,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good To Firm",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -17012,7 +17012,7 @@ window.racecardsData = {
           "form": "7",
           "trainer_rtf": "67",
           "score": 26.445,
-          "odds_fractional": "20/1",
+          "odds_fractional": "18/1",
           "odds_decimal": null
         },
         {
@@ -17069,7 +17069,7 @@ window.racecardsData = {
           "form": "4",
           "trainer_rtf": "60",
           "score": 25.28,
-          "odds_fractional": "9/2",
+          "odds_fractional": "4/1",
           "odds_decimal": null
         },
         {
@@ -17128,7 +17128,7 @@ window.racecardsData = {
           "form": "6",
           "trainer_rtf": "53",
           "score": 3.7,
-          "odds_fractional": "11/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -17185,7 +17185,7 @@ window.racecardsData = {
           "form": "86",
           "trainer_rtf": "44",
           "score": 25.94,
-          "odds_fractional": "33/1",
+          "odds_fractional": "66/1",
           "odds_decimal": null
         },
         {
@@ -17242,7 +17242,7 @@ window.racecardsData = {
           "form": "622",
           "trainer_rtf": "57",
           "score": 64.73,
-          "odds_fractional": "4/6",
+          "odds_fractional": "16/19",
           "odds_decimal": null
         },
         {
@@ -17299,7 +17299,7 @@ window.racecardsData = {
           "form": "5",
           "trainer_rtf": "33",
           "score": 15.73,
-          "odds_fractional": "28/1",
+          "odds_fractional": "66/1",
           "odds_decimal": null
         },
         {
@@ -17356,7 +17356,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "100",
           "score": -74.3,
-          "odds_fractional": "50/1",
+          "odds_fractional": "66/1",
           "odds_decimal": null
         },
         {
@@ -17413,7 +17413,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "81",
           "score": -55.9,
-          "odds_fractional": "5/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         }
       ],
@@ -17444,7 +17444,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good To Firm",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -17503,7 +17503,7 @@ window.racecardsData = {
           "form": "6222",
           "trainer_rtf": "53",
           "score": 47.68,
-          "odds_fractional": "5/1",
+          "odds_fractional": "7/1",
           "odds_decimal": null
         },
         {
@@ -17617,7 +17617,7 @@ window.racecardsData = {
           "form": "93",
           "trainer_rtf": "31",
           "score": 29.785,
-          "odds_fractional": "18/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         },
         {
@@ -17676,7 +17676,7 @@ window.racecardsData = {
           "form": "2-33",
           "trainer_rtf": "70",
           "score": 71.66,
-          "odds_fractional": "8/15",
+          "odds_fractional": "1/3",
           "odds_decimal": null
         },
         {
@@ -17733,7 +17733,7 @@ window.racecardsData = {
           "form": "88",
           "trainer_rtf": "80",
           "score": 19.02,
-          "odds_fractional": "40/1",
+          "odds_fractional": "80/1",
           "odds_decimal": null
         },
         {
@@ -17790,7 +17790,7 @@ window.racecardsData = {
           "form": "55",
           "trainer_rtf": "25",
           "score": 15.89,
-          "odds_fractional": "66/1",
+          "odds_fractional": "125/1",
           "odds_decimal": null
         },
         {
@@ -17847,7 +17847,7 @@ window.racecardsData = {
           "form": "460",
           "trainer_rtf": "64",
           "score": 48.04,
-          "odds_fractional": "14/1",
+          "odds_fractional": "18/1",
           "odds_decimal": null
         },
         {
@@ -17961,7 +17961,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "58",
           "score": -69.1,
-          "odds_fractional": "25/1",
+          "odds_fractional": "50/1",
           "odds_decimal": null
         },
         {
@@ -18018,7 +18018,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "80",
           "score": -74.3,
-          "odds_fractional": "33/1",
+          "odds_fractional": "40/1",
           "odds_decimal": null
         },
         {
@@ -18075,7 +18075,7 @@ window.racecardsData = {
           "form": "84",
           "trainer_rtf": "50",
           "score": 22.045,
-          "odds_fractional": "40/1",
+          "odds_fractional": "50/1",
           "odds_decimal": null
         }
       ],
@@ -18106,7 +18106,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good To Firm",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -18165,7 +18165,7 @@ window.racecardsData = {
           "form": "170544",
           "trainer_rtf": "",
           "score": 36.73,
-          "odds_fractional": "6/1",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -18234,7 +18234,7 @@ window.racecardsData = {
           "form": "808543",
           "trainer_rtf": "50",
           "score": 32.59,
-          "odds_fractional": "2/1",
+          "odds_fractional": "10/3",
           "odds_decimal": null
         },
         {
@@ -18348,7 +18348,7 @@ window.racecardsData = {
           "form": "187483",
           "trainer_rtf": "40",
           "score": 38.46,
-          "odds_fractional": "7/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -18461,7 +18461,7 @@ window.racecardsData = {
           "form": "432423",
           "trainer_rtf": "",
           "score": 40.57,
-          "odds_fractional": "7/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -18518,7 +18518,7 @@ window.racecardsData = {
           "form": "725274",
           "trainer_rtf": "50",
           "score": 25.215,
-          "odds_fractional": "6/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -18581,7 +18581,7 @@ window.racecardsData = {
           "form": "64-836",
           "trainer_rtf": "29",
           "score": 40.615,
-          "odds_fractional": "22/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -18703,7 +18703,7 @@ window.racecardsData = {
           "form": "0946-9",
           "trainer_rtf": "46",
           "score": 35.095,
-          "odds_fractional": "4/1",
+          "odds_fractional": "15/2",
           "odds_decimal": null
         },
         {
@@ -18762,7 +18762,7 @@ window.racecardsData = {
           "form": "19-370",
           "trainer_rtf": "44",
           "score": -71.205,
-          "odds_fractional": "14/1",
+          "odds_fractional": "16/1",
           "odds_decimal": null
         },
         {
@@ -18825,7 +18825,7 @@ window.racecardsData = {
           "form": "680866",
           "trainer_rtf": "67",
           "score": 34.145,
-          "odds_fractional": "50/1",
+          "odds_fractional": "20/1",
           "odds_decimal": null
         }
       ],
@@ -18856,7 +18856,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good To Firm",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -18915,7 +18915,7 @@ window.racecardsData = {
           "form": "4-5985",
           "trainer_rtf": "100",
           "score": 29.79,
-          "odds_fractional": "11/2",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -19063,7 +19063,7 @@ window.racecardsData = {
           "form": "331455",
           "trainer_rtf": "54",
           "score": 38.1,
-          "odds_fractional": "4/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -19136,7 +19136,7 @@ window.racecardsData = {
           "form": "724335",
           "trainer_rtf": "67",
           "score": 59.065,
-          "odds_fractional": "13/2",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -19193,7 +19193,7 @@ window.racecardsData = {
           "form": "567231",
           "trainer_rtf": "100",
           "score": 33.765,
-          "odds_fractional": "11/4",
+          "odds_fractional": "4/1",
           "odds_decimal": null
         },
         {
@@ -19250,7 +19250,7 @@ window.racecardsData = {
           "form": "90-708",
           "trainer_rtf": "60",
           "score": -25.465,
-          "odds_fractional": "16/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -19318,7 +19318,7 @@ window.racecardsData = {
           "form": "360705",
           "trainer_rtf": "67",
           "score": 37.9,
-          "odds_fractional": "40/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         },
         {
@@ -19375,7 +19375,7 @@ window.racecardsData = {
           "form": "0098",
           "trainer_rtf": "52",
           "score": 30.06,
-          "odds_fractional": "10/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         },
         {
@@ -19432,7 +19432,7 @@ window.racecardsData = {
           "form": "-40856",
           "trainer_rtf": "50",
           "score": 35.85,
-          "odds_fractional": "7/1",
+          "odds_fractional": "11/2",
           "odds_decimal": null
         }
       ],
@@ -19463,7 +19463,7 @@ window.racecardsData = {
       "rail_movements": "",
       "stalls": "",
       "weather": "",
-      "going": "Good To Firm",
+      "going": "Good To Soft",
       "surface": "Turf",
       "runners": [
         {
@@ -19547,7 +19547,7 @@ window.racecardsData = {
           "form": "412-79",
           "trainer_rtf": "56",
           "score": -4.61,
-          "odds_fractional": "15/2",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -19623,7 +19623,7 @@ window.racecardsData = {
           "form": "032232",
           "trainer_rtf": "56",
           "score": 56.425,
-          "odds_fractional": "7/4",
+          "odds_fractional": "11/8",
           "odds_decimal": null
         },
         {
@@ -19803,7 +19803,7 @@ window.racecardsData = {
           "form": "5-8467",
           "trainer_rtf": "",
           "score": 42.085,
-          "odds_fractional": "25/1",
+          "odds_fractional": "40/1",
           "odds_decimal": null
         },
         {
@@ -19860,7 +19860,7 @@ window.racecardsData = {
           "form": "62-23",
           "trainer_rtf": "46",
           "score": 50.27,
-          "odds_fractional": "11/4",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -19917,7 +19917,7 @@ window.racecardsData = {
           "form": "630",
           "trainer_rtf": "50",
           "score": 39.925,
-          "odds_fractional": "15/2",
+          "odds_fractional": "20/1",
           "odds_decimal": null
         },
         {
@@ -20026,7 +20026,7 @@ window.racecardsData = {
           "form": "992334",
           "trainer_rtf": "60",
           "score": 54.635,
-          "odds_fractional": "25/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         },
         {
@@ -20085,7 +20085,7 @@ window.racecardsData = {
           "form": "559625",
           "trainer_rtf": "63",
           "score": 40.01,
-          "odds_fractional": "15/2",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         }
       ],
@@ -20111,7 +20111,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "",
       "prize": "€5,900",
-      "field_size": "13",
+      "field_size": "11",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -20191,7 +20191,7 @@ window.racecardsData = {
           "form": "3-8620",
           "trainer_rtf": "",
           "score": 37.705,
-          "odds_fractional": "18/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -20285,7 +20285,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "2",
+          "number": "NR",
           "draw": "12",
           "headgear": "v",
           "headgear_run": "",
@@ -20305,7 +20305,7 @@ window.racecardsData = {
           "form": "061060",
           "trainer_rtf": "44",
           "score": 40.315,
-          "odds_fractional": "16/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -20379,7 +20379,7 @@ window.racecardsData = {
           "form": "2-6885",
           "trainer_rtf": "28",
           "score": 45.735,
-          "odds_fractional": "14/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -20504,7 +20504,7 @@ window.racecardsData = {
           "form": "332190",
           "trainer_rtf": "50",
           "score": 51.15,
-          "odds_fractional": "5/2",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -20578,7 +20578,7 @@ window.racecardsData = {
           "form": "57-087",
           "trainer_rtf": "28",
           "score": 37.77,
-          "odds_fractional": "40/1",
+          "odds_fractional": "80/1",
           "odds_decimal": null
         },
         {
@@ -20635,7 +20635,7 @@ window.racecardsData = {
           "form": "7-366",
           "trainer_rtf": "70",
           "score": 56.74,
-          "odds_fractional": "10/1",
+          "odds_fractional": "15/2",
           "odds_decimal": null
         },
         {
@@ -20706,7 +20706,7 @@ window.racecardsData = {
           "form": "004003",
           "trainer_rtf": "40",
           "score": 39.63,
-          "odds_fractional": "9/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -20771,7 +20771,7 @@ window.racecardsData = {
           "form": "06873",
           "trainer_rtf": "40",
           "score": 46.075,
-          "odds_fractional": "8/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -20854,7 +20854,7 @@ window.racecardsData = {
           "form": "/00460",
           "trainer_rtf": "62",
           "score": 67.395,
-          "odds_fractional": "3/1",
+          "odds_fractional": "11/4",
           "odds_decimal": null
         },
         {
@@ -20905,7 +20905,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "10",
+          "number": "NR",
           "draw": "4",
           "headgear": "t",
           "headgear_run": "",
@@ -20923,7 +20923,7 @@ window.racecardsData = {
           "form": "-98049",
           "trainer_rtf": "33",
           "score": 48.89,
-          "odds_fractional": "18/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -21024,7 +21024,7 @@ window.racecardsData = {
           "form": "-00006",
           "trainer_rtf": "33",
           "score": 49.175,
-          "odds_fractional": "9/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -21093,7 +21093,7 @@ window.racecardsData = {
           "form": "-09070",
           "trainer_rtf": "",
           "score": 39.95,
-          "odds_fractional": "40/1",
+          "odds_fractional": "100/1",
           "odds_decimal": null
         },
         {
@@ -21150,7 +21150,7 @@ window.racecardsData = {
           "form": "98",
           "trainer_rtf": "14",
           "score": 22.745,
-          "odds_fractional": "50/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         }
       ],
@@ -21176,7 +21176,7 @@ window.racecardsData = {
       "age_band": "2yo",
       "rating_band": "",
       "prize": "€14,750",
-      "field_size": "7",
+      "field_size": "6",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -21238,7 +21238,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "73",
           "score": -61.1,
-          "odds_fractional": "11/4",
+          "odds_fractional": "10/3",
           "odds_decimal": null
         },
         {
@@ -21295,7 +21295,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "53",
           "score": -64.7,
-          "odds_fractional": "14/1",
+          "odds_fractional": "18/1",
           "odds_decimal": null
         },
         {
@@ -21365,7 +21365,7 @@ window.racecardsData = {
           "form": "1",
           "trainer_rtf": "53",
           "score": 44.64,
-          "odds_fractional": "7/4",
+          "odds_fractional": "1/1",
           "odds_decimal": null
         },
         {
@@ -21404,7 +21404,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "4",
+          "number": "NR",
           "draw": "4",
           "headgear": "t",
           "headgear_run": "",
@@ -21424,7 +21424,7 @@ window.racecardsData = {
           "form": "41",
           "trainer_rtf": "73",
           "score": 41.74,
-          "odds_fractional": "5/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -21481,7 +21481,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "44",
           "score": -66.5,
-          "odds_fractional": "14/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -21538,7 +21538,7 @@ window.racecardsData = {
           "form": "9",
           "trainer_rtf": "23",
           "score": 13.885,
-          "odds_fractional": "150/1",
+          "odds_fractional": "125/1",
           "odds_decimal": null
         },
         {
@@ -21595,7 +21595,7 @@ window.racecardsData = {
           "form": "5",
           "trainer_rtf": "65",
           "score": 51.92,
-          "odds_fractional": "7/2",
+          "odds_fractional": "4/1",
           "odds_decimal": null
         }
       ],
@@ -21621,7 +21621,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "",
       "prize": "€8,555",
-      "field_size": "8",
+      "field_size": "7",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -21683,7 +21683,7 @@ window.racecardsData = {
           "form": "",
           "trainer_rtf": "14",
           "score": -74.3,
-          "odds_fractional": "13/2",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -21740,7 +21740,7 @@ window.racecardsData = {
           "form": "0-8",
           "trainer_rtf": "33",
           "score": 23.245,
-          "odds_fractional": "100/1",
+          "odds_fractional": "125/1",
           "odds_decimal": null
         },
         {
@@ -21779,7 +21779,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "3",
+          "number": "NR",
           "draw": "9",
           "headgear": "",
           "headgear_run": "",
@@ -21797,7 +21797,7 @@ window.racecardsData = {
           "form": "43",
           "trainer_rtf": "44",
           "score": 22.76,
-          "odds_fractional": "12/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -21854,7 +21854,7 @@ window.racecardsData = {
           "form": "0",
           "trainer_rtf": "100",
           "score": 17.2,
-          "odds_fractional": "150/1",
+          "odds_fractional": "100/1",
           "odds_decimal": null
         },
         {
@@ -21911,7 +21911,7 @@ window.racecardsData = {
           "form": "23-422",
           "trainer_rtf": "47",
           "score": 18.995,
-          "odds_fractional": "7/2",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -21968,7 +21968,7 @@ window.racecardsData = {
           "form": "2",
           "trainer_rtf": "55",
           "score": 37.155,
-          "odds_fractional": "9/4",
+          "odds_fractional": "15/8",
           "odds_decimal": null
         },
         {
@@ -22025,7 +22025,7 @@ window.racecardsData = {
           "form": "5-4728",
           "trainer_rtf": "44",
           "score": 59.945,
-          "odds_fractional": "5/2",
+          "odds_fractional": "6/4",
           "odds_decimal": null
         },
         {
@@ -22088,7 +22088,7 @@ window.racecardsData = {
           "form": "7-",
           "trainer_rtf": "77",
           "score": -213.64,
-          "odds_fractional": "11/2",
+          "odds_fractional": "4/1",
           "odds_decimal": null
         },
         {
@@ -22157,7 +22157,7 @@ window.racecardsData = {
           "form": "-32568",
           "trainer_rtf": "41",
           "score": 41.445,
-          "odds_fractional": "33/1",
+          "odds_fractional": "40/1",
           "odds_decimal": null
         }
       ],
@@ -22183,7 +22183,7 @@ window.racecardsData = {
       "age_band": "3yo",
       "rating_band": "",
       "prize": "€29,500",
-      "field_size": "13",
+      "field_size": "10",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -22278,7 +22278,7 @@ window.racecardsData = {
           "form": "82-023",
           "trainer_rtf": "53",
           "score": 206.5,
-          "odds_fractional": "16/1",
+          "odds_fractional": "14/1",
           "odds_decimal": null
         },
         {
@@ -22335,7 +22335,7 @@ window.racecardsData = {
           "form": "0-2136",
           "trainer_rtf": "70",
           "score": 206.8,
-          "odds_fractional": "16/1",
+          "odds_fractional": "20/1",
           "odds_decimal": null
         },
         {
@@ -22392,7 +22392,7 @@ window.racecardsData = {
           "form": "5-2758",
           "trainer_rtf": "77",
           "score": 214.4,
-          "odds_fractional": "8/1",
+          "odds_fractional": "9/1",
           "odds_decimal": null
         },
         {
@@ -22460,7 +22460,7 @@ window.racecardsData = {
           "form": "24-234",
           "trainer_rtf": "55",
           "score": 213.2,
-          "odds_fractional": "13/2",
+          "odds_fractional": "15/2",
           "odds_decimal": null
         },
         {
@@ -22516,7 +22516,7 @@ window.racecardsData = {
             }
           ],
           "medical": [],
-          "number": "5",
+          "number": "NR",
           "draw": "4",
           "headgear": "t",
           "headgear_run": "",
@@ -22534,7 +22534,7 @@ window.racecardsData = {
           "form": "166-50",
           "trainer_rtf": "53",
           "score": 191.8,
-          "odds_fractional": "25/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -22590,7 +22590,7 @@ window.racecardsData = {
             }
           ],
           "medical": [],
-          "number": "6",
+          "number": "NR",
           "draw": "5",
           "headgear": "p",
           "headgear_run": "",
@@ -22608,7 +22608,7 @@ window.racecardsData = {
           "form": "5-8558",
           "trainer_rtf": "44",
           "score": 186.9,
-          "odds_fractional": "28/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -22696,7 +22696,7 @@ window.racecardsData = {
           "form": "11-601",
           "trainer_rtf": "69",
           "score": 206.0,
-          "odds_fractional": "16/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -22768,7 +22768,7 @@ window.racecardsData = {
           "form": "214-72",
           "trainer_rtf": "73",
           "score": 224.7,
-          "odds_fractional": "10/11",
+          "odds_fractional": "8/11",
           "odds_decimal": null
         },
         {
@@ -22820,7 +22820,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "9",
+          "number": "NR",
           "draw": "12",
           "headgear": "",
           "headgear_run": "",
@@ -22838,7 +22838,7 @@ window.racecardsData = {
           "form": "888212",
           "trainer_rtf": "50",
           "score": 183.6,
-          "odds_fractional": "66/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -22922,7 +22922,7 @@ window.racecardsData = {
           "form": "3-4110",
           "trainer_rtf": "50",
           "score": 194.7,
-          "odds_fractional": "18/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -22987,7 +22987,7 @@ window.racecardsData = {
           "form": "51-257",
           "trainer_rtf": "77",
           "score": 202.9,
-          "odds_fractional": "22/1",
+          "odds_fractional": "18/1",
           "odds_decimal": null
         },
         {
@@ -23044,7 +23044,7 @@ window.racecardsData = {
           "form": "01-50",
           "trainer_rtf": "50",
           "score": 179.6,
-          "odds_fractional": "50/1",
+          "odds_fractional": "66/1",
           "odds_decimal": null
         },
         {
@@ -23101,7 +23101,7 @@ window.racecardsData = {
           "form": "-22175",
           "trainer_rtf": "53",
           "score": 205.2,
-          "odds_fractional": "9/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         }
       ],
@@ -23127,7 +23127,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "0-60",
       "prize": "€5,900",
-      "field_size": "14",
+      "field_size": "13",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -23279,7 +23279,7 @@ window.racecardsData = {
           "form": "354392",
           "trainer_rtf": "20",
           "score": 30.265,
-          "odds_fractional": "11/4",
+          "odds_fractional": "3/1",
           "odds_decimal": null
         },
         {
@@ -23358,7 +23358,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "3",
+          "number": "NR",
           "draw": "18",
           "headgear": "",
           "headgear_run": "",
@@ -23378,7 +23378,7 @@ window.racecardsData = {
           "form": "0/00-0",
           "trainer_rtf": "67",
           "score": 4.46,
-          "odds_fractional": "40/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -23462,7 +23462,7 @@ window.racecardsData = {
           "form": "00-490",
           "trainer_rtf": "50",
           "score": 24.61,
-          "odds_fractional": "16/1",
+          "odds_fractional": "18/1",
           "odds_decimal": null
         },
         {
@@ -23538,7 +23538,7 @@ window.racecardsData = {
           "form": "77741/",
           "trainer_rtf": "70",
           "score": -1022.84,
-          "odds_fractional": "14/1",
+          "odds_fractional": "12/1",
           "odds_decimal": null
         },
         {
@@ -23612,7 +23612,7 @@ window.racecardsData = {
           "form": "7-45",
           "trainer_rtf": "",
           "score": 26.44,
-          "odds_fractional": "20/1",
+          "odds_fractional": "33/1",
           "odds_decimal": null
         },
         {
@@ -23669,7 +23669,7 @@ window.racecardsData = {
           "form": "620-89",
           "trainer_rtf": "",
           "score": 30.345,
-          "odds_fractional": "11/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -23757,7 +23757,7 @@ window.racecardsData = {
           "form": "08-387",
           "trainer_rtf": "17",
           "score": 36.515,
-          "odds_fractional": "12/1",
+          "odds_fractional": "18/1",
           "odds_decimal": null
         },
         {
@@ -23896,7 +23896,7 @@ window.racecardsData = {
           "form": "900-00",
           "trainer_rtf": "",
           "score": 8.09,
-          "odds_fractional": "66/1",
+          "odds_fractional": "50/1",
           "odds_decimal": null
         },
         {
@@ -23980,7 +23980,7 @@ window.racecardsData = {
           "form": "2008-0",
           "trainer_rtf": "40",
           "score": 34.31,
-          "odds_fractional": "16/1",
+          "odds_fractional": "18/1",
           "odds_decimal": null
         },
         {
@@ -24062,7 +24062,7 @@ window.racecardsData = {
           "form": "9660-1",
           "trainer_rtf": "",
           "score": 19.445,
-          "odds_fractional": "7/1",
+          "odds_fractional": "5/1",
           "odds_decimal": null
         },
         {
@@ -24121,7 +24121,7 @@ window.racecardsData = {
           "form": "00-451",
           "trainer_rtf": "59",
           "score": 46.77,
-          "odds_fractional": "7/2",
+          "odds_fractional": "4/1",
           "odds_decimal": null
         },
         {
@@ -24180,7 +24180,7 @@ window.racecardsData = {
           "form": "555-90",
           "trainer_rtf": "",
           "score": 7.79,
-          "odds_fractional": "12/1",
+          "odds_fractional": "14/1",
           "odds_decimal": null
         },
         {
@@ -24243,7 +24243,7 @@ window.racecardsData = {
           "form": "0-6749",
           "trainer_rtf": "55",
           "score": 39.76,
-          "odds_fractional": "11/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -24307,7 +24307,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "R16",
+          "number": "NR",
           "draw": "13",
           "headgear": "",
           "headgear_run": "",
@@ -24325,7 +24325,7 @@ window.racecardsData = {
           "form": "-02741",
           "trainer_rtf": "100",
           "score": 70.08,
-          "odds_fractional": "13/2",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -24364,7 +24364,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "R17",
+          "number": "NR",
           "draw": "5",
           "headgear": "",
           "headgear_run": "",
@@ -24384,7 +24384,7 @@ window.racecardsData = {
           "form": "-06040",
           "trainer_rtf": "65",
           "score": 36.335,
-          "odds_fractional": "12/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -24459,7 +24459,7 @@ window.racecardsData = {
           ],
           "stable_tour": [],
           "medical": [],
-          "number": "R18",
+          "number": "NR",
           "draw": "1",
           "headgear": "p",
           "headgear_run": "",
@@ -24479,7 +24479,7 @@ window.racecardsData = {
           "form": "005075",
           "trainer_rtf": "50",
           "score": 33.76,
-          "odds_fractional": "40/1",
+          "odds_fractional": null,
           "odds_decimal": null
         }
       ],
@@ -24505,7 +24505,7 @@ window.racecardsData = {
       "age_band": "4yo+",
       "rating_band": "0-60",
       "prize": "€5,900",
-      "field_size": "15",
+      "field_size": "14",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -24575,7 +24575,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "1",
+          "number": "NR",
           "draw": "10",
           "headgear": "",
           "headgear_run": "",
@@ -24593,7 +24593,7 @@ window.racecardsData = {
           "form": "-07051",
           "trainer_rtf": "40",
           "score": 42.64,
-          "odds_fractional": "9/2",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -24656,7 +24656,7 @@ window.racecardsData = {
           "form": "787-07",
           "trainer_rtf": "40",
           "score": 43.105,
-          "odds_fractional": "14/1",
+          "odds_fractional": "11/1",
           "odds_decimal": null
         },
         {
@@ -24721,7 +24721,7 @@ window.racecardsData = {
           "form": "0885-4",
           "trainer_rtf": "28",
           "score": 29.13,
-          "odds_fractional": "9/2",
+          "odds_fractional": "13/2",
           "odds_decimal": null
         },
         {
@@ -24778,7 +24778,7 @@ window.racecardsData = {
           "form": "00400-",
           "trainer_rtf": "",
           "score": -189.495,
-          "odds_fractional": "25/1",
+          "odds_fractional": "50/1",
           "odds_decimal": null
         },
         {
@@ -24857,7 +24857,7 @@ window.racecardsData = {
           "form": "96387-",
           "trainer_rtf": "100",
           "score": -15.44,
-          "odds_fractional": "20/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -25009,7 +25009,7 @@ window.racecardsData = {
           "form": "204830",
           "trainer_rtf": "33",
           "score": 44.11,
-          "odds_fractional": "16/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         },
         {
@@ -25092,7 +25092,7 @@ window.racecardsData = {
           "form": "746783",
           "trainer_rtf": "50",
           "score": 42.73,
-          "odds_fractional": "8/1",
+          "odds_fractional": "9/2",
           "odds_decimal": null
         },
         {
@@ -25161,7 +25161,7 @@ window.racecardsData = {
           "form": "070/56",
           "trainer_rtf": "",
           "score": -42.7,
-          "odds_fractional": "16/1",
+          "odds_fractional": "25/1",
           "odds_decimal": null
         },
         {
@@ -25236,7 +25236,7 @@ window.racecardsData = {
           "form": "90-914",
           "trainer_rtf": "50",
           "score": 27.975,
-          "odds_fractional": "7/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -25293,7 +25293,7 @@ window.racecardsData = {
           "form": "096",
           "trainer_rtf": "",
           "score": 11.85,
-          "odds_fractional": "28/1",
+          "odds_fractional": "80/1",
           "odds_decimal": null
         },
         {
@@ -25400,7 +25400,7 @@ window.racecardsData = {
           "form": "0/60-6",
           "trainer_rtf": "",
           "score": -37.36,
-          "odds_fractional": "40/1",
+          "odds_fractional": "16/1",
           "odds_decimal": null
         },
         {
@@ -25469,7 +25469,7 @@ window.racecardsData = {
           "form": "-50801",
           "trainer_rtf": "67",
           "score": 54.72,
-          "odds_fractional": "11/1",
+          "odds_fractional": "14/1",
           "odds_decimal": null
         },
         {
@@ -25563,7 +25563,7 @@ window.racecardsData = {
           "form": "55363/",
           "trainer_rtf": "",
           "score": -637.17,
-          "odds_fractional": "20/1",
+          "odds_fractional": "22/1",
           "odds_decimal": null
         },
         {
@@ -25660,7 +25660,7 @@ window.racecardsData = {
           "form": "978497",
           "trainer_rtf": "100",
           "score": 31.67,
-          "odds_fractional": "18/1",
+          "odds_fractional": "22/1",
           "odds_decimal": null
         },
         {
@@ -25741,7 +25741,7 @@ window.racecardsData = {
           "form": "-52365",
           "trainer_rtf": "65",
           "score": 41.425,
-          "odds_fractional": "9/1",
+          "odds_fractional": "6/1",
           "odds_decimal": null
         },
         {
@@ -25792,7 +25792,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "R17",
+          "number": "NR",
           "draw": "12",
           "headgear": "t",
           "headgear_run": "",
@@ -25810,7 +25810,7 @@ window.racecardsData = {
           "form": "509164",
           "trainer_rtf": "40",
           "score": 39.75,
-          "odds_fractional": "20/1",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -25860,7 +25860,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "R18",
+          "number": "NR",
           "draw": "5",
           "headgear": "",
           "headgear_run": "",
@@ -25878,7 +25878,7 @@ window.racecardsData = {
           "form": "290068",
           "trainer_rtf": "59",
           "score": 49.695,
-          "odds_fractional": "12/1",
+          "odds_fractional": null,
           "odds_decimal": null
         }
       ],
@@ -25904,7 +25904,7 @@ window.racecardsData = {
       "age_band": "3yo+",
       "rating_band": "",
       "prize": "€6,785",
-      "field_size": "11",
+      "field_size": "10",
       "going_detailed": "",
       "rail_movements": "",
       "stalls": "",
@@ -25978,7 +25978,7 @@ window.racecardsData = {
           "form": "34/0-",
           "trainer_rtf": "",
           "score": -242.18,
-          "odds_fractional": "10/1",
+          "odds_fractional": "66/1",
           "odds_decimal": null
         },
         {
@@ -26035,7 +26035,7 @@ window.racecardsData = {
           "form": "3-75",
           "trainer_rtf": "43",
           "score": 43.4,
-          "odds_fractional": "18/1",
+          "odds_fractional": "22/1",
           "odds_decimal": null
         },
         {
@@ -26186,7 +26186,7 @@ window.racecardsData = {
           "form": "1640-1",
           "trainer_rtf": "50",
           "score": 25.87,
-          "odds_fractional": "10/3",
+          "odds_fractional": "7/1",
           "odds_decimal": null
         },
         {
@@ -26225,7 +26225,7 @@ window.racecardsData = {
           "quotes": [],
           "stable_tour": [],
           "medical": [],
-          "number": "5",
+          "number": "NR",
           "draw": "3",
           "headgear": "p",
           "headgear_run": "",
@@ -26245,7 +26245,7 @@ window.racecardsData = {
           "form": "1417-4",
           "trainer_rtf": "41",
           "score": 22.205,
-          "odds_fractional": "7/2",
+          "odds_fractional": null,
           "odds_decimal": null
         },
         {
@@ -26302,7 +26302,7 @@ window.racecardsData = {
           "form": "-40330",
           "trainer_rtf": "",
           "score": 29.2,
-          "odds_fractional": "14/1",
+          "odds_fractional": "8/1",
           "odds_decimal": null
         },
         {
@@ -26359,7 +26359,7 @@ window.racecardsData = {
           "form": "8-0060",
           "trainer_rtf": "50",
           "score": 40.985,
-          "odds_fractional": "18/1",
+          "odds_fractional": "28/1",
           "odds_decimal": null
         },
         {
@@ -26428,7 +26428,7 @@ window.racecardsData = {
           "form": "3233-0",
           "trainer_rtf": "56",
           "score": 43.84,
-          "odds_fractional": "20/1",
+          "odds_fractional": "10/1",
           "odds_decimal": null
         },
         {
@@ -26487,7 +26487,7 @@ window.racecardsData = {
           "form": "9-701",
           "trainer_rtf": "43",
           "score": 15.385,
-          "odds_fractional": "10/3",
+          "odds_fractional": "9/4",
           "odds_decimal": null
         },
         {
@@ -26544,7 +26544,7 @@ window.racecardsData = {
           "form": "0-3212",
           "trainer_rtf": "21",
           "score": 42.215,
-          "odds_fractional": "5/1",
+          "odds_fractional": "10/3",
           "odds_decimal": null
         },
         {
@@ -26603,7 +26603,7 @@ window.racecardsData = {
           "form": "09-548",
           "trainer_rtf": "17",
           "score": 37.945,
-          "odds_fractional": "33/1",
+          "odds_fractional": "6/1",
           "odds_decimal": null
         }
       ],
