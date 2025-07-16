@@ -77,10 +77,10 @@ console.log('tips.js: Script started.');
   }
 
   // === Tipster picks ===
-  const michaelsTips = ["jack of clubs", "lastchancezouloon", "King Of The Jungle", "Coeur Jaune"];
-  const chrisTips    = ["homeland", "spanish temptress", "Elana Osario", "langholm"];
+  const michaelsTips = ["faerie cutlass", "imac wood", "carlton", "stamina chope"];
+  const chrisTips    = ["dog fox", "offiah's boy", "juno star", "metamorpheus"];
   const peterTips = ["Sisters In The Sky", "Little Chief", "Crown Of India", "He Bangs The Drums"];
-  const kenTips      = ["gortmore lady", "this years love", "atmosphere", "daaris"];
+  const kenTips      = ["stellarmasterpiece", "herakles", "nordic glory", "lady jago"];
   const racingPostTips = ["Jet Smart", "Ancient Times", "Bama Lama", "Jimmy Knocker"];
 
 
