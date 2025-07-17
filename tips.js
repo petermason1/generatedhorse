@@ -79,7 +79,7 @@ console.log('tips.js: Script started.');
   // === Tipster picks ===
   const michaelsTips = ["faerie cutlass", "imac wood", "carlton", "stamina chope"];
   const chrisTips    = ["dog fox", "offiah's boy", "juno star", "metamorpheus"];
-  const peterTips = ["Sisters In The Sky", "Little Chief", "Crown Of India", "He Bangs The Drums"];
+  const peterTips = ["Sorontar", "Electric Bass", "Prince Ali", "Nachtgeist"];
   const kenTips      = ["stellarmasterpiece", "herakles", "nordic glory", "lady jago"];
   const racingPostTips = ["Son Of Anarchy", "Kopa Kilana", "Crimson Spirit", "Ob La Di"];
 
