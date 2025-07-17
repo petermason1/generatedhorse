@@ -81,7 +81,7 @@ console.log('tips.js: Script started.');
   const chrisTips    = ["ebony maw", "mix of clover", "Molto Amichi", "play me"];
   const peterTips = ["Sorontar", "Electric Bass", "Prince Ali", "Nachtgeist"];
   const kenTips      = ["melismatic", "dubai venture", "minerva", "one cool dreamer"];
-  const racingPostTips = ["Ob La Di", "Kopa Kilana", "Crimson Spirit", "Ob La Di"];
+  const racingPostTips = ["Hammer Dan", "Kopa Kilana", "Crimson Spirit", "Ob La Di"];
 
 
   // --- Build tipster pick cards, skip non-existent picks ---
