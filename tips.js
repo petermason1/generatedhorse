@@ -80,7 +80,7 @@ console.log('tips.js: Script started.');
   const michaelsTips = ["individualism", "magical idea", "electric bass", "i can boogy"];
   const chrisTips    = ["ebony maw", "mix of clover", "Molto Amichi", "play me"];
   const peterTips = ["Sorontar", "Electric Bass", "Prince Ali", "Nachtgeist"];
-  const kenTips      = ["stellarmasterpiece", "herakles", "nordic glory", "lady jago"];
+  const kenTips      = ["melismatic", "dubai venture", "minerva", "one cool dreamer"];
   const racingPostTips = ["Son Of Anarchy", "Kopa Kilana", "Crimson Spirit", "Ob La Di"];
 
 
