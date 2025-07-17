@@ -1,13 +1,26 @@
 :root {
-  --color-brand: #36e8b5;
-  --color-highlight: #ffd900;
-  --color-card-bg: #181e25;
-  --color-bg-dark: #111416;
-  --color-main-text: #e0e6ed;
-  --color-muted: #a7b7c9;
-  --color-border: #23282f;
+  /* Updated to the professional color palette */
+  --color-background: #111317;
+  --color-background-secondary: #1a1d23;
+  --color-border: #2c313a;
+  --color-text-primary: #e6e6e6;
+  --color-text-secondary: #a0a7b5;
+  --color-accent-green: #25f4b3;
+  --color-primary-yellow: #fde047;
   --color-accent-blue: #6cc8ff;
-  --gradient-primary-text: linear-gradient(90deg, #36e8b5 40%, #ffd900 90%);
+
+  /* Kept for gradient text compatibility */
+  --gradient-primary-text: linear-gradient(90deg, var(--color-accent-green) 40%, var(--color-primary-yellow) 90%);
+
+  /* Mapped old variables to new ones for compatibility */
+  --color-brand: var(--color-accent-green);
+  --color-highlight: var(--color-primary-yellow);
+  --color-card-bg: var(--color-background-secondary);
+  --color-bg-dark: var(--color-background);
+  --color-main-text: var(--color-text-primary);
+  --color-muted: var(--color-text-secondary);
+
+  /* Kept from original for layout */
   --shadow-card: 0 4px 22px #0b141d33;
   --shadow-soft: 0 1.5px 10px #1d242c33;
   --border-radius-pill: 999px;
@@ -17,8 +30,13 @@
 }
 
 body {
+  /* This is the new professional background */
+  background-color: var(--color-background);
+  background-image: radial-gradient(circle at 1px 1px, var(--color-border) 1px, transparent 0);
+  background-size: 25px 25px;
+
+  /* Kept from original */
   font-family: var(--font-family-sans);
-  background: var(--color-bg-dark);
   color: var(--color-main-text);
   margin: 0;
   min-height: 100vh;
@@ -825,3 +843,4 @@ main {
   /* ... existing styles ... */
   gap: 0.57em 0.95em; /* Ensure enough space between items */
 }
+

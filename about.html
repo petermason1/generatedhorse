@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMB0VG2VBB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NMB0VG2VBB');
-  </script>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- === HEAD === -->
   <meta charset="UTF-8" />
-  <title>About Smart Racecards | Data-Driven Horse Racing Analysis</title>
-  <meta name="description" content="Learn about Smart Racecards: our team, proprietary rating system, and commitment to transparent, data-driven horse racing analysis.">
+  <title>About Smart Racecards | Our Mission & Team</title>
+  <meta name="description" content="Learn about the mission, methods, and team behind Smart Racecards. We are dedicated to providing transparent, data-driven horse racing analysis.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
   <link rel="stylesheet" href="base.css" />
-  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="about.css" /> <!-- New dedicated CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-   <nav class="main-navbar">
+  <!-- === NAVIGATION === -->
+  <nav class="main-navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-brand">
         <img src="logo.png" alt="Smart Racecards Logo" />
@@ -28,13 +25,12 @@
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link">Home</a>
         <a href="today.html" class="nav-link">Today's Races</a>
-        <a href="results.html" class="nav-link">Results</a>
+        <a href="data-feeds.html" class="nav-link active">Data & Systems</a>
         <a href="tips.html" class="nav-link">Tipster</a>
-        <a href="yesterday.html" class="nav-link">Historical</a>
         <a href="custom-score.html" class="nav-link">Custom Score</a>
         <a href="about.html" class="nav-link">About</a>
       </div>
-        <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </div>
       <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" style="display:none;">&times;</button>
@@ -42,138 +38,102 @@
     <div class="nav-backdrop" id="navBackdrop"></div>
   </nav>
 
+  <!-- === MAIN CONTENT === -->
+  <main class="about-main">
+    <header class="about-header">
+      <h1>Our Mission: Data-Driven Clarity</h1>
+      <p class="header-subtitle">We cut through the noise. Smart Racecards was founded by a team of experienced analysts and system builders to deliver a transparent, quantitative edge in horse racing.</p>
+    </header>
 
-  <main class="about-container">
-    <h1 class="about-header">About This Site</h1>
-
-    <div class="about-intro">
-      <b>Racecards</b> is a data-driven horse racing analysis project, combining decades of punting experience, statistical expertise, and a commitment to honest results.
-      Our team uses a custom rating system built on real-world data—designed to highlight the true contenders in every UK and Irish race.
-    </div>
-
-    <h2 class="section-title">How It Works</h2>
-    <ul class="fancy-list">
-      <li data-emoji="📈">Every UK & Irish race is rated daily using our proprietary algorithm</li>
-      <li data-emoji="⚙️">Each horse is scored on form, speed, trainer stats, and more</li>
-      <li data-emoji="🏆">The system highlights both likely winners and value picks</li>
-      <li data-emoji="📊">Our process is grounded in data—not hype or guesswork</li>
-      <li data-emoji="✨">New features and membership options may be introduced in the future—details will always be clear and upfront</li>
-    </ul>
-
-  <h2 class="section-title">Meet the Team</h2>
-<div class="team-section">
-  <div class="team-card">
-    <div>
-      <span class="team-name">Peter Mason</span><br>
-      <span class="team-role">Founder, Lead Analyst</span>
-      <div class="team-desc">
-        A specialist in statistical modelling and process automation, Peter leads the design and development of our ratings engine. He’s dedicated to evidence-based analysis and continuous refinement of the system.
+    <section class="about-section">
+      <h2>The Philosophy</h2>
+      <div class="philosophy-content">
+        <p>The world of horse racing is filled with opinion, hype, and "insider info." We believe the most reliable path to long-term success is through the rigorous, unbiased analysis of data. Our proprietary rating system is the heart of our operation—a constantly evolving algorithm that scores every runner in every UK and Irish race based on a wide array of performance metrics. We don't pick horses; we identify statistical value.</p>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="team-card">
-    <div>
-      <span class="team-name">Chris Waldock</span><br>
-      <span class="team-role">Senior Systems Advisor</span>
-      <div class="team-desc">
-        With over 40 years of racing system design and testing, Chris brings deep expertise in methodology, validation, and industry trends. His disciplined approach underpins the reliability of our data and predictions.
+    <section class="about-section">
+      <h2>Meet The Team</h2>
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-card-header">
+            <h3>Peter Mason</h3>
+            <p>Founder & Lead Analyst</p>
+          </div>
+          <div class="team-card-body">
+            <p>A specialist in statistical modelling and process automation, Peter leads the design and development of our ratings engine. He’s dedicated to evidence-based analysis and the continuous refinement of our core systems.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-header">
+            <h3>Chris Waldock</h3>
+            <p>Systems & Marketing Lead</p>
+          </div>
+          <div class="team-card-body">
+            <p>With over 40 years of racing system design and testing, Chris brings deep expertise in methodology and validation. He also directs our marketing, connecting our data-driven solutions with serious analysts and syndicates.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-header">
+            <h3>Michael Pilling</h3>
+            <p>Research & Racing Historian</p>
+          </div>
+          <div class="team-card-body">
+            <p>Michael has two decades of experience in racing research, market analysis, and historical form. He ensures our analysis reflects not just the latest data, but also the bigger picture of long-term performance trends.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-header">
+            <h3>Ken Durie</h3>
+            <p>Junior Betting Analyst</p>
+          </div>
+          <div class="team-card-body">
+            <p>Ken is our up-and-coming analyst, focused on day-to-day betting trends, odds movement, and emerging opportunities. He’s passionate about data-driven value picks and finding fresh angles for punters.</p>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="team-card">
-    <div>
-      <span class="team-name">Michael Pilling</span><br>
-      <span class="team-role">Research & Racing History</span>
-      <div class="team-desc">
-        Michael has two decades of experience in racing research, market analysis, and historical form. He ensures our analysis reflects not just the latest data, but also the bigger picture of racing performance.
-      </div>
-    </div>
-  </div>
+    <section class="about-section cta-section">
+      <h2>Get In Touch</h2>
+      <p>Whether you have a question about our data, an enquiry about our pro-tier systems, or a suggestion for the site, we'd love to hear from you.</p>
+      <a href="mailto:info@smartracecards.com?subject=Enquiry from Smart Racecards Website" class="btn btn-primary">Contact The Team</a>
+    </section>
 
-  <div class="team-card">
-    <div>
-      <span class="team-name">Gary Betts</span><br>
-      <span class="team-role">Sales &amp; Marketing</span>
-      <div class="team-desc">
-        Gary connects our data to the real world. With years in racing and sports media, he’s the voice behind our social channels and keeps punters in the loop about new features and offers.
-      </div>
-    </div>
-  </div>
-
-  <div class="team-card">
-    <div>
-      <span class="team-name">Ken Durie</span><br>
-      <span class="team-role">Junior Betting Analyst</span>
-      <div class="team-desc">
-        Ken is our up-and-coming analyst, focused on day-to-day betting trends, odds movement, and emerging opportunities. He’s passionate about data-driven value picks and fresh angles for punters.
-      </div>
-    </div>
-  </div>
-<div class="team-card team-card-cta">
-  <div>
-    <span class="team-name">Join Our Team</span><br>
-    <span class="team-role">Get Involved / Subscribe</span>
-    <div class="team-desc">
-      Want to join our journey or get our latest analysis direct to your inbox?
-      <a href="mailto:info@smartracecards.com?subject=Subscribe%20me%20to%20racecards"
-         class="subscribe-btn"
-         style="display:inline-block;width:92%;margin-top:10px;background:#36e8b5;color:#0a1622;padding:8px 0;border:none;border-radius:7px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;">
-        Subscribe
-      </a>
-      <div style="margin-top:8px;font-size:0.96em;">
-        Or <a href="mailto:info@smartracecards.com" style="color:#36e8b5;text-decoration:underline;">email us</a> to get involved.
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
-
-
-
-    <h2 class="section-title">Why Trust Us?</h2>
-    <ul class="fancy-list trust-list">
-      <li data-emoji="✅">Full transparency: all tips and results are published, win or lose</li>
-      <li data-emoji="🔍">Our selections are based on independent, data-driven analysis</li>
-      <li data-emoji="🤝">We operate with integrity—no hype, no selective reporting</li>
-      <li data-emoji="ℹ️">If the site ever features paid services or affiliate partnerships, this will be clearly disclosed</li>
-    </ul>
-
-    <div class="about-contact-footer">
-      <b>Questions or suggestions?</b><br>
-      <a href="mailto:info@smartracecards.com">Contact us here</a>.<br>
-      <i>Punting should be enjoyable and responsible. Never bet more than you can afford to lose. This site is for informational purposes, not betting advice.</i>
-    </div>
   </main>
 
+  <!-- === FOOTER === -->
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="tips.html">Tips</a>
-        <a href="yesterday.html">Historical</a>
-        <a href="custom-score.html">Custom Score</a>
-        <a href="about.html">About Us</a>
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="tips.html">Tips</a>
+          <a href="data-feeds.html">Data & Systems</a>
+          <a href="custom-score.html">Custom Score</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-meta">
+          <span id="footer-year"></span> Smart Racecards
+          <span>•</span>
+          <a href="mailto:info@smartracecards.com">Contact</a>
+        </div>
+        <div class="footer-disclaimer">
+          <small>
+            For informational purposes only – not betting advice.<br />
+            Please gamble responsibly. 18+
+          </small>
+        </div>
       </div>
-      <div class="footer-meta">
-        <span id="footer-year"></span> Smart Racecards
-        <span>•</span>
-        <a href="mailto:info@smartracecards.com">Contact</a>
-      </div>
-      <div class="footer-disclaimer">
-        <small>
-          For informational purposes only – not betting advice.<br>
-          Please gamble responsibly. 18+
-        </small>
-      </div>
-    </div>
-  </footer>
-
+    </footer>
 
   <script src="main.js"></script>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

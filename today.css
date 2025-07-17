@@ -1,10 +1,17 @@
 :root {
-  --color-dark-bg: #111416;
-  --color-main-text: #e1e9f0;
-  --color-muted: #b8cae3;
-  --color-highlight: #ffd900;
-  --color-brand: #36e8b5;
-  --gradient-primary-text: linear-gradient(90deg, #36e8b5 40%, #ffd900 90%);
+  /* Updated to the professional color palette */
+  --color-background: #111317;
+  --color-background-secondary: #1a1d23;
+  --color-border: #2c313a;
+  --color-text-primary: #e6e6e6;
+  --color-text-secondary: #a0a7b5;
+  --color-accent-green: #25f4b3;
+  --color-primary-yellow: #fde047;
+  
+  /* Kept for gradient text compatibility */
+  --gradient-primary-text: linear-gradient(90deg, var(--color-accent-green) 40%, var(--color-primary-yellow) 90%);
+  
+  /* Kept from original for layout */
   --max-width-content: 900px;
   --font-size-hero-title: 2.2rem;
   --font-weight-extrabold: 900;
@@ -13,8 +20,13 @@
 
 /* === Reset and Body === */
 body {
-  background: var(--color-dark-bg);
-  color: var(--color-main-text);
+  /* This is the new professional background */
+  background-color: var(--color-background);
+  background-image: radial-gradient(circle at 1px 1px, #2c313a 1px, transparent 0);
+  background-size: 25px 25px;
+  
+  /* Kept from original */
+  color: var(--color-text-primary);
   font-family: 'Inter', Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
@@ -28,14 +40,14 @@ main {
   width: 100%;
   max-width: var(--max-width-content);
   margin: 0 auto 1.2em auto;
-  padding: 2.1rem 0 1.7rem 0;  /* Less top/bottom padding for tighter look */
+  padding: 2.1rem 0 1.7rem 0;
   text-align: center;
 }
 
 .hero-section h1 {
   font-size: var(--font-size-hero-title);
   font-weight: var(--font-weight-extrabold);
-  margin: 0.1em 0 0.16em 0;  /* Reduce top/bottom margin */
+  margin: 0.1em 0 0.16em 0;
   letter-spacing: -1.1px;
   background: var(--gradient-primary-text);
   -webkit-background-clip: text;
@@ -88,16 +100,16 @@ main {
   border-radius: 10px;
   border: 1.3px solid #24272b;
   background: #15181a;
-  color: var(--color-main-text);
+  color: var(--color-text-primary);
   outline: none;
   box-shadow: none;
   transition: border 0.13s, background 0.13s, color 0.13s;
   font-weight: 600;
 }
 .horse-search-input:focus {
-  border-color: var(--color-highlight);
+  border-color: var(--color-primary-yellow);
   background: #222931;
-  color: var(--color-highlight);
+  color: var(--color-primary-yellow);
 }
 #horseSearchClear {
   position: absolute;
@@ -138,7 +150,7 @@ main {
   border-radius: 7px;
   cursor: pointer;
   background: none;
-  color: var(--color-highlight);
+  color: var(--color-primary-yellow);
   font-weight: 600;
   font-size: 1em;
   transition: background 0.13s, color 0.13s;
@@ -146,7 +158,7 @@ main {
 .horse-search-result:hover,
 .horse-search-result a:hover {
   background: #232a31;
-  color: var(--color-brand);
+  color: var(--color-accent-green);
 }
 .horse-search-result:not(:last-child) {
   border-bottom: 1px solid #232a31;
@@ -165,7 +177,7 @@ main {
 }
 
 .next6-label {
-  color: var(--color-highlight);
+  color: var(--color-primary-yellow);
   font-weight: 800;
   font-size: 1.12em;
   margin-bottom: 0.7em;
@@ -203,7 +215,7 @@ main {
   min-width: 0;
   min-height: 0;
   background: #16181b;
-  color: var(--color-brand);
+  color: var(--color-accent-green);
   font-weight: 900;
   font-size: 1.15em;
   border: 2px solid #23282f;
@@ -224,14 +236,14 @@ main {
 }
 
 .race-bar-box:focus-visible {
-  outline: 2px solid var(--color-highlight);
+  outline: 2px solid var(--color-primary-yellow);
   outline-offset: 1.5px;
 }
 
 .race-bar-box:hover,
 .race-bar-box:focus {
-  color: var(--color-highlight);
-  border-color: var(--color-highlight);
+  color: var(--color-primary-yellow);
+  border-color: var(--color-primary-yellow);
   background: #232a36;
 }
 
@@ -248,14 +260,14 @@ main {
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1px;
-  color: var(--color-highlight);
+  color: var(--color-primary-yellow);
   letter-spacing: 0.01em;
 }
 
 /* --- Name styling (lowercase with first letter cap, ellipsis, centered) --- */
 .race-bar-box .race-course {
   font-size: 0.97em;
-  color: var(--color-main-text);
+  color: var(--color-text-primary);
   font-weight: 700;
   letter-spacing: 0.02em;
   margin: 0;
@@ -352,7 +364,7 @@ main {
 
 /* === Today Titles / Subtitles === */
 .todayraces-title {
-  color: var(--color-highlight);
+  color: var(--color-primary-yellow);
   font-size: 1.23em;
   font-weight: 800;
   margin: 2em 0 0.18em 0;
@@ -361,7 +373,7 @@ main {
   padding-left: 2px;
 }
 .todayraces-subtitle {
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   font-size: 1.09em;
   font-weight: 400;
   margin-bottom: 1.38em;
@@ -390,7 +402,7 @@ main {
   padding: 0 !important;
 }
 .course-title {
-  color: var(--color-highlight);
+  color: var(--color-primary-yellow);
   font-size: 1.12em;
   font-weight: 900;
   margin-bottom: 0.65em;
@@ -414,7 +426,7 @@ main {
   padding: 0 1.1em;
   border-radius: var(--border-radius-pill);
   background: #191b1f;
-  color: var(--color-brand);
+  color: var(--color-accent-green);
   font-weight: 900;
   font-size: 1em;
   text-decoration: none;
@@ -427,8 +439,8 @@ main {
 }
 .course-race-box:hover, .course-race-box:focus {
   background: #222931;
-  color: var(--color-highlight);
-  border-color: var(--color-highlight);
+  color: var(--color-primary-yellow);
+  border-color: var(--color-primary-yellow);
 }
 .course-race-box.past {
   background: #181a1f !important;
@@ -456,7 +468,7 @@ main {
 /* === Footer === */
 .site-footer {
   background: transparent;
-  color: #b8cae3;
+  color: var(--color-text-secondary);
   font-size: 1em;
   margin-top: 3em;
   text-align: center;
@@ -478,13 +490,13 @@ main {
   margin-bottom: 0.6em;
 }
 .footer-links a {
-  color: var(--color-highlight);
+  color: var(--color-primary-yellow);
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.03em;
   transition: color 0.18s;
 }
-.footer-links a:hover { color: var(--color-brand); }
+.footer-links a:hover { color: var(--color-accent-green); }
 .footer-meta {
   font-size: 0.97em;
   color: #9db2cb;
@@ -492,7 +504,7 @@ main {
   align-items: center;
   gap: 0.4em;
 }
-.footer-meta a { color: var(--color-brand); }
+.footer-meta a { color: var(--color-accent-green); }
 .footer-disclaimer {
   color: #6d7c96;
   font-size: 0.85em;

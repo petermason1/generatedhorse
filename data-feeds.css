@@ -1,0 +1,190 @@
+/* === DATA-FEEDS.CSS (v2) === */
+
+/* --- Main Layout & Hero --- */
+.data-feeds-main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.data-hero {
+    text-align: center;
+    padding: 40px 20px 50px 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 40px;
+}
+
+/* --- Pro-Tier Systems Section --- */
+.pro-tier-section {
+    background: linear-gradient(165deg, var(--bg-secondary) 0%, #2c2c3e 100%);
+    border: 1px solid var(--color-primary-yellow-translucent);
+    border-radius: 12px;
+    padding: 30px 40px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.pro-tier-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Add this line */
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.pro-tier-header .fa-solid {
+    font-size: 2rem;
+    color: var(--color-primary-yellow);
+}
+
+.pro-tier-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.pro-tier-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary-yellow);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pro-tier-content > p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.pro-tier-offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.offer-item {
+    background-color: var(--bg-primary);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.offer-item h4 {
+    font-size: 1.2rem;
+    color: var(--color-accent-green);
+    margin-bottom: 10px;
+}
+
+.offer-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.pro-tier-audience {
+    font-style: italic;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pro-tier-content .btn-primary {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 1.2rem;
+    animation: pulseGlow 2.5s infinite alternate;
+}
+
+/* --- Data Packages Section --- */
+.data-package-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+.section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.package-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.package-details {
+    flex: 3;
+    min-width: 300px;
+}
+
+.package-details h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.package-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 5px 0 10px 0;
+}
+
+.price-note {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+
+.package-details > p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.package-cta {
+    flex: 1;
+    min-width: 180px;
+    text-align: right;
+}
+
+.package-cta .btn-secondary {
+    padding: 12px 25px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .pro-tier-offers {
+        grid-template-columns: 1fr;
+    }
+    .package-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .package-cta {
+        text-align: center;
+        width: 100%;
+    }
+    .package-cta .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}
