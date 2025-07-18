@@ -79,9 +79,10 @@ console.log('tips.js: Script started.');
   // === Tipster picks ===
   const michaelsTips = ["coole cherry", "meehall", "royal musketeer", "insuspense"];
   const chrisTips    = ["canaria queen", "melek alreeh", "arabian force", "byblos"];
-  const peterTips = ["Sorontar", "Electric Bass", "Prince Ali", "Nachtgeist"];
+  const peterTips = ["Thunderous Love", "Do Bronxs", "Odin Legacy", "Neoma"];
   const kenTips      = ["spirit lead me", "nahraan", "mudamer", "young fire"];
   const racingPostTips = ["Felicity Smoak", "Miss Hathaway", "Golden Handshake", "Catch Cunningham"];
+
 
 
 
