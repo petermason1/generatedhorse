@@ -80,8 +80,8 @@ console.log('tips.js: Script started.');
   const michaelsTips = ["coole cherry", "meehall", "royal musketeer", "insuspense"];
   const chrisTips    = [""];
   const peterTips = ["Thunderous Love", "Do Bronxs", "Odin Legacy", "Neoma"];
-  const kenTips      = ["spirit lead me", "nahraan", "mudamer", "young fire"];
-  const racingPostTips = ["Felicity Smoak", "Miss Hathaway", "Golden Handshake", "Catch Cunningham"];
+  const kenTips      = [""];
+  const racingPostTips = ["Castel Gandolfo", "Bobby's Fortune", "Havana Hurricane", "Pink Azalea"];
 
 
 
