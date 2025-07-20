@@ -384,6 +384,7 @@ html[data-theme="light"] .win-row td {
   color: var(--color-text-inverted) !important;
 }
 
-p:has(#top-pick-places) {
+
+#yest-places {
   display: none;
 }

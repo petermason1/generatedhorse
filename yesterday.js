@@ -101,7 +101,6 @@ const topPickWins = data.filter(r =>
     document.getElementById('total-returned').textContent = '£' + totalReturned.toFixed(2);
     document.getElementById('roi-all').textContent = roiAll;
     document.getElementById('top-pick-wins').textContent = `${topPickWins} (${winPercent}%)`;
-    document.getElementById('top-pick-places').textContent = `${topPickPlaces} (${placePercent}%)`;
 
     // ========= YESTERDAY'S ROI =========
     const yestStr = getYesterday();
